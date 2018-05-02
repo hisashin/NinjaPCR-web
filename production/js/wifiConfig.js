@@ -1,5 +1,5 @@
-const OTA_TYPE_LOCAL_UPLOAD = "1";
-const OTA_TYPE_WEB_DOWNLOAD = "2";
+const OTA_TYPE_LOCAL_UPLOAD = 1;
+const OTA_TYPE_WEB_DOWNLOAD = 2; // Unavailable
 
 DeviceResponse.onConf = function (obj) {
 	console.log(obj);
@@ -11,8 +11,7 @@ var host = "";
 function getDeviceHost () {
 	return "http://" + host + ".local";
 }
-var OTA_TYPE_LOCAL_UPLOAD = 1;
-var OTA_TYPE_WEB_DOWNLOAD = 2; // Unavailable
+
 function startOTA () {
 	var getURL = getDeviceHost() + "/config?ot=" + OTA_TYPE_LOCAL_UPLOAD;
 	if (otaType == OTA_TYPE_WEB_DOWNLOAD) {
