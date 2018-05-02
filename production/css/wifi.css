@@ -1,0 +1,46 @@
+#device_conf {
+	font-size:70%;
+	padding:1.5rem;
+	background-color:#ffe;
+	margin:0.5rem;
+}
+#device_conf a {
+	color: #00f;
+}
+#device_conf ul {
+	list-style-type: disc;
+	margin-left:2em;
+}
+#device_conf li {
+
+}
+#device_conf li dl {
+	padding:0.2em  1.0em;
+}
+#device_conf li dl dt {
+	font-weight: bold;
+}
+#device_conf li dl dd {
+	text-indent: 0.5em;
+}
+#device_conf h2 {
+}
+#device_conf h3 {
+	font-size:1.2rem;
+	line-height:150%;
+}
+
+#DeviceConnectionStatus {
+	font-size:1rem;
+	margin: 1rem 0;
+	text-indent:0.2em
+}
+.disconnected {
+	border-left: 10px solid gray;
+}
+.connecting {
+	border-left: 10px solid orange;
+}
+.connected {
+	border-left: 10px solid #2f2;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+</head>
+<body>
+<script type="text/javascript">
+var interval = null;
+function res (val) {
+	console.log("updateStatus value=" + val);
+	if (val=="OK" && !interval) {
+		window.setInterval(requestStatus, 2000);
+	} else {
+		console.log("status: " + val);
+	}
+	document.getElementById("scriptContainer").innerHTML = "";
+}
+function requestStatus () {
+	var tag = document.createElement("script");
+	tag.type="text/javascript";
+	var ip = document.getElementById("ip").value;
+	tag.src = "http://"+ip+"/status";
+	document.getElementById("scriptContainer").appendChild(tag);
+}
+function sendCommand () {
+	var tag = document.createElement("script");
+	tag.type="text/javascript";
+	var ip = document.getElementById("ip").value;
+	var commandBody = document.getElementById("profile").value;
+	tag.src = "http://"+ip+"/command?" + commandBody;
+	console.log(tag.src)
+	document.getElementById("scriptContainer").appendChild(tag);
+}
+</script>
+<div>
+	IP address: <input type="text" id="ip" value="192.168.2.153"/>
+</div>
+<div>
+	<input type="text" id="profile" value="s=ACGTC&c=start&d=1672&l=110&n=Simple%20Test&p=(1[10|95|InitialStep|0])(2[30|95|Denaturing|0][30|55|Annealing|0][60|72|Extending|0])(1[0|20|FinalHold|0])" size="128"/>
+	<br/>
+	<input type="button" value="Start Profile" onClick="javascript:sendCommand()"/>
+</div>
+<div id="scriptContainer">
+</div>
+</body>
+</html>
