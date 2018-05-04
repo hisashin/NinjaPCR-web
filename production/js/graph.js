@@ -5,6 +5,7 @@ var TempGraph = function (container) {
 	this.container = container;
 	this.dataLid = [];
 	this.dataBlock = [];
+	this.dataSample = [];
 	
 	//Initialize Dummy Data
 	this.time = 0;
@@ -57,13 +58,17 @@ TempGraph.prototype.drawGraph = function (opts) {
 		};
 	return Flotr.draw(
 			this.container, 
-			[{data:this.dataLid,label:getLocalizedMessage('lid')}, {data:this.dataBlock,label:getLocalizedMessage('block')} ],
+			[
+				{data:this.dataLid,label:getLocalizedMessage('lid')}, 
+				{data:this.dataBlock,label:getLocalizedMessage('block')}, 
+				{data:this.dataSample,label:getLocalizedMessage('sample')} ],
 			o);
 }
 
-TempGraph.prototype.addTime = function (elapsedSec, tempLid, tempBlock) {
+TempGraph.prototype.addTime = function (elapsedSec, tempLid, tempBlock, tempSample) {
 	this.dataLid.push([elapsedSec, tempLid]);
 	this.dataBlock.push([elapsedSec, tempBlock]);
+	this.dataSample.push([elapsedSec, tempSample]);
 	this.drawCurrentData ();
 	this.time = elapsedSec;
 };
@@ -71,6 +76,7 @@ TempGraph.prototype.addTime = function (elapsedSec, tempLid, tempBlock) {
 TempGraph.prototype.clear = function () {
 	this.dataLid = [];
 	this.dataBlock = [];
+	this.dataSample = [];
 	this.time = 0;
 	this.drawCurrentData ();
 };

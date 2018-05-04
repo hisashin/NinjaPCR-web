@@ -119,11 +119,17 @@ ExperimentLogger.prototype.log = function (status) {
 		// Current lid temp
 		var lid_temp = status["l"].toFixed(1);
 		$("#lidTemperature").html(lid_temp);
-		graph.addTime(elapsedSec, lid_temp,block_temp);
-		$('#meterBlock')[0].value = block_temp;
-		$('#meterLid')[0].value = lid_temp;
-	}
-	else if (status["s"] == "complete") {
+		
+		// Current sample temp
+		var sample_temp = status["z"].toFixed(1);
+		$("#sampleTemperature").html(sample_temp);
+		
+		// TODO sample temp
+		graph.addTime(elapsedSec, lid_temp, block_temp, sample_temp);
+		$('#meterBlock').val(block_temp);
+		$('#meterLid').val(lid_temp);
+		$('#meterSample').val(sample_temp);
+	} else if (status["s"] == "complete") {
 		// Current temp
 		var block_temp = status["b"].toFixed(1);
 		$("#blockTemperature").html(block_temp);
@@ -158,11 +164,9 @@ ExperimentLogger.prototype.log = function (status) {
 		var current_step = status["p"];
 		$("#currentStep").html(current_step);
 		createCSV();
-	}
-	else if (status["status"] == "stopped") {
+	} else if (status["status"] == "stopped") {
 		// nothing
-	}
-	else if (status["status"] == "error") {
+	} else if (status["status"] == "error") {
 		// error
 		chromeUtil.alert("Error");
 	}

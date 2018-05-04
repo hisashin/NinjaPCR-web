@@ -89,7 +89,7 @@ NetworkCommunicator.prototype.scan = function (callback) {
 		$("#DeviceSettings").toggle();
 	});
 };
-function loadJSONP (URL, timeoutMsec) {
+function loadJSONP (URL, onError) {
 	var scriptTag = document.createElement("script");
 	scriptTag.type = "text/javascript";
 	scriptTag.src = URL;
@@ -97,8 +97,7 @@ function loadJSONP (URL, timeoutMsec) {
 	scriptTag.addEventListener("error", function(){
 		console.log("error");
 	});
-	scriptTag.addEventListener("load", function(){
-		console.log("loaded");
+	scriptTag.addEventListener("load", function() {
 		scriptTag.parentNode.removeChild(scriptTag);
 	});
 }
@@ -111,7 +110,7 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param) {
 		URL += param;
 	}
 	console.log("sendRequestToDevice URL=" + URL);
-	loadJSONP(URL, 4000);
+	loadJSONP(URL, function(){/*TODO*/});
 }
 NetworkCommunicator.prototype.setDeviceHost = function (newHost) {
 	host = newHost;

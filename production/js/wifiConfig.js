@@ -18,7 +18,7 @@ function startOTA () {
 		getURL += "&ou=" + otaURL;
 	}
 	console.log(getURL);
-	loadJSONP(getURL, 4000);
+	loadJSONP(getURL, function(){/*TODO*/});
 }
 $(document).ready(function(){
 	console.log("wifiConfig.init");

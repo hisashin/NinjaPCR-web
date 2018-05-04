@@ -35,6 +35,7 @@ window.MESSAGE = {
 	"cycle":{"message":"Cycle"},
 	"lid":{"message":"Lid"},
 	"block":{"message":"Block"},
+	"sample":{"message":"Sample"},
 	"peltier":{"message":"Peltier"},
 	"unplugged":{"message":"Your NinjaPCR is unplugged from the computer.<br />Plug in your NinjaPCR to get updated information on your run."},
 	"saveCsv":{"message":"Save CSV"},
