@@ -6,9 +6,11 @@ function getLocalizedMessage (messageId) {
 		if (window.MESSAGE[messageId] && window.MESSAGE[messageId]["message"]) {
 			return window.MESSAGE[messageId]["message"];
 		}
-		else return null; 
+		else {
+			return messageId;
+		}
 	} else {
-		return messageId; //TODO chrome lib
+		return messageId;
 		
 	}
 }
