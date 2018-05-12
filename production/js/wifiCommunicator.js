@@ -14,6 +14,7 @@ DeviceResponse.connect = function (obj) {
 		// Connected
 		$("#DeviceConnectionStatus").attr("class","connected");
 		$("#DeviceConnectionStatusLabel").text("Connected");
+		$("#firmwareUpdate").show();
 		
 		try {
 			if (localStorage) {
@@ -48,8 +49,9 @@ DeviceResponse.connect = function (obj) {
 		} else {
 			console.log("Device is IDLE");
 		}
-		communicator.firmwareVersionversion = obj.version;
-		console.log("Firmware version=" + communicator.firmwareVersionversion);
+		communicator.firmwareVersion = obj.version;
+		
+		console.log("Firmware version=" + communicator.firmwareVersion);
 		DeviceResponse.onDeviceFound("DEVICE");
 	}
 };
@@ -66,7 +68,7 @@ DeviceResponse.status = function (obj) {
 };
 
 var NetworkCommunicator = function () {
-	this.firmwareVersion = "1.0.5";
+	this.firmwareVersion = null;
 };
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {

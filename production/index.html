@@ -84,16 +84,18 @@
 				<p id="ipInputContainer">
 					http://<input type="text" id="HostText"/>.local
 					<input type="button" value="connect" id="ConnectButton"/>
-					<!-- IP input textbox will be inserted to this div. -->
 				</p>
 				</section>
-				<section style="display:none">
-				<h3>Update Device</h3>
+				<section id="firmwareUpdate" style="display:none">
+				<div id="update_dialog_content"></div>
 				<p>
-					ファームウェアのアップデートがあります。
-					<input type="button" value="アップデートする" id="configButton"/>
+					<div id="updateLink" style="display:none"><a href="https://github.com/hisashin/NinjaPCR">Download</a></div>
+					<input type="button" value="Start Update" id="configButton"/>
 				</p>
 				</section>
+				<div id="update_dialog" style="display:none">
+					<a class="pcr_localize_download" id="OpenDownloadPage">Open Download Page</a>
+				</div>
 			</div>
 			
 			<!-- Create a new blank experiment -->
@@ -104,10 +106,6 @@
 			<a href="#" id="listSubmitButton"><img src="images/rerun.png" style="vertical-align:middle;">
 				<span class="home_title pcr_localize_reRunExperiment">Re-run an experiment</span></a>
 			<div id="reRun" align="right"></div>
-			<div id="update_dialog" style="display:none">
-				<div id="update_dialog_content"></div>
-				<a class="pcr_localize_download" id="OpenDownloadPage">Open Download Page</a>
-			</div>
 			<div>
 				<input type="button" id="About" value="About this app" class="small_button pcr_localize_about"/>
 			</div>
@@ -330,7 +328,7 @@
 		<input type="button" value="Start Firmware Update" id="buttonStartOTA"/>
 		<div id="otaAcceptedMessage" style="display:none">
 			<!-- Link to OTA top page -->
-			Please restart the device and open <a href="#" id="otaLink">http://ninjapcrwifi.local/</a>.
+			Device is restarting in firmware update mode. Please open <a href="#" id="otaLink">http://ninjapcrwifi.local/</a>.
 		</div>
 	</div>
 </body>

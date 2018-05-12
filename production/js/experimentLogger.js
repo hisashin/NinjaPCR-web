@@ -83,8 +83,7 @@ ExperimentLogger.prototype.log = function (status) {
 			$("#timeRemaining").html(getLocalizedMessage('timeRemaining'));
 			// otherwise, if running set variable for percentComplete
 			// never display less than 2% for UI purposes
-			var percentComplete = 100 * status["e"]
-					/ (status["e"] + status["r"]);
+			var percentComplete = 100 * status["e"] / (status["e"] + status["r"]);
 			if (percentComplete < 2) {
 				percentComplete = 2;
 			}

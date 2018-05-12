@@ -69,7 +69,7 @@ function clockTime (totalSec) {
 }
 
 chromeUtil.alertUpdate = function (currentVersion, latestVersion) {
-	var message = getLocalizedMessage('firmwareVersionDialog')
+	var message = getLocalizedMessage('firmwareUpdateAvailable')
 		.replace("___LATEST_VERSION___", latestVersion)
 		.replace("___INSTALLED_VERSION___", currentVersion);
 	console.verbose(message);
@@ -87,10 +87,12 @@ var STORAGE_KEY_EXPERIMENT_LIST = "experimentList";
 var STORAGE_KEY_EXPERIMENT_PREFIX = "pcr_";
 
 Storage.prototype.loadList = function (callback) {
-	if (!localStorage) {
-		alert ("local storage is not available.");
+	var data = null;
+	if (!window.localStorage) {
+		console.log("local storage is not available.");
+	} else {
+		data = localStorage.getItem(STORAGE_KEY_EXPERIMENT_LIST);
 	}
-	var data = localStorage.getItem(STORAGE_KEY_EXPERIMENT_LIST);
 	if (data) {
 		console.log(data);
 		this.experiments = JSON.parse(data);

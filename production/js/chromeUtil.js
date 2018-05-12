@@ -68,7 +68,7 @@ function clockTime (totalSec) {
 }
 
 chromeUtil.alertUpdate = function (currentVersion, latestVersion) {
-	var message = getLocalizedMessage('firmwareVersionDialog')
+	var message = getLocalizedMessage('firmwareUpdateAvailable')
 		.replace("___LATEST_VERSION___", latestVersion)
 		.replace("___INSTALLED_VERSION___", currentVersion);
 	console.verbose(message);

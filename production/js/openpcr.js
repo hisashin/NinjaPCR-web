@@ -13,6 +13,7 @@
  */
 
 var LATEST_FIRMWARE_VERSION = "1.0.5";
+var CURRENT_UI_VERSION = "1.0.0";
 var MIN_FINAL_HOLD_TEMP = 16;
 
 
@@ -54,6 +55,7 @@ function init() {
 function checkPlug () {
 	scanPortsAndDisplay(2500);
 };
+
 function scanPortsAndDisplay (delay) {
 	communicator.scan(function(port) {
 		// TODO Wifi & Chrome
@@ -93,12 +95,19 @@ function scanPortsAndDisplay (delay) {
 
 function checkFirmwareVersion (version) {
 	console.verbose("Firmware version=" + version + ", Latest version=" + LATEST_FIRMWARE_VERSION);
+	var message;
 	if (version==LATEST_FIRMWARE_VERSION) {
 		console.verbose("The firmware is up to date.");
+		message = getLocalizedMessage('firmwareUpToDate')
+			.replace("___INSTALLED_VERSION___", version);
 	} else {
 		console.verbose("Please update the firmware!");
-		chromeUtil.alertUpdate(version, LATEST_FIRMWARE_VERSION);
+		message = getLocalizedMessage('firmwareUpdateAvailable')
+			.replace("___LATEST_VERSION___", LATEST_FIRMWARE_VERSION)
+			.replace("___INSTALLED_VERSION___", version);
+		$("#updateLink").show();
 	}
+	$("#update_dialog_content").html(message);
 }
 
 /* listExperiments()

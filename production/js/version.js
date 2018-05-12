@@ -1,0 +1,1 @@
+setNinjaPCRVersion({firmware:"1.0.5", ui:"1.0.1"});

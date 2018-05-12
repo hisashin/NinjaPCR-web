@@ -44,3 +44,6 @@
 .connected {
 	border-left: 10px solid #2f2;
 }
+#otaLink {
+	color: blue;
+}

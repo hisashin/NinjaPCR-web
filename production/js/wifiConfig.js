@@ -6,6 +6,7 @@ DeviceResponse.onConf = function (obj) {
 	console.log(obj.accepted);
 	$("#otaAcceptedMessage").show();
 	$("#otaLink").attr("href", getDeviceHost());
+	$("#otaLink").html(getDeviceHost());
 }
 var host = "";
 function getDeviceHost () {
@@ -13,12 +14,16 @@ function getDeviceHost () {
 }
 
 function startOTA () {
-	var getURL = getDeviceHost() + "/config?ot=" + OTA_TYPE_LOCAL_UPLOAD;
-	if (otaType == OTA_TYPE_WEB_DOWNLOAD) {
-		getURL += "&ou=" + otaURL;
-	}
+	var getURL = getDeviceHost() + "/config?ot=" + OTA_TYPE_LOCAL_UPLOAD;5
 	console.log(getURL);
 	loadJSONP(getURL, function(){/*TODO*/});
+}
+function setNinjaPCRVersion (obj) {
+	console.log(obj);
+	LATEST_FIRMWARE_VERSION = obj.firmware;
+	console.log("Latest firmware=" + obj.firmware);
+	console.log("Current UI version=" + CURRENT_UI_VERSION);
+	console.log("Latest UI version=" + obj.ui);
 }
 $(document).ready(function(){
 	console.log("wifiConfig.init");
@@ -45,6 +50,9 @@ $(document).ready(function(){
 		$('#isOTAMode').dialog('close');
 	});
 	$("#buttonStartOTA").click(startOTA);
+	
+	// Check version
+	loadJSONP("js/version.js", function(){/*TODO*/});
 });
 DeviceResponse.onErrorOTAMode = function (obj) {
 	$("#ip_status").text("Error");
