@@ -13,10 +13,27 @@ function getDeviceHost () {
 	return "http://" + host + ".local";
 }
 
+DeviceResponse.onUpdate = function (obj) {
+	console.log(obj);
+	console.log(obj.result);
+	// UPDATE_FAILD, NO_UPDATES, UPDATE_OK
+	if (obj.result=="UPDATE_FAILD") {
+		console.log("Update OK");
+	} else {
+		console.log("Update Failed");
+	}
+	// TODO
+}
 function startOTA () {
+	/*
 	var getURL = getDeviceHost() + "/config?ot=" + OTA_TYPE_LOCAL_UPLOAD;5
 	console.log(getURL);
-	loadJSONP(getURL, function(){/*TODO*/});
+	loadJSONP(getURL, function(){});
+	*/
+	
+	var getURL = getDeviceHost() + "/update?fp=TMP_FP";
+	console.log(getURL);
+	loadJSONP(getURL, function(){console.log("Updated");});
 }
 function setNinjaPCRVersion (obj) {
 	console.log(obj);

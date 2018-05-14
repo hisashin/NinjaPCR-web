@@ -9,7 +9,8 @@ var DeviceResponse = {
 
 /* Handle connection check response */
 DeviceResponse.connect = function (obj) {
-	console.log("DeviceResponse.connect:" + obj);
+	console.log("DeviceResponse.connect:");
+	console.log(obj);
 	if (obj && obj.connected) {
 		// Connected
 		$("#DeviceConnectionStatus").attr("class","connected");
