@@ -24,11 +24,6 @@ DeviceResponse.connect = function (obj) {
 		} else {
 			$("#update_failed_dialog").dialog("open");
 		}
-		$("#reloadAfterUpdateButton").click(function(){
-			console.log("Updated.");
-			location.reload();
-		});
-		$("#reloadAfterUpdateButton").show();
 		return;
 	}
 	console.log("DeviceResponse.connect:");
