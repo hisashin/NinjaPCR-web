@@ -92,7 +92,36 @@ function scanPortsAndDisplay (delay) {
 		}
 	}, delay);
 }
-
+function splitIntoInt (str) {
+	var tokens = str.split(".");
+	var intValues = [];
+	for (var i=0; i<tokens.length; i++) {
+		intValues.push(parseInt(tokens[i]));
+	}
+	return intValues;
+}
+var VersionComparison = {
+	Equal: 0,
+	Smaller: 1,
+	Larger: 2
+};
+function compareVersion (version, toVersion) {
+	console.log("comapreVersion " + version + "<=>" + toVersion);
+	var versionNums = splitIntoInt (version);
+	var versionToNums = splitIntoInt (toVersion);
+	var maxPlaces = Math.max(versionNums.length, versionToNums.length);
+	for (var place=0; place<maxPlaces; place++) {
+		var versionNum = (place<versionNums.length)?versionNums[place]:0;
+		var versionToNum = (place<versionToNums.length)?versionToNums[place]:0;
+		if (versionNum > versionToNum) {
+			return VersionComparison.Larger;
+		}
+		if (versionNum < versionToNum) {
+			return VersionComparison.Smaller;
+		}
+	}
+	return VersionComparison.Equal;
+}
 
 function checkFirmwareVersion (version) {
 	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
