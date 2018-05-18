@@ -129,8 +129,7 @@ $(document).ready(function(){
 	
 	
 	// Check version
-	//loadJSONP("http://ninjapcr.tori.st/js/version.js", function(){/*TODO*/});
-	loadJSONP("js/version.js", function(){/*TODO*/});
+	loadJSONP("http://ninjapcr.tori.st/js/version.js", function(){/*TODO*/});
 });
 DeviceResponse.onErrorOTAMode = function (obj) {
 	$("#ip_status").text("Error");
