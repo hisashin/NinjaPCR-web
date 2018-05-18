@@ -101,9 +101,6 @@ Storage.prototype.loadList = function (callback) {
 	
 	if (this.experiments && this.experiments.length>0) {
 		console.verbose("Storage.loadList Experiment List Found.");
-		for (var i=0; i<this.experiments.length; i++) {
-			console.verbose(this.experiments[i].name);
-		}
 		callback(this.experiments);
 	} else {
 		//Empty
