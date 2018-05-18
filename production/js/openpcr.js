@@ -12,6 +12,7 @@
  * Extra. Buttons
  */
 
+var FIRMWARE_VERSION_CURRENT = "0.0.0";
 var FIRMWARE_VERSION_LATEST = "1.0.5";
 var FIRMWARE_VERSION_REQUIRED = "1.0.5";
 var CURRENT_UI_VERSION = "1.0.0";
@@ -121,23 +122,6 @@ function compareVersion (version, toVersion) {
 		}
 	}
 	return VersionComparison.Equal;
-}
-
-function checkFirmwareVersion (version) {
-	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
-	var message;
-	if (version==FIRMWARE_VERSION_LATEST) {
-		console.verbose("The firmware is up to date.");
-		message = getLocalizedMessage('firmwareUpToDate')
-			.replace("___INSTALLED_VERSION___", version);
-	} else {
-		console.verbose("Please update the firmware!");
-		message = getLocalizedMessage('firmwareUpdateAvailable')
-			.replace("___LATEST_VERSION___", FIRMWARE_VERSION_LATEST)
-				.replace("___INSTALLED_VERSION___", version);
-				$("#configButton").show();
-	}
-	$("#update_dialog_content").html(message);
 }
 
 /* listExperiments()
@@ -583,9 +567,6 @@ function prepareButtons() {
 		$('#settings_dialog').dialog('open');
 	});
 
-	$('#OpenDownloadPage').on('click', function () {
-		window.open(getLocalizedMessage('downloadUrl'));
-	});
 	/*  "Home" button on the OpenPCR Form page
 	 * Goes Home
 	 */
@@ -971,14 +952,6 @@ $(function() {
 				stopPCR();
 			}
 		}
-	});
-	// Updating Dialog			
-	$('#updating_dialog').dialog({
-		autoOpen : false,
-		width : 300,
-		modal : true,
-		draggable : false,
-		resizable : false
 	});
 	
 	// Dialog Link

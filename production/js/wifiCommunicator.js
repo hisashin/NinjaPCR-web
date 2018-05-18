@@ -1,5 +1,10 @@
 var STORAGE_KEY_LAST_HOST_NAME = "ninjapcr_host";
 var DEFAULT_HOST = "ninjapcr";
+
+/** 
+	Core communicator
+	Basic WiFi communication with NinjaPCR device
+*/
 var DeviceResponse = {
 		onDeviceFound : null,
 		onReceiveCommandResponse : null,
@@ -12,7 +17,13 @@ DeviceResponse.connect = function (obj) {
 	if (DeviceResponse.checkConnectionInterval) {
 		console.log("Updated.");
 		clearInterval(DeviceResponse.checkConnectionInterval);
-		$("#updatingdMessage").html("Device was successfully updated to version " + obj.version);
+		$("#updating_dialog").dialog("close");
+		if (obj.version!=FIRMWARE_VERSION_CURRENT) {
+			// Version was not changed.
+			$("#update_finished_dialog").dialog("open");
+		} else {
+			$("#update_failed_dialog").dialog("open");
+		}
 		$("#reloadAfterUpdateButton").click(function(){
 			console.log("Updated.");
 			location.reload();
@@ -26,7 +37,6 @@ DeviceResponse.connect = function (obj) {
 		// Connected
 		$("#DeviceConnectionStatus").attr("class","connected");
 		$("#DeviceConnectionStatusLabel").text("Connected");
-		$("#firmwareUpdate").show();
 		
 		try {
 			if (localStorage) {

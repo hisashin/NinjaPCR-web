@@ -72,8 +72,6 @@ chromeUtil.alertUpdate = function (currentVersion, latestVersion) {
 		.replace("___LATEST_VERSION___", latestVersion)
 		.replace("___INSTALLED_VERSION___", currentVersion);
 	console.verbose(message);
-	$('#update_dialog_content')[0].innerHTML = message;
-	$('#update_dialog').show();
 }
 
 var Storage = function () {
