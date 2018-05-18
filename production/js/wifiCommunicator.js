@@ -9,6 +9,17 @@ var DeviceResponse = {
 
 /* Handle connection check response */
 DeviceResponse.connect = function (obj) {
+	if (DeviceResponse.checkConnectionInterval) {
+		console.log("Updated.");
+		clearInterval(DeviceResponse.checkConnectionInterval);
+		$("#updatingdMessage").html("Device was successfully updated to version " + obj.version);
+		$("#reloadAfterUpdateButton").click(function(){
+			console.log("Updated.");
+			location.reload();
+		});
+		$("#reloadAfterUpdateButton").show();
+		return;
+	}
 	console.log("DeviceResponse.connect:");
 	console.log(obj);
 	if (obj && obj.connected) {

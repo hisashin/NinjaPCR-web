@@ -1,13 +1,17 @@
 const OTA_TYPE_LOCAL_UPLOAD = 1;
 const OTA_TYPE_WEB_DOWNLOAD = 2; // Unavailable
 
+DeviceResponse.checkConnectionInterval = null;
 DeviceResponse.onConf = function (obj) {
 	console.log(obj);
 	console.log(obj.accepted);
-	$("#otaAcceptedMessage").show();
-	$("#otaLink").attr("href", getDeviceHost());
-	$("#otaLink").html(getDeviceHost());
+	$('#updating_dialog').dialog('open');
+	DeviceResponse.checkConnectionInterval = setInterval(function(){
+		console.log("Check update...");
+		communicator.sendRequestToDevice("/connect");
+	}, 3000);
 }
+
 var host = "";
 function getDeviceHost () {
 	return "http://" + host + ".local";
@@ -25,20 +29,15 @@ DeviceResponse.onUpdate = function (obj) {
 	// TODO
 }
 function startOTA () {
-	/*
-	var getURL = getDeviceHost() + "/config?ot=" + OTA_TYPE_LOCAL_UPLOAD;5
-	console.log(getURL);
-	loadJSONP(getURL, function(){});
-	*/
-	
-	var getURL = getDeviceHost() + "/update?fp=TMP_FP";
-	console.log(getURL);
+	var getURL = getDeviceHost() + "/update";
 	loadJSONP(getURL, function(){console.log("Updated");});
 }
 function setNinjaPCRVersion (obj) {
 	console.log(obj);
-	LATEST_FIRMWARE_VERSION = obj.firmware;
-	console.log("Latest firmware=" + obj.firmware);
+	FIRMWARE_VERSION_LATEST = obj.firmware.latest;
+	FIRMWARE_VERSION_REQUIRED = obj.firmware.required;
+	console.log("Latest firmware=" + FIRMWARE_VERSION_LATEST);
+	console.log("Required firmware=" + FIRMWARE_VERSION_REQUIRED);
 	console.log("Current UI version=" + CURRENT_UI_VERSION);
 	console.log("Latest UI version=" + obj.ui);
 }
@@ -53,9 +52,8 @@ $(document).ready(function(){
 		resizable : false
 	});
 	$("#configButton").click(function(){
-		console.log("Config.");
-		$("#example2").hide();
-		$("#config").show();
+		$("#configButton").attr("disabled", "true");
+		startOTA();
 	});
 	$("#buttonOTAModeOpenUpdate").click(function(){
 		window.open(getDeviceHost()+ "/");
@@ -69,6 +67,7 @@ $(document).ready(function(){
 	$("#buttonStartOTA").click(startOTA);
 	
 	// Check version
+	//loadJSONP("http://ninjapcr.tori.st/js/version.js", function(){/*TODO*/});
 	loadJSONP("js/version.js", function(){/*TODO*/});
 });
 DeviceResponse.onErrorOTAMode = function (obj) {

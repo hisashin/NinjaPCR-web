@@ -12,7 +12,8 @@
  * Extra. Buttons
  */
 
-var LATEST_FIRMWARE_VERSION = "1.0.5";
+var FIRMWARE_VERSION_LATEST = "1.0.5";
+var FIRMWARE_VERSION_REQUIRED = "1.0.5";
 var CURRENT_UI_VERSION = "1.0.0";
 var MIN_FINAL_HOLD_TEMP = 16;
 
@@ -94,18 +95,18 @@ function scanPortsAndDisplay (delay) {
 
 
 function checkFirmwareVersion (version) {
-	console.verbose("Firmware version=" + version + ", Latest version=" + LATEST_FIRMWARE_VERSION);
+	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
 	var message;
-	if (version==LATEST_FIRMWARE_VERSION) {
+	if (version==FIRMWARE_VERSION_LATEST) {
 		console.verbose("The firmware is up to date.");
 		message = getLocalizedMessage('firmwareUpToDate')
 			.replace("___INSTALLED_VERSION___", version);
 	} else {
 		console.verbose("Please update the firmware!");
 		message = getLocalizedMessage('firmwareUpdateAvailable')
-			.replace("___LATEST_VERSION___", LATEST_FIRMWARE_VERSION)
-			.replace("___INSTALLED_VERSION___", version);
-		$("#updateLink").show();
+			.replace("___LATEST_VERSION___", FIRMWARE_VERSION_LATEST)
+				.replace("___INSTALLED_VERSION___", version);
+				$("#configButton").show();
 	}
 	$("#update_dialog_content").html(message);
 }
@@ -122,8 +123,7 @@ function listExperiments() {
 			for ( var i = 0; i < experiments.length; i++) {
 				var experiment = experiments[i];
 				if (experiment.id && experiment.name) {
-					presetsHTML += '<option value="' + experiment.id + '">'
-							+ experiment.name + "</option>";
+					presetsHTML += '<option value="' + experiment.id + '">' + experiment.name + "</option>";
 				}
 			}
 		}
@@ -942,6 +942,14 @@ $(function() {
 				stopPCR();
 			}
 		}
+	});
+	// Updating Dialog			
+	$('#updating_dialog').dialog({
+		autoOpen : false,
+		width : 300,
+		modal : true,
+		draggable : false,
+		resizable : false
 	});
 	
 	// Dialog Link

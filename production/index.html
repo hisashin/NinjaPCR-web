@@ -89,8 +89,7 @@
 				<section id="firmwareUpdate" style="display:none">
 				<div id="update_dialog_content"></div>
 				<p>
-					<div id="updateLink" style="display:none"><a href="https://github.com/hisashin/NinjaPCR">Download</a></div>
-					<input type="button" value="Start Update" id="configButton"/>
+					<input type="button" value="Start Update" id="configButton" style="display:none"/>
 				</p>
 				</section>
 				<div id="update_dialog" style="display:none">
@@ -300,7 +299,35 @@
 			<div id="settings_dialog" title="Set Screen Contrast">
 				<span class="pcr_localize_dragSlider">Drag the slider to adjust the screen's contrast.</span>
 				<div id="contrast_slider"></div>
-			</div>	
+			</div>
+			<!--
+update_required_dialog
+update_available_dialog
+updating_dialog
+update_finished_dialog
+-->
+			<!-- OTA related dialogs -->
+			<div id="update_required_dialog" title="Updating...">
+				デバイスの更新が必要です。現在のバージョンでは動きません。
+			</div>
+			<div id="update_available_dialog" title="Updating...">
+				デバイスの更新があります。
+			</div>
+			<div id="updating_dialog" title="Updating...">
+				アップデート中です。アップデートには数分かかることがあります。本体の電源を切らないでください。
+				<div id="updatingdMessage"><!-- TODO move it -->
+					Device is updating. Please do not turn the power off.
+				</div>
+				<div style="margin-top:1rem">
+					<input type="button" value="OK" id="reloadAfterUpdateButton" style="display:none;"/>
+				</div>
+			</div>
+			<div id="update_finished_dialog" title="Updated">
+				アップデートが完了しました。画面をリロードします。
+			</div>
+			<div id="update_failed_dialog" title="Update failed">
+				アップデートに失敗しました。再度お試しください。画面をリロードします。
+			</div>
 			
 			</div>
 		</div>
@@ -326,10 +353,6 @@
 	<div id="config" style="display:none">
 		<h2>Firmware Update</h2>
 		<input type="button" value="Start Firmware Update" id="buttonStartOTA"/>
-		<div id="otaAcceptedMessage" style="display:none">
-			<!-- Link to OTA top page -->
-			Device is restarting in firmware update mode. Please open <a href="#" id="otaLink">http://ninjapcrwifi.local/</a>.
-		</div>
 	</div>
 </body>
 </html>
