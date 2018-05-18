@@ -80,6 +80,14 @@ window.MESSAGE = {
 	"stepInitialStep":{"message":"Initial Step"},
 	"stepFinalStep":{"message":"Final Step"},
 	"temperature":{"message":"Temperature"},
+	"updateRequired":{"message":"Device update is required. It can't run without updating. "},
+	"updateAvailable":{"message":"Device update is available!"},
+	"versionCurrent":{"message":"Current Version"},
+	"versionLatest":{"message":"Latest Version"},
+	"updateStarting":{"message":"Starting device update. Please do not turn the power off."},
+	"updating":{"message":"Device is updating. Please do not turn the power off."},
+	"updateFinished":{"message":"Device is updated successfully!"},
+	"updateFailed":{"message":"Device update was failed. Please try again."},
 	"TODO":{"message":"TODO"},
 	"TODO":{"message":"TODO"}
 }

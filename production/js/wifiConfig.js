@@ -140,6 +140,8 @@ DeviceResponse.onErrorOTAMode = function (obj) {
 function checkFirmwareVersion (version) {
 	FIRMWARE_VERSION_CURRENT = version;
 	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
+	$(".labelVersionCurrent").html(FIRMWARE_VERSION_CURRENT);
+	$(".labelVersionLatest").html(FIRMWARE_VERSION_LATEST);
 	var message;
 	if (compareVersion(version, FIRMWARE_VERSION_REQUIRED)==VersionComparison.Smaller) {
 		console.verbose("Firmware update is required.");
