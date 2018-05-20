@@ -16,7 +16,9 @@ ExperimentLogger.prototype.displayElapsedSec = function (elapsedSec) {
 	document.getElementById('elapsedTime').innerHTML = clockTime(elapsedSec);
 };
 ExperimentLogger.prototype.log = function (status) {
-	if (!status) return;
+	if (!status) { 
+		return;
+	}
 	console.log("Elapsed time(msec)=" + (new Date().getTime()-this.startTime.getTime()));
 	var elapsedSec = (new Date().getTime()-this.startTime.getTime())/1000;
 	this.displayElapsedSec(elapsedSec);

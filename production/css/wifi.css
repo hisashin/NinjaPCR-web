@@ -1,5 +1,5 @@
 #device_conf {
-	font-size:70%;
+	font-size:75%;
 	padding:1.5rem;
 	background-color:#ffe;
 	margin:0.5rem;
@@ -22,6 +22,19 @@
 }
 #device_conf li dl dd {
 	text-indent: 0.5em;
+}
+#device_conf ol {
+	list-style-type: decimal;
+	margin:0.2em 1.0em;
+
+}
+#device_conf ol ol {
+	list-style-type: lower-roman;
+}
+#device_conf ol li {
+	padding:0.4em  0.4em;
+	line-height: 130%;
+
 }
 #device_conf h2 {
 }

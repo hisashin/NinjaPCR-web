@@ -59,29 +59,41 @@
 				<h2 id="DeviceConnectionStatus" class="disconnected"><span id="DeviceConnectionStatusLabel">Device disconnected</span></h2>
 				<a href="#" id="NewDevice">新しいデバイスを設定する/再設定する</a>
 				<section style="display:none" id="DeviceSettings">
-				<h3>Setup New Device / Change WiFi Settings</h3>
 				<p>
-				<ul>
-					<li>NinjaPCR WiFiを電源に接続してください。</li>
-					<li>NinjaPCR WiFiの "Setup" ボタンを押しながら "Reset" ボタンを押し、"Reset" ボタンを離してから "Setup" ボタンを離してください。</li>
-					<li>PCのWiFi設定を開き、アクセスポイント一覧の中から "NinjaPCR" を選択します。</li>
+				<ol>
+					<li>NinjaPCR WiFi本体を電源に接続してください。</li>
+					<li>NinjaPCR WiFi本体の前面にある "Reset" ボタンを押し、"Setup" ボタンを押しながら "Reset" ボタンを離してください。</li>
+					<li>お使いのPCやスマートフォンのWiFi設定を開き、アクセスポイント一覧の中から "NinjaPCR" というSSIDを選択します。</li>
 					<li>
-						<a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a>に接続しWiFiの設定をします。
-						<dl>
-							<dt>SSID</dt><dd>利用したいアクセスポイントのSSIDを選んでください。</dd>
-							<dt>SSID(text)</dt><dd>SSIDのリストにない場合は手動で入力してください。</dd>
-							<dt>Password</dt><dd>WiFiパスワードです。</dd>
-							<dt>Host</dt><dd>ホスト名です。</dd>
-						</dl>
-						これらを入力したら "送信" を押してください。
+						ブラウザで<a href="http://192.168.1.1" target="_blank">設定ページ</a>にアクセスし、アクセスポイントWiFiの設定をします。
+						設定ページを開けない場合は、少し時間をおいてアクセスし直してください。
+						<ol>	
+							<li>
+								<strong>"SSID"</strong> のプルダウンメニューの中から、接続したいアクセスポイントを選択します。
+								この中にない場合は、その下の <strong>"SSID (text)"</strong> のテキストボックスに手動でSSID名を入力してください。
+							</li>
+							<li>
+								<strong>"Password"</strong> のテキストボックスにアクセスポイントのパスワードを入力します。
+							</li>
+							<li>
+								<strong>"Host"</strong> のテキストボックスに、NinjaPCRにアクセスするためのホスト名を入力します。
+								ホスト名は、本体を識別するために使われる文字列です。
+								デフォルトの "ninjapcr" のままでも利用できますが、複数のデバイスを識別したい場合などは重複しないようにそれぞれホスト名をつけて下さい。
+								<!-- TODO 「ホスト名」という名前は一般的にはわかりにくいので他の名称にする -->
+							</li>
+							<li>
+								これらを入力したら <strong>送信</strong> ボタンを押してください。
+							</li>
+						</ol>
 					</li>
-					<li>設定に成功したら本体をリセットします。</li>
-					<li>PCのWiFi設定を開き、元の接続先に戻します。</li>
-				</ul>
+					<li>PCやスマートフォンのWiFi設定を開き、元のアクセスポイントに再び接続します。</li>
+					<li>下のテキストボックスにホスト名を入れて "connect" ボタンを押します。</li>
+				</ol>
 				</p>
 				</section>
 				<section>
 				<p id="ipInputContainer">
+				<!-- TODO このテキストボックスに何を入力すればいいのか説明する -->
 					http://<input type="text" id="HostText"/>.local
 					<input type="button" value="connect" id="ConnectButton"/>
 				</p>
