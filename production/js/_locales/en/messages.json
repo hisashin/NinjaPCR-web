@@ -42,6 +42,7 @@ window.MESSAGE = {
 	"stopPcr":{"message":"Stop PCR?"},
 	"dragSlider":{"message":"Drag the slider to adjust the screen's contrast."},
 	"readySteadyGo":{"message":"Ready. Steady. Go!"},
+	"resuming": {"message":"Experiment \"___PROF___\" is in progress!"},
 	"saved":{"message":"Experiment saved!"},
 	"confirmDelete":{"message":"Delete Experiment?"},
 	"deleted":{"message":"Deleted!"},

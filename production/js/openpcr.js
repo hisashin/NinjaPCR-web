@@ -59,10 +59,9 @@ function checkPlug () {
 };
 
 function scanPortsAndDisplay (delay) {
-	communicator.scan(function(port) {
+	communicator.scan(function(port, isRunning) {
 		// TODO Wifi & Chrome
 		var deviceFound = !!port;
-		
 		var portMessage = (deviceFound)?
 				(getLocalizedMessage('deviceFound').replace('___PORT___',port)):getLocalizedMessage('deviceNotFound');
 		$("#portLabel").html(portMessage);
@@ -81,7 +80,9 @@ function scanPortsAndDisplay (delay) {
 				$("#Start").show();
 			}
 			// Alert Firmware Update
-			checkFirmwareVersion(communicator.firmwareVersion);
+			if (!isRunning) {
+				checkFirmwareVersion(communicator.firmwareVersion);
+			}
 		} else {
 			$("#runningUnplugged").show();
 			$("#runningPluggedIn").hide();
@@ -389,6 +390,7 @@ function startPCR() {
 	
 	// go to the Running dashboard
 	showRunningDashboard();
+	$('#starting').dialog('open');
 	
 	// write out the file to the OpenPCR device
 	communicator.sendStartCommand(encodedProgram);
@@ -418,8 +420,6 @@ function showRunningDashboard () {
 	$("#download").hide();
 	// show the "stop" button
 	$("#cancelButton").show();
-
-	$('#starting').dialog('open');
 }
 
 /*****************

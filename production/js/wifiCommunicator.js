@@ -14,7 +14,25 @@ var DeviceResponse = {
 
 /* Handle connection check response */
 DeviceResponse.connect = function (obj) {
+	if (!obj || !obj.connected) {
+		return;
+	}
+	console.verbose("DeviceResponse.connect:");
+	console.verbose(obj);
+	
+	// Connected
+	$("#DeviceConnectionStatus").attr("class","connected");
+	$("#DeviceConnectionStatusLabel").text("Connected");
+	
+	communicator.saveHostName(host);
+	
+	// Connected
+	$("#DeviceConnectionStatus").attr("class","connected");
+	$("#DeviceConnectionStatusLabel").text("Connected");
+	
+	
 	if (DeviceResponse.checkConnectionInterval) {
+		// Waiting for update
 		console.log("Updated.");
 		clearInterval(DeviceResponse.checkConnectionInterval);
 		$("#updating_dialog").dialog("close");
@@ -26,51 +44,44 @@ DeviceResponse.connect = function (obj) {
 		}
 		return;
 	}
-	console.log("DeviceResponse.connect:");
-	console.log(obj);
-	if (obj && obj.connected) {
-		// Connected
-		$("#DeviceConnectionStatus").attr("class","connected");
-		$("#DeviceConnectionStatusLabel").text("Connected");
+	
+	if (obj.running) {
+		console.log("Device is RUNNING");
+		// TODO show window
+		// Resume
+		experimentLogger = new ExperimentLogger();
+		experimentLog = [];
 		
-		try {
-			if (localStorage) {
-				localStorage.setItem(STORAGE_KEY_LAST_HOST_NAME, host);
-			} else {
-				localStorage.setItem(STORAGE_KEY_LAST_HOST_NAME, DEFAULT_HOST);
+		// write out the file to the OpenPCR device
+		
+		$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___',obj.prof));
+		$('#resuming').dialog({
+			autoOpen : false,
+			width : 400,
+			modal : true,
+			draggable : false,
+			resizable : false,
+			buttons : {
+				"OK" : function() {
+					$(this).dialog("close");
+					// Show progress view
+					showRunningDashboard();
+					experimentLogger.start();
+					running();
+					$('#ex2_p3').show();
+					// also, reset the command_id_counter
+					window.command_id_counter = 0;
+				}
 			}
-		} catch (e) {
-			console.log(e);
-		}
-		
-		if (obj.running) {
-			console.log("Device is RUNNING");
-			// Resume
-			experimentLogger = new ExperimentLogger();
-			experimentLog = [];
-			showRunningDashboard();
-			
-			// write out the file to the OpenPCR device
-			experimentLogger.start();
-			running();
-			
-			// then close windows it after 1 second
-			setTimeout(function() {
-				$('#starting').dialog('close');
-			}, 5000);
-			setTimeout(function() {
-				$('#ex2_p3').show();
-			}, 100);
-			// also, reset the command_id_counter
-			window.command_id_counter = 0;
-		} else {
-			console.log("Device is IDLE");
-		}
-		communicator.firmwareVersion = obj.version;
-		
-		console.log("Firmware version=" + communicator.firmwareVersion);
-		DeviceResponse.onDeviceFound("DEVICE");
+		});
+		$('#resuming').dialog('open');
+	} else {
+		console.log("Device is IDLE");
 	}
+	communicator.firmwareVersion = obj.version;
+	
+	console.log("Firmware version=" + communicator.firmwareVersion);
+	DeviceResponse.onDeviceFound(host, obj.running);
 };
 /* Handle command result */
 DeviceResponse.command = function (obj) {
@@ -87,17 +98,31 @@ DeviceResponse.status = function (obj) {
 var NetworkCommunicator = function () {
 	this.firmwareVersion = null;
 };
-// Find ports
-NetworkCommunicator.prototype.scan = function (callback) {
-	// callback(port)
-	DeviceResponse.onDeviceFound = callback;
+NetworkCommunicator.prototype.loadHostName = function () {
 	try {
 		if (window.localStorage && localStorage.getItem(STORAGE_KEY_LAST_HOST_NAME)) {
-			$("#HostText").val(localStorage.getItem(STORAGE_KEY_LAST_HOST_NAME));
+			return localStorage.getItem(STORAGE_KEY_LAST_HOST_NAME);
+		}
+	} catch (e) {
+		console.log(e);
+		return null;
+	}
+};
+NetworkCommunicator.prototype.saveHostName = function (hostName) {
+	try {
+		if (localStorage) {
+			localStorage.setItem(STORAGE_KEY_LAST_HOST_NAME, hostName);
 		}
 	} catch (e) {
 		console.log(e);
 	}
+	
+};
+// Find ports
+NetworkCommunicator.prototype.scan = function (callback) {
+	// callback(port)
+	DeviceResponse.onDeviceFound = callback;
+	$("#HostText").val(this.loadHostName() || DEFAULT_HOST);
 	var scope = this;
 	$("#ConnectButton").click(function(e) {
 		console.log("Check IP: " + $("#HostText").val());

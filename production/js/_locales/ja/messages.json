@@ -42,6 +42,7 @@ window.MESSAGE = {
 	"stopPcr":{"message":"PCRを終了しますか?"},
 	"dragSlider":{"message":"スライダーを動かしてコントラストを調整します。"},
 	"readySteadyGo":{"message":"実験開始!"},
+	"resuming": {"message":"実験 \"___PROF___\" が進行中です。"},
 	"saved":{"message":"実験を保存しました!"},
 	"confirmDelete":{"message":"実験を削除しますか?"},
 	"deleted":{"message":"削除しました!"},
