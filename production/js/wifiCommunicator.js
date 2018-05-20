@@ -10,8 +10,16 @@ var DeviceResponse = {
 	onReceiveCommandResponse : null,
 	callbacks: [] /* commandId:callbackFunction map */
 };
-DeviceResponse.registerCallback = function (commandId, func) {
+DeviceResponse.registerCallback = function (commandId, func, onError) {
 	DeviceResponse.callbacks[commandId] = func;
+	window.setTimeout(function() {
+		if (!DeviceResponse.callbacks[commandId]) {
+			return;
+		}
+		console.log("Request " + commandId + " timed out.");
+		DeviceResponse.callbacks[commandId] = null;
+		onError();
+	}, 5000);
 }
 DeviceResponse.handleCallback = function (commandId, obj) {
 	// Find callback function for command ID and call it.
@@ -49,6 +57,8 @@ DeviceResponse.onErrorOTAMode = function (obj, commandId) {
 var NetworkCommunicator = function () {
 	this.firmwareVersion = null;
 	this.commandId = 0;
+	this.statusTimeoutCount = 0;
+	this.statusTimeoutAlert = false;
 };
 NetworkCommunicator.prototype.loadHostName = function () {
 	try {
@@ -107,7 +117,7 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callb
 		URL += param;
 	}
 	console.log("sendRequestToDevice URL=" + URL);
-	DeviceResponse.registerCallback(this.commandId, callback);
+	DeviceResponse.registerCallback(this.commandId, callback, onError);
 	loadJSONP(URL, function () {
 		console.log.log("sendRequestToDevice error");
 		if (onError) {
@@ -165,7 +175,11 @@ NetworkCommunicator.prototype.connect = function () {
 		},
 		function () {
 			console.log("/connect failed");
+			$("#DeviceConnectionStatus").attr("class","disconnected");
+			$("#DeviceConnectionStatusLabel").text("Disconnected");
+			$(".connectionUI").removeAttr("disabled");
 		});
+	$(".connectionUI").attr("disabled", "true");
 	$("#DeviceConnectionStatus").attr("class","connecting");
 	$("#DeviceConnectionStatusLabel").text("Connecting...");
 }
@@ -178,9 +192,8 @@ NetworkCommunicator.prototype.scanOngoingExperiment = function () {
 
 
 NetworkCommunicator.prototype.sendStartCommand = function (commandBody) {
-	console.log("TODO sendStartCommand");
 	this.sendRequestToDevice("/command", commandBody, function(obj){
-			console.log("TODO /command start callback");
+			console.log("Start command is accepted.");
 		}, function() {
 		console.log("/command start failed.");
 	});
@@ -188,10 +201,37 @@ NetworkCommunicator.prototype.sendStartCommand = function (commandBody) {
 
 // * Request Status and Wait for Response
 NetworkCommunicator.prototype.requestStatus = function (callback) {
+	var scope = this;
 	this.sendRequestToDevice("/status", null, function (obj) {
+			scope.statusTimeoutCount = 0;
+			if (scope.statusTimeoutAlert) {
+				$('#disconnected_dialog').dialog('close');
+				scope.statusTimeoutAlert = false;
+				
+			}
 			callback(obj);
 		}, function () {
-		console.log("/status failed.");
+			if (scope.statusTimeoutAlert) {
+				return;
+			}
+			scope.statusTimeoutCount++;
+			if (scope.statusTimeoutCount > 5) {
+				scope.statusTimeoutAlert = true;
+				$("#disconnected_dialog").dialog({
+					autoOpen : false,
+					width : 400,
+					modal : true,
+					draggable : false,
+					resizable : false,
+					buttons : {
+						"OK" : function() {
+							$(this).dialog("close");
+							scope.statusTimeoutAlert = false;
+							scope.statusTimeoutCount = 0;
+						}
+					}});
+				$('#disconnected_dialog').dialog('open');
+			}
 	});
 };
 

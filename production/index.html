@@ -94,8 +94,8 @@
 				<section>
 				<p id="ipInputContainer">
 				<!-- TODO このテキストボックスに何を入力すればいいのか説明する -->
-					http://<input type="text" id="HostText"/>.local
-					<input type="button" value="connect" id="ConnectButton"/>
+					Host: <input type="text" id="HostText" class="connectionUI"/>
+					<input type="button" value="connect" id="ConnectButton" class="connectionUI"/>
 				</p>
 				</section>
 			</div>
@@ -295,6 +295,9 @@
 
 			<div id="alert_dialog" title="Alert">
 				<div id="alert_dialog_content"></div>
+			</div>
+			<div id="disconnected_dialog" title="Disconnected">
+				<div id="pcr_localize_disconnectedInExperiment">Device is disconnected.</div>
 			</div>
 			
 			<!-- settings-dialog -->
