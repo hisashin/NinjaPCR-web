@@ -39,7 +39,7 @@ window.MESSAGE = {
 	"peltier":{"message":"Peltier"},
 	"unplugged":{"message":"Your NinjaPCR is unplugged from the computer.<br />Plug in your NinjaPCR to get updated information on your run."},
 	"saveCsv":{"message":"Save CSV"},
-	"stopPcr":{"message":"Stop PCR?"},
+	"stopPcr":{"message":"Are you sure you want to stop the experiment?"},
 	"dragSlider":{"message":"Drag the slider to adjust the screen's contrast."},
 	"readySteadyGo":{"message":"Ready. Steady. Go!"},
 	"resuming": {"message":"Experiment \"___PROF___\" is in progress!"},

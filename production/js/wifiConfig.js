@@ -7,20 +7,32 @@ var host = "";
 function getDeviceHost () {
 	return "http://" + host + ".local";
 }
-
-DeviceResponse.onConf = function (obj) {
-	console.log(obj);
-	$("#update_starting_dialog").dialog("close");
-	$('#updating_dialog').dialog('open');
-	DeviceResponse.checkConnectionInterval = setInterval(function(){
-		console.log("Check update...");
-		communicator.sendRequestToDevice("/connect");
-	}, 3000);
-}
 function startOTA () {
 	$('#update_starting_dialog').dialog('open');
-	var getURL = getDeviceHost() + "/update";
-	loadJSONP(getURL, function(){console.log("Updated");});
+	this.sendRequestToDevice("/update", null, function(obj) {
+		$("#update_starting_dialog").dialog("close");
+		$('#updating_dialog').dialog('open');
+		DeviceResponse.checkConnectionInterval = setInterval(function(){
+			console.log("Check update...");
+			communicator.sendRequestToDevice("/connect", null, function (obj) {
+				// Waiting for update
+				console.log("Updated.");
+				$("#updating_dialog").dialog("close");
+				if (obj.version!=FIRMWARE_VERSION_CURRENT) {
+					// Version was not changed.
+					$("#update_finished_dialog").dialog("open");
+				} else {
+					$("#update_failed_dialog").dialog("open");
+				}
+				if (DeviceResponse.checkConnectionInterval) {
+					clearInterval(DeviceResponse.checkConnectionInterval);
+				}
+			}, function(){
+				console.log("TODO /connect check connection failed");
+			});
+		}, 3000);
+	
+	}, function(){});
 }
 // Called when version.js is loaded
 function setNinjaPCRVersion (obj) {
@@ -126,15 +138,9 @@ $(document).ready(function(){
 		}
 	});
 	
-	
-	
 	// Check version
 	loadJSONP("http://ninjapcr.tori.st/js/version.js", function(){/*TODO*/});
 });
-DeviceResponse.onErrorOTAMode = function (obj) {
-	$("#ip_status").text("Error");
-	$('#isOTAMode').dialog('open');
-}
 
 function checkFirmwareVersion (version) {
 	FIRMWARE_VERSION_CURRENT = version;

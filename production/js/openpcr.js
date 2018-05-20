@@ -493,14 +493,14 @@ function stopPCR() {
 	window.command_id++;
 	stopCommand += '&d=' + window.command_id;
 	console.verbose(stopCommand);
-	// Send out the STOP command by serial
+	// Send out the STOP command
 	communicator.sendStopCommand(stopCommand, function(){
+		window.clearInterval(window.updateRunningPage);
+		createCSV();
+		$("#homeButton").show();
+		// go back to the Form page
+		//sp2.showPanel(1);
 	});
-	window.clearInterval(window.updateRunningPage);
-	createCSV();
-	$("#homeButton").show();
-	// go back to the Form page
-	//sp2.showPanel(1);
 	return false;
 }
 
