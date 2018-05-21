@@ -10,21 +10,27 @@ var DeviceResponse = {
 	onReceiveCommandResponse : null,
 	callbacks: [] /* commandId:callbackFunction map */
 };
-DeviceResponse.registerCallback = function (commandId, func, onError) {
-	DeviceResponse.callbacks[commandId] = func;
+DeviceResponse.registerCallback = function (commandId, func, onError, element) {
+	DeviceResponse.callbacks[commandId] = {func:func, element:element};
 	window.setTimeout(function() {
 		if (!DeviceResponse.callbacks[commandId]) {
 			return;
 		}
-		console.log("Request " + commandId + " timed out.");
-		DeviceResponse.callbacks[commandId] = null;
+		console.log("Request " + commandId + " timed out. Removing tag.");
+		if (element.parentNode) {
+			element.parentNode.removeChild(element);
+		}
 		onError();
 	}, 5000);
 }
 DeviceResponse.handleCallback = function (commandId, obj) {
 	// Find callback function for command ID and call it.
 	if (DeviceResponse.callbacks[commandId]) {
-		DeviceResponse.callbacks[commandId](obj);
+		DeviceResponse.callbacks[commandId].func(obj);
+		var element = DeviceResponse.callbacks[commandId].element;
+		if (element.parentNode) {
+			element.parentNode.removeChild(element);
+		}
 		DeviceResponse.callbacks[commandId] = null;
 	} else {
 		console.verbose("CommandID " + commandId + " not found.");
@@ -59,6 +65,7 @@ var NetworkCommunicator = function () {
 	this.commandId = 0;
 	this.statusTimeoutCount = 0;
 	this.statusTimeoutAlert = false;
+	this.requestingStatus = false;
 };
 NetworkCommunicator.prototype.loadHostName = function () {
 	try {
@@ -104,8 +111,11 @@ function loadJSONP (URL, onError) {
 		console.log("error");
 	});
 	scriptTag.addEventListener("load", function() {
-		scriptTag.parentNode.removeChild(scriptTag);
+		if (scriptTag.parentNode) {
+			scriptTag.parentNode.removeChild(scriptTag);
+		}
 	});
+	return scriptTag;
 }
 
 NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callback, onError) {
@@ -117,13 +127,13 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callb
 		URL += param;
 	}
 	console.log("sendRequestToDevice URL=" + URL);
-	DeviceResponse.registerCallback(this.commandId, callback, onError);
-	loadJSONP(URL, function () {
+	var tag = loadJSONP(URL, function () {
 		console.log.log("sendRequestToDevice error");
 		if (onError) {
 			onError();
 		}
 	});
+	DeviceResponse.registerCallback(this.commandId, callback, onError, tag);
 	this.commandId++;
 }
 NetworkCommunicator.prototype.setDeviceHost = function (newHost) {
@@ -201,8 +211,14 @@ NetworkCommunicator.prototype.sendStartCommand = function (commandBody) {
 
 // * Request Status and Wait for Response
 NetworkCommunicator.prototype.requestStatus = function (callback) {
+	if (this.requestingStatus) {
+		console.verbose("Skip /status");
+		return;
+	}
 	var scope = this;
+	this.requestingStatus = true;
 	this.sendRequestToDevice("/status", null, function (obj) {
+			scope.requestingStatus = false;
 			scope.statusTimeoutCount = 0;
 			if (scope.statusTimeoutAlert) {
 				$('#disconnected_dialog').dialog('close');
@@ -215,23 +231,22 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 				return;
 			}
 			scope.statusTimeoutCount++;
-			if (scope.statusTimeoutCount > 5) {
-				scope.statusTimeoutAlert = true;
-				$("#disconnected_dialog").dialog({
-					autoOpen : false,
-					width : 400,
-					modal : true,
-					draggable : false,
-					resizable : false,
-					buttons : {
-						"OK" : function() {
-							$(this).dialog("close");
-							scope.statusTimeoutAlert = false;
-							scope.statusTimeoutCount = 0;
-						}
-					}});
-				$('#disconnected_dialog').dialog('open');
-			}
+			scope.statusTimeoutAlert = true;
+			$("#disconnected_dialog").dialog({
+				autoOpen : false,
+				width : 400,
+				modal : true,
+				draggable : false,
+				resizable : false,
+				buttons : {
+					"OK" : function() {
+						$(this).dialog("close");
+						scope.statusTimeoutAlert = false;
+						scope.statusTimeoutCount = 0;
+						scope.requestingStatus = false;
+					}
+				}});
+			$('#disconnected_dialog').dialog('open');
 	});
 };
 
