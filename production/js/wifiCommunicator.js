@@ -1,10 +1,6 @@
 var STORAGE_KEY_LAST_HOST_NAME = "ninjapcr_host";
 var DEFAULT_HOST = "ninjapcr";
 
-/** 
-	Core communicator
-	Basic WiFi communication with NinjaPCR device
-*/
 var DeviceResponse = {
 	onDeviceFound : null,
 	onReceiveCommandResponse : null,
@@ -60,8 +56,14 @@ DeviceResponse.onErrorOTAMode = function (obj, commandId) {
 	$('#isOTAMode').dialog('open');
 }
 
+/** 
+	Core communicator
+	Basic WiFi communication with NinjaPCR device
+*/
+
 var NetworkCommunicator = function () {
 	this.firmwareVersion = null;
+	this.connected = false;
 	this.commandId = 0;
 	this.statusTimeoutCount = 0;
 	this.statusTimeoutAlert = false;
@@ -146,14 +148,12 @@ NetworkCommunicator.prototype.connect = function () {
 			$("#DeviceConnectionStatus").attr("class","connected");
 			$("#DeviceConnectionStatusLabel").text("Connected");
 			scope.saveHostName(host);
+			scope.connected = true;
 			if (obj.running) {
 				console.log("Device is RUNNING");
-				// TODO show window
 				// Resume
 				experimentLogger = new ExperimentLogger();
 				experimentLog = [];
-				
-				// write out the file to the OpenPCR device
 				
 				$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___',obj.prof));
 				$('#resuming').dialog({
@@ -185,6 +185,7 @@ NetworkCommunicator.prototype.connect = function () {
 		},
 		function () {
 			console.log("/connect failed");
+			scope.connected = false;
 			$("#DeviceConnectionStatus").attr("class","disconnected");
 			$("#DeviceConnectionStatusLabel").text("Disconnected");
 			$(".connectionUI").removeAttr("disabled");
@@ -219,6 +220,7 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 	this.requestingStatus = true;
 	this.sendRequestToDevice("/status", null, function (obj) {
 			scope.requestingStatus = false;
+			scope.connected = true;
 			scope.statusTimeoutCount = 0;
 			if (scope.statusTimeoutAlert) {
 				$('#disconnected_dialog').dialog('close');
@@ -227,6 +229,7 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 			}
 			callback(obj);
 		}, function () {
+			scope.connected = false;
 			if (scope.statusTimeoutAlert) {
 				return;
 			}

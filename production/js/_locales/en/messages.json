@@ -21,7 +21,7 @@ window.MESSAGE = {
 	"step":{"message":"Step"},
 	"finalStep":{"message":"Final Step"},
 	"moreOptions":{"message":"More Options"},
-	"pleasePlug":{"message":"Plug in NinjaPCR to Start"},
+	"pleaseConnect":{"message":"Plug in NinjaPCR to Start"},
 	"savePreset":{"message":"Save Preset"},
 	"saveEdits":{"message":"Save Edits"},
 	"cancel":{"message":"Cancel"},
@@ -90,5 +90,6 @@ window.MESSAGE = {
 	"updateFinished":{"message":"Device is updated successfully!"},
 	"updateFailed":{"message":"Device update was failed. Please try again."},
 	"stopRunning":{"message":"Device may have restarted."},
+	"disconnectedInExperiment":{"message":"Device is disconnected."},
 	"TODO":{"message":"TODO"}
 }

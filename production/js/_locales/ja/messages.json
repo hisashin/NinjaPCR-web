@@ -21,7 +21,7 @@ window.MESSAGE = {
 	"step":{"message":"ステップ"},
 	"finalStep":{"message":"最終ステップ"},
 	"moreOptions":{"message":"詳細設定"},
-	"pleasePlug":{"message":"NinjaPCRを接続してください"},
+	"pleaseConnect":{"message":"NinjaPCRを接続してください"},
 	"savePreset":{"message":"実験を保存"},
 	"saveEdits":{"message":"編集を保存"},
 	"cancel":{"message":"キャンセル"},
@@ -90,5 +90,6 @@ window.MESSAGE = {
 	"updateFinished":{"message":"アップデートが完了しました!"},
 	"updateFailed":{"message":"アップデートに失敗しました。再度やり直してください。"},
 	"stopRunning":{"message":"プロファイルが停止しています。デバイスが再起動した可能性があります。"},
+	"disconnectedInExperiment":{"message":"デバイスが接続されていません。"},
 	"TODO":{"message":"TODO"}
 }

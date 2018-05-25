@@ -158,6 +158,11 @@ function listExperiments() {
  * Loads the selected experiment in the list on the home page
  */
 function listSubmit() {
+	// Error if device is disconnected
+	if (!communicator || !communicator.connected) {
+		$('#disconnected_dialog').dialog("open");
+		return;
+	}
 	// what is selected in the drop down menu?
 	experimentID = $("#dropdown").val();
 	// load the selected experiment
@@ -994,6 +999,20 @@ $(function() {
 		draggable : false,
 		resizable : false
 	});
+	// Disconnected dialog
+	$('#disconnected_dialog').dialog({
+		autoOpen : false,
+		width : 300,
+		modal : true,
+		draggable : false,
+		resizable : false,
+		buttons : {
+			"OK" : function() {
+				$(this).dialog("close");
+			}
+		}
+	});
+	
 
 	//hover states on the static widgetson the static widgets
 		$('#dialog_link, ul#icons li').hover(

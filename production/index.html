@@ -158,7 +158,7 @@
 					</div>
 					<input type="button" class="small_button moreoptions pcr_localize_moreOptions" value="More Options" id="OptionsButton"/>
 					<input type="button" class="start button pcr_localize_start" id="Start" value="Start"/>
-				<input type="button" id="Unplugged" class="unplugged button pcr_localize_pleasePlug" value="Plug in your Toy PCR to Start"/>
+				<input type="button" id="Unplugged" class="unplugged button pcr_localize_pleaseConnect" value="Plug in your Toy PCR to Start"/>
 				<input type="button" id="Save" class="save button pcr_localize_savePreset" value="Save Preset"/>
 				<input type="button" id="SaveEdits" class="saveEdits button pcr_localize_saveEdits" value="Save Edits"/>
 				<input type="button" id="Cancel" class="cancel button pcr_localize_cancel" value="Cancel"/>
@@ -281,7 +281,7 @@
 			<div style="margin-top:6px;">
 				<a class="small_button pcr_localize_saveCsv" id="download" style="display:none;">Save CSV</a>
 			</div>
-			<div style="display:none">
+			<div style="display:none" id="dialog_container">
 				<!-- stop-dialog -->
 				<div id="stop_dialog" title="Stop">
 					<span class="pcr_localize_stopPcr">Are you sure you want to stop the experiment?</span>
