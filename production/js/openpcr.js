@@ -465,10 +465,40 @@ function messageToStatus (message) {
 }
 
 // Process Status update
+var prevStatus = null;
 function onReceiveStatus(message) {
 	var status = messageToStatus(message);
+	if (prevStatus!=status.s && status.s=="stopped") {
+		console.log("Device is restarted.");
+		$('#stop_running_dialog').dialog({
+			autoOpen : false,
+			width : 400,
+			modal : true,
+			draggable : false,
+			resizable : false,
+			buttons : {
+				"Close" : function() {
+					onStopPCR();
+					$(this).dialog("close");
+				}
+			}
+		});
+		$('#stop_running_dialog').dialog('open');
+	}
 	experimentLog.push(status);
 	experimentLogger.log(status);
+	prevStatus = status.s;
+}
+/* onStopPCR()
+ * This function is called when the Stop command is accepted.
+ */
+function onStopPCR () {
+	window.clearInterval(window.updateRunningPage);
+	createCSV();
+	$("#homeButton").show();
+	// go back to the Form page
+	//sp2.showPanel(1);
+
 }
 
 /* StopPCR()
@@ -494,12 +524,8 @@ function stopPCR() {
 	stopCommand += '&d=' + window.command_id;
 	console.verbose(stopCommand);
 	// Send out the STOP command
-	communicator.sendStopCommand(stopCommand, function(){
-		window.clearInterval(window.updateRunningPage);
-		createCSV();
-		$("#homeButton").show();
-		// go back to the Form page
-		//sp2.showPanel(1);
+	communicator.sendStopCommand(stopCommand, function() {
+		onStopPCR();
 	});
 	return false;
 }

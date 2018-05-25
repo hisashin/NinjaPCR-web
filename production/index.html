@@ -281,10 +281,21 @@
 			<div style="margin-top:6px;">
 				<a class="small_button pcr_localize_saveCsv" id="download" style="display:none;">Save CSV</a>
 			</div>
-			<!-- stop-dialog -->
-			<div id="stop_dialog" title="Stop">
-				<span class="pcr_localize_stopPcr">Are you sure you want to stop the experiment?</span>
-			</div>
+			<div style="display:none">
+				<!-- stop-dialog -->
+				<div id="stop_dialog" title="Stop">
+					<span class="pcr_localize_stopPcr">Are you sure you want to stop the experiment?</span>
+				</div>
+				<!-- stopped (or restarted) when running view -->
+				<div id="stop_running_dialog" title="Warning">
+					<span class="pcr_localize_stopRunning">Device may have restarted.</span>
+				</div>
+			
+				<div id="disconnected_dialog" title="Disconnected">
+					<div id="pcr_localize_disconnectedInExperiment">Device is disconnected.</div>
+				</div>
+				
+			
 			<!-- about-dialog -->
 			<div id="about_dialog" title="About NinjaPCR">
 				Version <span id="appVersion"></span><br />
@@ -292,12 +303,10 @@
 				https://github.com/hisashin/NinjaPCR/wiki<br />
 				Email us: pcr@tori.st<br />
 			</div>
+			</div>
 
 			<div id="alert_dialog" title="Alert">
 				<div id="alert_dialog_content"></div>
-			</div>
-			<div id="disconnected_dialog" title="Disconnected">
-				<div id="pcr_localize_disconnectedInExperiment">Device is disconnected.</div>
 			</div>
 			
 			<!-- settings-dialog -->

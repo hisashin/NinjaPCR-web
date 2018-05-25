@@ -89,6 +89,6 @@ window.MESSAGE = {
 	"updating":{"message":"Device is updating. Please do not turn the power off."},
 	"updateFinished":{"message":"Device is updated successfully!"},
 	"updateFailed":{"message":"Device update was failed. Please try again."},
-	"TODO":{"message":"TODO"},
+	"stopRunning":{"message":"Device may have restarted."},
 	"TODO":{"message":"TODO"}
 }

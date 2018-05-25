@@ -89,5 +89,6 @@ window.MESSAGE = {
 	"updating":{"message":"アップデート中です。電源を切らないでください。アップデートには数分かかる場合があります。"},
 	"updateFinished":{"message":"アップデートが完了しました!"},
 	"updateFailed":{"message":"アップデートに失敗しました。再度やり直してください。"},
+	"stopRunning":{"message":"プロファイルが停止しています。デバイスが再起動した可能性があります。"},
 	"TODO":{"message":"TODO"}
 }
