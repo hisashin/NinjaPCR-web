@@ -1,4 +1,4 @@
-window.MESSAGE = {
+window.MESSAGE_JA = {
 	"extLocale": {
 		"message": "ja"
 	},
@@ -48,7 +48,7 @@ window.MESSAGE = {
 	"deleted":{"message":"削除しました!"},
 	"deviceNotFound":{"message":"デバイスが見つかりませんでした。"},
 	"deviceFound":{"message":"ポート ___PORT___ にデバイスが接続されています。"},
-	"firmwareUpdateAvailable":{"message":"最新のファームウェア、バージョン ___LATEST_VERSION___ が公開されています! (現在インストールされているバージョンは ___INSTALLED_VERSION___ です)"},,
+	"firmwareUpdateAvailable":{"message":"最新のファームウェア、バージョン ___LATEST_VERSION___ が公開されています! (現在インストールされているバージョンは ___INSTALLED_VERSION___ です)"},
 	"firmwareUpToDate":{"message":"ファームウェアは最新です (Installed version is ___INSTALLED_VERSION___)"},
 	"heaterLid":{"message":"蓋の温度"},
 	"numberOfCycles":{"message":"サイクル数"},

@@ -1,4 +1,4 @@
-window.MESSAGE = {
+window.MESSAGE_EN = {
 	"extLocale": {
 		"message": "en"
 	},
