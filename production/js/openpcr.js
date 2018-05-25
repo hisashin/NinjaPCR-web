@@ -992,7 +992,7 @@ function createCSV () {
 	   "Command ID" + TAB //d
 	 + "Status" + TAB //s
 	 + "Lid Temp" + TAB //l
-	 + "Block Temp" + TAB //b
+	 + "Well Temp" + TAB //b
 	 + "Therm State" + TAB //t
 	 + "Elapsed Time" + TAB //e
 	 + "Remaining Time" + TAB //r

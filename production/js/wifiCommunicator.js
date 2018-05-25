@@ -212,7 +212,7 @@ NetworkCommunicator.prototype.sendStartCommand = function (commandBody) {
 // * Request Status and Wait for Response
 NetworkCommunicator.prototype.requestStatus = function (callback) {
 	if (this.requestingStatus) {
-		console.verbose("Skip /status");
+		// There's a pending request.
 		return;
 	}
 	var scope = this;

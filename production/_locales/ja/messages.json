@@ -35,7 +35,7 @@
 	"cycle":{"message":"サイクル"},
 	"lid":{"message":"蓋"},
 	"block":{"message":"ウェル"},
-	"peltier":{"message":"ペルチエ"},
+	"well":{"message":"ウェル"},
 	"unplugged":{"message":"NinjaPCRがコンピュータから取り外されました。<br />再度接続してください。"},
 	"saveCsv":{"message":"実験記録をCSVで保存"},
 	"stopPcr":{"message":"PCRを終了しますか?"},
