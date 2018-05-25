@@ -53,7 +53,7 @@ DeviceResponse.onConf = function (obj, commandId) {
 DeviceResponse.onErrorOTAMode = function (obj, commandId) {
 	DeviceResponse.handleCallback(commandId, obj);
 	$("#ip_status").text("Error");
-	$('#isOTAMode').dialog('open');
+	$('#is_ota_mode_dialog').dialog('open');
 }
 
 /** 
@@ -156,7 +156,7 @@ NetworkCommunicator.prototype.connect = function () {
 				experimentLog = [];
 				
 				$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___',obj.prof));
-				$('#resuming').dialog({
+				$('#is_resuming_dialog').dialog({
 					autoOpen : false,
 					width : 400,
 					modal : true,
@@ -175,7 +175,7 @@ NetworkCommunicator.prototype.connect = function () {
 						}
 					}
 				});
-				$('#resuming').dialog('open');
+				$('#is_resuming_dialog').dialog('open');
 			} else {
 				console.log("Device is IDLE");
 			}

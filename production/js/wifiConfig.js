@@ -47,7 +47,7 @@ function setNinjaPCRVersion (obj) {
 $(document).ready(function(){
 	console.log("wifiConfig.init");
 	
-	$('#isOTAMode').dialog({
+	$('#is_ota_mode_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -61,7 +61,7 @@ $(document).ready(function(){
 		window.open(getDeviceHost() + "/cancel");
 	});
 	$("#buttonOTAModeCloseDialog").click(function(){
-		$('#isOTAMode').dialog('close');
+		$('#is_ota_mode_dialog').dialog('close');
 	});
 	$("#buttonStartOTA").click(startOTA);
 	

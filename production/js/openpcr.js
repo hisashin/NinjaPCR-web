@@ -395,7 +395,7 @@ function startPCR() {
 	
 	// go to the Running dashboard
 	showRunningDashboard();
-	$('#starting').dialog('open');
+	$('#is_starting_dialog').dialog('open');
 	
 	// write out the file to the OpenPCR device
 	communicator.sendStartCommand(encodedProgram);
@@ -404,7 +404,7 @@ function startPCR() {
 	
 	// then close windows it after 1 second
 	setTimeout(function() {
-		$('#starting').dialog('close');
+		$('#is_starting_dialog').dialog('close');
 	}, 5000);
 	setTimeout(function() {
 		$('#ex2_p3').show();
@@ -475,7 +475,7 @@ function onReceiveStatus(message) {
 	var status = messageToStatus(message);
 	if (prevStatus!=status.s && status.s=="stopped") {
 		console.log("Device is restarted.");
-		$('#stop_running_dialog').dialog({
+		$('#is_stopped_dialog').dialog({
 			autoOpen : false,
 			width : 400,
 			modal : true,
@@ -488,7 +488,7 @@ function onReceiveStatus(message) {
 				}
 			}
 		});
-		$('#stop_running_dialog').dialog('open');
+		$('#is_stopped_dialog').dialog('open');
 	}
 	experimentLog.push(status);
 	experimentLogger.log(status);
@@ -634,7 +634,7 @@ function prepareButtons() {
 			return 0; // if not, don't do anything
 		}
 		// otherwise, the form is valid. Open the "Save" dialog box
-		$('#save_form').dialog('open');
+		$('#save_dialog').dialog('open');
 	});
 
 	/*  "Save" on the OpenPCR Form in EDIT MODE
@@ -782,19 +782,13 @@ function prepareButtons() {
 function deleteCurrentExperiment() {
 	// delete the currently loaded Experiment file
 	// given an ID, get the path for that ID
-	/*
-	experimentPath = window.experimentList[experimentID];
-	// delete the file
-	var file = experimentPath;
-	file.deleteFile();
-	*/
 	// show a confirmation screen
 	pcrStorage.deleteCurrentExperiment  (
 	function () {
-		$('#delete_confirmation_dialog').dialog('open');
+		$('#delete_done_dialog').dialog('open');
 		// then close it after 1 second
 		setTimeout(function() {
-			$('#delete_confirmation_dialog').dialog('close');
+			$('#delete_done_dialog').dialog('close');
 		}, 750);
 	});
 
@@ -897,7 +891,7 @@ $(function() {
 	});
 
 	// Save Dialog			
-	$('#save_form').dialog({
+	$('#save_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -923,7 +917,7 @@ $(function() {
 	});
 
 	// Save Confirmation Dialog
-	$('#save_confirmation_dialog').dialog({
+	$('#save_done_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -958,7 +952,7 @@ $(function() {
 	});
 
 	// Delete Confirmation Dialog
-	$('#delete_confirmation_dialog').dialog({
+	$('#delete_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -992,7 +986,7 @@ $(function() {
 	});
 
 	// Starting dialog
-	$('#starting').dialog({
+	$('#is_starting_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -1023,7 +1017,7 @@ $(function() {
 });
 
 // Enter/Return Key clicks "Save" on dialog
-$('#save_form').on('keyup', function(e) {
+$('#save_dialog').on('keyup', function(e) {
 	if (e.keyCode == 13) {
 		$(':button:contains("Save")').click();
 	}
