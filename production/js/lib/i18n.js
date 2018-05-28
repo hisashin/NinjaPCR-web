@@ -4,7 +4,7 @@ function getUserLang () {
  	} 
 	return navigator.language;
 }
-if (getUserLang()=='ja') {
+if (getUserLang()=='ja' && false) {
 	window.MESSAGE = window.MESSAGE_JA;
 } else {
 	window.MESSAGE = window.MESSAGE_EN;

@@ -55,44 +55,38 @@
 			<div id="homeHeader" class="Header pcr_localize_appTitle">NinjaPCR WiFi</div>
 			<div id="device_conf">
 				<h2 id="DeviceConnectionStatus" class="disconnected"><span id="DeviceConnectionStatusLabel">Device disconnected</span></h2>
-				<a href="#" id="NewDevice">新しいデバイスを設定する/再設定する</a>
+				<a href="#" id="NewDevice" class="pcr_localize_wifiSettingsButton">Setup a new NinjaPCR device / Change network configuration</a>
 				<section style="display:none" id="DeviceSettings">
 				<p>
 				<ol>
-					<li>NinjaPCR WiFi本体を電源に接続してください。</li>
-					<li>NinjaPCR WiFi本体の前面にある "Reset" ボタンを押し、"Setup" ボタンを押しながら "Reset" ボタンを離してください。</li>
-					<li>お使いのPCやスマートフォンのWiFi設定を開き、アクセスポイント一覧の中から "NinjaPCR" というSSIDを選択します。</li>
+					<li class="pcr_localize_wifiSettings0">Plug the power adapter into NinjaPCR and then into an outlet.</li>
+					<liclass="pcr_localize_wifiSettings1">Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.</li>
+					<liclass="pcr_localize_wifiSettings2">Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.</li>
 					<li>
-						ブラウザで<a href="http://192.168.1.1" target="_blank">設定ページ</a>にアクセスし、アクセスポイントWiFiの設定をします。
-						設定ページを開けない場合は、少し時間をおいてアクセスし直してください。
+						<span class="pcr_localize_wifiSettings3">Open <a href="http://192.168.1.1" target="_blank">the WiFi settings page</a> and setup. If you the page doesn't show up, please retry after a few seconds.</span>
 						<ol>	
 							<li>
-								<strong>"SSID"</strong> のプルダウンメニューの中から、接続したいアクセスポイントを選択します。
-								この中にない場合は、その下の <strong>"SSID (text)"</strong> のテキストボックスに手動でSSID名を入力してください。
+								<strong>"SSID"</strong> : <span class="pcr_localize_wifiSettings3_0">Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.</span>
 							</li>
 							<li>
-								<strong>"Password"</strong> のテキストボックスにアクセスポイントのパスワードを入力します。
+								<strong>"Password"</strong> : <span class="pcr_localize_wifiSettings3_1">Input the password of the network.</span>
 							</li>
 							<li>
-								<strong>"Host"</strong> のテキストボックスに、NinjaPCRにアクセスするためのホスト名を入力します。
-								ホスト名は、本体を識別するために使われる文字列です。
-								デフォルトの "ninjapcr" のままでも利用できますが、複数のデバイスを識別したい場合などは重複しないようにそれぞれホスト名をつけて下さい。
-								<!-- TODO 「ホスト名」という名前は一般的にはわかりにくいので他の名称にする -->
+								<strong>"Device name"</strong> : <span class="pcr_localize_wifiSettings3_2">Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.</span>
 							</li>
 							<li>
-								これらを入力したら <strong>Join</strong> ボタンを押してください。
+								<span class="pcr_localize_wifiSettings3_3">After you set up the device, it will restart and connect to the specified access point.</span>
 							</li>
 						</ol>
 					</li>
-					<li>PCやスマートフォンのWiFi設定を開き、元のアクセスポイントに再び接続します。</li>
-					<li>下のテキストボックスにホスト名を入れて "connect" ボタンを押します。</li>
+					<li class="pcr_localize_wifiSettings4">Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.</li>
+					<li class="pcr_localize_wifiSettings5">Input the "Device name" that you have specified when you configured the device and press "connect" button.</li>
 				</ol>
 				</p>
 				</section>
 				<section>
 				<p id="ipInputContainer">
-				<!-- TODO このテキストボックスに何を入力すればいいのか説明する -->
-					Host: <input type="text" id="HostText" class="connectionUI"/>
+					Device name: <input type="text" id="HostText" class="connectionUI"/>
 					<input type="button" value="connect" id="ConnectButton" class="connectionUI"/>
 				</p>
 				</section>

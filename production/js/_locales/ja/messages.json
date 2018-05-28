@@ -90,6 +90,16 @@ window.MESSAGE_JA = {
 	"updateFinished":{"message":"アップデートが完了しました!"},
 	"updateFailed":{"message":"アップデートに失敗しました。再度やり直してください。"},
 	"stopRunning":{"message":"プロファイルが停止しています。デバイスが再起動した可能性があります。"},
-	"disconnectedInExperiment":{"message":"デバイスが接続されていません。"},
+	"disconnectedInExperiment":{"message":"デバイスが接続されていません。"},	"wifiSettings0":{"message":"NinjaPCR WiFi本体を電源に接続してください。"},
+	"wifiSettingsButton":{"message":"新しいNinjaPCRデバイスを設定する / 再設定する"},
+	"wifiSettings1":{"message":"NinjaPCR WiFi本体の前面にある \"Setup\" ボタンを押したまま、\"Reset\" ボタンを押して離してください。NinjaPCRがWiFi設定モードで起動します。"},
+	"wifiSettings2":{"message":"お使いのPCやスマートフォンのWiFi設定を開き、アクセスポイント一覧の中から \"NinjaPCR\" というSSIDを選択します。"},
+	"wifiSettings3":{"message":"ブラウザで<a href=\"http://192.168.1.1\" target=\"_blank\">設定ページ</a>にアクセスし、アクセスポイントWiFiの設定をします。 設定ページを開けない場合は、少し時間をおいてアクセスし直してください。"},
+	"wifiSettings3_0":{"message":"プルダウンメニューの中から、接続したいアクセスポイントを選択します。 この中にない場合は、その下のテキストボックスに手動でSSID名を入力してください。"},
+	"wifiSettings3_1":{"message":"テキストボックスにアクセスポイントのパスワードを入力します。"},
+	"wifiSettings3_2":{"message":"デバイス固有の名前をアルファベットまたは数字の4〜8文字で入力してください。 デフォルトの \"ninjapcr\" のままでも利用できますが、複数のデバイスを識別したい場合などは重複しないようにそれぞれホスト名をつけて下さい。"},
+	"wifiSettings3_3":{"message":"これらを入力したら Join ボタンを押してください。設定が正しく行われていれば、再起動後、NinjaPCRは指定したアクセスポイントに接続します。"},
+	"wifiSettings4":{"message":"PCやスマートフォンのWiFi設定を開き、元のアクセスポイントに再び接続します。"},
+	"wifiSettings5":{"message":"先程の設定で入力した「デバイス名」を下のテキストボックスに入力して \"connect\" ボタンを押します。"},
 	"TODO":{"message":"TODO"}
 }

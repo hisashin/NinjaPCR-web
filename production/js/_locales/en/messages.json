@@ -91,5 +91,16 @@ window.MESSAGE_EN = {
 	"updateFailed":{"message":"Device update was failed. Please try again."},
 	"stopRunning":{"message":"Device may have restarted."},
 	"disconnectedInExperiment":{"message":"Device is disconnected."},
+	"wifiSettingsButton":{"message":"Setup a new NinjaPCR device / Change network configuration"},
+	"wifiSettings0":{"message":"Plug the power adapter into NinjaPCR and then into an outlet."},
+	"wifiSettings1":{"message":"Press the \"Setup\" button and hold it, then press and release the \"Reset\" button while the \"Setup\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."},
+	"wifiSettings2":{"message":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list."},
+	"wifiSettings3":{"message":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If you the page doesn't show up, please retry after a few seconds."},
+	"wifiSettings3_0":{"message":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below."},
+	"wifiSettings3_1":{"message":"Input the password of the network."},
+	"wifiSettings3_2":{"message":"Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices."},
+	"wifiSettings3_3":{"message":"After you set up the device, it will restart and connect to the specified access point."},
+	"wifiSettings4":{"message":"Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to."},
+	"wifiSettings5":{"message":"Input the \"Device name\" that you have specified when you configured the device and press \"connect\" button."},
 	"TODO":{"message":"TODO"}
 }
