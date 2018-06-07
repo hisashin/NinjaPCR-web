@@ -40,7 +40,7 @@ html
 
     block head
 
-  body.i18n
+  body
     block content
 
     script i18next.use(i18nextXHRBackend, i18nextBrowserLanguageDetector).init({fallbackLng:'en', debug:true, backend: { loadPath: '/locales/{{lng}}/{{ns}}.json'}}, function(err, t) { jqueryI18next.init(i18next, $); $(".i18n").localize(); });
