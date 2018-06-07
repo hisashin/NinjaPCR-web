@@ -68,12 +68,10 @@ function clockTime (totalSec) {
 }
 
 chromeUtil.alertUpdate = function (currentVersion, latestVersion) {
-	var message = getLocalizedMessage('firmwareVersionDialog')
+	var message = getLocalizedMessage('firmwareUpdateAvailable')
 		.replace("___LATEST_VERSION___", latestVersion)
 		.replace("___INSTALLED_VERSION___", currentVersion);
 	console.verbose(message);
-	$('#update_dialog_content')[0].innerHTML = message;
-	$('#update_dialog').show();
 }
 
 var Storage = function () {
@@ -96,9 +94,6 @@ Storage.prototype.loadList = function (callback) {
 			self.experiments = [];
 		if (self.experiments && self.experiments.length>0) {
 			console.verbose("Storage.loadList Experiment List Found.");
-			for (var i=0; i<self.experiments.length; i++) {
-				console.verbose(self.experiments[i].name);
-			}
 			callback(self.experiments);
 		} else {
 			//Empty

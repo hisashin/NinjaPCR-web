@@ -1,3 +1,14 @@
+function getUserLang () {
+	if (navigator.languages) { 
+		return navigator.languages[0];
+ 	} 
+	return navigator.language;
+}
+if (getUserLang()=='ja' && false) {
+	window.MESSAGE = window.MESSAGE_JA;
+} else {
+	window.MESSAGE = window.MESSAGE_EN;
+}
 LOCALIZE_CLASS_REGEXP = new RegExp('.*pcr_localize_([^ ]+)');
 function getLocalizedMessage (messageId) {
 	if (window.chrome && chrome.i18n) {

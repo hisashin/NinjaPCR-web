@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
   <link rel="stylesheet" type="text/css" media="all" href="css/buttons.css" />
   <link href="css/SprySlidingPanels.css" rel="stylesheet" type="text/css" />
-  <link href="css/wifi.css" rel="stylesheet" type="text/css" />
   
+  <link href="css/wifi.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/lib/jquery-ui-1.10.3.custom.min.js"></script>
   <script type="text/javascript" src="js/lib/jquery.validate.js"></script>
@@ -20,12 +20,10 @@
   <script type="text/javascript" src="js/lib/jquery.ui.progressbar.js"></script>
   <script type="text/javascript" src="js/lib/sprypanels.js"></script>
   	
-  <!-- <script type="text/javascript" src="js/_locales/ja/messages.json"></script> -->
+  <script type="text/javascript" src="js/_locales/ja/messages.json"></script>
   <script type="text/javascript" src="js/_locales/en/messages.json"></script>
   <script type="text/javascript" src="js/lib/i18n.js"></script>
-  <!-- 
-  <script type="text/javascript" src="js/chromeUtil.js"></script>
-  -->
+  
   <script type="text/javascript" src="js/wifiUtil.js"></script>
   
   <script type="text/javascript" src="js/logger.js"></script>
@@ -57,41 +55,39 @@
 			<div id="homeHeader" class="Header pcr_localize_appTitle">NinjaPCR WiFi</div>
 			<div id="device_conf">
 				<h2 id="DeviceConnectionStatus" class="disconnected"><span id="DeviceConnectionStatusLabel">Device disconnected</span></h2>
-				<a href="#" id="NewDevice">新しいデバイスを設定する/再設定する</a>
+				<a href="#" id="NewDevice" class="pcr_localize_wifiSettingsButton">Setup a new NinjaPCR device / Change network configuration</a>
 				<section style="display:none" id="DeviceSettings">
-				<h3>Setup New Device / Change WiFi Settings</h3>
 				<p>
-				<ul>
-					<li>NinjaPCR WiFiを電源に接続してください。</li>
-					<li>NinjaPCR WiFiの "Setup" ボタンを押しながら "Reset" ボタンを押し、"Reset" ボタンを離してから "Setup" ボタンを離してください。</li>
-					<li>PCのWiFi設定を開き、アクセスポイント一覧の中から "NinjaPCR" を選択します。</li>
+				<ol>
+					<li class="pcr_localize_wifiSettings0">Plug the power adapter into NinjaPCR and then into an outlet.</li>
+					<liclass="pcr_localize_wifiSettings1">Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.</li>
+					<liclass="pcr_localize_wifiSettings2">Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.</li>
 					<li>
-						<a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a>に接続しWiFiの設定をします。
-						<dl>
-							<dt>SSID</dt><dd>利用したいアクセスポイントのSSIDを選んでください。</dd>
-							<dt>SSID(text)</dt><dd>SSIDのリストにない場合は手動で入力してください。</dd>
-							<dt>Password</dt><dd>WiFiパスワードです。</dd>
-							<dt>Host</dt><dd>ホスト名です。</dd>
-						</dl>
-						これらを入力したら "送信" を押してください。
+						<span class="pcr_localize_wifiSettings3">Open <a href="http://192.168.1.1" target="_blank">the WiFi settings page</a> and setup. If you the page doesn't show up, please retry after a few seconds.</span>
+						<ol>	
+							<li>
+								<strong>"SSID"</strong> : <span class="pcr_localize_wifiSettings3_0">Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.</span>
+							</li>
+							<li>
+								<strong>"Password"</strong> : <span class="pcr_localize_wifiSettings3_1">Input the password of the network.</span>
+							</li>
+							<li>
+								<strong>"Device name"</strong> : <span class="pcr_localize_wifiSettings3_2">Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.</span>
+							</li>
+							<li>
+								<span class="pcr_localize_wifiSettings3_3">After you set up the device, it will restart and connect to the specified access point.</span>
+							</li>
+						</ol>
 					</li>
-					<li>設定に成功したら本体をリセットします。</li>
-					<li>PCのWiFi設定を開き、元の接続先に戻します。</li>
-				</ul>
+					<li class="pcr_localize_wifiSettings4">Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.</li>
+					<li class="pcr_localize_wifiSettings5">Input the "Device name" that you have specified when you configured the device and press "connect" button.</li>
+				</ol>
 				</p>
 				</section>
 				<section>
 				<p id="ipInputContainer">
-					http://<input type="text" id="HostText"/>.local
-					<input type="button" value="connect" id="ConnectButton"/>
-					<!-- IP input textbox will be inserted to this div. -->
-				</p>
-				</section>
-				<section style="display:none">
-				<h3>Update Device</h3>
-				<p>
-					ファームウェアのアップデートがあります。
-					<input type="button" value="アップデートする" id="configButton"/>
+					Device name: <input type="text" id="HostText" class="connectionUI"/>
+					<input type="button" value="connect" id="ConnectButton" class="connectionUI"/>
 				</p>
 				</section>
 			</div>
@@ -104,10 +100,6 @@
 			<a href="#" id="listSubmitButton"><img src="images/rerun.png" style="vertical-align:middle;">
 				<span class="home_title pcr_localize_reRunExperiment">Re-run an experiment</span></a>
 			<div id="reRun" align="right"></div>
-			<div id="update_dialog" style="display:none">
-				<div id="update_dialog_content"></div>
-				<a class="pcr_localize_download" id="OpenDownloadPage">Open Download Page</a>
-			</div>
 			<div>
 				<input type="button" id="About" value="About this app" class="small_button pcr_localize_about"/>
 			</div>
@@ -158,7 +150,7 @@
 					</div>
 					<input type="button" class="small_button moreoptions pcr_localize_moreOptions" value="More Options" id="OptionsButton"/>
 					<input type="button" class="start button pcr_localize_start" id="Start" value="Start"/>
-				<input type="button" id="Unplugged" class="unplugged button pcr_localize_pleasePlug" value="Plug in your Toy PCR to Start"/>
+				<input type="button" id="Unplugged" class="unplugged button pcr_localize_pleaseConnect" value="Plug in your Toy PCR to Start"/>
 				<input type="button" id="Save" class="save button pcr_localize_savePreset" value="Save Preset"/>
 				<input type="button" id="SaveEdits" class="saveEdits button pcr_localize_saveEdits" value="Save Edits"/>
 				<input type="button" id="Cancel" class="cancel button pcr_localize_cancel" value="Cancel"/>
@@ -166,26 +158,6 @@
 				<input type="button" id="Home" class="small_button home_button pcr_localize_home" value="Home"/>
 			</div>
 		</div>
-		<!-- save-dialog -->
-				<div id="save_form" title="Save">
-					<form id="saveForm">
-						<fieldset>
-							<label for="name">Name your experiment</label>
-							<input type="text" name="name" id="name" maxlength="20" class="required text ui-widget-content ui-corner-all" />
-						</fieldset>
-					</form>
-				</div>
-				<!-- save_confirmation_dialog -->
-			<div id="save_confirmation_dialog" title="Saved">
-				<span class="pcr_localize_saved">Experiment saved!</span><br />
-			</div>
-			<!-- delete_dialog -->
-			<div id="delete_dialog" title="Delete">
-				<span class="pcr_localize_confirmDelete">Delete Experiment?</span><br />
-			</div>
-			<div id="delete_confirmation_dialog" title="Deleted">
-				<span class="pcr_localize_deleted">Deleted!</span><br />
-			</div>			
 	<!-- END PANEL 2 -->
 	
 	<!-- PANEL 3: Running Screen
@@ -223,7 +195,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="text-align:right;"><span class="pcr_localize_block">Block</span>:</td>
+							<td style="text-align:right;"><span class="pcr_localize_block">Well</span>:</td>
 							<td>
 								<span id="blockTemperature"></span>&deg;C
 							</td>
@@ -244,7 +216,7 @@
 							<td colspan="3">
 								<div class="deviceLabel"><span class="pcr_localize_lid">Lid</span>: </div>
 								<div class="deviceStatus" id="deviceStatusLid"></div>
-								<div class="deviceLabel"><span class="pcr_localize_peltier">Peltier</span>: </div>
+								<div class="deviceLabel"><span class="pcr_localize_well">Well</span>: </div>
 								<div class="deviceStatus" id="deviceStatusPeltier"></div>
 							</td>
 						</tr>
@@ -281,57 +253,133 @@
 			<div style="margin-top:6px;">
 				<a class="small_button pcr_localize_saveCsv" id="download" style="display:none;">Save CSV</a>
 			</div>
-			<!-- stop-dialog -->
-			<div id="stop_dialog" title="Stop">
-				<span class="pcr_localize_stopPcr">Stop PCR?</span>
-			</div>
-			<!-- about-dialog -->
-			<div id="about_dialog" title="About NinjaPCR">
-				Version <span id="appVersion"></span><br />
-				NinjaPCR App<br />
-				https://github.com/hisashin/NinjaPCR/wiki<br />
-				Email us: pcr@tori.st<br />
-				<a id="debugLink" href="#">[debug]</a>
-			</div>
-
-			<div id="alert_dialog" title="Alert">
-				<div id="alert_dialog_content"></div>
-			</div>
-			
-			<!-- settings-dialog -->
-			<div id="settings_dialog" title="Set Screen Contrast">
-				<span class="pcr_localize_dragSlider">Drag the slider to adjust the screen's contrast.</span>
-				<div id="contrast_slider"></div>
-			</div>	
 			
 			</div>
 		</div>
 	<!-- END PANEL 3 -->
 	</div>
-		
-		<!-- Starting popup -->
-		<div id="starting" title="Starting">
-			<span class="pcr_localize_readySteadyGo">Ready. Steady. Go!</span>
-		</div>
-		
-		<!-- Dialog to show OTA error -->
-		<div id="isOTAMode" title="OTA Mode">
-			<div>The device is started in firmware update mode.</div>
-			<input type="button" value="Open update page" id="buttonOTAModeOpenUpdate"/>
-			<input type="button" value="Cancel update" id="buttonOTAModeCancelUpdate"/>
-			<input type="button" value="Close this dialog" id="buttonOTAModeCloseDialog"/>
-	
-		</div>	
 			
 	</div>
 	<!-- Device update (visible when firmware update is available.) -->
 	<div id="config" style="display:none">
 		<h2>Firmware Update</h2>
 		<input type="button" value="Start Firmware Update" id="buttonStartOTA"/>
-		<div id="otaAcceptedMessage" style="display:none">
-			<!-- Link to OTA top page -->
-			Please restart the device and open <a href="#" id="otaLink">http://ninjapcrwifi.local/</a>.
-		</div>
 	</div>
+	
+	
+	<!-- 
+		Contents of Dialogs
+		Divs in this section is supposed to shown in
+		pretty dialog by jQuery
+	-->
+	<div style="display:none" id="dialog_container">
+	
+		<!-- Common Alert Dialog -->
+		<div id="alert_dialog" title="Alert">
+			<div id="alert_dialog_content"></div>
+		</div>
+		
+		<!-- stop-dialog -->
+		<div id="stop_dialog" title="Stop">
+			<span class="pcr_localize_stopPcr">Are you sure you want to stop the experiment?</span>
+		</div>
+		
+		<!-- stopped (or restarted) when running view -->
+		<div id="is_stopped_dialog" title="Warning">
+			<span class="pcr_localize_stopRunning">Device may have restarted.</span>
+		</div>
+		
+		<!--Device is disconnected-->
+		<div id="disconnected_dialog" title="Disconnected">
+			<div id="pcr_localize_disconnectedInExperiment">Device is disconnected.</div>
+		</div>
+				
+		<!-- Creditdialog -->
+		<div id="about_dialog" title="About NinjaPCR">
+			Version <span id="appVersion"></span><br />
+			NinjaPCR App<br />
+			https://github.com/hisashin/NinjaPCR/wiki<br />
+			Email us: pcr@tori.st<br />
+		</div>
+		
+		<!-- settings-dialog -->
+		<div id="settings_dialog" title="Set Screen Contrast">
+			<span class="pcr_localize_dragSlider">Drag the slider to adjust the screen's contrast.</span>
+			<div id="contrast_slider"></div>
+		</div>
+		
+		<!-- OTA related dialogs -->
+		<div id="update_required_dialog" title="Device update">
+			<div class="pcr_localize_updateRequired">Device update is required. It can't run without updating.</div>
+			<div class="versionDetail"><span class="pcr_localize_versionCurrent">Current Version</span> : <span class="labelVersionCurrent">1.0</span></div>
+			<div class="versionDetail"><span class="pcr_localize_versionLatest">Latest Version</span> : <span class="labelVersionLatest">1.0</span></div>
+		</div>
+		
+		<div id="update_available_dialog" title="Device update">
+			<div class="pcr_localize_updateAvailable">Device update is available!</div>
+			<div class="versionDetail"><span class="pcr_localize_versionCurrent">Current Version</span> : <span class="labelVersionCurrent">1.0</span></div>
+			<div class="versionDetail"><span class="pcr_localize_versionLatest">Latest Version</span> : <span class="labelVersionLatest">1.0</span></div>
+		</div>
+		
+		<div id="update_starting_dialog" title="Updating...">
+			<div class="pcr_localize_updateStarting">Starting device update. Please do not turn the power off.</div>
+		</div>
+		
+		<div id="updating_dialog" title="Updating...">
+			<div class="pcr_localize_updating">Device is updating. Please do not turn the power off.</div>
+		</div>
+		
+		<div id="update_finished_dialog" title="Updated">
+			<div class="pcr_localize_updateFinished">Device is updated successfully!</div>
+		</div>
+		
+		<div id="update_failed_dialog" title="Update failed">
+			<div class="pcr_localize_updateFailed">Device update was failed. Please try again.</div>
+		</div>
+		
+		<!-- Save dialog -->
+		<div id="save_dialog" title="Save">
+			<form id="saveForm">
+				<fieldset>
+					<label for="name">Name your experiment</label>
+					<input type="text" name="name" id="name" maxlength="20" class="required text ui-widget-content ui-corner-all" />
+				</fieldset>
+			</form>
+		</div>	
+		
+		<!-- Saved -->
+		<div id="save_done_dialog" title="Saved">
+			<span class="pcr_localize_saved">Experiment saved!</span><br />
+		</div>
+		
+		<!-- Confirm deletion-->
+		<div id="delete_dialog" title="Delete">
+			<span class="pcr_localize_confirmDelete">Delete Experiment?</span><br />
+		</div>
+		
+		<!-- Deleted-->
+		<div id="delete_done_dialog" title="Deleted">
+			<span class="pcr_localize_deleted">Deleted!</span><br />
+		</div>	
+		
+		<!-- Starting popup -->
+		<div id="is_starting_dialog" title="Starting">
+			<span class="pcr_localize_readySteadyGo">Ready. Steady. Go!</span>
+		</div>
+		<!-- Resuming popup -->
+		<div id="is_resuming_dialog" title="Device is already running">
+			<span id="resumingProfile"></span>
+		</div>
+		
+		<!-- Dialog to show OTA error -->
+		<div id="is_ota_mode_dialog" title="OTA Mode">
+			<div>The device is started in firmware update mode.</div>
+			<input type="button" value="Open update page" id="buttonOTAModeOpenUpdate"/>
+			<input type="button" value="Cancel update" id="buttonOTAModeCancelUpdate"/>
+			<input type="button" value="Close this dialog" id="buttonOTAModeCloseDialog"/>
+	
+		</div>
+	</div>	
+	
 </body>
 </html>

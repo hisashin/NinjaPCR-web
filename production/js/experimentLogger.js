@@ -16,7 +16,9 @@ ExperimentLogger.prototype.displayElapsedSec = function (elapsedSec) {
 	document.getElementById('elapsedTime').innerHTML = clockTime(elapsedSec);
 };
 ExperimentLogger.prototype.log = function (status) {
-	if (!status) return;
+	if (!status) { 
+		return;
+	}
 	console.log("Elapsed time(msec)=" + (new Date().getTime()-this.startTime.getTime()));
 	var elapsedSec = (new Date().getTime()-this.startTime.getTime())/1000;
 	this.displayElapsedSec(elapsedSec);
@@ -83,8 +85,7 @@ ExperimentLogger.prototype.log = function (status) {
 			$("#timeRemaining").html(getLocalizedMessage('timeRemaining'));
 			// otherwise, if running set variable for percentComplete
 			// never display less than 2% for UI purposes
-			var percentComplete = 100 * status["e"]
-					/ (status["e"] + status["r"]);
+			var percentComplete = 100 * status["e"] / (status["e"] + status["r"]);
 			if (percentComplete < 2) {
 				percentComplete = 2;
 			}

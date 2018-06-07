@@ -65,7 +65,7 @@ image:active span {
 	padding-bottom: 10px;
 }
 
-#save_form {
+#save_dialog {
 	text-align: center;
 }
 
@@ -146,12 +146,6 @@ a {
 	margin-top: 6px;
 }
 
-#update_dialog {
-	border: 1px solid #46f;
-	background-color: #def;
-	padding: 6px;
-	margin: 12px;
-}
 /* =Layout -------------------------------------------------------------- */
 html {
 	overflow-y: scroll;

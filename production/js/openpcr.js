@@ -12,7 +12,10 @@
  * Extra. Buttons
  */
 
-var LATEST_FIRMWARE_VERSION = "1.0.5";
+var FIRMWARE_VERSION_CURRENT = "0.0.0";
+var FIRMWARE_VERSION_LATEST = "1.0.5";
+var FIRMWARE_VERSION_REQUIRED = "1.0.5";
+var CURRENT_UI_VERSION = "1.0.0";
 var MIN_FINAL_HOLD_TEMP = 16;
 
 
@@ -54,11 +57,11 @@ function init() {
 function checkPlug () {
 	scanPortsAndDisplay(2500);
 };
+
 function scanPortsAndDisplay (delay) {
-	communicator.scan(function(port) {
+	communicator.scan(function(port, isRunning) {
 		// TODO Wifi & Chrome
 		var deviceFound = !!port;
-		
 		var portMessage = (deviceFound)?
 				(getLocalizedMessage('deviceFound').replace('___PORT___',port)):getLocalizedMessage('deviceNotFound');
 		$("#portLabel").html(portMessage);
@@ -77,7 +80,9 @@ function scanPortsAndDisplay (delay) {
 				$("#Start").show();
 			}
 			// Alert Firmware Update
-			checkFirmwareVersion(communicator.firmwareVersion);
+			if (!isRunning) {
+				checkFirmwareVersion(communicator.firmwareVersion);
+			}
 		} else {
 			$("#runningUnplugged").show();
 			$("#runningPluggedIn").hide();
@@ -89,16 +94,35 @@ function scanPortsAndDisplay (delay) {
 		}
 	}, delay);
 }
-
-
-function checkFirmwareVersion (version) {
-	console.verbose("Firmware version=" + version + ", Latest version=" + LATEST_FIRMWARE_VERSION);
-	if (version==LATEST_FIRMWARE_VERSION) {
-		console.verbose("The firmware is up to date.");
-	} else {
-		console.verbose("Please update the firmware!");
-		chromeUtil.alertUpdate(version, LATEST_FIRMWARE_VERSION);
+function splitIntoInt (str) {
+	var tokens = str.split(".");
+	var intValues = [];
+	for (var i=0; i<tokens.length; i++) {
+		intValues.push(parseInt(tokens[i]));
 	}
+	return intValues;
+}
+var VersionComparison = {
+	Equal: 0,
+	Smaller: 1,
+	Larger: 2
+};
+function compareVersion (version, toVersion) {
+	console.log("comapreVersion " + version + "<=>" + toVersion);
+	var versionNums = splitIntoInt (version);
+	var versionToNums = splitIntoInt (toVersion);
+	var maxPlaces = Math.max(versionNums.length, versionToNums.length);
+	for (var place=0; place<maxPlaces; place++) {
+		var versionNum = (place<versionNums.length)?versionNums[place]:0;
+		var versionToNum = (place<versionToNums.length)?versionToNums[place]:0;
+		if (versionNum > versionToNum) {
+			return VersionComparison.Larger;
+		}
+		if (versionNum < versionToNum) {
+			return VersionComparison.Smaller;
+		}
+	}
+	return VersionComparison.Equal;
 }
 
 /* listExperiments()
@@ -113,8 +137,7 @@ function listExperiments() {
 			for ( var i = 0; i < experiments.length; i++) {
 				var experiment = experiments[i];
 				if (experiment.id && experiment.name) {
-					presetsHTML += '<option value="' + experiment.id + '">'
-							+ experiment.name + "</option>";
+					presetsHTML += '<option value="' + experiment.id + '">' + experiment.name + "</option>";
 				}
 			}
 		}
@@ -135,6 +158,11 @@ function listExperiments() {
  * Loads the selected experiment in the list on the home page
  */
 function listSubmit() {
+	// Error if device is disconnected
+	if (!communicator || !communicator.connected) {
+		$('#disconnected_dialog').dialog("open");
+		return;
+	}
 	// what is selected in the drop down menu?
 	experimentID = $("#dropdown").val();
 	// load the selected experiment
@@ -367,6 +395,7 @@ function startPCR() {
 	
 	// go to the Running dashboard
 	showRunningDashboard();
+	$('#is_starting_dialog').dialog('open');
 	
 	// write out the file to the OpenPCR device
 	communicator.sendStartCommand(encodedProgram);
@@ -375,7 +404,7 @@ function startPCR() {
 	
 	// then close windows it after 1 second
 	setTimeout(function() {
-		$('#starting').dialog('close');
+		$('#is_starting_dialog').dialog('close');
 	}, 5000);
 	setTimeout(function() {
 		$('#ex2_p3').show();
@@ -396,8 +425,6 @@ function showRunningDashboard () {
 	$("#download").hide();
 	// show the "stop" button
 	$("#cancelButton").show();
-
-	$('#starting').dialog('open');
 }
 
 /*****************
@@ -443,10 +470,40 @@ function messageToStatus (message) {
 }
 
 // Process Status update
+var prevStatus = null;
 function onReceiveStatus(message) {
 	var status = messageToStatus(message);
+	if (prevStatus!=status.s && status.s=="stopped") {
+		console.log("Device is restarted.");
+		$('#is_stopped_dialog').dialog({
+			autoOpen : false,
+			width : 400,
+			modal : true,
+			draggable : false,
+			resizable : false,
+			buttons : {
+				"Close" : function() {
+					onStopPCR();
+					$(this).dialog("close");
+				}
+			}
+		});
+		$('#is_stopped_dialog').dialog('open');
+	}
 	experimentLog.push(status);
 	experimentLogger.log(status);
+	prevStatus = status.s;
+}
+/* onStopPCR()
+ * This function is called when the Stop command is accepted.
+ */
+function onStopPCR () {
+	window.clearInterval(window.updateRunningPage);
+	createCSV();
+	$("#homeButton").show();
+	// go back to the Form page
+	//sp2.showPanel(1);
+
 }
 
 /* StopPCR()
@@ -471,14 +528,10 @@ function stopPCR() {
 	window.command_id++;
 	stopCommand += '&d=' + window.command_id;
 	console.verbose(stopCommand);
-	// Send out the STOP command by serial
-	communicator.sendStopCommand(stopCommand, function(){
+	// Send out the STOP command
+	communicator.sendStopCommand(stopCommand, function() {
+		onStopPCR();
 	});
-	window.clearInterval(window.updateRunningPage);
-	createCSV();
-	$("#homeButton").show();
-	// go back to the Form page
-	//sp2.showPanel(1);
 	return false;
 }
 
@@ -545,9 +598,6 @@ function prepareButtons() {
 		$('#settings_dialog').dialog('open');
 	});
 
-	$('#OpenDownloadPage').on('click', function () {
-		window.open(getLocalizedMessage('downloadUrl'));
-	});
 	/*  "Home" button on the OpenPCR Form page
 	 * Goes Home
 	 */
@@ -584,7 +634,7 @@ function prepareButtons() {
 			return 0; // if not, don't do anything
 		}
 		// otherwise, the form is valid. Open the "Save" dialog box
-		$('#save_form').dialog('open');
+		$('#save_dialog').dialog('open');
 	});
 
 	/*  "Save" on the OpenPCR Form in EDIT MODE
@@ -732,19 +782,13 @@ function prepareButtons() {
 function deleteCurrentExperiment() {
 	// delete the currently loaded Experiment file
 	// given an ID, get the path for that ID
-	/*
-	experimentPath = window.experimentList[experimentID];
-	// delete the file
-	var file = experimentPath;
-	file.deleteFile();
-	*/
 	// show a confirmation screen
 	pcrStorage.deleteCurrentExperiment  (
 	function () {
-		$('#delete_confirmation_dialog').dialog('open');
+		$('#delete_done_dialog').dialog('open');
 		// then close it after 1 second
 		setTimeout(function() {
-			$('#delete_confirmation_dialog').dialog('close');
+			$('#delete_done_dialog').dialog('close');
 		}, 750);
 	});
 
@@ -847,7 +891,7 @@ $(function() {
 	});
 
 	// Save Dialog			
-	$('#save_form').dialog({
+	$('#save_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -873,7 +917,7 @@ $(function() {
 	});
 
 	// Save Confirmation Dialog
-	$('#save_confirmation_dialog').dialog({
+	$('#save_done_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -908,7 +952,7 @@ $(function() {
 	});
 
 	// Delete Confirmation Dialog
-	$('#delete_confirmation_dialog').dialog({
+	$('#delete_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
@@ -942,13 +986,27 @@ $(function() {
 	});
 
 	// Starting dialog
-	$('#starting').dialog({
+	$('#is_starting_dialog').dialog({
 		autoOpen : false,
 		width : 300,
 		modal : true,
 		draggable : false,
 		resizable : false
 	});
+	// Disconnected dialog
+	$('#disconnected_dialog').dialog({
+		autoOpen : false,
+		width : 300,
+		modal : true,
+		draggable : false,
+		resizable : false,
+		buttons : {
+			"OK" : function() {
+				$(this).dialog("close");
+			}
+		}
+	});
+	
 
 	//hover states on the static widgetson the static widgets
 		$('#dialog_link, ul#icons li').hover(
@@ -959,7 +1017,7 @@ $(function() {
 });
 
 // Enter/Return Key clicks "Save" on dialog
-$('#save_form').on('keyup', function(e) {
+$('#save_dialog').on('keyup', function(e) {
 	if (e.keyCode == 13) {
 		$(':button:contains("Save")').click();
 	}
@@ -973,7 +1031,7 @@ function createCSV () {
 	   "Command ID" + TAB //d
 	 + "Status" + TAB //s
 	 + "Lid Temp" + TAB //l
-	 + "Block Temp" + TAB //b
+	 + "Well Temp" + TAB //b
 	 + "Therm State" + TAB //t
 	 + "Elapsed Time" + TAB //e
 	 + "Remaining Time" + TAB //r

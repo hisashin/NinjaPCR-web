@@ -469,10 +469,10 @@ function save(name, isNew, callback) {
 			if (callback) {
 				callback();
 			}
-			$('#save_confirmation_dialog').dialog('open');
+			$('#save_done_dialog').dialog('open');
 			// then close it after 1 second
 			setTimeout(function() {
-				$('#save_confirmation_dialog').dialog('close');
+				$('#save_done_dialog').dialog('close');
 			}, 750);
 		});
 	}
@@ -482,10 +482,10 @@ function save(name, isNew, callback) {
 			if (callback) {
 				callback();
 			}
-			$('#save_confirmation_dialog').dialog('open');
+			$('#save_done_dialog').dialog('open');
 			// then close it after 1 second
 			setTimeout(function() {
-				$('#save_confirmation_dialog').dialog('close');
+				$('#save_done_dialog').dialog('close');
 			}, 750);
 		});
 	}

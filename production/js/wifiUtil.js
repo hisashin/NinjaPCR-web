@@ -69,12 +69,11 @@ function clockTime (totalSec) {
 }
 
 chromeUtil.alertUpdate = function (currentVersion, latestVersion) {
-	var message = getLocalizedMessage('firmwareVersionDialog')
+	var message = getLocalizedMessage('firmwareUpdateAvailable')
 		.replace("___LATEST_VERSION___", latestVersion)
 		.replace("___INSTALLED_VERSION___", currentVersion);
 	console.verbose(message);
 	$('#update_dialog_content')[0].innerHTML = message;
-	$('#update_dialog').show();
 }
 
 var Storage = function () {
@@ -87,10 +86,12 @@ var STORAGE_KEY_EXPERIMENT_LIST = "experimentList";
 var STORAGE_KEY_EXPERIMENT_PREFIX = "pcr_";
 
 Storage.prototype.loadList = function (callback) {
-	if (!localStorage) {
-		alert ("local storage is not available.");
+	var data = null;
+	if (!window.localStorage) {
+		console.log("local storage is not available.");
+	} else {
+		data = localStorage.getItem(STORAGE_KEY_EXPERIMENT_LIST);
 	}
-	var data = localStorage.getItem(STORAGE_KEY_EXPERIMENT_LIST);
 	if (data) {
 		console.log(data);
 		this.experiments = JSON.parse(data);
@@ -100,9 +101,6 @@ Storage.prototype.loadList = function (callback) {
 	
 	if (this.experiments && this.experiments.length>0) {
 		console.verbose("Storage.loadList Experiment List Found.");
-		for (var i=0; i<this.experiments.length; i++) {
-			console.verbose(this.experiments[i].name);
-		}
 		callback(this.experiments);
 	} else {
 		//Empty
