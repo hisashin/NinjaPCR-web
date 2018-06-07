@@ -4,6 +4,7 @@
         "gulp-pug": "^3.0.0"
     },
     "dependencies": {
-        "gulp-install": "^1.1.0"
+        "gulp-install": "^1.1.0",
+        "i18next": "^11.3.2"
     }
 }

@@ -15,7 +15,7 @@ mixin formatDate(dateString)
   -var output = y + '/' + two(M) + '/' + two(d) + ' ' + two(h) + ':' + two(m);
   =output
 
-html
+html.i18n
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
@@ -28,6 +28,8 @@ html
     block content
 
     script(src='/common/js/jquery-3.0.0.slim.min.js')
+    script(src='/common/js/i18next.min.js')
     script(src='/popper/popper.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
+    script i18n.init(function(t) { $(".i18n").replace(); });
 
