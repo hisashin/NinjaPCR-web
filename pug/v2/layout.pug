@@ -15,21 +15,24 @@ mixin formatDate(dateString)
   -var output = y + '/' + two(M) + '/' + two(d) + ' ' + two(h) + ':' + two(m);
   =output
 
-html.i18n
+html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    title= title
+    title.i18n= title
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/v2/css/style.css')
-    block head
-
-  body
-    block content
-
-    script(src='/common/js/jquery-3.0.0.slim.min.js')
-    script(src='/common/js/i18next.min.js')
+    script(src='/common/js/jquery-3.3.1.min.js')
     script(src='/popper/popper.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
-    script i18n.init(function(t) { $(".i18n").replace(); });
+    script(src='/common/js/i18next.min.js')
+    script(src='/common/js/i18nextBrowserLanguageDetector.min.js')
+    script(src='/common/js/jquery-i18next.min.js')
+    block head
+
+  body.i18n
+    block content
+
+    script i18next.use(i18nextBrowserLanguageDetector).init({fallbackLng:'en', debug:true, resGetPath: 'locales/__lng__/__ns__.json'});
+    script $(function () { jqueryI18next.init(i18next, $); $(".i18n").localize(); });
 
