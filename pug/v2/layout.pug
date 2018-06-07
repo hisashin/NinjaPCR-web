@@ -1,0 +1,33 @@
+doctype html
+
+-
+  function two(val) {
+    return (val < 10 ? '0' + val : val);
+  }
+
+mixin formatDate(dateString)
+  -var date = new Date(dateString);
+  -var y = date.getFullYear();
+  -var M = date.getMonth() + 1;
+  -var d = date.getDate();
+  -var h = date.getHours();
+  -var m = date.getMinutes();
+  -var output = y + '/' + two(M) + '/' + two(d) + ' ' + two(h) + ':' + two(m);
+  =output
+
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/v2/css/style.css')
+    block head
+
+  body
+    block content
+
+    script(src='/common/js/jquery-3.0.0.slim.min.js')
+    script(src='/popper/popper.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+
