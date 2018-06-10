@@ -26,24 +26,14 @@ html
       script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
       script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.min.js')
       script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
-      script(src='https://unpkg.com/i18next@11.3.2/i18next.min.js')
-      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.min.js')
-      script(src='https://cdnjs.cloudflare.com/ajax/libs/i18next-xhr-backend/1.5.1/i18nextXHRBackend.min.js')
     //
     script(src='/common/js/jquery-3.3.1.min.js')
     script(src='/popper/popper.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
-    script(src='/common/js/i18next.min.js')
-    script(src='/common/js/jquery-i18next.min.js')
-    script(src='/common/js/i18nextXHRBackend.min.js')
-    script(src='/common/js/i18nextBrowserLanguageDetector.min.js')
 
     block head
 
   body
     block content
 
-    script i18next.use(i18nextXHRBackend, i18nextBrowserLanguageDetector).init({fallbackLng:'en', debug:true, backend: { loadPath: '/locales/{{lng}}/{{ns}}.json'}}, function(err, t) { jqueryI18next.init(i18next, $); $(".i18n").localize(); });
-    //script i18next.use(i18nextXHRBackend).init({fallbackLng:'en', debug:true, backend: { loadPath: '/locales/{{lng}}/{{ns}}.json'}}, function(err, t) { jqueryI18next.init(i18next, $); $(".i18n").localize(); });
-    //script i18next.use(i18nextBrowserLanguageDetector).init({fallbackLng:'en', debug:true, backend: { loadPath: '/locales/{{lng}}/{{ns}}.json'}}, function(err, t) { jqueryI18next.init(i18next, $); $(".i18n").localize(); });
 

@@ -34,8 +34,8 @@ block main
           tr
             td
               a(href="123")
-                span(data-i18n="member.red") 赤
-            td 1234
+                span #{$i18n.hello.world}
+            td #{$localeName}
             td test
             td
               +formatDate(1528401079290)
