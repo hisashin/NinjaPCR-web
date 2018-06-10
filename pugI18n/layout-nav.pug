@@ -22,9 +22,12 @@ mixin navbar(dir)
         if isShop
           span.sr-only (current)
     ul.navbar-nav.ml-auto
-      li.nav-item
-        a.nav-link(href="http://eepurl.com/dxIEcn", target="_blank")
-          span(data-feather="mail")
+      
+      if $localeName == 'en'
+        li.nav-item
+          a.nav-link(href="http://eepurl.com/dxIEcn", target="_blank")
+            span(data-feather="mail")
+      
       li.nav-item
         a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
           span(data-feather="github")
@@ -59,18 +62,29 @@ mixin sidebar(dir)
           if isAssy
             span.sr-only (current)
         if isAssy
+          - var isAssyUnbox = /\/assy\/unbox\//.test(dir)
+          - var isAssyLid = /\/assy\/lid\//.test(dir)
+          - var isAssyWell = /\/assy\/well\//.test(dir)
+          - var isAssyBody = /\/assy\/body\//.test(dir)
+          - var isAssySetup = /\/assy\/setup\//.test(dir)
+          - var isAssyIntro = (!isAssyUnbox && !isAssyLid && !isAssyWell & !isAssyBody && !isAssySetup)
           .list-group.list-group-root.well
-            a.list-group-item(href="#item-1", data-toggle="collapse")
-              span.glyphicon.glyphicon-chevron-right
-              | Item 1
-            .list-group.collapse(id="item-1")
-              a.list-group-item(href="#item-1-1", data-toggle="collapse")
-                span.glyphicon.glyphicon-chevron-right
-                | Item 1.1
-              .list-group.collaps(id="item-1-1")
-                a.list-group-item Item1.1.1
-                a.list-group-item Item1.1.2
-                a.list-group-item Item1.1.3
+            a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIntro ? "active" : "") #{$i18n.assy.index.label}
+            a.list-group-item(href="/"+$localeName+"/assy/unbox/index.html", data-toggle="collapse", class= isAssyUnbox ? "active" : "") #{$i18n.assy.unbox.label}
+            a.list-group-item(href="/"+$localeName+"/assy/lid/index.html", data-toggle="collapse", class= isAssyLid ? "active" : "") #{$i18n.assy.lid.label}
+            a.list-group-item(href="/"+$localeName+"/assy/well/index.html", data-toggle="collapse", class= isAssyWell ? "active" : "") #{$i18n.assy.well.label}
+            a.list-group-item(href="/"+$localeName+"/assy/body/index.html", data-toggle="collapse", class= isAssyBody ? "active" : "") #{$i18n.assy.body.label}
+            a.list-group-item(href="/"+$localeName+"/assy/setup/index.html", data-toggle="collapse", class= isAssySetup ? "active" : "") #{$i18n.assy.setup.label}
+            //-
+              .list-group.collapse(id="item-1")
+                a.list-group-item(href="#item-1-1", data-toggle="collapse")
+                  | Item 1.1
+                .list-group.collapse(id="item-1-1")
+                  a.list-group-item Item1.1.1
+                  a.list-group-item Item1.1.2
+                  a.list-group-item Item1.1.3
+            //
+
       li.nav-item
         a.nav-link(href="/"+$localeName+"/shop/index.html", class= isShop ? "active" : "")
           span(data-feather="shopping-cart")
@@ -78,67 +92,6 @@ mixin sidebar(dir)
           if isShop
             span.sr-only (current)
 
-mixin sidebar2(dir)
-  - var isConsole = /\/console\//.test(dir) 
-  - var isAssy = /\/assy\//.test(dir) 
-  - var isShop = /\/shop\//.test(dir) 
-  .sidebar-sticky
-    .list-group.list-group-root.well
-      a.list-group-item(href="/"+$localeName+"/console/index.html", class= isConsole ? "active" : "")
-        span(data-feather="droplet")
-        | #{$i18n.console.label}
-        if isConsole
-          span.sr-only (current)
-      a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssy ? "active" : "")
-        span(data-feather="life-buoy")
-        | #{$i18n.assy.label}
-        if isAssy
-          span.sr-only (current)
-      if isAssy
-        .list-group
-          a.list-group-item(href="#") 1st
-          a.list-group-item(href="#") 2nd
-          a.list-group-item(href="#") 3rd
-          a.list-group-item(href="#") 4th
-          a.list-group-item(href="#") 5th
-      a.list-group-item(href="/"+$localeName+"/shop/index.html", class= isShop ? "active" : "")
-        span(data-feather="shopping-cart")
-        | #{$i18n.shop.label}
-        if isShop
-          span.sr-only (current)
-
-mixin sidebarOld(dir)
-  - var isConsole = /\/console\//.test(dir)
-  - var isAssy = /\/assy\//.test(dir)
-  - var isShop = /\/shop\//.test(dir)
-  .sidebar-sticky
-    ul.nav.flex-column
-      li.nav-item
-        a.nav-link(href="/"+$localeName+"/console/index.html", class= isConsole ? "active" : "")
-          span(data-feather="droplet")
-          | #{$i18n.console.label}
-          if isConsole
-            span.sr-only (current)
-      li.nav-item
-        a.nav-link(href="/"+$localeName+"/assy/index.html", class= isAssy ? "active" : "")
-          span(data-feather="life-buoy")
-          | #{$i18n.assy.label}
-          if isAssy
-            span.sr-only (current)
-        if isAssy
-          ul.list-group
-            a.list-group-item.list-group-item-action.active(href="#") 1st
-            a.list-group-item.list-group-item-action(href="#") 2nd
-            a.list-group-item.list-group-item-action(href="#") 3rd
-            a.list-group-item.list-group-item-action(href="#") 4th
-            a.list-group-item.list-group-item-action(href="#") 5th
-      li.nav-item
-        a.nav-link(href="/"+$localeName+"/shop/index.html", class= isShop ? "active" : "")
-          span(data-feather="shopping-cart")
-          | #{$i18n.shop.label}
-          if isShop
-            span.sr-only (current)
-            
 block append head
   link(rel='stylesheet', href='/css/common/navbar-top-fixed.css')
   link(rel='stylesheet', href='/css/common/dashboard.css')

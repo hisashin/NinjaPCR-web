@@ -3,7 +3,25 @@
         "label" : "Console"
     }, 
     "assy" : {
-        "label" : "Assembly"
+        "label" : "Assembly",
+        "index" : {
+          "label" : "Introduction"
+        },
+        "unbox" : {
+          "label" : "Unboxing"
+        },
+        "lid" : { 
+          "label" : "Lid Assembly"
+        },
+        "well" : { 
+          "label" : "Well Assembly"
+        },
+        "body" : { 
+          "label" : "Body Assembly"
+        },
+        "setup" : { 
+          "label" : "Setup"
+        }
     },
     "shop" : {
         "label" : "Shop",
