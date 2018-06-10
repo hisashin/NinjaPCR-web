@@ -10,15 +10,15 @@ mixin navbar(dir)
   .collapse.navbar-collapse(id="navbarCollapse")
     ul.navbar-nav.mr-auto
       li.nav-item(class= isConsole ? "active" : "")
-        a.nav-link(href="/console/index.html") #{$i18n.console.label}
+        a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.label}
         if isConsole
            span.sr-only (current)
       li.nav-item(class= isAssy ? "active" : "")
-        a.nav-link(href="/assy/index.html") #{$i18n.assy.label}
+        a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.label}
         if isAssy
           span.sr-only (current)
       li.nav-item(class= isShop ? "active" : "")
-        a.nav-link(href="/shop/index.html") #{$i18n.shop.label}
+        a.nav-link(href="/"+$localeName+"/shop/index.html") #{$i18n.shop.label}
         if isShop
           span.sr-only (current)
       li.nav-item
@@ -26,9 +26,15 @@ mixin navbar(dir)
           span(data-feather="github")
       li.nav-item
         span.nav-link
-          a(href="#", onClick="langRedirect('en')", class= isEn ? "active" : "") EN
+          if $localeName == 'en'
+            span EN
+          else
+            a(href="#", onClick="langRedirect('en')", class= isEn ? "active" : "") EN
           | &nbsp;|&nbsp;
-          a(href="#", onClick="langRedirect('ja')", class= isJa ? "active" : "") JA
+          if $localeName == 'ja'
+            span JA
+          else
+            a(href="#", onClick="langRedirect('ja')", class= isJa ? "active" : "") JA
 
     //form.form-inline.mt-2.mt-md-0
     //  input.form-control.mr-sm-2(type="text", placeholder="Search", aria-label="Search")
@@ -41,19 +47,19 @@ mixin sidebar(dir)
   .sidebar-sticky
     ul.nav.flex-column
       li.nav-item
-        a.nav-link(href="/console/index.html", class= isConsole ? "active" : "")
+        a.nav-link(href="/"+$localeName+"/console/index.html", class= isConsole ? "active" : "")
           span(data-feather="droplet")
           | #{$i18n.console.label}
           if isConsole
             span.sr-only (current)
       li.nav-item
-        a.nav-link.active(href="/assy/index.html", class= isAssy ? "active" : "")
+        a.nav-link(href="/"+$localeName+"/assy/index.html", class= isAssy ? "active" : "")
           span(data-feather="life-buoy")
           | #{$i18n.assy.label}
           if isAssy
             span.sr-only (current)
       li.nav-item
-        a.nav-link(href="/shop/index.html", class= isShop ? "active" : "")
+        a.nav-link(href="/"+$localeName+"/shop/index.html", class= isShop ? "active" : "")
           span(data-feather="shopping-cart")
           | #{$i18n.shop.label}
           if isShop
