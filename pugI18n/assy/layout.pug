@@ -7,12 +7,12 @@ block navbar
   .collapse.navbar-collapse(id="navbarCollapse")
     ul.navbar-nav.mr-auto
       li.nav-item
-        a.nav-link(href="/console/") #{$i18n.console.label}
+        a.nav-link(href="/console/index.html") #{$i18n.console.label}
       li.nav-item.active
-        a.nav-link(href="/assy/") #{$i18n.assy.label}
+        a.nav-link(href="/assy/index.html") #{$i18n.assy.label}
         span.sr-only (current)
       li.nav-item
-        a.nav-link(href="/shop/") #{$i18n.shop.label}
+        a.nav-link(href="/shop/index.html") #{$i18n.shop.label}
       li.nav-item
         a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
           span(data-feather="github")
@@ -30,16 +30,16 @@ block sidebar
   .sidebar-sticky
     ul.nav.flex-column
       li.nav-item
-        a.nav-link(href="/console/")
+        a.nav-link(href="/console/index.html")
           span(data-feather="droplet")
           | #{$i18n.console.label}
       li.nav-item
-        a.nav-link.active(href="/assy/")
+        a.nav-link.active(href="/assy/index.html")
           span(data-feather="life-buoy")
           | #{$i18n.assy.label}
           span.sr-only (current)
       li.nav-item
-        a.nav-link(href="/shop/")
+        a.nav-link(href="/shop/index.html")
           span(data-feather="shopping-cart")
           | #{$i18n.shop.label}
 
