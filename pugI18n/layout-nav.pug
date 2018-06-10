@@ -5,84 +5,13 @@ block append head
   link(rel='stylesheet', href='/css/common/dashboard.css')
  
 block append content
-  //- var path = window.location.pathname;
-  - var isDirConsole = /\/console\//.test(path)
-  - var isDirAssy = /\/assy\//.test(path)
-  - var isDirShop = /\/shop\//.test(path)
-  - var isJa = /\/ja\//.test(path)
-  - var isEn = !isJa
   nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
-    a.navbar-brand(href="/") NinjaPCR
-    button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
-      span.navbar-toggler-icon
-    .collapse.navbar-collapse(id="navbarCollapse")
-      ul.navbar-nav.mr-auto
-        li.nav-item(class= isDirConsole ? "active" : "")
-          a.nav-link(href="/console/") #{$i18n.console.label}
-          if isDirConsole
-            span.sr-only (current)
-        li.nav-item(class= isDirAssy ? "active" : "")
-          a.nav-link(href="/assy/") #{$i18n.assy.label}
-          if isDirAssy
-            span.sr-only (current)
-        li.nav-item(class= isDirShop ? "active" : "")
-          a.nav-link(href="/shop/") #{$i18n.shop.label}
-          if isDirShop
-            span.sr-only (current)
-        li.nav-item
-          span
-            a.nav-link(href="#", onClick="langRedirect('en')", class= isEn ? "active" : "") EN
-            a.nav-link(href="#", onClick="langRedirect('ja')", class= isJa ? "active" : "") JA
-
-      //form.form-inline.mt-2.mt-md-0
-      //  input.form-control.mr-sm-2(type="text", placeholder="Search", aria-label="Search")
-      //  button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
+    block navbar
 
   .container-fluid
     .row
       nav.col-md-2.d-none.d-md-block.bg-light.sidebar
-        .sidebar-sticky
-          ul.nav.flex-column
-            li.nav-item
-              a.nav-link(href="/console/", class= isDirConsole ? "active" : "")
-                span(data-feather="clipboard")
-                | #{$i18n.console.label}
-                if isDirAssy
-                  span.sr-only (current)
-            li.nav-item
-              a.nav-link(href="/assy/", class= isDirAssy ? "active" : "")
-                span(data-feather="clipboard")
-                | #{$i18n.assy.label}
-                if isDirAssy
-                  span.sr-only (current)
-            li.nav-item
-              a.nav-link(href="/shop/", class= isDirShop ? "active" : "")
-                span(data-feather="clipboard")
-                | #{$i18n.shop.label}
-                if isDirShop
-                  span.sr-only (current)
-
-          h6.sidebar-heading.d-flex.justify-content-between.align-items-center.px-3.mt-4.mb-1.text-muted
-            span Saved reports
-            a.d-flex.align-items-center.text-muted(href="#")
-              span(data-feather="plus-circle")
-          ul.nav.flex-column.mb-2
-            li.nav-item
-              a.nav-link(href="#")
-                span(data-feather="file-text")
-                | Current month
-            li.nav-item
-              a.nav-link(href="#")
-                span(data-feather="file-text")
-                | Last quarter
-            li.nav-item
-              a.nav-link(href="#")
-                span(data-feather="file-text")
-                | Social engagement
-            li.nav-item
-              a.nav-link(href="#")
-                span(data-feather="file-text")
-                | Year-end sale
+        block sidebar
 
       main.col-md-10.ml-sm-auto.col-lg-10.px-4(role="main")
         block main

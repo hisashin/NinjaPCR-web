@@ -12,4 +12,19 @@ function langRedirect(lang) {
   else
     document.location.href = '/en' + path;
 }
-
+function isConsole() {
+  return /\/console\//.test(window.location.pathname);
+}
+function isAssy() {
+  return /\/assy\//.test(window.location.pathname);
+}
+function isShop() {
+  return /\/shop\//.test(window.location.pathname);
+}
+function isJa() {
+  var lang = navigator.language || navigator.browserLanguage;
+  return (lang.startsWith('ja'))
+}
+function isEn() {
+  return (!isJa());
+}

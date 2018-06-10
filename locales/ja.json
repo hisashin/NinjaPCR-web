@@ -6,6 +6,10 @@
         "label" : "組立ガイド"
     },
     "shop" : {
-        "label" : "購入はこちら"
+        "label" : "本体購入",
+        "message" : "<a href=\"http://www.lvnshop.com/shopdetail/000000000311/\" target=\"_blank\">リバネスショップ(外部サイト)</a>にてご購入いただけます"
+    },
+    "github" : {
+        "label" : "GitHub"
     }
 }

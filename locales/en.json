@@ -6,6 +6,10 @@
         "label" : "Assembly"
     },
     "shop" : {
-        "label" : "Shop"
+        "label" : "Shop",
+        "message" : "We're preparing webshop. Please stand by for a while."
+    },
+    "github" : {
+        "label" : "GitHub"
     }
 }
