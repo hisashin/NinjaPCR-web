@@ -1,5 +1,11 @@
 {
-    "hello" : {
-        "world" : "赤"
+    "console" : {
+        "label" : "コンソール"
+    },
+    "assy" : {
+        "label" : "組立ガイド"
+    },
+    "shop" : {
+        "label" : "購入はこちら"
     }
 }

@@ -1,0 +1,40 @@
+doctype html
+
+-
+  function two(val) {
+    return (val < 10 ? '0' + val : val);
+  }
+
+mixin formatDate(dateString)
+  -var date = new Date(dateString);
+  -var y = date.getFullYear();
+  -var M = date.getMonth() + 1;
+  -var d = date.getDate();
+  -var h = date.getHours();
+  -var m = date.getMinutes();
+  -var output = y + '/' + two(M) + '/' + two(d) + ' ' + two(h) + ':' + two(m);
+  =output
+
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/common/style.css')
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
+    //script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.min.js')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+    //-
+      script(src='/js/common/jquery-3.3.1.min.js')
+      script(src='/popper/popper.min.js')
+      script(src='/bootstrap/js/bootstrap.min.js')
+    //
+    script(src='/js/common/style.js')
+
+    block head
+
+  body
+    block content
+
+

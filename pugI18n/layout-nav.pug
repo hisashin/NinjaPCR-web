@@ -1,12 +1,13 @@
 extends layout
 
 block append head
-  link(rel='stylesheet', href='/v2/css/navbar-top-fixed.css')
-  link(rel='stylesheet', href='/v2/css/dashboard.css')
+  link(rel='stylesheet', href='/css/common/navbar-top-fixed.css')
+  link(rel='stylesheet', href='/css/common/dashboard.css')
  
 block append content
-  - var isDirPrice = /^\/price\//.test(path)
-  - var isDirSite = /^\/site\//.test(path)
+  - var isDirConsole = /\/console\//.test(path)
+  - var isDirAssy = /\/assy\//.test(path)
+  - var isDirShop = /\/shop\//.test(path)
   nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
     a.navbar-brand(href="/") NinjaPCR
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
@@ -14,9 +15,20 @@ block append content
     .collapse.navbar-collapse(id="navbarCollapse")
       ul.navbar-nav.mr-auto
         li.nav-item(class= isDirPrice ? "active" : "")
-          a.nav-link(href="/v2/docs/assembly-instructions/") assembly-instructions
-          if isDirPrice
+          a.nav-link(href="/console/") #{$i18n.console.label}
+          if isDirConsole
             span.sr-only (current)
+      ul.navbar-nav.mr-auto
+        li.nav-item(class= isDirPrice ? "active" : "")
+          a.nav-link(href="/assy/") #{$i18n.assy.label}
+          if isDirAssy
+            span.sr-only (current)
+      ul.navbar-nav.mr-auto
+        li.nav-item(class= isDirPrice ? "active" : "")
+          a.nav-link(href="/shop/") #{$i18n.shop.label}
+          if isDirShop
+            span.sr-only (current)
+
       //form.form-inline.mt-2.mt-md-0
       //  input.form-control.mr-sm-2(type="text", placeholder="Search", aria-label="Search")
       //  button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
@@ -27,11 +39,24 @@ block append content
         .sidebar-sticky
           ul.nav.flex-column
             li.nav-item
-              a.nav-link(href="/v2/docs/assembly-instructions/", class= isDirPrice ? "active" : "")
+              a.nav-link(href="/console/", class= isDirConsole ? "active" : "")
                 span(data-feather="clipboard")
-                | assembly-instructions
-                if isDirPrice
+                | #{$i18n.console.label}
+                if isDirAssy
                   span.sr-only (current)
+            li.nav-item
+              a.nav-link(href="/assy/", class= isDirAssy ? "active" : "")
+                span(data-feather="clipboard")
+                | #{$i18n.assy.label}
+                if isDirAssy
+                  span.sr-only (current)
+            li.nav-item
+              a.nav-link(href="/shop/", class= isDirShop ? "active" : "")
+                span(data-feather="clipboard")
+                | #{$i18n.shop.label}
+                if isDirShop
+                  span.sr-only (current)
+
           h6.sidebar-heading.d-flex.justify-content-between.align-items-center.px-3.mt-4.mb-1.text-muted
             span Saved reports
             a.d-flex.align-items-center.text-muted(href="#")
@@ -57,6 +82,6 @@ block append content
       main.col-md-10.ml-sm-auto.col-lg-10.px-4(role="main")
         block main
 
-  script(src="/common/js/feather.min.js")
+  script(src="/js/common/feather.min.js")
   script feather.replace()
 
