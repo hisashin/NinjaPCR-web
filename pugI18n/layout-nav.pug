@@ -1,47 +1,49 @@
 extends layout
 
 mixin navbar(dir)
-  - var isConsole = /\/console\//.test(dir)
-  - var isAssy = /\/assy\//.test(dir)
-  - var isStore = /\/store\//.test(dir)
-  a.navbar-brand(href="/") NinjaPCR
-  button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
-    span.navbar-toggler-icon
-  .collapse.navbar-collapse(id="navbarCollapse")
-    ul.navbar-nav
-      li.nav-item(class= isConsole ? "active" : "")
-        a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.label}
-        if isConsole
-           span.sr-only (current)
-      li.nav-item(class= isAssy ? "active" : "")
-        a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.label}
-        if isAssy
-          span.sr-only (current)
+  header
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+      - var isConsole = /\/console\//.test(dir)
+      - var isAssy = /\/assy\//.test(dir)
+      - var isStore = /\/store\//.test(dir)
+      a.navbar-brand(href="/") NinjaPCR
+      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse(id="navbarCollapse")
+        ul.navbar-nav
+          li.nav-item(class= isConsole ? "active" : "")
+            a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.label}
+            if isConsole
+              span.sr-only (current)
+          li.nav-item(class= isAssy ? "active" : "")
+            a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.label}
+            if isAssy
+              span.sr-only (current)
 
-    ul.navbar-nav.ml-auto      
-      li.nav-item(class= isStore ? "active" : "")
-        a.nav-link(href="/"+$localeName+"/store/index.html")
-          span(data-feather="shopping-cart")
-        if isStore
-          span.sr-only (current)
-      if $localeName == 'en'
-        li.nav-item
-          a.nav-link(href="http://eepurl.com/dxIEcn", target="_blank")
-            span(data-feather="mail")      
-      li.nav-item
-        a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
-          span(data-feather="github")
-      li.nav-item
-        span.nav-link
+        ul.navbar-nav.ml-auto      
+          li.nav-item(class= isStore ? "active" : "active")
+            a.nav-link(href="/"+$localeName+"/store/index.html")
+              span(data-feather="shopping-cart")
+            if isStore
+              span.sr-only (current)
           if $localeName == 'en'
-            span EN
-          else
-            a(style="color:#fff;", href="#", onClick="langRedirect('en')", class= isEn ? "active" : "") EN
-          | &nbsp;|&nbsp;
-          if $localeName == 'ja'
-            span JA
-          else
-            a(style="color:#fff;", href="#", onClick="langRedirect('ja')", class= isJa ? "active" : "") JA
+            li.nav-item.active
+              a.nav-link(href="http://eepurl.com/dxIEcn", target="_blank")
+                span(data-feather="mail")      
+          li.nav-item.active
+            a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
+              span(data-feather="github")
+          li.nav-item
+            span.nav-link
+              if $localeName == 'en'
+                span EN
+              else
+                a(style="color:#fff;", href="#", onClick="langRedirect('en')", class= isEn ? "active" : "") EN
+              | &nbsp;|&nbsp;
+              if $localeName == 'ja'
+                span JA
+              else
+                a(style="color:#fff;", href="#", onClick="langRedirect('ja')", class= isJa ? "active" : "") JA
 
 mixin sidebar(dir)
   - var isConsole = /\/console\//.test(dir)
@@ -153,8 +155,7 @@ block append head
   link(rel='stylesheet', href='/css/dashboard.css')
  
 block append content
-  nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
-    block navbar
+  block navbar
 
   .container-fluid
     .row
@@ -164,5 +165,3 @@ block append content
       main.col-md-10.ml-sm-auto.col-lg-10.px-4(role="main")
         block main
 
-  script(src="/js/feather.min.js")
-  script feather.replace()

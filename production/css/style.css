@@ -3,8 +3,13 @@ body {
   position: relative;
 }
 
+.navbar {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
 offset {
-  margin-top: 10px
+  //margin-top: 10px
 }
 
 a {

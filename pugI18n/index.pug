@@ -1,0 +1,54 @@
+extends layout-nav
+
+block append head
+  link(rel='stylesheet', href='/css/carousel.css')
+
+block content
+  +navbar('/console/assy/store/')
+
+  main(role="main")
+    .carousel.slide#myCarousel(data-ride="carousel")
+      ol.carousel-indicators
+        li.active(data-target="#myCarousel", data-slide-to="0")
+        li(data-target="#myCarousel", data-slide-to="1")
+        li(data-target="#myCarousel", data-slide-to="2")
+      .carousel-inner
+        .carousel-item.active
+          img.first-slide(src="/assy/img/slide1.svg", alt="First slide")
+          .container
+            .carousel-caption.text-left
+              h1 Example headline
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
+        .carousel-item
+          img.second-slide(src="/assy/img/slide2.svg", alt="Second slide")
+          .container
+            .carousel-caption.text-left
+              h1 Example headline
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
+        .carousel-item
+          img.second-slide(src="/assy/img/slide3.svg", alt="Third slide")
+          .container
+            .carousel-caption.text-left
+              h1 Example headline
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
+      a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.sr-only Previous
+      a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.sr-only Next
+
+    footer.container
+      //p.float-right
+      //  a(href="#") Back to top
+      p
+        | &copy; 2018 Toriningen, Inc.
