@@ -149,8 +149,8 @@ mixin sidebar(dir)
             span.sr-only (current)
 
 block append head
-  link(rel='stylesheet', href='/css/common/navbar-top-fixed.css')
-  link(rel='stylesheet', href='/css/common/dashboard.css')
+  link(rel='stylesheet', href='/css/navbar-top-fixed.css')
+  link(rel='stylesheet', href='/css/dashboard.css')
  
 block append content
   nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
@@ -164,5 +164,5 @@ block append content
       main.col-md-10.ml-sm-auto.col-lg-10.px-4(role="main")
         block main
 
-  script(src="/js/common/feather.min.js")
+  script(src="/js/feather.min.js")
   script feather.replace()
