@@ -78,7 +78,7 @@ mixin sidebar(dir)
           - var isAssySetup = /\/assy\/setup\//.test(dir)
           - var isAssyIntro = (!isAssyUnbox && !isAssyLid && !isAssyWell & !isAssyBody && !isAssySetup)
           .list-group.list-group-root.well
-            a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIntro ? "active" : "") #{$i18n.assy.index.label}
+            a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIntro ? "active" : "") #{$i18n.assy.intro.label}
             if isAssyIntro
               .list-group#sidebar-assy-intro
                 a.list-group-item.list-group-item-action(href="#item-assy-intro-1") Item 1

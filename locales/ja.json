@@ -4,8 +4,14 @@
     },
     "assy" : {
         "label" : "組立ガイド",
-        "index" : {
-          "label" : "必ずお読みください"
+        "intro" : {
+          "label" : "必ずお読みください",
+          "item1" : {
+            "img" : "/assy/images/item-assy-intro-1.svg",
+            "title" : "最初のメッセージ",
+            "body" : "最初のパラグラフ"
+          },
+          "next" : "次のステップ：梱包内容確認"
         },
         "unbox" : { 
           "label" : "梱包内容確認"

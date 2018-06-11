@@ -4,8 +4,13 @@
     }, 
     "assy" : {
         "label" : "Assembly",
-        "index" : {
-          "label" : "Importants"
+        "intro" : {
+          "label" : "Importants",
+          "item1" : {
+            "title" : "Initial message",
+            "body" : "First paragraph"
+          },
+          "next" : "Next step : Unboxing"
         },
         "unbox" : {
           "label" : "Unboxing"
