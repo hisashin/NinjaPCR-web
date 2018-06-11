@@ -13,7 +13,8 @@ offset {
 }
 
 a {
-  color: #00B7FF;
+  //color: #00B7FF;
+  color: #333
 }
 
 .list-group.list-group-root {
