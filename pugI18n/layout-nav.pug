@@ -17,17 +17,17 @@ mixin navbar(dir)
         a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.label}
         if isAssy
           span.sr-only (current)
+
+    ul.navbar-nav.ml-auto      
       li.nav-item(class= isStore ? "active" : "")
-        a.nav-link(href="/"+$localeName+"/store/index.html") #{$i18n.store.label}
+        a.nav-link(href="/"+$localeName+"/store/index.html")
+          span(data-feather="shopping-cart")
         if isStore
           span.sr-only (current)
-    ul.navbar-nav.ml-auto
-      
       if $localeName == 'en'
         li.nav-item
           a.nav-link(href="http://eepurl.com/dxIEcn", target="_blank")
-            span(data-feather="mail")
-      
+            span(data-feather="mail")      
       li.nav-item
         a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
           span(data-feather="github")
