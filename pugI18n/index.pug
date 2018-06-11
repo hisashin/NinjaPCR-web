@@ -1,13 +1,11 @@
 extends layout-nav
 
 block append head
-  //link(rel='stylesheet', href='/css/carousel.css')
+  link(rel='stylesheet', href='/css/carousel.css')
 
 block content
   +navbar('/console/assy/store/')
-
   main(role="main")
-  
     .carousel.slide.w-100#myCarousel(data-ride="carousel")
       ol.carousel-indicators
         li.active(data-target="#myCarousel", data-slide-to="0")
@@ -20,7 +18,7 @@ block content
             .carousel-caption.text-left
               h1 Example headline
               p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
               p
                 a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
         .carousel-item
@@ -29,7 +27,7 @@ block content
             .carousel-caption.text-left
               h1 Example headline
               p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
               p
                 a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
         .carousel-item
@@ -38,7 +36,7 @@ block content
             .carousel-caption.text-left
               h1 Example headline
               p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
               p
                 a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
       a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
