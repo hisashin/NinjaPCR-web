@@ -3,18 +3,17 @@ extends layout
 block main
   .row
     if $localeName == 'ja'
-      .alert.alert-success(role="alert")
-        h4 購入はこちら
-        p 国内向けはリバネスショップでの限定販売です
-        hr
-        p.mb-0
+      .jumbotron
+        p.lead 国内向けはリバネスショップでの限定販売です
+        hr.my-4
+        p.lead
           a.btn.btn-primary(href="http://www.lvnshop.com/shopdetail/000000000311/", target="_blank", role="button") リバネスショップ&nbsp;(外部サイト)&nbsp;へ移動
     else
-      .alert.alert-dark(role="alert")
-        h4 Store is under construction.
-        p Sorry. NinjaPCR is currently available only in Japan.<br /> 
-        hr
-        p.mb-0
+      .jumbotron
+        h4.display-4 Store is under construction.
+        p.lead Sorry. NinjaPCR is currently available only in Japan.<br /> 
+        hr.my-4
+        p.lead
           | Subscribe newsletter now to get informed when NinjaPCR is available worldwide.
           | <br>
           | <br>
