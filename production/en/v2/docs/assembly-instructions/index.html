@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title class="i18n"></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/v2/css/style.css">
+    <!---->
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/popper/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/v2/css/navbar-top-fixed.css">
+    <link rel="stylesheet" href="/v2/css/dashboard.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="/">NinjaPCR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/v2/docs/assembly-instructions/">assembly-instructions</a>
+          </li>
+        </ul>
+        <!--form.form-inline.mt-2.mt-md-0-->
+        <!--  input.form-control.mr-sm-2(type="text", placeholder="Search", aria-label="Search")-->
+        <!--  button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search-->
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="/v2/docs/assembly-instructions/"><span data-feather="clipboard"></span>assembly-instructions</a></li>
+            </ul>
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"><span>Saved reports</span><a class="d-flex align-items-center text-muted" href="#"><span data-feather="plus-circle"></span></a></h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file-text"></span>Current month</a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file-text"></span>Last quarter</a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file-text"></span>Social engagement</a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file-text"></span>Year-end sale</a></li>
+            </ul>
+          </div>
+        </nav>
+        <main class="col-md-10 ml-sm-auto col-lg-10 px-4" role="main">
+          <div class="row i18n">
+            <div class="col-auto mr-auto">
+              <h4>特別単価一覧</h4>
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-primary" onClick="location.href='edit'">新規</button>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>サイトID</th>
+                    <th>サイト名</th>
+                    <th>開始時刻</th>
+                    <th>終了時刻</th>
+                    <th>ポイント</th>
+                    <th>削除</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="123">123</a></td>
+                    <td>1234</td>
+                    <td>test</td>
+                    <td>2018/06/08 04:51
+                    </td>
+                    <td>2018/06/08 04:51
+                    </td>
+                    <td>5432</td>
+                    <td><a href="123/delete" onClick="return confirm('削除してよろしいですか？')">削除</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="123"><span>red</span></a></td>
+                    <td>en</td>
+                    <td>test</td>
+                    <td>2018/06/08 04:51
+                    </td>
+                    <td>2018/06/08 04:51
+                    </td>
+                    <td>5432</td>
+                    <td><a href="123/delete" onClick="return confirm('削除してよろしいですか？')">削除</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="/common/js/feather.min.js"></script>
+    <script>feather.replace()</script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+    "console" : {
+        "label" : "コンソール"
+    },
+    "assy" : {
+        "label" : "組立ガイド",
+        "index" : {
+          "label" : "はじめに"
+        },
+        "unbox" : { 
+          "label" : "梱包内容確認"
+        },
+        "lid" : {  
+          "label" : "上部蓋の組み立て"
+        },
+        "well" : { 
+          "label" : "ウェルの組み立て"
+        },
+        "body" : { 
+          "label" : "下部本体の組み立て"
+        },
+        "setup" : {
+          "label" : "初回動作テスト"
+        }
+    },
+    "shop" : {
+        "label" : "本体購入",
+        "message" : "<a href=\"http://www.lvnshop.com/shopdetail/000000000311/\" target=\"_blank\">リバネスショップ(外部サイト)</a>にてご購入いただけます"
+    },
+    "github" : {
+        "label" : "GitHub"
+    }
+}
