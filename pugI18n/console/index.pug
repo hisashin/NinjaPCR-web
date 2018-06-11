@@ -32,7 +32,7 @@ html
     script(type="text/javascript" src="/console/js/experiments/new_experiment.js")
     script(type="text/javascript" src="/console/js/wifiConfig.js")
     
-  body(style="")
+  body
     #content(role="main" style="width:700px;height:800px;margin:auto;")
       #example2.SlidingPanels
         .SlidingPanelsContentGroup
@@ -41,10 +41,8 @@ html
             include includes/panel1.pug
           #ex2_p2.SlidingPanelsContent.p2
             include includes/panel2.pug
-          PANEL 3: Running Screen
-          This page is opened when NinjaPCR is in "Running" mode
           #ex2_p3.SlidingPanelsContent.p3
-        // END PANEL 3
+            include includes/panel3.pug
         
     // Device update (visible when firmware update is available.)
     #config(style="display:none")
