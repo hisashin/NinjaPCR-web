@@ -1,20 +1,30 @@
 extends layout-nav
 
 block append head
-  link(rel='stylesheet', href='/css/carousel.css')
+  //link(rel='stylesheet', href='/css/carousel.css')
 
 block content
   +navbar('/console/assy/store/')
 
   main(role="main")
-    .carousel.slide#myCarousel(data-ride="carousel")
+  
+    .carousel.slide.w-100#myCarousel(data-ride="carousel")
       ol.carousel-indicators
         li.active(data-target="#myCarousel", data-slide-to="0")
         li(data-target="#myCarousel", data-slide-to="1")
         li(data-target="#myCarousel", data-slide-to="2")
       .carousel-inner
         .carousel-item.active
-          img.first-slide(src="/images/slide1.svg", alt="First slide")
+          img.w-100.first-slide.img-fluid(src="/images/slide1.svg", alt="First slide")
+          .container(style="background-color:blue")
+            .carousel-caption.text-left
+              h1 Example headline
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
+        .carousel-item
+          img.w-100.second-slide.img-fluid(src="/images/slide2.svg", alt="Second slide")
           .container
             .carousel-caption.text-left
               h1 Example headline
@@ -23,16 +33,7 @@ block content
               p
                 a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
         .carousel-item
-          img.second-slide(src="/images/slide2.svg", alt="Second slide")
-          .container
-            .carousel-caption.text-left
-              h1 Example headline
-              p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              p
-                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
-        .carousel-item
-          img.second-slide(src="/images/slide3.svg", alt="Third slide")
+          img.w-100.second-slide.img-fluid(src="/images/slide3.svg", alt="Third slide")
           .container
             .carousel-caption.text-left
               h1 Example headline
