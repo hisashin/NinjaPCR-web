@@ -1,0 +1,35 @@
+#homeHeader.Header.pcr_localize_appTitle NinjaPCR WiFi
+#device_conf
+  h2#DeviceConnectionStatus.disconnected
+    span#DeviceConnectionStatusLabel Device disconnected
+  a#NewDevice.pcr_localize_wifiSettingsButton(href="#") Setup a new NinjaPCR device / Change network configuration
+  section#DeviceSettings(style="display:none")
+    p
+      ol
+        li.pcr_localize_wifiSettings0 Plug the power adapter into NinjaPCR and then into an outlet.
+  section
+    p#ipInputContainer
+      | Device name: 
+      input#HostText.connectionUI(type="text")
+      input#ConnectButton.connectionUI(type="button" value="connect")
+// Create a new blank experiment
+a#newExperimentButton(href="#")
+  img(src="/console/images/new.png" style="vertical-align:middle;")
+  span.home_title.pcr_localize_addNewExperiment Add a new experiment
+br
+br
+br
+// Rerun an experiment
+a#listSubmitButton(href="#")
+  img(src="/console/images/rerun.png" style="vertical-align:middle;")
+  span.home_title.pcr_localize_reRunExperiment Re-run an experiment
+#reRun(align="right")
+div
+  input#About.small_button.pcr_localize_about(type="button" value="About this app")
+div(style="display:none")
+  a#Settings.small_button.pcr_localize_contrast(style="display:none") Adjust the screen contrast
+a#ClearData.small_button.pcr_localize_clearData(style="display:none") Clear all data(For Developer)
+div
+  textarea#debugText(cols="60" rows="10" style="display:none")
+// END PANEL 1
+// PANEL 2: Experiment Screen

@@ -1,0 +1,80 @@
+#running_header(role="main")
+  #runningHeader.Header
+  span#timeRemaining.pcr_localize_timeRemaining Time remaining:
+  br
+  #minutesRemaining
+  #progressbar
+  br
+  #runningStats
+    table#statsTable.runningTable
+      tr
+        th(style="width:110px")
+          span.pcr_localize_status Status
+        th(colspan="3")
+          span.pcr_localize_currentTemp Current Temperature
+      tr
+        td(rowspan="3")
+          #cycleNumOfNum
+            span.pcr_localize_cycle Cycle
+            br
+            span#cycleNumber -
+            |  / 
+            span#totalCycles -
+        td(style="text-align:right;")
+          span.pcr_localize_lid Lid
+          | :
+        td
+          span#lidTemperature
+          | °C
+        td
+          meter#meterLid(min="0" max="120" value="85")
+      tr
+        td(style="text-align:right;")
+          span.pcr_localize_block Well
+          | :
+        td
+          span#blockTemperature
+          | °C
+        td
+          meter#meterBlock(min="0" max="120" value="25")
+      tr
+        td(style="text-align:right;")
+          span.pcr_localize_sample Sample
+          | :
+        td
+          span#sampleTemperature
+          | °C
+        td
+          meter#meterSample(min="0" max="120" value="25")
+      tr
+        td(colspan="3")
+          .deviceLabel
+            span.pcr_localize_lid Lid
+            | :
+          #deviceStatusLid.deviceStatus
+          .deviceLabel
+            span.pcr_localize_well Well
+            | :
+          #deviceStatusPeltier.deviceStatus
+    div
+      #graph_container(style="width:420px;height:240px;padding:6px 8px 12px 8px;")
+      div(style="text-align:center;")
+        input#graph_plus.small_button(type="button" value=" + ")
+        input#graph_minus.small_button(type="button" value=" - ")
+    #elapsed_time_section
+      span.pcr_localize_elapsedTime Elapsed time: 
+      span#elapsedTime 00:00:00
+    #runningPluggedIn
+      #cancelButton
+        input#stop_link.stop.small_button.pcr_localize_stop(type="button" value="Stop")
+    #runningUnplugged.unplugged_message.pcr_localize_unplugged
+      | Your NinjaPCR is unplugged from the computer.
+      br
+      |             Plug in your NinjaPCR to get updated information on your run.
+  script(type="text/javascript" src="/console/js/lib/flotr2.min.js")
+  script(type="text/javascript" src="/console/js/graph.js")
+  #homeButton
+    input#Home.button.homeRunning.pcr_localize_home(type="button" value="Home")
+  div(style="clear:both;")
+  div(style="margin-top:6px;")
+    a#download.small_button.pcr_localize_saveCsv(style="display:none;") Save CSV
