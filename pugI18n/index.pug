@@ -2,9 +2,12 @@ extends layout-nav
 
 block append head
   link(rel='stylesheet', href='/css/carousel.css')
+  style(type='text/css')
+    | body { padding-top : 42px; }
 
 block content
   +navbar('/console/assy/store/')
+
   main(role="main")
     .carousel.slide.w-100#myCarousel(data-ride="carousel")
       ol.carousel-indicators
@@ -46,9 +49,10 @@ block content
         span.carousel-control-next-icon(aria-hidden="true")
         span.sr-only Next
 
-    footer.container
-      //p.float-right
-      //  a(href="#") Back to top
-      p
-        | &copy; 2018 
-        a(href="https://www.tori.st", target="_blank") Toriningen, Inc.
+    footer.container.w-100.offset
+      .row.justify-content-md-center
+        //p.float-right
+        //  a(href="#") Back to top
+        p.col-md-auto
+          | &copy; 2018 
+          a(href="https://www.tori.st", target="_blank") Toriningen, Inc.

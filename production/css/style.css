@@ -8,8 +8,15 @@ body {
   padding-bottom: 0rem;
 }
 
-offset {
-  //margin-top: 10px
+.item-img {
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.offset {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 a {
