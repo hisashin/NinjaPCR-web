@@ -5,7 +5,7 @@
     "assy" : {
         "label" : "Assembly",
         "index" : {
-          "label" : "Introduction"
+          "label" : "Importants"
         },
         "unbox" : {
           "label" : "Unboxing"
@@ -23,9 +23,8 @@
           "label" : "Setup"
         }
     },
-    "shop" : {
-        "label" : "Shop",
-        "message" : "We're preparing webshop. Please stand by for a while."
+    "store" : {
+        "label" : "Store"
     },
     "github" : {
         "label" : "GitHub"
