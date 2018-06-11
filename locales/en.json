@@ -4,28 +4,210 @@
     }, 
     "assy" : {
         "label" : "Assembly",
+        "next" : "Next step : ",
         "intro" : {
           "label" : "Importants",
-          "item1" : {
-            "title" : "Initial message",
-            "body" : "First paragraph"
-          },
-          "next" : "Next step : Unboxing"
+          "items" : [
+            {
+              "img" : "/assy/images/item-assy-intro-1.svg",
+              "title" : "1st title",
+              "body" : "1st paragraph"
+            },
+            {
+              "title" : "2nd title",
+              "body" : "2nd paragraph"
+            },
+            {
+              "title" : "3rd title",
+              "body" : "3rd paragraph"
+            },
+            {
+              "title" : "4th title",
+              "body" : "4th paragraph"
+            },
+            {
+              "title" : "5th title",
+              "body" : "5th paragraph"
+            },
+            {
+              "title" : "6th title",
+              "body" : "6th paragraph"
+            },
+            {
+              "title" : "7th title",
+              "body" : "7th paragraph"
+            }
+          ]
         },
         "unbox" : {
-          "label" : "Unboxing"
+          "label" : "Unboxing",
+          "items" : [
+            {
+              "img" : "/assy/images/item-assy-intro-1.svg",
+              "title" : "1st title",
+              "body" : "1st paragraph"
+            },
+            {
+              "title" : "2nd title",
+              "body" : "2nd paragraph"
+            },
+            {
+              "title" : "3rd title",
+              "body" : "3rd paragraph"
+            },
+            {
+              "title" : "4th title",
+              "body" : "4th paragraph"
+            },
+            {
+              "title" : "5th title",
+              "body" : "5th paragraph"
+            },
+            {
+              "title" : "6th title",
+              "body" : "6th paragraph"
+            },
+            {
+              "title" : "7th title",
+              "body" : "7th paragraph"
+            }
+          ]
         },
         "lid" : { 
-          "label" : "Lid Assembly"
+          "label" : "Lid Assembly",
+          "items" : [
+            {
+              "img" : "/assy/images/item-assy-intro-1.svg",
+              "title" : "1st title",
+              "body" : "1st paragraph"
+            },
+            {
+              "title" : "2nd title",
+              "body" : "2nd paragraph"
+            },
+            {
+              "title" : "3rd title",
+              "body" : "3rd paragraph"
+            },
+            {
+              "title" : "4th title",
+              "body" : "4th paragraph"
+            },
+            {
+              "title" : "5th title",
+              "body" : "5th paragraph"
+            },
+            {
+              "title" : "6th title",
+              "body" : "6th paragraph"
+            },
+            {
+              "title" : "7th title",
+              "body" : "7th paragraph"
+            }
+          ]
         },
         "well" : { 
-          "label" : "Well Assembly"
+          "label" : "Well Assembly",
+          "items" : [
+            {
+              "img" : "/assy/images/item-assy-intro-1.svg",
+              "title" : "1st title",
+              "body" : "1st paragraph"
+            },
+            {
+              "title" : "2nd title",
+              "body" : "2nd paragraph"
+            },
+            {
+              "title" : "3rd title",
+              "body" : "3rd paragraph"
+            },
+            {
+              "title" : "4th title",
+              "body" : "4th paragraph"
+            },
+            {
+              "title" : "5th title",
+              "body" : "5th paragraph"
+            },
+            {
+              "title" : "6th title",
+              "body" : "6th paragraph"
+            },
+            {
+              "title" : "7th title",
+              "body" : "7th paragraph"
+            }
+          ]
         },
         "body" : { 
-          "label" : "Body Assembly"
+          "label" : "Body Assembly",
+          "items" : [
+            {
+              "img" : "/assy/images/item-assy-intro-1.svg",
+              "title" : "1st title",
+              "body" : "1st paragraph"
+            },
+            {
+              "title" : "2nd title",
+              "body" : "2nd paragraph"
+            },
+            {
+              "title" : "3rd title",
+              "body" : "3rd paragraph"
+            },
+            {
+              "title" : "4th title",
+              "body" : "4th paragraph"
+            },
+            {
+              "title" : "5th title",
+              "body" : "5th paragraph"
+            },
+            {
+              "title" : "6th title",
+              "body" : "6th paragraph"
+            },
+            {
+              "title" : "7th title",
+              "body" : "7th paragraph"
+            }
+          ]
         },
         "setup" : { 
-          "label" : "Setup"
+          "label" : "Setup",
+          "items" : [
+            {
+              "img" : "/assy/images/item-assy-intro-1.svg",
+              "title" : "1st title",
+              "body" : "1st paragraph"
+            },
+            {
+              "title" : "2nd title",
+              "body" : "2nd paragraph"
+            },
+            {
+              "title" : "3rd title",
+              "body" : "3rd paragraph"
+            },
+            {
+              "title" : "4th title",
+              "body" : "4th paragraph"
+            },
+            {
+              "title" : "5th title",
+              "body" : "5th paragraph"
+            },
+            {
+              "title" : "6th title",
+              "body" : "6th paragraph"
+            },
+            {
+              "title" : "7th title",
+              "body" : "7th paragraph"
+            }
+          ]
         }
     },
     "store" : {

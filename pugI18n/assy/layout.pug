@@ -1,5 +1,22 @@
 extends ../layout-nav
 
+mixin items(subdir, nextPath, nextLabel)
+  script $('body').scrollspy({ target: "#sidebar-assy-#{subdir}" })
+  .scrollspy-example(data-spy="scroll", data-target="#sidebar-assy-"+subdir, data-offset="0")
+  - var items = $i18n.assy[subdir].items
+
+    each item,index in items
+      if item.img
+        img.w-100.img-fluid.item-img(src= item.img)
+      h4(id="item-assy-"+subdir+"-"+index) #{item.title}
+      p
+        | #{item.body}
+
+    if nextPath && nextLabel
+      a.btn.btn-lg.btn-primary(href="/"+$localeName+nextPath) #{$i18n.assy.next}#{nextLabel}
+
+    .offset
+
 block navbar
   +navbar('/assy/')
 

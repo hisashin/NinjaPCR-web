@@ -81,75 +81,33 @@ mixin sidebar(dir)
             a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIntro ? "active" : "") #{$i18n.assy.intro.label}
             if isAssyIntro
               .list-group#sidebar-assy-intro
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-1") Item 1
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-1-1") Item 1-1
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-1-2") Item 1-2
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-2") Item 2
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-2-1") Item 2-1
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-2-2") Item 2-2
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-3") Item 3
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-3-1") Item 3-1
-                a.list-group-item.list-group-item-action(href="#item-assy-intro-3-2") Item 3-2
+                each item,index in $i18n.assy.intro.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-intro-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/unbox/index.html", class= isAssyUnbox ? "active" : "") #{$i18n.assy.unbox.label}
             if isAssyUnbox
               .list-group#sidebar-assy-unbox
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-1") Item 1
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-1-1") Item 1-1
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-1-2") Item 1-2
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-2") Item 2
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-2-1") Item 2-1
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-2-2") Item 2-2
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-3") Item 3
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-3-1") Item 3-1
-                a.list-group-item.list-group-item-action(href="#item-assy-unbox-3-2") Item 3-2
+                each item,index in $i18n.assy.unbox.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-unbox-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/lid/index.html", class= isAssyLid ? "active" : "") #{$i18n.assy.lid.label}
             if isAssyLid
               .list-group#sidebar-assy-lid
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-1") Item 1
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-1-1") Item 1-1
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-1-2") Item 1-2
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-2") Item 2
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-2-1") Item 2-1
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-2-2") Item 2-2
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-3") Item 3
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-3-1") Item 3-1
-                a.list-group-item.list-group-item-action(href="#item-assy-lid-3-2") Item 3-2
+                each item,index in $i18n.assy.lid.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-lid-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/well/index.html", class= isAssyWell ? "active" : "") #{$i18n.assy.well.label}
             if isAssyWell
               .list-group#sidebar-assy-well
-                a.list-group-item.list-group-item-action(href="#item-assy-well-1") Item 1
-                a.list-group-item.list-group-item-action(href="#item-assy-well-1-1") Item 1-1
-                a.list-group-item.list-group-item-action(href="#item-assy-well-1-2") Item 1-2
-                a.list-group-item.list-group-item-action(href="#item-assy-well-2") Item 2
-                a.list-group-item.list-group-item-action(href="#item-assy-well-2-1") Item 2-1
-                a.list-group-item.list-group-item-action(href="#item-assy-well-2-2") Item 2-2
-                a.list-group-item.list-group-item-action(href="#item-assy-well-3") Item 3
-                a.list-group-item.list-group-item-action(href="#item-assy-well-3-1") Item 3-1
-                a.list-group-item.list-group-item-action(href="#item-assy-well-3-2") Item 3-2
+                each item,index in $i18n.assy.well.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-well-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/body/index.html", class= isAssyBody ? "active" : "") #{$i18n.assy.body.label}
             if isAssyBody
               .list-group#sidebar-assy-body
-                a.list-group-item.list-group-item-action(href="#item-assy-body-1") Item 1
-                a.list-group-item.list-group-item-action(href="#item-assy-body-1-1") Item 1-1
-                a.list-group-item.list-group-item-action(href="#item-assy-body-1-2") Item 1-2
-                a.list-group-item.list-group-item-action(href="#item-assy-body-2") Item 2
-                a.list-group-item.list-group-item-action(href="#item-assy-body-2-1") Item 2-1
-                a.list-group-item.list-group-item-action(href="#item-assy-body-2-2") Item 2-2
-                a.list-group-item.list-group-item-action(href="#item-assy-body-3") Item 3
-                a.list-group-item.list-group-item-action(href="#item-assy-body-3-1") Item 3-1
-                a.list-group-item.list-group-item-action(href="#item-assy-body-3-2") Item 3-2
+                each item,index in $i18n.assy.body.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-body-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/setup/index.html", class= isAssySetup ? "active" : "") #{$i18n.assy.setup.label}
             if isAssySetup
               .list-group#sidebar-assy-setup
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-1") Item 1
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-1-1") Item 1-1
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-1-2") Item 1-2
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-2") Item 2
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-2-1") Item 2-1
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-2-2") Item 2-2
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-3") Item 3
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-3-1") Item 3-1
-                a.list-group-item.list-group-item-action(href="#item-assy-setup-3-2") Item 3-2
+                each item,index in $i18n.assy.setup.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-setup-"+index) #{item.title}
     //-
       li.nav-item
         a.nav-link(href="/"+$localeName+"/store/index.html", class= isStore ? "active" : "")
