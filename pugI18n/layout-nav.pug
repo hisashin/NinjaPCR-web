@@ -150,12 +150,14 @@ mixin sidebar(dir)
                 a.list-group-item.list-group-item-action(href="#item-assy-setup-3") Item 3
                 a.list-group-item.list-group-item-action(href="#item-assy-setup-3-1") Item 3-1
                 a.list-group-item.list-group-item-action(href="#item-assy-setup-3-2") Item 3-2
+    //-
       li.nav-item
         a.nav-link(href="/"+$localeName+"/store/index.html", class= isStore ? "active" : "")
           span(data-feather="shopping-cart")
           | #{$i18n.store.label}
           if isStore
             span.sr-only (current)
+    //
 
 block append head
   link(rel='stylesheet', href='/css/navbar-top-fixed.css')
