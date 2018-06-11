@@ -29,10 +29,13 @@ mixin navbar(dir)
           if $localeName == 'en'
             li.nav-item.active
               a.nav-link(href="http://eepurl.com/dxIEcn", target="_blank")
-                span(data-feather="mail")      
+                span(data-feather="rss")      
           li.nav-item.active
             a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
               span(data-feather="github")
+          li.nav-item.active
+            a.nav-link(href="mailto:ninjapcr@tori.st")
+              span(data-feather="mail")
           li.nav-item
             span.nav-link
               if $localeName == 'en'
