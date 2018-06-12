@@ -126,7 +126,7 @@ function stepToHTML(step) {
 					+ step_number
 					+ '_name" class="title step_name">'
 					+ step_name
-					+ ' </span><a class="edit deleteStepButton"><img src="images/minus.png" height="30"></a>'
+					+ ' </span><a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
 					+ '<table><tr>'
 					+ '<th><label for="step'
 					+ step_number
@@ -177,7 +177,7 @@ function stepToHTML(step) {
 				+ step_number
 				+ '" class="title step_name">'
 				+ step_name
-				+ ' </span><a class="edit deleteStepButton"><img src="images/minus.png" height="30"></a>'
+				+ ' </span><a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
 				+ '<table cellspacing="20"><tr>'
 				+ '<th><label>'+getLocalizedMessage('tempShort')+':</label> <div><input type="text" style="font-weight:normal;" class="required number textinput" value="'
 				+ step_temp
@@ -286,7 +286,7 @@ function addStep(location) {
 			+ '<span class="title step_name">'
 			+ step_name
 			+ ' </span>'
-			+ '<a class="edit deleteStepButton"><img src="images/minus.png" height="30"></a>'
+			+ '<a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
 			+ '<table cellspacing="20">'
 			+ '<tr>'
 			+ '<th><label>'+getLocalizedMessage('tempShort')+'</label><div><input type="text" style="font-weight:normal;" class="required number textinput" value="" name="temp_'
