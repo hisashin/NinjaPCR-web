@@ -492,6 +492,16 @@ function onReceiveStatus(message) {
 	}
 	experimentLog.push(status);
 	experimentLogger.log(status);
+	 if (status.s == "error") {
+    console.log("ERROR!!!");
+    // Error code
+    console.log(status.w);
+    console.log(getLocalizedMessage('errorMessage' + status.w));
+    $('#errorDesctiption').html(getLocalizedMessage('errorMessage' + status.w));
+    $('#labelErrorCode').html(status.w);
+    window.clearInterval(window.updateRunningPage);
+    $('#error_dialog').dialog('open');
+  }
 	prevStatus = status.s;
 }
 /* onStopPCR()
@@ -1006,6 +1016,21 @@ $(function() {
 			}
 		}
 	});
+	
+  // Error dialog
+  $('#error_dialog').dialog({
+    autoOpen : false,
+    width : 400,
+    modal : true,
+    draggable : false,
+    resizable : false,
+    buttons : {
+      "OK" : function() {
+        $(this).dialog("close");
+      }
+    }
+
+  });
 	
 
 	//hover states on the static widgetson the static widgets

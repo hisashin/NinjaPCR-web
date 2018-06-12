@@ -152,3 +152,14 @@ html
         input#buttonOTAModeOpenUpdate(type="button" value="Open update page")
         input#buttonOTAModeCancelUpdate(type="button" value="Cancel update")
         input#buttonOTAModeCloseDialog(type="button" value="Close this dialog")
+        
+      // Harware error
+      #error_dialog(title="Error")
+        div.pcr_localize_hardwareError Hardware Error
+        div#errorDesctiption
+        div
+          a#errorLink(href="http://ninjapcr.tori.st/index.html#")
+            span.pcr_localize_hardwareErrorCode Error Code
+            span :
+            span#labelErrorCode
+          

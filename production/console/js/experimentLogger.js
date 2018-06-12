@@ -37,7 +37,6 @@ ExperimentLogger.prototype.log = function (status) {
 	if (status["d"] == window.command_id) {
 		window.command_id_counter = 0;
 	}
-	//if (Math.random()<0.1) status["s"]="complete"; //TODO debug
 
 	var statusLid = status["x"].toFixed(1);
 	var statusPeltier = status["y"].toFixed(1);
@@ -165,10 +164,7 @@ ExperimentLogger.prototype.log = function (status) {
 		var current_step = status["p"];
 		$("#currentStep").html(current_step);
 		createCSV();
-	} else if (status["status"] == "stopped") {
+	} else if (status["s"] == "stopped") {
 		// nothing
-	} else if (status["status"] == "error") {
-		// error
-		chromeUtil.alert("Error");
 	}
-};
+}
