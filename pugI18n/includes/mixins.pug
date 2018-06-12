@@ -22,17 +22,31 @@ mixin table(table)
       thead
         tr
           each col,index in table.head
-            if index == 0
-              th(scope="col") #{col}
-            else
-              th #{col}
+            th(scope="col") #{col}
     if table.body
       tbody
         each row in table.body
           tr
             each col,index in row
               if index == 0
-                td(scope="col") #{col}
+                td(scope="row") #{col}
               else
                 td #{col}
+
+mixin itemhead(dir, subdir)
+  script $('body').scrollspy({ target: "#sidebar-#{dir}-#{subdir}" })
+  .scrollspy-example(data-spy="scroll", data-target="#sidebar-"+dir+"-"+subdir, data-offset="0")
+  if block
+    block
+
+mixin itemtitle(dir, subdir, index, title, subtitle)
+  - let id = "item-"+dir+"-"+subdir+"-"+index
+  h4(id= id) #{title}
+  if subtitle
+    h6 #{subtitle}
+
+mixin nextstep(nextPath, nextLabel)
+  if nextPath && nextLabel
+    a.btn.btn-lg.btn-primary(href="/"+$localeName+nextPath) #{$i18n.general.nextstep}#{nextLabel}
+    .offset
 

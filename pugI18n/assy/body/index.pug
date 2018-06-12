@@ -1,4 +1,55 @@
 extends layout
 
 block main
-  +items('body', "/assy/setup/index.html", $i18n.assy.setup.label)
+
+  - var dir = 'assy'
+  - var subdir = 'body'
+
+  +itemhead(dir, subdir)
+
+    p
+      | #{$i18n.assy.unbox.text1}
+      +contact($i18n.assy.unbox.text2)
+      | #{$i18n.assy.unbox.text3}
+
+    - var item = $i18n.assy.unbox.items[0]
+    +itemtitle(dir, subdir, 0, item.title, item.subtitle)
+
+    - var img = "/assy/images/kit-bulk.svg"
+    +image(img, img)
+    p
+      +table($i18n.assy.unbox.kitbulk)
+
+    - var item = $i18n.assy.unbox.items[1]
+    +itemtitle(dir, subdir, 1, item.title, item.subtitle)
+
+    - var img = "/assy/images/kit-bag.svg"
+    +image(img, img)
+    p
+      +table($i18n.assy.unbox.kitbag)
+
+    - var item = $i18n.assy.unbox.items[2]
+    +itemtitle(dir, subdir, 2, item.title, item.subtitle)
+
+    - var img = "/assy/images/kit-bag1.svg"
+    +image(img, img)
+    p
+      +table($i18n.assy.unbox.kitbag1)
+
+    - var item = $i18n.assy.unbox.items[3]
+    +itemtitle(dir, subdir, 3, item.title, item.subtitle)
+
+    - var img = "/assy/images/kit-bag2.svg"
+    +image(img, img)
+    p
+      +table($i18n.assy.unbox.kitbag2)
+
+    - var item = $i18n.assy.unbox.items[4]
+    +itemtitle(dir, subdir, 4, item.title, item.subtitle)
+
+    - var img = "/assy/images/kit-bag3.svg"
+    +image(img, img)
+    p
+      +table($i18n.assy.unbox.kitbag3)
+  
+    +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)

@@ -1,13 +1,13 @@
 {
     "general" : {
-      "contact" : "Contact Form"
+      "contact" : "Contact Form",
+      "nextstep" : "Next step : "
     },
     "console" : {
         "label" : "Console"
     }, 
     "assy" : {
-        "label" : "Assembly",
-        "next" : "Next step : ",
+        "label" : "Assembly Manual",
         "intro" : {
           "label" : "Importants",
           "items" : [
@@ -36,12 +36,12 @@
         },
         "unbox" : {
           "label" : "Unboxing",
+          "text1" : "Before assembly, take a breath and let's make sure that you have everything required. If you find anything missing or broken, ",
+          "text2" : "Contact us",
+          "text3" : " with seriall number.",
           "items" : [
             {
-              "title" : "Overview",
-              "text1" : "Before assembly, take a breath and let's make sure that you have everything required. If you find anything missing or broken, ",
-              "text2" : "Contact us",
-              "text3" : " with seriall number."
+              "title" : "Overview"
             },
             {
               "title" : "Bag"
@@ -200,10 +200,36 @@
           ]
         }
     },
+    "op" : {
+      "label" : "Operating Manual",
+      "items" : [
+        {
+          "title" : "1st title"
+        },
+        {
+          "title" : "2nd title"
+        },
+        {
+          "title" : "3rd title"
+        },
+        {
+          "title" : "4th title"
+        },
+        {
+          "title" : "5th title"
+        },
+        {
+          "title" : "6th title"
+        },
+        {
+          "title" : "7th title"
+        }
+      ]
+    },
     "store" : {
-        "label" : "Store"
+      "label" : "Store"
     },
     "github" : {
-        "label" : "GitHub"
+      "label" : "GitHub"
     }
 }
