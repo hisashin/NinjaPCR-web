@@ -36,7 +36,7 @@
         },
         "unbox" : {
           "label" : "Unboxing",
-          "text1" : "Before assembly, take a breath and let's make sure that you have everything required. If you find anything missing or broken, ",
+          "text1" : "Before assembly, take a breath and let's make sure that you have everything required. If you find anything missed or broken, ",
           "text2" : "Contact us",
           "text3" : " with seriall number.",
           "items" : [
@@ -62,6 +62,8 @@
               [ "Woods", "Total 15 wooden parts inside", 15 ],
               [ "Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
               [ "PCB", "Check printed circuit board is not damaged.", 1 ],
+              [ "Heatsink+Grease", "Heatsink and thermal conductive grease are packed in one box.", 1 ],
+              [ "Power Supply", "12V >135W AC-DC adapter.", 1 ],
               [ "Bag", "Check next table what's inside", 1 ]
             ]
           },
