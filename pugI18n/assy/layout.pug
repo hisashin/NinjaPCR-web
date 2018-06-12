@@ -6,16 +6,113 @@ mixin items(subdir, nextPath, nextLabel)
   - var items = $i18n.assy[subdir].items
 
     each item,index in items
-      if item.img
-        img.w-100.img-fluid.item-img(src= item.img)
-      h4(id="item-assy-"+subdir+"-"+index) #{item.title}
-      p
-        | #{item.body}
+      if item.img || item.alt
+        +image(item.img, item.img, item.alt)
+      - let id = "item-assy-"+subdir+"-"+index
+      h4(id= id) #{item.title}
+      if item.subtitle
+        h6 #{item.subtitle}
+      +itembody(subdir, index)
 
     if nextPath && nextLabel
       a.btn.btn-lg.btn-primary(href="/"+$localeName+nextPath) #{$i18n.assy.next}#{nextLabel}
 
     .offset
+
+mixin itembody(subdir, index)
+  case subdir
+    when 'intro'
+      case index
+        when 0
+          include includes/layout-item-assy-intro-0
+        when 1
+          include includes/layout-item-assy-intro-1
+        when 2
+          include includes/layout-item-assy-intro-2
+        when 3
+          include includes/layout-item-assy-intro-3
+        when 4
+          include includes/layout-item-assy-intro-4
+        when 5
+          include includes/layout-item-assy-intro-5
+        when 6
+          include includes/layout-item-assy-intro-6
+    when 'unbox'
+      case index
+        when 0
+          include includes/layout-item-assy-unbox-0
+        when 1
+          include includes/layout-item-assy-unbox-1
+        when 2
+          include includes/layout-item-assy-unbox-2
+        when 3
+          include includes/layout-item-assy-unbox-3
+        when 4
+          include includes/layout-item-assy-unbox-4
+    when 'lid'
+      case index
+        when 0
+          include includes/layout-item-assy-lid-0
+        when 1
+          include includes/layout-item-assy-lid-1
+        when 2
+          include includes/layout-item-assy-lid-2
+        when 3
+          include includes/layout-item-assy-lid-3
+        when 4
+          include includes/layout-item-assy-lid-4
+        when 5
+          include includes/layout-item-assy-lid-5
+        when 6
+          include includes/layout-item-assy-lid-6
+    when 'well'
+      case index
+        when 0
+          include includes/layout-item-assy-well-0
+        when 1
+          include includes/layout-item-assy-well-1
+        when 2
+          include includes/layout-item-assy-well-2
+        when 3
+          include includes/layout-item-assy-well-3
+        when 4
+          include includes/layout-item-assy-well-4
+        when 5
+          include includes/layout-item-assy-well-5
+        when 6
+          include includes/layout-item-assy-well-6
+    when 'body'
+      case index
+        when 0
+          include includes/layout-item-assy-body-0
+        when 1
+          include includes/layout-item-assy-body-1
+        when 2
+          include includes/layout-item-assy-body-2
+        when 3
+          include includes/layout-item-assy-body-3
+        when 4
+          include includes/layout-item-assy-body-4
+        when 5
+          include includes/layout-item-assy-body-5
+        when 6
+          include includes/layout-item-assy-body-6
+    when 'setup'
+      case index
+        when 0
+          include includes/layout-item-assy-setup-0
+        when 1
+          include includes/layout-item-assy-setup-1
+        when 2
+          include includes/layout-item-assy-setup-2
+        when 3
+          include includes/layout-item-assy-setup-3
+        when 4
+          include includes/layout-item-assy-setup-4
+        when 5
+          include includes/layout-item-assy-setup-5
+        when 6
+          include includes/layout-item-assy-setup-6
 
 block navbar
   +navbar('/assy/')

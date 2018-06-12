@@ -1,20 +1,6 @@
+include includes/mixins.pug
+
 doctype html
-
--
-  function two(val) {
-    return (val < 10 ? '0' + val : val);
-  }
-
-mixin formatDate(dateString)
-  -var date = new Date(dateString);
-  -var y = date.getFullYear();
-  -var M = date.getMonth() + 1;
-  -var d = date.getDate();
-  -var h = date.getHours();
-  -var m = date.getMinutes();
-  -var output = y + '/' + two(M) + '/' + two(d) + ' ' + two(h) + ':' + two(m);
-  =output
-
 html
   head
     meta(charset='utf-8')
