@@ -5,6 +5,7 @@ mixin navbar(dir)
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
       - var isConsole = /\/console\//.test(dir)
       - var isAssy = /\/assy\//.test(dir)
+      - var isOp = /\/op\//.test(dir)
       - var isStore = /\/store\//.test(dir)
       a.navbar-brand(href="/") NinjaPCR
       button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
@@ -18,6 +19,10 @@ mixin navbar(dir)
           li.nav-item(class= isAssy ? "active" : "")
             a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.label}
             if isAssy
+              span.sr-only (current)
+          li.nav-item(class= isOp ? "active" : "")
+            a.nav-link(href="/"+$localeName+"/op/index.html") #{$i18n.op.label}
+            if isOp
               span.sr-only (current)
 
         ul.navbar-nav.ml-auto      
@@ -34,12 +39,8 @@ mixin navbar(dir)
             a.nav-link(href="https://github.com/hisashin/NinjaPCR", target="_blank")
               span(data-feather="github")
           li.nav-item.active
-            if $localeName == 'ja'
-              a.nav-link(href="https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link", target="_blank")
-                span(data-feather="mail")
-            else
-              a.nav-link(href="https://docs.google.com/forms/d/e/1FAIpQLSf48pMz4yPdDtF7h_LtshZg0o0rRsG9BcfMrM-TcWgMvUU83Q/viewform?usp=sf_link", target="_blank")
-                span(data-feather="mail")
+            +contact()(class="nav-link")
+              span(data-feather="mail")
           li.nav-item
             span.nav-link
               if $localeName == 'en'
@@ -55,6 +56,7 @@ mixin navbar(dir)
 mixin sidebar(dir)
   - var isConsole = /\/console\//.test(dir)
   - var isAssy = /\/assy\//.test(dir)
+  - var isOp = /\/op\//.test(dir)
   - var isStore = /\/store\//.test(dir)
   .sidebar-sticky
     ul.nav.flex-column
@@ -108,6 +110,16 @@ mixin sidebar(dir)
               .list-group#sidebar-assy-setup
                 each item,index in $i18n.assy.setup.items
                   a.list-group-item.list-group-item-action(href="#item-assy-setup-"+index) #{item.title}
+      li.nav-item
+        a.nav-link(href="/"+$localeName+"/op/index.html", class= isOp ? "active" : "")
+          span(data-feather="life-buoy")
+          | #{$i18n.op.label}
+          if isOp
+            span.sr-only (current)
+        if isOp
+          .list-group#sidebar-op-index
+            each item,index in $i18n.op.items
+              a.list-group-item.list-group-item-action(href="#item-op-index-"+index) #{item.title}
     //-
       li.nav-item
         a.nav-link(href="/"+$localeName+"/store/index.html", class= isStore ? "active" : "")

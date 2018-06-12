@@ -4,7 +4,7 @@ var pugI18n = require('gulp-i18n-pug');
 
 gulp.task('default', ['pug', 'pugI18n']);
 gulp.task('pug', function() {
-  return gulp.src(['./pug/**/*.pug', './pug/**/*.jade', '!**/layout*'])
+  return gulp.src(['./pug/**/*.pug', './pug/**/*.jade', '!**/layout*', '!**/include/*', '!**/includes/*'])
   .pipe(pug({
     pretty: true
   }))
@@ -18,7 +18,7 @@ gulp.task('pugI18n', function() {
     },
     pretty: true
   };
-  return gulp.src(['./pugI18n/**/*.pug', './pugI18n/**/*.jade', '!**/layout*'])
+  return gulp.src(['./pugI18n/**/*.pug', './pugI18n/**/*.jade', '!**/layout*', '!**/include/*', '!**/includes/*'])
   .pipe(pugI18n(options))
   .pipe(gulp.dest(options.i18n.dest));
 });
