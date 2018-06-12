@@ -174,7 +174,7 @@
           ]
         },
         "setup" : { 
-          "label" : "Setup",
+          "label" : "Initial Setup",
           "items" : [
             {
               "title" : "1st title"

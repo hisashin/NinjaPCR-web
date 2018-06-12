@@ -177,7 +177,7 @@
           ]
         },
         "setup" : {
-          "label" : "初回動作テスト",
+          "label" : "初期設定",
           "items" : [
             {
               "imgTmp" : "/assy/images/item-assy-intro-1.svg",
