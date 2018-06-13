@@ -1,12 +1,13 @@
 {
+    "console" : {
+      "label" : "Console"
+    },
+    
     "general" : {
       "contact" : "Contact Form",
       "nextstep" : "Next step : "
     },
-    "console" : {
-      "label" : "Console"
-    },
-    "assy" : {
+        "assy" : {
         "label" : "Assembly Manual",
         "index" : {
           "label" : "Importants",

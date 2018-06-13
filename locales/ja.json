@@ -1,10 +1,11 @@
 {
+    "console" : {
+      "label" : "Console"
+    },
+
     "general" : {
       "contact" : "コンタクトフォーム",
       "nextstep" : "次のステップ："
-    },
-    "console" : {
-      "label" : "Console"
     },
     "assy" : {
         "label" : "組立ガイド",
