@@ -148,8 +148,7 @@ NetworkCommunicator.prototype.connect = function () {
     var scope = this;
     window.onHostResolved = function(hostIP) {
       hostIpAddress = hostIP;
-      console.log("window.onHostResolved");
-      console.log(hostIP);
+      console.log("window.onHostResolved hostIpAddress=" + hostIpAddress);
       scope.doConnect();
     }
   } else {
