@@ -10,6 +10,8 @@ mixin contact(name)
       block
 
 mixin image(path, href, alt)
+  if !alt
+    - var alt = path
   if href
     a(href= href, target="_blank")
       img.w-100.img-fluid.item-img(src= path, alt= alt)
@@ -53,6 +55,12 @@ mixin itemtitle(dir, subdir, index)
         | #{item.text}
         if item.imgPos
           +image(item.imgPos, item.imgPos)
+
+mixin itemlink(dir, subdir, index)
+  - let href1 = "/"+$localeName+"/"+dir
+  - let href2 = subdir == 'index' ? "/index.html" : "/" + subdir+"/index.html"
+  - let href3 = "#item-"+dir+"-"+subdir+"-"+index
+  a.link(href= href1 + href2 + href3) #{$i18n[dir][subdir].items[index].title}
 
 mixin nextstep(nextPath, nextLabel)
   if nextPath && nextLabel

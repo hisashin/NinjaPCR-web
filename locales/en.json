@@ -14,20 +14,27 @@
           "items" : [
             {
               "title" : "Keep Your Serial Number",
-              "text" : "Serial Number is important to get support in the warranty period. It's labeled on warranty and circuit board as S/N:xxx-xxx-xxx but backup is recommended."
+              "text1" : "Serial Number is important to get support in the warranty period. It's labeled on warranty and circuit board as S/N:xxx-xxx-xxx but backup is recommended."
             },
             {
               "title" : "High Temperature",
-              "text" : "Some parts get heated up to 120 degree celcius (250 degree fahrenheit). Do not touch aluminium parts directly. Top of PCR tube is still host just after PCR process has ended."
-
+              "text1" : "Some parts get heated up to 120 degree celcius (250 degree fahrenheit). Do not touch aluminium parts directly. Top of PCR tube is still host just after PCR process has ended."
             },
             {
               "title" : "High Current",
-              "text" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and conductive materials."
+              "text1" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and conductive materials."
             },
             {
               "title" : "Opensource",
-              "text" : "This is total open sourced hardware under license GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from GitHub icon in navigation bar on top."
+              "text1" : "This is total open sourced hardware under license GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from GitHub icon in navigation bar on top."
+            },
+            { 
+              "title" : "Screwdrivers", 
+              "text1" : "2 screwdrivers are bundled inside plastic bag."
+            },
+            {
+              "title" : "Hint",
+              "text1" : "Laser cut wood has face and tail. It will look pretty if you always choose face side to be shown even it's symmetric."
             }
           ]
         },
@@ -42,12 +49,12 @@
               "table" : {
                 "head" : [ "Kit Content", "Detail", "Count" ],
                 "body" : [
-                  [ "Woods", "Total 15 wooden parts inside", 15 ],
-                  [ "Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
-                  [ "PCB", "Check printed circuit board is not damaged.", 1 ],
-                  [ "Heatsink+Grease", "Heatsink and thermal conductive grease are packed in one box.", 1 ],
-                  [ "Power Supply", "12V >135W AC-DC adapter.", 1 ],
-                  [ "Bag", "Check next table what's inside", 1 ]
+                  [ "1. Woods", "Total 15 wooden parts inside", 15 ],
+                  [ "2. Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
+                  [ "3. PCB", "Check printed circuit board is not damaged.", 1 ],
+                  [ "4. Heatsink+Grease", "Heatsink and thermal conductive grease are packed in one box.", 1 ],
+                  [ "5. Power Supply", "12V >135W AC-DC adapter.", 1 ],
+                  [ "6. Bag", "Check next table what's inside", 1 ]
                 ]
               }
             },
@@ -56,15 +63,13 @@
               "table" : {
                 "head" : [ "Bag Content", "Detail", "Count" ],
                 "body" : [
-                  [ "Aluminium plates", "1 square plate and another one with holes on each corners.", 2 ],
-                  [ "Peltier", "High temperature durable silicon sealed peltier", 1 ],
-                  [ "Heater", "With 4 wires. 2 of them are for thermistor inside.", 1 ],
-                  [ "Screw Bag 1", "Labeled as '1.Lid'", 1 ],
-                  [ "Screw Bag 2", "Labeled as '2.Well'", 1 ],
-                  [ "Screw Bag 3", "Labeled as '3.Body'", 1 ],
-                  [ "Latch", "2 white plastic parts.", 1 ],
-                  [ "Hinge", "1 black plastic part.", 1 ],
-                  [ "Knob", "Large screw with black plastic handle.", 1 ]
+                  [ "1. プラスドライバ", "ねじを締める際に使用します", 1 ],
+                  [ "2. マイナスドライバ", "基板に配線を固定する際に使用します", 1 ],
+                  [ "3. Screw Bag 1", "Labeled as '1.Lid'", 1 ],
+                  [ "4. Screw Bag 2", "Labeled as '2.Well'", 1 ],
+                  [ "5. Screw Bag 3", "Labeled as '3.Body'", 1 ],
+                  [ "6. ファンガード", "下部本体組み立てで使用します", 1 ],
+                  [ "7. ゴム足", "下部本体組み立てで使用します", 4 ]
                 ]
               } 
             },
@@ -73,6 +78,14 @@
               "table" : {
                 "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
                 "body" : [
+                  [ "1. Heater", "With 4 wires. 2 of them are for thermistor inside.", 1 ],
+                  [ "2. Silicone sponge", "Cover one side of heater to avoid convection.", 1 ],
+                  [ "3. Aluminium plate", "a plate with 4 holes on each corners.", 1 ],
+                  [ "4. Screw (M3 15mm)", "To hold heater", 4 ],
+                  [ "5. Nut (M3)", "To hold heater", 8 ],
+                  [ "6. Screw(M3 10mm)", "To hold woods", 8 ],
+                  [ "7. 30mm spacer", "To hold woods", 4 ],
+                  [ "8. Knob", "Large screw with black plastic handle.", 1 ]
                 ]
               } 
             },
@@ -81,6 +94,17 @@
               "table" : {
                 "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
                 "body" : [
+                  [ "1. Peltier", "High temperature durable silicon sealed peltier", 1 ],
+                  [ "2. Aluminium plate", "Square plate.", 1 ],
+                  [ "3. ねじ(M3 15mm)", "ペルチェホルダ固定用", 2 ],
+                  [ "4. ねじ(M3 6mm)", "ウェル固定用", 4 ],
+                  [ "5. ナット(M3)", "ウェル・ペルチェホルダ固定用", 6 ],
+                  [ "6. ねじ(M5 20mm)", "ヒートシンク固定用", 4 ],
+                  [ "7. ナット(M5)", "ヒートシンク固定用", 8 ],
+                  [ "8. スポンジシート", "下部本体から蓋内部への空気の流入を防ぎます", 1 ],
+                  [ "9. Latch", "2 white plastic parts.", 1 ],
+                  [ "10. Hinge", "1 black plastic part.", 1 ],
+                  [ "11. タッピングねじ(M3 6mm)", "ラッチ・ヒンジ固定用", 8 ]
                 ]
               }
             },
@@ -89,6 +113,13 @@
               "table" : {
                 "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
                 "body" : [
+                  [ "1. ねじ(M4 10mm)", "ファンガード固定用", 4 ],
+                  [ "2. ナット(M4)", "ファンガード固定用", 4 ],
+                  [ "3. プラスペーサ(M3 60mm)", "両メスです", 4 ],
+                  [ "4. プラスペーサ(M3 30mm)", "片方がメス、片方がオスです", 4 ],
+                  [ "5. ねじ(M3 15mm)", "各種固定用", 12 ],
+                  [ "6. ナット(M3)", "各種固定用", 4 ],
+                  [ "7. プラスペーサ(M3 5mm)", "基板固定用", 4 ]
                 ]
               }
             }
@@ -98,16 +129,34 @@
           "label" : "Lid Assembly",
           "items" : [
             {
-              "title" : "All Parts"
+              "title" : "All Parts",
+              "text1" : " and these woods are used.",
+              "table" : {
+                "head" : [ "Name", "Detail", "Count" ],
+                "body" : [
+                  [ "1. Heater lift", "Support heater to go up and down.", 1 ],
+                  [ "2. Lid Top", "", 1 ],
+                  [ "3. Lid Bottom", "", 1 ],
+                  [ "4. Lid Side", "", 2 ],
+                  [ "5. Lid Front", "2 small holes for latch.", 1 ],
+                  [ "6. Lid Back", "2 small holes for hinge and 1 bigger hole for calbes of heater.", 1 ]
+                ]
+              }
             },
             {
-              "title" : "Floating Heater"
+              "title" : "Floating Heater",
+              "text1" : "まず、ヒーターの両面テープをはがし、アルミ板の中央に貼り付けます。四隅の穴にかぶらないようにしましょう。",
+              "text2" : "長めのねじ(M3 15mm)とナット各4個を図のようにアルミ板に取り付け、スポンジを置きます。",
+              "text3" : "木製のヒーター昇降台をナット4個で取り付けると完成です。"
             },
             {
-              "title" : "Lid Base"
+              "title" : "Lid Base",
+              "text1" : "残ったねじとスペーサ各4個を使って、図のように組みます。",
+              "text2" : "先程作成したヒーター部を図のようにセットし、蓋後板の穴から4本のケーブルをすべて通しておきます。"
             },
             {
-              "title" : "Lid Cover"
+              "title" : "Lid Cover",
+              "text1" : "最後のねじ4本で上蓋を固定し、ノブを軽くねじこむと蓋の完成です。"
             }
           ]
         },
@@ -115,22 +164,52 @@
           "label" : "Well Assembly",
           "items" : [
             {
-              "title" : "All Parts"
+              "title" : "All Parts",
+              "text1" : "、ウェル、ヒートシンク+グリス、さらにこちらの木材を使用します。",
+              "table" : {
+                "head" : [ "名前", "内容", "個数" ], 
+                "body" : [ 
+                  [ "1. ペルチェホルダ", "ペルチェがずれるのを防止します", 1 ], 
+                  [ "2. ヒートシンクホルダ", "切り欠きのある方向(図下方向)が手前です", 1 ], 
+                  [ "3. 天板", "スペースの広い方向(図下方向)が手前です。左右非対称で、表面を上にするとケーブル穴(図中矢印)が右上に来ます。", 1 ]
+                ]
+              }
             },
             {
-              "title" : "Woods"
+              "title" : "Woods",
+              "text1" : "まず、細長いねじ(M3 15mm)とナット各2個で、図のようにペルチェホルダとヒートシンクホルダを固定します。",
+              "text2" : "次に、太いねじ(M5 20mm)とナット各4個で、図のように先ほどのホルダと天板を固定します。いずれも手前側が揃うようにしましょう。"
             },
             {
-              "title" : "Well"
+              "title" : "Well",
+              "text1" : "残った細いねじ(M3 6mm)とナット各4個を、図のようにウェルの4つの穴にゆるく取り付けます。",
+              "text2" : "ひっくりかえして、図のように木製部品の切り欠きにちょうどナットが収まるように調整し、ねじをしっかりと締めます。"
             },
             {
-              "title" : "Peltier"
+              "title" : "Peltier",
+              "text1" : "ウエルの上にペルチェをセットし、切り欠きに線を通します。赤と黒の向きを間違えると容易に破損しますので、特に注意しましょう。",
+              "text2" : "ウェルの裏側がよく見えるよう、一時的にペルチェをずらします。",
+              "text3" : "ヒートシンクの箱からグリスを取り出し、半量をウェルの裏面に塗布します。プラスチックカードなどでのばすと、ムラなく均一になります。",
+              "text4" : "ペルチェを戻し、ウェルとの間に隙間ができないように軽くおさえます。"
             },
             {
-              "title" : "Aluminium Plate"
+              "title" : "Aluminium Plate",
+              "text1" : "ペルチェの裏側に残り半量のグリスを同様に塗布し、アルミ板を置いて軽く押さえます。"
             },
             {
-              "title" : "Heatsink"
+              "title" : "Heatsink",
+              "text1" : "ヒートシンクの接着面を覆っているシールを取り除きます。",
+              "text2" : "図のようにヒートシンクを載せ,残ったナット(M5)4個でヒートシンクを固定します。ヒートシンクとアルミ板が隙間なく接していることを確認してください。"
+            },
+            {
+              "title" : "Fill Space",
+              "text1" : "マイナスドライバを使って、図のように細長いスポンジシートを天板とウェルの隙間にぐるっと一周埋め込みます。このシートの目的はウェルを保護することではなく、本体下部から蓋に空気が流れないようにするためですので、あまり奥まで押し込む必要はありません。"
+            },
+            {
+              "title" : "Mount Lid",
+              "text1" : "ひっくり返し、まずは蓋後方のヒンジを取り付けます。下穴が開いているので、タッピングねじ4本で固定してください。",
+              "text2" : "続いて蓋前方のラッチを取り付けます。同様に下穴に沿って、タッピングねじ4本で固定してください。",
+              "text3" : "蓋の開閉がスムーズにでき、しっかり固定されるか確認しましょう。これで上部本体が完成しました。"
             }
           ]
         },
@@ -138,19 +217,44 @@
           "label" : "Body Assembly",
           "items" : [
             {
-              "title" : "All Parts"
+              "title" : "All Parts",
+              "text1" : "、基板、ファンガード、ゴム足、さらにこちらの木材を使用します。",
+              "table" : {
+                "head" : [ "名前", "内容", "個数" ],
+                "body" : [ 
+                  [ "1. 底板", "", 1 ], 
+                  [ "2. 裏板", "上下左右対称です", 1 ],
+                  [ "3. 左板", "向かって左側面に来る板です", 1 ],
+                  [ "4. 右板", "右側面用の板で、電源用の穴が開いています", 1 ],
+                  [ "5. 手前板", "ロゴの裏側に基板を取り付けます", 1 ]
+                ]
+              }
             },
             {
-              "title" : "Bottom Wood"
+              "title" : "Bottom Wood",
+              "text1" : "太いねじ(M4 10mm)とナット各4個を使って、底板の裏面にファンガードを固定します。裏面に取り付けると、最後に目に見える側が表面となるので仕上がりがきれいになります。",
+              "text2" : "60mmと30mmのプラスチックスペーサを連結し、90mmのスペーサ4本を作ります。",
+              "text3" : "細長いねじ(M3 15mm)とスペーサ各4本で、底板にゴム足を図のように固定します。",
+              "text4" : "手前板以外の側面板3枚を図のように差し込みます。",
+              "text5" : "ウェル一式を載せてケーブルを手前に引き出します。まだウェルは固定しないでください。"
             },
             {
-              "title" : "Circuit Board"
+              "title" : "Circuit Board",
+              "text1" : "細長いねじ(M3 15mm)・スペーサ(M3 5mm)・ナット各4本で、手前板の裏側に基板を固定します。電源コネクタが板のへりに来る向きにしてください。"
             },
             {
-              "title" : "Wiring"
+              "title" : "Wiring",
+              "text1" : "最も長さに余裕のある、ヒートシンクのケーブルを図のAの位置に接続します。反対向きだとロックされません。",
+              "text2" : "ヒーターの線4本のうち、電源用の白線2本を図のBの位置に接続します。左右はどちらでも大丈夫です。",
+              "text3" : "ヒーターの線4本のうち、残った温度センサ用のピンク線2本を図のCの位置に接続します。左右はどちらでも大丈夫です。",
+              "text4" : "ペルチェの線2本を、図のDの位置に接続します。左右を間違えると故障します。赤線は赤い穴D1、青線は青い穴D2に接続してください。",
+              "text5" : "ウェルの温度センサはとても短いので、次の組み上げの段階で最後に接続します。"
             },
             {
-              "title" : "Final Assembly"
+              "title" : "Final Assembly",
+              "text1" : "最後ですが、最も繊細なところです。まずは本体天板・右板・左板を少し持ち上げ、手前板をセットしてください。",
+              "text2" : "本体天板を少しだけ持ち上げてずらし、基板にウェルの温度センサを図のように接続してください。",
+              "text3" : "本体天板を戻し、残った細長いねじ(M3 15mm)で本体天板を固定してください。"
             }
           ]
         },

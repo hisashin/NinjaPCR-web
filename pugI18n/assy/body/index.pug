@@ -8,6 +8,15 @@ block main
   +itemhead(dir, subdir)
 
     +itemtitle(dir, subdir, 0)
+
+    p
+      +itemlink(dir, 'unbox', 4)
+      | #{$i18n[dir][subdir].items[0].text1}
+    
+      - var img = "/assy/images/body-woods.svg"
+      +image(img, img)
+      +table($i18n[dir][subdir].items[0].table)
+
     +itemtitle(dir, subdir, 1)
     +itemtitle(dir, subdir, 2)
     +itemtitle(dir, subdir, 3)
