@@ -145,9 +145,12 @@ NetworkCommunicator.prototype.connect = function () {
   if (window.Android) {
     console.log("host=" + host);
     Android.resolveHost(host);
+    var scope = this;
     window.onHostResolved = function(hostIP) {
-      console.log(window.onHostResolved);
+      hostIpAddress = hostIP;
+      console.log("window.onHostResolved");
       console.log(hostIP);
+      this.doConnect();
     }
   } else {
     this.doConnect();
