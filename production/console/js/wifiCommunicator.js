@@ -142,6 +142,17 @@ NetworkCommunicator.prototype.setDeviceHost = function (newHost) {
 	host = newHost;
 }
 NetworkCommunicator.prototype.connect = function () {
+  if (window.Android) {
+    console.log("host=" + host);
+    Android.resolveHost(host);
+    window.onHostResolved = function(hostIP) {
+      alert(hostIP);
+    }
+  } else {
+    this.doConnect();
+  }
+};
+NetworkCommunicator.prototype.doConnect = function () {
 	var scope = this;
 	this.sendRequestToDevice("/connect", null, function(obj) {
 			// Connected
