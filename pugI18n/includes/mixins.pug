@@ -3,7 +3,7 @@ mixin contact(name)
     - var href = "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"
   else
     - var href = "https://docs.google.com/forms/d/e/1FAIpQLSf48pMz4yPdDtF7h_LtshZg0o0rRsG9BcfMrM-TcWgMvUU83Q/viewform?usp=sf_link"
-  a(class!=attributes.class, href= href, target="_blank")
+  a(style!=attributes.style, class!=attributes.class, href= href, target="_blank")
     if name
       | #{name}
     if block
@@ -39,11 +39,11 @@ mixin itemhead(dir, subdir)
   if block
     block
 
-mixin itemtitle(dir, subdir, index, title, subtitle)
+mixin itemtitle(dir, subdir, index, item)
   - let id = "item-"+dir+"-"+subdir+"-"+index
-  h4(id= id) #{title}
-  if subtitle
-    h6 #{subtitle}
+  h4(id= id) #{item.title}
+  if item.text
+    p #{item.text}
 
 mixin nextstep(nextPath, nextLabel)
   if nextPath && nextLabel

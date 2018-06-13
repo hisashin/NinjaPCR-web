@@ -12,25 +12,16 @@
           "label" : "Importants",
           "items" : [
             {
-              "title" : "1st title"
+              "title" : "Keep Your Serial Number"
             },
             {
-              "title" : "2nd title"
+              "title" : "High Temperature"
             },
             {
-              "title" : "3rd title"
+              "title" : "High Current"
             },
             {
-              "title" : "4th title"
-            },
-            {
-              "title" : "5th title"
-            },
-            {
-              "title" : "6th title"
-            },
-            {
-              "title" : "7th title"
+              "title" : "NinjaPCR is Open"
             }
           ]
         },
@@ -203,30 +194,30 @@
         }
     },
     "op" : {
-      "label" : "Operating Manual",
-      "items" : [
-        {
-          "title" : "1st title"
-        },
-        {
-          "title" : "2nd title"
-        },
-        {
-          "title" : "3rd title"
-        },
-        {
-          "title" : "4th title"
-        },
-        {
-          "title" : "5th title"
-        },
-        {
-          "title" : "6th title"
-        },
-        {
-          "title" : "7th title"
-        }
-      ]
+        "label" : "Operating Manual",
+        "items" : [
+          {
+            "title" : "1st title"
+          },
+          {
+            "title" : "2nd title"
+          },
+          {
+            "title" : "3rd title"
+          },
+          {
+            "title" : "4th title"
+          },
+          {
+            "title" : "5th title"
+          },
+          {
+            "title" : "6th title"
+          },
+          {
+            "title" : "7th title"
+          }
+        ]
     },
     "store" : {
       "label" : "Store"

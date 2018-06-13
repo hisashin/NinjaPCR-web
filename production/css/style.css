@@ -24,6 +24,10 @@ a {
   color: #333
 }
 
+.link {
+  color: #007bff;
+}
+
 .list-group.list-group-root {
   padding: 0;
   overflow: hidden;
