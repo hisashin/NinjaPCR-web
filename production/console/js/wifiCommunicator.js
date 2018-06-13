@@ -150,7 +150,7 @@ NetworkCommunicator.prototype.connect = function () {
       hostIpAddress = hostIP;
       console.log("window.onHostResolved");
       console.log(hostIP);
-      this.doConnect();
+      scope.doConnect();
     }
   } else {
     this.doConnect();
