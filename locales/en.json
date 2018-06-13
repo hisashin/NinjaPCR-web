@@ -81,10 +81,10 @@
                   [ "1. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
                   [ "2. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
                   [ "3. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
-                  [ "4. Screw(M3 15mm)", "For heater", 4 ],
-                  [ "5. Nut(M3)", "", 8 ],
-                  [ "6. Screw(M3 10mm)", "For woods", 8 ],
-                  [ "7. Metal Spacer(M3 30mm)", "For woods", 4 ],
+                  [ "4. Screw (M3 15mm)", "For heater", 4 ],
+                  [ "5. Nut (M3)", "", 8 ],
+                  [ "6. Screw (M3 10mm)", "For woods", 8 ],
+                  [ "7. Metal Spacer (M3 30mm)", "For woods", 4 ],
                   [ "8. Knob", "Large screw with black plastic handle", 1 ]
                 ]
               } 
@@ -96,15 +96,15 @@
                 "body" : [
                   [ "1. Peltier", "High temperature durable silicon sealed peltier", 1 ],
                   [ "2. Aluminium plate", "Square plate", 1 ],
-                  [ "3. Screw(M3 15mm)", "For peltier holder", 2 ],
-                  [ "4. Screw(M3 6mm)", "For well", 4 ],
-                  [ "5. Nut(M3)", "", 6 ],
-                  [ "6. Screw(M5 20mm)", "For heatsink", 4 ],
-                  [ "7. Nut(M5)", "", 8 ],
+                  [ "3. Screw (M3 15mm)", "For peltier holder", 2 ],
+                  [ "4. Screw (M3 6mm)", "For well", 4 ],
+                  [ "5. Nut (M3)", "", 6 ],
+                  [ "6. Screw (M5 20mm)", "For heatsink", 4 ],
+                  [ "7. Nut (M5)", "", 8 ],
                   [ "8. Silicone sponge", "To avoid airflow from body to lid", 1 ],
                   [ "9. Latch", "2 white plastic parts", 1 ],
                   [ "10. Hinge", "1 black plastic part", 1 ],
-                  [ "11. Tapping Screw(M3 6mm)", "For latch and hinge", 8 ]
+                  [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ]
                 ]
               }
             },
@@ -113,13 +113,13 @@
               "table" : {
                 "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
                 "body" : [
-                  [ "1. Screw(M4 10mm)", "For fan guard", 4 ],
-                  [ "2. Nut(M4)", "", 4 ],
-                  [ "3. Spacer(M3 60mm)", "Both female", 4 ],
-                  [ "4. Spacer(M3 30mm)", "Male-female", 4 ],
-                  [ "5. Screw(M3 15mm)", "Multipurposed", 12 ],
-                  [ "6. Nut(M3)", "", 4 ],
-                  [ "7. Spacer(M3 5mm)", "For PCB", 4 ]
+                  [ "1. Screw (M4 10mm)", "For fan guard", 4 ],
+                  [ "2. Nut (M4)", "", 4 ],
+                  [ "3. Spacer (M3 60mm)", "Both female", 4 ],
+                  [ "4. Spacer (M3 30mm)", "Male-female", 4 ],
+                  [ "5. Screw (M3 15mm)", "Multipurposed", 12 ],
+                  [ "6. Nut (M3)", "", 4 ],
+                  [ "7. Spacer (M3 5mm)", "For PCB", 4 ]
                 ]
               }
             }
@@ -146,7 +146,7 @@
             {
               "title" : "Floating Heater",
               "text1" : "Peel off double-sided tape on heater and glue it to the midst of aluminium plate. Don't cover holes on corner.",
-              "text2" : "Screw 4 longer screws(M3 15mm) and 4 nuts like this and put sponge on it.",
+              "text2" : "Screw 4 longer screws (M3 15mm) and nuts like this and put sponge on it.",
               "text3" : "Peel off double-sided tape on sponge and cover the heater. Just put it if there's no double-sided tape.",
               "text4" : "Screw heater lift wood with 4 nuts. Now heater unit is done."
             },
@@ -178,12 +178,12 @@
             },
             {
               "title" : "Woods",
-              "text1" : "Connect peltier holder and heatsink holder with 2 thin-long screws (M3 15mm) and 2 nuts.",
-              "text2" : "Connect holders and top board with 4 thick screws (M5 20mm) and 4 nuts. Both front sides should be aligned."
+              "text1" : "Connect peltier holder and heatsink holder with 2 thin-long screws (M3 15mm) and nuts.",
+              "text2" : "Connect holders and top board with 4 thick screws (M5 20mm) and nuts. Both front sides should be aligned."
             },
             {
               "title" : "Well",
-              "text1" : "Screw remained 4 thin screws (M3 6mm) and 4 nuts loosely first.",
+              "text1" : "Screw remained 4 thin screws (M3 6mm) and nuts loosely first.",
               "text2" : "Turn well upside down. Tune directions of nus to fit the notches of heatsink holder and screw tightly."
             },
             {
@@ -234,15 +234,15 @@
             },
             {
               "title" : "Bottom Wood",
-              "text1" : "Screw fanguard on TAIL of bottom board with 4 thick screws (M4 10mm) and 4 nuts. Then face will be upside and it looks better.",
+              "text1" : "Screw fanguard on TAIL of bottom board with 4 thick screws (M4 10mm) and nuts. Then face will be upside and it looks better.",
               "text2" : "Connect 60mm and 30mm spacers to make 4 90mm spacers.",
-              "text3" : "Screw 4 rubber foot to bottom board with 4 thin long screws (M3 15mm) and 4 spacers.",
+              "text3" : "Screw 4 rubber foot to bottom board with 4 thin long screws (M3 15mm) and spacers.",
               "text4" : "Put all side boards except front.",
               "text5" : "Mount upper body and pull cables out to front. Don't screw upper body yet."
             },
             {
               "title" : "Circuit Board",
-              "text1" : "Screw PCB on backside of front board with 4 thin long screws (M3 15mm), 4 spacers (M3 5mm) and 4 nuts. Power connector should come to the right side of logo."
+              "text1" : "Screw PCB on backside of front board with 4 thin long screws (M3 15mm), 4 spacers (M3 5mm) and nuts. Power connector should come to the right side of logo."
             },
             {
               "title" : "Wiring",
