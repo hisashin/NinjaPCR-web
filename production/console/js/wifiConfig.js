@@ -4,7 +4,11 @@ const OTA_TYPE_WEB_DOWNLOAD = 2; // Unavailable
 DeviceResponse.checkConnectionInterval = null;
 
 var host = "";
+var hostIpAddress = null;
 function getDeviceHost () {
+  if (hostIpAddress) {
+    return "http://" + hostIpAddress;
+  }
 	return "http://" + host + ".local";
 }
 function startOTA () {
