@@ -146,7 +146,8 @@ NetworkCommunicator.prototype.connect = function () {
     console.log("host=" + host);
     Android.resolveHost(host);
     window.onHostResolved = function(hostIP) {
-      alert(hostIP);
+      console.log(window.onHostResolved);
+      console.log(hostIP);
     }
   } else {
     this.doConnect();
