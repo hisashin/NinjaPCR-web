@@ -12,16 +12,21 @@
           "label" : "Importants",
           "items" : [
             {
-              "title" : "Keep Your Serial Number"
+              "title" : "Keep Your Serial Number",
+              "text" : "Serial Number is important to get support in the warranty period. It's labeled on warranty and circuit board as S/N:xxx-xxx-xxx but backup is recommended."
             },
             {
-              "title" : "High Temperature"
+              "title" : "High Temperature",
+              "text" : "Some parts get heated up to 120 degree celcius (250 degree fahrenheit). Do not touch aluminium parts directly. Top of PCR tube is still host just after PCR process has ended."
+
             },
             {
-              "title" : "High Current"
+              "title" : "High Current",
+              "text" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and conductive materials."
             },
             {
-              "title" : "NinjaPCR is Open"
+              "title" : "Opensource",
+              "text" : "This is total open sourced hardware under license GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from GitHub icon in navigation bar on top."
             }
           ]
         },
@@ -92,16 +97,16 @@
           "label" : "Lid Assembly",
           "items" : [
             {
-              "title" : "1st title"
+              "title" : "All Parts"
             },
             {
-              "title" : "2nd title"
+              "title" : "Floating Heater"
             },
             {
-              "title" : "3rd title"
+              "title" : "Lid Base"
             },
             {
-              "title" : "4th title"
+              "title" : "Lid Cover"
             }
           ]
         },
@@ -109,16 +114,22 @@
           "label" : "Well Assembly",
           "items" : [
             {
-              "title" : "1st title"
+              "title" : "All Parts"
             },
             {
-              "title" : "2nd title"
+              "title" : "Woods"
             },
             {
-              "title" : "3rd title"
+              "title" : "Well"
             },
             {
-              "title" : "4th title"
+              "title" : "Peltier"
+            },
+            {
+              "title" : "Aluminium Plate"
+            },
+            {
+              "title" : "Heatsink"
             }
           ]
         },
@@ -126,16 +137,19 @@
           "label" : "Body Assembly",
           "items" : [
             {
-              "title" : "1st title"
+              "title" : "All Parts"
             },
             {
-              "title" : "2nd title"
+              "title" : "Bottom Wood"
             },
             {
-              "title" : "3rd title"
+              "title" : "Circuit Board"
             },
             {
-              "title" : "4th title"
+              "title" : "Wiring"
+            },
+            {
+              "title" : "Final Assembly"
             }
           ]
         },

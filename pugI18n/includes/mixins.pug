@@ -43,9 +43,16 @@ mixin itemtitle(dir, subdir, index)
   - let item = $i18n[dir][subdir].items[parseInt(index)]
   - let id = "item-"+dir+"-"+subdir+"-"+index
   if item
+    if item.imgPre
+      +image(item.imgPre, item.imgPre)
     h4(id= id) #{item.title}
     if item.text
-      p #{item.text}
+      p
+        if item.imgMid
+          +image(item.imgMid, item.imgMid)
+        | #{item.text}
+        if item.imgPos
+          +image(item.imgPos, item.imgPos)
 
 mixin nextstep(nextPath, nextLabel)
   if nextPath && nextLabel
