@@ -121,7 +121,7 @@ function loadJSONP (URL, onError) {
 }
 
 NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callback, onError) {
-	var URL = getDeviceHost() + path + "?x=" + this.commandId;
+	var URL = _getDeviceHost() + path + "?x=" + this.commandId;
 	if (param) {
 		if (param.charAt(0)!="&") {
 			URL += "&";

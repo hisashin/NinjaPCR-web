@@ -5,7 +5,7 @@ DeviceResponse.checkConnectionInterval = null;
 
 var host = "";
 var hostIpAddress = null;
-function getDeviceHost () {
+function _getDeviceHost () {
   console.log("(Debug) getDeviceHost hostIpAddress=" + hostIpAddress);
   if (hostIpAddress) {
     return "http://" + hostIpAddress;
