@@ -4,8 +4,8 @@
       "nextstep" : "Next step : "
     },
     "console" : {
-        "label" : "Console"
-    }, 
+      "label" : "Console"
+    },
     "assy" : {
         "label" : "Assembly Manual",
         "index" : {
@@ -37,61 +37,61 @@
           "text3" : " with seriall number.",
           "items" : [
             {
-              "title" : "Overview"
+              "title" : "Overview",
+              "table" : {
+                "head" : [ "Kit Content", "Detail", "Count" ],
+                "body" : [
+                  [ "Woods", "Total 15 wooden parts inside", 15 ],
+                  [ "Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
+                  [ "PCB", "Check printed circuit board is not damaged.", 1 ],
+                  [ "Heatsink+Grease", "Heatsink and thermal conductive grease are packed in one box.", 1 ],
+                  [ "Power Supply", "12V >135W AC-DC adapter.", 1 ],
+                  [ "Bag", "Check next table what's inside", 1 ]
+                ]
+              }
             },
             {
-              "title" : "Bag"
+              "title" : "Bag",
+              "table" : {
+                "head" : [ "Bag Content", "Detail", "Count" ],
+                "body" : [
+                  [ "Aluminium plates", "1 square plate and another one with holes on each corners.", 2 ],
+                  [ "Peltier", "High temperature durable silicon sealed peltier", 1 ],
+                  [ "Heater", "With 4 wires. 2 of them are for thermistor inside.", 1 ],
+                  [ "Screw Bag 1", "Labeled as '1.Lid'", 1 ],
+                  [ "Screw Bag 2", "Labeled as '2.Well'", 1 ],
+                  [ "Screw Bag 3", "Labeled as '3.Body'", 1 ],
+                  [ "Latch", "2 white plastic parts.", 1 ],
+                  [ "Hinge", "1 black plastic part.", 1 ],
+                  [ "Knob", "Large screw with black plastic handle.", 1 ]
+                ]
+              } 
             },
             {
-              "title" : "Screw bag 1"
+              "title" : "Screw bag 1",
+              "table" : {
+                "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
+                "body" : [
+                ]
+              } 
             },
             {
-              "title" : "Screw bag 2"
+              "title" : "Screw bag 2",
+              "table" : {
+                "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
+                "body" : [
+                ]
+              }
             },
             {
-              "title" : "Screw bag 3"
+              "title" : "Screw bag 3",
+              "table" : {
+                "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
+                "body" : [
+                ]
+              }
             }
-          ],
-          "kitbulk" : {
-            "head" : [ "Kit Content", "Detail", "Count" ],
-            "body" : [
-              [ "Woods", "Total 15 wooden parts inside", 15 ],
-              [ "Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
-              [ "PCB", "Check printed circuit board is not damaged.", 1 ],
-              [ "Heatsink+Grease", "Heatsink and thermal conductive grease are packed in one box.", 1 ],
-              [ "Power Supply", "12V >135W AC-DC adapter.", 1 ],
-              [ "Bag", "Check next table what's inside", 1 ]
-            ]
-          },
-          "kitbag" : {
-            "head" : [ "Bag Content", "Detail", "Count" ],
-            "body" : [
-              [ "Aluminium plates", "1 square plate and another one with holes on each corners.", 2 ],
-              [ "Peltier", "High temperature durable silicon sealed peltier", 1 ],
-              [ "Heater", "With 4 wires. 2 of them are for thermistor inside.", 1 ],
-              [ "Screw Bag 1", "Labeled as '1.Lid'", 1 ],
-              [ "Screw Bag 2", "Labeled as '2.Well'", 1 ],
-              [ "Screw Bag 3", "Labeled as '3.Body'", 1 ],
-              [ "Latch", "2 white plastic parts.", 1 ],
-              [ "Hinge", "1 black plastic part.", 1 ],
-              [ "Knob", "Large screw with black plastic handle.", 1 ]
-            ]
-          },  
-          "kitbag1" : {
-            "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
-            "body" : [
-            ]
-          },  
-          "kitbag2" : {
-            "head" : [ "Screw Bag 2 Content", "Detail", "Count" ],
-            "body" : [
-            ]
-          },
-          "kitbag3" : {
-            "head" : [ "Screw Bag 3 Content", "Detail", "Count" ],
-            "body" : [
-            ]
-          } 
+          ]
         },
         "lid" : { 
           "label" : "Lid Assembly",

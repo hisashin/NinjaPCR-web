@@ -8,6 +8,12 @@ block main
   +itemhead(dir, subdir)
 
     +itemtitle(dir, subdir, 0)
+
+    - var img = "/assy/images/kit-bag1.svg"
+    +image(img, img)
+    p
+      +table($i18n.assy.unbox.items[1].table)
+
     +itemtitle(dir, subdir, 1)
     +itemtitle(dir, subdir, 2)
     +itemtitle(dir, subdir, 3)

@@ -13,6 +13,7 @@ gulp.task('pug', function() {
 gulp.task('pugI18n', function() {
   var options = {
     i18n: {
+      //verbose: true,
       dest: './production/',
       locales: './locales/*.*'
     },
