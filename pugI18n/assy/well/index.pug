@@ -18,10 +18,97 @@ block main
       +table($i18n[dir][subdir].items[0].table)
 
     +itemtitle(dir, subdir, 1)
+
+    p
+      - var img = "/assy/images/well-wood1.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[1].text1}
+
+    p
+      - var img = "/assy/images/well-wood2.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[1].text2}
+
     +itemtitle(dir, subdir, 2)
+
+    p
+      - var img = "/assy/images/well-screws.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[2].text1}
+
+    p
+      - var img = "/assy/images/well-set.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[2].text2}
+
     +itemtitle(dir, subdir, 3)
+
+    p
+      - var img = "/assy/images/well-peltier-on.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[3].text1}
+
+    p
+      - var img = "/assy/images/well-peltier-off.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[3].text2}
+
+    p
+      - var img = "/assy/images/well-peltier-grease.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[3].text3}
+
+    p
+      - var img = "/assy/images/well-peltier-complete.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[3].text4}
+
     +itemtitle(dir, subdir, 4)
+
+    p
+      - var img = "/assy/images/well-aluminium-grease.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[4].text1}
+
+    p
+      - var img = "/assy/images/well-aluminium-complete.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[4].text2}
+
     +itemtitle(dir, subdir, 5)
+
+    p
+      - var img = "/assy/images/well-heatsink-ready.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[5].text1}
+
+    p
+      - var img = "/assy/images/well-heatsink-complete.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[5].text2}
+
     +itemtitle(dir, subdir, 6)
+
+    p
+      - var img = "/assy/images/well-sponge.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[6].text1}
+
+    +itemtitle(dir, subdir, 7)
+
+    p
+      - var img = "/assy/images/well-hinge.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[7].text1}
+
+    p
+      - var img = "/assy/images/well-latch.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[7].text2}
+
+    p
+      - var img = "/assy/images/well-complete.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[7].text3}
   
     +nextstep('/assy/body/index.html', $i18n.assy.body.label)

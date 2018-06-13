@@ -8,8 +8,26 @@ block main
   +itemhead(dir, subdir)
 
     +itemtitle(dir, subdir, 0)
+
+    p
+      | #{$i18n[dir][subdir].items[0].text1}
+
     +itemtitle(dir, subdir, 1)
+
+    p
+      - var img = "/assy/images/lid-heater.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[1].text1}
+      +itemlink(dir, 'unbox', 4) 
+      | #{$i18n[dir][subdir].items[1].text2}
+      a(href="https://www.google.co.jp") #{$i18n[dir][subdir].items[1].text3}
+      | #{$i18n[dir][subdir].items[1].text4}
+
     +itemtitle(dir, subdir, 2)
+
+    p
+      | #{$i18n[dir][subdir].items[2].text1}
+
     +itemtitle(dir, subdir, 3)
  
     +nextstep('/console/index.html', $i18n.console.label)

@@ -24,14 +24,19 @@ block main
       | #{$i18n[dir][subdir].items[1].text1}
 
     p
-      - var img = "/assy/images/lid-sponge.svg"
+      - var img = "/assy/images/lid-screws.svg"
       +image(img, img)
       | #{$i18n[dir][subdir].items[1].text2}
 
     p
-      - var img = "/assy/images/lid-lift.svg"
+      - var img = "/assy/images/lid-sponge.svg"
       +image(img, img)
       | #{$i18n[dir][subdir].items[1].text3}
+
+    p
+      - var img = "/assy/images/lid-lift.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[1].text4}
 
     +itemtitle(dir, subdir, 2)
     
