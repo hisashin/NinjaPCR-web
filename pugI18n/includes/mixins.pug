@@ -39,11 +39,13 @@ mixin itemhead(dir, subdir)
   if block
     block
 
-mixin itemtitle(dir, subdir, index, item)
+mixin itemtitle(dir, subdir, index)
+  - let item = $i18n[dir][subdir].items[parseInt(index)]
   - let id = "item-"+dir+"-"+subdir+"-"+index
-  h4(id= id) #{item.title}
-  if item.text
-    p #{item.text}
+  if item
+    h4(id= id) #{item.title}
+    if item.text
+      p #{item.text}
 
 mixin nextstep(nextPath, nextLabel)
   if nextPath && nextLabel

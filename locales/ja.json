@@ -8,7 +8,7 @@
     },
     "assy" : {
         "label" : "組立ガイド",
-        "intro" : {
+        "index" : {
           "label" : "必ずお読みください",
           "items" : [
             {
@@ -92,7 +92,7 @@
           "label" : "上部蓋の組み立て",
           "items" : [
             {
-              "imgTmp" : "/assy/images/item-assy-intro-1.svg",
+              "imgTmp" : "/assy/images/item-assy-index-1.svg",
               "title" : "1番目のメッセージ"
             },
             {
@@ -103,15 +103,6 @@
             },
             {
               "title" : "4番目のメッセージ"
-            },
-            {
-              "title" : "5番目のメッセージ"
-            },
-            {
-              "title" : "6番目のメッセージ"
-            },
-            {
-              "title" : "7番目のメッセージ"
             }
           ]
         },
@@ -119,7 +110,7 @@
           "label" : "ウェルの組み立て",
           "items" : [
             {
-              "imgTmp" : "/assy/images/item-assy-intro-1.svg",
+              "imgTmp" : "/assy/images/item-assy-index-1.svg",
               "title" : "1番目のメッセージ"
             },
             {
@@ -130,15 +121,6 @@
             },
             {
               "title" : "4番目のメッセージ"
-            },
-            {
-              "title" : "5番目のメッセージ"
-            },
-            {
-              "title" : "6番目のメッセージ"
-            },
-            {
-              "title" : "7番目のメッセージ"
             }
           ]
         },
@@ -146,7 +128,7 @@
           "label" : "下部本体の組み立て",
           "items" : [
             {
-              "imgTmp" : "/assy/images/item-assy-intro-1.svg",
+              "imgTmp" : "/assy/images/item-assy-index-1.svg",
               "title" : "1番目のメッセージ"
             },
             {
@@ -157,15 +139,6 @@
             },
             {
               "title" : "4番目のメッセージ"
-            },
-            {
-              "title" : "5番目のメッセージ"
-            },
-            {
-              "title" : "6番目のメッセージ"
-            },
-            {
-              "title" : "7番目のメッセージ"
             }
           ]
         },
@@ -173,7 +146,7 @@
           "label" : "初期設定",
           "items" : [
             {
-              "imgTmp" : "/assy/images/item-assy-intro-1.svg",
+              "imgTmp" : "/assy/images/item-assy-index-1.svg",
               "title" : "1番目のメッセージ"
             },
             {
@@ -184,44 +157,28 @@
             },
             {
               "title" : "4番目のメッセージ"
-            },
-            {
-              "title" : "5番目のメッセージ"
-            },
-            {
-              "title" : "6番目のメッセージ"
-            },
-            {
-              "title" : "7番目のメッセージ"
             }
           ]
         }
     },
     "op" : {
-      "label" : "操作ガイド",
-      "items" : [
-        {
-          "title" : "1番目のメッセージ"
-        },
-        {
-          "title" : "2番目のメッセージ"
-        },
-        {
-          "title" : "3番目のメッセージ"
-        },
-        {
-          "title" : "4番目のメッセージ"
-        },
-        {
-          "title" : "5番目のメッセージ"
-        },
-        {
-          "title" : "6番目のメッセージ"
-        },
-        {
-          "title" : "7番目のメッセージ"
-        }
-      ]
+      "index" : {
+        "label" : "操作ガイド",
+        "items" : [
+          {
+            "title" : "1番目のメッセージ"
+          },
+          {
+            "title" : "2番目のメッセージ"
+          },
+          {
+            "title" : "3番目のメッセージ"
+          },
+          {
+            "title" : "4番目のメッセージ"
+          }
+        ]
+      }
     },
     "store" : {
         "label" : "購入はこちら"

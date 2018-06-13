@@ -3,13 +3,13 @@ extends layout
 block main
 
   - var dir = 'assy'
-  - var subdir = 'intro'
+  - var subdir = 'index'
 
   +itemhead(dir, subdir)
 
-    +itemtitle(dir, subdir, 0, $i18n.assy.intro.items[0])
-    +itemtitle(dir, subdir, 1, $i18n.assy.intro.items[1])
-    +itemtitle(dir, subdir, 2, $i18n.assy.intro.items[2])
-    +itemtitle(dir, subdir, 3, $i18n.assy.intro.items[3])
+    +itemtitle(dir, subdir, 0)
+    +itemtitle(dir, subdir, 1)
+    +itemtitle(dir, subdir, 2)
+    +itemtitle(dir, subdir, 3)
 
     +nextstep('/assy/unbox/index.html', $i18n.assy.unbox.label)

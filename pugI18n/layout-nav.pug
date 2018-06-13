@@ -21,7 +21,7 @@ mixin navbar(dir)
             if isAssy
               span.sr-only (current)
           li.nav-item(class= isOp ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/op/index.html") #{$i18n.op.label}
+            a.nav-link(href="/"+$localeName+"/op/index.html") #{$i18n.op.index.label}
             if isOp
               span.sr-only (current)
 
@@ -79,13 +79,13 @@ mixin sidebar(dir)
           - var isAssyWell = /\/assy\/well\//.test(dir)
           - var isAssyBody = /\/assy\/body\//.test(dir)
           - var isAssySetup = /\/assy\/setup\//.test(dir)
-          - var isAssyIntro = (!isAssyUnbox && !isAssyLid && !isAssyWell & !isAssyBody && !isAssySetup)
+          - var isAssyIndex = (!isAssyUnbox && !isAssyLid && !isAssyWell & !isAssyBody && !isAssySetup)
           .list-group.list-group-root.well
-            a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIntro ? "active" : "") #{$i18n.assy.intro.label}
-            if isAssyIntro
-              .list-group#sidebar-assy-intro
-                each item,index in $i18n.assy.intro.items
-                  a.list-group-item.list-group-item-action(href="#item-assy-intro-"+index) #{item.title}
+            a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIndex ? "active" : "") #{$i18n.assy.index.label}
+            if isAssyIndex
+              .list-group#sidebar-assy-index
+                each item,index in $i18n.assy.index.items
+                  a.list-group-item.list-group-item-action(href="#item-assy-index-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/unbox/index.html", class= isAssyUnbox ? "active" : "") #{$i18n.assy.unbox.label}
             if isAssyUnbox
               .list-group#sidebar-assy-unbox
@@ -115,13 +115,13 @@ mixin sidebar(dir)
       li.nav-item
         a.nav-link(href="/"+$localeName+"/op/index.html", class= isOp ? "active" : "")
           span(data-feather="life-buoy")
-          | #{$i18n.op.label}
+          | #{$i18n.op.index.label}
           span(data-feather="feather")
           if isOp
             span.sr-only (current)
         if isOp
           .list-group#sidebar-op-index
-            each item,index in $i18n.op.items
+            each item,index in $i18n.op.index.items
               a.list-group-item.list-group-item-action(href="#item-op-index-"+index) #{item.title}
     //-
       li.nav-item
