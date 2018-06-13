@@ -128,7 +128,7 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callb
 		}
 		URL += param;
 	}
-	console.log("sendRequestToDevice URL=" + URL);
+	console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
 	var tag = loadJSONP(URL, function () {
 		console.log("sendRequestToDevice error");
 		if (onError) {
