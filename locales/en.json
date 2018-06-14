@@ -316,6 +316,21 @@
           ]
         }
     },
+    "maker" : {
+        "index" : {
+          "label" : "For Makers",
+          "items" : [
+            {
+              "title" : "Build your own",
+              "text1" : "We will share how to make everything from scrath and open a webshop to sell core parts like heater and well. Here are ",
+              "text2" : "t5.5mm",
+              "text3" : " and ",
+              "text4" : "t5.0mm",
+              "text5" : " 3d models. Join Google Group to keep updated."
+            }
+          ]
+        }
+    },
     "store" : {
       "label" : "Store"
     },

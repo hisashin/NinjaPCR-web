@@ -1,0 +1,26 @@
+extends layout
+
+block main
+
+  - var dir = 'maker'
+  - var subdir = 'index'
+
+  +itemhead(dir, subdir)
+
+    +itemtitle(dir, subdir, 0)
+
+    p
+      | #{$i18n[dir][subdir].items[0].text1}
+      a.link(href="https://a360.co/2y96BCu", target="_blank") #{$i18n[dir][subdir].items[0].text2}
+      | #{$i18n[dir][subdir].items[0].text3}
+      a.link(href="https://a360.co/2y96BCu", target="_blank") #{$i18n[dir][subdir].items[0].text4}
+      | #{$i18n[dir][subdir].items[0].text5}
+
+    p
+      iframe#forum_embed(src="javascript:void(0)", scrolling="no", frameborder="0", width="900", height="700")
+      script(type="text/javascript")
+        | document.getElementById('forum_embed').src =
+        |    'https://groups.google.com/forum/embed/?place=forum/ninjapcr-makers'
+        |    + '&showsearch=true&showpopout=true&showtabs=false'
+        |    + '&parenturl=' + encodeURIComponent(window.location.href);
+    
