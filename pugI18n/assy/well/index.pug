@@ -78,14 +78,19 @@ block main
     +itemtitle(dir, subdir, 5)
 
     p
-      - var img = "/assy/images/well-heatsink-ready.svg"
+      - var img = "/assy/images/well-heatsink-leg.svg"
       +image(img, img)
       | #{$i18n[dir][subdir].items[5].text1}
 
     p
-      - var img = "/assy/images/well-heatsink-complete.svg"
+      - var img = "/assy/images/well-heatsink-peel.svg"
       +image(img, img)
       | #{$i18n[dir][subdir].items[5].text2}
+
+    p
+      - var img = "/assy/images/well-heatsink-complete.svg"
+      +image(img, img)
+      | #{$i18n[dir][subdir].items[5].text3}
 
     +itemtitle(dir, subdir, 6)
 

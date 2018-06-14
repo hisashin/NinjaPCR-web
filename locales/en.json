@@ -206,8 +206,9 @@
             },
             {
               "title" : "Heatsink",
-              "text1" : "Peel of cover sticker of heatsink.",
-              "text2" : "Screw heatsink with holders with remained 4 nuts (M5). Confirm that there is no gap between heatsink and aluminium plate"
+              "text1" : "Hold white leg of heatsink in left hand. Clockwise black cap then they can be removed easily. Remove all 4 legs.",
+              "text2" : "Peel of cover sticker of heatsink.",
+              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Confirm that there is no gap between heatsink and aluminium plate"
             },
             {
               "title" : "Fill Space",
