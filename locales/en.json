@@ -326,7 +326,9 @@
               "text2" : "t5.5mm",
               "text3" : " and ",
               "text4" : "t5.0mm",
-              "text5" : " 3d models. Join Google Group to keep updated."
+              "text5" : " 3d models. Join ",
+              "text6" : "Google Group",
+              "text7" : " to keep updated."
             }
           ]
         }
