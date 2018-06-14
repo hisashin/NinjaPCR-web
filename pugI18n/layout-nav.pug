@@ -26,7 +26,10 @@ mixin navbar(dir)
               span.sr-only (current)
 
         ul.navbar-nav.ml-auto      
-          li.nav-item(class= isStore ? "active" : "active")
+          li.nav-item.active
+            a.nav-link(href="https://a360.co/2y96BCu", target="_blank")
+              | 3D
+          li.nav-item.active
             a.nav-link(href="/"+$localeName+"/store/index.html")
               span(data-feather="shopping-cart")
             if isStore
