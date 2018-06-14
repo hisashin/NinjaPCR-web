@@ -151,6 +151,14 @@ NetworkCommunicator.prototype.connect = function () {
       console.log("window.onHostResolved hostIpAddress=" + hostIpAddress);
       scope.doConnect();
     }
+    window.onResolveFailed = function () {
+      console.log(window.onResolveFailed);
+      console.log("/connect failed");
+      scope.connected = false;
+      $("#DeviceConnectionStatus").attr("class","disconnected");
+      $("#DeviceConnectionStatusLabel").text("Disconnected");
+      $(".connectionUI").removeAttr("disabled");
+    }
   } else {
     this.doConnect();
   }
