@@ -271,22 +271,22 @@
           "label" : "初期設定",
           "items" : [
             {
-              "title" : "1番目のメッセージ",
-              "text" : "pugで書けないが下書きとしてはjsonにtextとして書くとpugをいじらなくても即反映される"
+              "title" : "ネットワーク設定モードでの起動",
+              "text" : "pugで書けないが下書きとしてはjsonにtextとして書くとpugをいじらなくても即反映される???"
             },
             {
-              "title" : "2番目のメッセージ",
+              "title" : "WiFiの設定",
               "text1" : "細かい内部リンク",
               "text2" : "や",
               "text3" : "外部リンク",
               "text4" : "などHTMLをはさみたいならtext1,text2,...として該当index.pugに直接書く"
             },
             {
-              "title" : "3番目のメッセージ",
+              "title" : "接続テスト",
               "text" : "そのため、1.ja.jsonのtextとして日本語原稿完成 2.text1,text2,...としてpugに記述し、en.jsonには日本語をそのままコピー 3.ja.jsonがfixしたらen.jsonの英語化　が一番早い"
             },
             {
-              "title" : "4番目のメッセージ"
+              "title" : "WiFiトラブルシューティング"
             }
           ]
         }
