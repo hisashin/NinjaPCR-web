@@ -317,20 +317,61 @@
         }
     },
     "maker" : {
+        "label" : "Makerの方へ",
         "index" : {
-          "label" : "Makerの方へ",
+          "label" : "はじめにお読みください",
           "items" : [
             {
               "title" : "フルスクラッチ",
-              "text1" : "まだ準備中ですが、キットに頼らないゼロからのNinjaPCRの作り方をここにまとめ、ヒーターやウェルといった入手困難なパーツを単体で購入できるようにする予定です。取り急ぎ、",
-              "text2" : "5.5mm厚",
-              "text3" : "と",
-              "text4" : "5.0mm厚",
-              "text5" : "の3Dモデルはこちらです。英語ですが専用の",
-              "text6" : "Google Group",
-              "text7" : "に参加して頂くと、最新情報をお伝えします。"
+              "text1" : "このセクションはまだ準備中ですが、キットに頼らないゼロからのNinjaPCRの作り方をここにまとめ、ヒーターやウェルといった入手困難なパーツを単体で購入できるようにする予定です。取り急ぎ",
+              "text2" : "GitHub",
+              "text3" : "のほか、",
+              "text4" : "5.5mm厚",
+              "text5" : "と",
+              "text6" : "5.0mm厚",
+              "text7" : "の3Dモデルはこちらです。英語ですが専用の",
+              "text8" : "Google Group",
+              "text9" : "に参加して頂くと、最新情報をお伝えします。"
             }
           ]
+        },
+        "pcb" : {
+          "label" : "NinjaPCB",
+          "bom" : {
+            "head" : [ "ID", "名前", "内容", "入手先", "価格(円)" ],
+            "parts" : [
+              {
+                "name" : "PCB",
+                "value" : "79x73mm",
+                "url" : "https://github.com/hisashin/NinjaPCR/tree/master/eagle",
+                "note" : "銅厚は通常の二倍の2ozで製造してください",
+                "market" : "Seeed Studio",
+                "murl" : "https://www.seeedstudio.com/fusion.html",
+                "price" : "100"
+              },
+              { 
+                "name" : "ESP2",
+                "value" : "ESP-WROOM-02", 
+                "url" : "https://www.espressif.com/en/products/hardware/esp-wroom-02/overview",
+                "note" : "技適が通っています",
+                "market" : "秋月電子",
+                "murl" : "http://akizukidenshi.com/catalog/g/gM-09607/",
+                "price" : "100"
+              }
+            ]
+          }
+        },
+        "wood" : {
+          "label" : "木製部品"
+        },
+        "screw" : {
+          "label" : "ねじ類"
+        },
+        "metal" : {
+          "label" : "金属部品"
+        },
+        "misc" : {
+          "label" : "その他"
         }
     },
     "store" : {

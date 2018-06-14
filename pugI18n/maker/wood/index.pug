@@ -1,0 +1,42 @@
+extends ../layout
+
+block navbar
+  +navbar('/maker/wood/')
+
+block sidebar
+  +sidebar('/maker/wood/')
+
+block main
+
+  - var dir = 'maker'
+  - var subdir = 'pcb'
+
+  +itemhead(dir, subdir)
+
+    h4 BOM
+
+    p
+      table.table
+        thead
+          tr
+            each col in $i18n[dir][subdir].bom.head
+              th(scope="col") #{col}
+        tbody
+          each p,index in $i18n[dir][subdir].bom.parts
+            tr
+              td(scope="row") #{p.name}
+              td
+                if p.url
+                  a.link(href= p.url, target="_blank") #{p.value}
+                else
+                  | #{p.value}
+              td #{p.note}
+              td
+                if p.find
+                  a.link(href= "http://www.findchips.com/search/"+p.value, target="_blank") findchips
+                else if p.murl && p.market
+                  a.link(href= p.murl, target="_blank") #{p.market}
+                else
+                  | #{p.market}x#{p.murl}
+              td
+                | #{p.price}

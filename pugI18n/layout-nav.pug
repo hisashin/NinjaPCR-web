@@ -26,7 +26,7 @@ mixin navbar(dir)
             if isOp
               span.sr-only (current)
           li.nav-item(class= isMaker ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.index.label}
+            a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
             if isMaker
               span.sr-only (current)
 
@@ -136,9 +136,23 @@ mixin sidebar(dir)
       li.nav-item
         a.nav-link(href="/"+$localeName+"/maker/index.html", class= isMaker ? "active" : "")
           span(data-feather="user")
-          | #{$i18n.maker.index.label}
+          | #{$i18n.maker.label}
           if isMaker
             span.sr-only (current)
+        if isMaker
+          - var isMakerPcb = /\/maker\/pcb\//.test(dir)
+          - var isMakerWood = /\/maker\/wood\//.test(dir)
+          - var isMakerScrew = /\/maker\/screw\//.test(dir)
+          - var isMakerMetal = /\/maker\/metal\//.test(dir)
+          - var isMakerMisc = /\/maker\/misc\//.test(dir)
+          - var isMakerIndex = (!isMakerPcb && !isMakerWood && !isMakerScrew && !isMakerMetal && !isMakerMisc)
+          .list-group.list-group-root.well
+            a.list-group-item(href="/"+$localeName+"/maker/index.html", class= isMakerIndex ? "active" : "") #{$i18n.maker.index.label}
+            a.list-group-item(href="/"+$localeName+"/maker/pcb/index.html", class= isMakerPcb ? "active" : "") #{$i18n.maker.pcb.label}
+            a.list-group-item(href="/"+$localeName+"/maker/wood/index.html", class= isMakerWood ? "active" : "") #{$i18n.maker.wood.label}
+            a.list-group-item(href="/"+$localeName+"/maker/screw/index.html", class= isMakerScrew ? "active" : "") #{$i18n.maker.screw.label}
+            a.list-group-item(href="/"+$localeName+"/maker/metal/index.html", class= isMakerMetal ? "active" : "") #{$i18n.maker.metal.label}
+            a.list-group-item(href="/"+$localeName+"/maker/misc/index.html", class= isMakerMisc ? "active" : "") #{$i18n.maker.misc.label}
 
     //-
       li.nav-item
