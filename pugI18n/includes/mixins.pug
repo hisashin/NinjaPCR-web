@@ -18,6 +18,23 @@ mixin image(path, href, alt)
   else
     img.w-100.img-fluid.item-img(src= path, alt= alt)
 
+mixin image2(path1, href1, alt1, path2, href2, alt2)
+  if !alt1
+    - var alt1 = path1
+  if !alt2
+    - var alt2 = path2
+  .w-100.img-fluid
+    if href1
+      a(href= href1, target="_blank")
+        img.w-50.item-img(src= path1, alt= alt1)
+    else
+      img.w-50.item-img(src= path1, alt= alt1)
+    if href2
+      a(href= href2, target="_blank")
+        img.w-50.item-img(src= path2, alt= alt2)
+    else
+      img.w-50.item-img(src= path2, alt= alt2)
+
 mixin table(table)
   table.table
     if table.head
