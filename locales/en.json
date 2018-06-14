@@ -7,7 +7,7 @@
       "contact" : "Contact Form",
       "nextstep" : "Next step : "
     },
-        "assy" : {
+    "assy" : {
         "label" : "Assembly Manual",
         "index" : {
           "label" : "Importants",
@@ -24,6 +24,12 @@
               "title" : "High Current",
               "text1" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and any conductive materials."
             },
+            { 
+              "title" : "Android needs App",
+              "text1" : "Supported devices are xxxx. For Android User : Please install ",
+              "text2" : "This app",
+              "text3" : " to use."
+            },           
             {
               "title" : "Opensource",
               "text1" : "This is totally opensourced hardware under GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from GitHub icon in navigation bar on top."

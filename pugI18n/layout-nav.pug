@@ -82,6 +82,7 @@ mixin sidebar(dir)
           - var isAssyIndex = (!isAssyUnbox && !isAssyLid && !isAssyWell & !isAssyBody && !isAssySetup)
           .list-group.list-group-root.well
             a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIndex ? "active" : "") #{$i18n.assy.index.label}
+              span(data-feather="feather")
             if false && isAssyIndex
               .list-group#sidebar-assy-index
                 each item,index in $i18n.assy.index.items
