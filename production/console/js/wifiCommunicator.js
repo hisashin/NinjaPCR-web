@@ -288,6 +288,6 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 };
 $( window ).load(function() {
   console.log("Environment:");
-  console.log(console.log(navigator));
+  console.log(console.log(navigator.userAgent));
 });
 var communicator = new NetworkCommunicator();
