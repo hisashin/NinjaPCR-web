@@ -1077,7 +1077,6 @@ function createCSV () {
 	var fileName = pcrStorage.getLogFileName();
 	$("#download")[0].download = fileName;
 	$("#download").show();
-	// Check android
 }
 
 $(document).ready(init);

@@ -294,6 +294,19 @@ $( window ).load(function() {
       console.log("Android App");
      } else {
       console.log("Android Browser");
+      
+      $("#android_app_install_dialog").dialog({
+        autoOpen : false,
+        width : 400,
+        modal : true,
+        draggable : false,
+        resizable : false,
+        buttons : {
+          "OK" : function() {
+            $(this).dialog("close");
+          }
+        }});
+      $('#android_app_install_dialog').dialog('open');
      
      }
   }
