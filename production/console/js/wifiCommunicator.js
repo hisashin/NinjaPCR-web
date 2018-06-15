@@ -303,7 +303,7 @@ $( window ).load(function() {
         resizable : false,
         buttons : {
           "OK" : function() {
-            $(this).dialog("close");
+            location.href = "https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi";
           }
         }});
       $('#android_app_install_dialog').dialog('open');
