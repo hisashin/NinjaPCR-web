@@ -286,5 +286,8 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 	});
 	
 };
-
+$( window ).load(function() {
+  console.log("Environment:");
+  console.log(console.log(navigator));
+});
 var communicator = new NetworkCommunicator();
