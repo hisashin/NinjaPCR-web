@@ -287,7 +287,16 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 	
 };
 $( window ).load(function() {
-  console.log("Environment:");
-  console.log(console.log(navigator.userAgent));
+  setTimeout(function(){
+  
+  if (window.navigator && navigator.userAgent && navigator.userAgent.indexOf("Android")>0) {
+    if (window.Android) {
+      console.log("Android App");
+     } else {
+      console.log("Android Browser");
+     
+     }
+  }
+  },1000);
 });
 var communicator = new NetworkCommunicator();
