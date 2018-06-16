@@ -7,35 +7,46 @@ block main
 
   +itemhead(dir, subdir)
 
+    // ネットワーク設定モードでの起動
     +itemtitle(dir, subdir, 0)
-
-    p
-      | #{$i18n[dir][subdir].items[0].text1}
+    // p
+    //  | #{$i18n[dir][subdir].items[0].text1}
 
     ol
-      li.pcr_localize_wifiSettings0 Plug the power adapter into NinjaPCR and then into an outlet.
+      li.pcr_localize_wifiSettings0 Plug the power adapter into NinjaPCR and then into an outlet. (TODO 写真)
       li.pcr_localize_wifiSettings1
-        | Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.
-
+        | Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
 
     +itemtitle(dir, subdir, 1)
 
     p
-      - var img = "/assy/images/lid-heater.svg"
-      +image(img, img)
-      | #{$i18n[dir][subdir].items[1].text1}
-      +itemlink(dir, 'unbox', 4) 
-      | #{$i18n[dir][subdir].items[1].text2}
-      a(href="https://www.google.co.jp") #{$i18n[dir][subdir].items[1].text3}
-      | #{$i18n[dir][subdir].items[1].text4}
+      //
+        - var img = "/assy/images/lid-heater.svg"
+        +image(img, img)
+        | #{$i18n[dir][subdir].items[1].text1}
+        +itemlink(dir, 'unbox', 4) 
+        | #{$i18n[dir][subdir].items[1].text2}
+        a(href="https://www.google.co.jp") #{$i18n[dir][subdir].items[1].text3}
+        | #{$i18n[dir][subdir].items[1].text4}
     ol
       li.pcr_localize_wifiSettings2
         | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
+        dl
+          dt macOSの場合
+          dd メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されます (TODO スクリーンショット)
+          dt Windowsの場合
+          dd TODO (TODO スクリーンショット)
+          dt iOSの場合
+          dd 設定/WiFi/ネットワークを選択 (TODO スクリーンショット)
+          dt Androidの場合
+          dd Settings / Wireless & networks / section WiFi (TODO スクリーンショット)
+          
       li
         span.pcr_localize_wifiSettings3
           | Open 
           a(href="http://192.168.1.1" target="_blank") the WiFi settings page
           |  and setup. If you the page doesn't show up, please retry after a few seconds.
+      li Input WiFi Settings
         ol
           li
             strong "SSID"
@@ -55,12 +66,13 @@ block main
             span.pcr_localize_wifiSettings3_3
               | After you set up the device, it will restart and connect to the specified access point.
       li.pcr_localize_wifiSettings4
-        | Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.
-      li.pcr_localize_wifiSettings5
-        | Input the "Device name" that you have specified when you configured the device and press "connect" button.
+        | Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to. (TODO さきほどの手順へのリンク)
 
     +itemtitle(dir, subdir, 2)
-
+    ul
+      li Open console page
+      li.pcr_localize_wifiSettings5
+        | Input the "Device name" that you have specified when you configured the device and press "connect" button.
     p
       | #{$i18n[dir][subdir].items[2].text1}
 

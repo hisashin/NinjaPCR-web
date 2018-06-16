@@ -26,7 +26,7 @@
             },
             { 
               "title" : "Android needs App",
-              "text1" : "Supported devices are xxxx. For Android User : Please install ",
+              "text1" : "Supported OS versions are 4.1 (Jelly Baen) and later. For Android User : Please install ",
               "text2" : "This app",
               "text3" : " to use."
             },           

@@ -286,5 +286,30 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 	});
 	
 };
-
+$( window ).load(function() {
+  setTimeout(function(){
+  
+  if (window.navigator && navigator.userAgent && navigator.userAgent.indexOf("Android")>0) {
+    if (window.Android) {
+      console.log("Android App");
+     } else {
+      console.log("Android Browser");
+      
+      $("#android_app_install_dialog").dialog({
+        autoOpen : false,
+        width : 400,
+        modal : true,
+        draggable : false,
+        resizable : false,
+        buttons : {
+          "OK" : function() {
+            location.href = "https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi";
+          }
+        }});
+      $('#android_app_install_dialog').dialog('open');
+     
+     }
+  }
+  },1000);
+});
 var communicator = new NetworkCommunicator();
