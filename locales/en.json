@@ -374,6 +374,9 @@
           "label" : "Miscellaneous"
         }
     },
+    "about" : {
+      "label" : "About Us"
+    },
     "store" : {
       "label" : "Store"
     },

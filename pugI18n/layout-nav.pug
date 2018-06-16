@@ -7,6 +7,7 @@ mixin navbar(dir)
       - var isAssy = /\/assy\//.test(dir)
       - var isOp = /\/op\//.test(dir)
       - var isMaker = /\/maker\//.test(dir)
+      - var isAbout = /\/about\//.test(dir)
       - var isStore = /\/store\//.test(dir)
       a.navbar-brand(href="/") NinjaPCR
       button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
@@ -28,6 +29,10 @@ mixin navbar(dir)
           li.nav-item(class= isMaker ? "active" : "")
             a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
             if isMaker
+              span.sr-only (current)
+          li.nav-item(class= isAbout ? "active" : "")
+            a.nav-link(href="/"+$localeName+"/about/index.html") #{$i18n.about.label}
+            if isAbout
               span.sr-only (current)
 
         ul.navbar-nav.ml-auto      
@@ -66,6 +71,7 @@ mixin sidebar(dir)
   - var isAssy = /\/assy\//.test(dir)
   - var isOp = /\/op\//.test(dir)
   - var isMaker = /\/maker\//.test(dir)
+  - var isAbout = /\/about\//.test(dir)
   - var isStore = /\/store\//.test(dir)
   .sidebar-sticky
     ul.nav.flex-column
@@ -153,7 +159,12 @@ mixin sidebar(dir)
             a.list-group-item(href="/"+$localeName+"/maker/screw/index.html", class= isMakerScrew ? "active" : "") #{$i18n.maker.screw.label}
             a.list-group-item(href="/"+$localeName+"/maker/metal/index.html", class= isMakerMetal ? "active" : "") #{$i18n.maker.metal.label}
             a.list-group-item(href="/"+$localeName+"/maker/misc/index.html", class= isMakerMisc ? "active" : "") #{$i18n.maker.misc.label}
-
+      li.nav-item
+        a.nav-link(href="/"+$localeName+"/about/index.html", class= isAbout ? "active" : "")
+          span(data-feather="users")
+          | #{$i18n.about.label}
+          if isAbout
+            span.sr-only (current)
     //-
       li.nav-item
         a.nav-link(href="/"+$localeName+"/store/index.html", class= isStore ? "active" : "")
