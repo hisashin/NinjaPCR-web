@@ -4,15 +4,17 @@ block main
   .row
     if $localeName == 'ja'
       .jumbotron
-        p.lead 国内向けはリバネスショップでの限定販売です
-        hr.my-4
+        p.lead 国内向けキット販売は、リバネスショップ限定です
         p.lead
           a.btn.btn-primary(href="http://www.lvnshop.com/shopdetail/000000000311/", target="_blank", role="button") リバネスショップ&nbsp;(外部サイト)&nbsp;へ移動
+        hr.my-4
+        p.lead 自作方法はこちらです
+        p.lead
+          a.btn.btn-primary(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
     else
       .jumbotron
         h4.display-4 Store is under construction.
-        p.lead Sorry. NinjaPCR is currently available only in Japan.<br /> 
-        hr.my-4
+        p.lead Sorry. NinjaPCR kit is currently on sale only in Japan.<br /> 
         p.lead
           | Subscribe newsletter now to get informed when NinjaPCR is available worldwide.
           | <br>
@@ -43,4 +45,8 @@ block main
           | </div>
           | <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
           |<!--End mc_embed_signup-->
+        hr.my-4
+        p.lead Here is how to make your own by yourself.
+        p.lead
+          a.btn.btn-primary(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
 
