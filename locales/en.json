@@ -375,7 +375,15 @@
         }
     },
     "about" : {
-      "label" : "About Us"
+        "label" : "About Us",
+        "text1" : "2 married hackers ",
+        "text2" : "Shingo",
+        "text3" : " and ",
+        "text4" : "Mariko",
+        "text5" : " based in Tokyo.",
+        "text6" : "Space fan? Try out ",
+        "text7" : "SpaceStationAR",
+        "text8" : " too."
     },
     "store" : {
       "label" : "Store"
