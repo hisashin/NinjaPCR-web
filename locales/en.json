@@ -197,9 +197,9 @@
               "table" : {
                 "head" : [ "Name", "Detail", "Count" ], 
                 "body" : [ 
-                  [ "1. Peltier Holder", "To hold peltier not to move away", 1 ], 
-                  [ "2. Heatsink Holder", "2 notch is front side (bottom in picture)", 1 ], 
-                  [ "3. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (arrow) will come to the top-right when face side is up.", 1 ]
+                  [ "1. Heatsink Holder", "2 notch is front side (bottom in picture)", 1 ], 
+                  [ "2. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (arrow) will come to the top-right when face side is up.", 1 ],
+                  [ "3. Peltier Holder", "To hold peltier not to move away", 1 ]
                 ]
               }
             },
