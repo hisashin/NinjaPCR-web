@@ -90,12 +90,13 @@
               "table" : {
                 "head" : [ "Bag Content", "Detail", "Count" ],
                 "body" : [
-                  [ "1. Screw Bag 1", "Labeled as '1.Lid'", 1 ],
-                  [ "2. Screw Bag 2", "Labeled as '2.Well'", 1 ],
-                  [ "3. Screw Bag 3", "Labeled as '3.Body'", 1 ],
-                  [ "4. Knob", "For lid", 1 ],
-                  [ "5. Fan guard", "For bottom board", 1 ],
-                  [ "6. Rubber foot", "For bottom board", 4 ]
+                  [ "1. Phillips driver", "For screws", 1 ],
+                  [ "2. Straight driver", "To fasten wires on PCB", 1 ],
+                  [ "3. Screw Bag 1", "Labeled as '1.Lid'", 1 ],
+                  [ "4. Screw Bag 2", "Labeled as '2.Well'", 1 ],
+                  [ "5. Screw Bag 3", "Labeled as '3.Body'", 1 ],
+                  [ "6. Fan guard", "For bottom board", 1 ],
+                  [ "7. Rubber foot", "For bottom board", 4 ]
                 ]
               } 
             },
@@ -104,14 +105,14 @@
               "table" : {
                 "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
                 "body" : [
-                  [ "1. Phillips driver", "For screws", 1 ],
-                  [ "2. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
-                  [ "3. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
-                  [ "4. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
-                  [ "5. Screw (M3 15mm)", "For heater", 4 ],
-                  [ "6. Nut (M3)", "", 8 ],
-                  [ "7. Screw (M3 10mm)", "For woods", 8 ],
-                  [ "8. Metal Spacer (M3 30mm)", "For woods", 4 ]
+                  [ "1. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
+                  [ "2. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
+                  [ "3. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
+                  [ "4. Screw (M3 15mm)", "For heater", 4 ],
+                  [ "5. Nut (M3)", "", 8 ],
+                  [ "6. Screw (M3 10mm)", "For woods", 8 ],
+                  [ "7. Metal Spacer (M3 30mm)", "For woods", 4 ],
+                  [ "8. Knob", "Large screw with black plastic handle", 1 ]
                 ]
               } 
             },
@@ -139,14 +140,13 @@
               "table" : {
                 "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
                 "body" : [
-                  [ "1. Straight driver", "To fasten wires on PCB", 1 ],
-                  [ "2. Screw (M4 10mm)", "For fan guard", 4 ],
-                  [ "3. Nut (M4)", "", 4 ],
-                  [ "4. Spacer (M3 60mm)", "Both female", 4 ],
-                  [ "5. Spacer (M3 30mm)", "Male-female", 4 ],
-                  [ "6. Screw (M3 15mm)", "Multipurposed", 12 ],
-                  [ "7. Nut (M3)", "", 4 ],
-                  [ "8. Spacer (M3 5mm)", "For PCB", 4 ]
+                  [ "1. Screw (M4 10mm)", "For fan guard", 4 ],
+                  [ "2. Nut (M4)", "", 4 ],
+                  [ "3. Spacer (M3 60mm)", "Both female", 4 ],
+                  [ "4. Spacer (M3 30mm)", "Male-female", 4 ],
+                  [ "5. Screw (M3 15mm)", "Multipurposed", 12 ],
+                  [ "6. Nut (M3)", "", 4 ],
+                  [ "7. Spacer (M3 5mm)", "For PCB", 4 ]
                 ]
               }
             }
@@ -157,7 +157,7 @@
           "items" : [
             {
               "title" : "All Parts",
-              "text1" : ", knob and these woods are needed.",
+              "text1" : " and these woods are needed.",
               "table" : {
                 "head" : [ "Name", "Detail", "Count" ],
                 "body" : [

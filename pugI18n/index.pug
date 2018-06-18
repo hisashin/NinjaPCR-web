@@ -9,45 +9,7 @@ block content
   +navbar('/console/assy/op/maker/about/store/')
 
   main(role="main")
-    .carousel.slide.w-100#myCarousel(data-ride="carousel")
-      ol.carousel-indicators
-        li.active(data-target="#myCarousel", data-slide-to="0")
-        li(data-target="#myCarousel", data-slide-to="1")
-        li(data-target="#myCarousel", data-slide-to="2")
-      .carousel-inner
-        .carousel-item.active
-          img.w-100.first-slide.img-fluid(src="/images/slide1.svg", alt="First slide")
-          .container(style="background-color:blue")
-            .carousel-caption.text-left
-              h1 Example headline
-              p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-              p
-                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
-        .carousel-item
-          img.w-100.second-slide.img-fluid(src="/images/slide2.svg", alt="Second slide")
-          .container
-            .carousel-caption.text-left
-              h1 Example headline
-              p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-              p
-                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
-        .carousel-item
-          img.w-100.second-slide.img-fluid(src="/images/slide3.svg", alt="Third slide")
-          .container
-            .carousel-caption.text-left
-              h1 Example headline
-              p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-              p
-                a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
-      a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
-        span.carousel-control-prev-icon(aria-hidden="true")
-        span.sr-only Previous
-      a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
-        span.carousel-control-next-icon(aria-hidden="true")
-        span.sr-only Next
+    include includes/carousel.pug
 
     footer.container.w-100.offset
       .row.justify-content-md-center

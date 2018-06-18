@@ -1,0 +1,19 @@
+.carousel.slide.w-100#myCarousel(data-ride="carousel")
+  ol.carousel-indicators
+    li.active(data-target="#myCarousel", data-slide-to="0")
+    li(data-target="#myCarousel", data-slide-to="1")
+    li(data-target="#myCarousel", data-slide-to="2")
+  .carousel-inner
+    each slide,index in $i18n.index.carousel.slides
+      .carousel-item(class= index==0 ? "active" : "")
+        img.w-100.first-slide.img-fluid(src="/images/carousel/slide"+index+".svg", alt="#{slide.alt}")
+        .container(style="background-color:blue")
+          .carousel-caption.text-left
+            h1 #{slide.label}
+            p #{slide.text}
+  a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
+    span.carousel-control-prev-icon(aria-hidden="true")
+    span.sr-only Previous
+  a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
+    span.carousel-control-next-icon(aria-hidden="true")
+    span.sr-only Next
