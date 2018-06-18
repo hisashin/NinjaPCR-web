@@ -77,5 +77,20 @@ block main
       | #{$i18n[dir][subdir].items[2].text1}
 
     +itemtitle(dir, subdir, 3)
+    
+    dl
+      dt APモードで起動したはずだがAPが表示されない
+      dd 遠すぎて電波が届かない
+      dd 少し時間をおく
+      dd ボタンが押せていない or ボタンを話すタイミングを失敗
+      dd リストの下のほうに隠れている(スクロールしてみて)
+      
+      dt SSIDが表示されない
+      dd その場合はテキストボックスに
+      
+      dt 接続テストに失敗する
+      dd もう一度APモードで起動して接続すると前回のエラーが見られるので参考に
+      dd MODEボタンは押す必要がない
+      dd 
  
     +nextstep('/console/index.html', $i18n.console.label)
