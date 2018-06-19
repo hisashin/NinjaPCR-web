@@ -33,13 +33,25 @@ block main
         | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
         dl
           dt macOSの場合
-          dd メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されます (TODO スクリーンショット)
+          dd 
+            | メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されます (TODO スクリーンショット)
+            - var img = "/assy/images/setup-ap-list-mac.svg"
+            +image(img, img)
           dt Windowsの場合
-          dd TODO (TODO スクリーンショット)
+          dd 
+            | TODO (TODO スクリーンショット)
+            - var img = "/assy/images/setup-ap-list-win.svg"
+            +image(img, img)
           dt iOSの場合
-          dd 設定/WiFi/ネットワークを選択 (TODO スクリーンショット)
+          dd 
+            | 設定/WiFi/ネットワークを選択 (TODO スクリーンショット)
+            - var img = "/assy/images/setup-ap-list-ios.svg"
+            +image(img, img)
           dt Androidの場合
-          dd Settings / Wireless & networks / section WiFi (TODO スクリーンショット)
+          dd 
+            | Settings / Wireless & networks / section WiFi (TODO スクリーンショット)
+            - var img = "/assy/images/setup-ap-list-android.svg"
+            +image(img, img)
           
       li
         span.pcr_localize_wifiSettings3
