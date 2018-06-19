@@ -32,7 +32,11 @@ block main
     +itemtitle(dir, subdir, 2)
 
     p
-      - var img = "/assy/images/well-screws.jpg"
+      - var img = "/assy/images/well-screws1.jpg"
+      +image(img, img)
+      - var img = "/assy/images/well-screws2.jpg"
+      +image(img, img)
+      - var img = "/assy/images/well-screws3.jpg"
       +image(img, img)
       | #{$i18n[dir][subdir].items[2].text1}
 
