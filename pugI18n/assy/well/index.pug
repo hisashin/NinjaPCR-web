@@ -32,12 +32,13 @@ block main
     +itemtitle(dir, subdir, 2)
 
     p
-      - var img = "/assy/images/well-screws1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/well-screws2.jpg"
-      +image(img, img)
-      - var img = "/assy/images/well-screws3.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/well-screws1.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/well-screws2.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/well-screws3.jpg"
+        +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[2].text1}
 
     p
