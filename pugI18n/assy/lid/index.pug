@@ -18,64 +18,70 @@ block main
       +table($i18n[dir][subdir].items[0].table)
 
     +itemtitle(dir, subdir, 1)
-
     p
-      - var img = "/assy/images/lid-heater1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-heater2.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-heater3.jpg"
-      +image(img, img)
-      | #{$i18n[dir][subdir].items[1].text1}
+      .row
+        - var img = "/assy/images/lid-heater1.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-heater2.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-heater3.jpg"
+        +process-image(img, img, img)
+        | #{$i18n[dir][subdir].items[1].text1}
 
-    p
-      - var img = "/assy/images/lid-screws1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-screws2.jpg"
-      +image(img, img)
+    p 
+      .row
+        - var img = "/assy/images/lid-screws1.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-screws2.jpg"
+        +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[1].text2}
 
     p
-      - var img = "/assy/images/lid-sponge.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/lid-sponge.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text3}
 
     p
-      - var img = "/assy/images/lid-lift1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-lift2.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-lift3.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/lid-lift1.jpg"
+          +process-image(img, img, img)
+        - var img = "/assy/images/lid-lift2.jpg"
+          +process-image(img, img, img)
+        - var img = "/assy/images/lid-lift3.jpg"
+          +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[1].text4}
 
     +itemtitle(dir, subdir, 2)
     
     p
-      - var img = "/assy/images/lid-bottom1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-bottom2.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-bottom3.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-bottom4.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-bottom5.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/lid-bottom1.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-bottom2.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-bottom3.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-bottom4.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-bottom5.jpg"
+        +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[2].text1}
 
     p
-      - var img = "/assy/images/lid-wire1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/lid-wire2.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/lid-wire1.jpg"
+          +process-image(img, img, img)
+        - var img = "/assy/images/lid-wire2.jpg"
+          +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[2].text2}
     
     +itemtitle(dir, subdir, 3)
     
     p
-      - var img = "/assy/images/lid-complete.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/lid-complete.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text1}
 
     +nextstep('/assy/well/index.html', $i18n.assy.well.label)

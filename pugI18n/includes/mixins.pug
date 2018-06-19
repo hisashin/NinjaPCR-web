@@ -26,14 +26,27 @@ mixin image2(path1, href1, alt1, path2, href2, alt2)
   .w-100.img-fluid
     if href1
       a(href= href1, target="_blank")
-        img.w-50.item-img(src= path1, alt= alt1)
+        img.col-12.col-sm-6.col-md-4.item-img(src= path1, alt= alt1)
     else
-      img.w-50.item-img(src= path1, alt= alt1)
+      img.col-12.col-sm-6.col-md-4.item-img(src= path1, alt= alt1)
     if href2
       a(href= href2, target="_blank")
-        img.w-50.item-img(src= path2, alt= alt2)
+        img.col-12.col-sm-6.col-md-4.item-img(src= path2, alt= alt2)
     else
-      img.w-50.item-img(src= path2, alt= alt2)
+      img.col-12.col-sm-6.col-md-4.item-img(src= path2, alt= alt2)
+
+mixin process-images()
+  .row
+
+mixin process-image(path, href, alt)
+
+  if href
+    .col-8.col-sm-6.col-md-4
+      a(href= href, target="_blank")
+        img.w-100.item-img(src= path, alt= alt)
+  else
+    .col-8.col-sm-6.col-md-4
+      img.w-100.item-img(src= path, alt= alt)
 
 mixin table(table)
   table.table
