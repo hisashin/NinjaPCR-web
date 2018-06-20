@@ -20,87 +20,107 @@ block main
     +itemtitle(dir, subdir, 1)
 
     p
-      - var img = "/assy/images/body-fanguard1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/body-fanguard2.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-fanguard1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-fanguard2.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text1}
 
     p
-      - var img = "/assy/images/body-spacers.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-spacers.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text2}
 
     p
-      - var img = "/assy/images/body-foot1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/body-foot2.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-foot1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-foot2.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text3}
 
     p
-      - var img = "/assy/images/body-sides.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-sides.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text4}
 
     p
-      - var img = "/assy/images/body-top.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-top.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text5}
 
     +itemtitle(dir, subdir, 2)
 
     p
-      - var img = "/assy/images/body-pcb1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/body-pcb2.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-pcb2.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[2].text1}
 
     +itemtitle(dir, subdir, 3)
 
     p
-      - var img = "/assy/images/body-pcb-a1.jpg"
-      +image(img, img)
-      - var img = "/assy/images/body-pcb-a2.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-a1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-pcb-a2.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text1}
 
     p
-      - var img = "/assy/images/body-pcb-b.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-b.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text2}
 
     p
-      - var img = "/assy/images/body-pcb-c.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-c.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text3}
 
     p
-      - var img = "/assy/images/body-pcb-d.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-d1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-pcb-d2.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-pcb-d3.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text4}
 
     p
-      - var img = "/assy/images/body-pcb-well-ready.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-well-ready.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text5}
 
     +itemtitle(dir, subdir, 4)
 
     p
-      - var img = "/assy/images/body-pcb-well-set.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-well-set.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text1}
 
     p
-      - var img = "/assy/images/body-pcb-well-connect.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-pcb-well-connect.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text2}
 
     p
-      - var img = "/assy/images/body-complete.jpg"
-      +image(img, img)
+      .row
+        - var img = "/assy/images/body-complete1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-complete2.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text3}
 
     +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)
