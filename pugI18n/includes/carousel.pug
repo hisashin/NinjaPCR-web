@@ -6,7 +6,7 @@
   .carousel-inner
     each slide,index in $i18n.index.carousel.slides
       .carousel-item(class= index==0 ? "active" : "")
-        img.w-100.first-slide.img-fluid(src="/images/carousel/slide"+index+".svg", alt="#{slide.alt}")
+        img.w-100.first-slide.img-fluid(src="/images/carousel/slide"+index+".jpg", alt="#{slide.alt}")
         .container(style="background-color:blue")
           .carousel-caption.text-left
             h1 #{slide.label}
