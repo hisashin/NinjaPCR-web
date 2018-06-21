@@ -197,16 +197,15 @@
               "table" : {
                 "head" : [ "Name", "Detail", "Count" ], 
                 "body" : [ 
-                  [ "1. Heatsink Holder", "2 notch is front side (bottom in picture)", 1 ], 
+                  [ "1. Heatsink Holder", "2 notches are front (bottom in picture)", 1 ], 
                   [ "2. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (arrow) will come to the top-right when face side is up.", 1 ],
-                  [ "3. Peltier Holder", "To hold peltier not to move away", 1 ]
+                  [ "3. Peltier Holder", "2 notches are front (bottom in picture)", 1 ]
                 ]
               }
             },
             {
               "title" : "Woods",
-              "text1" : "Connect peltier holder and heatsink holder with 2 thin-long screws (M3 15mm) and nuts.",
-              "text2" : "Connect holders and top board with 4 thick screws (M5 20mm) and nuts. Both front sides should be aligned."
+              "text1" : "Connect holders and top board with 4 thick screws (M5 20mm) and nuts. Both front sides must be aligned."
             },
             {
               "title" : "Well",
@@ -215,10 +214,9 @@
             },
             {
               "title" : "Peltier",
-              "text1" : "Thread 2 wires of peltier through notchs of heatsink holder and put peltier on well like this. DO NOT mistake red and black! That will break peltier easily.",
-              "text2" : "Move peltier for a while to show backside of well.",
-              "text3" : "Pick up grease syringe from heatsink box and paste HALF of it over backside of well. Plastic card will be helpful to smooth evenly.",
-              "text4" : "Put peltier back on well and press a little with fingers to fit. No need to vise because we will fasten them with screws later."
+              "text1" : "Pick up grease syringe from heatsink box and paste HALF of it over backside of well. Plastic card will be helpful to smooth evenly.",
+              "text2" : "Align 2 wires of peltier over notchs of heatsink holder and put peltier on well like this. DO NOT mistake red and black! That will break peltier easily.",
+              "text3" : "Thread thermistor sensors through peltier holder and connect it to heatsink holder with 2 thin-long screws (M3 15mm) and nuts. It's a bit difficult because heads of screws are downside. Confirm that thermistor wires of well are OVER peltier holder and peltier wires are running through holds made by holders."
             },
             {
               "title" : "Aluminium Plate",
@@ -227,9 +225,9 @@
             },
             {
               "title" : "Heatsink",
-              "text1" : "Hold white leg of heatsink in left hand. Clockwise black cap then they can be removed easily. Remove all 4 legs.",
+              "text1" : "Hold white leg of heatsink in left hand. Rotate counterclockwise black cap and pull by right hand. Then it will be removed easily. Remove all 4 legs.",
               "text2" : "Peel of cover sticker of heatsink.",
-              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Confirm that there is no gap between heatsink and aluminium plate"
+              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Confirm that there is no gap between heatsink and aluminium plate."
             },
             {
               "title" : "Fill Space",
@@ -237,8 +235,8 @@
             },
             {
               "title" : "Mount Lid",
-              "text1" : "Put hinge on backside of lid with 4 tapping screws. There are pilot holes.",
-              "text2" : "Put latch on frontside of lid with 4 tapping screws. There are pilot holes too.",
+              "text1" : "Mount lid and thread 4 wires throught hole (arrow). Screw hinge on backside of the lid with 4 tapping screws. There are pilot holes.",
+              "text2" : "Screw latch in front of lid with 4 tapping screws. There are pilot holes too.",
               "text3" : "Check that you can open/close lid smoothly and firmly. Now you have made upper body."
             }
           ]
