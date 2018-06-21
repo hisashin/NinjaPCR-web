@@ -6,16 +6,15 @@ block append head
     | body { padding-top : 42px; }
 
 block content
-  +navbar('/console/assy/op/maker/about/store/')
+  +navbar('/console/assy/op/maker/req/about/store/')
 
   main(role="main")
     include includes/carousel.pug
 
     footer.container.w-100.offset
       .row.justify-content-md-center
-        p.float-right
-          //  a(href="#") Back to top
-          +itemlink('assy', 'index', 7) 
+        //p.float-right
+        //  a(href="#") Back to top
         p.col-md-auto
           | &copy; 2018 
           a(href="https://www.tori.st", target="_blank") Toriningen, Inc.

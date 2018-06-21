@@ -7,6 +7,7 @@ mixin navbar(dir)
       - var isAssy = /\/assy\//.test(dir)
       - var isOp = /\/op\//.test(dir)
       - var isMaker = /\/maker\//.test(dir)
+      - var isReq = /\/req\//.test(dir)
       - var isAbout = /\/about\//.test(dir)
       - var isStore = /\/store\//.test(dir)
       a.navbar-brand(href="/") NinjaPCR
@@ -29,6 +30,10 @@ mixin navbar(dir)
           li.nav-item(class= isMaker ? "active" : "")
             a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
             if isMaker
+              span.sr-only (current)
+          li.nav-item(class= isReq ? "active" : "")
+            a.nav-link(href="/"+$localeName+"/req/index.html") #{$i18n.req.label}
+            if isReq
               span.sr-only (current)
           li.nav-item(class= isAbout ? "active" : "")
             a.nav-link(href="/"+$localeName+"/about/index.html") #{$i18n.about.label}
@@ -71,6 +76,7 @@ mixin sidebar(dir)
   - var isAssy = /\/assy\//.test(dir)
   - var isOp = /\/op\//.test(dir)
   - var isMaker = /\/maker\//.test(dir)
+  - var isAbout = /\/req\//.test(dir)
   - var isAbout = /\/about\//.test(dir)
   - var isStore = /\/store\//.test(dir)
   .sidebar-sticky
@@ -155,6 +161,12 @@ mixin sidebar(dir)
             a.list-group-item(href="/"+$localeName+"/maker/screw/index.html", class= isMakerScrew ? "active" : "") #{$i18n.maker.screw.label}
             a.list-group-item(href="/"+$localeName+"/maker/metal/index.html", class= isMakerMetal ? "active" : "") #{$i18n.maker.metal.label}
             a.list-group-item(href="/"+$localeName+"/maker/misc/index.html", class= isMakerMisc ? "active" : "") #{$i18n.maker.misc.label}
+      li.nav-item
+        a.nav-link(href="/"+$localeName+"/req/index.html", class= isReq ? "active" : "")
+          span(data-feather="smartphone")
+          | #{$i18n.req.label}
+          if isReq
+            span.sr-only (current)
       li.nav-item
         a.nav-link(href="/"+$localeName+"/about/index.html", class= isAbout ? "active" : "")
           span(data-feather="users")

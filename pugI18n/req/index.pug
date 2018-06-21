@@ -1,0 +1,37 @@
+extends layout
+
+block main
+
+    h4 #{$i18n.req.label}
+
+    p
+      table.table
+        thead
+          tr
+            th(scope="row" colspan="2") #{$i18n.req.text1}
+        tbody
+          tr
+            td(scope="row") #{$i18n.req.text2}
+            td #{$i18n.req.text3}
+          tr
+            td(scope="row") #{$i18n.req.text4}
+            td #{$i18n.req.text5}
+          tr
+            td(scope="row") #{$i18n.req.text6}
+            td #{$i18n.req.text7}
+    p
+      table.table
+        thead
+          tr
+            th(scope="row" colspan="2") #{$i18n.req.text8}
+        tbody
+          tr
+            td(scope="row") #{$i18n.req.text9}
+            td #{$i18n.req.text10}
+          tr
+            td(scope="row") #{$i18n.req.text11}
+            td
+              | #{$i18n.req.text12}
+              a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") #{$i18n.req.text13}
+              | #{$i18n.req.text14}
+

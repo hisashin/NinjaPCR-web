@@ -64,23 +64,6 @@
             {
               "title" : "きれいに作るコツ",
               "text1" : "レーザーカットされた木材は、表と裏で仕上がりに多少の差があります。左右対称の部品でも目に見える側を表(本体手前板でロゴのある面)に揃えると、統一感が出てきれいに見えます。"
-            },
-            {
-                "title" : "動作環境",
-                "text1" : "WiFiアクセスポイント",
-                "text2" : "周波数帯",
-                "text3" : "2.4GHz (5GHz帯では使用できません)",
-                "text4" : "セキュリティ",
-                "text5" : "WEP / WPA / WPA2",
-                "text6" : "規格",
-                "text7" : "802.11 b/g/n",
-                "text8" : "WiFi対応端末 (PC・スマートフォン・タブレットなど)",
-                "text9" : "対応OS",
-                "text10" : "Windows・macOS・Linux・iOS・Android (OSバージョン4.1以上)",
-                "text11" : "Webブラウザ",
-                "text12" : "Safari・Google Chrome・Firefox (Androidの場合のみ",
-                "text13" : "専用アプリケーション",
-                "text14" : "が必要です)"
             }
           ]
         },
@@ -409,6 +392,23 @@
         "misc" : {
           "label" : "その他"
         }
+    },
+    "req" : {
+      "label" : "動作環境",
+      "text1" : "WiFiアクセスポイント",
+      "text2" : "周波数帯",
+      "text3" : "2.4GHz (5GHz帯では使用できません)",
+      "text4" : "セキュリティ",
+      "text5" : "WEP / WPA / WPA2",
+      "text6" : "規格",
+      "text7" : "802.11 b/g/n",
+      "text8" : "WiFi対応端末 (PC・スマートフォン・タブレットなど)",
+      "text9" : "対応OS",
+      "text10" : "Windows・macOS・Linux・iOS・Android (OSバージョン4.1以上)",
+      "text11" : "Webブラウザ",
+      "text12" : "Safari・Google Chrome・Firefox (Androidの場合のみ",
+      "text13" : "専用アプリケーション",
+      "text14" : "が必要です)"
     },
     "about" : {
         "label" : "チーム",
