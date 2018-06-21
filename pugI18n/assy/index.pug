@@ -44,24 +44,25 @@ block main
     p
       | #{$i18n.assy.index.items[6].text1}
       
-    h4 動作環境
+    +itemtitle(dir, subdir, 7)
+    
     ul
-      li WiFiアクセスポイント
+      li #{$i18n.assy.index.items[7].text1}
         dl
-          dt 周波数帯
-          dd 2.4GHz (5GHz帯では使用できません)
-          dt セキュリティ
-          dd WEP / WPA / WPA2
-          dt 規格
-          dd 802.11 b/g/n
-      li WiFi対応端末 (PC・スマートフォン・タブレットなど)
+          dt #{$i18n.assy.index.items[7].text2}
+          dd #{$i18n.assy.index.items[7].text3}
+          dt #{$i18n.assy.index.items[7].text4}
+          dd #{$i18n.assy.index.items[7].text5}
+          dt #{$i18n.assy.index.items[7].text6}
+          dd #{$i18n.assy.index.items[7].text7}
+      li #{$i18n.assy.index.items[7].text8}
         dl
-          dt 対応OS
-          dd Windows・macOS・Linux・iOS・Android (OSバージョン4.1以上)
-          dt Webブラウザ
+          dt #{$i18n.assy.index.items[7].text9}
+          dd #{$i18n.assy.index.items[7].text10}
+          dt #{$i18n.assy.index.items[7].text11}
           dd 
-            | Safari・Google Chrome・Firefox (Androidの場合のみ
-            a(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") 専用アプリケーション
-            | が必要です)
+            | #{$i18n.assy.index.items[7].text12}
+            a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") #{$i18n.assy.index.items[7].text13}
+            | #{$i18n.assy.index.items[7].text14}
     
     +nextstep('/assy/unbox/index.html', $i18n.assy.unbox.label)
