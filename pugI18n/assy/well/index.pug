@@ -10,19 +10,18 @@ block main
     +itemtitle(dir, subdir, 0)
 
     p
-      +itemlink(dir, 'unbox', 3)
       | #{$i18n[dir][subdir].items[0].text1}
     p
       - var img = "/assy/images/well-woods.jpg"
       +image(img, img)
-      +table($i18n[dir][subdir].items[0].table)
+      +table($i18n[dir][subdir].items[0].table1)
+
+    - var img = "/assy/images/unbox-bag2.jpg"
+    +image(img, img)
+    p
+      +table($i18n[dir][subdir].items[0].table2)
 
     +itemtitle(dir, subdir, 1)
-
-    p
-      - var img = "/assy/images/well-wood1.jpg"
-      +image(img, img)
-      | #{$i18n[dir][subdir].items[1].text1}
 
     p
       .row
@@ -30,7 +29,7 @@ block main
         +process-image(img, img)
         - var img = "/assy/images/well-wood22.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[1].text2}
+      | #{$i18n[dir][subdir].items[1].text1}
 
     +itemtitle(dir, subdir, 2)
 
@@ -56,29 +55,22 @@ block main
 
     p
       .row
-        - var img = "/assy/images/well-peltier-on1.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/well-peltier-on2.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/well-peltier-on3.jpg"
+        - var img = "/assy/images/well-peltier-grease.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text1}
 
     p
-      - var img = "/assy/images/well-peltier-off.jpg"
-      +image(img, img)
+      - var img = "/assy/images/well-peltier-on1.jpg"
+      +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text2}
 
     p
       .row
-        - var img = "/assy/images/well-peltier-grease.jpg"
+        - var img = "/assy/images/well-peltier-on2.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/well-peltier-on3.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text3}
-
-    p
-      - var img = "/assy/images/well-peltier-complete.jpg"
-      +image(img, img)
-      | #{$i18n[dir][subdir].items[3].text4}
 
     +itemtitle(dir, subdir, 4)
 
@@ -86,17 +78,11 @@ block main
       .row
         - var img = "/assy/images/well-aluminium-grease1.jpg"
         +process-image(img, img)
-        - var img = "/assy/images/well-aluminium-grease2.jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[4].text1}
-
-    p
-      .row
         - var img = "/assy/images/well-aluminium-complete1.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-aluminium-complete2.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[4].text2}
+      | #{$i18n[dir][subdir].items[4].text1}
 
     +itemtitle(dir, subdir, 5)
 
@@ -107,6 +93,8 @@ block main
         - var img = "/assy/images/well-heatsink-leg2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[5].text1}
+      a.link(href="https://youtu.be/hYrAK_5A7Ns" target="_blank")
+        span(data-feather="youtube")
 
     p
       .row
@@ -131,8 +119,6 @@ block main
     p
       .row
         - var img = "/assy/images/well-sponge1.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/well-sponge2.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-sponge3.jpg"
         +process-image(img, img)
@@ -167,8 +153,7 @@ block main
       | #{$i18n[dir][subdir].items[7].text2}
 
     p
-      - var img = "/assy/images/well-complete.jpg"
-      +image(img, img)
       | #{$i18n[dir][subdir].items[7].text3}
   
     +nextstep('/assy/body/index.html', $i18n.assy.body.label)
+
