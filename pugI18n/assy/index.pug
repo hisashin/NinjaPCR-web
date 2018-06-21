@@ -43,5 +43,25 @@ block main
 
     p
       | #{$i18n.assy.index.items[6].text1}
+      
+    h4 動作環境
+    ul
+      li WiFiアクセスポイント
+        dl
+          dt 周波数帯
+          dd 2.4GHz (5GHz帯では使用できません)
+          dt セキュリティ
+          dd WEP / WPA / WPA2
+          dt 規格
+          dd 802.11 b/g/n
+      li WiFi対応端末 (PC・スマートフォン・タブレットなど)
+        dl
+          dt 対応OS
+          dd Windows・macOS・Linux・iOS・Android (OSバージョン4.1以上)
+          dt Webブラウザ
+          dd 
+            | Safari・Google Chrome・Firefox (Androidの場合のみ
+            a(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") 専用アプリケーション
+            | が必要です)
     
     +nextstep('/assy/unbox/index.html', $i18n.assy.unbox.label)
