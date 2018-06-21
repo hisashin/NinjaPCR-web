@@ -399,7 +399,7 @@
         }
     },
     "req" : {
-      "label" : "Hardware Requirements",
+      "label" : "Requirements",
       "shortlabel" : "Requirements",
       "text1" : "WiFi",
       "text2" : "Frequency Band",
