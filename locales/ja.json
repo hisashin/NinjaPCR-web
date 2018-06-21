@@ -1,6 +1,7 @@
 {
     "console" : {
-      "label" : "コンソール"
+      "label" : "コンソール",
+      "shortlabel" : "コンソール"
     },
 
     "general" : {
@@ -30,6 +31,7 @@
     },
     "assy" : {
         "label" : "組立ガイド",
+        "shortlabel" : "組立ガイド",
         "index" : {
           "label" : "必ずお読みください",
           "items" : [
@@ -313,6 +315,7 @@
     "op" : {
         "index" : {
           "label" : "操作ガイド",
+          "shortlabel" : "操作ガイド",
           "items" : [
             {
               "title" : "1番目のメッセージ",
@@ -337,6 +340,7 @@
     },
     "maker" : {
         "label" : "Makerの方へ",
+        "shortlabel" : "Makerの方へ",
         "index" : {
           "label" : "はじめにお読みください",
           "items" : [
@@ -395,6 +399,7 @@
     },
     "req" : {
       "label" : "動作環境",
+      "shortlabel" : "動作環境",
       "text1" : "WiFiアクセスポイント",
       "text2" : "周波数帯",
       "text3" : "2.4GHz (5GHz帯では使用できません)",
@@ -412,6 +417,7 @@
     },
     "about" : {
         "label" : "チーム",
+        "shortlabel" : "チーム",
         "text1" : "ハッカー夫婦の",
         "text2" : "久川真吾",
         "text3" : "と",

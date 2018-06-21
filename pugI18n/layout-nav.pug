@@ -16,27 +16,27 @@ mixin navbar(dir)
       .collapse.navbar-collapse(id="navbarCollapse")
         ul.navbar-nav
           li.nav-item(class= isConsole ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.label}
+            a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.shortlabel}
             if isConsole
               span.sr-only (current)
           li.nav-item(class= isAssy ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.label}
+            a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.shortlabel}
             if isAssy
               span.sr-only (current)
           li.nav-item(class= isOp ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/op/index.html") #{$i18n.op.index.label}
+            a.nav-link(href="/"+$localeName+"/op/index.html") #{$i18n.op.index.shortlabel}
             if isOp
               span.sr-only (current)
           li.nav-item(class= isMaker ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
+            a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.shortlabel}
             if isMaker
               span.sr-only (current)
           li.nav-item(class= isReq ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/req/index.html") #{$i18n.req.label}
+            a.nav-link(href="/"+$localeName+"/req/index.html") #{$i18n.req.shortlabel}
             if isReq
               span.sr-only (current)
           li.nav-item(class= isAbout ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/about/index.html") #{$i18n.about.label}
+            a.nav-link(href="/"+$localeName+"/about/index.html") #{$i18n.about.shortlabel}
             if isAbout
               span.sr-only (current)
 

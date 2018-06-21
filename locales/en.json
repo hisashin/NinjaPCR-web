@@ -1,6 +1,7 @@
 {
     "console" : {
-      "label" : "Console"
+      "label" : "Console",
+      "shortlabel" : "Console"
     },
     
     "general" : {
@@ -30,6 +31,7 @@
     },
     "assy" : {
         "label" : "Assembly Manual",
+        "shortlabel" : "Assy.Manual",
         "index" : {
           "label" : "Importants",
           "items" : [
@@ -313,7 +315,8 @@
     },
     "op" : {
         "index" : {
-          "label" : "Operating Manual",
+          "label" : "Operation Manual",
+          "shortlabel" : "Op.Manual",
           "items" : [
             {
               "title" : "1st title",
@@ -338,6 +341,7 @@
     },
     "maker" : {
         "label" : "For Makers",
+        "shortlabel" : "ForMakers",
         "index" : {
           "label" : "Importants",
           "items" : [
@@ -396,6 +400,7 @@
     },
     "req" : {
       "label" : "Hardware Requirements",
+      "shortlabel" : "Requirements",
       "text1" : "WiFi",
       "text2" : "Frequency Band",
       "text3" : "2.4GHz (Not available on 5GHz)",
@@ -413,6 +418,7 @@
     },
     "about" : {
         "label" : "About Us",
+        "shortlabel" : "AboutUs",
         "text1" : "2 married hackers ",
         "text2" : "Shingo",
         "text3" : " and ",
