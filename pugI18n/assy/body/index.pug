@@ -95,15 +95,16 @@ block main
         +process-image(img, img)
         - var img = "/assy/images/body-pcb-d2.jpg"
         +process-image(img, img)
-        - var img = "/assy/images/body-pcb-d3.jpg"
-        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text4}
 
     p
       .row
-        - var img = "/assy/images/body-pcb-well-ready.jpg"
+        - var img = "/assy/images/body-pcb-d3.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text5}
+
+    p
+      | #{$i18n[dir][subdir].items[3].text6}
 
     +itemtitle(dir, subdir, 4)
 
@@ -122,8 +123,6 @@ block main
     p
       .row
         - var img = "/assy/images/body-complete1.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/body-complete2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text3}
 

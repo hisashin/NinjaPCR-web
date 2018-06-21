@@ -285,8 +285,9 @@
               "text1" : "Connect longest heatsink cable to A. It wont be locked in wrong direction.",
               "text2" : "Connect 2 power cables of heater (white) to B. No matter which white cable to be right or left but DO NOT connect pink cables. It will break thermistor.",
               "text3" : "Connect 2 thermistor calbes of heater (pink) to C. No matter which is right or left.",
-              "text4" : "Connect RED cable of peltier to D1, BLACK cable to D2. DO NOT connect wrongly. That will break peltier.",
-              "text5" : "Wires of well thermistor are short and fragile. We connect it to PCB on next paragraph."
+              "text4" : "Connect RED cable of peltier to D1. DO NOT connect wrongly. That will break peltier.",
+              "text5" : "Connect BLACK cable to D2.",
+              "text6" : "Wires of well thermistor are short and fragile. We connect it to PCB on next paragraph."
             },
             {
               "title" : "Well thermistor",
