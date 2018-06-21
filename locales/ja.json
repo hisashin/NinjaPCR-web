@@ -11,19 +11,19 @@
       "carousel" : {
         "slides" : [
           {
-            "alt" : "Opensource",
-            "label" : "Open Source DNA Amplifer",
-            "text" : "We are totally open"
+            "alt" : "オープンソース",
+            "label" : "オープンソースのDNA増幅器",
+            "text" : "すべてのデータがダウンロードできます"
           },
           {
             "alt" : "WiFi",
-            "label" : "WiFi Supported",
-            "text" : "Use with your smartphone"
+            "label" : "WiFi対応",
+            "text" : "スマートフォンから操作できます"
           },
           {
-            "alt" : "Precise",
-            "label" : "Smart Sensor and Simulation",
-            "text" : "Precise at any temperature"
+            "alt" : "高精度",
+            "label" : "高精度センサと熱シミュレーション",
+            "text" : "低温でも高温でも、精度が落ちません"
           }
         ]
       }
@@ -416,7 +416,7 @@
         "text2" : "久川真吾",
         "text3" : "と",
         "text4" : "久川まり子",
-        "text5" : "が開発しています。",
+        "text5" : "の会社、株式会社鳥人間が開発しています。",
 
         "text6" : "人工衛星観測支援アプリ",
         "text7" : "SpaceStationAR",
