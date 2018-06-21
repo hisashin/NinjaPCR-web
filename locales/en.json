@@ -48,7 +48,7 @@
             { 
               "title" : "Android needs App",
               "text1" : "Supported OS versions are 4.1 (Jelly Baen) and later. For Android User : Please install ",
-              "text2" : "This app",
+              "text2" : "app",
               "text3" : " to use."
             },           
             {
@@ -59,7 +59,7 @@
             },
             { 
               "title" : "You have tools", 
-              "text1" : "2 screwdrivers are bundled inside plastic bag."
+              "text1" : "2 phillips screwdrivers, straight driver, multi spanner and grease spatula are bundled inside plastic bag."
             },
             {
               "title" : "Hint",

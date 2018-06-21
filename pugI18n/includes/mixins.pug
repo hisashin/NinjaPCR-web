@@ -1,3 +1,23 @@
+mixin note(id, title, body)
+  - let anchor = '#' + id
+  span.link(data-feather="alert-circle" data-toggle="modal" data-target= anchor)
+  +modal(id, title, body)
+
+mixin modal(id, title, body)
+  .modal.fade(id= id, tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          if title
+            h5.modal-title #{title}
+            button.close(type="button" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+        if body
+          .modal-body
+            p #{body}
+        .modal-footer
+          button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+
 mixin contact(name)
   if $localeName == 'ja'
     - var href = "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"
