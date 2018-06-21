@@ -13,13 +13,13 @@ block main
     //  | #{$i18n[dir][subdir].items[0].text1}
 
     ol
-      li.pcr_localize_wifiSettings0 Plug the power adapter into NinjaPCR and then into an outlet. (TODO 写真)
-      li.pcr_localize_wifiSettings1
-        | Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
+      li Plug the power adapter into NinjaPCR and then into an outlet.
+        +note('1', '電源をつないだ写真をアップと引きで2枚')
+      li Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
+        +note('2', 'ボタンの位置の説明写真/MODE押した写真/POW押した写真/POW離した写真')
 
     +itemtitle(dir, subdir, 1)
 
-    p
       //
         - var img = "/assy/images/lid-heater.svg"
         +image(img, img)
@@ -29,7 +29,8 @@ block main
         a(href="https://www.google.co.jp") #{$i18n[dir][subdir].items[1].text3}
         | #{$i18n[dir][subdir].items[1].text4}
     ol
-      li.pcr_localize_wifiSettings2
+      li
+        | APモードで起動した場合、NinjaPCRはWiFiアクセスポイントとして機能しています。
         | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
         dl
           dt macOSの場合
@@ -45,7 +46,9 @@ block main
           dt iOSの場合
           dd 
             | 設定/WiFi/ネットワークを選択 (TODO スクリーンショット)
-            - var img = "/assy/images/setup-ap-list-ios.svg"
+            - var img = "/assy/images/setup-ap-list-ios1.jpg"
+            +image(img, img)
+            - var img = "/assy/images/setup-ap-list-ios2.jpg"
             +image(img, img)
           dt Androidの場合
           dd 
