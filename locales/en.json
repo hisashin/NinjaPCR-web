@@ -98,11 +98,28 @@
                   [ "6. Rubber foot", "For bottom board", 4 ]
                 ]
               } 
-            },
+            }
+          ]
+        },
+        "lid" : { 
+          "label" : "Lid Assembly",
+          "items" : [
             {
-              "title" : "Screw bag 1",
-              "table" : {
-                "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
+              "title" : "All Parts",
+              "text1" : "Screw Bag 1, Knob and these woods are needed.",
+              "table1" : {
+                "head" : [ "Name", "Detail", "Count" ],
+                "body" : [
+                  [ "1. Heater lift", "Support heater to go up and down.", 1 ],
+                  [ "2. Lid Top", "", 1 ],
+                  [ "3. Lid Bottom", "", 1 ],
+                  [ "4. Lid Side", "", 2 ],
+                  [ "5. Lid Front", "2 small holes for latch", 1 ],
+                  [ "6. Lid Back", "2 small holes for hinge and 1 bigger hole for calbes of heater", 1 ]
+                ]
+              },
+              "table2" : {
+                "head" : [ "Name", "Detail", "Count" ],
                 "body" : [
                   [ "1. Phillips driver", "For screws", 1 ],
                   [ "2. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
@@ -112,61 +129,6 @@
                   [ "6. Nut (M3)", "", 8 ],
                   [ "7. Screw (M3 10mm)", "For woods", 8 ],
                   [ "8. Metal Spacer (M3 30mm)", "For woods", 4 ]
-                ]
-              } 
-            },
-            {
-              "title" : "Screw bag 2",
-              "table" : {
-                "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Peltier", "High temperature durable silicon sealed peltier", 1 ],
-                  [ "2. Aluminium plate", "Square plate", 1 ],
-                  [ "3. Screw (M3 15mm)", "For peltier holder", 2 ],
-                  [ "4. Screw (M3 6mm)", "For well", 4 ],
-                  [ "5. Nut (M3)", "", 6 ],
-                  [ "6. Screw (M5 20mm)", "For heatsink", 4 ],
-                  [ "7. Nut (M5)", "", 8 ],
-                  [ "8. Silicone sponge", "To avoid airflow from body to lid", 1 ],
-                  [ "9. Latch", "2 white plastic parts", 1 ],
-                  [ "10. Hinge", "1 black plastic part", 1 ],
-                  [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ]
-                ]
-              }
-            },
-            {
-              "title" : "Screw bag 3",
-              "table" : {
-                "head" : [ "Screw Bag 1 Content", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Straight driver", "To fasten wires on PCB", 1 ],
-                  [ "2. Screw (M4 10mm)", "For fan guard", 4 ],
-                  [ "3. Nut (M4)", "", 4 ],
-                  [ "4. Spacer (M3 60mm)", "Both female", 4 ],
-                  [ "5. Spacer (M3 30mm)", "Male-female", 4 ],
-                  [ "6. Screw (M3 15mm)", "Multipurposed", 12 ],
-                  [ "7. Nut (M3)", "", 4 ],
-                  [ "8. Spacer (M3 5mm)", "For PCB", 4 ]
-                ]
-              }
-            }
-          ]
-        },
-        "lid" : { 
-          "label" : "Lid Assembly",
-          "items" : [
-            {
-              "title" : "All Parts",
-              "text1" : ", knob and these woods are needed.",
-              "table" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Heater lift", "Support heater to go up and down.", 1 ],
-                  [ "2. Lid Top", "", 1 ],
-                  [ "3. Lid Bottom", "", 1 ],
-                  [ "4. Lid Side", "", 2 ],
-                  [ "5. Lid Front", "2 small holes for latch", 1 ],
-                  [ "6. Lid Back", "2 small holes for hinge and 1 bigger hole for calbes of heater", 1 ]
                 ]
               }
             },
@@ -193,13 +155,29 @@
           "items" : [
             {
               "title" : "All Parts",
-              "text1" : ", well, heatsink+grease and these woods are needed.",
-              "table" : {
+              "text1" : "Screw Bag 2, Well, Heatsink+Grease and these woods are needed.",
+              "table1" : {
                 "head" : [ "Name", "Detail", "Count" ], 
                 "body" : [ 
                   [ "1. Heatsink Holder", "2 notches are front (bottom in picture)", 1 ], 
                   [ "2. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (arrow) will come to the top-right when face side is up.", 1 ],
                   [ "3. Peltier Holder", "2 notches are front (bottom in picture)", 1 ]
+                ]
+              },
+              "table2" : {
+                "head" : [ "Name", "Detail", "Count" ],
+                "body" : [
+                  [ "1. Peltier", "High temperature durable silicon sealed peltier", 1 ],
+                  [ "2. Aluminium plate", "Square plate", 1 ],
+                  [ "3. Screw (M3 15mm)", "For peltier holder", 2 ],
+                  [ "4. Screw (M3 6mm)", "For well", 4 ],
+                  [ "5. Nut (M3)", "", 6 ],
+                  [ "6. Screw (M5 20mm)", "For heatsink", 4 ],
+                  [ "7. Nut (M5)", "", 8 ],
+                  [ "8. Silicone sponge", "To avoid airflow from body to lid", 1 ],
+                  [ "9. Latch", "2 white plastic parts", 1 ],
+                  [ "10. Hinge", "1 black plastic part", 1 ],
+                  [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ]
                 ]
               }
             },
@@ -246,8 +224,8 @@
           "items" : [
             {
               "title" : "All Parts",
-              "text1" : ", PCB, fanguard, rubber foot and these woods are needed.",
-              "table" : {
+              "text1" : "Screw Bag 3, PCB, Fanguard, Rubber foot and these woods are needed.",
+              "table1" : {
                 "head" : [ "Name", "Detail", "Count" ],
                 "body" : [ 
                   [ "1. Bottom Board", "", 1 ], 
@@ -255,6 +233,19 @@
                   [ "3. Left Board", "", 1 ],
                   [ "4. Right Board", "With hole for power supply.", 1 ],
                   [ "5. Front Board", "PCB will be placed behind logo.", 1 ]
+                ]
+              },
+              "table2" : {
+                "head" : [ "Name", "Detail", "Count" ],
+                "body" : [
+                  [ "1. Straight driver", "To fasten wires on PCB", 1 ],
+                  [ "2. Screw (M4 10mm)", "For fan guard", 4 ],
+                  [ "3. Nut (M4)", "", 4 ],
+                  [ "4. Spacer (M3 60mm)", "Both female", 4 ],
+                  [ "5. Spacer (M3 30mm)", "Male-female", 4 ],
+                  [ "6. Screw (M3 15mm)", "Multipurposed", 12 ],
+                  [ "7. Nut (M3)", "", 4 ],
+                  [ "8. Spacer (M3 5mm)", "For PCB", 4 ]
                 ]
               }
             },

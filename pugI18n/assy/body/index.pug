@@ -10,13 +10,17 @@ block main
     +itemtitle(dir, subdir, 0)
 
     p
-      +itemlink(dir, 'unbox', 4)
       | #{$i18n[dir][subdir].items[0].text1}
     p
       - var img = "/assy/images/body-woods.jpg"
       +image(img, img)
-      +table($i18n[dir][subdir].items[0].table)
+      +table($i18n[dir][subdir].items[0].table1)
 
+    - var img = "/assy/images/unbox-bag3.jpg"
+    +image(img, img)
+    p
+      +table($i18n[dir][subdir].items[0].table2)
+      
     +itemtitle(dir, subdir, 1)
 
     p
