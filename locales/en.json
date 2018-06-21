@@ -403,7 +403,7 @@
       "shortlabel" : "Requirements",
       "text1" : "WiFi",
       "text2" : "Frequency Band",
-      "text3" : "2.4GHz (Not available on 5GHz)",
+      "text3" : "2.4GHz (Not available for 5GHz)",
       "text4" : "Security",
       "text5" : "WEP / WPA / WPA2",
       "text6" : "Wireless Standards",
