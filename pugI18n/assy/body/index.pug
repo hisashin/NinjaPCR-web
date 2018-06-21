@@ -25,6 +25,7 @@ block main
 
     p
       .row
+        +note(0, "表面・裏面を明記")
         - var img = "/assy/images/body-fanguard1.jpg"
         +process-image(img, img)
         - var img = "/assy/images/body-fanguard2.jpg"
@@ -53,6 +54,7 @@ block main
 
     p
       .row
+        +note(1, "本体上部を搭載してケーブルが手前に出ている写真に差し替え")
         - var img = "/assy/images/body-top.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text5}
@@ -63,6 +65,7 @@ block main
       .row
         - var img = "/assy/images/body-pcb1.jpg"
         +process-image(img, img)
+        +note(2, "電源コネクタとロゴが同時に写っている画像に差し替え")
         - var img = "/assy/images/body-pcb2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[2].text1}
@@ -87,6 +90,7 @@ block main
       .row
         - var img = "/assy/images/body-pcb-c.jpg"
         +process-image(img, img)
+        +note(3, "クローズアップ追加")
       | #{$i18n[dir][subdir].items[3].text3}
 
     p
@@ -110,6 +114,7 @@ block main
 
     p
       .row
+        +note(4, "ひとまずセット(天板が固定されていない状態の)写真に差し替え")
         - var img = "/assy/images/body-pcb-well-set.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text1}
@@ -118,6 +123,7 @@ block main
       .row
         - var img = "/assy/images/body-pcb-well-connect.jpg"
         +process-image(img, img)
+        +note(5, "クローズアップ追加")
       | #{$i18n[dir][subdir].items[4].text2}
 
     p

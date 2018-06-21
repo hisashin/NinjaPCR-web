@@ -79,7 +79,6 @@ mixin sidebar(dir)
         a.nav-link(href="/"+$localeName+"/console/index.html", class= isConsole ? "active" : "")
           span(data-feather="droplet")
           | #{$i18n.console.label}
-          span(data-feather="feather")
           if isConsole
             span.sr-only (current)
       li.nav-item
@@ -97,7 +96,6 @@ mixin sidebar(dir)
           - var isAssyIndex = (!isAssyUnbox && !isAssyLid && !isAssyWell & !isAssyBody && !isAssySetup)
           .list-group.list-group-root.well
             a.list-group-item(href="/"+$localeName+"/assy/index.html", class= isAssyIndex ? "active" : "") #{$i18n.assy.index.label}
-              span(data-feather="feather")
             if false && isAssyIndex
               .list-group#sidebar-assy-index
                 each item,index in $i18n.assy.index.items
@@ -123,7 +121,6 @@ mixin sidebar(dir)
                 each item,index in $i18n.assy.body.items
                   a.list-group-item.list-group-item-action(href="#item-assy-body-"+index) #{item.title}
             a.list-group-item(href="/"+$localeName+"/assy/setup/index.html", class= isAssySetup ? "active" : "") #{$i18n.assy.setup.label}
-              span(data-feather="feather")
             if isAssySetup
               .list-group#sidebar-assy-setup
                 each item,index in $i18n.assy.setup.items
@@ -132,7 +129,6 @@ mixin sidebar(dir)
         a.nav-link(href="/"+$localeName+"/op/index.html", class= isOp ? "active" : "")
           span(data-feather="life-buoy")
           | #{$i18n.op.index.label}
-          span(data-feather="feather")
           if isOp
             span.sr-only (current)
         if isOp
