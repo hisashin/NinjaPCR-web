@@ -114,7 +114,8 @@
                   [ "3. Screw Bag 3", "Labeled as '3.Body'", 1 ],
                   [ "4. Knob", "For lid", 1 ],
                   [ "5. Fan guard", "For bottom board", 1 ],
-                  [ "6. Rubber foot", "For bottom board", 4 ]
+                  [ "6. Rubber foot", "For bottom board", 4 ],
+                  [ "7. Multi spanner", "To fasten nuts", 1 ]
                 ]
               } 
             }
@@ -141,19 +142,21 @@
                 "head" : [ "Name", "Detail", "Count" ],
                 "body" : [
                   [ "1. Phillips driver", "For screws", 1 ],
-                  [ "2. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
-                  [ "3. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
-                  [ "4. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
-                  [ "5. Screw (M3 15mm)", "For heater", 4 ],
-                  [ "6. Nut (M3)", "", 8 ],
-                  [ "7. Screw (M3 10mm)", "For woods", 8 ],
-                  [ "8. Metal Spacer (M3 30mm)", "For woods", 4 ]
+                  [ "2. Offset driver", "To fasten screws more tightly", 1 ],
+                  [ "3. Multi Spanner", "For nuts", 1 ],
+                  [ "4. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
+                  [ "5. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
+                  [ "6. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
+                  [ "7. Screw (M3 15mm)", "For heater", 4 ],
+                  [ "8. Nut (M3)", "", 8 ],
+                  [ "9. Screw (M3 10mm)", "For woods", 8 ],
+                  [ "10. Metal Spacer (M3 30mm)", "For woods", 4 ]
                 ]
               }
             },
             {
               "title" : "Floating Heater",
-              "text1" : "Peel off double-sided tape on heater and glue it to the midst of aluminium plate. Don't cover holes on corner.",
+              "text1" : "Peel off blue tape from aluminium plate and double-sided tape from heater. Glue heater to the midst of aluminium plate. Don't cover holes on corner.",
               "text2" : "Screw 4 longer screws (M3 15mm) and nuts like this and put sponge on it.",
               "text3" : "Peel off double-sided tape on sponge and cover the heater. Just put it if there's no double-sided tape.",
               "text4" : "Screw heater lift wood with 4 nuts. Now heater unit is done."
@@ -174,7 +177,7 @@
           "items" : [
             {
               "title" : "All Parts",
-              "text1" : "Screw Bag 2, Well, Heatsink+Grease and these woods are needed.",
+              "text1" : "Screw Bag 2, Well, Heatsink+SpareGrease and these woods are needed.",
               "table1" : {
                 "head" : [ "Name", "Detail", "Count" ], 
                 "body" : [ 
@@ -186,23 +189,25 @@
               "table2" : {
                 "head" : [ "Name", "Detail", "Count" ],
                 "body" : [
-                  [ "1. Peltier", "High temperature durable silicon sealed peltier", 1 ],
-                  [ "2. Aluminium plate", "Square plate", 1 ],
-                  [ "3. Screw (M3 15mm)", "For peltier holder", 2 ],
-                  [ "4. Screw (M3 6mm)", "For well", 4 ],
-                  [ "5. Nut (M3)", "", 6 ],
-                  [ "6. Screw (M5 20mm)", "For heatsink", 4 ],
-                  [ "7. Nut (M5)", "", 8 ],
-                  [ "8. Silicone sponge", "To avoid airflow from body to lid", 1 ],
-                  [ "9. Latch", "2 white plastic parts", 1 ],
-                  [ "10. Hinge", "1 black plastic part", 1 ],
-                  [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ]
+                  [ "1. Grease", "Use this first instead of spare grease in heatsink box.", 1 ],
+                  [ "2. Spatula", "To smooth grease", 1 ],
+                  [ "3. Peltier", "High temperature durable silicon sealed peltier", 1 ],
+                  [ "4. Aluminium plate", "Square plate", 1 ],
+                  [ "5. Screw (M3 15mm)", "For peltier holder", 2 ],
+                  [ "6. Screw (M3 6mm)", "For well", 4 ],
+                  [ "7. Nut (M3)", "", 6 ],
+                  [ "8. Screw (M5 20mm)", "For heatsink", 4 ],
+                  [ "9. Nut (M5)", "", 8 ],
+                  [ "10. Silicone sponge", "To avoid airflow from body to lid", 1 ],
+                  [ "11. Latch", "2 white plastic parts", 1 ],
+                  [ "12. Hinge", "1 black plastic part", 1 ],
+                  [ "13. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ]
                 ]
               }
             },
             {
               "title" : "Woods",
-              "text1" : "Connect holders and top board with 4 thick screws (M5 20mm) and nuts. Both front sides must be aligned."
+              "text1" : "Connect holders and top board with 4 thick screws (M5 20mm) and nuts. Both front sides (arrow) must be aligned."
             },
             {
               "title" : "Well",
@@ -211,20 +216,20 @@
             },
             {
               "title" : "Peltier",
-              "text1" : "Pick up grease syringe from heatsink box and paste HALF of it over backside of well. Plastic card will be helpful to smooth evenly.",
+              "text1" : "Pick up grease syringe from heatsink box and paste HALF of it over backside of well. Use spatula to smooth evenly.",
               "text2" : "Align 2 wires of peltier over notchs of heatsink holder (arrows) and put peltier on well like this. DO NOT mistake red and black! That will break peltier easily.",
               "text3" : "Thread thermistor sensors through peltier holder and connect it to heatsink holder with 2 thin-long screws (M3 15mm) and nuts. It's a bit difficult because heads of screws are downside. Confirm that thermistor wires of well are OVER peltier holder (red circle) and peltier wires are running through holes made by holders (arrows)."
             },
             {
               "title" : "Aluminium Plate",
               "text1" : "Smooth another half of grease over peltier as you have done before.",
-              "text2" : "Put aluminium plate over peltier and press a little."
+              "text2" : "Peel blue tape from aluminium plate. Put it over peltier and press a little."
             },
             {
               "title" : "Heatsink",
               "text1" : "Hold white leg of heatsink in left hand. Rotate counterclockwise black cap and pull by right hand. Then it will be removed easily. Remove all 4 legs.",
-              "text2" : "Peel of cover sticker of heatsink.",
-              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Confirm that there is no gap between heatsink and aluminium plate."
+              "text2" : "Peel of cover sticker of heatsink and smooth grease. If there is no grease left, use spare grease.",
+              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly and confirm that there is no gap between heatsink and aluminium plate."
             },
             {
               "title" : "Fill Space",
@@ -233,8 +238,10 @@
             {
               "title" : "Mount Lid",
               "text1" : "Mount lid and thread 4 wires throught hole (arrow). Screw hinge on backside of the lid with 4 tapping screws. There are pilot holes.",
-              "text2" : "Screw latch in front of lid with 4 tapping screws. There are pilot holes too.",
-              "text3" : "Check that you can open/close lid smoothly and firmly. Now you have made upper body."
+              "text2" : "Screw bottom latch in front of lid with 2 tapping screws tightly. There are pilot holes too.",
+              "text3" : "Top latch is adjustable and lid should be closed firmly. Screw it with 2 tapping screws loosely first.",
+              "text4" : "Screw tightly while holding lid to top board.",
+              "text5" : "Check that you can open/close lid smoothly and firmly. Now you have made upper body."
             }
           ]
         },

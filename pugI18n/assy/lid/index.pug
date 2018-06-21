@@ -12,13 +12,13 @@ block main
     p
       | #{$i18n[dir][subdir].items[0].text1}
       - var img = "/assy/images/lid-woods.jpg"
-    p
       +image(img, img)
       +table($i18n[dir][subdir].items[0].table1)
 
-    - var img = "/assy/images/unbox-bag1.jpg"
-    +image(img, img)
     p
+      +note('1', 'マルチスパナを入れた写真に差し替え')
+      - var img = "/assy/images/unbox-bag1.jpg"
+      +image(img, img)
       +table($i18n[dir][subdir].items[0].table2)
 
     +itemtitle(dir, subdir, 1)
