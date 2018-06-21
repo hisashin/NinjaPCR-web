@@ -6,6 +6,63 @@ block main
   - var subdir = 'index'
 
   +itemhead(dir, subdir)
+  
+    h4 実験の流れ
+    ul
+      li NinjaPCR本体の電源を入れます。
+      li ブラウザで
+        a(href="/console/index.html") コンソール
+        | を開きます。
+      li デバイス名を指定して接続します。
+      li 実験プロファイルを作成、または以前作成したプロファイルをリストから選択します。
+      li 実験を開始します。現在の進行状況が表示されます。
+    
+    h4 プロファイルの管理
+    p プロファイルは1回限り使うこともできますが、繰り返し行いたいプロファイルはセーブし、再実行することができます。
+      
+    h4 プロファイルの編集
+    p 温度プロファイルはサイクルとして作ります。複数のサイクルを持つことができます。サイクルには複数のステップを持たせることができます。サイクルごとに繰り返し回数を指定できます。
+    p ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ時間を空欄または0にした場合、可能な限り速く温度遷移します。
+    p 
+      | プロファイルはブラウザのストレージに保存します。ブラウザの設定などでデータを消去すると、プロファイルは消去されます。
+      | また、プライベートモードなどデータの保存を行わないモードで動かした場合は保存されません。
+    h5 例
+    p たとえば次のようなプロファイルの場合は次のように作成します。
+  
+    table.table(style="max-width:480px;")
+      tr
+        th.text-right(style="width:6em") x1 
+        td
+          .row
+            .col-5 Initial Denaturation
+            .col-3 95℃
+            .col-4 2 minutes
+      tr
+        th.text-right(style="vertical-align:middle") x35
+        td
+          .row
+            .col-5 Denaturation
+            .col-3 95℃
+            .col-4 30 seconds
+            .col-5 Annealing
+            .col-3 55℃
+            .col-4 30 seconds
+            .col-5 Extension
+            .col-3 72℃
+            .col-4 30 seconds
+      tr
+        th.text-right x1
+        td
+          .row
+            .col-5 Final extension
+            .col-3 72℃
+            .col-4 10 minutes
+            
+    p TODO screenshot
+        
+    h4 実験の進捗
+    p Stopボタンについて
+    p ブラウザの対応状況次第では通知を出すこともできます。
 
     +itemtitle(dir, subdir, 0)
 
