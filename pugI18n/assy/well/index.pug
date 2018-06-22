@@ -85,7 +85,10 @@ block main
       | #{$i18n[dir][subdir].items[4].text1}
     
     p
-        +note(4, "アルミから青いテープをはがしている写真を追加")
+      +note(4, "アルミから青いテープをはがしている写真を追加")
+      .row
+        - var img = "/assy/images/well-aluminium-peel.jpg"
+        +process-image(img, img)
         - var img = "/assy/images/well-aluminium-complete2.jpg"
         +process-image(img, img)
 
