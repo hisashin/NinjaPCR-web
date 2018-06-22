@@ -1,3 +1,9 @@
+mixin youtube(id, start, target)
+  - let href = 'https://youtu.be/' + id + (start > 0 ? "?t="+start+"s" : "")
+  - let t = target ? target : "_blank"
+  a.link(href= href, target= t)
+    span(data-feather="youtube")
+
 mixin note(id, title, body)
   - let anchor = '#' + id
   span.link(data-feather="alert-circle" data-toggle="modal" data-target= anchor)
