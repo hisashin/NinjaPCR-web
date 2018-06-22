@@ -14,6 +14,13 @@ block main
 
     ol
       li Plug the power adapter into NinjaPCR and then into an outlet.
+        .row
+          - var img = "/assy/images/setup-plug-adapter1.jpg"
+          +process-image(img, img)
+          - var img = "/assy/images/setup-plug-adapter2.jpg"
+          +process-image(img, img)
+          - var img = "/assy/images/setup-plug-adapter3.jpg"
+          +process-image(img, img)
         +note('1', '電源をつないだ写真をアップと引きで2枚')
       li Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
         +note('2', 'ボタンの位置の説明写真/MODE押した写真/POW押した写真/POW離した写真')
