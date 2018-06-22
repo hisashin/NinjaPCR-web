@@ -90,6 +90,8 @@ block main
       .row
         - var img = "/assy/images/body-pcb-c.jpg"
         +process-image(img, img)
+        - var img = "/assy/images/body-pcb-c2.jpg"
+        +process-image(img, img)
         +note(3, "クローズアップ追加")
       | #{$i18n[dir][subdir].items[3].text3}
 
@@ -122,6 +124,8 @@ block main
     p
       .row
         - var img = "/assy/images/body-pcb-well-connect.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-pcb-well-connect2.jpg"
         +process-image(img, img)
         +note(5, "クローズアップ追加")
       | #{$i18n[dir][subdir].items[4].text2}

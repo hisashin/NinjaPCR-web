@@ -8,10 +8,12 @@
   background-color: #404040;
 }
 .carousel-control-next-icon {
-  background-color: #404040;
+  background-color: #ffffff;
 }
 .carousel-caption {
-  color: #404040;
+  /* color: #404040; */
+  color:#fff;
+  text-shadow: 1px 1px #000000aa;
 }
 
 body {
