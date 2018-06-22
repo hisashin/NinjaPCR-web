@@ -11,7 +11,9 @@
   background-color: #404040;
 }
 .carousel-caption {
-  color: #404040;
+  /* color: #404040; */
+  color:#fff;
+  text-shadow: 1px 1px #000000aa;
 }
 
 body {
