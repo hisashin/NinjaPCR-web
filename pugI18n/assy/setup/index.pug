@@ -13,7 +13,7 @@ block main
     //  | #{$i18n[dir][subdir].items[0].text1}
 
     ol
-      li Plug the power adapter into NinjaPCR and then into an outlet.
+      li Plug the power adapter into NinjaPCR and then into an outlet. 赤い丸のついている部分が同じ方向になるように挿します。
         .row
           - var img = "/assy/images/setup-plug-adapter1.jpg"
           +process-image(img, img)
@@ -22,8 +22,8 @@ block main
           - var img = "/assy/images/setup-plug-adapter3.jpg"
           +process-image(img, img)
         +note('1', '電源をつないだ写真をアップと引きで2枚')
-      li Press the "Setup" button and hold it, then press and release the "Reset" button while the "Setup" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
-        +note('2', 'ボタンの位置の説明写真/MODE押した写真/POW押した写真/POW離した写真')
+      li Press the "Mode" button and hold it, then press and release the "Reset" button while the "Mode" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
+        +note('2', 'ボタンの位置の説明写真/Mode押した写真/POW押した写真/Reset離した写真')
 
     +itemtitle(dir, subdir, 1)
 
@@ -112,7 +112,7 @@ block main
       
       dt 接続テストに失敗する
       dd もう一度APモードで起動して接続すると前回のエラーが見られるので参考に
-      dd MODEボタンは押す必要がない
+      dd Modeボタンは押す必要がない
       dd 
  
     +nextstep('/console/index.html', $i18n.console.label)

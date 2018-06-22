@@ -93,7 +93,7 @@ window.MESSAGE_EN = {
 	"disconnectedInExperiment":{"message":"Device is disconnected."},
 	"wifiSettingsButton":{"message":"Setup a new NinjaPCR device / Change network configuration"},
 	"wifiSettings0":{"message":"Plug the power adapter into NinjaPCR and then into an outlet."},
-	"wifiSettings1":{"message":"Press the \"Setup\" button and hold it, then press and release the \"Reset\" button while the \"Setup\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."},
+	"wifiSettings1":{"message":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."},
 	"wifiSettings2":{"message":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list."},
 	"wifiSettings3":{"message":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If you the page doesn't show up, please retry after a few seconds."},
 	"wifiSettings3_0":{"message":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below."},
