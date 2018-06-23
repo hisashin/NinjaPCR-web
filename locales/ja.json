@@ -300,7 +300,7 @@
               "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."
             },
             {
-              "title" : "WiFiの設定",
+              "title" : "一時的にWiFiの設定を変える",
               "text1" : "APモードで起動した場合、NinjaPCRはWiFiアクセスポイントとして機能しています。接続時にパスワード \"ninjapcr\" を入力してください。",
               "text2" : "macOSの場合",
               "text3" : "メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
@@ -309,41 +309,53 @@
               "text6" : "iOSの場合",
               "text7" : "ホーム画面から「設定」を開き、「WiFi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、\"NinjaPCR\" を接続します。",
               "text8" : "Androidの場合",
-              "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list.",
-              "text10" : "Open",
-              "text11" : "the WiFi settings page (http://192.168.1.1)",
-              "text12" : " and setup. If the page doesn't show up, please retry after a few seconds.",
-              "text13" : "Input WiFi Settings",
-              "text14" : "SSID",
-              "text15" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
-              "text16" : "Password",
-              "text17" : "Input the password of the network.",
-              "text18" : "Device name",
-              "text19" : "Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
-              "text20" : "After you set up the device, it will restart and connect to the specified access point.",
-              "text21" : "Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to."
+              "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
             },
             {
-              "title" : "接続テスト",
+              "title" : "初期設定画面表示",
+              "text1" : "Open",
+              "text2" : "the WiFi settings page (http://192.168.1.1)",
+              "text3" : " and setup. If the page doesn't show up, please retry after a few seconds."
+            },
+            {
+              "title" : "Input WiFi Settings",
+              "text1" : "SSID",
+              "text2" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
+              "text3" : "Password",
+              "text4" : "Input the password of the network.",
+              "text5" : "Device name",
+              "text6" : "Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
+              "text7" : "After you set up the device, it will restart and connect to the specified access point."
+            },
+            {
+              "title" : "WiFiの設定を元に戻す",
+              "text1" : "Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to as you have done in ",
+              "text2" : "."
+            },
+            {
+              "title" : "コンソールを開く",
               "text1" : "WiFiの設定後が完了すると、NinjaPCRは設定モードではなく通常モードで起動し、コンソールから接続できるようになりますので、接続できることを確認してください",
-              "text2" : "コンソールを開きます。",
-              "text3" : "Windows・macOS・Linix・iOSの場合",
-              "text4" : "ブラウザで",
-              "text5" : "コンソール",
-              "text6" : "にアクセスします。",
-              "text7" : "Androidの場合",
-              "text8" : "",
-              "text9" : "専用アプリ",
-              "text10" : "をインストールし、起動します。",
-              "text11" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
-              "text12" : "「接続済」 と表示されたら接続成功です。接続に失敗すると再び「未接続」に戻ります。起動後、接続可能になるまでに2〜5秒ほどかかりますので、失敗した場合は少し時間をおいて再度「接続」を押してください。",
-              "text13" : "接続に何度も失敗する場合は、下の",
-              "text14" : "「WiFiトラブルシューティング > 接続テストに失敗する」",
-              "text15" : "をご覧ください。"
-
+              "text2" : "Windows・macOS・Linix・iOSの場合",
+              "text3" : "ブラウザで",
+              "text4" : "コンソール",
+              "text5" : "にアクセスします。",
+              "text6" : "Androidの場合",
+              "text7" : "",
+              "text8" : "専用アプリ", 
+              "text9" : "をインストールし、起動します。"
+            },
+            { 
+              "title" : "デバイス名入力",
+              "text1" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
+            },  
+            {  
+              "title" : "接続テスト",
+              "text1" : "「接続済」 と表示されたら接続成功です。接続に失敗すると再び「未接続」に戻ります。起動後、接続可能になるまでに2〜5秒ほどかかりますので、失敗した場合は少し時間をおいて再度「接続」を押してください。接続に何度も失敗する場合は、下の", 
+              "text2" : "接続テストに失敗する",
+              "text3" : "をご覧ください。"
             },
             {
-              "title" : "WiFiトラブルシューティング",
+              "title" : "トラブルシューティング",
               "text1" : "APモードで起動したはずだがAPが表示されない",
               "text2" : "NinjaPCRと端末が離れすぎていると電波が届きません。",
               "text3" : "機器によっては新しく発見したアクセスポイントを認識するのに時間がかかる場合があります。少し時間を置いてみてください。また、リストに大量のアクセスポイントが表示されている場合は、画面外に表示されていないか、スクロールして確認してみてください。",
@@ -353,7 +365,7 @@
               "text7" : "接続テストに失敗する",
               "text8" : "もう一度APモードで起動して接続すると前回接続に失敗した際のエラーが見られますので、問題点を解決して再度お試しください。エラーが表示されない場合、NinjaPCRはアクセスポイントに正常に接続できています。",
               "text9" : "WiFi設定モードではなく通常モードで起動していますか? 起動時にModeボタンを押さず、Resetだけを押してください。",
-              "text10" : "NinjaPCRはデバイスと接続するためにmDNSという仕組みを利用しています。mDNSはmacOSおよびiOSでは標準で利用することができます。WindowsやLinuxでも大抵はmDNSをサポートするソフトウェアがインストールされていますが、そうでない>場合もありますので、以下の方法でインストールしてください。",
+              "text10" : "NinjaPCRはデバイスと接続するためにmDNSという仕組みを利用しています。mDNSはmacOSおよびiOSでは標準で利用することができます。WindowsやLinuxでも大抵はmDNSをサポートするソフトウェアがインストールされていますが、そうでない場合もありますので、以下の方法でインストールしてください。",
               "text11" : "Windows",
               "text12" : "",
               "text13" : "Bonjour Print Services",
@@ -389,8 +401,8 @@
               "text2" : "プロファイルは1回限り使うこともできますが、繰り返し行いたいプロファイルはセーブし、再実行することができます。",
               "text3" : "新規プロファイルを作るには、「+」アイコンをクリックします。プロファイル編集画面が開きます。",
               "text4" : "プロファイルの編集",
-              "text5" : "温度プロファイルはサイクルとして作ります。複数のサイクルを持つことができます。サイクルには複数のス>テップを持たせることができます。サイクルごとに繰り返し回数を指定できます。",
-              "text6" : "ステップには温度とホールド時間を指定します。ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ>時間を空欄または0にした場合、可能な限り速く温度遷移します。",
+              "text5" : "温度プロファイルはサイクルとして作ります。複数のサイクルを持つことができます。サイクルには複数のステップを持たせることができます。サイクルごとに繰り返し回数を指定できます。",
+              "text6" : "ステップには温度とホールド時間を指定します。ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ時間を空欄または0にした場合、可能な限り速く温度遷移します。",
               "text7" : "複数のパターンを繰り返す場合などは \"More Options\" ボタンを押すことでサイクルを増やすことができます。また、\"Heater Lid\" で蓋の温度 (デフォルトでは110℃) を指定することができます。",
               "text8" : "プロファイルの編集が終わったら \"Save Preset\" を押し、プロファイルに名前をつけて保存します。",
               "text9" : "左上のゴミ箱のアイコンをクリックするとプロファイルを削除することができます。",
@@ -425,7 +437,7 @@
               "text38" : "プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始てください。",
               "text39" : "実験が終わったら",
               "text40" : "実験が終わると、画面に \"実験完了\" と表示されます。この状態でも最終段階での温度維持が行われていますので、それを止めるには \"Stop\" ボタンを押します。",
-              "text41" : "蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場>合がありますので、手を触れないように気をつけて取り出してください。",
+              "text41" : "蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場合がありますので、手を触れないように気をつけて取り出してください。",
               "text42" : "実験完了後は必ず電源を抜いてください。"
             }
           ]
