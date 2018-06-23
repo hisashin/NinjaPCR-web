@@ -4,16 +4,15 @@ block main
 
   - var dir = 'assy'
   - var subdir = 'setup'
-
   +itemhead(dir, subdir)
 
     // ネットワーク設定モードでの起動
     +itemtitle(dir, subdir, 0)
     // p
     //  | #{$i18n[dir][subdir].items[0].text1}
-
+    p 初めてNinjaPCRを使用する場合、またはWiFiの設定を変更する場合は、次の手順によりNinjaPCRをネットワーク設定モードで起動します。
     ol
-      li Plug the power adapter into NinjaPCR and then into an outlet. 赤い丸のついている部分が同じ方向になるように挿します。
+      li Plug the power adapter into NinjaPCR and then into an outlet. コネクタの赤い丸のついている部分が同じ方向になるように挿します。
         .row
           - var img = "/assy/images/setup-plug-adapter1.jpg"
           +process-image(img, img)
@@ -21,7 +20,6 @@ block main
           +process-image(img, img)
           - var img = "/assy/images/setup-plug-adapter3.jpg"
           +process-image(img, img)
-        +note('1', '電源をつないだ写真をアップと引きで2枚')
       li Press the "Mode" button and hold it, then press and release the "Reset" button while the "Mode" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds. (TODO ボタンを押してる写真)
         .row
             - var img = "/assy/images/setup-boot1.jpg"
@@ -34,7 +32,6 @@ block main
             +process-image(img, img)
             - var img = "/assy/images/setup-boot5.jpg"
             +process-image(img, img)
-        +note('2', 'ボタンの位置の説明写真/Mode押した写真/POW押した写真/Reset離した写真')
 
     +itemtitle(dir, subdir, 1)
 
@@ -50,80 +47,81 @@ block main
       li
         | APモードで起動した場合、NinjaPCRはWiFiアクセスポイントとして機能しています。
         | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
+        | 接続時にパスワード "ninjapcr" を入力してください。
         dl
           dt macOSの場合
           dd 
-            | メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されます (TODO スクリーンショット)
-            - var img = "/assy/images/setup-ap-list-mac.jpg"
-            +image(img, img)
+            | メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されるので、"NinjaPCR" を選択します。
+            - var img = "/assy/images/setup-ap-list-mac-"+$localeName+".jpg"
+            +process-image(img, img)
           dt Windowsの場合
           dd 
-            | TODO (TODO スクリーンショット)
+            | ネットワークの設定を開くとアクセスポイントの一覧が表示されるので、"NinjaPCR" を選択します。
             - var img = "/assy/images/setup-ap-list-win.svg"
-            +image(img, img)
+            +process-image(img, img)
           dt iOSの場合
           dd 
-            | 設定/WiFi/ネットワークを選択 (TODO スクリーンショット)
-            - var img = "/assy/images/setup-ap-list-ios1.jpg"
-            +image(img, img)
-            - var img = "/assy/images/setup-ap-list-ios2.jpg"
-            +image(img, img)
-          dt Androidの場合
+            | ホーム画面から「設定」を開き、「WiFi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、"NinjaPCR" を接続します。
+            .row
+              - var img = "/assy/images/setup-ap-list-ios1.jpg"
+              +process-image(img, img)
+              - var img = "/assy/images/setup-ap-list-ios2.jpg"
+              +process-image(img, img)
+          dt Androidの場合 (TODO)
           dd 
-            | Settings / Wireless & networks / section WiFi (TODO スクリーンショット)
+            | Open "Settings" and move to "Wireless & networks" screen. Select "NinjaPCR" in the AP list.
             - var img = "/assy/images/setup-ap-list-android.svg"
-            +image(img, img)
+            +process-image(img, img)
           
       li
         span.pcr_localize_wifiSettings3
           | Open 
           a(href="http://192.168.1.1" target="_blank") the WiFi settings page
-          |  and setup. If you the page doesn't show up, please retry after a few seconds.
+          | and setup. If the page doesn't show up, please retry after a few seconds.
+          - var img = "/assy/images/setup-wifi-conf.jpg"
+          +process-image(img, img)
+          
       li Input WiFi Settings
         ol
           li
             strong "SSID"
             |  : 
-            span.pcr_localize_wifiSettings3_0
-              | Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.
+            | Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.
           li
             strong "Password"
             |  : 
-            span.pcr_localize_wifiSettings3_1 Input the password of the network.
+            | Input the password of the network.
           li
             strong "Device name"
             |  : 
-            span.pcr_localize_wifiSettings3_2
-              | Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.
+            | Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.
           li
-            span.pcr_localize_wifiSettings3_3
-              | After you set up the device, it will restart and connect to the specified access point.
-      li.pcr_localize_wifiSettings4
+            | After you set up the device, it will restart and connect to the specified access point.
+      li
         | Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to. (TODO さきほどの手順へのリンク)
 
     +itemtitle(dir, subdir, 2)
     ul
-      li Open console page
-      li.pcr_localize_wifiSettings5
-        | Input the "Device name" that you have specified when you configured the device and press "connect" button.
-    p
-      | #{$i18n[dir][subdir].items[2].text1}
+      li Open 
+        a(href="/console") console page
+      li Input the "Device name" that you have specified when you configured the device and press "connect" button.
+    //p
+      //| #{$i18n[dir][subdir].items[2].text1}
+      
 
     +itemtitle(dir, subdir, 3)
     
     dl
       dt APモードで起動したはずだがAPが表示されない
-      dd 遠すぎて電波が届かない
-      dd 少し時間をおく
-      dd ボタンが押せていない or ボタンを話すタイミングを失敗
-      dd リストの下のほうに隠れている(スクロールしてみて)
+      dd NinjaPCRと端末が離れすぎていると電波が届きません。
+      dd 機器によっては新しく発見したアクセスポイントを認識するのに時間がかかる場合があります。少し時間を置いてみてください。また、リストに大量のアクセスポイントが表示されている場合は、画面外に表示されていないか、スクロールして確認してみてください。
+      dd "Mode" ボタンを離すタイミングが正しくなかった可能性があります。再度起動してみてください。
       
-      dt SSIDが表示されない
-      dd その場合はテキストボックスに
-      
+      dt WiFi設定ページに、接続したいアクセスポイントのSSIDが表示されない
+      dd アクセスポイントの設定によっては一覧に表示されない場合があります。ステルスモードになっている場合、スマートフォンのテザリングを使用している場合などです。
+        | その場合は、プルダウンメニューの下のテキストボックスにSSIDを入力すると接続できます。
       dt 接続テストに失敗する
-      dd もう一度APモードで起動して接続すると前回のエラーが見られるので参考に
-      dd Modeボタンは押す必要がない
-      dd 
+      dd もう一度APモードで起動して接続すると前回接続に失敗した際のエラーが見られますので、問題点を解決して再度お試しください。
+      dd 接続テスト時はWiFi設定モードではなく通常モードで起動しますので、Modeボタンは押す必要がありません。
  
     +nextstep('/console/index.html', $i18n.console.label)
