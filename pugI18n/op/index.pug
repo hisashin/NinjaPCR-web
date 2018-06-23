@@ -7,136 +7,111 @@ block main
 
   +itemhead(dir, subdir)
   
-    h4 実験の流れ
+    +itemtitle(dir, subdir, 0)
+
     ol
-      li 実験プロファイルを用意します。
-      li チューブをセットします。
-      li NinjaPCR本体の電源を入れます。
-      li ブラウザで
-        a(href="/console/index.html") コンソール
-        | を開きます。
-      li デバイス名を指定して接続します。デバイス名を入力し、「接続」ボタンを押してください。
-      li 実験プロファイルを作成、または以前作成したプロファイルをリストから選択します。
-      li 実験を開始します。現在の進行状況が表示されます。
+      li #{$i18n[dir][subdir].items[0].text1}
+      li #{$i18n[dir][subdir].items[0].text2}
+      li #{$i18n[dir][subdir].items[0].text3}
+      li
+        | #{$i18n[dir][subdir].items[0].text4}
+        a.link(href="/"+$localeName+"/console/index.html" target="_blank") #{$i18n[dir][subdir].items[0].text5}
+        | #{$i18n[dir][subdir].items[0].text6}
+      li #{$i18n[dir][subdir].items[0].text7}
+      li #{$i18n[dir][subdir].items[0].text8}
+      li #{$i18n[dir][subdir].items[0].text9}
     
-    h4 実験プロファイル
-    h5 プロファイルの管理
-    p プロファイルは1回限り使うこともできますが、繰り返し行いたいプロファイルはセーブし、再実行することができます。
-    p 新規プロファイルを作るには、「+」アイコンをクリックします。プロファイル編集画面が開きます。
+    +itemtitle(dir, subdir, 1)
+
+    h5 #{$i18n[dir][subdir].items[1].text1}
+    p #{$i18n[dir][subdir].items[1].text2}
+    p #{$i18n[dir][subdir].items[1].text3}
     - var img = "/op/images/manage-profile-"+$localeName+".jpg"
     +image(img, img)
       
-    h5 プロファイルの編集
+    h5 #{$i18n[dir][subdir].items[1].text4}
     - var img = "/op/images/edit-profile-"+$localeName+".jpg"
     +image(img, img)
-    p 温度プロファイルはサイクルとして作ります。複数のサイクルを持つことができます。サイクルには複数のステップを持たせることができます。サイクルごとに繰り返し回数を指定できます。
-    p ステップには温度とホールド時間を指定します。
-      | ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ時間を空欄または0にした場合、可能な限り速く温度遷移します。
-    p 複数のパターンを繰り返す場合などは "More Options" ボタンを押すことでサイクルを増やすことができます。
-      | また、"Heater Lid" で蓋の温度 (デフォルトでは110℃) を指定することができます。
-    p プロファイルの編集が終わったら "Save Preset" を押し、プロファイルに名前をつけて保存します。
-    p 左上のゴミ箱のアイコンをクリックするとプロファイルを削除することができます。
-    p たとえば次のようなプロファイルの場合は次のように作成します。
+    p #{$i18n[dir][subdir].items[1].text5}
+    p #{$i18n[dir][subdir].items[1].text6}
+    p #{$i18n[dir][subdir].items[1].text7}
+    p #{$i18n[dir][subdir].items[1].text8}
+    p #{$i18n[dir][subdir].items[1].text9}
+    p #{$i18n[dir][subdir].items[1].text10}
     - var img = "/op/images/profile-sample-"+$localeName+".jpg"
     +image(img, img)
   
     table.table(style="max-width:480px;")
       tr
-        th.text-right(style="width:6em") x1 
+        th.text-right(style="width:6em") #{$i18n[dir][subdir].items[1].text11}
         td
           .row
-            .col-5 Initial Denaturation
-            .col-3 95℃
-            .col-4 2 minutes
+            .col-5 #{$i18n[dir][subdir].items[1].text12}
+            .col-3 #{$i18n[dir][subdir].items[1].text13}
+            .col-4 #{$i18n[dir][subdir].items[1].text14}
       tr
-        th.text-right(style="vertical-align:middle") x35
+        th.text-right(style="vertical-align:middle") #{$i18n[dir][subdir].items[1].text15}
         td
           .row
-            .col-5 Denaturation
-            .col-3 95℃
-            .col-4 30 seconds
-            .col-5 Annealing
-            .col-3 55℃
-            .col-4 30 seconds
-            .col-5 Extension
-            .col-3 72℃
-            .col-4 30 seconds
+            .col-5 #{$i18n[dir][subdir].items[1].text16}
+            .col-3 #{$i18n[dir][subdir].items[1].text17}
+            .col-4 #{$i18n[dir][subdir].items[1].text18}
+            .col-5 #{$i18n[dir][subdir].items[1].text19}
+            .col-3 #{$i18n[dir][subdir].items[1].text20}
+            .col-4 #{$i18n[dir][subdir].items[1].text21}
+            .col-5 #{$i18n[dir][subdir].items[1].text22}
+            .col-3 #{$i18n[dir][subdir].items[1].text23}
+            .col-4 #{$i18n[dir][subdir].items[1].text24}
       tr
-        th.text-right x1
+        th.text-right #{$i18n[dir][subdir].items[1].text25}
         td
           .row
-            .col-5 Final extension
-            .col-3 72℃
-            .col-4 10 minutes
+            .col-5 #{$i18n[dir][subdir].items[1].text26}
+            .col-3 #{$i18n[dir][subdir].items[1].text27}
+            .col-4 #{$i18n[dir][subdir].items[1].text28}
             
     
     +note('1', '上記の表のプロファイルを作成している画面のスクリーンショット')
     
-    h5 プロファイルの保存について
-    p 
-      | プロファイルはブラウザのストレージに保存します。ブラウザの設定などでデータを消去すると、プロファイルは消去されます。
-      | また、プライベートモードなどデータの保存を行わないモードで動かした場合は保存されません。
+    h5 #{$i18n[dir][subdir].items[1].text29}
+    p #{$i18n[dir][subdir].items[1].text30}
     
-    h4 チューブのセット
+    h4 #{$i18n[dir][subdir].items[1].text31}
     ol
-      li 蓋を開けます。
+      li #{$i18n[dir][subdir].items[1].text32}
         .row
           - var img = "/op/images/tube-set1.jpg"
           +process-image(img, img)
           - var img = "/op/images/tube-set2.jpg"
           +process-image(img, img)
-      li ウェルにチューブを挿します。
+      li #{$i18n[dir][subdir].items[1].text33}
         .row
           - var img = "/op/images/tube-set3.jpg"
           +process-image(img, img)
           - var img = "/op/images/tube-set4.jpg"
           +process-image(img, img)
-      li 蓋を閉めます。軽く力を入れ、ラッチがカチッとはまるまで閉めてください。
+      li #{$i18n[dir][subdir].items[1].text34}
         - var img = "/op/images/tube-set5.jpg"
         +process-image(img, img)
-      li ノブを軽く時計回りにひねり、蓋が軽くチューブを押さえるようにします。
+      li #{$i18n[dir][subdir].items[1].text35}
         - var img = "/op/images/tube-set6.jpg"
         +process-image(img, img)
     
-
-    h4 起動 〜 実験開始
-    p 電源を接続し、コンソールを開いて接続します。Input the "Device name" that you have specified when you configured the device and press "Connect" button.
+    h4 #{$i18n[dir][subdir].items[1].text36}
+    p #{$i18n[dir][subdir].items[1].text37}
       - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
       +process-image(img, img)
-    p プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始てください。
+    p #{$i18n[dir][subdir].items[1].text38}
       .row
         - var img = "/assy/images/run1-"+$localeName+".jpg"
         +process-image(img, img)
         - var img = "/assy/images/run2-"+$localeName+".jpg"
         +process-image(img, img)
     
-    h4 実験が終わったら
-    p 実験が終わると、画面に "実験完了" と表示されます。この状態でも最終段階での温度維持が行われていますので、それを止めるには "Stop" ボタンを押します。
-    p 蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場合がありますので、手を触れないように気をつけて取り出してください。
+    h4 #{$i18n[dir][subdir].items[1].text39}
+    p #{$i18n[dir][subdir].items[1].text40}
+    p #{$i18n[dir][subdir].items[1].text41}
     - var img = "/op/images/profile-finish-"+$localeName+".jpg"
     +image(img, img)
-    p 実験完了後は必ず電源を抜いてください。
+    p #{$i18n[dir][subdir].items[1].text42}
     
-    +itemtitle(dir, subdir, 0)
-
-    p
-      | #{$i18n[dir][subdir].items[0].text1}
-
-    +itemtitle(dir, subdir, 1)
-
-    p
-      - var img = "/assy/images/lid-heater.svg"
-      +image(img, img)
-      | #{$i18n[dir][subdir].items[1].text1}
-      // +itemlink('assy', 'unbox', 4)
-      | #{$i18n[dir][subdir].items[1].text2}
-      a(href="https://www.google.co.jp") #{$i18n[dir][subdir].items[1].text3}
-      | #{$i18n[dir][subdir].items[1].text4}
-
-    +itemtitle(dir, subdir, 2)
-
-    p
-      | #{$i18n[dir][subdir].items[2].text1}
-
-    +itemtitle(dir, subdir, 3)
-

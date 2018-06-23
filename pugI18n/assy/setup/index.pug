@@ -6,13 +6,11 @@ block main
   - var subdir = 'setup'
   +itemhead(dir, subdir)
 
-    // ネットワーク設定モードでの起動
     +itemtitle(dir, subdir, 0)
-    // p
-    //  | #{$i18n[dir][subdir].items[0].text1}
-    p 初めてNinjaPCRを使用する場合、またはWiFiの設定を変更する場合は、次の手順によりNinjaPCRをネットワーク設定モードで起動します。
+
+    p #{$i18n[dir][subdir].items[0].text1}
     ol
-      li Plug the power adapter into NinjaPCR and then into an outlet. コネクタの赤い丸のついている部分が同じ方向になるように挿します。
+      li #{$i18n[dir][subdir].items[0].text2}
         .row
           - var img = "/assy/images/setup-plug-adapter1.jpg"
           +process-image(img, img)
@@ -20,7 +18,7 @@ block main
           +process-image(img, img)
           - var img = "/assy/images/setup-plug-adapter3.jpg"
           +process-image(img, img)
-      li Press the "Mode" button and hold it, then press and release the "Reset" button while the "Mode" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.
+      li #{$i18n[dir][subdir].items[0].text3}
         .row
             - var img = "/assy/images/setup-boot1.jpg"
             +process-image(img, img)
@@ -35,42 +33,32 @@ block main
 
     +itemtitle(dir, subdir, 1)
 
-      //
-        - var img = "/assy/images/lid-heater.svg"
-        +image(img, img)
-        | #{$i18n[dir][subdir].items[1].text1}
-        // +itemlink(dir, 'unbox', 4) 
-        | #{$i18n[dir][subdir].items[1].text2}
-        a(href="https://www.google.co.jp") #{$i18n[dir][subdir].items[1].text3}
-        | #{$i18n[dir][subdir].items[1].text4}
     ol
       li
-        | APモードで起動した場合、NinjaPCRはWiFiアクセスポイントとして機能しています。
-        | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
-        | 接続時にパスワード "ninjapcr" を入力してください。
+        | #{$i18n[dir][subdir].items[1].text1}
         dl
-          dt macOSの場合
+          dt #{$i18n[dir][subdir].items[1].text2}
           dd 
-            | メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されるので、"NinjaPCR" を選択します。
+            | #{$i18n[dir][subdir].items[1].text3}
             - var img = "/assy/images/setup-ap-list-mac-"+$localeName+".jpg"
             +process-image(img, img)
-          dt Windowsの場合
+          dt #{$i18n[dir][subdir].items[1].text4}
           dd 
-            | ネットワークの設定を開くとアクセスポイントの一覧が表示されるので、"NinjaPCR" を選択します。
+            | #{$i18n[dir][subdir].items[1].text5}
             - var img = "/assy/images/setup-ap-list-win-"+$localeName+".jpg"
             +process-image(img, img)
             +note(1, "実機でスクリーンショット撮ってローカライズ")
-          dt iOSの場合
+          dt #{$i18n[dir][subdir].items[1].text6}
           dd 
-            | ホーム画面から「設定」を開き、「WiFi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、"NinjaPCR" を接続します。
+            | #{$i18n[dir][subdir].items[1].text7}
             .row
               - var img = "/assy/images/setup-ap-list-ios1-"+$localeName+".jpg"
               +process-image(img, img)
               - var img = "/assy/images/setup-ap-list-ios2-"+$localeName+".jpg"
               +process-image(img, img)
-          dt Androidの場合 (TODO)
+          dt #{$i18n[dir][subdir].items[1].text8}
           dd 
-            | Open "Settings" and move to "Wireless & networks" screen. Select "NinjaPCR" in the AP list.
+            | #{$i18n[dir][subdir].items[1].text9}
             .row
               - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
               +process-image(img, img)
@@ -78,83 +66,83 @@ block main
               +process-image(img, img)
           
       li
-        | Open 
-        a(href="http://192.168.1.1" target="_blank") the WiFi settings page
-        | and setup. If the page doesn't show up, please retry after a few seconds.
+        | #{$i18n[dir][subdir].items[1].text10} 
+        a.link(href="http://192.168.1.1" target="_blank") #{$i18n[dir][subdir].items[1].text11}
+        | #{$i18n[dir][subdir].items[1].text12}
         - var img = "/assy/images/setup-wifi-conf.jpg"
         +process-image(img, img)
-        +note(2, "リンクの色がわかりにくいので青にしたい / 画像を大きく")
+        +note(2, "画像を大きく")
           
-      li Input WiFi Settings
+      li #{$i18n[dir][subdir].items[1].text13}
         ol
           li
-            strong "SSID"
+            strong "#{$i18n[dir][subdir].items[1].text14}"
             |  : 
-            | Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.
+            | #{$i18n[dir][subdir].items[1].text15}
           li
-            strong "Password"
+            strong "#{$i18n[dir][subdir].items[1].text16}"
             |  : 
-            | Input the password of the network.
+            | #{$i18n[dir][subdir].items[1].text17}
           li
-            strong "Device name"
+            strong "#{$i18n[dir][subdir].items[1].text18}"
             |  : 
-            | Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.
+            | #{$i18n[dir][subdir].items[1].text19}
           li
-            | After you set up the device, it will restart and connect to the specified access point.
+            | #{$i18n[dir][subdir].items[1].text20}
       li
-        | Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.
+        | #{$i18n[dir][subdir].items[1].text21}
 
     +itemtitle(dir, subdir, 2)
-    p WiFiの設定後が完了すると、NinjaPCRは設定モードではなく通常モードで起動し、コンソールから接続できるようになりますので、接続できることを確認してください。
+
+    p #{$i18n[dir][subdir].items[2].text1}
     ul
-      li コンソールを開きます。
+      li #{$i18n[dir][subdir].items[2].text2}
         dl
-          dt Windows・macOS・Linix・iOSの場合
-          dd ブラウザで 
-            a(href="/console") コンソール
-            | にアクセスします。
-          dt Androidの場合
-          dd 専用アプリをインストールし、起動します。
+          dt #{$i18n[dir][subdir].items[2].text3}
+          dd #{$i18n[dir][subdir].items[2].text4}
+            a.link(href="/"+$localeName+"/console/index.html" target="_blank") #{$i18n[dir][subdir].items[2].text5}
+            | #{$i18n[dir][subdir].items[2].text6}
+          dt #{$i18n[dir][subdir].items[2].text7}
+          dd
+            | #{$i18n[dir][subdir].items[2].text8}
+            a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi" target="_blank") #{$i18n[dir][subdir].items[2].text9}
+            | #{$i18n[dir][subdir].items[2].text10}
       
-      li Input the "Device name" that you have specified when you configured the device and press "Connect" button.
+      li #{$i18n[dir][subdir].items[2].text11}
         - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
         +process-image(img, img)
-      li 「接続済」 と表示されたら接続成功です。接続に失敗すると再び「未接続」に戻ります。起動後、接続可能になるまでに2〜5秒ほどかかりますので、失敗した場合は少し時間をおいて再度「接続」を押してみてください。
-        | 接続に何度も失敗する場合は、下の
-        a(href='#troubleshooting-cannot-connect') 「WiFiトラブルシューティング > 接続テストに失敗する」
-        | をご覧ください。
+      li #{$i18n[dir][subdir].items[2].text12}
+        | #{$i18n[dir][subdir].items[2].text13}
+        a.link(href='#troubleshooting-cannot-connect') #{$i18n[dir][subdir].items[2].text14}
+        | #{$i18n[dir][subdir].items[2].text15}
         - var img = "/assy/images/setup-connection2-"+$localeName+".jpg"
         +process-image(img, img)
-    //p
-      //| #{$i18n[dir][subdir].items[2].text1}
-      
 
     +itemtitle(dir, subdir, 3)
     
-    h5 APモードで起動したはずだがAPが表示されない
+    h5 #{$i18n[dir][subdir].items[3].text1}
     ul
-      li NinjaPCRと端末が離れすぎていると電波が届きません。
-      li 機器によっては新しく発見したアクセスポイントを認識するのに時間がかかる場合があります。少し時間を置いてみてください。また、リストに大量のアクセスポイントが表示されている場合は、画面外に表示されていないか、スクロールして確認してみてください。
-      li "Mode" ボタンを離すタイミングが正しくなかった可能性があります。再度起動してみてください。
-    h5 WiFi設定ページに、接続したいアクセスポイントのSSIDが表示されない
+      li #{$i18n[dir][subdir].items[3].text2}
+      li #{$i18n[dir][subdir].items[3].text3}
+      li #{$i18n[dir][subdir].items[3].text4}
+    h5 #{$i18n[dir][subdir].items[3].text5}
     ul
-      li アクセスポイントの設定によっては一覧に表示されない場合があります。ステルスモードになっている場合、スマートフォンのテザリングを使用している場合などです。
-        | その場合は、プルダウンメニューの下のテキストボックスにSSIDを入力すると接続できます。
-    h5#troubleshooting-cannot-connect 接続テストに失敗する
+      li #{$i18n[dir][subdir].items[3].text6}
+    h5#troubleshooting-cannot-connect #{$i18n[dir][subdir].items[3].text7}
     ul
-      li もう一度APモードで起動して接続すると前回接続に失敗した際のエラーが見られますので、問題点を解決して再度お試しください。
-        | エラーが表示されない場合、NinjaPCRはアクセスポイントに正常に接続できています。
-      li WiFi設定モードではなく通常モードで起動していますか? 起動時にModeボタンを押さず、Resetだけを押してください。
-      li NinjaPCRはデバイスと接続するためにmDNSという仕組みを利用しています。mDNSはmacOSおよびiOSでは標準で利用することができます。
-        | WindowsやLinuxでも大抵はmDNSをサポートするソフトウェアがインストールされていますが、そうでない場合もありますので、以下の方法でインストールしてください。
+      li #{$i18n[dir][subdir].items[3].text8}
+      li #{$i18n[dir][subdir].items[3].text9}
+      li #{$i18n[dir][subdir].items[3].text10}
         dl
-          dt Windows
+          dt #{$i18n[dir][subdir].items[3].text11}
+          dd
+            | #{$i18n[dir][subdir].items[3].text12}
+            a.link(href="https://support.apple.com/kb/DL999") #{$i18n[dir][subdir].items[3].text13}
+            | #{$i18n[dir][subdir].items[3].text14}
+          dt #{$i18n[dir][subdir].items[3].text15}
           dd 
-            a(href="https://support.apple.com/kb/DL999") Bonjour Print Services 
-            | をインストールします。
-          dt Linux
-          dd 
-            a(href="http://avahi.org/") avahi
-            | をインストールします。インストールの方法はお使いの環境によって違いますが、メジャーなソフトウェアなので、ほとんどのディストリビューション向けに簡単にインストールできるパッケージが用意されています。
+            | #{$i18n[dir][subdir].items[3].text16}
+            a.link(href="http://avahi.org/") #{$i18n[dir][subdir].items[3].text17}
+            | #{$i18n[dir][subdir].items[3].text18}
  
     +nextstep('/console/index.html', $i18n.console.label)
