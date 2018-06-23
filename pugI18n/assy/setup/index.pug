@@ -71,9 +71,11 @@ block main
           dt Androidの場合 (TODO)
           dd 
             | Open "Settings" and move to "Wireless & networks" screen. Select "NinjaPCR" in the AP list.
-            - var img = "/assy/images/setup-ap-list-android-"+$localeName+".svg"
-            +process-image(img, img)
-            +note(1, "実機でスクリーンショット撮ってローカライズ")
+            .row
+              - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
+              +process-image(img, img)
+              - var img = "/assy/images/setup-ap-list-android2-"+$localeName+".jpg"
+              +process-image(img, img)
           
       li
         | Open 
