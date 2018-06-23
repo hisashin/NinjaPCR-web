@@ -156,7 +156,7 @@ NetworkCommunicator.prototype.connect = function () {
       console.log("/connect failed");
       scope.connected = false;
       $("#DeviceConnectionStatus").attr("class","disconnected");
-      $("#DeviceConnectionStatusLabel").text("Disconnected");
+      $("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusDisconnected'));
       $(".connectionUI").removeAttr("disabled");
     }
   } else {
@@ -168,7 +168,7 @@ NetworkCommunicator.prototype.doConnect = function () {
 	this.sendRequestToDevice("/connect", null, function(obj) {
 			// Connected
 			$("#DeviceConnectionStatus").attr("class","connected");
-			$("#DeviceConnectionStatusLabel").text("Connected");
+			$("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusConnected'));
 			scope.saveHostName(host);
 			scope.connected = true;
 			if (obj.running) {
@@ -209,17 +209,16 @@ NetworkCommunicator.prototype.doConnect = function () {
 			console.log("/connect failed");
 			scope.connected = false;
 			$("#DeviceConnectionStatus").attr("class","disconnected");
-			$("#DeviceConnectionStatusLabel").text("Disconnected");
+			$("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusDisconnected'));
 			$(".connectionUI").removeAttr("disabled");
 		});
 	$(".connectionUI").attr("disabled", "true");
 	$("#DeviceConnectionStatus").attr("class","connecting");
-	$("#DeviceConnectionStatusLabel").text("Connecting...");
+	$("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusConnecting'));
 }
 
 NetworkCommunicator.prototype.scanOngoingExperiment = function () {
 	console.log("TODO scanOngoingExperiment");
-	// TODO getPorts -> Open -> (callback) -> getList -> sendRequest -> read -> ...
 	callback();
 };
 

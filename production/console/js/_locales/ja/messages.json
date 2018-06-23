@@ -113,5 +113,10 @@ window.MESSAGE_JA = {
   "errorMessage8":{"message":"蓋が正常に加熱されていません。ヒーターか温度センサが外れている可能性があります。"},
   "errorMessage9":{"message":"ウェルが正常に加熱されていません。ペルチェ素子が外れている可能性があります。"},
   "androidGuide":{"message":"NinjaPCRをAndroid端末で利用するには専用アプリをインストールする必要があります。"},
+  "deviceName":{"message":"デバイス名"},
+  "connectionStatusDisconnected":{"message":"未接続"},
+  "connectionStatusConnecting":{"message":"接続中..."},
+  "connectionStatusConnected":{"message":"接続済"},
+  "connect":{"message":"接続"},
 	"TODO":{"message":"TODO"}
 }

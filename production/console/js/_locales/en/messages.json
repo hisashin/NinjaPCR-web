@@ -114,6 +114,11 @@ window.MESSAGE_EN = {
   "errorMessage8":{"message":"Cannot control lid temperature. Lid heater or temperature sensor seems to be detached."},
   "errorMessage9":{"message":"Cannot control well temperature. Well and peltier device seems to be detached."},
   "androidGuide":{"message":"You need to install NinjaPCR app. Please install the app on Play Store."},
+  "deviceName":{"message":"Device name"},
+  "connectionStatusDisconnected":{"message":"Disconnected"},
+  "connectionStatusConnecting":{"message":"Connecting..."},
+  "connectionStatusConnected":{"message":"Connected"},
+  "connect":{"message":"Connect"},
   
 	"TODO":{"message":"TODO"}
 }

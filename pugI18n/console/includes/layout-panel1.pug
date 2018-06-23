@@ -1,7 +1,7 @@
 #homeHeader.Header.pcr_localize_appTitle NinjaPCR WiFi
 #device_conf
   h2#DeviceConnectionStatus.disconnected
-    span#DeviceConnectionStatusLabel Device disconnected
+    span#DeviceConnectionStatusLabel.pcr_localize_connectionStatusDisconnected Device disconnected
   a#NewDevice.pcr_localize_wifiSettingsButton(href="#") Setup a new NinjaPCR device / Change network configuration
   section#DeviceSettings(style="display:none")
     p
@@ -41,10 +41,9 @@
                       
   section
     p#ipInputContainer
-      | Device name: 
+      span.pcr_localize_deviceName Device name: 
       input#HostText.connectionUI(type="text")
-      input#ConnectButton.connectionUI(type="button" value="connect")
-      span Android Supported
+      input#ConnectButton.pcr_localize_connect.connectionUI(type="button" value="Connect")
 // Create a new blank experiment
 a#newExperimentButton(href="#")
   img(src="/console/images/new.png" style="vertical-align:middle;")
