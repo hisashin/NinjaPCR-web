@@ -9,6 +9,7 @@ block main
   
     h4 実験の流れ
     ol
+      li 実験プロファイルを用意します。
       li チューブをセットします。
       li NinjaPCR本体の電源を入れます。
       li ブラウザで
@@ -18,17 +19,26 @@ block main
       li 実験プロファイルを作成、または以前作成したプロファイルをリストから選択します。
       li 実験を開始します。現在の進行状況が表示されます。
     
-    h4 プロファイルの管理
+    h4 実験プロファイル
+    h5 プロファイルの管理
     p プロファイルは1回限り使うこともできますが、繰り返し行いたいプロファイルはセーブし、再実行することができます。
+    p 新規プロファイルを作るには、「+」アイコンをクリックします。プロファイル編集画面が開きます。
+    - var img = "/op/images/manage-profile-"+$localeName+".jpg"
+    +image(img, img)
       
-    h4 プロファイルの編集
+    h5 プロファイルの編集
+    - var img = "/op/images/edit-profile-"+$localeName+".jpg"
+    +image(img, img)
     p 温度プロファイルはサイクルとして作ります。複数のサイクルを持つことができます。サイクルには複数のステップを持たせることができます。サイクルごとに繰り返し回数を指定できます。
-    p ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ時間を空欄または0にした場合、可能な限り速く温度遷移します。
-    p 
-      | プロファイルはブラウザのストレージに保存します。ブラウザの設定などでデータを消去すると、プロファイルは消去されます。
-      | また、プライベートモードなどデータの保存を行わないモードで動かした場合は保存されません。
-    h5 例
+    p ステップには温度とホールド時間を指定します。
+      | ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ時間を空欄または0にした場合、可能な限り速く温度遷移します。
+    p 複数のパターンを繰り返す場合などは "More Options" ボタンを押すことでサイクルを増やすことができます。
+      | また、"Heater Lid" で蓋の温度 (デフォルトでは110℃) を指定することができます。
+    p プロファイルの編集が終わったら "Save Preset" を押し、プロファイルに名前をつけて保存します。
+    p 左上のゴミ箱のアイコンをクリックするとプロファイルを削除することができます。
     p たとえば次のようなプロファイルの場合は次のように作成します。
+    - var img = "/op/images/profile-sample-"+$localeName+".jpg"
+    +image(img, img)
   
     table.table(style="max-width:480px;")
       tr
@@ -62,32 +72,49 @@ block main
     
     +note('1', '上記の表のプロファイルを作成している画面のスクリーンショット')
     
+    h5 プロファイルの保存について
+    p 
+      | プロファイルはブラウザのストレージに保存します。ブラウザの設定などでデータを消去すると、プロファイルは消去されます。
+      | また、プライベートモードなどデータの保存を行わないモードで動かした場合は保存されません。
+    
     h4 チューブのセット
     ol
       li 蓋を開けます。
-        +note('2', '蓋を開けているところの写真')
+        .row
+          - var img = "/op/images/tube-set1.jpg"
+          +process-image(img, img)
+          - var img = "/op/images/tube-set2.jpg"
+          +process-image(img, img)
       li ウェルにチューブを挿します。
-        +note('3', 'チューブを挿しているところの写真')
+        .row
+          - var img = "/op/images/tube-set3.jpg"
+          +process-image(img, img)
+          - var img = "/op/images/tube-set4.jpg"
+          +process-image(img, img)
       li 蓋を閉めます。軽く力を入れ、ラッチがカチッとはまるまで閉めてください。
-        +note('4', '蓋を閉めている写真')
+        - var img = "/op/images/tube-set5.jpg"
+        +process-image(img, img)
       li ノブを軽く時計回りにひねり、蓋が軽くチューブを押さえるようにします。
-        +note('5', 'ノブをひねっている写真。ひねる方向に矢印')
-    .row
-      - var img = "/op/images/tube-set1.jpg"
+        - var img = "/op/images/tube-set6.jpg"
+        +process-image(img, img)
+    
+
+    h4 起動 〜 実験開始
+    p 電源を接続し、コンソールを開いて接続します。Input the "Device name" that you have specified when you configured the device and press "Connect" button.
+      - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
       +process-image(img, img)
-      - var img = "/op/images/tube-set2.jpg"
-      +process-image(img, img)
-      - var img = "/op/images/tube-set3.jpg"
-      +process-image(img, img)
-      - var img = "/op/images/tube-set4.jpg"
-      +process-image(img, img)
-      - var img = "/op/images/tube-set5.jpg"
-      +process-image(img, img)
-      - var img = "/op/images/tube-set6.jpg"
-      +process-image(img, img)
+    p プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始てください。
+      .row
+        - var img = "/assy/images/run1-"+$localeName+".jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/run2-"+$localeName+".jpg"
+        +process-image(img, img)
     
     h4 実験が終わったら
-    p 実験が終わったらチューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場合がありますので、手を触れないように気をつけて取り出してください。
+    p 実験が終わると、画面に "実験完了" と表示されます。この状態でも最終段階での温度維持が行われていますので、それを止めるには "Stop" ボタンを押します。
+    p 蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場合がありますので、手を触れないように気をつけて取り出してください。
+    - var img = "/op/images/profile-finish-"+$localeName+".jpg"
+    +image(img, img)
 
     +itemtitle(dir, subdir, 0)
 
