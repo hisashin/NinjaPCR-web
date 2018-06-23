@@ -119,14 +119,12 @@ block main
       li Input the "Device name" that you have specified when you configured the device and press "Connect" button.
         - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
         +process-image(img, img)
-        +note(3, "スクリーンショット")
       li 「接続済」 と表示されたら接続成功です。接続に失敗すると再び「未接続」に戻ります。起動後、接続可能になるまでに2〜5秒ほどかかりますので、失敗した場合は少し時間をおいて再度「接続」を押してみてください。
         | 接続に何度も失敗する場合は、下の
         a(href='#troubleshooting-cannot-connect') 「WiFiトラブルシューティング > 接続テストに失敗する」
         | をご覧ください。
         - var img = "/assy/images/setup-connection2-"+$localeName+".jpg"
         +process-image(img, img)
-        +note(4, "スクリーンショット")
     //p
       //| #{$i18n[dir][subdir].items[2].text1}
       
