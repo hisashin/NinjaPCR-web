@@ -293,10 +293,12 @@
           "label" : "Initial Setup",
           "items" : [
             {
+              "title" : "Connect power adapter",
+              "text1" : "Plug the power adapter into NinjaPCR and then into an outlet."
+            },
+            {
               "title" : "ネットワーク設定モードでの起動",
-              "text1" : "初めてNinjaPCRを使用する場合、またはWiFiの設定を変更する場合は、次の手順によりNinjaPCRをネットワーク設定モードで起動します。",
-              "text2" : "Plug the power adapter into NinjaPCR and then into an outlet.",
-              "text3" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."
+              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."
             },
             {
               "title" : "WiFiの設定",
@@ -426,6 +428,13 @@
               "text40" : "実験が終わると、画面に \"実験完了\" と表示されます。この状態でも最終段階での温度維持が行われていますので、それを止めるには \"Stop\" ボタンを押します。",
               "text41" : "蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場>合がありますので、手を触れないように気をつけて取り出してください。",
               "text42" : "実験完了後は必ず電源を抜いてください。"
+            },
+            {
+              "title" : "3rd title",
+              "text" : "そのため、1.ja.jsonのtextとして日本語原稿完成 2.text1,text2,...としてpugに記述し、en.jsonには日本語をそのままコピー 3.ja.jsonがfixしたらen.jsonの英語化　が一番早い"
+            },
+            {
+              "title" : "4th title"
             }
           ]
         }

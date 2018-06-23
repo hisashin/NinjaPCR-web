@@ -8,57 +8,60 @@ block main
 
     +itemtitle(dir, subdir, 0)
 
-    p #{$i18n[dir][subdir].items[0].text1}
-    ol
-      li #{$i18n[dir][subdir].items[0].text2}
-        .row
-          - var img = "/assy/images/setup-plug-adapter1.jpg"
-          +process-image(img, img)
-          - var img = "/assy/images/setup-plug-adapter2.jpg"
-          +process-image(img, img)
-          - var img = "/assy/images/setup-plug-adapter3.jpg"
-          +process-image(img, img)
-      li #{$i18n[dir][subdir].items[0].text3}
-        .row
-            - var img = "/assy/images/setup-boot1.jpg"
-            +process-image(img, img)
-            - var img = "/assy/images/setup-boot2.jpg"
-            +process-image(img, img)
-            - var img = "/assy/images/setup-boot3.jpg"
-            +process-image(img, img)
-            - var img = "/assy/images/setup-boot4.jpg"
-            +process-image(img, img)
-            - var img = "/assy/images/setup-boot5.jpg"
-            +process-image(img, img)
-
+    p
+      .row
+        - var img = "/assy/images/setup-plug-adapter1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/setup-plug-adapter2.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/setup-plug-adapter3.jpg"
+        +process-image(img, img)
+      | #{$i18n[dir][subdir].items[0].text1}
+    
     +itemtitle(dir, subdir, 1)
+
+    p
+      .row
+        - var img = "/assy/images/setup-boot1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/setup-boot2.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/setup-boot3.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/setup-boot4.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/setup-boot5.jpg"
+        +process-image(img, img)
+      | #{$i18n[dir][subdir].items[1].text1}
+
+    +itemtitle(dir, subdir, 2)
 
     ol
       li
-        | #{$i18n[dir][subdir].items[1].text1}
+        | #{$i18n[dir][subdir].items[2].text1}
         dl
-          dt #{$i18n[dir][subdir].items[1].text2}
+          dt #{$i18n[dir][subdir].items[2].text2}
           dd 
-            | #{$i18n[dir][subdir].items[1].text3}
+            | #{$i18n[dir][subdir].items[2].text3}
             - var img = "/assy/images/setup-ap-list-mac-"+$localeName+".jpg"
             +process-image(img, img)
-          dt #{$i18n[dir][subdir].items[1].text4}
+          dt #{$i18n[dir][subdir].items[2].text4}
           dd 
-            | #{$i18n[dir][subdir].items[1].text5}
+            | #{$i18n[dir][subdir].items[2].text5}
             - var img = "/assy/images/setup-ap-list-win-"+$localeName+".jpg"
             +process-image(img, img)
             +note(1, "実機でスクリーンショット撮ってローカライズ")
-          dt #{$i18n[dir][subdir].items[1].text6}
+          dt #{$i18n[dir][subdir].items[2].text6}
           dd 
-            | #{$i18n[dir][subdir].items[1].text7}
+            | #{$i18n[dir][subdir].items[2].text7}
             .row
               - var img = "/assy/images/setup-ap-list-ios1-"+$localeName+".jpg"
               +process-image(img, img)
               - var img = "/assy/images/setup-ap-list-ios2-"+$localeName+".jpg"
               +process-image(img, img)
-          dt #{$i18n[dir][subdir].items[1].text8}
+          dt #{$i18n[dir][subdir].items[2].text8}
           dd 
-            | #{$i18n[dir][subdir].items[1].text9}
+            | #{$i18n[dir][subdir].items[2].text9}
             .row
               - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
               +process-image(img, img)
@@ -66,83 +69,83 @@ block main
               +process-image(img, img)
           
       li
-        | #{$i18n[dir][subdir].items[1].text10} 
-        a.link(href="http://192.168.1.1" target="_blank") #{$i18n[dir][subdir].items[1].text11}
-        | #{$i18n[dir][subdir].items[1].text12}
+        | #{$i18n[dir][subdir].items[2].text10} 
+        a.link(href="http://192.168.1.1" target="_blank") #{$i18n[dir][subdir].items[2].text11}
+        | #{$i18n[dir][subdir].items[2].text12}
         - var img = "/assy/images/setup-wifi-conf.jpg"
         +process-image(img, img)
         +note(2, "画像を大きく")
           
-      li #{$i18n[dir][subdir].items[1].text13}
+      li #{$i18n[dir][subdir].items[2].text13}
         ol
           li
-            strong "#{$i18n[dir][subdir].items[1].text14}"
+            strong "#{$i18n[dir][subdir].items[2].text14}"
             |  : 
-            | #{$i18n[dir][subdir].items[1].text15}
+            | #{$i18n[dir][subdir].items[2].text15}
           li
-            strong "#{$i18n[dir][subdir].items[1].text16}"
+            strong "#{$i18n[dir][subdir].items[2].text16}"
             |  : 
-            | #{$i18n[dir][subdir].items[1].text17}
+            | #{$i18n[dir][subdir].items[2].text17}
           li
-            strong "#{$i18n[dir][subdir].items[1].text18}"
+            strong "#{$i18n[dir][subdir].items[2].text18}"
             |  : 
-            | #{$i18n[dir][subdir].items[1].text19}
+            | #{$i18n[dir][subdir].items[2].text19}
           li
-            | #{$i18n[dir][subdir].items[1].text20}
+            | #{$i18n[dir][subdir].items[2].text20}
       li
-        | #{$i18n[dir][subdir].items[1].text21}
+        | #{$i18n[dir][subdir].items[2].text21}
 
-    +itemtitle(dir, subdir, 2)
+    +itemtitle(dir, subdir, 3)
 
-    p #{$i18n[dir][subdir].items[2].text1}
+    p #{$i18n[dir][subdir].items[3].text1}
     ul
-      li #{$i18n[dir][subdir].items[2].text2}
+      li #{$i18n[dir][subdir].items[3].text2}
         dl
-          dt #{$i18n[dir][subdir].items[2].text3}
-          dd #{$i18n[dir][subdir].items[2].text4}
-            a.link(href="/"+$localeName+"/console/index.html" target="_blank") #{$i18n[dir][subdir].items[2].text5}
-            | #{$i18n[dir][subdir].items[2].text6}
-          dt #{$i18n[dir][subdir].items[2].text7}
+          dt #{$i18n[dir][subdir].items[3].text3}
+          dd #{$i18n[dir][subdir].items[3].text4}
+            a.link(href="/"+$localeName+"/console/index.html" target="_blank") #{$i18n[dir][subdir].items[3].text5}
+            | #{$i18n[dir][subdir].items[3].text6}
+          dt #{$i18n[dir][subdir].items[3].text7}
           dd
-            | #{$i18n[dir][subdir].items[2].text8}
-            a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi" target="_blank") #{$i18n[dir][subdir].items[2].text9}
-            | #{$i18n[dir][subdir].items[2].text10}
+            | #{$i18n[dir][subdir].items[3].text8}
+            a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi" target="_blank") #{$i18n[dir][subdir].items[3].text9}
+            | #{$i18n[dir][subdir].items[3].text10}
       
-      li #{$i18n[dir][subdir].items[2].text11}
+      li #{$i18n[dir][subdir].items[3].text11}
         - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
         +process-image(img, img)
-      li #{$i18n[dir][subdir].items[2].text12}
-        | #{$i18n[dir][subdir].items[2].text13}
-        a.link(href='#troubleshooting-cannot-connect') #{$i18n[dir][subdir].items[2].text14}
-        | #{$i18n[dir][subdir].items[2].text15}
+      li #{$i18n[dir][subdir].items[3].text12}
+        | #{$i18n[dir][subdir].items[3].text13}
+        a.link(href='#troubleshooting-cannot-connect') #{$i18n[dir][subdir].items[3].text14}
+        | #{$i18n[dir][subdir].items[3].text15}
         - var img = "/assy/images/setup-connection2-"+$localeName+".jpg"
         +process-image(img, img)
 
-    +itemtitle(dir, subdir, 3)
+    +itemtitle(dir, subdir, 4)
     
-    h5 #{$i18n[dir][subdir].items[3].text1}
+    h5 #{$i18n[dir][subdir].items[4].text1}
     ul
-      li #{$i18n[dir][subdir].items[3].text2}
-      li #{$i18n[dir][subdir].items[3].text3}
-      li #{$i18n[dir][subdir].items[3].text4}
-    h5 #{$i18n[dir][subdir].items[3].text5}
+      li #{$i18n[dir][subdir].items[4].text2}
+      li #{$i18n[dir][subdir].items[4].text3}
+      li #{$i18n[dir][subdir].items[4].text4}
+    h5 #{$i18n[dir][subdir].items[4].text5}
     ul
-      li #{$i18n[dir][subdir].items[3].text6}
-    h5#troubleshooting-cannot-connect #{$i18n[dir][subdir].items[3].text7}
+      li #{$i18n[dir][subdir].items[4].text6}
+    h5#troubleshooting-cannot-connect #{$i18n[dir][subdir].items[4].text7}
     ul
-      li #{$i18n[dir][subdir].items[3].text8}
-      li #{$i18n[dir][subdir].items[3].text9}
-      li #{$i18n[dir][subdir].items[3].text10}
+      li #{$i18n[dir][subdir].items[4].text8}
+      li #{$i18n[dir][subdir].items[4].text9}
+      li #{$i18n[dir][subdir].items[4].text10}
         dl
-          dt #{$i18n[dir][subdir].items[3].text11}
+          dt #{$i18n[dir][subdir].items[4].text11}
           dd
-            | #{$i18n[dir][subdir].items[3].text12}
-            a.link(href="https://support.apple.com/kb/DL999") #{$i18n[dir][subdir].items[3].text13}
-            | #{$i18n[dir][subdir].items[3].text14}
-          dt #{$i18n[dir][subdir].items[3].text15}
+            | #{$i18n[dir][subdir].items[4].text12}
+            a.link(href="https://support.apple.com/kb/DL999") #{$i18n[dir][subdir].items[4].text13}
+            | #{$i18n[dir][subdir].items[4].text14}
+          dt #{$i18n[dir][subdir].items[4].text15}
           dd 
-            | #{$i18n[dir][subdir].items[3].text16}
-            a.link(href="http://avahi.org/") #{$i18n[dir][subdir].items[3].text17}
-            | #{$i18n[dir][subdir].items[3].text18}
+            | #{$i18n[dir][subdir].items[4].text16}
+            a.link(href="http://avahi.org/") #{$i18n[dir][subdir].items[4].text17}
+            | #{$i18n[dir][subdir].items[4].text18}
  
     +nextstep('/console/index.html', $i18n.console.label)
