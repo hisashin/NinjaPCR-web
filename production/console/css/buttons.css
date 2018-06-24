@@ -14,15 +14,15 @@ input[type="button"] {
 	padding:4px 8px;
 }
 input.small_button, a.small_button {
-	background: -webkit-linear-gradient(top, #ffffff, #dddddd);
+	/*background: -webkit-linear-gradient(top, #ffffff, #dddddd);*/
 }
 .options_button {
 	float: right;
-	background: -webkit-linear-gradient(top, #ffffff, #dddddd);
+	/*background: -webkit-linear-gradient(top, #ffffff, #dddddd);*/
 }
 
 input.home_button {
-	background: -webkit-linear-gradient(top, #ffffff, #dddddd);
+	/*background: -webkit-linear-gradient(top, #ffffff, #dddddd);*/
 	font-size:120%;
 	text-indent:20px;
 	background-image:url(../images/home_background.png)!important;
@@ -34,8 +34,10 @@ input.edit {
 }
 
 .start {
-	background: -webkit-linear-gradient(top, #beebff, #58cdff);
+	/*background: -webkit-linear-gradient(top, #beebff, #58cdff);*/
+	background-color:#00a8f0;
 	border-color: #00a8f0;
+	color: #fff;
 }
 
 .homeRunning {
@@ -44,18 +46,24 @@ input.edit {
 }
 
 .unplugged {
-	background: -webkit-linear-gradient(top, #beebff, #58cdff);
+	/*background: -webkit-linear-gradient(top, #beebff, #58cdff);*/
 	border-color: #00a8f0;
+	background-color:#00a8f0;
+	color:#fff;
 }
 
 .save {
-	background: -webkit-linear-gradient(top, #b5ffa8, #76dc64);
+	/*background: -webkit-linear-gradient(top, #b5ffa8, #76dc64);*/
 	border-color: #43a931;
+	background-color:#43a931;
+	color:#fff;
 }
 
 .saveEdits {
-	background: -webkit-linear-gradient(top, #b5ffa8, #76dc64);
+	/* background: -webkit-linear-gradient(top, #b5ffa8, #76dc64);*/
 	border-color: #43a931;
+  background-color:#43a931;
+  color:#fff;
 }
 
 .cancel {
@@ -75,17 +83,19 @@ input.edit {
 }
 
 input.button {
-	border-radius: 9px!important;
-	width: 345px;
+	border-radius: 0px!important;
+	width: 340px;
 	text-align: center;
 	font-weight:bold;
 	font-size: 18px;
 	outline: 0;
-	padding: 12px;
+	padding: 10px;
 	cursor: pointer;
 	display: block;
 	float: left;
 	text-decoration: none;
+	margin:2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -122,19 +132,20 @@ a.button:active span {
 }
 
 a.small_button {
-	border-radius: 9px;
+	border-radius: 0px;
 	width: 80px;
 	text-align: center;
 	font-size: 12px;
 	outline: 0;
 	margin: 20px 4px;
-	border: #B8B8B8 solid 1px;
+	/*border: #B8B8B8 solid 1px;*/
 	color: #000000;
 	cursor: pointer;
 	vertical-align: middle;
 	padding: 5px 10px;
 	text-decoration: none;
 	font-weight: normal;
+	background-color:#eee;
 }
 
 
