@@ -91,36 +91,26 @@ block main
     +itemtitle(dir, subdir, 2)
 
     p
+      p #{$i18n[dir][subdir].items[2].text1}
       .row
         - var img = "/op/images/tube-set1.jpg"
         +process-image(img, img)
         - var img = "/op/images/tube-set2.jpg"
         +process-image(img, img)
-
-    +itemtitle(dir, subdir, 3)
-
-    p
+      p #{$i18n[dir][subdir].items[2].text2}
       .row
         - var img = "/op/images/tube-set3.jpg"
         +process-image(img, img)
         - var img = "/op/images/tube-set4.jpg"
         +process-image(img, img)
-
-    +itemtitle(dir, subdir, 4)
-
-    p
+      p #{$i18n[dir][subdir].items[2].text3}
       .row
         - var img = "/op/images/tube-set5.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[4].text1}
-
-    +itemtitle(dir, subdir, 5)
-
-    p
+      p #{$i18n[dir][subdir].items[2].text4}
       .row
         - var img = "/op/images/tube-set6.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[5].text1}
     
     +itemtitle(dir, subdir, 6)
 
