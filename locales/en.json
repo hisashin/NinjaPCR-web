@@ -356,7 +356,7 @@
               "text3" : "をご覧ください。"
             },
             {
-              "title" : "トラブルシューティング",
+              "title" : "Troubleshooting",
               "text1" : "APモードで起動したはずだがAPが表示されない",
               "text2" : "NinjaPCRと端末が離れすぎていると電波が届きません。",
               "text3" : "機器によっては新しく発見したアクセスポイントを認識するのに時間がかかる場合があります。少し時間を置いてみてください。また、リストに大量のアクセスポイントが表示されている場合は、画面外に表示されていないか、スクロールして確認してみてください。",
@@ -368,13 +368,13 @@
               "text9" : "WiFi設定モードではなく通常モードで起動していますか? 起動時にModeボタンを押さず、Resetだけを押してください。",
               "text10" : "NinjaPCRはデバイスと接続するためにmDNSという仕組みを利用しています。mDNSはmacOSおよびiOSでは標準で利用することができます。WindowsやLinuxでも大抵はmDNSをサポートするソフトウェアがインストールされていますが、そうでない場合もありますので、以下の方法でインストールしてください。",
               "text11" : "Windows",
-              "text12" : "",
+              "text12" : "Please nstall ",
               "text13" : "Bonjour Print Services",
-              "text14" : "をインストールします。",
+              "text14" : ". It is one of the easiest way to install mDNS support.",
               "text15" : "Linux",
-              "text16" : "",
+              "text16" : "Please install ",
               "text17" : "avahi",
-              "text18" : "をインストールします。インストールの方法はお使いの環境によって違いますが、メジャーなソフトウェアなので、ほとんどのディストリビューション向けに簡単にインストールできるパッケージが用意されています。"
+              "text18" : ". Avahi is a very popular software and most distributions support it with their own package systems."
             }
           ]
         }

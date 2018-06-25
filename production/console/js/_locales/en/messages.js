@@ -113,6 +113,7 @@ window.MESSAGE_EN = {
   "errorMessage7":{"message":"Cannot measure well temperature. Well temperature sensor seems to be short-circuited."},
   "errorMessage8":{"message":"Cannot control lid temperature. Lid heater or temperature sensor seems to be detached."},
   "errorMessage9":{"message":"Cannot control well temperature. Well and peltier device seems to be detached."},
+  "errorMessage10":{"message":"Cannot control well temperature. Peltier device seems to be connected opposite to the right direction."},
   "androidGuide":{"message":"You need to install NinjaPCR app. Please install the app on Play Store."},
   "deviceName":{"message":"Device name"},
   "connectionStatusDisconnected":{"message":"Disconnected"},

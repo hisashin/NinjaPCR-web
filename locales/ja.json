@@ -320,17 +320,17 @@
             {
               "title" : "WiFi設定を入力します。",
               "text1" : "SSID",
-              "text2" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
+              "text2" : "プルダウンメニューの中から、接続したいアクセスポイントを選択します。 この中にない場合は、その下のテキストボックスに手動でSSID名を入力してください。",
               "text3" : "Password",
               "text4" : "ネットワークのパスワードを入力します。",
               "text5" : "Device name",
-              "text6" : "Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
+              "text6" : "デバイス固有の名前をアルファベットまたは数字の4〜8文字で入力してください。 デフォルトの \"ninjapcr\" のままでも利用できますが、複数のデバイスを識別したい場合などは重複しないようにそれぞれホスト名をつけて下さい。",
               "text7" : "設定が完了すると、NinjaPCRは自動で再起動し、指定したアクセスポイントに接続します。"
             },
             {
               "title" : "WiFiの設定を元に戻す",
-              "text1" : "Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to as you have done in ",
-              "text2" : "."
+              "text1" : "PCやスマートフォンのWiFi設定を開き、元のアクセスポイントに再び接続します。",
+              "text2" : ""
             },
             {
               "title" : "コンソールを開く",
@@ -346,7 +346,7 @@
             },
             { 
               "title" : "デバイス名入力",
-              "text1" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
+              "text1" : "先程の設定で入力した「デバイス名」を下のテキストボックスに入力して \"接続\" ボタンを押します。"
             },  
             {  
               "title" : "接続テスト",
@@ -438,7 +438,7 @@
             },
             {
               "title" : "起動 〜 実験開始",
-              "text1" : "電源を接続し、コンソールを開いて接続します。Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
+              "text1" : "電源を接続し、コンソールを開いて接続します。先程の設定で入力した「デバイス名」を下のテキストボックスに入力して「接続」ボタンを押します。"
             },
             {
               "title" : "プロファイル選択",
