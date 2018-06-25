@@ -133,9 +133,17 @@ block main
       .row
         - var img = "/op/images/run1-"+$localeName+".jpg"
         +process-image(img, img)
-        - var img = "/op/images/run2-"+$localeName+".jpg"
-        +process-image(img, img)
       | #{$i18n[dir][subdir].items[7].text1}
+      
+    p #{$i18n[dir][subdir].items[7].text2}
+      .row
+        - var img = "/op/images/progress-"+$localeName+".jpg"
+        +process-image(img, img)
+    
+    p #{$i18n[dir][subdir].items[7].text3}
+      .row
+        - var img = "/op/images/stop-"+$localeName+".jpg"
+        +process-image(img, img)
     
     +itemtitle(dir, subdir, 8)
 
