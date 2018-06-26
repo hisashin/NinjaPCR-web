@@ -90,54 +90,53 @@ block main
     
     +itemtitle(dir, subdir, 2)
 
-    p
-      p #{$i18n[dir][subdir].items[2].text1}
-      .row
-        - var img = "/op/images/tube-set1.jpg"
-        +process-image(img, img)
-        - var img = "/op/images/tube-set2.jpg"
-        +process-image(img, img)
-      p #{$i18n[dir][subdir].items[2].text2}
-      .row
-        - var img = "/op/images/tube-set3.jpg"
-        +process-image(img, img)
-        - var img = "/op/images/tube-set4.jpg"
-        +process-image(img, img)
-      p #{$i18n[dir][subdir].items[2].text3}
-      .row
-        - var img = "/op/images/tube-set5.jpg"
-        +process-image(img, img)
-      p #{$i18n[dir][subdir].items[2].text4}
-      .row
-        - var img = "/op/images/tube-set6.jpg"
-        +process-image(img, img)
-    
+    p #{$i18n[dir][subdir].items[2].text1}
+    .row
+      - var img = "/op/images/tube-set1.jpg"
+      +process-image(img, img)
+      - var img = "/op/images/tube-set2.jpg"
+      +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text2}
+    .row
+      - var img = "/op/images/tube-set3.jpg"
+      +process-image(img, img)
+      - var img = "/op/images/tube-set4.jpg"
+      +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text3}
+    .row
+      - var img = "/op/images/tube-set5.jpg"
+      +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text4}
+    .row
+      - var img = "/op/images/tube-set6.jpg"
+      +process-image(img, img)
+
+    // Start experiment
     +itemtitle(dir, subdir, 6)
-
-    p
-      .row
-        - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[6].text1}
-
-    +itemtitle(dir, subdir, 7)
-
-    p
-      .row
-        - var img = "/op/images/run1-"+$localeName+".jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[7].text1}
-      
-    p #{$i18n[dir][subdir].items[7].text2}
-      .row
-        - var img = "/op/images/progress-"+$localeName+".jpg"
-        +process-image(img, img)
     
-    p #{$i18n[dir][subdir].items[7].text3}
+    p #{$i18n[dir][subdir].items[6].text1}
+
+    .row
+      - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
+      +process-image(img, img)
+
+    p #{$i18n[dir][subdir].items[6].text2}
+    
+    .row
+      - var img = "/op/images/run1-"+$localeName+".jpg"
+      +process-image(img, img)
+    | #{$i18n[dir][subdir].items[6].text3}
+    
+    .row
+      - var img = "/op/images/progress-"+$localeName+".jpg"
+      +process-image(img, img)
+    
+    p #{$i18n[dir][subdir].items[6].text4}
       .row
         - var img = "/op/images/stop-"+$localeName+".jpg"
         +process-image(img, img)
     
+      
     +itemtitle(dir, subdir, 8)
 
     p

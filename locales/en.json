@@ -443,13 +443,12 @@
                 },
                 {
                   "title" : "起動 〜 実験開始",
-                  "text1" : "電源を接続し、コンソールを開いて接続します。Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
+                  "text1" : "電源を接続し、コンソールを開いて接続します。Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
+                  "text2" : "プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始します。",
+                  "text3" : "実験中は、ウェルと蓋の温度、チューブ内試料の推定温度が表示されます。",
+                  "text4" : "途中で実験を中断する場合は、「停止」ボタンを押してください。"
                 },
                 {
-                  "title" : "プロファイル選択",
-                  "text1" : "プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始します。",
-                  "text2" : "実験中は、ウェルと蓋の温度、チューブ内試料の推定温度が表示されます。",
-                  "text3" : "途中で実験を中断する場合は、「停止」ボタンを押してください。"
                 },
                 {
                   "title" : "実験が終わったら",

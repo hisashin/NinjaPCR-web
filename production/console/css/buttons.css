@@ -34,33 +34,29 @@ input.edit {
 }
 
 .start {
-	/*background: -webkit-linear-gradient(top, #beebff, #58cdff);*/
 	background-color:#00a8f0;
 	border-color: #00a8f0;
 	color: #fff;
 }
 
 .homeRunning {
-	background: -webkit-linear-gradient(top, #beebff, #58cdff);
-	border-color: #00a8f0;
+	background-color: #00a8f0;
+	color: #fff;
 }
 
 .unplugged {
-	/*background: -webkit-linear-gradient(top, #beebff, #58cdff);*/
 	border-color: #00a8f0;
 	background-color:#00a8f0;
 	color:#fff;
 }
 
 .save {
-	/*background: -webkit-linear-gradient(top, #b5ffa8, #76dc64);*/
 	border-color: #43a931;
 	background-color:#43a931;
 	color:#fff;
 }
 
 .saveEdits {
-	/* background: -webkit-linear-gradient(top, #b5ffa8, #76dc64);*/
 	border-color: #43a931;
   background-color:#43a931;
   color:#fff;
