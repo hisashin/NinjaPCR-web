@@ -521,7 +521,20 @@
       "text11" : "Webブラウザ",
       "text12" : "Safari・Google Chrome・Firefox (Androidの場合のみ",
       "text13" : "専用アプリケーション",
-      "text14" : "が必要です)"
+      "text14" : "が必要です)",
+      "text15" : "Hardware spec",
+      "text16" : "ウェル数",
+      "text17" : "4x4",
+      "text18" : "温度変化速度",
+      "text19" : "TODO",
+      "text20" : "消費電力",
+      "text21" : "TODO",
+      "text22" : "対応電源",
+      "text23" : "TODO",
+      "text24" : "寸法",
+      "text25" : "TODO",
+      "text26" : "重量",
+      "text27" : "TODO"
     },
     "about" : {
         "label" : "チーム",
