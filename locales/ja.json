@@ -297,11 +297,11 @@
             },
             {
               "title" : "ネットワーク設定モードでの起動",
-              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."
+              "text1" : "\"Mode\" ボタンを押したまま \"Reset\" ボタンを押し、\"Mode\" ボタンを押したまま \"Reset\" ボタンを離します。数秒でNinjaPCRはWiFi設定モードで起動します。"
             },
             {
               "title" : "一時的にWiFiの設定を変える",
-              "text1" : "APモードで起動した場合、NinjaPCRはWiFiアクセスポイントとして機能しています。接続時にパスワード \"ninjapcr\" を入力してください。",
+              "text1" : "WiFi設定モードで起動した場合、NinjaPCRはWiFiアクセスポイントとして機能しています。接続時にパスワード \"ninjapcr\" を入力してください。",
               "text2" : "macOSの場合",
               "text3" : "メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
               "text4" : "Windowsの場合",
@@ -309,28 +309,28 @@
               "text6" : "iOSの場合",
               "text7" : "ホーム画面から「設定」を開き、「WiFi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、\"NinjaPCR\" を接続します。",
               "text8" : "Androidの場合",
-              "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
+              "text9" : "\"設定\" を開き、 \"Wi-Fi\" 画面を開きます。アクセスポイント一覧から \"NinjaPCR\" を選択します。"
             },
             {
               "title" : "初期設定画面表示",
-              "text1" : "Open",
-              "text2" : "the WiFi settings page (http://192.168.1.1)",
-              "text3" : " and setup. If the page doesn't show up, please retry after a few seconds."
+              "text1" : "",
+              "text2" : "WiFi設定ページ (http://192.168.1.1)",
+              "text3" : "を開き、設定を行います。ページが開けない場合、数秒時間をおいて再度お試しください。"
             },
             {
-              "title" : "Input WiFi Settings",
+              "title" : "WiFi設定を入力します。",
               "text1" : "SSID",
-              "text2" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
+              "text2" : "プルダウンメニューの中から、接続したいアクセスポイントを選択します。 この中にない場合は、その下のテキストボックスに手動でSSID名を入力してください。",
               "text3" : "Password",
-              "text4" : "Input the password of the network.",
+              "text4" : "ネットワークのパスワードを入力します。",
               "text5" : "Device name",
-              "text6" : "Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
-              "text7" : "After you set up the device, it will restart and connect to the specified access point."
+              "text6" : "デバイス固有の名前をアルファベットまたは数字の4〜8文字で入力してください。 デフォルトの \"ninjapcr\" のままでも利用できますが、複数のデバイスを識別したい場合などは重複しないようにそれぞれホスト名をつけて下さい。",
+              "text7" : "設定が完了すると、NinjaPCRは自動で再起動し、指定したアクセスポイントに接続します。"
             },
             {
               "title" : "WiFiの設定を元に戻す",
-              "text1" : "Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to as you have done in ",
-              "text2" : "."
+              "text1" : "PCやスマートフォンのWiFi設定を開き、元のアクセスポイントに再び接続します。",
+              "text2" : ""
             },
             {
               "title" : "コンソールを開く",
@@ -346,7 +346,7 @@
             },
             { 
               "title" : "デバイス名入力",
-              "text1" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
+              "text1" : "先程の設定で入力した「デバイス名」を下のテキストボックスに入力して \"接続\" ボタンを押します。"
             },  
             {  
               "title" : "接続テスト",
@@ -399,23 +399,23 @@
               "text7" : "複数のパターンを繰り返す場合などは \"More Options\" ボタンを押すことでサイクルを増やすことができます。また、\"Heater Lid\" で蓋の温度 (デフォルトでは110℃) を指定することができます。",
               "text8" : "たとえば次のプロファイルの場合は図のように作成します。",
               "text9" : "x1",
-              "text10" : "Initial Denaturation",
+              "text10" : "初期変性",
               "text11" : "95℃",
-              "text12" : "2 minutes",
+              "text12" : "2分",
               "text13" : "x35",
-              "text14" : "Denaturation",
+              "text14" : "変性",
               "text15" : "95℃",
-              "text16" : "30 seconds",
-              "text17" : "Annealing",
+              "text16" : "30秒",
+              "text17" : "アニーリング",
               "text18" : "55℃",
-              "text19" : "30 seconds",
-              "text20" : "Extension",
+              "text19" : "30秒",
+              "text20" : "伸長",
               "text21" : "72℃",
-              "text22" : "30 seconds",
+              "text22" : "30秒",
               "text23" : "x1",
-              "text24" : "Final extension",
+              "text24" : "最終伸長",
               "text25" : "72℃",
-              "text26" : "10 minutes",
+              "text26" : "10分",
               "text27" : "保存",
               "text28" : "編集が終わったら \"Save Preset\" を押し、プロファイルに名前をつけて保存します。",
               "text29" : "プロファイルはブラウザのストレージに保存します。ブラウザの設定などでデータを消去すると、プロファイルは消去されます。また、プライベートモードなどデータの保存を行わないモードで動かした場合は保存されません。",
@@ -423,30 +423,22 @@
               "text31" : "左上のゴミ箱のアイコンをクリックすると、プロファイルを削除できます。"
             },
             {
-              "title" : "蓋を開ける"
-            },
-            {
-              "title" : "チューブを挿す"
-            },
-            {
-              "title" : "蓋を閉める",
-              "text1" : "軽く力を入れ、ラッチがカチッとはまるまで閉めてください。"
-            },
-            {
-              "title" : "ノブを締める",
-              "text1" : "ノブを時計回りにひねり、蓋内部のアルミ板が軽くチューブの蓋を押さえるようにします。強く締め付ける必要はありません。"
+              "title" : "チューブのセット",
+              "text1" : "蓋を開けます。",
+              "text2" : "ウェルの穴にチューブを挿します。",
+              "text3" : "蓋を閉めます。軽く力を入れ、ラッチがカチッとはまるまで閉めてください。",
+              "text4" : "ノブを時計回りにひねり、蓋内部のアルミ板が軽くチューブの蓋を押さえるようにします。強く締め付ける必要はありません。"
             },
             {
               "title" : "起動 〜 実験開始",
-              "text1" : "電源を接続し、コンソールを開いて接続します。Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
-            },
-            {
-              "title" : "プロファイル選択",
-              "text1" : "プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始てください。"
+              "text1" : "電源を接続し、コンソールを開いて接続します。WiFi設定時に入力した「デバイス名」を下のテキストボックスに入力して「接続」ボタンを押します。",
+              "text2" : "プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始します。",
+              "text3" : "実験中は、ウェルと蓋の温度、チューブ内試料の推定温度が表示されます。",
+              "text4" : "途中で実験を中断する場合は、「停止」ボタンを押してください。"
             },
             {
               "title" : "実験が終わったら",
-              "text1" : "実験が終わると、画面に \"実験完了\" と表示されます。この状態でも最終段階での温度維持が行われていますので、それを止めるには \"Stop\" ボタンを押します。",
+              "text1" : "実験が終わると、画面に「実験完了」 と表示されます。この状態でも最終段階での温度維持が行われており、ファンも回っていますので、それを止めるには「停止」ボタンを押します。",
               "text2" : "蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場合がありますので、手を触れないように気をつけて取り出してください。",
               "text3" : "実験完了後は必ず電源を抜いてください。"
             }

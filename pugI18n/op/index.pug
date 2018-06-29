@@ -29,7 +29,7 @@ block main
               p
                 .row
                   - var img = "/op/images/manage-profile-"+$localeName+".jpg"
-                  +image(img, img)
+                  +process-image(img, img)
                 | #{$i18n[dir][subdir].items[1].text3}
           .card-header#headingProfileEdit
             h5.mb-0
@@ -69,7 +69,7 @@ block main
                       .col-3 #{$i18n[dir][subdir].items[1].text25}
                       .col-4 #{$i18n[dir][subdir].items[1].text26}
               - var img = "/op/images/profile-sample-"+$localeName+".jpg"
-              +image(img, img)
+              +process-image(img, img)
           .card-header#headingProfileSave
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseProfileSave" aria-expanded="false" aria-controls="collpseProfileSave") #{$i18n[dir][subdir].items[1].text27}
@@ -77,73 +77,74 @@ block main
             .card-body
               p #{$i18n[dir][subdir].items[1].text28}
               p #{$i18n[dir][subdir].items[1].text29}
+              - var img = "/op/images/profile-save-"+$localeName+".jpg"
+              +process-image(img, img)
           .card-header#headingProfileDelete
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseProfileDelete" aria-expanded="false" aria-controls="collpseProfileDelete") #{$i18n[dir][subdir].items[1].text30}
           .collapse#collapseProfileDelete(aria-labelledby="headingProfileDelete" data-parent="#accordion1")
             .card-body
               p #{$i18n[dir][subdir].items[1].text31}
-      +note('1', '上記の表のプロファイルを作成している画面のスクリーンショット')
+              - var img = "/op/images/profile-delete-"+$localeName+".jpg"
+              +process-image(img, img)
     
     +itemtitle(dir, subdir, 2)
 
-    p
-      .row
-        - var img = "/op/images/tube-set1.jpg"
-        +process-image(img, img)
-        - var img = "/op/images/tube-set2.jpg"
-        +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text1}
+    .row
+      - var img = "/op/images/tube-set1.jpg"
+      +process-image(img, img)
+      - var img = "/op/images/tube-set2.jpg"
+      +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text2}
+    .row
+      - var img = "/op/images/tube-set3.jpg"
+      +process-image(img, img)
+      - var img = "/op/images/tube-set4.jpg"
+      +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text3}
+    .row
+      - var img = "/op/images/tube-set5.jpg"
+      +process-image(img, img)
+    p #{$i18n[dir][subdir].items[2].text4}
+    .row
+      - var img = "/op/images/tube-set6.jpg"
+      +process-image(img, img)
 
+    // Start experiment
     +itemtitle(dir, subdir, 3)
+    
+    p #{$i18n[dir][subdir].items[3].text1}
 
-    p
+    .row
+      - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
+      +process-image(img, img)
+
+    p #{$i18n[dir][subdir].items[3].text2}
+    
+    .row
+      - var img = "/op/images/run1-"+$localeName+".jpg"
+      +process-image(img, img)
+    | #{$i18n[dir][subdir].items[3].text3}
+    
+    .row
+      - var img = "/op/images/progress-"+$localeName+".jpg"
+      +process-image(img, img)
+    
+    p #{$i18n[dir][subdir].items[3].text4}
       .row
-        - var img = "/op/images/tube-set3.jpg"
+        - var img = "/op/images/stop-"+$localeName+".jpg"
         +process-image(img, img)
-        - var img = "/op/images/tube-set4.jpg"
-        +process-image(img, img)
-
+    
+      
     +itemtitle(dir, subdir, 4)
 
     p
-      .row
-        - var img = "/op/images/tube-set5.jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[4].text1}
-
-    +itemtitle(dir, subdir, 5)
-
-    p
-      .row
-        - var img = "/op/images/tube-set6.jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[5].text1}
-    
-    +itemtitle(dir, subdir, 6)
-
-    p
-      .row
-        - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[6].text1}
-
-    +itemtitle(dir, subdir, 7)
-
-    p
-      .row
-        - var img = "/assy/images/run1-"+$localeName+".jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/run2-"+$localeName+".jpg"
-        +process-image(img, img)
-      | #{$i18n[dir][subdir].items[7].text1}
-    
-    +itemtitle(dir, subdir, 8)
-
-    p
-      .row
-        - var img = "/op/images/profile-finish-"+$localeName+".jpg"
-        +image(img, img)
-      p #{$i18n[dir][subdir].items[8].text1}
-      p #{$i18n[dir][subdir].items[8].text2}
-      p #{$i18n[dir][subdir].items[8].text3}
+      p #{$i18n[dir][subdir].items[4].text1}
+      p #{$i18n[dir][subdir].items[4].text2}
+        .row
+          - var img = "/op/images/tube-set3.jpg"
+          +process-image(img, img)
+          tube-set3
+      p #{$i18n[dir][subdir].items[4].text3}
     
