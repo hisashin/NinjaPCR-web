@@ -132,12 +132,20 @@ function compareVersion (version, toVersion) {
  */
 function listExperiments() {
 	pcrStorage.loadList(function(experiments) {
+	 var lastExperiment = null;
+    try {
+       lastExperiment = localStorage.getItem("lastExperiment");
+       console.log("lastExperiment=" + lastExperiment);
+    } catch (e) {
+    }
 		presetsHTML = "<select id='dropdown'>";
 		if (experiments && experiments.length > 0) {
 			for ( var i = 0; i < experiments.length; i++) {
 				var experiment = experiments[i];
 				if (experiment.id && experiment.name) {
-					presetsHTML += '<option value="' + experiment.id + '">' + experiment.name + "</option>";
+				  console.log("ID="+experiment.id)
+				  var selected = (experiment.id==lastExperiment)?" selected":"";
+					presetsHTML += '<option value="' + experiment.id +  '" ' + selected + '>' + experiment.name + "</option>";
 				}
 			}
 		}
@@ -165,6 +173,11 @@ function listSubmit() {
 	}
 	// what is selected in the drop down menu?
 	experimentID = $("#dropdown").val();
+	// save if possible
+	try {
+	   localStorage.setItem("lastExperiment", experimentID);
+	} catch (e) {
+	}
 	// load the selected experiment
 	loadExperiment(experimentID);
 }
@@ -667,6 +680,10 @@ function prepareButtons() {
 	$('#Cancel').on('click', function() {
 		// what is selected in the drop down menu on the front page?
 		experimentID = $("#dropdown").val();
+    try {
+       localStorage.setItem("lastExperiment", experimentId);
+    } catch (e) {
+    }
 		// clear the form
 		clearForm();
 		// load the selected experiment
