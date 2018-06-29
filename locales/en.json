@@ -214,11 +214,12 @@
               "title" : "Heatsink",
               "text1" : "Hold white leg of heatsink in left hand. Rotate counterclockwise black cap and pull by right hand. Then it will be removed easily. Remove all 4 legs.",
               "text2" : "Peel of cover sticker of heatsink and smooth grease. If there is no grease left, use spare grease.",
-              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly and confirm that there is no gap between heatsink and aluminium plate."
+              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly. At this point, you may see small gap between heatsink and aluminium plate.",
+              "text4" : "Turn upside down and push well downward so that there is no gap between heatsink and aluminium plate."
             },
             {
               "title" : "Fill Space",
-              "text1" : "Turn upside down and put sponge to fill the gap between well and top board using straight driver. No need to put it deeply because purpose of this sponge is not to warm well but avoid airflow from bottom body to lid. Just fill the gap."
+              "text1" : "Fill the gap between well and top board with sponge using straight driver. No need to put it deeply because purpose of this sponge is not to warm well but avoid airflow from bottom body to lid. Just fill the gap."
             },
             {
               "title" : "Mount Lid",

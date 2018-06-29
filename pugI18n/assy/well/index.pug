@@ -25,6 +25,7 @@ block main
     +itemtitle(dir, subdir, 1)
 
     p
+      +note('1001', 'マルチスパナを使用してしっかり締めている図に変更')
       .row
         - var img = "/assy/images/well-wood21.jpg"
         +process-image(img, img)
@@ -86,7 +87,6 @@ block main
       | #{$i18n[dir][subdir].items[4].text1}
     
     p
-      +note(4, "アルミから青いテープをはがしている写真を追加")
       .row
         - var img = "/assy/images/well-aluminium-peel.jpg"
         +process-image(img, img)
@@ -119,10 +119,17 @@ block main
       .row
         - var img = "/assy/images/well-heatsink-complete1.jpg"
         +process-image(img, img)
-        +note(5, "マルチスパナで締めている写真に差し替えまたは追加")
+        +note(5, "マルチスパナで締めている写真に差し替えまたは追加。隙間がない写真を、隙間がある写真に差し替え")
         - var img = "/assy/images/well-heatsink-complete2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[5].text3}
+
+    p
+      .row
+        +note(1002, "ひっくり返して指で抑える写真と、それによっと隙間がなくなったことを示す写真に差し替え")
+        - var img = "/assy/images/well-heatsink-complete2.jpg"
+        +process-image(img, img)
+      | #{$i18n[dir][subdir].items[5].text4}
 
     +itemtitle(dir, subdir, 6)
 
