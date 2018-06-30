@@ -1,3 +1,7 @@
+.btn{
+    white-space:normal !important;
+    word-wrap: break-word; 
+}
 .carousel-indicators li {
   border-radius: 12px;
   width: 12px;
