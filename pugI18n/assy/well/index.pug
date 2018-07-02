@@ -147,9 +147,9 @@ block main
       .row
         - var img = "/assy/images/well-hinge1.jpg"
         +process-image(img, img)
-        +note(6, "オフセットドライバに差し替え")
         - var img = "/assy/images/well-hinge2.jpg"
         +process-image(img, img)
+        +note(6, "オフセットドライバ追加")
         - var img = "/assy/images/well-hinge3.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-hinge4.jpg"
@@ -158,16 +158,15 @@ block main
 
     p
       .row
-        +note(7, "オフセットドライバに差し替え")
         - var img = "/assy/images/well-latch1.jpg"
         +process-image(img, img)
+        +note(7, "オフセットドライバ追加")
         - var img = "/assy/images/well-latch2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[7].text2}
 
     p
       .row
-        +note(8, "オフセットドライバに差し替え")
         - var img = "/assy/images/well-latch3.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-latch4.jpg"

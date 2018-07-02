@@ -24,20 +24,22 @@ block main
     +itemtitle(dir, subdir, 1)
     p
       .row
-       - var img = "/assy/images/lid-screws1.jpg"
+        - var img = "/assy/images/lid-heater2.jpg"
+        +process-image(img, img, img)
+        +note('1001', 'ヒーターが付いていない写真に2枚とも2枚とも差し替え')
+        - var img = "/assy/images/lid-screws1.jpg"
         +process-image(img, img, img)
         - var img = "/assy/images/lid-screws2.jpg"
         +process-image(img, img, img)
-        +note('1001', '先にナットで固定してからヒーターを取り付ける写真に差し替え。NG例もほしい')
         | #{$i18n[dir][subdir].items[1].text1}
 
     p 
       .row
-        - var img = "/assy/images/lid-heater2.jpg"
-        +process-image(img, img, img)
         - var img = "/assy/images/lid-heater1.jpg"
         +process-image(img, img, img)
-        - var img = "/assy/images/lid-heater3.jpg"
+        - var img = "/assy/images/lid-screws1.jpg"
+        +process-image(img, img, img)
+        - var img = "/assy/images/lid-screws2.jpg"
         +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[1].text2}
 
