@@ -64,8 +64,9 @@ input.edit {
 
 .cancel {
 	float: right;
-	background: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-	border-color: #B8B8B8;
+	//background: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-color: #B8B8B8;
+  border-color: #B8B8B8;
 }
 
 .stop {
