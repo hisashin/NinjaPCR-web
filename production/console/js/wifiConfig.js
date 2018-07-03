@@ -13,7 +13,7 @@ function getDeviceHost () {
 }
 function startOTA () {
 	$('#update_starting_dialog').dialog('open');
-	this.sendRequestToDevice("/update", null, function(obj) {
+	communicator.sendRequestToDevice("/update", null, function(obj) {
 		$("#update_starting_dialog").dialog("close");
 		$('#updating_dialog').dialog('open');
 		DeviceResponse.checkConnectionInterval = setInterval(function(){

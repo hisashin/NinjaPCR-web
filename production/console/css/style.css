@@ -284,7 +284,7 @@ div.deviceStatus {
 
 /* Temperature Meters */
 meter {
-	-webkit-appearance: none;
+	/*-webkit-appearance: none;*/
 }
 
 ::-webkit-meter-bar {
@@ -303,7 +303,7 @@ meter {
 }
 
 #meterSample::-webkit-meter-optimum-value {
-	background: -webkit-linear-gradient(top, #a4e3ff 0%, #01a4ea 100%);
+	background: -webkit-linear-gradient(top, #ffbabb 0%, #ff585a 100%);
 }
 
 #OpenDownloadPage {
