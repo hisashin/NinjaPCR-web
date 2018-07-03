@@ -1,5 +1,5 @@
 var TempGraph = function (container) {
-	this.scaleIndex = 4; // Default stale: 30sec
+	this.scaleIndex = 6;
 	var options, start, i;
 	
 	this.container = container;
