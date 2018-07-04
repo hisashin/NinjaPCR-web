@@ -1,5 +1,33 @@
 var STORAGE_KEY_LAST_HOST_NAME = "ninjapcr_host";
 var DEFAULT_HOST = "ninjapcr";
+ConnectionStatus =
+{
+    DISCONNECTED: {
+      className: "disconnected",
+      label: "connectionStatusDisconnected",
+      buttonDisabled: false,
+    },
+    CONNECTING: {
+      className: "connecting",
+      label: "connectionStatusConnecting",
+      buttonDisabled: true,
+    },
+    CONNECTED: {
+      className: "connected",
+      label: "connectionStatusConnected",
+      buttonDisabled: true,
+    }
+};
+
+function showDeviceConnectionStatus(stat) {
+  $("#DeviceConnectionStatus").attr("class", stat.className);
+  $("#DeviceConnectionStatusLabel").text(getLocalizedMessage(stat.label));
+  if (stat.buttonDisabled){
+    $(".connectionUI").attr("disabled");
+  } else {
+    $(".connectionUI").removeAttr("disabled");
+  }
+}
 
 var DeviceResponse = {
 	onDeviceFound : null,
@@ -155,9 +183,7 @@ NetworkCommunicator.prototype.connect = function () {
       console.log(window.onResolveFailed);
       console.log("/connect failed");
       scope.connected = false;
-      $("#DeviceConnectionStatus").attr("class","disconnected");
-      $("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusDisconnected'));
-      $(".connectionUI").removeAttr("disabled");
+      showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
     }
   } else {
     this.doConnect();
@@ -167,8 +193,7 @@ NetworkCommunicator.prototype.doConnect = function () {
 	var scope = this;
 	this.sendRequestToDevice("/connect", null, function(obj) {
 			// Connected
-			$("#DeviceConnectionStatus").attr("class","connected");
-			$("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusConnected'));
+			showDeviceConnectionStatus(ConnectionStatus.CONNECTED);
 			scope.saveHostName(host);
 			scope.connected = true;
 			if (obj.running) {
@@ -208,13 +233,9 @@ NetworkCommunicator.prototype.doConnect = function () {
 		function () {
 			console.log("/connect failed");
 			scope.connected = false;
-			$("#DeviceConnectionStatus").attr("class","disconnected");
-			$("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusDisconnected'));
-			$(".connectionUI").removeAttr("disabled");
+			showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 		});
-	$(".connectionUI").attr("disabled", "true");
-	$("#DeviceConnectionStatus").attr("class","connecting");
-	$("#DeviceConnectionStatusLabel").text(getLocalizedMessage('connectionStatusConnecting'));
+    showDeviceConnectionStatus(ConnectionStatus.CONNECTING);
 }
 
 NetworkCommunicator.prototype.scanOngoingExperiment = function () {
@@ -240,6 +261,8 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 	var scope = this;
 	this.requestingStatus = true;
 	this.sendRequestToDevice("/status", null, function (obj) {
+	   // OnResponse
+      showDeviceConnectionStatus(ConnectionStatus.CONNECTED);
 			scope.requestingStatus = false;
 			scope.connected = true;
 			scope.statusTimeoutCount = 0;
@@ -250,8 +273,10 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 			}
 			callback(obj);
 		}, function () {
+		  // OnError (Timeout)
 			scope.connected = false;
-			if (scope.statusTimeoutAlert) {
+      showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
+			if (scope.statusTimeoutAlert || prevStatus=="complete") {
 				return;
 			}
 			scope.statusTimeoutCount++;
