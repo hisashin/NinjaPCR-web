@@ -16,8 +16,6 @@ block main
       +table($i18n[dir][subdir].items[0].table1)
 
     p
-    
-      +note('1', 'マルチスパナを入れた写真に差し替え')
       - var img = "/assy/images/unbox-bag1.jpg"
       +image(img, img)
       +table($i18n[dir][subdir].items[0].table2)
@@ -27,7 +25,6 @@ block main
       .row
         - var img = "/assy/images/lid-heater2.jpg"
         +process-image(img, img, img)
-        +note('1001', 'ヒーターが付いていない写真に2枚とも2枚とも差し替え')
         - var img = "/assy/images/lid-screws1.jpg"
         +process-image(img, img, img)
         - var img = "/assy/images/lid-screws2.jpg"
@@ -82,12 +79,10 @@ block main
         +process-image(img, img, img)
         - var img = "/assy/images/lid-cable-set-bad.jpg"
         +process-image(img, img, img)
-        - var img = "/assy/images/lid-cable-twist.jpg"
-        +process-image(img, img, img)
         - var img = "/assy/images/lid-cable-set.jpg"
         +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[2].text2}
-      +note('1002', 'ヒーターの線を入れるプロセスの写真を追加')
+      +note('1002', '支柱とケーブルの交点付近に矢印とOK/NG追加。OKは青、NGは赤')
     
     +itemtitle(dir, subdir, 3)
     

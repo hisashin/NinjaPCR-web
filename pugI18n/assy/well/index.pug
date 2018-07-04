@@ -25,7 +25,6 @@ block main
     +itemtitle(dir, subdir, 1)
 
     p
-      +note('1001', 'マルチスパナを使用してしっかり締めている図に変更')
       .row
         - var img = "/assy/images/well-wood21.jpg"
         +process-image(img, img)
@@ -82,7 +81,6 @@ block main
         +process-image(img, img)
         - var img = "/assy/images/well-peltier-on5.jpg"
         +process-image(img, img)
-      +note(1001, "穴を通っていることがわかりやすいよう、横からの写真も追加")
       | #{$i18n[dir][subdir].items[3].text3}
 
     +itemtitle(dir, subdir, 4)
@@ -129,14 +127,12 @@ block main
       .row
         - var img = "/assy/images/well-heatsink-complete1.jpg"
         +process-image(img, img)
-        +note(5, "マルチスパナで締めている写真に差し替えまたは追加。隙間がない写真を、隙間がある写真に差し替え")
         - var img = "/assy/images/well-heatsink-complete2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[5].text3}
 
     p
       .row
-        +note(1002, "ひっくり返して指で抑える写真と、それによっと隙間がなくなったことを示す写真に差し替え")
         - var img = "/assy/images/well-heatsink-complete3.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-heatsink-complete4.jpg"
@@ -161,7 +157,6 @@ block main
         +process-image(img, img)
         - var img = "/assy/images/well-hinge2.jpg"
         +process-image(img, img)
-        +note(6, "オフセットドライバ追加")
         - var img = "/assy/images/well-hinge3.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-hinge4.jpg"
@@ -172,7 +167,6 @@ block main
       .row
         - var img = "/assy/images/well-latch1.jpg"
         +process-image(img, img)
-        +note(7, "オフセットドライバ追加")
         - var img = "/assy/images/well-latch2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[7].text2}
@@ -187,7 +181,6 @@ block main
 
     p    
       .row
-        +note(9, "オフセットドライバに差し替え")
         - var img = "/assy/images/well-latch5.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[7].text4}
