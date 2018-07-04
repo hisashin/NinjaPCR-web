@@ -166,11 +166,6 @@ function listExperiments() {
  * Loads the selected experiment in the list on the home page
  */
 function listSubmit() {
-	// Error if device is disconnected
-	if (!communicator || !communicator.connected) {
-		$('#disconnected_dialog').dialog("open");
-		return;
-	}
 	// what is selected in the drop down menu?
 	experimentID = $("#dropdown").val();
 	// save if possible
