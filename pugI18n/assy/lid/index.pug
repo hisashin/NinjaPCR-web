@@ -45,16 +45,16 @@ block main
       .row
         - var img = "/assy/images/lid-sponge.jpg"
         +process-image(img, img)
+        - var img = "/assy/images/lid-lift1.jpg"
+        +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[1].text3}
 
     p
       .row
-        - var img = "/assy/images/lid-lift1.jpg"
-          +process-image(img, img, img)
         - var img = "/assy/images/lid-lift2.jpg"
-          +process-image(img, img, img)
+        +process-image(img, img, img)
         - var img = "/assy/images/lid-lift3.jpg"
-          +process-image(img, img, img)
+        +process-image(img, img, img)
       | #{$i18n[dir][subdir].items[1].text4}
 
     +itemtitle(dir, subdir, 2)

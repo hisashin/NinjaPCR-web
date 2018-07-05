@@ -186,6 +186,11 @@ block main
       | #{$i18n[dir][subdir].items[7].text4}
 
     p
+      .row
+        - var img = "/assy/images/body-pcb-well-connect3.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-pcb-well-connect4.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[7].text5}
   
     +nextstep('/assy/body/index.html', $i18n.assy.body.label)
