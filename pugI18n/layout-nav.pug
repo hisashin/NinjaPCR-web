@@ -16,7 +16,7 @@ mixin navbar(dir)
       .collapse.navbar-collapse(id="navbarCollapse")
         ul.navbar-nav
           li.nav-item(class= isConsole ? "active" : "")
-            a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.shortlabel}
+            a.nav-link(href="http://ninjapcr.tori.st/"+$localeName+"/console/index.html") #{$i18n.console.shortlabel}
             if isConsole
               span.sr-only (current)
           li.nav-item(class= isAssy ? "active" : "")
@@ -82,7 +82,7 @@ mixin sidebar(dir)
   .sidebar-sticky
     ul.nav.flex-column
       li.nav-item
-        a.nav-link(href="/"+$localeName+"/console/index.html", class= isConsole ? "active" : "")
+        a.nav-link(href="http://ninjapcr.tori.st/"+$localeName+"/console/index.html", class= isConsole ? "active" : "")
           span(data-feather="droplet")
           | #{$i18n.console.label}
           if isConsole
