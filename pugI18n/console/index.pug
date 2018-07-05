@@ -32,7 +32,6 @@ html
     script(type="text/javascript" src="/console/js/experiments/new_experiment.js")
     script(type="text/javascript" src="/console/js/wifiConfig.js")
     script(type="text/javascript")
-      | window.alert("protocol=" + location.protocol);
       | if(location.protocol == 'https:') {
       |   location.replace(location.href.replace(/https:/, 'http:'));
       | }
