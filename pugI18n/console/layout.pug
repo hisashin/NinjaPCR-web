@@ -1,5 +1,12 @@
 extends ../layout-nav
 
+block append head
+  script(type="text/javascript")
+    | window.alert("protocol=" + location.protocol);
+    | if(location.protocol == 'https:') {
+    |   location.replace(location.href.replace(/https:/, 'http:'));
+    | }
+
 block navbar
   +navbar('/console/')
 
