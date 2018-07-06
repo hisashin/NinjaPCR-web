@@ -73,6 +73,13 @@ mixin process-image(path, href, alt)
   else
     .col-8.col-sm-6.col-md-4
       img.w-100.item-img(src= path, alt= alt)
+      
+mixin screenshot-image(path, href, maxwidth)
+  .img-fluid
+      a(href= href, target="_blank")
+        img.w-100.item-img(src= path, style="max-width:"+maxwidth+"px")
+  
+  
 
 mixin table(table)
   table.table

@@ -87,8 +87,7 @@ block main
     p
       .row
         - var img = "/assy/images/setup-wifi-conf.jpg"
-        +process-image(img, img)
-        +note(2, "画像を大きく")
+        +screenshot-image(img, img, 439)
       | #{$i18n[dir][subdir].items[3].text1}
       a.link(href="http://192.168.1.1" target="_blank") #{$i18n[dir][subdir].items[3].text2}
       | #{$i18n[dir][subdir].items[3].text3}
