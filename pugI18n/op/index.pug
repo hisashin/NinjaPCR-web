@@ -29,7 +29,7 @@ block main
               p
                 .row
                   - var img = "/op/images/manage-profile-"+$localeName+".jpg"
-                  +process-image(img, img)
+                  +screenshot-image(img, img)
                 | #{$i18n[dir][subdir].items[1].text3}
           .card-header#headingProfileEdit
             h5.mb-0
@@ -69,7 +69,7 @@ block main
                       .col-3 #{$i18n[dir][subdir].items[1].text25}
                       .col-4 #{$i18n[dir][subdir].items[1].text26}
               - var img = "/op/images/profile-sample-"+$localeName+".jpg"
-              +process-image(img, img)
+              +screenshot-image(img, img, 500)
           .card-header#headingProfileSave
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseProfileSave" aria-expanded="false" aria-controls="collpseProfileSave") #{$i18n[dir][subdir].items[1].text27}
@@ -78,7 +78,7 @@ block main
               p #{$i18n[dir][subdir].items[1].text28}
               p #{$i18n[dir][subdir].items[1].text29}
               - var img = "/op/images/profile-save-"+$localeName+".jpg"
-              +process-image(img, img)
+              +screenshot-image(img, img, 300)
           .card-header#headingProfileDelete
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseProfileDelete" aria-expanded="false" aria-controls="collpseProfileDelete") #{$i18n[dir][subdir].items[1].text30}
@@ -86,7 +86,7 @@ block main
             .card-body
               p #{$i18n[dir][subdir].items[1].text31}
               - var img = "/op/images/profile-delete-"+$localeName+".jpg"
-              +process-image(img, img)
+              +screenshot-image(img, img, 300)
     
     +itemtitle(dir, subdir, 2)
 
@@ -118,23 +118,23 @@ block main
 
     .row
       - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
-      +process-image(img, img)
+      +screenshot-image(img, img)
 
     p #{$i18n[dir][subdir].items[3].text2}
     
     .row
       - var img = "/op/images/run1-"+$localeName+".jpg"
-      +process-image(img, img)
+      +screenshot-image(img, img, 450)
     | #{$i18n[dir][subdir].items[3].text3}
     
     .row
       - var img = "/op/images/progress-"+$localeName+".jpg"
-      +process-image(img, img)
+      +screenshot-image(img, img, 450)
     
     p #{$i18n[dir][subdir].items[3].text4}
       .row
         - var img = "/op/images/stop-"+$localeName+".jpg"
-        +process-image(img, img)
+        +screenshot-image(img, img)
     
       
     +itemtitle(dir, subdir, 4)

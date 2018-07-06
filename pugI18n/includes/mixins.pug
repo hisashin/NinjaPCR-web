@@ -77,7 +77,10 @@ mixin process-image(path, href, alt)
 mixin screenshot-image(path, href, maxwidth)
   .img-fluid
       a(href= href, target="_blank")
-        img.w-100.item-img(src= path, style="max-width:"+maxwidth+"px")
+        if maxwidth
+          img.w-100.item-img(src= path, style="max-width:"+maxwidth+"px")
+        else
+          img.w-100.item-img(src= path, style="max-width:320px")
   
   
 

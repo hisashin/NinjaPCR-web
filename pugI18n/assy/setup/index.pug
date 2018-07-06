@@ -49,7 +49,7 @@ block main
             .card-body
               | #{$i18n[dir][subdir].items[2].text3}
               - var img = "/assy/images/setup-ap-list-mac-"+$localeName+".jpg"
-              +process-image(img, img)
+              +screenshot-image(img, img)
           .card-header#headingWin
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseWin" aria-expanded="false" aria-controls="collpseWin") #{$i18n[dir][subdir].items[2].text4}
@@ -57,8 +57,7 @@ block main
             .card-body
               | #{$i18n[dir][subdir].items[2].text5}
               - var img = "/assy/images/setup-ap-list-win-"+$localeName+".jpg"
-              +process-image(img, img)
-              +note(1, "実機でスクリーンショット撮ってローカライズ")
+              +screenshot-image(img, img)
           .card-header#headingIOS
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseIOS" aria-expanded="false" aria-controls="collpseIOS") #{$i18n[dir][subdir].items[2].text6}
@@ -67,9 +66,9 @@ block main
               | #{$i18n[dir][subdir].items[2].text7}
               .row
                 - var img = "/assy/images/setup-ap-list-ios1-"+$localeName+".jpg"
-                +process-image(img, img)
+                +screenshot-image(img, img)
                 - var img = "/assy/images/setup-ap-list-ios2-"+$localeName+".jpg"
-                +process-image(img, img)
+                +screenshot-image(img, img)
           .card-header#headingAndroid
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseAndroid" aria-expanded="false" aria-controls="collpseAndroid") #{$i18n[dir][subdir].items[2].text8}
@@ -78,9 +77,9 @@ block main
               | #{$i18n[dir][subdir].items[2].text9}
               .row
                 - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
-                +process-image(img, img)
+                +screenshot-image(img, img, 440)
                 - var img = "/assy/images/setup-ap-list-android2-"+$localeName+".jpg"
-                +process-image(img, img)
+                +screenshot-image(img, img, 440)
       
     +itemtitle(dir, subdir, 3)
 
@@ -146,7 +145,7 @@ block main
     p
       .row
         - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
-        +process-image(img, img)
+        +screenshot-image(img, img)
       | #{$i18n[dir][subdir].items[7].text1}
 
     +itemtitle(dir, subdir, 8)
@@ -154,7 +153,7 @@ block main
     p
       .row
         - var img = "/assy/images/setup-connection2-"+$localeName+".jpg"
-        +process-image(img, img)
+        +screenshot-image(img, img)
         | #{$i18n[dir][subdir].items[8].text1}
         a.link(href='#headingTsEST') #{$i18n[dir][subdir].items[8].text2}
         | #{$i18n[dir][subdir].items[8].text3}
@@ -162,7 +161,6 @@ block main
     +itemtitle(dir, subdir, 9)
     
     p
-      +note(3, "APモードとWiFi設定モードの用語ブレがあるので後者に統一")
       .accordion#accordion3
         .card
           .card-header#headingTsAP
