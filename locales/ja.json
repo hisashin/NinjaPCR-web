@@ -1,11 +1,13 @@
 {
+    "contact" : {
+        "label" : "コンタクトフォーム",
+        "url" : "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"
+    },
     "console" : {
       "label" : "コンソール",
       "shortlabel" : "コンソール"
     },
-
     "general" : {
-      "contact" : "コンタクトフォーム",
       "nextstep" : "次のステップ："
     },
     "index" : {
