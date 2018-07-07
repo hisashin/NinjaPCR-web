@@ -2,7 +2,8 @@
 #device_conf
   h2#DeviceConnectionStatus.disconnected
     span#DeviceConnectionStatusLabel.pcr_localize_connectionStatusDisconnected Device disconnected
-  a#NewDevice.pcr_localize_wifiSettingsButton(href="#") Setup a new NinjaPCR device / Change network configuration
+  a.pcr_localize_wifiSettingsButton(href="../assy/setup/index.html" target="_blank") Setup a new NinjaPCR device / Change network configuration
+  a#NewDevice.pcr_localize_wifiSettingsButton(href="#" style="display:none") Setup a new NinjaPCR device / Change network configuration
   section#DeviceSettings(style="display:none")
     p
       ol

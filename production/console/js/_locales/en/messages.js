@@ -107,7 +107,7 @@ window.MESSAGE_EN = {
   "errorMessage1":{"message":"AD converter is not working."},
   "errorMessage2":{"message":"Lid temperature is getting abnormally high. Experiment was stopped."},
   "errorMessage3":{"message":"Well temperature is getting abnormally high. Experiment was stopped."},
-  "errorMessage4":{"message":"Failed to measure lid temperature. Lid temperature sensor seemst to be datached from the board."},
+  "errorMessage4":{"message":"Failed to measure lid temperature. Lid temperature sensor seems to be datached from the board."},
   "errorMessage5":{"message":"Cannot measure lid temperature. Lid temperature sensor seems to be short-circuited."},
   "errorMessage6":{"message":"Cannot measure well temperature. Well temperature sensor seems to be datached from the board."},
   "errorMessage7":{"message":"Cannot measure well temperature. Well temperature sensor seems to be short-circuited."},
