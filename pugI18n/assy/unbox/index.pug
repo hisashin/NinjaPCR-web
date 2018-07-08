@@ -9,7 +9,7 @@ block main
 
     p
       | #{$i18n.assy.unbox.text1}
-      +contact($i18n.assy.unbox.text2).link
+      a.link(href="/"+$localeName+"/contact/index.html" target="_blank") #{$i18n.assy.unbox.text2}
       | #{$i18n.assy.unbox.text3}
 
     +itemtitle(dir, subdir, 0)
