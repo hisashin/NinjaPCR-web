@@ -4,6 +4,11 @@ mixin youtube(id, start, target)
   a.link(href= href, target= t)
     span(data-feather="youtube")
 
+mixin youtube_embed(id, start)
+  - let src = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0' + (start > 0 ? "&amp;start=="+start : "")
+  .col-8.col-sm-6.col-md-4
+    iframe.w-100.h-100(src= src frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+
 mixin note(id, title, body)
   if process.platform == 'darwin'
     - let anchor = '#' + id
