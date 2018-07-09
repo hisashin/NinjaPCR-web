@@ -61,7 +61,15 @@ block main
 
     p
       .row
-        +note(100, "スペーサとは？という人でもわかりやすいよう1本のプロセスを拡大して撮影")
+        +note(100, "スペーサとは？という人でもわかりやすいよう1本のプロセスを拡大して撮影 / 画像挿入済み")
+        - var img = "/assy/images/body-spacer1.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-spacer2.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-spacer3.jpg"
+        +process-image(img, img)
+        - var img = "/assy/images/body-spacer4.jpg"
+        +process-image(img, img)
         - var img = "/assy/images/body-pcb1.jpg"
         +process-image(img, img)
         - var img = "/assy/images/body-pcb2.jpg"
