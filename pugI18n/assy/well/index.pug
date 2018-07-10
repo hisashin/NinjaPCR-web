@@ -17,7 +17,7 @@ block main
       +table($i18n[dir][subdir].items[0].table1)
 
     p
-      +note(1, "グリスとヘラを追加した写真に差し替え")
+      +note(2, "英語版内容が古い")
       - var img = "/assy/images/unbox-bag2.jpg"
       +image(img, img)
       +table($i18n[dir][subdir].items[0].table2)
@@ -61,7 +61,6 @@ block main
     +itemtitle(dir, subdir, 3)
 
     p
-      +note(2, "グリスを画像加工により削除")
       - var img = "/assy/images/well-peltier-grease.jpg"
       +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text1}
@@ -87,7 +86,6 @@ block main
 
     p
       .row
-        +note(3, "グリスを画像加工により削除")
         - var img = "/assy/images/well-aluminium-grease1.jpg"
         +process-image(img, img)
         - var img = "/assy/images/well-aluminium-complete1.jpg"
