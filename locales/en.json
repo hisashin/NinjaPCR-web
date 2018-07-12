@@ -19,8 +19,8 @@
             "text" : "We are totally open"
           },
           {
-            "alt" : "WiFi",
-            "label" : "WiFi Supported",
+            "alt" : "Wi-Fi",
+            "label" : "Wi-Fi Supported",
             "text" : "Use with your smartphone"
           },
           {
@@ -301,29 +301,29 @@
               "text1" : "Plug the power adapter into NinjaPCR and then into an outlet."
             },
             {
-              "title" : "ネットワーク設定モードでの起動",
-              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds."
+              "title" : "Start in network setup mode",
+              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in Wi-Fi Setup mode in a few seconds."
             },
             {
-              "title" : "一時的にWiFiの設定を変える",
-              "text1" : "Open the settings of your PC or smartphone and select \"NinjaPCR\" shown in the AP list.接続時にパスワード \"ninjapcr\" を入力してください。",
-              "text2" : "macOSの場合",
-              "text3" : "メニューにあるWiFiアイコンを押すとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
-              "text4" : "Windowsの場合",
+              "title" : "Change your Wi-Fi settings temporarily",
+              "text1" : "Open the settings of your PC or smartphone and select \"NinjaPCR\" shown in the AP list. Its conenction password is \"ninjapcr\".",
+              "text2" : "macOS",
+              "text3" : "メニューにあるWi-Fiアイコンを押すとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
+              "text4" : "Windows",
               "text5" : "ネットワークの設定を開くとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
-              "text6" : "iOSの場合",
-              "text7" : "ホーム画面から「設定」を開き、「WiFi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、\"NinjaPCR\" を接続します。",
-              "text8" : "Androidの場合",
+              "text6" : "iOS",
+              "text7" : "ホーム画面から「設定」を開き、「Wi-Fi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、\"NinjaPCR\" を接続します。",
+              "text8" : "Android",
               "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
             },
             { 
-              "title" : "初期設定画面表示",
+              "title" : "Access the Wi-Fi settings page",
               "text1" : "Open ",
-              "text2" : "WiFi settings page (http://192.168.1.1)",
+              "text2" : "Wi-Fi settings page (http://192.168.1.1)",
               "text3" : " and setup. If the page doesn't show up, please retry after a few seconds."
             },
             {
-              "title" : "Input WiFi Settings",
+              "title" : "Input Wi-Fi Settings",
               "text1" : "SSID",
               "text2" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
               "text3" : "Password",
@@ -333,13 +333,13 @@
               "text7" : "After you set up the device, it will restart and connect to the specified access point."
             },
             {
-              "title" : "WiFiの設定を元に戻す",
-              "text1" : "Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to as you have done in ",
+              "title" : "Wi-Fiの設定を元に戻す",
+              "text1" : "Connect your PC of smartphone to the Wi-Fi access point that your NinjaPCR is connected to as you have done in ",
               "text2" : "."
             },
             {
-              "title" : "コンソールを開く",
-              "text1" : "WiFiの設定後が完了すると、NinjaPCRは設定モードではなく通常モードで起動し、コンソールから接続できるようになりますので、接続できることを確認してください",
+              "title" : "Open the console",
+              "text1" : "Wi-Fiの設定後が完了すると、NinjaPCRは設定モードではなく通常モードで起動し、コンソールから接続できるようになりますので、接続できることを確認してください",
               "text2" : "Windows・macOS・Linix・iOSの場合",
               "text3" : "ブラウザで",
               "text4" : "コンソール",
@@ -350,27 +350,27 @@
               "text9" : "をインストールし、起動します。"
             },
             {
-              "title" : "デバイス名入力",
+              "title" : "Name your device",
               "text1" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
             },
             {
-              "title" : "接続テスト",
+              "title" : "Connection test",
               "text1" : "「接続済」 と表示されたら接続成功です。接続に失敗すると再び「未接続」に戻ります。起動後、接続可能になるまでに2〜5秒ほどかかりますので、失敗した場合は少し時間をおいて再度「接続」を押してください。接続に何度も失敗する場合は、下の",
               "text2" : "接続テストに失敗する",
               "text3" : "をご覧ください。"
             },
             {
               "title" : "Troubleshooting",
-              "text1" : "WiFi設定モードで起動したはずだがAPが表示されない",
+              "text1" : "Wi-Fi設定モードで起動したはずだがAPが表示されない",
               "text1_1" : "NinjaPCRと端末が離れすぎていると電波が届きません。",
               "text1_2" : "機器によっては新しく発見したアクセスポイントを認識するのに時間がかかる場合があります。少し時間を置いてみてください。また、リストに大量のアクセスポイントが表示されている場合は、画面外に表示されていないか、スクロールして確認してみてください。",
               "text1_3" : "\"Mode\" ボタンを離すタイミングが正しくなかった可能性があります。再度起動してみてください。",
-              "text2" : "WiFi設定ページに、接続したいアクセスポイントのSSIDが表示されない",
+              "text2" : "Wi-Fi設定ページに、接続したいアクセスポイントのSSIDが表示されない",
               "text2_1" : "アクセスポイントの設定によっては一覧に表示されない場合があります。ステルスモードになっている場合、スマートフォンのテザリングを使用している場合などです。その場合は、プルダウンメニューの下のテキストボックスにSSIDを入力すると接続できます。",
               "text3" : "接続テストに失敗する",
-              "text3_1" : "もう一度WiFi設定モードで起動して接続すると、画面の一番下に前回起動時のネットワーク接続状況が表示されます。\"Connection error\" と表示されている場合は、設定に問題があってNinjaPCRがネットワークに接続できていない状態です。\"Connected\" と表示されている場合、NinjaPCRは正常にネットワークに接続されているので、PCやスマートフォンの側の設定を確認してください。",
+              "text3_1" : "もう一度Wi-Fi設定モードで起動して接続すると、画面の一番下に前回起動時のネットワーク接続状況が表示されます。\"Connection error\" と表示されている場合は、設定に問題があってNinjaPCRがネットワークに接続できていない状態です。\"Connected\" と表示されている場合、NinjaPCRは正常にネットワークに接続されているので、PCやスマートフォンの側の設定を確認してください。",
               "text3_2":"端末とNinjaPCR本体が同一のアクセスポイント、同一のネットワークに接続されている必要があります。両方の接続先を再度確認してください。",
-              "text3_3" : "WiFi設定モードではなく通常モードで起動していますか? 起動時にModeボタンを押さず、Resetだけを押してください。",
+              "text3_3" : "Wi-Fi設定モードではなく通常モードで起動していますか? 起動時にModeボタンを押さず、Resetだけを押してください。",
               "text3_4" : "NinjaPCRはデバイスと接続するためにmDNSという仕組みを利用しています。mDNSはmacOSおよびiOSでは標準で利用することができます。WindowsやLinuxでも大抵はmDNSをサポートするソフトウェアがインストールされていますが、そうでない場合もありますので、以下の方法でインストールしてください。",
               "text11" : "Windows",
               "text12" : "Please nstall ",
@@ -390,12 +390,12 @@
           "shortlabel" : "Op.Manual",
           "items" : [
               {
-                  "title" : "初期設定",
+                  "title" : "Initial setup",
                   "text1" : "初回のみ、初期設定が必要です。まだ完了していない場合は、",
                   "text2" : "を参照して設定を行ってください。"
                 },
                 {
-                  "title" : "実験プロファイルの管理",
+                  "title" : "Manage experiment profiles",
                   "text1" : "プロファイルは1回限り使うこともできますが、繰り返し行いたいプロファイルはセーブし、再実行することができます。",
                   "text2" : "作成",
                   "text3" : "新規プロファイルを作るには、「+」アイコンをクリックします。プロファイル編集画面が開きます。",
@@ -429,7 +429,7 @@
                   "text31" : "左上のゴミ箱のアイコンをクリックするとプロファイルを削除することができます。"
                 },
                 {
-                  "title" : "チューブのセット",
+                  "title" : "Set tubes",
                   "text1" : "蓋を開けます。",
                   "text2" : "ウェルの穴にチューブを挿します。",
                   "text3" : "蓋を閉めます。軽く力を入れ、ラッチがカチッとはまるまで閉めてください。",
@@ -513,14 +513,14 @@
     "req" : {
       "label" : "Requirements",
       "shortlabel" : "Requirements",
-      "text1" : "WiFi",
+      "text1" : "Wi-Fi",
       "text2" : "Frequency Band",
       "text3" : "2.4GHz (Not available for 5GHz)",
       "text4" : "Security",
       "text5" : "WEP / WPA / WPA2",
       "text6" : "Wireless Standards",
       "text7" : "802.11 b/g/n",
-      "text8" : "WiFi support devices (PC, smartphone, tablet etc)",
+      "text8" : "Wi-Fi support devices (PC, smartphone, tablet etc)",
       "text9" : "OS",
       "text10" : "Windows・macOS・Linux・iOS・Android (4.1 or more)",
       "text11" : "Web Browser",
