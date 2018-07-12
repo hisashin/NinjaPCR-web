@@ -61,9 +61,7 @@ ExperimentLogger.prototype.log = function (status) {
 		$("#deviceStatusPeltier").css("color",color);
 		
 	}
-	
 	if (status["s"] == "running" || status["s"] == "lidwait") {
-		//debug
 		// preset name
 		var prog_name = status["n"];
 		$("#runningHeader").html(prog_name);
@@ -76,8 +74,7 @@ ExperimentLogger.prototype.log = function (status) {
 			$("#minutesRemaining").html(getLocalizedMessage('lidHeating'));
 
 			// during lidwait, no protocol name is included, so include the protocol name from the previous page
-			$("#runningHeader").html(
-					document.getElementById("ExperimentName").innerHTML);
+			$("#runningHeader").html(document.getElementById("ExperimentName").innerHTML);
 		}
 
 		if (status["s"] == "running") {

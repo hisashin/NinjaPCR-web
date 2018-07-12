@@ -197,12 +197,13 @@ NetworkCommunicator.prototype.doConnect = function () {
 			scope.saveHostName(host);
 			scope.connected = true;
 			if (obj.running) {
-				console.log("Device is RUNNING");
-				// Resume
+				// An experiment is already running.
 				experimentLogger = new ExperimentLogger();
 				experimentLog = [];
 				
-				$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___',obj.prof));
+  $("#runningHeader").html(obj.prof);
+  $("#ExperimentName").html(obj.prof);
+				$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___', obj.prof));
 				$('#is_resuming_dialog').dialog({
 					autoOpen : false,
 					width : 400,
