@@ -391,19 +391,19 @@
           "items" : [
               {
                   "title" : "Initial setup",
-                  "text1" : "初回のみ、初期設定が必要です。まだ完了していない場合は、",
-                  "text2" : "を参照して設定を行ってください。"
+                  "text1" : "Network configuration is needed when you use NinjaPCR for the first time. If you have not done yet, please refer to ",
+                  "text2" : " document."
                 },
                 {
                   "title" : "Manage experiment profiles",
-                  "text1" : "プロファイルは1回限り使うこともできますが、繰り返し行いたいプロファイルはセーブし、再実行することができます。",
+                  "text1" : "You can create an experiment profile to run it just once or save it to use repeatedly.",
                   "text2" : "Create",
-                  "text3" : "新規プロファイルを作るには、「+」アイコンをクリックします。プロファイル編集画面が開きます。",
+                  "text3" : "To create a new experiment profile, click \"+\" icon. Profile editor will open.",
                   "text4" : "Edit",
-                  "text5" : "温度プロファイルはサイクルとして作ります。複数のサイクルを持つことができます。サイクルには複数のステップを持たせることができます。サイクルごとに繰り返し回数を指定できます。",
-                  "text6" : "ステップには温度とホールド時間を指定します。ゆっくりと温度遷移させる必要がある場合は、遷移時間 (ランプ時間) を指定することもできます。ランプ時間を空欄または0にした場合、可能な限り速く温度遷移します。",
-                  "text7" : "複数のパターンを繰り返す場合などは \"More Options\" ボタンを押すことでサイクルを増やすことができます。また、\"Heater Lid\" で蓋の温度 (デフォルトでは110℃) を指定することができます。",
-                  "text8" : "たとえば次のプロファイルの場合は図のように作成します。",
+                  "text5" : "A profile consists of one or more cycles. A cycle has some steps and repeat counts.",
+                  "text6" : "Each step has duration and temperature. If you need to cool or heat samples very slowly, you can set ramp time (shortest transition time) to a step. If ramp time is empty, NinjaPCR tries to change temperature as fast as possible.",
+                  "text7" : "If your need a complex profile with cycles with multiple patterns, click \"More Options\" button to add cycles. Temperature of the lid is 110 Celsius by default but you can customize it by changing \"Heater Lid\" value. ",
+                  "text8" : "For example, the profile below is written as screenshot images below.",
                   "text9" : "x1",
                   "text10" : "Initial Denaturation",
                   "text11" : "95℃",
@@ -423,30 +423,31 @@
                   "text25" : "72℃",
                   "text26" : "10 minutes",
                   "text27" : "Save",
-                  "text28" : "編集が終わったら \"Save Preset\" を押し、プロファイルに名前をつけて保存します。",
-                  "text29" : "プロファイルはブラウザのストレージに保存します。ブラウザの設定などでデータを消去すると、プロファイルは消去されます。また、プライベートモードなどデータの保存を行わないモードで動かした場合は保存されません。",
-                  "text30" : "プロファイルの削除",
-                  "text31" : "左上のゴミ箱のアイコンをクリックするとプロファイルを削除することができます。"
+                  "text28" : "To save your edit, click \"Save Preset\" button.",
+                  "text29" : "Profiles are saved in storage area of your web browser. They are deleted by erasing data by browser settings. You can't save of load profiles in modes which don't allow usage of storage functionalities.
+",
+                  "text30" : "Delete",
+                  "text31" : "A profile can be deleted by the trash bin icon."
                 },
                 {
                   "title" : "Set tubes",
                   "text1" : "Open the lid.",
                   "text2" : "Insert tubes to the well.",
-                  "text3" : "蓋を閉めます。軽く力を入れ、ラッチがカチッとはまるまで閉めてください。",
-                  "text4" : "ノブを時計回りにひねり、蓋内部のアルミ板が軽くチューブの蓋を押さえるようにします。強く締め付ける必要はありません。"
+                  "text3" : "Close the lid.",
+                  "text4" : "Turn the knob clockwise to press tubes lightly with the lid."
                 },
                 {
                   "title" : "Start an Expriment",
-                  "text1" : "電源を接続し、コンソールを開いて接続します。Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
-                  "text2" : "プロファイル画面を開きます。「+」アイコンを押してその場で新しいプロファイルを作るか、プルダウンメニューから既存のプロファイルを選んで「実験を再実行」ボタンを押し、実験を開始します。",
-                  "text3" : "実験中は、ウェルと蓋の温度、チューブ内試料の推定温度が表示されます。",
-                  "text4" : "途中で実験を中断する場合は、「停止」ボタンを押してください。"
+                  "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
+                  "text2" : "Open the profile screen. You can create a new profile by clicking \"\+" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
+                  "text3" : "When PCR is running, temperature of the well and the lid and estimated temperature.",
+                  "text4" : "You can abort the experiment, click \"Stop\" button."
                 },
                 {
-                  "title" : "実験が終わったら",
-              "text1" : "実験が終わると、画面に「実験完了」 と表示されます。この状態でも最終段階での温度維持が行われており、ファンも回っていますので、それを止めるには「停止」ボタンを押します。",
-                  "text2" : "蓋を開け、チューブを取り出します。セットする時と同様、蓋を開けます。ウェルと蓋が冷え切っていない場合がありますので、手を触れないように気をつけて取り出してください。",
-                  "text3" : "実験完了後は必ず電源を抜いてください。"
+                  "title" : "After an Experiment",
+              "text1" : "When the profile is all done, \"Finished\" is displayed.",
+                  "text2" : "Open the lid and take out tubes. Please be careful not to touch the well or the lid. They are very hot after for several minutes!",
+                  "text3" : "Plug the power adapter out."
                 }
           ]
         }
@@ -528,17 +529,17 @@
       "text13" : "this app",
       "text14" : " to use).",
       "text15" : "Hardware spec",
-      "text16" : "ウェル数",
+      "text16" : "Well",
       "text17" : "4x4",
-      "text18" : "温度変化速度",
+      "text18" : "Temperature transition speed",
       "text19" : "TODO",
-      "text20" : "消費電力",
+      "text20" : "Power consumption",
       "text21" : "TODO",
-      "text22" : "対応電源",
+      "text22" : "Power type",
       "text23" : "TODO",
-      "text24" : "寸法",
+      "text24" : "Dimension",
       "text25" : "TODO",
-      "text26" : "重量",
+      "text26" : "Weight",
       "text27" : "TODO"
     },
     "about" : {
