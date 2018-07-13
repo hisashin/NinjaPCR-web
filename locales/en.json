@@ -341,13 +341,13 @@
               "title" : "Open the console",
               "text1" : "After finishing Wi-Fi setup, NinjaPCR will restart in normal operation mode and become accessible from the console. Please test the connection.",
               "text2" : "Windows / macOS / Linux / iOS",
-              "text3" : "ブラウザで",
-              "text4" : "コンソール",
-              "text5" : "にアクセスします。",
-              "text6" : "Androidの場合",
-              "text7" : "",
-              "text8" : "専用アプリ",
-              "text9" : "をインストールし、起動します。"
+              "text3" : "Open ",
+              "text4" : "the console",
+              "text5" : " in your web browser.",
+              "text6" : "Android",
+              "text7" : "Download ",
+              "text8" : "the dedicated NinjaPCR app",
+              "text9" : "from Google Play Store and open it."
             },
             {
               "title" : "Name your device",
