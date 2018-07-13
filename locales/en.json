@@ -308,11 +308,11 @@
               "title" : "Change your Wi-Fi settings temporarily",
               "text1" : "Open the settings of your PC or smartphone and select \"NinjaPCR\" shown in the AP list. Its conenction password is \"ninjapcr\".",
               "text2" : "macOS",
-              "text3" : "メニューにあるWi-Fiアイコンを押すとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
+              "text3" : "Click the Wi-Fi icon in the menu bar and select \"NinjaPCR\" from the list.",
               "text4" : "Windows",
-              "text5" : "ネットワークの設定を開くとアクセスポイントの一覧が表示されるので、\"NinjaPCR\" を選択します。",
+              "text5" : "Click the Wi-Fi icon in the menu bar and select \"NinjaPCR\" from the list.",
               "text6" : "iOS",
-              "text7" : "ホーム画面から「設定」を開き、「Wi-Fi」の画面を開きます。「ネットワークを選択...」のセクションに接続可能なアクセスポイントが出るので、\"NinjaPCR\" を接続します。",
+              "text7" : "From your Home screen open \"Settings\" and go to \"Wi-Fi\" screen. Choose \"NinjaPCR\" from the list.",
               "text8" : "Android",
               "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
             },
@@ -333,7 +333,7 @@
               "text7" : "After you set up the device, it will restart and connect to the specified access point."
             },
             {
-              "title" : "Wi-Fiの設定を元に戻す",
+              "title" : "Restore Wi-Fi settings",
               "text1" : "Connect your PC of smartphone to the Wi-Fi access point that your NinjaPCR is connected to as you have done in ",
               "text2" : "."
             },
