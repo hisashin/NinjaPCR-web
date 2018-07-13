@@ -339,7 +339,7 @@
             {
               "title" : "コンソールを開く",
               "text1" : "Wi-Fiの設定後が完了すると、NinjaPCRは設定モードではなく通常モードで起動し、コンソールから接続できるようになりますので、接続できることを確認してください",
-              "text2" : "Windows・macOS・Linix・iOSの場合",
+              "text2" : "Windows・macOS・Linux・iOSの場合",
               "text3" : "ブラウザで",
               "text4" : "コンソール",
               "text5" : "にアクセスします。",
