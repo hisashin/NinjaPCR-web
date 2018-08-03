@@ -1,6 +1,7 @@
 var gulp = require('gulp'); 
 var pug = require('gulp-pug');
 var pugI18n = require('gulp-i18n-pug');
+var typescript = require('gulp-typescript');
 
 gulp.task('default', ['pug', 'pugI18n']);
 gulp.task('pug', function() {
@@ -24,3 +25,10 @@ gulp.task('pugI18n', function() {
   .pipe(gulp.dest(options.i18n.dest));
 });
 
+
+gulp.task('ts', function() {
+  return gulp.src([ './ts/**/*.ts' ])
+         .pipe(typescript({ target: 'ES5', module: 'commonjs' }))
+         .js
+         .pipe(gulp.dest('./production/'));
+});
