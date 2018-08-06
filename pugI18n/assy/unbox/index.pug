@@ -16,7 +16,6 @@ block main
 
     - var img = "/assy/images/unbox-all.jpg"
     +image(img, img)
-    +note(2, "英語版内容が古い")
     p
       +table($i18n.assy.unbox.items[0].table)
 
@@ -27,8 +26,6 @@ block main
     p
       +table($i18n.assy.unbox.items[1].table)
     
-      +note(2, "日本語版番号飛び/英語版内容が古い")
-
     +itemtitle(dir, subdir, 2)
 
     +nextstep('/assy/lid/index.html', $i18n.assy.lid.label)

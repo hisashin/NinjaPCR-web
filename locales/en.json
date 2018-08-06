@@ -73,7 +73,7 @@
         },
         "unbox" : {
           "label" : "Unboxing",
-          "text1" : "Before assembly, take a breath and let's check that you have everything needed. If you find anything missed or broken, ",
+          "text1" : "Before assembly, take a breath and confirm that you have everything needed. If you find anything missed or broken, ",
           "text2" : "Contact us",
           "text3" : " with seriall number in warranty period.",
           "items" : [
@@ -83,11 +83,10 @@
                 "head" : [ "Kit Content", "Detail", "Count" ],
                 "body" : [
                   [ "1. Woods", "", 15 ],
-                  [ "2. Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
-                  [ "3. PCB", "Check printed circuit board is not damaged", 1 ],
-                  [ "4. Heatsink+Grease", "Heatsink and thermal conductive grease are packed in one box", 1 ],
-                  [ "5. Power Supply", "12V >135W AC-DC adapter", 1 ],
-                  [ "6. Bag", "Check next table what's inside", 1 ]
+                  [ "2. PCB", "Check printed circuit board is not damaged", 1 ],
+                  [ "3. Heatsink + Spare Grease", "Heatsink and spare thermal conductive grease are packed in one box", 1 ],
+                  [ "4. Bag", "Check next table what's inside", 1 ],
+                  [ "5. Power Supply", "12V >135W AC-DC adapter", 1 ]
                 ]
               }
             },
@@ -99,10 +98,11 @@
                   [ "1. Screw Bag 1", "Labeled as '1.Lid'", 1 ],
                   [ "2. Screw Bag 2", "Labeled as '2.Well'", 1 ],
                   [ "3. Screw Bag 3", "Labeled as '3.Body'", 1 ],
-                  [ "4. Knob", "For lid", 1 ],
-                  [ "5. Fan guard", "For bottom board", 1 ],
+                  [ "4. Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
+                  [ "5. Knob", "For lid", 1 ],
                   [ "6. Rubber foot", "For bottom board", 4 ],
-                  [ "7. Multi spanner", "To fasten nuts", 1 ]
+                  [ "7. Fan guard", "For bottom board", 1 ],
+                  [ "8. Grease", "Use these ones first. If you need more, use spare grease in heatsink box.", 2 ]
                 ]
               } 
             }
@@ -144,14 +144,14 @@
             {
               "title" : "Floating Heater",
               "text1" : "Peel off blue tape from aluminium plate. Screw 4 longer screws (M3 15mm) and nuts like this.",
-              "text2" : "Peel double-sided tape from heater. Glue heater to the midst of aluminium plate. Don't colide with screws or nuts.",
-              "text3" : "Peel off double-sided tape on sponge and cover the heater. Just put it if there's no double-sided tape.",
+              "text2" : "Peel double-sided tape from heater. Glue heater to the midst of aluminium plate. Don't colide with screws nor nuts.",
+              "text3" : "Peel off double-sided tape on sponge and cover the heater.",
               "text4" : "Screw heater lift wood with 4 nuts. Now heater unit is done."
             },
             {
               "title" : "Lid Base",
               "text1" : "Assemble box with remained 4 screws and 4 spacers.",
-              "text2" : "Place heater unit inside and thread all 4 wires of heater through the hole of lid back wood."
+              "text2" : "Place heater unit inside and thread all 4 wires of heater through the hole of lid back wood. Wires must be behind the spacer (blue arrow) not front (red arrow). Check that heater unit can move up and down somoothly without catching cables."
             },
             {
               "title" : "Lid Cover",
@@ -164,7 +164,7 @@
           "items" : [
             {
               "title" : "All Parts",
-              "text1" : "Screw Bag 2, Well, Heatsink+SpareGrease and these woods are needed.",
+              "text1" : "Screw Bag 2, Well, Heatsink + Spare Grease and these woods are needed.",
               "table1" : {
                 "head" : [ "Name", "Detail", "Count" ], 
                 "body" : [ 
@@ -176,31 +176,30 @@
               "table2" : {
                 "head" : [ "Name", "Detail", "Count" ],
                 "body" : [
-                  [ "1. Grease", "Use this first instead of spare grease in heatsink box.", 1 ],
-                  [ "2. Spatula", "To smooth grease", 1 ],
-                  [ "3. Peltier", "High temperature durable silicon sealed peltier", 1 ],
-                  [ "4. Aluminium plate", "Square plate", 1 ],
-                  [ "5. Screw (M3 15mm)", "For peltier holder", 2 ],
-                  [ "6. Screw (M3 6mm)", "For well", 4 ],
-                  [ "7. Nut (M3)", "", 6 ],
-                  [ "8. Screw (M5 20mm)", "For heatsink", 4 ],
-                  [ "9. Nut (M5)", "", 8 ],
-                  [ "10. Silicone sponge", "To avoid airflow from body to lid", 1 ],
-                  [ "11. Latch", "2 white plastic parts", 1 ],
-                  [ "12. Hinge", "1 black plastic part", 1 ],
-                  [ "13. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ],
-                  [ "14. Wire Clip", "To hold cables", 1 ]
+                  [ "1. Spatula", "To smooth grease", 1 ],
+                  [ "2. Peltier", "High temperature durable silicon sealed peltier", 1 ],
+                  [ "3. Aluminium plate", "Square plate", 1 ],
+                  [ "4. Latch", "2 white plastic parts", 1 ],
+                  [ "5. Hinge", "1 black plastic part", 1 ],
+                  [ "6. Screw (M3 15mm)", "For peltier holder", 2 ],
+                  [ "7. Screw (M3 6mm)", "For well", 4 ],
+                  [ "8. Nut (M3)", "", 6 ],
+                  [ "9. Screw (M5 20mm)", "For heatsink", 4 ],
+                  [ "10. Nut (M5)", "", 8 ],
+                  [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ],
+                  [ "12. Silicone sponge", "To avoid airflow from body to lid", 1 ],
+                  [ "13. Wire Clip", "To hold cables", 1 ]
                 ]
               }
             },
             {
               "title" : "Woods",
-              "text1" : "Connect holders and top board with 4 thick screws (M5 20mm) and nuts. Both front sides (arrow) must be aligned."
+              "text1" : "Connect heatsink holder and top board with 4 thick screws (M5 20mm) and nuts firmly using offset driver and multi spanner. Both front sides (arrow) must be aligned."
             },
             {
               "title" : "Well",
-              "text1" : "Screw remained 4 thin screws (M3 6mm) and nuts loosely first.",
-              "text2" : "Turn well upside down. Tune directions of nus to fit the notches of heatsink holder and screw tightly. Confirm thermistor of well (red circle) is sticking to front side (arrow)."
+              "text1" : "Screw remained 4 thin screws (M3 6mm) and nuts loosely first. Place side of nut (red rectangle) can be seen from each side. You can place well into holder easier at next step.",
+              "text2" : "Turn well upside down. Tune directions of nus to fit the notches of heatsink holder and screw tightly. Confirm thermistor of well (red circle) is sticking out to front (arrow)."
             },
             {
               "title" : "Peltier",
