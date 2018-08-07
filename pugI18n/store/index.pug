@@ -1,23 +1,11 @@
-extends layout
+html
+  
+  head
+    script(type="application/javascript")
+      if $localeName == 'ja'
+        | document.location.href = "http://www.lvnshop.com/shopdetail/000000000311/";
+      else
+        | document.location.href = "https://shop.tori.st";
 
-block main
-  .row
-    if $localeName == 'ja'
-      .jumbotron
-        p.lead 国内向けキット販売は、リバネスショップ限定です
-        p.lead
-          a.btn.btn-primary(href="http://www.lvnshop.com/shopdetail/000000000311/", target="_blank", role="button") リバネスショップ&nbsp;(外部サイト)&nbsp;へ移動
-        hr.my-4
-        p.lead 自作方法はこちらです
-        p.lead
-          a.btn.btn-primary(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
-    else
-      .jumbotron
-        p.lead Visit our webshop to get NinjaPCR Complete Kit
-        p.lead
-          a.btn.btn-primary(href="https://shop.tori.st", target="_blank", role="button") https://shop.tori.st
-        hr.my-4
-        p.lead Here is how to make your own by yourself.
-        p.lead
-          a.btn.btn-primary(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.label}
+  body Redirecting...
 
