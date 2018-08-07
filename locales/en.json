@@ -16,17 +16,20 @@
           {
             "alt" : "Opensource",
             "label" : "Open Source DNA Amplifer",
-            "text" : "We are totally open"
+            "text" : "We are totally open",
+            "link" : "open"
           },
           {
             "alt" : "Wi-Fi",
             "label" : "Wi-Fi Supported",
-            "text" : "Use with your smartphone"
+            "text" : "Use with your smartphone",
+            "link" : "wifi"
           },
           {
             "alt" : "Precise",
             "label" : "Smart Sensor and Simulation",
-            "text" : "Precise at any temperature"
+            "text" : "Precise at any temperature",
+            "link" : "accuracy"
           }
         ]
       }

@@ -11,6 +11,8 @@
           .carousel-caption.text-left
             h1 #{slide.label}
             p #{slide.text}
+            div
+              a(href="#"+slide.link, style="color:#fff") More
   a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
     span.carousel-control-prev-icon(aria-hidden="true")
     span.sr-only Previous
