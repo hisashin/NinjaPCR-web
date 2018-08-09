@@ -206,7 +206,7 @@
             },
             {
               "title" : "Peltier",
-              "text1" : "Pick up grease syringe from heatsink box and paste HALF of it over backside of well. Use spatula to smooth evenly.",
+              "text1" : "Paste grease over backside of well. No need to squeeze it all. Use spatula to smooth evenly.",
               "text2" : "Align 2 wires of peltier over notchs of heatsink holder (arrows) and put peltier on well like this. DO NOT mistake red and black! That will break peltier easily.",
               "text3" : "Thread thermistor sensors through peltier holder and connect it to heatsink holder with 2 thin-long screws (M3 15mm) and nuts. It's a bit difficult because heads of screws are downside. Confirm that thermistor wires of well are OVER peltier holder (red circle) and peltier wires are running through holes made by holders (arrows)."
             },
