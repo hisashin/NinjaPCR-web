@@ -20,6 +20,9 @@
   /*text-shadow: 1px 1px #000000aa;*/
   text-shadow: -1px -1px 0 #666, -1px 1px 0 #666, 1px -1px 0 #666, 1px 1px 0 #666, 1px 0px 0 #666, -1px 0px 0 #666, 0px 1px 0 #666, 0px -1px 0 #666,0px 0px 5px #FFF
 }
+.carousel-caption p {
+	font-size:140%;
+}
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
