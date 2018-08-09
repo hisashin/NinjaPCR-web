@@ -12,37 +12,40 @@ block content
     include includes/carousel.pug
     
     div(style="max-width:800px;padding:2em;margin:auto;")
-      section(style="padding:2em", id="wifi")
-        h2.text-center Wi-Fi
-        .row
-          .col-12.col-sm-4.text-center
-            img(src="/images/top_wifi.png" alt="Wi-Fi" style="width:100%;border:1px solid #ddd;max-width:280px;")
-          .col-12.col-sm-8
-            ul
-              li Accessible from local network
-              li Console works on web browsers on smartphones, tablets and PCs.
-              li Powered by ESP8266
+    
+      .row.featurette#wifi
+        .col-md-7.order-md-2
+          h2 Wi-Fi
+          ul
+            li Accessible from local network
+            li Console works on web browsers on smartphones, tablets and PCs.
+            li Powered by ESP8266
+        .col-md-5.order-md-1.img-container
+          img.featurette-image.img-fluid.mx-aut(src="/images/top_wifi.png" alt="Wi-Fi" style="border:1px solid #ddd;max-width:280px;")
       
-      section(style="padding:2em", id="accuracy")
-        h2.text-center Accuracy
-        .row
-          .col-12.col-sm-4.text-center
-            img(src="/images/top_accuracy.png" alt="Wi-Fi" style="width:100%;border:1px solid #ddd;max-width:280px;")
-          .col-12.col-sm-8
-            ul
-              li 24bit AD converter
-              li Switching low & high modes
-              li Temperature simulation of sample in tubes
-        
-      section(style="padding:2em", id="open")
-        h2.text-center Open-source
-        .row
-          .col-12.col-sm-4.text-center
-            img(src="/images/top_open.jpg" alt="Open-source" style="width:100%;border:1px solid #ddd;max-width:280px;")
-          .col-12.col-sm-8
-            ul
-              li All source codes and scematics are available on GitHub
-              li Designed to be built easily
+      hr.featurette-divider
+      
+      .row.featurette#accuracy
+        .col-md-7.order-md-2
+          h2 Accuracy
+          ul
+            li 24bit AD converter
+            li Switching low & high modes
+            li Temperature simulation of sample in tubes
+        .col-md-5.order-md-1.img-container
+          img.featurette-image.img-fluid.mx-aut(src="/images/top_accuracy.png" alt="Accuracy" style="border:1px solid #ddd;max-width:280px;")
+          
+      hr.featurette-divider
+          
+      .row.featurette#open
+        .col-md-7.order-md-2
+          h2 Open-source
+          ul
+            li All source codes and scematics are available on GitHub
+            li Designed to be built easily
+        .col-md-5.order-md-1.img-container
+          img.featurette-image.img-fluid.mx-aut(src="/images/top_open.jpg" alt="Wi-Fi" style="border:1px solid #ddd;max-width:280px;")
+      
 
     footer.container.w-100.offset
       .row.justify-content-md-center

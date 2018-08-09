@@ -15,13 +15,24 @@
   background-color: #404040;
 }
 .carousel-caption {
-  /* color: #404040; */
+  
+}
+.carousel-caption p, .carousel-caption h1 {
   color:#fff;
-  /*text-shadow: 1px 1px #000000aa;*/
   text-shadow: -1px -1px 0 #666, -1px 1px 0 #666, 1px -1px 0 #666, 1px 1px 0 #666, 1px 0px 0 #666, -1px 0px 0 #666, 0px 1px 0 #666, 0px -1px 0 #666,0px 0px 5px #FFF
 }
+
 .carousel-caption p {
 	font-size:140%;
+}
+.featurette ul {
+  padding-left:20px;
+}
+.featurette ul li {
+  margin:1em 0em;
+}
+.featurette .img-container {
+  /*text-align:center;*/
 }
 
 body {
