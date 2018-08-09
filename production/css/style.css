@@ -19,11 +19,14 @@
 }
 .carousel-caption p, .carousel-caption h1 {
   color:#fff;
+  font-weight:bold;
   text-shadow: -1px -1px 0 #666, -1px 1px 0 #666, 1px -1px 0 #666, 1px 1px 0 #666, 1px 0px 0 #666, -1px 0px 0 #666, 0px 1px 0 #666, 0px -1px 0 #666,0px 0px 5px #FFF
 }
-
+.carousel-caption h1 {
+  font-weight:bold;
+}
 .carousel-caption p {
-	font-size:140%;
+	font-size:1.4em!important;
 }
 .featurette ul {
   padding-left:20px;
@@ -33,6 +36,9 @@
 }
 .featurette .img-container {
   /*text-align:center;*/
+}
+.carousel-caption .btn {
+  border:1px solid #fff;
 }
 
 body {
