@@ -17,7 +17,8 @@
 .carousel-caption {
   /* color: #404040; */
   color:#fff;
-  text-shadow: 1px 1px #000000aa;
+  /*text-shadow: 1px 1px #000000aa;*/
+  text-shadow: -1px -1px 0 #666, -1px 1px 0 #666, 1px -1px 0 #666, 1px 1px 0 #666, 1px 0px 0 #666, -1px 0px 0 #666, 0px 1px 0 #666, 0px -1px 0 #666,0px 0px 5px #FFF
 }
 
 body {
