@@ -95,23 +95,17 @@ block main
 
     p
       .row
-        +note(102, "TBをいったんゆるめる・さしこむ・締めるの写真とプロセスを写真と文章追加")
         - var img = "/assy/images/body-pcb-fan-tb1.jpg"
         +process-image(img, img)
-        - var img = "/assy/images/body-pcb-fan-tb2.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/body-pcb-fan-tb3.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/body-pcb-fan-tb4.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/body-pcb-fan-tb5.jpg"
-        +process-image(img, img)
-        +note(103, "ほつれた物とよりをもどした物の比較に注釈追加")
+      | #{$i18n[dir][subdir].items[3].text2}
+
+    p
+      .row
         - var img = "/assy/images/body-pcb-b.jpg"
         +process-image(img, img)
         - var img = "/assy/images/lid-cable-twist.jpg"
         +process-image(img, img, img)
-      | #{$i18n[dir][subdir].items[3].text2}
+      | #{$i18n[dir][subdir].items[3].text3}
 
     p
       .row
@@ -119,7 +113,7 @@ block main
         +process-image(img, img)
         - var img = "/assy/images/body-pcb-c2.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[3].text3}
+      | #{$i18n[dir][subdir].items[3].text4}
 
     p
       .row
@@ -127,16 +121,16 @@ block main
         +process-image(img, img)
         - var img = "/assy/images/body-pcb-d2.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[3].text4}
+      | #{$i18n[dir][subdir].items[3].text5}
 
     p
       .row
         - var img = "/assy/images/body-pcb-d3.jpg"
         +process-image(img, img)
-      | #{$i18n[dir][subdir].items[3].text5}
+      | #{$i18n[dir][subdir].items[3].text6}
 
     p
-      | #{$i18n[dir][subdir].items[3].text6}
+      | #{$i18n[dir][subdir].items[3].text7}
 
     +itemtitle(dir, subdir, 4)
 

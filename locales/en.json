@@ -212,15 +212,15 @@
             },
             {
               "title" : "Aluminium Plate",
-              "text1" : "Smooth another half of grease over peltier as you have done before.",
-              "text2" : "Peel blue tape from aluminium plate. Put it over peltier and press a little."
+              "text1" : "Smooth grease over peltier evenly as you have done over well.",
+              "text2" : "Peel off blue tape from aluminium plate. Put it over peltier and press a little."
             },
             {
               "title" : "Heatsink",
               "text1" : "Hold white leg of heatsink in left hand. Rotate counterclockwise black cap and pull by right hand. Then it will be removed easily. Remove all 4 legs.",
-              "text2" : "Peel of cover sticker of heatsink and smooth grease. If there is no grease left, use spare grease.",
-              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly. At this point, you may see small gap between heatsink and aluminium plate.",
-              "text4" : "Turn upside down and push well downward so that there is no gap between heatsink and aluminium plate."
+              "text2" : "Peel off cover sticker of heatsink and smooth grease. If there is no grease left, use spare.",
+              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly. At this point, you may see small gap between heatsink and aluminium plate (arrow).",
+              "text4" : "Turn upside down and push well downward so that there is no gap between heatsink and aluminium plate (arrow)."
             },
             {
               "title" : "Fill Space",
@@ -228,11 +228,11 @@
             },
             {
               "title" : "Mount Lid",
-              "text1" : "Mount lid and thread 4 wires throught hole (arrow). Screw hinge on backside of the lid with 4 tapping screws. There are pilot holes.",
+              "text1" : "Mount lid and thread 4 wires throught hole (arrow). Screw hinge on backside of the lid with 4 tapping screws. There are pilot holes. Use phillips screwdriver first then screw it firmly with offset driver.",
               "text2" : "Screw bottom latch in front of lid with 2 tapping screws tightly. There are pilot holes too.",
               "text3" : "Top latch is adjustable and lid should be closed firmly. Screw it with 2 tapping screws loosely first.",
               "text4" : "Screw tightly while holding lid to top board.",
-              "text5" : "Check that you can open/close lid smoothly and firmly. Now you have made upper body."
+              "text5" : "It's not safe if 4 wires of heater not fastened because fan of heatsink will catch them easily. Peel off release paper from wire clip. Put it in front side of top board and fasten 4 wires by bending thin part of clip. Check that you can open/close lid smoothly and firmly. Now you have made upper body."
             }
           ]
         },
@@ -280,17 +280,18 @@
             },
             {
               "title" : "Wiring",
-              "text1" : "Connect longest heatsink cable to A. It wont be locked in wrong direction.",
-              "text2" : "Connect 2 power cables of heater (white) to B. No matter which white cable to be right or left but DO NOT connect pink cables. It will break thermistor.",
-              "text3" : "Connect 2 thermistor calbes of heater (pink) to C. No matter which is right or left.",
-              "text4" : "Connect RED cable of peltier to D1. DO NOT connect wrongly. That will break peltier.",
-              "text5" : "Connect BLACK cable to D2.",
-              "text6" : "Wires of well thermistor are short and fragile. We connect it to PCB on next paragraph."
+              "text1" : "Connect longest heatsink cable. It wont be locked if it's in wrong direction.",
+              "text2" : "Loose 6 screws of all 3 green terminal blocks by screwing counterclockwise using straight driver.",
+              "text3" : "Connect 2 power cables of heater (white). No matter which white cable to be right or left but DO NOT connect pink cables. It will break thermistor.",
+              "text4" : "Connect 2 thermistor calbes of heater (pink). No matter which is right or left.",
+              "text5" : "Connect RED cable of peltier to the hole with arrow. DO NOT connect to next hole wrongly. That will break peltier.",
+              "text6" : "Connect BLACK cable to the remained hole. DO NOT connect to next hole wrongly.",
+              "text7" : "Wires of well thermistor are short and fragile. We connect it to PCB on next paragraph."
             },
             {
               "title" : "Well thermistor",
               "text1" : "Last but most sensitive part of whole assembly process. Lift top/right/left boards a little and set front board.",
-              "text2" : "Lift up top board a little and connect well thermistor to E.",
+              "text2" : "Lift up top board a little and connect well thermistor to the pinheads (circle).",
               "text3" : "Bak top board softly and screw it with remained 4 screws (M3 15mm)."
             }
           ]
