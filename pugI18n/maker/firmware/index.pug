@@ -15,9 +15,62 @@ block main
 
   if $localeName == 'ja'
     +itemtitle(dir, subdir, 0)
-
+    ol
+      li Arduino IDEをインストール
+      li ソースをダウンロード
+      li 必要ならドライバをインストール
+      li 電源を接続
+      li USBシリアルを差し込む (配列は次のようになっています)
+      li ジャンパピンを差す
+      li 書き込む
+      li (macOS High Sierraなど) 一部環境で書き込めない場合はコマンドラインツールから
+      li トラブルシューティング
     p
       | #{$i18n[dir][subdir].items[0].text1}
+    h4 Arduino IDEをインストール
+    p 
+      a(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
+      | からArduino IDEをダウンロードし、インストールします。https://www.arduino.cc/en/Main/Software
+    
+    h4 ArduinoのESP8266対応
+    p Arduino IDEにはBoard Managerという仕組みがあり、サードパーティ製のハードウェアをサポートするライブラリやボード設定を簡単にインストールし、管理することができるようになっています。
+    p Preferencesで "Additional Board Manager URLs" に "http://arduino.esp8266.com/stable/package_esp8266com_index.json" を追加します。
+    .row
+      - var img = "/maker/images/firmware_arduino_board_manager1.png"
+      +process-image(img, img)
+      - var img = "/maker/images/firmware_arduino_board_manager2.png"
+      +process-image(img, img)
+    p Arduino IDE経由ではなくGitHubのリポジトリからcloneして手動でインストールするという方法もあります。詳しくは
+      a href=("https://github.com/esp8266/Arduino") ESP8266ライブラリのGitHubリポジトリ
+      | を参照してください。
+    
+    h4 NinjaPCRのソースコードをダウンロード
+    p GitHubのNinjaPCRリポジトリからソースコードをダウンロードします。zipで落とすかコマンドラインで落とします。https://github.com/hisashin/NinjaPCR
+    p arduino/NinjaPCR/NinjaPCR.inoを開きます
+    p Boardなどを選択
+    p Verifyを押して確認します
+    h4 NinjaPCR本体をPCに接続
+    p 電源を接続します
+    .row
+      - var img = "/maker/images/firmware_power.jpg"
+      +process-image(img, img)
+    p USBシリアル変換ケーブルを接続します。右の6本に挿します。
+    .row
+      - var img = "/maker/images/firmware_serial.jpg"
+      +process-image(img, img)
+    p 左の2本のピンにジャンパピンを挿し込みます。この2本のピンが接続されていると、通常起動モードではなくファームウェア書き込みモードで起動します。
+    .row
+      - var img = "/maker/images/firmware_serial_jumper1.jpg"
+      +process-image(img, img)
+    .row
+      - var img = "/maker/images/firmware_serial_jumper2.jpg"
+      +process-image(img, img)
+    p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。
+    p Baud rateは "115200" を接続します。
+    p 正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。
+        
+    h4 書き込み
+    p 書き込みボタンを押します
+    p 一部の環境でうまくいかない場合がありますので、コマンドラインからesptool.pyを使って書き込みます
 
     +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)
-
