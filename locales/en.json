@@ -463,9 +463,9 @@
           "items" : [
             {
               "title" : "Making NinjaPCR from scratch",
-              "text1" : "NinjaPCRは完全にオープンソースで、誰でも",
+              "text1" : "NinjaPCR is totally opensourced and anyone can download everything from ",
               "text2" : "GitHub",
-              "text3" : "上のすべてのデータにアクセスできます。レーザーカット、金属加工、電子基板の発注と実装といった、多種多様なスキルを一度に経験する教材としても理想的ですが、未経験者が助けなしにすべてを作り上げるのは相当な困難を伴います。NinjaPCRは通常販売している「キット版」(右)の他に、自作のための「メイカー版」(左)があり、ここでその製作手順を詳細にご説明します。より多くの方々がメイカー版NinjaPCRの製作を通じて自作スキルをも手に入れ、他の創造的な活動に応用してくれることを望みます。"
+              "text3" : ". Making NinjaPCR from scratch is best textbook to experience multiple DIY skills like lasercutting, metal, electric circuits and so on at once. But it's hard for beginners to accomplish that by themselves without help. NinjaPCRは通常販売している「キット版」(右)の他に、自作のための「メイカー版」(左)があり、ここでその製作手順を詳細にご説明します。より多くの方々がメイカー版NinjaPCRの製作を通じて自作スキルをも手に入れ、他の創造的な活動に応用してくれることを望みます。"
             },
             {
               "title" : "Differences between Kit and Maker models",
@@ -565,9 +565,9 @@
             },
             {
               "title" : "PC Parts",
-              "difficulty" : "簡単",
-              "heatsink" : "ヒートシンク",
-              "peltier" : "ペルチェ",
+              "difficulty" : "Easy",
+              "heatsink" : "Heatsink",
+              "peltier" : "Peltier",
               "text1" : "LGA115x対応のヒートシンク, グリス、ATX電源は一般的なもので十分です。ペルチェ素子は、PCショップなどで入手できるものは動作温度の上限が50℃程度で使用できません。PCRプロセスでは100℃近くに達するため、その温度帯をサポートする耐熱モデルを入手する必要があります。"
             },
             {

@@ -31,6 +31,8 @@ block main
 
     p
       .row
+        - var img = "/maker/images/wood_pdf.png"
+        +process-image(img, img)
         - var img = "/maker/images/lasercut.jpg"
         +process-image(img, img)
         - var img = "/maker/images/IMG_0935.jpg"
@@ -48,6 +50,8 @@ block main
 
     p
       .row
+        - var img = "/maker/images/NinjaPCB_ver2.2-layout.jpeg"
+        +process-image(img, img)
         - var img = "/maker/images/pcb.jpg"
         +process-image(img, img)
         - var img = "/maker/images/IMG_0931.jpg"
@@ -67,6 +71,8 @@ block main
       .row
         - var img = "/maker/images/well2.jpg"
         +process-image(img, img)
+        - var img = "/maker/images/well4.jpg"
+        +process-image(img, img)
         - var img = "/maker/images/well1.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text1}
@@ -80,6 +86,10 @@ block main
 
     p
       .row
+        - var img = "/maker/images/position.png"
+        +process-image(img, img)
+        - var img = "/maker/images/heater-spec.jpg"
+        +process-image(img, img)
         - var img = "/maker/images/heater0.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text1}
@@ -111,6 +121,8 @@ block main
     p
       .row
         - var img = "/maker/images/heatsink.jpg"
+        +process-image(img, img)
+        - var img = "/maker/images/peltier.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[6].text1}
 
