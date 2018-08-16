@@ -1,0 +1,110 @@
+extends ../layout
+
+block navbar
+  +navbar('/maker/list/')
+
+block sidebar
+  +sidebar('/maker/list/')
+
+block main
+
+  - var dir = 'maker'
+  - var subdir = 'list'
+
+  +itemhead(dir, subdir)
+
+  if $localeName == 'ja'
+    +itemtitle(dir, subdir, 0)
+
+    p
+      | #{$i18n[dir][subdir].items[0].text1}
+      a.link(href="https://shop.tori.st", target="_blank") #{$i18n[dir][subdir].items[0].text2}
+      | #{$i18n[dir][subdir].items[0].text3}
+
+    span
+      a.link(href="/"+$localeName+"/maker/wood/index.html")
+        +itemtitle(dir, subdir, 1)
+      span.badge.badge-success Easy
+      span.badge.badge-secondary.badge-margin Laser Cutter
+      a(href="https://shop.tori.st/product/woods/" target="_blank")
+        span.badge.badge-primary.badge-margin Shop
+
+    p
+      | #{$i18n[dir][subdir].items[1].text1}
+
+    span
+      a.link(href="/"+$localeName+"/maker/pcb/index.html")
+        +itemtitle(dir, subdir, 2)
+      span.badge.badge-danger Hard
+      span.badge.badge-secondary.badge-margin Order PCB
+      span.badge.badge-secondary.badge-margin Order Electric Parts
+      span.badge.badge-secondary.badge-margin Hand Soldering
+      span.badge.badge-secondary.badge-margin Solder Stencil
+      span.badge.badge-secondary.badge-margin Reflow Soldering
+      a(href="https://shop.tori.st/product/ninjapcb/" target="_blank")
+        span.badge.badge-primary.badge-margin Shop
+
+    p
+      | #{$i18n[dir][subdir].items[2].text1}
+
+    span
+      a.link(href="/"+$localeName+"/maker/well/index.html")
+        +itemtitle(dir, subdir, 3)
+      span.badge.badge-danger Hard
+      span.badge.badge-secondary.badge-margin 3D CAD
+      span.badge.badge-secondary.badge-margin CNC machine
+      a(href="https://shop.tori.st/product/well/" target="_blank")
+        span.badge.badge-primary.badge-margin Shop
+
+    p
+      | #{$i18n[dir][subdir].items[3].text1}
+
+    span
+      a.link(href="/"+$localeName+"/maker/heater/index.html")
+        +itemtitle(dir, subdir, 4)
+      span.badge.badge-dark YouShouldBuy
+      a(href="https://shop.tori.st/product/heater/" target="_blank")
+        span.badge.badge-primary.badge-margin Shop
+
+    p
+      | #{$i18n[dir][subdir].items[4].text1}
+      a.link(href="https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20180815201036&SearchText=rubber+heater" target="_blank") #{$i18n[dir][subdir].items[4].text2}
+      | #{$i18n[dir][subdir].items[4].text3}
+
+    span
+      a.link(href="/"+$localeName+"/maker/plate/index.html")
+        +itemtitle(dir, subdir, 5)
+      span.badge.badge-success Easy
+
+    p
+      | #{$i18n[dir][subdir].items[5].text1}
+
+    span
+      a.link(href="/"+$localeName+"/maker/pc/index.html")
+        +itemtitle(dir, subdir, 6)
+      span.badge.badge-success Easy
+      a(href="https://shop.tori.st/product/heatsink/" target="_blank")
+        span.badge.badge-primary.badge-margin Shop:Heatsink
+      a(href="https://shop.tori.st/product/peltier/" target="_blank")
+        span.badge.badge-primary.badge-margin Shop:Peltier
+
+    p
+      | #{$i18n[dir][subdir].items[6].text1}
+
+    span
+      a.link(href="/"+$localeName+"/maker/screw/index.html")
+        +itemtitle(dir, subdir, 7)
+      span.badge.badge-success Easy
+
+    p
+      | #{$i18n[dir][subdir].items[7].text1}
+
+    span
+      a.link(href="/"+$localeName+"/maker/misc/index.html")
+        +itemtitle(dir, subdir, 8)
+      span.badge.badge-success Easy
+
+    p
+      | #{$i18n[dir][subdir].items[8].text1}
+
+    +nextstep('/maker/wood/index.html', $i18n.maker.wood.label)

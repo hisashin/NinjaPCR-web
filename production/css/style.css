@@ -1,3 +1,6 @@
+.badge-margin{
+    margin: 0 3px
+}
 .btn{
     white-space:normal !important;
     word-wrap: break-word; 

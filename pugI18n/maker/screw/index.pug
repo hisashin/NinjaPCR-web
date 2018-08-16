@@ -9,13 +9,15 @@ block sidebar
 block main
 
   - var dir = 'maker'
-  - var subdir = 'pcb'
+  - var subdir = 'screw'
 
   +itemhead(dir, subdir)
 
-    h4 Introduction
+  if $localeName == 'ja'
+    +itemtitle(dir, subdir, 0)
 
     p
-      | Both metric and inch screws are supported. Wait our updates.
+      | #{$i18n[dir][subdir].items[0].text1}
+      +table($i18n[dir][subdir].items[0].table)
 
-    +nextstep('/maker/metal/index.html', $i18n.maker.metal.label)
+    +nextstep('/maker/misc/index.html', $i18n.maker.misc.label)

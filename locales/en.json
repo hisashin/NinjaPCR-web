@@ -463,55 +463,120 @@
           "items" : [
             {
               "title" : "Build your own",
-              "text1" : "This section is under construction. We will share how to make everything from scrath and open a webshop to sell core parts like heater and well. Here are ",
-              "text2" : "GitHub",
-              "text3" : " and 3d models for ",
-              "text4" : "t5.5mm",
-              "text5" : " and ",
-              "text6" : "t5.0mm",
-              "text7" : ". Join ",
-              "text8" : "Google Group",
-              "text9" : " to keep updated."
+              "text1" : ""
+            },
+            {
+              "title" : "Advantages of making",
+              "text1" : ""
+            },
+            {
+              "title" : "Disadvantages of making",
+              "text1" : ""
+            },
+            {
+              "title" : "Required tools or what to buy",
+              "text1" : "NinjaPCR consists of these components and each tools are required. If you don't have, you can buy it from link."
             }
           ]
         },
-        "pcb" : {
-          "label" : "NinjaPCB",
-          "currency" : "USD",
-          "bom" : {
-            "head" : [ "ID", "Name", "Detail", "Market", "Price(USD)" ],
-            "parts" : [
+        "list" : {
+          "label" : "Todo List",
+          "items" : [
               {
-                "name" : "PCB",
-                "value" : "79x73mm",
-                "url" : "https://github.com/hisashin/NinjaPCR/tree/master/eagle",
-                "note" : "Choose copper thickness as doubled (2oz) to support 10A or BURN",
-                "market" : "Any PCB factory",
-                "murl" : "https://www.seeedstudio.com/fusion.html",
-                "price" : "10"
-              },
-              {
-                "name" : "ESP2",
-                "value" : "ESP-WROOM-02",
-                "url" : "https://www.espressif.com/en/products/hardware/esp-wroom-02/overview",
-                "note" : "Certified by Wi-Fi Alliance, SRRC, FCC, CE ( RED ), TELEC, IC & KCC",
-                "find" : true,
-                "price" : "10"
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
               }
             ]
-          }
         },
         "wood" : {
-          "label" : "Wood Parts"
+          "label" : "Wood Parts",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "pcb" : {
+          "label" : "NinjaPCB",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "well" : {
+          "label" : "Well",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "heater" : {
+          "label" : "Lid Heater",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "plate" : {
+          "label" : "Aluminium Plates",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "pc" : {
+          "label" : "PC Parts",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
         },
         "screw" : {
-          "label" : "Screws"
-        },
-        "metal" : {
-          "label" : "Metal Parts"
+          "label" : "Screws",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
         },
         "misc" : {
-          "label" : "Miscellaneous"
+          "label" : "Miscellaneous",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "assy" : {
+          "label" : "Assembly",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
+        },
+        "firmware" : {
+          "label" : "Burn Firmware",
+          "items" : [
+              {
+                "title" : "TODO",
+                "text1" : "Please wait a while for update."
+              }
+            ]
         }
     },
     "req" : {

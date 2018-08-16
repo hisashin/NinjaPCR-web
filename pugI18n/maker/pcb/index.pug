@@ -13,43 +13,14 @@ block main
 
   +itemhead(dir, subdir)
 
-    h4 Introduction
+  if $localeName == 'ja'
+    +itemtitle(dir, subdir, 0)
 
     p
-      | Use NinjaPCB ver2.2 and DON'T forget to choose 2oz as copper thickness (double size) to support 10A. Wait our updates.
-      br
-      a.link(href="https://github.com/hisashin/NinjaPCR/tree/master/eagle", target="_blank") EAGLE
+      | #{$i18n[dir][subdir].items[0].text1}
 
     - var img1 = "/maker/images/NinjaPCB_ver2.2-layout.jpeg"
     - var img2 = "/maker/images/NinjaPCB_ver2.2-schematic.jpeg"
     +image2(img1, img1, img1, img2, img2, img2)
 
-    h4 BOM
-
-    p
-      table.table
-        thead
-          tr
-            each col in $i18n[dir][subdir].bom.head
-              th(scope="col") #{col}
-        tbody
-          each p,index in $i18n[dir][subdir].bom.parts
-            tr
-              td(scope="row") #{p.name}
-              td
-                if p.url
-                  a.link(href= p.url, target="_blank") #{p.value}
-                else
-                  | #{p.value}
-              td #{p.note}
-              td
-                if p.find
-                  a.link(href= "http://www.findchips.com/search/"+p.value, target="_blank") findchips
-                else if p.murl && p.market
-                  a.link(href= p.murl, target="_blank") #{p.market}
-                else
-                  | #{p.market}x#{p.murl}
-              td
-                | #{p.price}
-
-    +nextstep('/maker/wood/index.html', $i18n.maker.wood.label)
+    +nextstep('/maker/well/index.html', $i18n.maker.well.label)

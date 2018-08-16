@@ -142,19 +142,31 @@ mixin sidebar(dir)
           if isMaker
             span.sr-only (current)
         if isMaker
-          - var isMakerPcb = /\/maker\/pcb\//.test(dir)
+          - var isMakerList = /\/maker\/list\//.test(dir)
           - var isMakerWood = /\/maker\/wood\//.test(dir)
+          - var isMakerPcb = /\/maker\/pcb\//.test(dir)
+          - var isMakerWell = /\/maker\/well\//.test(dir)
+          - var isMakerHeater = /\/maker\/heater\//.test(dir)
+          - var isMakerPlate = /\/maker\/plate\//.test(dir)
+          - var isMakerPc = /\/maker\/pc\//.test(dir)
           - var isMakerScrew = /\/maker\/screw\//.test(dir)
-          - var isMakerMetal = /\/maker\/metal\//.test(dir)
           - var isMakerMisc = /\/maker\/misc\//.test(dir)
-          - var isMakerIndex = (!isMakerPcb && !isMakerWood && !isMakerScrew && !isMakerMetal && !isMakerMisc)
+          - var isMakerAssy = /\/maker\/assy\//.test(dir)
+          - var isMakerFirmware = /\/maker\/firmware\//.test(dir)
+          - var isMakerIndex = (!isMakerList && !isMakerWood && !isMakerPcb && !isMakerWell && !isMakerHeater && !isMakerPlate && !isMakerPc && !isMakerScrew && !isMakerMisc && !isMakerAssy && !isMakerFirmware)
           .list-group.list-group-root.well
             a.list-group-item(href="/"+$localeName+"/maker/index.html", class= isMakerIndex ? "active" : "") #{$i18n.maker.index.label}
-            a.list-group-item(href="/"+$localeName+"/maker/pcb/index.html", class= isMakerPcb ? "active" : "") #{$i18n.maker.pcb.label}
+            a.list-group-item(href="/"+$localeName+"/maker/list/index.html", class= isMakerList ? "active" : "") #{$i18n.maker.list.label}
             a.list-group-item(href="/"+$localeName+"/maker/wood/index.html", class= isMakerWood ? "active" : "") #{$i18n.maker.wood.label}
+            a.list-group-item(href="/"+$localeName+"/maker/pcb/index.html", class= isMakerPcb ? "active" : "") #{$i18n.maker.pcb.label}
+            a.list-group-item(href="/"+$localeName+"/maker/well/index.html", class= isMakerWell ? "active" : "") #{$i18n.maker.well.label}
+            a.list-group-item(href="/"+$localeName+"/maker/heater/index.html", class= isMakerHeater ? "active" : "") #{$i18n.maker.heater.label}
+            a.list-group-item(href="/"+$localeName+"/maker/plate/index.html", class= isMakerPlate ? "active" : "") #{$i18n.maker.plate.label}
+            a.list-group-item(href="/"+$localeName+"/maker/pc/index.html", class= isMakerPc ? "active" : "") #{$i18n.maker.pc.label}
             a.list-group-item(href="/"+$localeName+"/maker/screw/index.html", class= isMakerScrew ? "active" : "") #{$i18n.maker.screw.label}
-            a.list-group-item(href="/"+$localeName+"/maker/metal/index.html", class= isMakerMetal ? "active" : "") #{$i18n.maker.metal.label}
             a.list-group-item(href="/"+$localeName+"/maker/misc/index.html", class= isMakerMisc ? "active" : "") #{$i18n.maker.misc.label}
+            a.list-group-item(href="/"+$localeName+"/maker/assy/index.html", class= isMakerAssy ? "active" : "") #{$i18n.maker.assy.label}
+            a.list-group-item(href="/"+$localeName+"/maker/firmware/index.html", class= isMakerFirmware ? "active" : "") #{$i18n.maker.firmware.label}
       li.nav-item
         a.nav-link(href="/"+$localeName+"/req/index.html", class= isReq ? "active" : "")
           span(data-feather="smartphone")

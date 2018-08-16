@@ -9,13 +9,14 @@ block sidebar
 block main
 
   - var dir = 'maker'
-  - var subdir = 'pcb'
+  - var subdir = 'wood'
 
   +itemhead(dir, subdir)
 
-    h4 Introduction
+  if $localeName == 'ja'
+    +itemtitle(dir, subdir, 0)
 
     p
-      | Can you use laser cutter and MDF board with 5.5mm or 5.0mm thickness? Then you can make your own wooden parts. Wait our updates.
+      | #{$i18n[dir][subdir].items[0].text1}
 
-    +nextstep('/maker/screw/index.html', $i18n.maker.screw.label)
+    +nextstep('/maker/pcb/index.html', $i18n.maker.pcb.label)

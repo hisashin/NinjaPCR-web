@@ -1,15 +1,15 @@
 extends ../layout
 
 block navbar
-  +navbar('/maker/misc/')
+  +navbar('/maker/assy/')
 
 block sidebar
-  +sidebar('/maker/misc/')
+  +sidebar('/maker/assy/')
 
 block main
 
   - var dir = 'maker'
-  - var subdir = 'misc'
+  - var subdir = 'assy'
 
   +itemhead(dir, subdir)
 
@@ -18,7 +18,6 @@ block main
 
     p
       | #{$i18n[dir][subdir].items[0].text1}
-      +table($i18n[dir][subdir].items[0].table)
 
-    +nextstep('/maker/assy/index.html', $i18n.maker.assy.label)
+    +nextstep('/maker/firmware/index.html', $i18n.maker.firmware.label)
 
