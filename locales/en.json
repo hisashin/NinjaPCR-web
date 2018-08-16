@@ -463,52 +463,52 @@
           "items" : [
             {
               "title" : "Making NinjaPCR from scratch",
-              "text1" : "NinjaPCR is totally opensourced and anyone can download everything from ",
+              "text1" : "NinjaPCR is totally opensourced on ",
               "text2" : "GitHub",
-              "text3" : ". Making NinjaPCR from scratch is best textbook to experience multiple DIY skills like lasercutting, metal, electric circuits and so on at once. But it's hard for beginners to accomplish that by themselves without help. NinjaPCRは通常販売している「キット版」(右)の他に、自作のための「メイカー版」(左)があり、ここでその製作手順を詳細にご説明します。より多くの方々がメイカー版NinjaPCRの製作を通じて自作スキルをも手に入れ、他の創造的な活動に応用してくれることを望みます。"
+              "text3" : ". Making NinjaPCR from scratch is best textbook to experience multiple DIY skills like lasercutting, metal, electric circuits and so on at once. But it's really hard for beginners to accomplish by themselves without any help. That is why this section exists! We designed \"Maker model\" (left) besides \"Kit model\" (right, on sale). By sharing detailed instructions how to make Maker model from scratch, we hope that people get DIY skills much easier and apply these knowledges to another creative projects in future."
             },
             {
-              "title" : "Differences between Kit and Maker models",
-              "text1" : "ラッチ・ヒンジ",
-              "text2" : "蓋と本体を接続するラッチとヒンジは、キット版では市販品を使用していますが、東京以外では入手困難です。そのためメイカー版では、レーザーカットされた木材部品で代替しています。",
-              "text3" : "ATX電源に対応",
-              "text4" : "キット版の電源は12V150Wの高出力なもので、",
+              "title" : "Differences between Kit model and Maker model",
+              "text1" : "Latch and Hinge",
+              "text2" : "Kit model use some parts only on Japanese market. In Maker model, they are replaced with laser cut wood and you don't need to import.",
+              "text3" : "ATX Power Supply",
+              "text4" : "Adapter of Kit model is powerful due to run peltier (12V150W). You can find it on ",
               "text5" : "AliExpress",
-              "text6" : "から購入できますが、送料を含めると高くなってきます。メイカー版ではPCB(電子基板)にATXコネクタを取り付け、コネクタ用の穴がついている",
-              "text7" : "メイカー版用のレーザーカットデータ",
-              "text8" : "を使用することで、廃棄されたPCからでも回収できる、一般的なATX電源ユニットで給電できます。この場合、アダプタを接続するための2種類の部品(DIN4, JACK)は基板上から省略できます。",
-              "text9" : "拡張性",
-              "text10" : "ATXコネクタのすぐ上に拡張用ピンヘッドを実装することができ、",
-              "text11" : "USBシリアル変換アダプタ(3.3V)",
-              "text12" : "を刺せば",
+              "text6" : " but it will cost a lot including shipping fee. In Maker model, you can add ATX connector to PCB and choose another ",
+              "text7" : "laser cut data",
+              "text8" : " with hole for connector so that you can power it with common ATX power supply which can be scavenged from broken PC. In that case, you don't need to solder 2 adapter connetors (DIN4 and JACK) to PCB.",
+              "text9" : "Extensibility",
+              "text10" : "You can solder additional pinheads just above ATX connector to change software using ",
+              "text11" : "USB-Serial adapter (3.3V)",
+              "text12" : " and ",
               "text13" : "ArduinoIDE",
-              "text14" : "からソフトウェアの書き換えを行ったり、ジャンパピンと併用することでファームウェア自体の更新もできます。",
-              "text15" : "板厚",
-              "text16" : "キット版は5.5mm厚のMDF材を使用していますが、メイカー版は5.0mm厚のデータも用意されているので、どちらか調達しやすい方を使用できます。"
+              "text14" : ". By sticking jumpoer pin to IO0, you can burn your own firmware.",
+              "text15" : "Thickness of wood board",
+              "text16" : "Kit model uses 5.5mm MDF (Medium-density fibreboard). You can choose from 5.0mm and 5.5mm in Maker model."
             },
             {
               "title" : "Advantages",
-              "text1" : "安い(かも)",
-              "text2" : "もし一番の動機がお金でしたら、自作はあまりおすすめしない方法です。例えば私達がUSD100で販売している",
-              "text3" : "チューブホルダ",
-              "text4" : "を1個だけ自力で作成しようとすると、少なくとも20時間以上のあなたの時間か、USD300以上の外注費が必要となります。USD80の",
-              "text5" : "高熱密度蓋ヒーター",
-              "text6" : "は探し方と、知識としてUSD0.5で作る試みがあったことをご紹介しますが、熱で破損しやすく、それによって生じた火花で火事が発生しても完全に自己責任で、危険なので私達は試したことがありません。安全な高出力ヒーターを作ろうとすると金型を作成する必要があるので、1個だけの製作はまず不可能です。そのため全体ではキットを購入するより、かえって高くなる可能性もあります。",
-              "text7" : "スキル",
-              "text8" : "コア部品は個別に購入できるので、すべてを自分で作る必要はありません。たとえば木製部品のレーザーカットをお近くの",
-              "text9" : "ハッカースペース",
-              "text10" : "や",
+              "text1" : "Cheap (maybe)",
+              "text2" : "If you're thinking about making from scratch to save money, we don't recommend. For example, ",
+              "text3" : "well (tube holder)",
+              "text4" : " is USD100 on our shop but you will spend at least 20 hours or USD300 for outsourcing. ",
+              "text5" : "High thermal density lid heater",
+              "text6" : " is USD80 and we will share how to search on online market and a link trying to make it at USD0.5. But that might be easy to be broken by heat and we have never tried before. Keep in mind that you have to take all responsibilities even if you make a fire by sparks due to such fault. It is almost impossible to make safe heater with high thermal density in small amount because mold is needed. As a conclusion, Maker model can be more pricy compared to Kit model",
+              "text7" : "Skills",
+              "text8" : "Relax, you don't need to make everything. Even if you make only wood parts using laser cutter in ",
+              "text9" : "hackerspaces",
+              "text10" : " or ",
               "text11" : "FabLab",
-              "text12" : "などで自分でやってみるだけで、極めて応用の効く素晴らしい能力を身につけることができたと実感できるはずです。わからない点があれば",
-              "text13" : "問い合わせフォーム",
-              "text14" : "からご連絡いただければ、私達は最大限のお手伝いをします。"
+              "text12" : " around you, you will notice that you got super power throughout your life. You can complement on our shop and we will help you if you ask questions through ",
+              "text13" : "contact form",
+              "text14" : "."
             },
             {
               "title" : "Disadvantages",
-              "text1" : "無保証",
-              "text2" : "キット版には保証がついていますが、メイカー版にはありません。製作によって生じたすべての問題は、ご自身で責任を負って頂く必要があることをご理解ください。",
-              "text3" : "忍耐",
-              "text4" : "最初は、何をやっても思うように動かないと感じるのがあたりまえです。質問を頂いても私達は原因を特定できず、何度もやりなおしたり、根気のいる作業が必要になる可能性があります。過程を楽しみ、失敗に成長を見出しましょう。"
+              "text1" : "No Warranty",
+              "text2" : "Kit model has some warranty but nothing with Maker model. You have to understand that you are responsible for everything that happens.",
+              "text3" : "Endurance",
+              "text4" : "You might feel everything doesn't work as you want first. When we cannot point out the root cause online, you may have to repeat or test with patience. Don't scared to make faults."
             }
           ]
         },
@@ -518,9 +518,9 @@
           "items" : [
             {
               "title" : "Components",
-              "text1" : "NinjaPCRは下記の要素から構成されており、それぞれの製作にはいくつかのツールが必須となる場合があります。ツールを使用できない場合でも、",
-              "text2" : "ショップ",
-              "text3" : "から購入できます(ショップは日本への発送には対応していないので、問い合わせフォームからご相談ください)。"
+              "text1" : "NinjaPCR are consisted from these components. Some components need proper tools like laser cutter. Even if you don't have, you can buy them on ",
+              "text2" : "shop",
+              "text3" : "."
             },
             {
               "title" : "Wood Parts",
@@ -528,7 +528,7 @@
               "skill" : [
                 "Laser Cutter"
               ],
-              "text1" : "5.0mmまたは5.5mm厚のMDF材を、レーザーカッターで切断して作成します。"
+              "text1" : "Cut MDF (Medium-density fibreboard) with thickness 5.0mm or 5.5mm using laser cutter."
             },
             {
               "title" : "Printed Circuit Board (PCB)",
@@ -540,7 +540,7 @@
                 "Solder Stencil",
                 "Reflow"
               ],
-              "text1" : "まずPCB製造業者に、緑色の電子基板と、部品のはんだづけに必要なステンシルをオンラインで発注します。次に必要な部品を別のオンラインサイトから購入し、表面実装部品(SMD)はステンシルとクリームはんだで、その他の部品ははんだごてで実装します。クリームはんだをを用いたはんだづけはリフローと呼ばれ、安価なホットプレートやオーブン、放射温度計などを使用した様々な方法がオンライン上で共有されています。"
+              "text1" : "First, we will order green \"Printed Circuit Board (PCB)\" and \"Stencil\" to factory by uploading proper files online. Then we will order electric parts on another online stores. Surface Mount Devices (SMD) will be \"reflowed\" (soldered using stencil and solder paste). Other parts will be soldered by soldering rod. \"Reflow\" is a common technique to solder small parts at once and people share how to do that using cheap tools like hot plate or oven."
             },
             {
               "title" : "Well",
@@ -549,7 +549,7 @@
                 "3D CAD",
                 "CNC machine"
               ],
-              "text1" : "アルミニウム製チューブホルダです。PCBと同様、CADデータを送ると切削してくれるオンラインサービスもありますが、少量だとおそらく1個あたりUSD300以上します。自作する場合は、まずA6063というアルミニウム材料を調達し、3D CADソフトから生成した切削データを、アルミニウムの切削が可能なCNC上で処理させて切削する必要があります。"
+              "text1" : "Aluminium PCR tube holder. Like PCB, there is web service that you can order metal parts by uploading 3D model but it is pricy (maybe more than USD300/piece for small amount). To make by youself, buy A6063 aluminium plate first. Then operate 3D CAD software to export CAM (Computer-aided manufacturing) file for CNC. Finally, operate CNC machine to run CAM file."
             },
             {
               "title" : "Heater",
