@@ -13,7 +13,6 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName == 'ja'
     +itemtitle(dir, subdir, 0)
 
     p
@@ -24,49 +23,65 @@ block main
     span
       a.link(href="/"+$localeName+"/maker/wood/index.html")
         +itemtitle(dir, subdir, 1)
-      span.badge.badge-success Easy
-      span.badge.badge-secondary.badge-margin Laser Cutter
+      span.badge.badge-success.badge-margin #{$i18n[dir][subdir].items[1].difficulty}
+      each val in $i18n[dir][subdir].items[1].skill
+        span.badge.badge-secondary.badge-margin #{val}
       a(href="https://shop.tori.st/product/woods/" target="_blank")
-        span.badge.badge-primary.badge-margin Shop
+        span.badge.badge-primary.badge-margin #{$i18n[dir][subdir].buy}
 
     p
+      .row
+        - var img = "/maker/images/lasercut.jpg"
+        +process-image(img, img)
+        - var img = "/maker/images/IMG_0935.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[1].text1}
 
     span
       a.link(href="/"+$localeName+"/maker/pcb/index.html")
         +itemtitle(dir, subdir, 2)
-      span.badge.badge-danger Hard
-      span.badge.badge-secondary.badge-margin Order PCB
-      span.badge.badge-secondary.badge-margin Order Electric Parts
-      span.badge.badge-secondary.badge-margin Hand Soldering
-      span.badge.badge-secondary.badge-margin Solder Stencil
-      span.badge.badge-secondary.badge-margin Reflow Soldering
+      span.badge.badge-danger.badge-margin #{$i18n[dir][subdir].items[2].difficulty}
+      each val in $i18n[dir][subdir].items[2].skill
+        span.badge.badge-secondary.badge-margin #{val}
       a(href="https://shop.tori.st/product/ninjapcb/" target="_blank")
-        span.badge.badge-primary.badge-margin Shop
+        span.badge.badge-primary.badge-margin #{$i18n[dir][subdir].buy}
 
     p
+      .row
+        - var img = "/maker/images/pcb.jpg"
+        +process-image(img, img)
+        - var img = "/maker/images/IMG_0931.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[2].text1}
 
     span
       a.link(href="/"+$localeName+"/maker/well/index.html")
         +itemtitle(dir, subdir, 3)
-      span.badge.badge-danger Hard
-      span.badge.badge-secondary.badge-margin 3D CAD
-      span.badge.badge-secondary.badge-margin CNC machine
+      span.badge.badge-danger.badge-margin #{$i18n[dir][subdir].items[3].difficulty}
+      each val in $i18n[dir][subdir].items[3].skill
+        span.badge.badge-secondary.badge-margin #{val}
       a(href="https://shop.tori.st/product/well/" target="_blank")
-        span.badge.badge-primary.badge-margin Shop
+        span.badge.badge-primary.badge-margin #{$i18n[dir][subdir].buy}
 
     p
+      .row
+        - var img = "/maker/images/well2.jpg"
+        +process-image(img, img)
+        - var img = "/maker/images/well1.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[3].text1}
 
     span
       a.link(href="/"+$localeName+"/maker/heater/index.html")
         +itemtitle(dir, subdir, 4)
-      span.badge.badge-dark YouShouldBuy
+      span.badge.badge-dark.badge-margin #{$i18n[dir][subdir].items[4].difficulty}
       a(href="https://shop.tori.st/product/heater/" target="_blank")
-        span.badge.badge-primary.badge-margin Shop
+        span.badge.badge-primary.badge-margin #{$i18n[dir][subdir].buy}
 
     p
+      .row
+        - var img = "/maker/images/heater0.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[4].text1}
       a.link(href="https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20180815201036&SearchText=rubber+heater" target="_blank") #{$i18n[dir][subdir].items[4].text2}
       | #{$i18n[dir][subdir].items[4].text3}
@@ -74,27 +89,35 @@ block main
     span
       a.link(href="/"+$localeName+"/maker/plate/index.html")
         +itemtitle(dir, subdir, 5)
-      span.badge.badge-success Easy
+      span.badge.badge-success.badge-margin #{$i18n[dir][subdir].items[5].difficulty}
 
     p
+      .row
+        - var img = "/maker/images/plate1.png"
+        +process-image(img, img)
+        - var img = "/maker/images/plate2.png"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[5].text1}
 
     span
       a.link(href="/"+$localeName+"/maker/pc/index.html")
         +itemtitle(dir, subdir, 6)
-      span.badge.badge-success Easy
+      span.badge.badge-success.badge-margin #{$i18n[dir][subdir].items[6].difficulty}
       a(href="https://shop.tori.st/product/heatsink/" target="_blank")
-        span.badge.badge-primary.badge-margin Shop:Heatsink
+        span.badge.badge-primary.badge-margin #{$i18n[dir][subdir].buy}:#{$i18n[dir][subdir].items[6].heatsink}
       a(href="https://shop.tori.st/product/peltier/" target="_blank")
-        span.badge.badge-primary.badge-margin Shop:Peltier
+        span.badge.badge-primary.badge-margin #{$i18n[dir][subdir].buy}:#{$i18n[dir][subdir].items[6].peltier}
 
     p
+      .row
+        - var img = "/maker/images/heatsink.jpg"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[6].text1}
 
     span
       a.link(href="/"+$localeName+"/maker/screw/index.html")
         +itemtitle(dir, subdir, 7)
-      span.badge.badge-success Easy
+      span.badge.badge-success.badge-margin #{$i18n[dir][subdir].items[7].difficulty}
 
     p
       | #{$i18n[dir][subdir].items[7].text1}
@@ -102,7 +125,7 @@ block main
     span
       a.link(href="/"+$localeName+"/maker/misc/index.html")
         +itemtitle(dir, subdir, 8)
-      span.badge.badge-success Easy
+      span.badge.badge-success.badge-margin #{$i18n[dir][subdir].items[8].difficulty}
 
     p
       | #{$i18n[dir][subdir].items[8].text1}

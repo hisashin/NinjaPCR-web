@@ -456,53 +456,147 @@
         }
     },
     "maker" : {
-        "label" : "For Makers",
-        "shortlabel" : "ForMakers",
+        "label" : "For Maker",
+        "shortlabel" : "ForMaker",
         "index" : {
-          "label" : "Importants",
+          "label" : "Introduction",
           "items" : [
             {
-              "title" : "Build your own",
-              "text1" : ""
+              "title" : "Making NinjaPCR from scratch",
+              "text1" : "NinjaPCRは完全にオープンソースで、誰でも",
+              "text2" : "GitHub",
+              "text3" : "上のすべてのデータにアクセスできます。レーザーカット、金属加工、電子基板の発注と実装といった、多種多様なスキルを一度に経験する教材としても理想的ですが、未経験者が助けなしにすべてを作り上げるのは相当な困難を伴います。NinjaPCRは通常販売している「キット版」(右)の他に、自作のための「メイカー版」(左)があり、ここでその製作手順を詳細にご説明します。より多くの方々がメイカー版NinjaPCRの製作を通じて自作スキルをも手に入れ、他の創造的な活動に応用してくれることを望みます。"
             },
             {
-              "title" : "Advantages of making",
-              "text1" : ""
+              "title" : "Differences between Kit and Maker models",
+              "text1" : "ラッチ・ヒンジ",
+              "text2" : "蓋と本体を接続するラッチとヒンジは、キット版では市販品を使用していますが、東京以外では入手困難です。そのためメイカー版では、レーザーカットされた木材部品で代替しています。",
+              "text3" : "ATX電源に対応",
+              "text4" : "キット版の電源は12V150Wの高出力なもので、",
+              "text5" : "AliExpress",
+              "text6" : "から購入できますが、送料を含めると高くなってきます。メイカー版ではPCB(電子基板)にATXコネクタを取り付け、コネクタ用の穴がついている",
+              "text7" : "メイカー版用のレーザーカットデータ",
+              "text8" : "を使用することで、廃棄されたPCからでも回収できる、一般的なATX電源ユニットで給電できます。この場合、アダプタを接続するための2種類の部品(DIN4, JACK)は基板上から省略できます。",
+              "text9" : "拡張性",
+              "text10" : "ATXコネクタのすぐ上に拡張用ピンヘッドを実装することができ、",
+              "text11" : "USBシリアル変換アダプタ(3.3V)",
+              "text12" : "を刺せば",
+              "text13" : "ArduinoIDE",
+              "text14" : "からソフトウェアの書き換えを行ったり、ジャンパピンと併用することでファームウェア自体の更新もできます。",
+              "text15" : "板厚",
+              "text16" : "キット版は5.5mm厚のMDF材を使用していますが、メイカー版は5.0mm厚のデータも用意されているので、どちらか調達しやすい方を使用できます。"
             },
             {
-              "title" : "Disadvantages of making",
-              "text1" : ""
+              "title" : "Advantages",
+              "text1" : "安い(かも)",
+              "text2" : "もし一番の動機がお金でしたら、自作はあまりおすすめしない方法です。例えば私達がUSD100で販売している",
+              "text3" : "チューブホルダ",
+              "text4" : "を1個だけ自力で作成しようとすると、少なくとも20時間以上のあなたの時間か、USD300以上の外注費が必要となります。USD80の",
+              "text5" : "高熱密度蓋ヒーター",
+              "text6" : "は探し方と、知識としてUSD0.5で作る試みがあったことをご紹介しますが、熱で破損しやすく、それによって生じた火花で火事が発生しても完全に自己責任で、危険なので私達は試したことがありません。安全な高出力ヒーターを作ろうとすると金型を作成する必要があるので、1個だけの製作はまず不可能です。そのため全体ではキットを購入するより、かえって高くなる可能性もあります。",
+              "text7" : "スキル",
+              "text8" : "コア部品は個別に購入できるので、すべてを自分で作る必要はありません。たとえば木製部品のレーザーカットをお近くの",
+              "text9" : "ハッカースペース",
+              "text10" : "や",
+              "text11" : "FabLab",
+              "text12" : "などで自分でやってみるだけで、極めて応用の効く素晴らしい能力を身につけることができたと実感できるはずです。わからない点があれば",
+              "text13" : "問い合わせフォーム",
+              "text14" : "からご連絡いただければ、私達は最大限のお手伝いをします。"
             },
             {
-              "title" : "Required tools or what to buy",
-              "text1" : "NinjaPCR consists of these components and each tools are required. If you don't have, you can buy it from link."
+              "title" : "Disadvantages",
+              "text1" : "無保証",
+              "text2" : "キット版には保証がついていますが、メイカー版にはありません。製作によって生じたすべての問題は、ご自身で責任を負って頂く必要があることをご理解ください。",
+              "text3" : "忍耐",
+              "text4" : "最初は、何をやっても思うように動かないと感じるのがあたりまえです。質問を頂いても私達は原因を特定できず、何度もやりなおしたり、根気のいる作業が必要になる可能性があります。過程を楽しみ、失敗に成長を見出しましょう。"
             }
           ]
         },
         "list" : {
-          "label" : "Todo List",
+          "label" : "Components",
+          "buy" : "Shop",
           "items" : [
-              {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
-              }
-            ]
+            {
+              "title" : "Components",
+              "text1" : "NinjaPCRは下記の要素から構成されており、それぞれの製作にはいくつかのツールが必須となる場合があります。ツールを使用できない場合でも、",
+              "text2" : "ショップ",
+              "text3" : "から購入できます(ショップは日本への発送には対応していないので、問い合わせフォームからご相談ください)。"
+            },
+            {
+              "title" : "Wood Parts",
+              "difficulty" : "Easy",
+              "skill" : [
+                "Laser Cutter"
+              ],
+              "text1" : "5.0mmまたは5.5mm厚のMDF材を、レーザーカッターで切断して作成します。"
+            },
+            {
+              "title" : "Printed Circuit Board (PCB)",
+              "difficulty" : "Hard",
+              "skill" : [
+                "Order PCB",
+                "Order Electric Parts",
+                "Soldering",
+                "Solder Stencil",
+                "Reflow"
+              ],
+              "text1" : "まずPCB製造業者に、緑色の電子基板と、部品のはんだづけに必要なステンシルをオンラインで発注します。次に必要な部品を別のオンラインサイトから購入し、表面実装部品(SMD)はステンシルとクリームはんだで、その他の部品ははんだごてで実装します。クリームはんだをを用いたはんだづけはリフローと呼ばれ、安価なホットプレートやオーブン、放射温度計などを使用した様々な方法がオンライン上で共有されています。"
+            },
+            {
+              "title" : "Well",
+              "difficulty" : "Hard",
+              "skill" : [
+                "3D CAD",
+                "CNC machine"
+              ],
+              "text1" : "アルミニウム製チューブホルダです。PCBと同様、CADデータを送ると切削してくれるオンラインサービスもありますが、少量だとおそらく1個あたりUSD300以上します。自作する場合は、まずA6063というアルミニウム材料を調達し、3D CADソフトから生成した切削データを、アルミニウムの切削が可能なCNC上で処理させて切削する必要があります。"
+            },
+            {
+              "title" : "Heater",
+              "difficulty" : "You should BUY",
+              "text1" : "PCRチューブは高温になるため、そのままでは内部の溶液が蒸発し、蓋の内側に結露してしまいます。これを防止するためにチューブの上からヒーターをあて、110℃程度に保つ必要があります。",
+              "text2" : "安価なヒーター",
+              "text3" : "は熱密度が低く、110℃に達することができないか、時間がかかりすぎます。PCBで代替する方法を紹介しますが、破損の恐れがありおすすめしません。"
+            },
+            {
+              "title" : "Aluminium Plates",
+              "difficulty" : "Easy",
+              "text1" : "1.5〜2.0mm程度であればあまり厚さは正確である必要はなく、材質も一般的なアルミで問題ありません。これくらい薄いとカッターナイフで簡単に切ることができます。"
+            },
+            {
+              "title" : "PC Parts",
+              "difficulty" : "簡単",
+              "heatsink" : "ヒートシンク",
+              "peltier" : "ペルチェ",
+              "text1" : "LGA115x対応のヒートシンク, グリス、ATX電源は一般的なもので十分です。ペルチェ素子は、PCショップなどで入手できるものは動作温度の上限が50℃程度で使用できません。PCRプロセスでは100℃近くに達するため、その温度帯をサポートする耐熱モデルを入手する必要があります。"
+            },
+            {
+              "title" : "Screws",
+              "difficulty" : "Easy",
+              "text1" : "リストにあるねじ類を購入すればいいだけなので簡単です。"
+            },
+            {
+              "title" : "Miscellaneous",
+              "difficulty" : "Easy",
+              "text1" : "リストは一般的な道具や代用可能なものが多く、入手は難しくありません。"
+            }
+          ]
         },
         "wood" : {
           "label" : "Wood Parts",
           "items" : [
-              {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
-              }
-            ]
+            {
+              "title" : "Preparing",
+              "text1" : "Please Stand By."
+            }
+          ]
         },
         "pcb" : {
-          "label" : "NinjaPCB",
+          "label" : "PCB",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         },
@@ -510,8 +604,8 @@
           "label" : "Well",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         },
@@ -519,8 +613,8 @@
           "label" : "Lid Heater",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         },
@@ -528,8 +622,8 @@
           "label" : "Aluminium Plates",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         },
@@ -537,8 +631,8 @@
           "label" : "PC Parts",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         },
@@ -546,8 +640,28 @@
           "label" : "Screws",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+                "title" : "Shopping List",
+                "text1" : "Get all screws, nuts and spacer in this list.",
+                "table" : {
+                  "head" : [ "Image", "Name", "mm", "inch", "pieces" ],
+                  "body" : [
+                    [ "img::/maker/images/item/screw/M3_6mm.png", "1. 鍋ねじ", "M3 6mm", "", 4 ],
+                    [ "img::/maker/images/item/screw/M3_6mm_tapping.png", "2. タッピングねじ", "M3 6mm", "", 8 ],
+                    [ "img::/maker/images/item/screw/M3_10mm.png", "3. 鍋ねじ", "M3 10mm", "", 8 ],
+                    [ "img::/maker/images/item/screw/M3_15mm.png", "4. 鍋ねじ", "M3 15mm", "", 18 ],
+                    [ "img::/maker/images/item/screw/M3_30mm.png", "5. 鍋ねじ", "M3 30mm", "", 2 ],
+                    [ "img::/maker/images/item/screw/M4_10mm.png", "6. 鍋ねじ", "M4 10mm", "", 4 ],
+                    [ "img::/maker/images/item/screw/M5_20mm.png", "7. 鍋ねじ", "M5 20mm", "", 4 ],
+                    [ "img::/maker/images/item/nut/M3.png", "8. ナット", "M3", "", 18 ],
+                    [ "img::/maker/images/item/nut/M3_nylon.png", "9. ナイロンナット", "M3", "", 2 ],
+                    [ "img::/maker/images/item/nut/M4.png", "10. ナット", "M4", "", 4 ],
+                    [ "img::/maker/images/item/nut/M5.png", "11. ナット", "M5", "", 8 ], 
+                    [ "img::/maker/images/item/nut/M6.png", "12. ナット", "M6", "", 1 ], 
+                    [ "img::/maker/images/item/spacer/M3_5mm.png", "13. プラスペーサ", "M3 5mm", "", 4 ],
+                    [ "img::/maker/images/item/spacer/M3_30mm.png", "14. メタルスペーサ", "M3 30mm", "", 4 ],
+                    [ "img::/maker/images/item/spacer/M3_90mm.png", "15. プラスペーサ", "M3 30+60mm", "", 4 ]
+                  ]
+                }
               }
             ]
         },
@@ -555,8 +669,23 @@
           "label" : "Miscellaneous",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By.",
+                "table" : {
+                  "head" : [ "名前", "内容" ],
+                  "body" : [
+                    [ "1. 断熱スポンジシート", "断熱性能は劣りますが、2mm厚のシリコンゴムをカッターナイフで切っても作成できます。110℃でも焦げないよう、耐熱温度に注意してください" ],
+                    [ "2. ノブ(M6 20mm)", "適当な板をねじ(M6 20mm)とナット(M6)ではさめば代用できます" ],
+                    [ "3. M4ファンガード", "3Dプリンタで出力するなどで代用できますし、動作中に指を入れなければなくても構いません" ],
+                    [ "4. M3ゴム足", "空気を逃がすために高さが必要なだけなので、3Dプリントで出力したり、ねじを長めにしてナットで固定すれば代用できます" ],
+                    [ "5. ワイヤクリップ", "グルーガンで代用できます" ],
+                    [ "6. プラスドライバ", "一般的な工具です" ],
+                    [ "7. マイナスドライバ", "一般的な工具です" ],
+                    [ "8. オフセットドライバ", "通常のプラスドライバで代用できます" ],
+                    [ "9. マルチスパナ", "ラジオペンチなどで代用できます" ],
+                    [ "10. ヘラ", "適当なプラスチックカードで代用できます" ]
+                  ]
+                }
               }
             ]
         },
@@ -564,8 +693,8 @@
           "label" : "Assembly",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         },
@@ -573,8 +702,8 @@
           "label" : "Burn Firmware",
           "items" : [
               {
-                "title" : "TODO",
-                "text1" : "Please wait a while for update."
+              	"title" : "Preparing",
+              	"text1" : "Please Stand By."
               }
             ]
         }

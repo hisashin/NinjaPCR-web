@@ -98,10 +98,11 @@ mixin table(table)
         each row in table.body
           tr
             each col,index in row
-              if index == 0
-                td(scope="row") #{col}
-              else
-                td #{col}
+              td(scope= index == 0 ? "row" : "")
+                if /^img::/.test(col)
+                  img.w-10.img-fluid.item-img(src= col.replace("img::", ""))
+                else
+                  | #{col}
 
 mixin itemhead(dir, subdir)
   script $('body').scrollspy({ target: "#sidebar-#{dir}-#{subdir}" })
