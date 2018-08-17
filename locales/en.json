@@ -495,11 +495,11 @@
               "text5" : "High thermal density lid heater",
               "text6" : " is USD80 and we will share how to search on online market and a link trying to make it at USD0.5. But that might be easy to be broken by heat and we have never tried before. Keep in mind that you have to take all responsibilities even if you make a fire by sparks due to such fault. It is almost impossible to make safe heater with high thermal density in small amount because mold is needed. As a conclusion, we cannot assure that Maker model is cheaper than Kit model",
               "text7" : "Skills",
-              "text8" : "Relax, you don't need to make everything. Even if you make only wood parts using laser cutter in ",
+              "text8" : "Relax, you don't need to make everything. Even if you make only wood parts by touching laser cutter in ",
               "text9" : "hackerspaces",
               "text10" : " or ",
               "text11" : "FabLab",
-              "text12" : " around you, you will notice that you got super power throughout your life. You can complement on our shop and we will help you if you ask questions through ",
+              "text12" : " around you for the first time, you will notice that you got super power and great connections throughout your life. You can complement on our shop and we will help you if you ask questions through ",
               "text13" : "contact form",
               "text14" : "."
             },
@@ -549,36 +549,36 @@
                 "3D CAD",
                 "CNC machine"
               ],
-              "text1" : "Aluminium PCR tube holder. Like PCB, there is web service that you can order metal parts by uploading 3D model but it is pricy (maybe more than USD300/piece for small amount). To make by youself, buy A6063 aluminium plate first. Then operate 3D CAD software to export CAM (Computer-aided manufacturing) file for CNC. Finally, operate CNC machine to run CAM file."
+              "text1" : "Aluminium PCR tube holder. Like PCB, there is web service that you can order metal parts by uploading 3D model but that would be pricy (maybe more than USD300/piece for small amount). To make by youself, buy A6063 aluminium plate first. Then operate 3D CAD software to export CAM (Computer-aided manufacturing) file for CNC. Finally, run CAM file on CNC machine to mill part you need."
             },
             {
-              "title" : "Heater",
+              "title" : "Lid Heater",
               "difficulty" : "You should BUY",
-              "text1" : "PCRチューブは高温になるため、そのままでは内部の溶液が蒸発し、蓋の内側に結露してしまいます。これを防止するためにチューブの上からヒーターをあて、110℃程度に保つ必要があります。",
-              "text2" : "安価なヒーター",
-              "text3" : "は熱密度が低く、110℃に達することができないか、時間がかかりすぎます。PCBで代替する方法を紹介しますが、破損の恐れがありおすすめしません。"
+              "text1" : "Lid heater works as dew condensation prevention. Without heating top of tube at high temperature (around 110 degree celcius), solution vapors and liquefy into drops atop of tube. ",
+              "text2" : "Cheap heaters",
+              "text3" : " don't have enough thermal density and it cannot or takes too long time to reach high temperature. We introduce how to make it using PCB but it is not recommended."
             },
             {
               "title" : "Aluminium Plates",
               "difficulty" : "Easy",
-              "text1" : "1.5〜2.0mm程度であればあまり厚さは正確である必要はなく、材質も一般的なアルミで問題ありません。これくらい薄いとカッターナイフで簡単に切ることができます。"
+              "text1" : "Any kind of aluminium plate works well and thickness can be varied from 1.5 to 2.0mm. You can cut such thin aluminium plate with box cutter easily."
             },
             {
               "title" : "PC Parts",
               "difficulty" : "Easy",
               "heatsink" : "Heatsink",
               "peltier" : "Peltier",
-              "text1" : "LGA115x対応のヒートシンク, グリス、ATX電源は一般的なもので十分です。ペルチェ素子は、PCショップなどで入手できるものは動作温度の上限が50℃程度で使用できません。PCRプロセスでは100℃近くに達するため、その温度帯をサポートする耐熱モデルを入手する必要があります。"
+              "text1" : "Common LGA115x heatsink, grease and ATX power supply can be used. Maximum operating temperature of common peltier is aroudn 80 degree celcius though PCR process requires up to 100 degree celcius. We recommend Hebei TEC1-12710HTS Peltier Module with maximum operating temperature of 225 degree celcius."
             },
             {
               "title" : "Screws",
               "difficulty" : "Easy",
-              "text1" : "リストにあるねじ類を購入すればいいだけなので簡単です。"
+              "text1" : "Just get the screws, nuts and spacers in list."
             },
             {
               "title" : "Miscellaneous",
               "difficulty" : "Easy",
-              "text1" : "リストは一般的な道具や代用可能なものが多く、入手は難しくありません。"
+              "text1" : "All items in list are common or easy to find."
             }
           ]
         },
