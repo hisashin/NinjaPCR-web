@@ -560,7 +560,7 @@
             {
               "title" : "アルミ板",
               "difficulty" : "簡単",
-              "text1" : "1.5〜2.0mm程度であればあまり厚さは正確である必要はなく、材質も一般的なアルミで問題ありません。これくらい薄いとカッターナイフで簡単に切ることができます。"
+              "text1" : "40x52mmと40mm四方の2枚のアルミ板です。厚さは1.5〜2.0mm程度であればなんでもよく、材質も一般的なもので問題ありません。これくらい薄いとカッターナイフで簡単に切ることができます。"
             },
             {
               "title" : "パソコンパーツ",
@@ -585,8 +585,39 @@
           "label" : "木製部品",
           "items" : [
             {
-              "title" : "準備中",
-              "text1" : "しばらくお待ち下さい"
+              "title" : "レーザーカッターのワークサイズは？",
+              "text1" : "近所の",
+              "text2" : "ハッカースペース",
+              "text3" : "や",
+              "text4" : "FabLab",
+              "text5" : "のような場所を検索し、どのレーザーカッターを使用するか決めたら、必要なデータフォーマットと、ワークサイズ(カットできる最大の板の大きさ)を確認しましょう。367x450mm以上であれば1枚の板から1度にすべての部品を切り出せますが、それ以下でも複数枚に分けて切ることかできます。"
+            },
+            {
+              "title" : "板の厚さは？",
+              "text1" : "近所のホームセンターかオンラインサイトで、MDF材を探しましょう。5.0mmと5.5mmのどちらにするかを決め、必要な量の板を購入します。ワークサイズに収まるよう、指定した寸法にカットしてくれるサービスがあるかもしれません。"
+            },
+            {
+              "title" : "カットデータ準備",
+              "text1" : "レーザーカッターが使用するソフトにあわせたデータを事前に用意します。",
+              "text2" : "Inkspace",
+              "text3" : "、",
+              "text4" : "PDF",
+              "text5" : "、",
+              "text6" : "CorelDRAW",
+              "text7" : "のデータを",
+              "text8" : "こちら",
+              "text9" : "に用意してあるので、インポート機能と組み合わせればほぼ問題なく作成できるはずです。",
+              "table" : {
+                "head" : [ "mm", "3D (Fusion360)", "Inkscape", "PDF", "CorelDRAW" ],
+                "body" : [
+                  [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr" ],
+                  [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr" ]
+                ]
+              }
+            },
+            {
+              "title" : "レーザーカット",
+              "text1" : "捨て板と本番用の板、カットデータを持ち込み、レーザーカットすると木製部品の完成です。"
             }
           ]
         },
@@ -594,8 +625,92 @@
           "label" : "PCB",
           "items" : [
               {
-                "title" : "準備中",
-                "text1" : "しばらくお待ち下さい"
+                "title" : "基板とステンシルを発注する",
+                "text1" : "NinjaPCRの基板はNinjaPCBという名前で、現在はver2.2が最新です。オンラインの基板製造サービス",
+                "text2" : "Seeed Fusion PCB",
+                "text3" : "を使用する手順を紹介します。回路図や発注に必要なデータはすべて",
+                "text4" : "ここ",
+                "text5" : "にまとめられています。銅の板厚(Copper Weight)をデフォルトの1ozではなく2ozに変更することなどをまとめた",
+                "text6" : "7ステップの手順",
+                "text7" : "に従って、発注を行いましょう。細かい部品を手で実装する際はステンシルがあると便利ですので、同時に発注しておきます。",
+                "table" : {
+                  "head" : [ "名前", "ファイル名" ],
+                  "body" : [
+                    [ "回路図", "NinjaPCB_ver2.2.sch" ],
+                    [ "配線図", "NinjaPCB_ver2.2.brd" ],
+                    [ "ガーバーデータ", "NinjaPCB_ver2.2.pcb-choose-2oz-as-copper-weight.zip" ],
+                    [ "ステンシルデータ", "NinjaPCB_ver2.2.stencil.zip" ]
+                  ]
+                }
+              },
+              {
+                "title" : "部品を発注する",
+                "text1" : "実装する部品リストはこちらです。アダプタではなくATX電源から給電する場合は、JACKとDIN4は実装せずATXにコネクタを取り付けましょう。WiFiモジュールはFCCとCEのみに対応した安価な",
+                "text2" : "ESP-12F",
+                "text3" : "か、さらにSRRC, TELEC(技適), IC, KCCに対応した",
+                "text4" : "ESP-WROOM-02",
+                "text5" : "かを選択できます。あなたの国の法律に準拠したものを選びましょう。ヒートシンクとリレーは東京では簡単に手に入るのですが、海外からは入手が難しいのでショップで提供する予定です。その前に必要になった場合はコンタクトフォームからご連絡ください。NinjaPCBは",
+                "text6" : "Seeed OPL(Open Parts Library)",
+                "text7" : "という、Seeed Studioが提供するパーツセットをもとに設計されています。いまのところ未検証なので、Digikeyなどで購入する場合はデータシートをもとに対応する部品を選択する必要があります。",
+                "table" : {
+                  "head" : [ "名前", "ID", "OPL ID", "データシート", "個数" ],
+                  "body" : [
+                    [ "IC1", "SN74LVC1G66DBVR@https://www.digikey.jp/product-detail/ja/texas-instruments/SN74LVC1G66DBVR/296-13253-1-ND/484545", "", "Datasheet@http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf", "1" ],
+                    [ "IC2", "NAU7802SGI@https://www.digikey.jp/product-detail/ja/nuvoton-technology-corporation-of-america/NAU7802SGI/NAU7802SGI-ND/2769782", "", "Datasheet@http://www.nuvoton.com/resource-files/NAU7802%20Data%20Sheet%20V1.7.pdf", "1" ],
+                    [ "RD1,RD2,RH,RL1,RL2", "ERA-3AEB153V@https://www.digikey.jp/product-detail/ja/panasonic-electronic-components/ERA-3AEB153V/P15KDBCT-ND/1466080", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "5" ],
+                    [ "RT", "ERA-3AEB4991V@https://www.digikey.jp/product-detail/ja/panasonic-electronic-components/ERA-3AEB4991V/P4.99KDBCT-ND/3075985", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "1" ],
+
+                    [ "Q1", "IRLB3813PBF@https://www.digikey.com/products/en?keywords=IRLB3813PbF", "", "Datasheet@https://www.infineon.com/dgdl/irlb3813pbf.pdf?fileId=5546d462533600a4015356603cfe258b", "1" ],
+                    [ "REG", "", "310030097", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/1310190P1.pdf", "1" ],
+                    [ "ATX", "1-1775099-3(Boardlockは切断)@https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1775099-3/A127799-ND/5272985", "", "Datasheet@http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1775099&DocType=Customer+Drawing&DocLang=English", "1" ],
+                    [ "HEATER_POWER,HEATER_TEMP,PELTIER", "Aliexpress@https://www.aliexpress.com/item/Green-50-Pieces-3-5mm-Pitch-300V-10A-Vertical-PCB-Mount-Type-Terminal-Block-Wire-Connector/32556780122.html?spm=a2g0s.9042311.0.0.27424c4d1nXp6N", "320110028", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3470070P1.pdf", "3" ],
+                    [ "FAN", "22-04-1031@https://www.digikey.com/products/en?keywords=Molex%2022-04-1031", "", "Datasheet@https://www.molex.com/pdm_docs/sd/022041031_sd.pdf", "1" ],
+
+                    [ "Q2,Q3", "", "305030015", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0440200P1.pdf", "2" ],
+                    [ "Q4,Q5,Q6", "", "305010018", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0400000P1.pdf", "3" ],
+                    [ "R1,R2,R3,R4,R5,R6,R7,R8,R10,R11,R12,R15,R16,R18,R20", "", "301010293", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/301010293.pdf", "15" ],
+                    [ "R13,R17,R19,R22", "", "301010291", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/301010291.pdf", "4" ],
+                    [ "C1,C5", "", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "2" ],
+                    [ "C2,C4", "", "302020013", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/302020013.pdf", "2" ],
+                    [ "C3", "", "302030098", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/302030098.pdf", "1" ],
+                    [ "D1,D2", "", "304010013", "", "2" ],
+
+                    [ "colspan=5:下記2個はESP-12Fを使用する場合のみ" ],
+                    [ "ESP1", "ESP-12F@https://www.aliexpress.com/wholesale?SearchText=ESP-12F", "", "Datasheet@https://www.elecrow.com/download/ESP-12F.pdf", "1" ],
+                    [ "CP1", "", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
+
+                    [ "colspan=4:下記2個はESP-WROOM-02を使用する場合のみ" ],
+                    [ "ESP2", "ESP-WROOM-02@https://www.digikey.jp/product-detail/ja/espressif-systems/ESP-WROOM-02/1904-1009-1-ND/8544304", "", "Datasheet@https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf", "1" ],
+                    [ "CP2", "", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
+
+                    [ "colspan=5:下記2個は入手性が悪いのでショップで販売予定" ],
+                    [ "Heatsink", "11PB015-01025(M3 6mmねじで固定)@https://www.chip1stop.com/JPN/en/view/dispDetail/DispDetail?partId=GLEC-0000001", "", "Datasheet@https://www.chip1stop.com/pdf/product/GLEC/11PB015.PDF", "1" ],
+                    [ "RELAY", "EP2-3L3SAb@http://akizukidenshi.com/catalog/g/gP-12137/?customer=z", "", "Datasheet@http://akizukidenshi.com/download/ds/nec/EP1_EP2_datasheet.pdf", "1" ],
+
+                    [ "colspan=5:下記2個はATXから給電する場合は実装不要" ],
+                    [ "JACK", "", "320120003", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf", "1" ],
+                    [ "DIN4", "Aliexpress@https://www.aliexpress.com/item/2pcs-DIN-4-Pin-Female-Jack-Adapter-PCB-Panel-Mount-Solder-Chassis-Connector-Nickel-Plated-S/32830340662.html?spm=a2g0s.9042311.0.0.27424c4deMrOTg", "", "", "1" ],
+
+                    [ "colspan=5:下記は実装不要" ],
+                    [ "R21,R14,R9", "", "", "", "1" ]
+                  ]
+                }
+              },
+              {
+                "title" : "クリームはんだを印刷する",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "表面実装部品(SMD)を搭載する",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "リフローする",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "足のある部品(DIP)を実装する",
+                "text1" : "準備中です"
               }
             ]
         },
@@ -603,8 +718,34 @@
           "label" : "ウェル",
           "items" : [
               {
-                "title" : "準備中",
-                "text1" : "しばらくお待ち下さい"
+                "title" : "板材を購入する",
+                "text1" : "熱伝導度が高く入手しやすい素材として、A6063を推奨します。部品サイズは56x56x10mmなので、余裕を持って100x100x10mm程度の板材を購入しましょう。",
+                "table" : {
+                  "head" : [ "名前", "Fusion360", "IGES", "STEP" ],
+                  "body" : [
+                    [ "a1001", "a1001.f3d", "a1001.iges", "a1001.step" ]
+                  ]
+                }
+              },
+              {
+                "title" : "切削データを作成する",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "切削する",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "サーミスタを加工する",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "サーミスタ用の穴をあける",
+                "text1" : "準備中です"
+              },
+              {
+                "title" : "サーミスタを接着する",
+                "text1" : "準備中です"
               }
             ]
         },
@@ -622,7 +763,14 @@
           "items" : [
               {
                 "title" : "準備中",
-                "text1" : "しばらくお待ち下さい"
+                "text1" : "しばらくお待ち下さい",
+                "table" : {
+                  "head" : [ "名前", "Fusion360", "IGES", "STEP" ],
+                  "body" : [
+                    [ "a1002", "a1002.f3d", "a1002.iges", "a1002.step" ],
+                    [ "a1003", "a1003.f3d", "a1003.iges", "a1003.step" ]
+                  ]
+                }
               }
             ]
         },
@@ -668,8 +816,8 @@
           "label" : "その他の部品",
           "items" : [
               {
-                "title" : "準備中",
-                "text1" : "しばらくお待ち下さい",
+                "title" : "買い物リスト",
+                "text1" : "下記を用意してください",
                 "table" : {
                   "head" : [ "名前", "内容" ],
                   "body" : [

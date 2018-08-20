@@ -18,5 +18,31 @@ block main
 
     p
       | #{$i18n[dir][subdir].items[0].text1}
+      +table($i18n[dir][subdir].items[0].table)
+
+    +itemtitle(dir, subdir, 1)
+
+    p
+      | #{$i18n[dir][subdir].items[1].text1}
+
+    +itemtitle(dir, subdir, 2)
+
+    p
+      | #{$i18n[dir][subdir].items[2].text1}
+
+    +itemtitle(dir, subdir, 3)
+
+    p
+      | #{$i18n[dir][subdir].items[3].text1}
+
+    +itemtitle(dir, subdir, 4)
+
+    p
+      | #{$i18n[dir][subdir].items[4].text1}
+
+    +itemtitle(dir, subdir, 5)
+
+    p
+      | #{$i18n[dir][subdir].items[5].text1}
 
     +nextstep('/maker/heater/index.html', $i18n.maker.heater.label)

@@ -18,5 +18,33 @@ block main
 
     p
       | #{$i18n[dir][subdir].items[0].text1}
+      a.link(href="https://wiki.hackerspaces.org/" target="_blank") #{$i18n[dir][subdir].items[0].text2}
+      | #{$i18n[dir][subdir].items[0].text3}
+      a.link(href="http://www.fabfoundation.org/index.php/fab-labs/index.html" target="_blank") #{$i18n[dir][subdir].items[0].text4}
+      | #{$i18n[dir][subdir].items[0].text5}
+
+    +itemtitle(dir, subdir, 1)
+
+    p
+      | #{$i18n[dir][subdir].items[1].text1}
+
+    +itemtitle(dir, subdir, 2)
+
+    p
+      | #{$i18n[dir][subdir].items[2].text1}
+      a.link(href="https://inkscape.org/" target="_blank") #{$i18n[dir][subdir].items[2].text2}
+      | #{$i18n[dir][subdir].items[2].text3}
+      a.link(href="https://get.adobe.com/" target="_blank") #{$i18n[dir][subdir].items[2].text4}
+      | #{$i18n[dir][subdir].items[2].text5}
+      a.link(href="https://www.coreldraw.com/" target="_blank") #{$i18n[dir][subdir].items[2].text6}
+      | #{$i18n[dir][subdir].items[2].text7}
+      a.link(href="https://github.com/hisashin/NinjaPCR/tree/master/cad/2d" target="_blank") #{$i18n[dir][subdir].items[2].text8}
+      | #{$i18n[dir][subdir].items[2].text9}
+      +table($i18n[dir][subdir].items[2].table)
+
+    +itemtitle(dir, subdir, 3)
+
+    p
+      | #{$i18n[dir][subdir].items[3].text1}
 
     +nextstep('/maker/pcb/index.html', $i18n.maker.pcb.label)
