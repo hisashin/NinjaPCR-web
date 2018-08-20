@@ -648,9 +648,9 @@
                 "title" : "Order Electric Parts",
                 "text1" : "Here is the list to solder. If you use ATX power supply instead of adapter, no need to solder JACK nor DIN4 but ATX. You can choose WiFi module from cheaper ",
                 "text2" : "ESP-12F",
-                "text3" : "(FCC, CE) or ",
+                "text3" : " (FCC, CE) or ",
                 "text4" : "ESP-WROOM-02",
-                "text5" : "(FCC, CE, SRRC, TELEC, IC, KCC). Check which license is needed in your country. It is hard to find Heatsink and Relay outside Tokyo so we will sell it on shop. NinjaPCB is designed and tested with ",
+                "text5" : " (FCC, CE, SRRC, TELEC, IC, KCC). Check which license is needed in your country. It is hard to find Heatsink and Relay outside Tokyo so we will sell it on shop. NinjaPCB is designed and tested with ",
                 "text6" : "Seeed OPL(Open Parts Library)",
                 "text7" : ". Keep in mind that some alternatives in this list are not yet tested.",
                 "table" : {
