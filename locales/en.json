@@ -568,7 +568,7 @@
               "difficulty" : "Easy",
               "heatsink" : "Heatsink",
               "peltier" : "Peltier",
-              "text1" : "Common LGA115x heatsink, grease and ATX power supply can be used. Maximum operating temperature of common peltier is aroudn 80 degree celcius though PCR process requires up to 100 degree celcius. We recommend Hebei TEC1-12710HTS Peltier Module with maximum operating temperature of 225 degree celcius."
+              "text1" : "Common LGA115x heatsink, grease and ATX power supply can be used. Maximum operating temperature of common peltier is around 80 degree celcius though PCR process requires up to 100 degree celcius. We recommend Hebei TEC1-12710HTS Peltier Module with maximum operating temperature of 225 degree celcius."
             },
             {
               "title" : "Screws",
