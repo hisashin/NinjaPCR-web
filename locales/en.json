@@ -631,9 +631,9 @@
                 "text2" : "Seeed Fusion PCB",
                 "text3" : ". All required files are located ",
                 "text4" : "here",
-                "text5" : ". There is ",
+                "text5" : ". Follow ",
                 "text6" : "7 steps",
-                "text7" : " and don't forget to change \"Copper Weight\" from default 1oz to 2oz. You can order stencil at the same time that is required to solder small parts with hand.",
+                "text7" : " and never forget to change \"Copper Weight\" from default 1oz to 2oz. You can order stencil at the same time that is required to solder small parts with hand.",
                 "table" : {
                   "head" : [ "Name", "File name" ],
                   "body" : [
@@ -662,7 +662,7 @@
                     [ "RT", "ERA-3AEB4991V@https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-3AEB4991V/P4.99KDBCT-ND/3075985", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "1" ],
 
                     [ "Q1", "IRLB3813PBF@https://www.digikey.com/products/en?keywords=IRLB3813PbF", "", "Datasheet@https://www.infineon.com/dgdl/irlb3813pbf.pdf?fileId=5546d462533600a4015356603cfe258b", "1" ],
-                    [ "ATX", "1-1775099-3(Boardlockは切断)@https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1775099-3/A127799-ND/5272985", "", "Datasheet@http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1775099&DocType=Customer+Drawing&DocLang=English", "1" ],
+                    [ "ATX", "1-1775099-3(Cut Boardlock)@https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1775099-3/A127799-ND/5272985", "", "Datasheet@http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1775099&DocType=Customer+Drawing&DocLang=English", "1" ],
                     [ "FAN", "22-04-1031@https://www.digikey.com/products/en?keywords=Molex%2022-04-1031", "", "Datasheet@https://www.molex.com/pdm_docs/sd/022041031_sd.pdf", "1" ],
 
                     [ "HEATER_POWER,HEATER_TEMP,PELTIER", "Aliexpress@https://www.aliexpress.com/item/Green-50-Pieces-3-5mm-Pitch-300V-10A-Vertical-PCB-Mount-Type-Terminal-Block-Wire-Connector/32556780122.html?spm=a2g0s.9042311.0.0.27424c4d1nXp6N", "320110028", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3470070P1.pdf", "3" ],
@@ -685,7 +685,7 @@
                     [ "CP2", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
 
                     [ "colspan=5:These 2 will be solder on our webshop." ],
-                    [ "Heatsink", "11PB015-01025(M3 6mmねじで固定)@https://www.chip1stop.com/JPN/en/view/dispDetail/DispDetail?partId=GLEC-0000001", "", "Datasheet@https://www.chip1stop.com/pdf/product/GLEC/11PB015.PDF", "1" ],
+                    [ "Heatsink", "11PB015-01025(+M3 6mm screw)@https://www.chip1stop.com/JPN/en/view/dispDetail/DispDetail?partId=GLEC-0000001", "", "Datasheet@https://www.chip1stop.com/pdf/product/GLEC/11PB015.PDF", "1" ],
                     [ "RELAY", "EP2-3L3SAb@http://akizukidenshi.com/catalog/g/gP-12137/?customer=z", "", "Datasheet@http://akizukidenshi.com/download/ds/nec/EP1_EP2_datasheet.pdf", "1" ],
 
                     [ "colspan=5:No need to solder if you use ATX power supply" ],
