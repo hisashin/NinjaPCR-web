@@ -13,7 +13,12 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName == 'ja'
+  if $localeName != 'ja'
+    +itemtitle(dir, subdir, 0)
+
+    p
+      | #{$i18n[dir][subdir].items[0].text1}
+  else
     +itemtitle(dir, subdir, 0)
     ol
       li Arduino IDEをインストール
@@ -73,4 +78,4 @@ block main
     p 書き込みボタンを押します
     p 一部の環境でうまくいかない場合がありますので、コマンドラインからesptool.pyを使って書き込みます
 
-    +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)
+  +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)

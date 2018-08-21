@@ -68,11 +68,11 @@ mixin navbar(dir)
 
 mixin sidebar(dir)
   - var isConsole = /\/console\//.test(dir)
-  - var isAssy = /\/assy\//.test(dir)
   - var isOp = /\/op\//.test(dir)
   - var isMaker = /\/maker\//.test(dir)
   - var isAbout = /\/req\//.test(dir)
   - var isAbout = /\/about\//.test(dir)
+  - var isAssy = /\/assy\//.test(dir) && !isMaker
   .sidebar-sticky
     ul.nav.flex-column
       li.nav-item

@@ -13,12 +13,11 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName == 'ja'
     +itemtitle(dir, subdir, 0)
 
     p
       | #{$i18n[dir][subdir].items[0].text1}
       +table($i18n[dir][subdir].items[0].table)
 
-    +nextstep('/maker/assy/index.html', $i18n.maker.assy.label)
+  +nextstep('/maker/assy/index.html', $i18n.maker.assy.label)
 

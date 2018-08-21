@@ -781,24 +781,24 @@
             ]
         },
         "misc" : {
-          "label" : "Miscellaneous",
+          "label" : "その他の部品",
           "items" : [
               {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By.",
+                "title" : "Shopping List",
+                "text1" : "Buy from AliExpress or 3D print.",
                 "table" : {
-                  "head" : [ "名前", "内容" ],
+                  "head" : [ "Name", "Detail/Alternative", "Where to buy" ],
                   "body" : [
-                    [ "1. 断熱スポンジシート", "断熱性能は劣りますが、2mm厚のシリコンゴムをカッターナイフで切っても作成できます。110℃でも焦げないよう、耐熱温度に注意してください" ],
-                    [ "2. ノブ(M6 20mm)", "適当な板をねじ(M6 20mm)とナット(M6)ではさめば代用できます" ],
-                    [ "3. M4ファンガード", "3Dプリンタで出力するなどで代用できますし、動作中に指を入れなければなくても構いません" ],
-                    [ "4. M3ゴム足", "空気を逃がすために高さが必要なだけなので、3Dプリントで出力したり、ねじを長めにしてナットで固定すれば代用できます" ],
-                    [ "5. ワイヤクリップ", "グルーガンで代用できます" ],
-                    [ "6. プラスドライバ", "一般的な工具です" ],
-                    [ "7. マイナスドライバ", "一般的な工具です" ],
-                    [ "8. オフセットドライバ", "通常のプラスドライバで代用できます" ],
-                    [ "9. マルチスパナ", "ラジオペンチなどで代用できます" ],
-                    [ "10. ヘラ", "適当なプラスチックカードで代用できます" ]
+                    [ "1. Silicone sponge", "Check maximum temperature is more than 110 degree celcius. Use box cutter to make 40x35mm (heater cover) and 5x160mm (surround well).", "AliExpress(Untested)@https://www.aliexpress.com/item/Silicone-rubber-sheet-Thickness-1-2-3-4-mm-thickness-500-500mm-width-thin-board-red/32770199918.html?spm=2114.search0104.3.22.45a94444TK6SO2&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=60a2b0c5-abac-4a6d-aced-03f19851b700-3&algo_pvid=60a2b0c5-abac-4a6d-aced-03f19851b700&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                    [ "2. Knob", "M6 20mm", "AliExpress(Untested)@https://www.aliexpress.com/item/M6-Thread-30mm-Head-Dia-M6x30-16-50mm-Thread-Length-Star-Clamping-Knobs-20mm-Head-Length/32814014383.html?spm=2114.search0104.3.42.391a6a87lsls4o&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=b420d8bf-0f5b-4973-a6cd-8bee3b2ea498-6&algo_pvid=b420d8bf-0f5b-4973-a6cd-8bee3b2ea498&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                    [ "3. Fan guard", "80mm. You can 3D print.", "AliExpress(Untested)@https://www.aliexpress.com/item/2-x-Metal-Wire-Finger-Guard-Protection-Grid-80-mm-90-mm-PC-Fan-Cooler/32850924605.html?spm=2114.search0104.3.22.2d001744ols7mw&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=0e3010f6-a7d8-410e-a4ae-e2f675bbc2ca-3&algo_pvid=0e3010f6-a7d8-410e-a4ae-e2f675bbc2ca&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                    [ "4. Rubber foot", "M3. You can 3D print or just use longer screws and nuts to get height.", "AliExpress(Untested)@https://www.aliexpress.com/item/Rubber-Feet-Bumpers-Bushings-Rubber-Pads-Conical-20x16x20mm-Black-Pack-50/32707290793.html?spm=2114.search0104.3.85.546d14c4HqzbIy&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=73963135-9564-484e-94c1-7a841b6f15e9-12&algo_pvid=73963135-9564-484e-94c1-7a841b6f15e9&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                    [ "5. Wire clip", "Just glue it.", "-" ],
+                    [ "6. Phillips driver", "Common Tool", "-" ],
+                    [ "7. Straight driver", "Common Tool", "-" ],
+                    [ "8. Offset driver", "Common Tool", "-" ],
+                    [ "9. Multi Spanner", "Common Pliers", "-" ],
+                    [ "10. Spatula", "Just a lastic card", "-" ]
                   ]
                 }
               }

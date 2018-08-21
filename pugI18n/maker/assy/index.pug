@@ -13,11 +13,16 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName == 'ja'
+  if $localeName != 'ja'
+    +itemtitle(dir, subdir, 0)
+
+    p
+      | #{$i18n[dir][subdir].items[0].text1}
+  else
     +itemtitle(dir, subdir, 0)
 
     p
       | #{$i18n[dir][subdir].items[0].text1}
 
-    +nextstep('/maker/firmware/index.html', $i18n.maker.firmware.label)
+  +nextstep('/maker/firmware/index.html', $i18n.maker.firmware.label)
 
