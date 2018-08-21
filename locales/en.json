@@ -756,25 +756,25 @@
           "items" : [
               {
                 "title" : "Shopping List",
-                "text1" : "Get all screws, nuts and spacer in this list.",
+                "text1" : "Get all screws, nuts and spacer in this list. Any combination is available to make 90mm spacer as No.15.",
                 "table" : {
                   "head" : [ "Image", "Name", "mm", "inch", "pieces" ],
                   "body" : [
-                    [ "img::/maker/images/item/screw/M3_6mm.png", "1. 鍋ねじ", "M3 6mm", "", 4 ],
-                    [ "img::/maker/images/item/screw/M3_6mm_tapping.png", "2. タッピングねじ", "M3 6mm", "", 8 ],
-                    [ "img::/maker/images/item/screw/M3_10mm.png", "3. 鍋ねじ", "M3 10mm", "", 8 ],
-                    [ "img::/maker/images/item/screw/M3_15mm.png", "4. 鍋ねじ", "M3 15mm", "", 18 ],
-                    [ "img::/maker/images/item/screw/M3_30mm.png", "5. 鍋ねじ", "M3 30mm", "", 2 ],
-                    [ "img::/maker/images/item/screw/M4_10mm.png", "6. 鍋ねじ", "M4 10mm", "", 4 ],
-                    [ "img::/maker/images/item/screw/M5_20mm.png", "7. 鍋ねじ", "M5 20mm", "", 4 ],
-                    [ "img::/maker/images/item/nut/M3.png", "8. ナット", "M3", "", 18 ],
-                    [ "img::/maker/images/item/nut/M3_nylon.png", "9. ナイロンナット", "M3", "", 2 ],
-                    [ "img::/maker/images/item/nut/M4.png", "10. ナット", "M4", "", 4 ],
-                    [ "img::/maker/images/item/nut/M5.png", "11. ナット", "M5", "", 8 ], 
-                    [ "img::/maker/images/item/nut/M6.png", "12. ナット", "M6", "", 1 ], 
-                    [ "img::/maker/images/item/spacer/M3_5mm.png", "13. プラスペーサ", "M3 5mm", "", 4 ],
-                    [ "img::/maker/images/item/spacer/M3_30mm.png", "14. メタルスペーサ", "M3 30mm", "", 4 ],
-                    [ "img::/maker/images/item/spacer/M3_90mm.png", "15. プラスペーサ", "M3 30+60mm", "", 4 ]
+                    [ "img::/maker/images/item/screw/M3_6mm.png", "1. Screw", "M3 6mm", "", 4 ],
+                    [ "img::/maker/images/item/screw/M3_6mm_tapping.png", "2. Tapping Screw", "M3 6mm", "", 8 ],
+                    [ "img::/maker/images/item/screw/M3_10mm.png", "3. Screw", "M3 10mm", "", 8 ],
+                    [ "img::/maker/images/item/screw/M3_15mm.png", "4. Screw", "M3 15mm", "", 18 ],
+                    [ "img::/maker/images/item/screw/M3_30mm.png", "5. Screw", "M3 30mm", "", 2 ],
+                    [ "img::/maker/images/item/screw/M4_10mm.png", "6. Screw", "M4 10mm", "", 4 ],
+                    [ "img::/maker/images/item/screw/M5_20mm.png", "7. Screw", "M5 20mm", "", 4 ],
+                    [ "img::/maker/images/item/nut/M3.png", "8. Nut", "M3", "", 18 ],
+                    [ "img::/maker/images/item/nut/M3_nylon.png", "9. Nylon Nut", "M3", "", 2 ],
+                    [ "img::/maker/images/item/nut/M4.png", "10. Nut", "M4", "", 4 ],
+                    [ "img::/maker/images/item/nut/M5.png", "11. Nut", "M5", "", 8 ], 
+                    [ "img::/maker/images/item/nut/M6.png", "12. Nut", "M6", "", 1 ], 
+                    [ "img::/maker/images/item/spacer/M3_5mm.png", "13. Plastic Spacer", "M3 5mm", "", 4 ],
+                    [ "img::/maker/images/item/spacer/M3_30mm.png", "14. Metal Spacer", "M3 30mm", "", 4 ],
+                    [ "img::/maker/images/item/spacer/M3_90mm.png", "15. Plastic Spacer", "M3 30+60mm", "", 4 ]
                   ]
                 }
               }
