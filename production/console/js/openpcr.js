@@ -796,6 +796,12 @@ function prepareButtons() {
 		$("#preContainer").show();
 		$("#postContainer").show();
 	}
+	$("#firmwareVersion").dblclick(function(){
+			$("#update_available_dialog").dialog("open");
+			message = getLocalizedMessage('firmwareUpdateAvailable')
+				.replace("___LATEST_VERSION___", FIRMWARE_VERSION_LATEST)
+				.replace("___INSTALLED_VERSION___", version);
+		});
 }
 /* deleteCurrentExperiment()
  * Deletes the currently loaded experiment (whatever was last selected in the list)

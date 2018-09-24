@@ -41,36 +41,48 @@ block main
       - var img = "/maker/images/firmware_arduino_board_manager2.png"
       +process-image(img, img)
     p Arduino IDE経由ではなくGitHubのリポジトリからcloneして手動でインストールするという方法もあります。詳しくは
-      a href=("https://github.com/esp8266/Arduino") ESP8266ライブラリのGitHubリポジトリ
+      a(href="https://github.com/esp8266/Arduino") ESP8266ライブラリのGitHubリポジトリ
       | を参照してください。
+    p Arduinoのツールバーから "Tools > Board > Boards Manager..." を選択します。"esp8266 platform" をインストールします。
     
     h4 NinjaPCRのソースコードをダウンロード
-    p GitHubのNinjaPCRリポジトリからソースコードをダウンロードします。zipで落とすかコマンドラインで落とします。https://github.com/hisashin/NinjaPCR
-    p arduino/NinjaPCR/NinjaPCR.inoを開きます
-    p Boardなどを選択
-    p Verifyを押して確認します
+    p 
+      a(href="https://github.com/hisashin/NinjaPCR") GitHub上のNinjaPCRリポジトリ
+      | からソースコードをダウンロードします。zipで落とすかコマンドラインで落とします。https://github.com/hisashin/NinjaPCR
+    .row
+      - var img = "/maker/images/firmware_github.png"
+      +process-image(img, img)
+    p "arduino/NinjaPCR/NinjaPCR.ino" をArduino IDEで開きます。
+    .row
+      - var img = "/maker/images/firmware_ninjapcr_ino.png"
+      +process-image(img, img)
+    p ビルド設定を選びます。"Board" は "Generic ESP8266 Module"、Flash Sizeは "4M (3M SPIFFS)" を選択します。
+    .row
+      - var img = "/maker/images/firmware_board_select.png"
+      +process-image(img, img)
+    p Verifyを押してコードを確認します
     h4 NinjaPCR本体をPCに接続
-    p 電源を接続します
+    p 電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。
     .row
       - var img = "/maker/images/firmware_power.jpg"
       +process-image(img, img)
-    p USBシリアル変換ケーブルを接続します。右の6本に挿します。
+    p USBシリアル変換ケーブルでNinjaPCRとPCを接続します。右の6本のピンに挿します。左の2本は未接続の状態にしておいてください。
     .row
       - var img = "/maker/images/firmware_serial.jpg"
       +process-image(img, img)
-    p 左の2本のピンにジャンパピンを挿し込みます。この2本のピンが接続されていると、通常起動モードではなくファームウェア書き込みモードで起動します。
+    p 左の2本のピンにジャンパピンを挿し込みます。この2本のピンが接続された状態で電源投入またはリセットを行うことで、通常起動モードではなくファームウェア書き込みモードで起動します。
     .row
       - var img = "/maker/images/firmware_serial_jumper1.jpg"
       +process-image(img, img)
     .row
       - var img = "/maker/images/firmware_serial_jumper2.jpg"
       +process-image(img, img)
-    p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。
-    p Baud rateは "115200" を接続します。
+    p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは "115200" を接続します。
     p 正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。
         
     h4 書き込み
-    p 書き込みボタンを押します
-    p 一部の環境でうまくいかない場合がありますので、コマンドラインからesptool.pyを使って書き込みます
+    p 書き込みボタンを押します。
+    p 一部の環境でうまくいかない場合がありますので、コマンドラインからesptool.pyを使って書き込みます。
+    p 環境に依存する要素があるかもしれません。もしうまくいかない場合は、できるだけ詳しく環境と状況を添えてお問い合わせください。
 
     +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)

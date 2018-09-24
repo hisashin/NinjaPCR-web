@@ -45,6 +45,9 @@
       span.pcr_localize_deviceName Device name: 
       input#HostText.connectionUI(type="text")
       input#ConnectButton.pcr_localize_connect.connectionUI(type="button" value="Connect")
+    p#firmwareVersion(style="display:none")
+      span#firmwareVersionLabel Firmware Version 
+      span.labelVersionCurrent
 // Create a new blank experiment
 a#newExperimentButton(href="#")
   img(src="/console/images/new.png" style="vertical-align:middle;width:70px;height:70px")

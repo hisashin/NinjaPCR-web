@@ -22,8 +22,7 @@ function startOTA () {
 				// Waiting for update
 				console.log("Updated.");
 				$("#updating_dialog").dialog("close");
-				if (obj.version!=FIRMWARE_VERSION_CURRENT) {
-					// Version was not changed.
+				if (obj.version==FIRMWARE_VERSION_LATEST) {
 					$("#update_finished_dialog").dialog("open");
 				} else {
 					$("#update_failed_dialog").dialog("open");
@@ -149,8 +148,11 @@ $(document).ready(function(){
 function checkFirmwareVersion (version) {
 	FIRMWARE_VERSION_CURRENT = version;
 	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
-	$(".labelVersionCurrent").html(FIRMWARE_VERSION_CURRENT);
-	$(".labelVersionLatest").html(FIRMWARE_VERSION_LATEST);
+	if (location.href.indexOf("?update_firmware_anyway")>0) {
+		$(".labelVersionCurrent").html(FIRMWARE_VERSION_CURRENT);
+		$(".labelVersionLatest").html(FIRMWARE_VERSION_LATEST);
+		$("#firmwareVersion").show();
+	}
 	var message;
 	if (compareVersion(version, FIRMWARE_VERSION_REQUIRED)==VersionComparison.Smaller) {
 		console.verbose("Firmware update is required.");
