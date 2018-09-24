@@ -13,10 +13,16 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName == 'ja'
+  if $localeName != 'ja'
     +itemtitle(dir, subdir, 0)
 
     p
       | #{$i18n[dir][subdir].items[0].text1}
+  else
+    +itemtitle(dir, subdir, 0)
 
-    +nextstep('/maker/pc/index.html', $i18n.maker.pc.label)
+    p
+      | #{$i18n[dir][subdir].items[0].text1}
+      +table($i18n[dir][subdir].items[0].table)
+
+  +nextstep('/maker/pc/index.html', $i18n.maker.pc.label)

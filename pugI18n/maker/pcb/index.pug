@@ -13,14 +13,55 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName == 'ja'
     +itemtitle(dir, subdir, 0)
 
     p
+      .row
+        - var img = "/maker/images/NinjaPCB_ver2.2-layout.jpeg"
+        +process-image(img, img)
+        - var img = "/maker/images/NinjaPCB_ver2.2-schematic.jpeg"
+        +process-image(img, img)
+        - var img = "/maker/images/seeed_pcb2.png"
+        +process-image(img, img)
       | #{$i18n[dir][subdir].items[0].text1}
+      a.link(href="https://www.seeedstudio.com/fusion_pcb.html" target="_blank") #{$i18n[dir][subdir].items[0].text2}
+      | #{$i18n[dir][subdir].items[0].text3}
+      a.link(href="https://github.com/hisashin/NinjaPCR/tree/master/eagle" target="_blank") #{$i18n[dir][subdir].items[0].text4}
+      | #{$i18n[dir][subdir].items[0].text5}
+      a.link(href="/maker/images/seeed_pcb2.png" target="_blank") #{$i18n[dir][subdir].items[0].text6}
+      | #{$i18n[dir][subdir].items[0].text7}
+      +table($i18n[dir][subdir].items[0].table)
+      
+    +itemtitle(dir, subdir, 1)
 
-    - var img1 = "/maker/images/NinjaPCB_ver2.2-layout.jpeg"
-    - var img2 = "/maker/images/NinjaPCB_ver2.2-schematic.jpeg"
-    +image2(img1, img1, img1, img2, img2, img2)
+    p
+      | #{$i18n[dir][subdir].items[1].text1}
+      a.link(href="https://www.aliexpress.com/wholesale?SearchText=ESP-12F" target="_blank") #{$i18n[dir][subdir].items[1].text2}
+      | #{$i18n[dir][subdir].items[1].text3}
+      a.link(href="https://www.espressif.com/en/products/hardware/esp-wroom-02/overview" target="_blank") #{$i18n[dir][subdir].items[1].text4}
+      | #{$i18n[dir][subdir].items[1].text5}
+      a.link(href="https://www.seeedstudio.com/opl.html" target="_blank") #{$i18n[dir][subdir].items[1].text6}
+      | #{$i18n[dir][subdir].items[1].text7}
+      +table($i18n[dir][subdir].items[1].table)
 
-    +nextstep('/maker/well/index.html', $i18n.maker.well.label)
+    +itemtitle(dir, subdir, 2)
+
+    p
+      | #{$i18n[dir][subdir].items[2].text1}
+
+    +itemtitle(dir, subdir, 3)
+
+    p
+      | #{$i18n[dir][subdir].items[3].text1}
+
+    +itemtitle(dir, subdir, 4)
+
+    p
+      | #{$i18n[dir][subdir].items[4].text1}
+
+    +itemtitle(dir, subdir, 5)
+
+    p
+      | #{$i18n[dir][subdir].items[5].text1}
+
+  +nextstep('/maker/well/index.html', $i18n.maker.well.label)

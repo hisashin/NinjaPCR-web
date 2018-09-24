@@ -11,11 +11,11 @@ block main
 
     p
       .row
-        - var img = "/maker/images/IMG_1024.jpg"
+        - var img = "/maker/images/maker_and_kit1.jpg"
         +process-image(img, img)
-        - var img = "/maker/images/IMG_1025.jpg"
+        - var img = "/maker/images/maker_and_kit5.jpg"
         +process-image(img, img)
-        - var img = "/maker/images/IMG_1027.jpg"
+        - var img = "/maker/images/maker_and_kit6.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[0].text1}
       a.link(href="https://github.com/hisashin/NinjaPCR", target="_blank") #{$i18n[dir][subdir].items[0].text2}
@@ -27,18 +27,18 @@ block main
       h5 #{$i18n[dir][subdir].items[1].text1}
       p
         .row
-          - var img = "/maker/images/IMG_1009.jpg"
+          - var img = "/maker/images/kit1.jpg"
           +process-image(img, img)
-          - var img = "/maker/images/IMG_1020.jpg"
+          - var img = "/maker/images/kit6.jpg"
           +process-image(img, img)
         | #{$i18n[dir][subdir].items[1].text2}
 
       h5 #{$i18n[dir][subdir].items[1].text3}
       p
         .row
-          - var img = "/maker/images/IMG_0931.jpg"
+          - var img = "/maker/images/pcb1.jpg"
           +process-image(img, img)
-          - var img = "/maker/images/IMG_1033.jpg"
+          - var img = "/maker/images/firmware_power.jpg"
           +process-image(img, img)
         | #{$i18n[dir][subdir].items[1].text4}
         a.link(href="https://www.aliexpress.com/", target="_blank") #{$i18n[dir][subdir].items[1].text5}
@@ -49,15 +49,19 @@ block main
       h5 #{$i18n[dir][subdir].items[1].text9}
       p
         .row
-          - var img = "/maker/images/IMG_1039.jpg"
+          - var img = "/maker/images/firmware_serial.jpg"
           +process-image(img, img)
-          - var img = "/maker/images/IMG_1036.jpg"
+          - var img = "/maker/images/firmware_serial_jumper1.jpg"
           +process-image(img, img)
         | #{$i18n[dir][subdir].items[1].text10}
         a.link(href="https://www.sparkfun.com/products/14050", target="_blank") #{$i18n[dir][subdir].items[1].text11}
         | #{$i18n[dir][subdir].items[1].text12}
         a.link(href="https://www.arduino.cc/en/Main/Software", target="_blank") #{$i18n[dir][subdir].items[1].text13}
         | #{$i18n[dir][subdir].items[1].text14}
+
+      h5 #{$i18n[dir][subdir].items[1].text15}
+      p
+        | #{$i18n[dir][subdir].items[1].text16}
 
     +itemtitle(dir, subdir, 2)
 
