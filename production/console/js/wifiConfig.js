@@ -142,7 +142,7 @@ $(document).ready(function(){
 	});
 	
 	// Check version
-	loadJSONP("http://ninjapcr.tori.st/update/version.js", function(){/*TODO*/});
+	loadJSONP("http://ninjapcr.tori.st/update/version.js?" + new Date().getTime(), function(){});
 });
 
 function checkFirmwareVersion (version) {
