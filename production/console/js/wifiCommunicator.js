@@ -34,18 +34,21 @@ var DeviceResponse = {
 	onReceiveCommandResponse : null,
 	callbacks: [] /* commandId:callbackFunction map */
 };
-DeviceResponse.registerCallback = function (commandId, func, onError, element) {
+DeviceResponse.registerCallback = function (commandId, func, onError, element, noTimeout) {
 	DeviceResponse.callbacks[commandId] = {func:func, element:element};
-	window.setTimeout(function() {
-		if (!DeviceResponse.callbacks[commandId]) {
-			return;
-		}
-		console.log("Request " + commandId + " timed out. Removing tag.");
-		if (element.parentNode) {
-			element.parentNode.removeChild(element);
-		}
-		onError();
-	}, 5000);
+	
+	if (!noTimeout) {
+		window.setTimeout(function() {
+			console.log("Request " + commandId + " timed out. Removing tag.");
+			if (!DeviceResponse.callbacks[commandId]) {
+				return;
+			}
+			if (element.parentNode) {
+				element.parentNode.removeChild(element);
+			}
+			onError();
+		}, 5000);
+	}
 }
 DeviceResponse.handleCallback = function (commandId, obj) {
 	// Find callback function for command ID and call it.
@@ -76,6 +79,7 @@ DeviceResponse.status = function (obj, commandId) {
 };
 
 DeviceResponse.onConf = function (obj, commandId) {
+	console.log("onConf commandId=" + commandId);
 	DeviceResponse.handleCallback(commandId, obj);
 }
 DeviceResponse.onErrorOTAMode = function (obj, commandId) {
@@ -148,7 +152,7 @@ function loadJSONP (URL, onError) {
 	return scriptTag;
 }
 
-NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callback, onError) {
+NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callback, onError, noTimeout) {
 	var URL = getDeviceHost() + path + "?x=" + this.commandId;
 	if (param) {
 		if (param.charAt(0)!="&") {
@@ -163,7 +167,7 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callb
 			onError();
 		}
 	});
-	DeviceResponse.registerCallback(this.commandId, callback, onError, tag);
+	DeviceResponse.registerCallback(this.commandId, callback, onError, tag, noTimeout);
 	this.commandId++;
 }
 NetworkCommunicator.prototype.setDeviceHost = function (newHost) {

@@ -12,8 +12,10 @@ function getDeviceHost () {
 	return "http://" + host + ".local";
 }
 function startOTA () {
+	console.log("startOTA");
 	$('#update_starting_dialog').dialog('open');
 	communicator.sendRequestToDevice("/update", null, function(obj) {
+		console.log("Starting OTA...");
 		$("#update_starting_dialog").dialog("close");
 		$('#updating_dialog').dialog('open');
 		DeviceResponse.checkConnectionInterval = setInterval(function(){
@@ -22,6 +24,7 @@ function startOTA () {
 				// Waiting for update
 				console.log("Updated.");
 				$("#updating_dialog").dialog("close");
+				$(".labelVersionAfterUpdate").html("(Version " + obj.version + ")");
 				if (obj.version==FIRMWARE_VERSION_LATEST) {
 					$("#update_finished_dialog").dialog("open");
 				} else {
@@ -35,7 +38,7 @@ function startOTA () {
 			});
 		}, 3000);
 	
-	}, function(){});
+	}, function(){}, true);
 }
 // Called when version.js is loaded
 function setNinjaPCRVersion (obj) {
