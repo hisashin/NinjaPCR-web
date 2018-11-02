@@ -5,4 +5,4 @@ If you want to run console standalone without [our online console](http://ninjap
 2. Install [Node.js](https://nodejs.org/en/download/) if not yet installed.
 3. Move to the directory you cloned at step1.
 4. Run "node app.js"
-5. Access [here](http://localhost:3000/console). It's done!
+5. Access [http://localhost:3000/console](http://localhost:3000/console). It's done!
