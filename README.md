@@ -7,5 +7,7 @@ If you want to run console localy without [our online console](http://ninjapcr.t
 2. Install [Node.js](https://nodejs.org/en/download/) if not yet installed.
 3. Open terminal and change directory to the one you copied at step1.
 4. Run "node app.js"
-5. Access [http://localhost:3000/console](http://localhost:3000/console)
+5. Access [http://localhost:3000/console](http://localhost:3000/console). 
+
+If your pc is open to your network on port 3000, http://(ip of your pc):3000/console also works.
 
