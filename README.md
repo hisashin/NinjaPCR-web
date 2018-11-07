@@ -19,8 +19,9 @@ docker run --restart=always -it --name ninjapcr -d hisashin/ninjapcr
 3. Open terminal and change directory to the one you copied at step1.
 4. Run
 ```
-node app.js
+npm install
 npx gulp
+node app.js
 ```
 
 Either way, access [http://localhost:3000/console](http://localhost:3000/console). 
