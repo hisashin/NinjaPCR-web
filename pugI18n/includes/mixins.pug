@@ -70,7 +70,7 @@ mixin process-image(path, href, alt)
 
   if href
     .col-8.col-sm-6.col-md-4
-      a(href= href, target="_blank")
+      a(href= href, target="_blank" id= path)
         img.w-100.item-img(src= path, alt= alt)
   else
     .col-8.col-sm-6.col-md-4
