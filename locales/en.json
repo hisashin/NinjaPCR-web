@@ -864,7 +864,13 @@
         "text5" : " based in Tokyo.",
         "text6" : "Space fan? Try out ",
         "text7" : "SpaceStationAR",
-        "text8" : " too."
+        "text8" : " too.",
+        "updates" : {
+            "label" : "Updates",
+            "text1" : "Please refer ",
+            "text2" : "issues",
+            "text3" : " on GitHub to catch up."
+        }
     },
     "store" : {
       "label" : "Store"

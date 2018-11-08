@@ -897,7 +897,13 @@
 
         "text6" : "人工衛星観測支援アプリ",
         "text7" : "SpaceStationAR",
-        "text8" : "も提供中です。"
+        "text8" : "も提供中です。",
+        "updates" : {
+            "label" : "機能追加",
+            "text1" : "開発状況はGitHubの",
+            "text2" : "Issues",
+            "text3" : "をご参照ください。購入済み製品のサポート以外のご要望もこちらにお願いします。"
+        }
     },
     "store" : {
         "label" : "購入はこちら"
