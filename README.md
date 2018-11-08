@@ -9,7 +9,7 @@ You can run server localy without [our online console](http://ninjapcr.tori.st/c
 1. Install [Docker](https://www.docker.com/)
 2. Run
 ```
-docker run --restart=always -it --name ninjapcr -d hisashin/ninjapcr
+docker run --restart=always -it --name ninjapcr -d -p 3000:3000 hisashin/ninjapcr
 ```
 
 ## Run by Manual
