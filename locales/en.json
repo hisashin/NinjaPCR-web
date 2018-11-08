@@ -867,9 +867,11 @@
         "text8" : " too.",
         "updates" : {
             "label" : "Updates and Requests",
-            "text1" : "Please refer ",
-            "text2" : "issues",
-            "text3" : " on GitHub to catch up."
+            "text1" : "Please refer issues ( ",
+            "text2" : "console",
+            "text3" : " / ",
+            "text4" : "everything else",
+            "text5" : " ) on GitHub to catch up."
         }
     },
     "store" : {
