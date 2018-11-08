@@ -866,7 +866,7 @@
         "text7" : "SpaceStationAR",
         "text8" : " too.",
         "updates" : {
-            "label" : "Updates",
+            "label" : "Updates and Requests",
             "text1" : "Please refer ",
             "text2" : "issues",
             "text3" : " on GitHub to catch up."
