@@ -9,7 +9,7 @@ You can run server localy without [our online console](http://ninjapcr.tori.st/c
 1. Install [Docker](https://www.docker.com/)
 2. Run
 ```
-docker run --restart=always -it --name ninjapcr -d hisashin/ninjapcr
+docker run --restart=always -it --name ninjapcr -d -p 3000:3000 hisashin/ninjapcr
 ```
 
 ## Run by Manual
@@ -19,8 +19,9 @@ docker run --restart=always -it --name ninjapcr -d hisashin/ninjapcr
 3. Open terminal and change directory to the one you copied at step1.
 4. Run
 ```
-node app.js
+npm install
 npx gulp
+node app.js
 ```
 
 Either way, access [http://localhost:3000/console](http://localhost:3000/console). 
