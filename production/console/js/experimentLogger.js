@@ -133,6 +133,10 @@ ExperimentLogger.prototype.log = function (status) {
 		// Current lid temp
 		var lid_temp = status["l"].toFixed(1);
 		$("#lidTemperature").html(lid_temp);
+		// Current sample temp
+		var sample_temp = status["z"].toFixed(1);
+		$("#sampleTemperature").html(sample_temp);
+		
 		// if the status of OpenPCR comes back as "complete"		
 		// show the "Home" button
 		$("#homeButton").show();
