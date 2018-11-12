@@ -8,5 +8,3 @@
 ### <a name="1.0.12"></a> [1.0.12](#user-content-1.0.12) 
 * Improved network stability
 * Updated ESP8266 SDK
-
-
