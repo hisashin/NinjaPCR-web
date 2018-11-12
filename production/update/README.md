@@ -6,9 +6,7 @@
 * Fixed wrong label of Peltier's status (heating/off/cooling)
 
 ### <a name="1.0.12"></a> [1.0.12](#user-content-1.0.12) 
-* changelog 1
-* changelog 2
-* changelog 3
-
+* Improved network stability
+* Updated ESP8266 SDK
 
 
