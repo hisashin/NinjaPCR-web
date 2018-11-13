@@ -1,11 +1,10 @@
-FROM hypriot/rpi-node:latest
+FROM arm32v7/node:latest
 
 MAINTAINER Shingo Hisakawa shingohisakawa@gmail.com
 
 RUN wget --no-check-certificate -O - 'https://github.com/hisashin/NinjaPCR-web/archive/master.tar.gz' |tar zxvf - && \
  cd ./NinjaPCR-web-master && \
  npm install && \
- npm install npx -g && \
  npx gulp && \
  npm install forever -g
 
