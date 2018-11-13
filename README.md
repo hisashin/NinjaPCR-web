@@ -2,7 +2,9 @@
 
 NinjaPCR needs WiFi, but that doesn't mean it have to be connected to internet.
 
-You can run server localy without [our online console](http://ninjapcr.tori.st/console/) for private network in few commands.
+You can run console localy without [our online console](http://ninjapcr.tori.st/console/) for private network in few commands.
+
+[$10 wifi router](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181112230550&SearchText=wifi+router), [$10 Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) with [$3 8GB micro sd card](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181112233023&SearchText=micro+sd+card) and PC, iOS or Android phone are everything you need.
 
 ![image](https://raw.githubusercontent.com/hisashin/NinjaPCR-web/master/production/images/diagram_online_offline.png)
 
