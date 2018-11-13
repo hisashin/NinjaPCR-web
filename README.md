@@ -11,7 +11,7 @@ You can run server localy without [our online console](http://ninjapcr.tori.st/c
 
 Raspberry Pi
 ```
-docker run --restart=always -it --name ninjapcr -d -p 3000:3000 hisashin/ninjapcr-rpi
+docker run --restart=always -it --name ninjapcr -d -p 3000:3000 hisashin/ninjapcr<span style="color:red">-rpi</span>
 ```
 Others
 ```
