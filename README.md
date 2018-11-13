@@ -2,13 +2,13 @@
 
 NinjaPCR needs WiFi, but that doesn't mean it have to be connected to internet.
 
-You can run server localy without [our online console](http://ninjapcr.tori.st/console/) for private network.
+You can run server localy without [our online console](http://ninjapcr.tori.st/console/) for private network in few commands.
 
 ![image](https://raw.githubusercontent.com/hisashin/NinjaPCR-web/master/production/images/diagram_online_offline.png)
 
 ## Run by Docker
 
-1. Install [Docker](https://www.docker.com/)
+1. [Install Docker](https://docs.docker.com/install/#supported-platforms)
 2. Run
 
 [Raspberry Pi 2 and 3](https://www.raspberrypi.org/) ([Dockerfile](https://github.com/hisashin/NinjaPCR-web/blob/master/Dockerfile-rpi))
