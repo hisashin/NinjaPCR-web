@@ -9,11 +9,11 @@ You can run server localy without [our online console](http://ninjapcr.tori.st/c
 1. Install [Docker](https://www.docker.com/)
 2. Run
 
-[Raspberry Pi 2 and 3](https://www.raspberrypi.org/)
+[Raspberry Pi 2 and 3](https://www.raspberrypi.org/) based on [arm32v7/node](https://hub.docker.com/r/arm32v7/node/)
 ```
 docker run --restart=always -it --name ninjapcr -d -p 3000:3000 hisashin/ninjapcr-rpi
 ```
-Others
+Others including Mac, Windows and Linux based on [node:alpine](https://hub.docker.com/_/node/)
 ```
 docker run --restart=always -it --name ninjapcr -d -p 3000:3000 hisashin/ninjapcr
 ```
