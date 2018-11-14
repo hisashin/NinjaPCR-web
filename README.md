@@ -10,7 +10,14 @@ You can run console localy without [our online console](http://ninjapcr.tori.st/
 
 ## Run by Docker
 
-1. [Install Docker](https://docs.docker.com/install/#supported-platforms)
+1. Install Docker
+
+[Raspberry Pi](https://www.raspberrypi.org/) and most of Linux
+```
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+```
+[Others including Mac, Windows](https://docs.docker.com/install/#supported-platforms)
+
 2. Run
 
 [Raspberry Pi 2 and 3](https://www.raspberrypi.org/) ([Dockerfile](https://github.com/hisashin/NinjaPCR-web/blob/master/Dockerfile-rpi))
