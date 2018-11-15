@@ -6,7 +6,7 @@ You can run console localy without [our online console](http://ninjapcr.tori.st/
 
 [$10 wifi router](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181112230550&SearchText=wifi+router), [$35 Raspberry Pi 3](https://www.raspberrypi.org/products/) with [$3 8GB micro sd card](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181112233023&SearchText=micro+sd+card) and PC, iOS or Android phone are everything you need.
 
-[$10 Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) can be used but needs [HypriotOS](https://blog.hypriot.com/) instead of Raspbian.
+[$10 Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) can be used but needs [HypriotOS](https://blog.hypriot.com/) instead of Raspbian to run Docker.
 
 ![image](https://raw.githubusercontent.com/hisashin/NinjaPCR-web/master/production/images/diagram_online_offline.png)
 
