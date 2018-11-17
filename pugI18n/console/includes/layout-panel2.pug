@@ -18,6 +18,10 @@ form#pcrForm.cmxform(method="get" action="")
         span
           img(src="/console/images/plus.png" height="30")
           span.pcr_localize_step Step
+      a#addCycleButton.edit(style="display:none;")
+        span
+          img(src="/console/images/plus.png" height="30")
+          span.pcr_localize_cycle Cycle
     #postContainer(style="display:none;")
       #postSteps
       a#finalStep.edit(href="#")
