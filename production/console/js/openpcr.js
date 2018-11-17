@@ -704,6 +704,13 @@ function prepareButtons() {
 		var location = $(this).parent().attr("id");
 		addStep(location);
 	});
+	/*  "+ Add Cycle" button on the OpenPCR Form
+	 * Add a new simple cycle to the end of other cycles
+	 */
+	$('#addCycleButton').on('click', function() {
+		var location = $(this).parent().attr("id");
+		addCycle(location);
+	});
 	/*  "- Delete Step" on the OpenPCR Form
 	 * Delete the step
 	 */
@@ -782,14 +789,14 @@ function prepareButtons() {
 		$("input").removeAttr("readonly");
 		// and 'More options' hidden
 		$('#OptionsButton').hide();
-		// hide the Save button
-		$('#Save').hide();
+		// show the Save button to save a modified preset as a new program
+		$('#Save').show();
 		// show the Cancel button
 		$('#Cancel').show();
 		// show the SaveEdits button
 		$('#SaveEdits').show();
-		// Hide the Start/Unplugged button
-		startOrUnplugged("none");
+		// show the Start/Unplugged button to run the program without saving
+		// startOrUnplugged("none");
 		// show the Single Temp mode button
 		$('#singleTemp').show();
 		// show the Add Step buttons
