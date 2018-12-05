@@ -600,7 +600,6 @@ function prepareButtons() {
 		console.log("#Start.click");
 		startPCR();
 	});
-
 	/**
 	 * Clear all data
 	 */
