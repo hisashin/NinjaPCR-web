@@ -24,10 +24,10 @@ function experimentToHTML(inputJSON) {
 			.html(
 					'<span class="title">'+getLocalizedMessage('heaterLid')+'</span>'
 							+ '<input type="text" name="lid_temp" id="lid_temp" class="required integer textinput" maxlength="3" min="0" max="120"  value="'
-							+ inputJSON.lidtemp + '">');
-	// 4 possibile DIVs
-	// pre-steps, cycle steps, post-steps, and final hold step
-	// Add the experiment to the page	
+							+ inputJSON.lidtemp + '">');	
+	// 5 or more possibile DIVs
+	// pre-steps, first cycle steps, second cycle steps,... post-steps, and final hold step
+	// Add the experiment to the page
 	for (i = 0; i < inputJSON.steps.length; i++) {
 		// pre-cycle to start
 		if (count == 0 & inputJSON.steps[i].type == "step"
@@ -39,7 +39,7 @@ function experimentToHTML(inputJSON) {
 			$('#preSteps').append(stepToHTML(inputJSON.steps[i]))
 		}
 
-		else if (count == 0 && inputJSON.steps[i].type == "cycle")
+		else if (/*count == 0 &&*/ inputJSON.steps[i].type == "cycle")
 		// if it's cycle, put the cycle in the Cycle container
 		{
 			$('#cycleContainer').show();
@@ -62,7 +62,6 @@ function experimentToHTML(inputJSON) {
 			$('#holdContainer').show();
 			$('#holdSteps').append(stepToHTML(inputJSON.steps[i]));
 		}
-
 	}
 	activateDeleteButton();
 }
@@ -105,6 +104,7 @@ function stepToHTML(step) {
 	if (step.type == "cycle") {
 		// printhe "Number of Cycles" div
 		// max 99 cycles
+		stepHTML += '<hr size="0.5" width="60%" color="grey" noshade>';
 		stepHTML += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span><input type="text" name="number_of_cycles" id="number_of_cycles" class="required number textinput" maxlength="2" min="0" max="99"  value="'
 				+ step.count + '"></div><br />';
 		// steps container
@@ -310,6 +310,98 @@ function addStep(location) {
 	$(".edit").show();
 }
 
+function addCycle(location) {
+	// first off, if the location is cycleContainer, we really want to modify stepsContainer
+	if (location == "cycleContainer") {
+		location = "cycleSteps";
+	}
+	// add to HTML
+	if (location == "preSteps") {
+		step_name = localizeStepName("Initial Step");
+	}
+	if (location == "postSteps") {
+		step_name = localizeStepName("Final Step");
+	}
+	if (location == "cycleSteps") {
+		step_name = localizeStepName("Step");
+	}
+	//console.verbose(NEW_EXPERIMENT);
+	step_number = new Date().getTime();
+	// Search for a cycle in the new_experiment
+	for (k = 0; k < NEW_EXPERIMENT.steps.length; k++){
+		if (NEW_EXPERIMENT.steps[k].type == "cycle") {
+			break;
+		}
+	}
+	step = NEW_EXPERIMENT.steps[k]; // take the first cycle in the new_experiment as a template
+	var cycle = '<hr size="0.5" width="60%" color="grey" noshade>';
+		cycle += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span><input type="text" name="number_of_cycles" id="number_of_cycles" class="required number textinput" maxlength="2" min="0" max="99"  value="'
+				+ step.count + '"></div><br />';
+		// steps container
+		// print each individual step
+		for (a = 0; a < step.steps.length ; a++) {
+			// make the js code a little easier to read
+			step_number = a;
+			step_name = localizeStepName(step.steps[a].name);
+			step_temp = step.steps[a].temp;
+			step_time = step.steps[a].time;
+			step_rampDuration = step.steps[a].rampDuration;
+			if (step_rampDuration == null)
+				step_rampDuration = 0;
+
+			// print HTML for the step
+			// min,max temp = -20, 105
+			// min,max time = 0, 6000, 1 decimal point
+			cycle += '<div class="step"><span id="step'
+					+ step_number
+					+ '_name" class="title step_name">'
+					+ step_name
+					+ ' </span><a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
+					+ '<table><tr>'
+					+ '<th><label for="step'
+					+ step_number
+					+ '_temp">'+getLocalizedMessage('tempShort')+':</label> <div class="step'
+					+ step_number
+					+ '_temp"><input type="text" style="font-weight:normal;" class="required number textinput" name="step'
+					+ step_number
+					+ '_temp" id="step'
+					+ step_number
+					+ '_temp" value="'
+					+ step_temp
+					+ '" maxlength="4" min="-20" max="120" ></div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
+					+ '<th><label for="step'
+					+ step_number
+					+ '_time">'+getLocalizedMessage('stepDuration')+':</label> <div class=""><input type="text" class="required number textinput"  style="font-weight:normal;" name="step'
+					+ step_number
+					+ '_time" id="step'
+					+ step_number
+					+ '_time" value="'
+					+ step_time
+					+ '" maxlength="4" min="0" max="6000"  ></div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+					+ '<th><label for="step'
+					+ step_number
+					+ '_rampDuration">'+getLocalizedMessage('rampDuration')+':</label> <div class=""><input type="text" class="required number textinput"  style="font-weight:normal;" name="step'
+					+ step_number
+					+ '_rampDuration" id="step'
+					+ step_number
+					+ '_rampDuration" value="'
+					+ step_rampDuration
+					+ '" maxlength="6" min="0" max="999999"  ></div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+					+ '</tr></table></div>';
+
+		}
+	
+	// append a new step to location
+	$('#' + location).append(cycle);
+	// make sure the form elements are editable
+	$("input").removeAttr("readonly");
+	//// make the window bigger
+	// make all the delete buttons shown
+	// and if there are any other parts of a "step" that are hide/show, they need to be included here
+	activateDeleteButton();
+	$(".edit").show();
+}
+
 function addInitialStep() {
 	// add the step to the preContainer
 	addStep("preSteps");
@@ -348,6 +440,7 @@ function writeoutExperiment() {
 	// grab the cycle variables
 	cycleArray = [];
 	cycleNameArray = [];
+	cycleStepNumberArray = [];
 	$("#cycleContainer .textinput").each(function(index, elem) {
 		//just throw them in an array for now
 		cycleArray.push($(this).val());
@@ -357,6 +450,41 @@ function writeoutExperiment() {
 		console.verbose("Step Name=" + stepName);
 		cycleNameArray.push(stepName);
 	});
+	csnCount = 0;
+	totalcsnCount = 0;
+	$("#cycleSteps div").each (function(index, elem){
+		var name = $(this).text();
+		//if (name != "" && name != "This field is required.") {
+		var reg = new RegExp('^'+getLocalizedMessage('stepStep')+'|'+
+							'^'+getLocalizedMessage('stepDenaturing')+'|'+
+							'^'+getLocalizedMessage('stepAnnealing')+'|'+
+							'^'+getLocalizedMessage('stepExtending')+'|'+
+							'^'+getLocalizedMessage('numberOfCycles'));
+		//console.verbose(reg);
+		if (name.match(reg)) {
+			if (name == getLocalizedMessage('numberOfCycles')+":"){
+				if (csnCount != 0) {
+					cycleStepNumberArray.push(csnCount-1);
+					totalcsnCount += (csnCount-1);
+					csnCount = 0;
+				}
+			}
+			csnCount += 1;
+			console.verbose("div Name=" + name);
+			//cycleStepNumberArray.push(name);
+		}
+	});
+	cycleStepNumberArray.push(csnCount-1);
+	totalcsnCount += (csnCount-1);
+
+	if (totalcsnCount != cycleNameArray.length){
+		console.error("Cycle number does not match!");
+		//cycleStepNumberArray = [cycleNameArray.length];
+	}
+
+	//console.verbose("cycleArray: "+cycleArray);
+	//console.verbose("cycleNameArray: "+cycleNameArray);
+	//console.verbose("cycleStepNumberArray: "+cycleStepNumberArray);
 
 	// grab the post cycle variables if any exist
 	postArray = [];
@@ -397,32 +525,42 @@ function writeoutExperiment() {
 
 	// Cycle and cycle steps
 	// the cycle will be a # of cycles as the first element, then temp/time pairs after that
-	count = cycleArray.shift();
-	if (cycleArray.length > 0 && count > 0) {
-		experimentJSON.steps.push({
-			"type" : "cycle",
-			// add the number of cycles
-			"count" : count,
-			"steps" : []
-		});
-
-		// then add the cycles
-		current = experimentJSON.steps.length - 1;
-
-		// every step will have 3 elements in cycleArray (Time, temp, rampDuration)
-		cycleLength = (cycleArray.length) / 3;
-		for (a = 0; a < cycleLength; a++) {
-
-			experimentJSON.steps[current].steps.push({
-				"type" : "step",
-				"name" : cycleNameArray.shift(),
-				"temp" : cycleArray.shift(),
-				"time" : cycleArray.shift(),
-				"rampDuration" : cycleArray.shift()
-			});
+	for (i = 0; i < cycleStepNumberArray.length; i++) {
+		count = cycleArray.shift();
+		cycleLength = cycleStepNumberArray[i];
+		if (cycleArray.length > 0 && cycleLength > 0) {
+			if (count > 0 ){
+				experimentJSON.steps.push({
+					"type" : "cycle",
+					// add the number of cycles
+					"count" : count,
+					"steps" : []
+				});
+				// then add the cycles
+				current = experimentJSON.steps.length - 1;
+			
+				for (a = 0; a < cycleLength; a++) {
+					experimentJSON.steps[current].steps.push({
+						"type" : "step",
+						"name" : cycleNameArray.shift(),
+						"temp" : cycleArray.shift(),
+						"time" : cycleArray.shift(),
+						"rampDuration" : cycleArray.shift()
+					});
+				}
+			} else {
+				// cycle number is set zero, but steps are actually included.
+				for (a = 0; a < cycleLength; a++) {
+					cycleNameArray.shift();
+					cycleArray.shift();
+					cycleArray.shift();
+					cycleArray.shift();
+				}
+			}
+			
 		}
 	}
-
+	
 	// every step will have 3 elements in preArray (Time, temp, rampDuration)
 	// a better way to do this would be for a=0, postArray!=empty, a++
 	postLength = (postArray.length) / 3;
