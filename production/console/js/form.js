@@ -54,8 +54,10 @@ class ProfileForm {
 		$('#lidTemp')
 				.html(
 						'<span class="title">'+getLocalizedMessage('heaterLid')+'</span>'
-								+ '<input type="text" name="lid_temp" id="lid_temp" class="required integer textinput" maxlength="3" min="0" max="120"  value="'
-								+ inputJSON.lidtemp + '">');	
+						+ this.getInputTag (inputJSON.lidtemp, {
+									name: "lid_temp", id: "lid_temp",
+									maxlength:3, min:0, max:120
+								}));
 		// 5 or more possibile DIVs
 		// pre-steps, first cycle steps, second cycle steps,... post-steps, and final hold step
 		// Add the experiment to the page
@@ -300,6 +302,20 @@ class ProfileForm {
 		}
 	}
 	
+	getInputTag(value, options) {
+		var div = document.createElement("DIV");
+		var tag = document.createElement("INPUT");
+		options.style = "font-weight:normal";
+		options.class = "required number textinput";
+		tag.type = "text";
+		tag.setAttribute("value", value || '');
+		for (var key in options) {
+			tag.setAttribute(key, options[key]);
+		}
+		div.appendChild(tag);
+		return div.innerHTML;
+	}
+	
 	cycleToHTML (cycle) {
 		console.log("cycleToHTML type=" + cycle.type);
 		var stepHTML = "";
@@ -307,8 +323,13 @@ class ProfileForm {
 		// printhe "Number of Cycles" div
 		// max 99 cycles
 		stepHTML += '<div class="cycle">';
-		stepHTML += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span><input type="text" name="number_of_cycles" id="number_of_cycles" class="required number textinput" maxlength="2" min="0" max="99"  value="'
-			+ cycle.count + '"></div><br />';
+		stepHTML += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span>'
+		
+		stepHTML += this.getInputTag (cycle.count, {
+					name: "number_of_cycles", id:"number_of_cycles",
+					maxlength:2, min:0, max:99
+				});
+		stepHTML += '</div><br />';
 		// steps container
 		// print each individual step
 		for (var a = 0; a < cycle.steps.length; a++) {
@@ -333,33 +354,30 @@ class ProfileForm {
 					+ '<table><tr>'
 					+ '<th><label for="step'
 					+ step_number
-					+ '_temp">'+getLocalizedMessage('tempShort')+':</label> <div class="step'
+					+ '_temp">' + getLocalizedMessage('tempShort') + ':</label> <div class="step'
 					+ step_number
-					+ '_temp"><input type="text" style="font-weight:normal;" class="required number textinput" name="step'
-					+ step_number
-					+ '_temp" id="step'
-					+ step_number
-					+ '_temp" value="'
-					+ step_temp
-					+ '" maxlength="4" min="-20" max="120" ></div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
+					+ '_temp">'
+			stepHTML += this.getInputTag (step_temp, {
+						name: ("step" + step_number + "_temp"), id: ("step" + step_number + "_temp"),
+						maxlength:4, min:-20, max:120
+					});
+			stepHTML += '</div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
 					+ '<th><label for="step'
 					+ step_number
-					+ '_time">'+getLocalizedMessage('stepDuration')+':</label> <div class=""><input type="text" class="required number textinput"  style="font-weight:normal;" name="step'
-					+ step_number
-					+ '_time" id="step'
-					+ step_number
-					+ '_time" value="'
-					+ step_time
-					+ '" maxlength="4" min="0" max="6000"  ></div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+					+ '_time">'+getLocalizedMessage('stepDuration') +':</label> <div class="">'
+			stepHTML += this.getInputTag (step_time, {
+						name:  ("step" + step_number + "_time"), id: ("step" + step_number + "_time"),
+						maxlength:4, min:0, max:6000
+					});
+			stepHTML += '</div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
 					+ '<th><label for="step'
 					+ step_number
-					+ '_rampDuration">'+getLocalizedMessage('rampDuration')+':</label> <div class=""><input type="text" class="required number textinput"  style="font-weight:normal;" name="step'
-					+ step_number
-					+ '_rampDuration" id="step'
-					+ step_number
-					+ '_rampDuration" value="'
-					+ step_rampDuration
-					+ '" maxlength="6" min="0" max="999999"  ></div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+					+ '_rampDuration">'+getLocalizedMessage('rampDuration') + ':</label> <div class="">'
+			stepHTML += this.getInputTag (step_rampDuration, {
+						name:  ("step" + step_number + "_rampDuration"), id: ("step" + step_number + "_rampDuration"),
+						maxlength:6, min:0, max:999999
+					});
+			stepHTML += '</div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
 					+ '</tr></table></div>';
 		}
 		stepHTML += "</div>"
@@ -398,24 +416,28 @@ class ProfileForm {
 					+ step_name
 					+ ' </span><a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
 					+ '<table cellspacing="20"><tr>'
-					+ '<th><label>'+getLocalizedMessage('tempShort')+':</label> <div><input type="text" style="font-weight:normal;" class="required number textinput" value="'
-					+ step_temp
-					+ '" maxlength="4" name="temp_'
-					+ step_number
-					+ '" min="'+MIN_FINAL_HOLD_TEMP+'" max="120" ></div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>';
+					+ '<th><label>'+getLocalizedMessage('tempShort')+':</label> <div>'
+					
+			stepHTML += this.getInputTag (step_temp, {
+						name:  ("temp_" + step_number),
+						maxlength:4, min:MIN_FINAL_HOLD_TEMP, max:120
+					});
+			stepHTML += '</div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>';
 	
 			// if the individual step has 0 time (or blank?) time, then it is a "hold" step and doesn't have a "time" component
 			if (step_time != 0) {
-				stepHTML += '<th><label>'+getLocalizedMessage('stepDuration')+':</label> <div class=""><input type="text" class="required number textinput" style="font-weight:normal;" value="'
-						+ step_time
-						+ '" name="time_'
-						+ step_number
-						+ '" maxlength="4" min="0" max="6000"></div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>';
-				stepHTML += '<th><label>ramp duration:</label> <div class=""><input type="text" class="required number textinput" style="font-weight:normal;" value="'
-						+ step_rampDuration
-						+ '" name="rampDuration_'
-						+ step_number
-						+ '" maxlength="6" min="0" max="999999"></div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>';
+				stepHTML += '<th><label>'+getLocalizedMessage('stepDuration')+':</label> <div class="">';
+				stepHTML += this.getInputTag (step_time, {
+							name:  ("time_" + step_number),
+							maxlength:4, min:0, max:6000
+						});
+				stepHTML += '</div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>';
+				stepHTML += '<th><label>ramp duration:</label> <div class="">'
+				stepHTML += this.getInputTag (step_rampDuration, {
+							name:  ("rampDuration_" + step_number),
+							maxlength:6, min:0, max:999999
+						});
+				stepHTML += '</div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>';
 			}
 		}
 		else {
@@ -445,7 +467,7 @@ class ProfileForm {
 			step_name = localizeStepName("Step");
 		}
 		var step_number = new Date().getTime();
-		
+
 		var step = '<div class="step">'
 				+ '<span class="title step_name">'
 				+ step_name
@@ -453,15 +475,24 @@ class ProfileForm {
 				+ '<a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
 				+ '<table cellspacing="20">'
 				+ '<tr>'
-				+ '<th><label>'+getLocalizedMessage('tempShort')+'</label><div><input type="text" style="font-weight:normal;" class="required number textinput" value="" name="temp_'
-				+ step_number
-				+ '" maxlength="4" min="0" max="120" ></div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
-				+ '<th><label>'+getLocalizedMessage('stepDuration')+'</label><div class=""><input type="text" class="required number textinput" style="font-weight:normal;" value=""  name="time_'
-				+ step_number
-				+ '" maxlength="4" min="0" max="1000"></div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
-				+ '<th><label>'+getLocalizedMessage('rampDuration')+'</label><div class=""><input type="text" class="required number textinput" style="font-weight:normal;" value=""  name="rampDuration_'
-				+ step_number
-				+ '" maxlength="6" min="0" max="999999"></div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+				+ '<th><label>'+getLocalizedMessage('tempShort')+'</label><div>'
+		step += this.getInputTag ("", {
+					name: ("temp_" + step_number),
+					maxlength:4, min:0, max:120
+				});
+		step += '</div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
+				+ '<th><label>'+getLocalizedMessage('stepDuration')+'</label><div class="">'
+		step += this.getInputTag ("", {
+					name: ("time_" + step_number),
+					maxlength:4, min:0, max:1000
+				});
+		step += '</div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+				+ '<th><label>'+getLocalizedMessage('rampDuration')+'</label><div class="">'
+		step += this.getInputTag ("", {
+					name: ("rampDuration_" + step_number),
+					maxlength:6, min:0, max:999999
+				});
+		step += '</div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
 				+ '</tr>' + '</table>' + '</div>';
 		// append a new step to location
 		$('#' + location).append(step);
@@ -490,8 +521,12 @@ class ProfileForm {
 		
 		/*
 		var cycle = '<hr size="0.5" width="60%" color="grey" noshade>';
-			cycle += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span><input type="text" name="number_of_cycles" id="number_of_cycles" class="required number textinput" maxlength="2" min="0" max="99"  value="'
-					+ step.count + '"></div><br />';
+			cycle += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span>' 
+					+ this.getInputTag (inputJSON.lidtemp, {
+									name: "number_of_cycles", id: "number_of_cycles",
+									maxlength:2, min:0, max:99
+								})
+					+ '</div><br />';
 			// steps container
 			// print each individual step
 			for (var a = 0; a < step.steps.length ; a++) {
@@ -517,31 +552,28 @@ class ProfileForm {
 						+ step_number
 						+ '_temp">'+getLocalizedMessage('tempShort')+':</label> <div class="step'
 						+ step_number
-						+ '_temp"><input type="text" style="font-weight:normal;" class="required number textinput" name="step'
-						+ step_number
-						+ '_temp" id="step'
-						+ step_number
-						+ '_temp" value="'
-						+ step_temp
-						+ '" maxlength="4" min="-20" max="120" ></div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
+						+ '_temp">'
+						+ this.getInputTag (step_temp, {
+									name: ("step" + step_number + "_temp") , id: ("step" + step_number + "_temp"),
+									maxlength:2, min:0, max:99
+								})
+						+ '</div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>'
 						+ '<th><label for="step'
 						+ step_number
-						+ '_time">'+getLocalizedMessage('stepDuration')+':</label> <div class=""><input type="text" class="required number textinput"  style="font-weight:normal;" name="step'
-						+ step_number
-						+ '_time" id="step'
-						+ step_number
-						+ '_time" value="'
-						+ step_time
-						+ '" maxlength="4" min="0" max="6000" ></div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+						+ '_time">'+getLocalizedMessage('stepDuration')+':</label> <div class="">'
+						+ this.getInputTag (step_time, {
+									name: ("step" + step_number + "_time") , id: ("step" + step_number + "_time"),
+									maxlength:4, min:0, max:6000
+								})
+						+ '</div><span htmlfor="openpcr_time" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
 						+ '<th><label for="step'
 						+ step_number
-						+ '_rampDuration">'+getLocalizedMessage('rampDuration')+':</label> <div class=""><input type="text" class="required number textinput"  style="font-weight:normal;" name="step'
-						+ step_number
-						+ '_rampDuration" id="step'
-						+ step_number
-						+ '_rampDuration" value="'
-						+ step_rampDuration
-						+ '" maxlength="6" min="0" max="999999" ></div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
+						+ '_rampDuration">'+getLocalizedMessage('rampDuration')+':</label> <div class="">'
+						+ this.getInputTag (step_rampDuration, {
+									name: ("step" + step_number + "_rampDuration") , id: ("step" + step_number + "_rampDuration"),
+									maxlength:6, min:0, max:999999
+								})
+						+ '</div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
 						+ '</tr></table></div>';
 	
 			}
@@ -616,7 +648,7 @@ class ProfileForm {
 		/*  "Edit" button on the OpenPCR Form with a saved experiment
 		 */
 		$('#editButton').on('click', function() {
-			editButton();
+			scope.editButton();
 		});
 	
 		/*  "Delete" button on the OpenPCR Form in EDIT MODE
@@ -649,10 +681,41 @@ class ProfileForm {
 				$(this).remove();
 				//// if the length is now 0, hide the whole div
 			});
+		});
+
+		/*  "Delete" button on the OpenPCR Form in EDIT MODE
+		 */
+		$('#deleteButton').on('click', function() {
+			$('#delete_dialog').dialog('open');
+		});
+	
+		/*  "+ Add Step" button on the OpenPCR Form
+		 * Add a new blank step to the end of the presets
+		 */
+		$('#addStepButton').on('click', function() {
+			var location = $(this).parent().attr("id");
+			profileForm.addStep(location); //TODO move to ProfileForm class
+		});
+		/*  "+ Add Cycle" button on the OpenPCR Form
+		 * Add a new simple cycle to the end of other cycles
+		 */
+		$('#addCycleButton').on('click', function() {
+			var location = $(this).parent().attr("id");
+			profileForm.addCycle(location); //TODO move to ProfileForm class
+		});
+		/*  "- Delete Step" on the OpenPCR Form
+		 * Delete the step
+		 */
+		$('.deleteStepButton').on('click', function() {
+			console.verbose("deleteStepButton");
+			$(this).parent().slideUp('slow', function() {
+				// after animation is complete, remove parent step
+				$(this).remove();
+				//// if the length is now 0, hide the whole div
+			});
 	
 		});
 	}
-	
 	
 	/* editButton()
 	 * Function that is called when the "Edit" button is pressed on a "Saved Preset" page. Makes the "Save preset" and "Cancel" buttons
