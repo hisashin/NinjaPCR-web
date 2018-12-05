@@ -31,10 +31,18 @@ image:active span {
 	padding: 10px;
 }
 
-#cycleContainer {
+#cyclesContainer {
 	border: 1px solid grey;
 	padding: 10px;
 }
+
+#cyclesContainer .cycle {
+	border-bottom: 1px solid #ddd;
+}
+#cyclesContainer .cycle:last-child {
+	border-bottom: none;
+}
+
 
 #postContainer {
 	border-bottom: 1px solid grey;

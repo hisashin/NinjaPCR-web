@@ -18,10 +18,11 @@ var FIRMWARE_VERSION_REQUIRED = "1.0.5";
 var CURRENT_UI_VERSION = "1.0.1";
 var MIN_FINAL_HOLD_TEMP = 16;
 
-
 var COLOR_HEATING = "red";
 var COLOR_COOLING  = "blue";
 var COLOR_STOP = "black";
+
+var profileForm = new ProfileForm();
 
 /**************
  * Home screen*
@@ -168,7 +169,7 @@ function listExperiments() {
 function listSubmit() {
 	// what is selected in the drop down menu?
 	experimentID = $("#dropdown").val();
-	// save if possible
+	// Save if possible
 	try {
 	   localStorage.setItem("lastExperiment", experimentID);
 	} catch (e) {
@@ -187,11 +188,11 @@ function loadExperiment(experimentID) {
 		// Now we've made all the modifications needed, display the Form page
 		sp2.showPanel(1);
 		// clear the experiment form
-		clearForm();
+		profileForm.clear();
 		// read in the file
 		experimentJSON = experiment;
 		// loads filen into the Form and moves onto Form page
-		experimentToHTML(experimentJSON);
+		profileForm.experimentToHTML(experimentJSON);
 		// update the buttons to make sure everything is ready to re-run an experiment
 		reRunButtons();
 	});
@@ -203,9 +204,9 @@ function loadExperiment(experimentID) {
  */
 function newExperiment() {
 	// clear the experiment form
-	clearForm();
+	profileForm.clear();
 	// set up the blank experiment
-	experimentToHTML(NEW_EXPERIMENT);
+	profileForm.experimentToHTML(NEW_EXPERIMENT);
 
 	// set interface to have the right buttons
 	newExperimentButtons();
@@ -295,7 +296,9 @@ function newExperimentButtons() {
 	$('#singleTemp').hide();
 	// make sure the "More options" button says so
 	$('#OptionsButton').html(getLocalizedMessage('moreOptions'));
-}/* disableEnterKey(e)
+}
+
+/* disableEnterKey(e)
  * The Enter/Return key doesn't do anything right now
  */
 function disableEnterKey(e) {
@@ -308,51 +311,6 @@ function disableEnterKey(e) {
 	return (key != 13);
 }
 
-function programToDeviceCommand (pcrProgram) {
-	// now parse it out
-	// Start with the signature
-	var encodedProgram = "s=ACGTC";
-	// Command
-	encodedProgram += "&c=start";
-	// Command id 
-	encodedProgram += "&d=" + window.command_id;
-	// Lid Temp NO DECIMALS. Not handeled by UI currently, but just making sure it doesn't make it to OpenPCR
-	encodedProgram += "&l=" + Math.round(pcrProgram.lidtemp);
-	// Name
-	encodedProgram += "&n=" + pcrProgram.name
-	// get all the variables from the pre-cycle, cycle, and post-cycle steps
-	encodedProgram += "&p=";
-	window.lessthan20steps = 0;
-	for (i = 0; i < pcrProgram.steps.length; i++) {
-		if (pcrProgram.steps[i].type == "step")
-		// if it's a step, stepToString will return something like [300|95|Denaturing]
-		// then this loop needs to figure out when to add [1(  and )]
-		{
-			// if the previous element wasn't a step (i.e. null or cycle)
-			if (typeof pcrProgram.steps[i - 1] == 'undefined'
-					|| pcrProgram.steps[i - 1].type == "cycle") {
-				encodedProgram += "(1";
-			}
-
-			encodedProgram += stepToString(pcrProgram.steps[i]);
-
-			// if the next element isn't a step (i.e. null or cycle)
-			if (typeof pcrProgram.steps[i + 1] == 'undefined'
-					|| pcrProgram.steps[i + 1].type != "step") {
-				encodedProgram += ")";
-			}
-		}
-
-		else if (pcrProgram.steps[i].type == "cycle")
-		// if it's a cycle add the prefix for the number of steps, then each step
-		{
-			// for example, this should return (35[30,95,Denaturing][60,55,Annealing][60,72,Extension])
-			encodedProgram += stepToString(pcrProgram.steps[i]);
-			window.lessthan20steps = pcrProgram.steps[i].steps.length;
-		}
-	}
-	return encodedProgram;
-}
 
 var experimentLogger = null;
 function startPCR() {
@@ -370,7 +328,7 @@ function startPCR() {
 	var devicePort = communicator.port;
 	console.verbose("devicePort=" + devicePort);
 	
-	pcrProgram = writeoutExperiment();
+	pcrProgram = profileForm.writeoutExperiment();
 	var encodedProgram = programToDeviceCommand (pcrProgram);	
 	// verify that there are no more than 16 top level steps
 	console.verbose(pcrProgram.steps.length + " : top level steps");
@@ -578,10 +536,11 @@ function activateDeleteButton() {
  ***************/
 function prepareButtons() {
 
+	profileForm.initButtons ();
 	$('#newExperimentButton').on('click', newExperiment);
 	$('#listSubmitButton').on('click', listSubmit);
-	$('#initialStep').on('click', addInitialStep);
-	$('#finalStep').on('click', addFinalStep);
+	
+	// TODO move to ProfileForm class
 	$('#saveForm').on('click', function() {
 		$('#Start').click();
 	});
@@ -622,7 +581,7 @@ function prepareButtons() {
 	$('#Home').on('click', function() {
 		listExperiments();
 		sp2.showPanel(0);
-		setTimeout(clearForm, 500);
+		setTimeout(function(){ profileForm.clear(); }, 500);
 	});
 
 	/*  "Home" button on the OpenPCR Running page */
@@ -631,7 +590,7 @@ function prepareButtons() {
 		if (graph) graph.clear();
 		listExperiments();
 		sp2.showPanel(0);
-		setTimeout(clearForm, 500);
+		setTimeout(function(){ profileForm.clear(); }, 500);
 	});
 
 	/*  "Start" button on the OpenPCR Form page
@@ -642,87 +601,6 @@ function prepareButtons() {
 		startPCR();
 	});
 
-	/*  "Save" button on the OpenPCR Form
-	 * Ask for a "name" and save the protocol to name.pcr in the user's Experiments folder
-	 */
-	$('#Save').on('click', function() {
-		// Save Dialog
-		// check if the form is validated
-		if (false == ($("#pcrForm").validate().form())) {
-			return 0; // if not, don't do anything
-		}
-		// otherwise, the form is valid. Open the "Save" dialog box
-		$('#save_dialog').dialog('open');
-	});
-
-	/*  "Save" on the OpenPCR Form in EDIT MODE
-	 * This will overwrite the old experiment with the edited settings
-	 */
-	$('#SaveEdits').on('click', function() {
-		// check if the form is validated
-		if (false == ($("#pcrForm").validate().form())) {
-			return 0; // if not, don't do anything
-		}
-		// Grab the Experiment name, could also do this by reading from the experiments list on the homepage
-		name = document.getElementById("ExperimentName").innerHTML;
-		// Save the file, overwriting the existing file
-		save(name, false, function(){loadExperiment(experimentID);});
-	});
-
-	/*  "Cancel" button on the OpenPCR Form in EDIT MODE
-	 * This will cancel any changes made to the form and re-load the experiment as it was last saved
-	 */
-	$('#Cancel').on('click', function() {
-		// what is selected in the drop down menu on the front page?
-		experimentID = $("#dropdown").val();
-    try {
-       localStorage.setItem("lastExperiment", experimentId);
-    } catch (e) {
-    }
-		// clear the form
-		clearForm();
-		// load the selected experiment
-		loadExperiment(experimentID);
-	});
-
-	/*  "Edit" button on the OpenPCR Form with a saved experiment
-	 */
-	$('#editButton').on('click', function() {
-		editButton();
-	});
-
-	/*  "Delete" button on the OpenPCR Form in EDIT MODE
-	 */
-	$('#deleteButton').on('click', function() {
-		$('#delete_dialog').dialog('open');
-	});
-
-	/*  "+ Add Step" button on the OpenPCR Form
-	 * Add a new blank step to the end of the presets
-	 */
-	$('#addStepButton').on('click', function() {
-		var location = $(this).parent().attr("id");
-		addStep(location);
-	});
-	/*  "+ Add Cycle" button on the OpenPCR Form
-	 * Add a new simple cycle to the end of other cycles
-	 */
-	$('#addCycleButton').on('click', function() {
-		var location = $(this).parent().attr("id");
-		addCycle(location);
-	});
-	/*  "- Delete Step" on the OpenPCR Form
-	 * Delete the step
-	 */
-	$('.deleteStepButton').on('click', function() {
-		console.verbose("deleteStepButton");
-		$(this).parent().slideUp('slow', function() {
-			// after animation is complete, remove parent step
-			$(this).remove();
-			//// if the length is now 0, hide the whole div
-		});
-
-	});
 	/**
 	 * Clear all data
 	 */
@@ -769,40 +647,6 @@ function prepareButtons() {
 						$('#OptionsButton')[0].value = buttonText;
 					});
 
-	// Presets page
-	/* editButton()
-	 * Function that is called when the "Edit" button is pressed on a "Saved Preset" page. Makes the "Save preset" and "Cancel" buttons
-	 * show up, "Add" and "Subtract" steps buttons, and makes all fields editable
-	 * Returns: nothing
-	 */
-	function editButton() {
-
-		// Show the Delete button
-		$('#deleteButton').show();
-		// Start with the Edit button hidden
-		$("#editButton").show();
-		// show the edit buttons
-		$(".edit").show();
-		// show the lid temp fields
-		$("#lidContainer").show();
-		// all fields editable
-		$("input").removeAttr("readonly");
-		// and 'More options' hidden
-		$('#OptionsButton').hide();
-		// show the Save button to save a modified preset as a new program
-		$('#Save').show();
-		// show the Cancel button
-		$('#Cancel').show();
-		// show the SaveEdits button
-		$('#SaveEdits').show();
-		// show the Start/Unplugged button to run the program without saving
-		// startOrUnplugged("none");
-		// show the Single Temp mode button
-		$('#singleTemp').show();
-		// show the Add Step buttons
-		$("#preContainer").show();
-		$("#postContainer").show();
-	}
 	$("#firmwareVersion").dblclick(function(){
 			$("#update_available_dialog").dialog("open");
 			message = getLocalizedMessage('firmwareUpdateAvailable')
@@ -942,7 +786,7 @@ $(function() {
 				// grab the name from the form
 				name = $("#name").val();
 				// save the current experiment as the given name
-				save(name, true);
+				profileForm.save(name, true);
 				// update the experiment name in the UI
 				$("#ExperimentName").html(name);
 				// close the dialog window
