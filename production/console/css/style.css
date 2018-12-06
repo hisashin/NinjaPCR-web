@@ -38,9 +38,8 @@ image:active span {
 
 #cyclesContainer .cycle {
 	border-bottom: 1px solid #ddd;
-}
-#cyclesContainer .cycle:last-child {
-	border-bottom: none;
+	padding-bottom:0.8em;
+	margin-bottom:0.8em;
 }
 
 
@@ -173,7 +172,7 @@ body {
 }
 
 #header {
-	
+
 }
 
 /* Dialogs shouldn't have titles/close buttons */

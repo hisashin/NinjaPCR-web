@@ -5,27 +5,21 @@ form#pcrForm.cmxform(method="get" action="")
         img(src="/console/images/delete.png" height="30")
       span#ExperimentName
       input#editButton.small_button.edit.pcr_localize_edit(type="button" value="Edit")
+      input#debugProfile(type="button" value="Debug Profile" style="display:none")
     #lidContainer(style="display:none;")
       #lidTemp
     #preContainer(style="display:none;")
       #preSteps
-      a#initialStep.edit(href="#")
-        img(src="/console/images/plus.png" height="30")
+      a#initialStep.edit.plusButton(href="#")
         span.pcr_localize_initialStep Initial Step
     #cyclesContainer(style="display:none;")
       #cycles
-      a#addStepButton.edit(style="display:none;")
+      a#addCycleButton.edit.plusButton(style="display:none;")
         span
-          img(src="/console/images/plus.png" height="30")
-          span.pcr_localize_step Step
-      a#addCycleButton.edit(style="display:none;")
-        span
-          img(src="/console/images/plus.png" height="30")
           span.pcr_localize_cycle Cycle
     #postContainer(style="display:none;")
       #postSteps
-      a#finalStep.edit(href="#")
-        img(src="/console/images/plus.png" height="30")
+      a#finalStep.plusButton.edit(href="#")
         span.pcr_localize_finalStep Final Step
     #holdContainer(style="display:none;")
       #holdSteps
