@@ -274,7 +274,7 @@ class ProfileForm {
 
 	cycleToHTML (cycle) {
 		var stepHTML = "";
-		var divId = "cycle" + (this.cyclesCount++);
+		var divId = "cycle" + this.cyclesCount;
 		var cycleDiv = $('<div class="cycle"></div>');
 		// printhe "Number of Cycles" div
 		// max 99 cycles
@@ -283,7 +283,8 @@ class ProfileForm {
 		stepHTML += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span>'
 
 		stepHTML += this.getInputTag (cycle.count, {
-					name: "number_of_cycles", id:"number_of_cycles",
+					name:"number_of_cycles_" + String(this.cyclesCount),
+					id:"number_of_cycles_" + String(this.cyclesCount),
 					maxlength:2, min:0, max:99
 				});
 		stepHTML += '</div><br />';
@@ -291,7 +292,7 @@ class ProfileForm {
 		// print each individual step
 		for (var a = 0; a < cycle.steps.length; a++) {
 			// make the js code a little easier to read
-			var step_number = a;
+			var step_number = String(this.cyclesCount) + "_" + String(a);
 			var step_name = localizeStepName(cycle.steps[a].name);
 			var step_temp = cycle.steps[a].temp;
 			var step_time = cycle.steps[a].time;
@@ -346,6 +347,7 @@ class ProfileForm {
 		});
 		cycleDiv.append(stepHTML);
 		cycleDiv.append(addStepButton);
+		this.cyclesCount ++;
 		return cycleDiv;
 	}
 
