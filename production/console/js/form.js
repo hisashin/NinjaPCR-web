@@ -22,7 +22,7 @@ class ProfileForm {
 		$('#postContainer').hide();
 		$('#holdContainer').hide();
 		$('#lidContainer').hide();
-	
+
 		// reset the size of the DIV to 700 px
 		//defaultHeight = "700";
 		//$(".SlidingPanelsContent").height(defaultHeight);
@@ -34,7 +34,7 @@ class ProfileForm {
 	experimentToHTML (inputJSON) {
 		console.log("ProfileForm.experimentToHTML()");
 		// store the experiment to the JSON. This can be modified using the interface buttons, sent to OpenPCR, or saved
-		
+
 		window.experiment = inputJSON;
 		// clear the Form
 		this.clear();
@@ -43,7 +43,7 @@ class ProfileForm {
 		// only use the first 20 chars of the experimentName
 		experimentName = experimentName.slice(0, 18);
 		$("#ExperimentName").html(experimentName);
-	
+
 		// for every .steps in the experiment, convert it to HTML
 		var experimentHTML = "";
 		// break the rest of the experiment up into "pre cycle" (0), "cycle" (1), and "post cycle" (2) sections
@@ -72,7 +72,7 @@ class ProfileForm {
 				$('#preContainer').show();
 				$('#preSteps').append(this.stepToHTML(step))
 			}
-	
+
 			else if (step.type == "cycle")
 			// if it's cycle, put the cycle in the Cycle container
 			{
@@ -80,7 +80,7 @@ class ProfileForm {
 				$('#cycles').append(this.cycleToHTML(step));
 				count = 1;
 			}
-	
+
 			else if (count == 1 && step.type == "step"
 					&& step.time != 0)
 			// if it's post (but not a final hold), put the steps in the Post container
@@ -88,7 +88,7 @@ class ProfileForm {
 				$('#postContainer').show();
 				$('#postSteps').append(this.stepToHTML(step));
 			}
-	
+
 			else if (step.type == "step"
 					&& step.time == 0)
 			// if it's the final hold (time = 0), put it in the final hold container
@@ -99,7 +99,7 @@ class ProfileForm {
 		}
 		activateDeleteButton();
 	}
-	
+
 	/* writeoutExperiment
 	 * Reads out all the variables from the OpenPCR form into a JSON object to "save" the experiment
 	 * Separate function is used to write out the experiment to the device
@@ -107,7 +107,7 @@ class ProfileForm {
 	writeoutExperiment() {
 		// grab the Experiment Name
 		experimentName = document.getElementById("ExperimentName").innerHTML;
-	
+
 		// grab the pre cycle variables if any exist
 		preArray = [];
 		$("#preContainer .textinput").each(function(index, elem) {
@@ -115,7 +115,7 @@ class ProfileForm {
 			if ($(this) != null)
 				preArray.push($(this).val());
 		});
-	
+
 		// grab the cycle variables
 		cycleArray = [];
 		cycleNameArray = [];
@@ -155,7 +155,7 @@ class ProfileForm {
 		});
 		cycleStepNumberArray.push(csnCount-1);
 		totalcsnCount += (csnCount-1);
-	
+
 		if (totalcsnCount != cycleNameArray.length){
 			console.error("Cycle number does not match!");
 			//cycleStepNumberArray = [cycleNameArray.length];
@@ -166,7 +166,7 @@ class ProfileForm {
 			//just throw them in an array for now
 			postArray.push($(this).val());
 		});
-	
+
 		// grab the final hold steps if any exist
 		holdArray = [];
 		$("#holdContainer .textinput").each(function(index, elem) {
@@ -177,7 +177,7 @@ class ProfileForm {
 		$("#lidContainer .textinput").each(function(index, elem) {
 			lidTemp = $(this).val();
 		});
-	
+
 		// Push variables into an experiment JSON object
 		var experimentJSON = new Object();
 		// Experiment name
@@ -196,7 +196,7 @@ class ProfileForm {
 				"rampDuration" : preArray.shift()
 			});
 		}
-	
+
 		// Cycle and cycle steps
 		// the cycle will be a # of cycles as the first element, then temp/time pairs after that
 		for (i = 0; i < cycleStepNumberArray.length; i++) {
@@ -212,7 +212,7 @@ class ProfileForm {
 					});
 					// then add the cycles
 					current = experimentJSON.steps.length - 1;
-				
+
 					for (a = 0; a < cycleLength; a++) {
 						experimentJSON.steps[current].steps.push({
 							"type" : "step",
@@ -231,10 +231,10 @@ class ProfileForm {
 						cycleArray.shift();
 					}
 				}
-				
+
 			}
 		}
-		
+
 		// every step will have 3 elements in preArray (Time, temp, rampDuration)
 		// a better way to do this would be for a=0, postArray!=empty, a++
 		postLength = (postArray.length) / 3;
@@ -247,7 +247,7 @@ class ProfileForm {
 				"rampDuration" : postArray.shift()
 			});
 		}
-	
+
 		// Final Hold step
 		if (holdArray.length > 0) {
 			experimentJSON.steps.push({
@@ -258,7 +258,7 @@ class ProfileForm {
 				"rampDuration" : 0
 			});
 		}
-	
+
 		// return the experiment JSON object
 		return experimentJSON;
 	}
@@ -301,7 +301,7 @@ class ProfileForm {
 			});
 		}
 	}
-	
+
 	getInputTag(value, options) {
 		var div = document.createElement("DIV");
 		var tag = document.createElement("INPUT");
@@ -315,16 +315,16 @@ class ProfileForm {
 		div.appendChild(tag);
 		return div.innerHTML;
 	}
-	
+
 	cycleToHTML (cycle) {
 		console.log("cycleToHTML type=" + cycle.type);
 		var stepHTML = "";
-		
+
 		// printhe "Number of Cycles" div
 		// max 99 cycles
 		stepHTML += '<div class="cycle">';
 		stepHTML += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span>'
-		
+
 		stepHTML += this.getInputTag (cycle.count, {
 					name: "number_of_cycles", id:"number_of_cycles",
 					maxlength:2, min:0, max:99
@@ -390,7 +390,7 @@ class ProfileForm {
 	 * If the step is a cycle, it will return html with all the cycles represented.
 	 * If the step is a single step, html with just one cycle is returned
 	 */
-	
+
 	stepToHTML(step) {
 		console.log("stepToHTML type=" + step.type);
 		var stepHTML = "";
@@ -408,7 +408,7 @@ class ProfileForm {
 			var step_rampDuration = step.rampDuration;
 			if (step_rampDuration == null)
 				step_rampDuration = 0;
-	
+
 			// main HTML, includes name and temp
 			stepHTML += '<div class="step"><span id="'
 					+ step_number
@@ -417,13 +417,13 @@ class ProfileForm {
 					+ ' </span><a class="edit deleteStepButton"><img src="/console/images/minus.png" height="30"></a>'
 					+ '<table cellspacing="20"><tr>'
 					+ '<th><label>'+getLocalizedMessage('tempShort')+':</label> <div>'
-					
+
 			stepHTML += this.getInputTag (step_temp, {
 						name:  ("temp_" + step_number),
 						maxlength:4, min:MIN_FINAL_HOLD_TEMP, max:120
 					});
 			stepHTML += '</div><span htmlfor="openpcr_temp" generated="true" class="units">&deg;C</span> </th>';
-	
+
 			// if the individual step has 0 time (or blank?) time, then it is a "hold" step and doesn't have a "time" component
 			if (step_time != 0) {
 				stepHTML += '<th><label>'+getLocalizedMessage('stepDuration')+':</label> <div class="">';
@@ -446,7 +446,7 @@ class ProfileForm {
 		stepHTML += '</tr></table></div>';
 		return stepHTML;
 	}
-		
+
 	/* addStep()
 	 * Add the HTML for a blank step to the desired css selector div
 	 */
@@ -504,7 +504,7 @@ class ProfileForm {
 		activateDeleteButton();
 		$(".edit").show();
 	}
-	
+
 	addCycle(location) {
 		var step_name;
 		var location = "cycles";
@@ -518,10 +518,10 @@ class ProfileForm {
 				break;
 			}
 		}
-		
+
 		/*
 		var cycle = '<hr size="0.5" width="60%" color="grey" noshade>';
-			cycle += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span>' 
+			cycle += '<label for="number_of_cycles"></label><div><span class="title">'+getLocalizedMessage('numberOfCycles')+':</span>'
 					+ this.getInputTag (inputJSON.lidtemp, {
 									name: "number_of_cycles", id: "number_of_cycles",
 									maxlength:2, min:0, max:99
@@ -538,7 +538,7 @@ class ProfileForm {
 				var step_rampDuration = step.steps[a].rampDuration;
 				if (step_rampDuration == null)
 					step_rampDuration = 0;
-	
+
 				// print HTML for the step
 				// min,max temp = -20, 105
 				// min,max time = 0, 6000, 1 decimal point
@@ -575,7 +575,7 @@ class ProfileForm {
 								})
 						+ '</div><span htmlfor="openpcr_rampDuration" generated="true" class="units">'+getLocalizedMessage('sec')+'</span></th>'
 						+ '</tr></table></div>';
-	
+
 			}
 		*/
 		$('#cycles').append(this.cycleToHTML(templateCycle));
@@ -586,7 +586,7 @@ class ProfileForm {
 		activateDeleteButton();
 		$(".edit").show();
 	}
-	
+
 	addFinalStep() {
 		// add the step to the postContainer
 		this.addStep("postSteps");
@@ -596,12 +596,12 @@ class ProfileForm {
 		// add the step to the preContainer
 		this.addStep("preSteps");
 	}
-	
+
 	initButtons () {
 		var scope = this;
 		$('#initialStep').on('click', function(){ scope.addInitialStep(); }); // TODO move to ProfileForm class
 		$('#finalStep').on('click', function(){ scope.addFinalStep(); }); // TODO move to ProfileForm class
-		
+
 		/*  "Save" button on the OpenPCR Form
 		 * Ask for a "name" and save the protocol to name.pcr in the user's Experiments folder
 		 */
@@ -614,7 +614,7 @@ class ProfileForm {
 			// otherwise, the form is valid. Open the "Save" dialog box
 			$('#save_dialog').dialog('open');
 		});
-	
+
 		/*  "Save" on the OpenPCR Form in EDIT MODE
 		 * This will overwrite the old experiment with the edited settings
 		 */
@@ -628,7 +628,7 @@ class ProfileForm {
 			// Save the file, overwriting the existing file
 			scope.save(name, false, function(){ loadExperiment(experimentID);});
 		});
-		
+
 		/*  "Cancel" button on the OpenPCR Form in EDIT MODE
 		 * This will cancel any changes made to the form and re-load the experiment as it was last saved
 		 */
@@ -644,19 +644,19 @@ class ProfileForm {
 			// load the selected experiment
 			loadExperiment(experimentID);
 		});
-	
+
 		/*  "Edit" button on the OpenPCR Form with a saved experiment
 		 */
 		$('#editButton').on('click', function() {
 			scope.editButton();
 		});
-	
+
 		/*  "Delete" button on the OpenPCR Form in EDIT MODE
 		 */
 		$('#deleteButton').on('click', function() {
 			$('#delete_dialog').dialog('open');
 		});
-	
+
 		/*  "+ Add Step" button on the OpenPCR Form
 		 * Add a new blank step to the end of the presets
 		 */
@@ -688,7 +688,7 @@ class ProfileForm {
 		$('#deleteButton').on('click', function() {
 			$('#delete_dialog').dialog('open');
 		});
-	
+
 		/*  "+ Add Step" button on the OpenPCR Form
 		 * Add a new blank step to the end of the presets
 		 */
@@ -713,10 +713,10 @@ class ProfileForm {
 				$(this).remove();
 				//// if the length is now 0, hide the whole div
 			});
-	
+
 		});
 	}
-	
+
 	/* editButton()
 	 * Function that is called when the "Edit" button is pressed on a "Saved Preset" page. Makes the "Save preset" and "Cancel" buttons
 	 * show up, "Add" and "Subtract" steps buttons, and makes all fields editable
@@ -781,6 +781,6 @@ function globalizeStepName (_stepName) {
 
 class CycleEditor {
 	constructor () {
-	
+
 	}
 }
