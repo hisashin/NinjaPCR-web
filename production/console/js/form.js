@@ -189,7 +189,6 @@ class ProfileForm {
 			experimentJSON.steps.push(cycles[i]);
 		}
 
-		console.log(JSON.stringify(experimentJSON));
 
 		// every step will have 3 elements in preArray (Time, temp, rampDuration)
 		// a better way to do this would be for a=0, postArray!=empty, a++
@@ -214,6 +213,7 @@ class ProfileForm {
 				"rampDuration" : 0
 			});
 		}
+		console.log(JSON.stringify(experimentJSON));
 
 		// return the experiment JSON object
 		return experimentJSON;
@@ -225,7 +225,7 @@ class ProfileForm {
 	save (name, isNew, callback) {
 		console.verbose("save " + name + ", isNew=" + isNew);
 		// grab the current experiment and update window.experiment
-		pcrProgram = this.writeoutExperiment();
+		var pcrProgram = this.writeoutExperiment();
 		console.log("pcrProgram=" + pcrProgram);
 		// update the name of the experiment
 		pcrProgram.name = name;
