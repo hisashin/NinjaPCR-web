@@ -390,8 +390,13 @@ function showRunningDashboard () {
 	//hide the home button on the running page
 	$("#homeButton").hide();
 	$("#download").hide();
-	// show the "stop" button
+
+	// show the controller buttons
 	$("#stop_link").show();
+	$("#pause_link").show();
+	$("#resume_link").hide();
+	$("#next_step_link").show();
+	$("#next_cycle_link").show();
 }
 
 /*****************

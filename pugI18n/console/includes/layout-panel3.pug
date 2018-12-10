@@ -68,10 +68,11 @@
 
     #runningPluggedIn
       input#stop_link.stop.player_button.pcr_localize_stop(type="button" value="Stop")
-      input#pause_link.pause.player_button.pcr_localize_pause.debug(type="button" value="Pause")
-      input#resume_link.resume.player_button.pcr_localize_resume.debug(type="button" value="Resume")
-      input#next_step_link.next_step.player_button.pcr_localize_next_step.debug(type="button" value="Next Step")
-      input#next_cycle_link.next_cycle.player_button.pcr_localize_next_cycle.debug(type="button" value="Next Cycle")
+      span.debug
+        input#pause_link.pause.player_button.pcr_localize_pause(type="button" value="Pause")
+        input#resume_link.resume.player_button.pcr_localize_resume(type="button" value="Resume")
+        input#next_step_link.next_step.player_button.pcr_localize_next_step(type="button" value="Next Step")
+        input#next_cycle_link.next_cycle.player_button.pcr_localize_next_cycle(type="button" value="Next Cycle")
 
     #runningUnplugged.unplugged_message.pcr_localize_unplugged
       | Your NinjaPCR is unplugged from the computer.
