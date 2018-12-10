@@ -514,6 +514,22 @@ function stopPCR() {
 	});
 	return false;
 }
+/* Send "resume" command to the device */
+function resumePCR () {
+	console.log("TODO resumePCR");
+}
+/* Send "pause" command to the device */
+function pausePCR () {
+	console.log("TODO pausePCR");
+}
+/* Send "nxs" command to the device */
+function nextStepPCR () {
+	console.log("TODO nextStepPCR");
+}
+/* Send "nxc" command to the device */
+function nextCyclePCR () {
+	console.log("TODO nextCyclePCR");
+}
 
 
 function _deleteStep () {
@@ -861,11 +877,16 @@ $(function() {
 		}
 	});
 
-	// Dialog Link
+	// Controller buttons
 	$('#stop_link').click(function() {
 		$('#stop_dialog').dialog('open');
 		return false;
 	});
+	$('#pause_link').click(pausePCR);
+	$('#resume_link').click(resumePCR);
+	$('#next_step_link').click(nextStepPCR);
+	$('#next_cycle_link').click(nextCyclePCR);
+
 
 	// Starting dialog
 	$('#is_starting_dialog').dialog({
