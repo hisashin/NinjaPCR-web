@@ -1,10 +1,15 @@
 #running_header(role="main")
-  #runningHeader.Header
-  span#timeRemaining.pcr_localize_timeRemaining Time remaining:
-  #minutesRemaining
-  #progressbar
-  br
+  div#runningExperimentTitle.Header
   #runningStats
+    #runningHeader
+      #elapsed_time_section
+        span.pcr_localize_elapsedTime Elapsed time:
+        span#elapsedTime --:--:--
+        |
+        span#timeRemaining.pcr_localize_timeRemaining Time remaining:
+        span#minutesRemaining --:--:--
+        div
+          meter#timeProgress(max="100",min="0",value=65)
     table#statsTable.runningTable
       tr
         th(style="width:110px")
@@ -26,7 +31,7 @@
           span#lidTemperature
           | °C
         td
-          meter#meterLid(min="0" max="120" value="85")
+          meter#meterLid.meterTemp(min="0" max="120" value="85")
       tr
         td(style="text-align:right;")
           span.pcr_localize_block Well
@@ -35,7 +40,7 @@
           span#blockTemperature
           | °C
         td
-          meter#meterBlock(min="0" max="120" value="25")
+          meter#meterBlock.meterTemp(min="0" max="120" value="25")
       tr
         td(style="text-align:right;")
           span.pcr_localize_sample Sample
@@ -44,7 +49,7 @@
           span#sampleTemperature
           | °C
         td
-          meter#meterSample(min="0" max="120" value="25")
+          meter#meterSample.meterTemp(min="0" max="120" value="25")
       tr
         td(colspan="4")
           .deviceLabel
@@ -60,9 +65,6 @@
       div(style="text-align:center;")
         input#graph_plus.graph_zoom(type="button")
         input#graph_minus.graph_zoom(type="button")
-    #elapsed_time_section
-      span.pcr_localize_elapsedTime Elapsed time:
-      span#elapsedTime 00:00:00
     #runningPluggedIn
       #cancelButton
         input#stop_link.stop.small_button.pcr_localize_stop(type="button" value="Stop")

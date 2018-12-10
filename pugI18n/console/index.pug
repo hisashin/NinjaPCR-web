@@ -15,7 +15,6 @@ html
     script(type="text/javascript" src="/console/js/lib/jquery.ui.dialog.js")
     script(type="text/javascript" src="/console/js/lib/jquery.ui.button.js")
     script(type="text/javascript" src="/console/js/lib/jquery.ui.slider.js")
-    script(type="text/javascript" src="/console/js/lib/jquery.ui.progressbar.js")
     script(type="text/javascript" src="/console/js/lib/sprypanels.js")
     script(type="text/javascript" src="/console/js/_locales/ja/messages.js")
     script(type="text/javascript" src="/console/js/_locales/en/messages.js")
@@ -36,7 +35,7 @@ html
       | if(location.protocol == 'https:') {
       |   location.replace(location.href.replace(/https:/, 'http:'));
       | }
-          
+
   body
     #content(role="main" style="width:700px;height:800px;margin:auto;")
       #example2.SlidingPanels
@@ -50,7 +49,7 @@ html
           // PANEL 3: Experiment Progress
           #ex2_p3.SlidingPanelsContent.p3
             include includes/layout-panel3.pug
-        
+
     // Device update (visible when firmware update is available.)
     #config(style="display:none")
       h2 Firmware Update
@@ -60,22 +59,22 @@ html
       // Common Alert Dialog
       #alert_dialog(title="Alert")
         #alert_dialog_content
-        
+
       // stop-dialog
       #stop_dialog(title="Stop")
         span.pcr_localize_stopPcr Are you sure you want to stop the experiment?
-        
+
       // stopped (or restarted) when running view
       #is_stopped_dialog(title="Warning")
         span.pcr_localize_stopRunning Device may have restarted.
-        
+
       // Device is disconnected
       #disconnected_dialog(title="Disconnected")
         #pcr_localize_disconnectedInExperiment Device is disconnected.
-        
+
       // Creditdialog
       #about_dialog(title="About NinjaPCR")
-        | Version 
+        | Version
         span#appVersion
         br
         |       NinjaPCR App
@@ -83,41 +82,41 @@ html
         |       https://github.com/hisashin/NinjaPCR/wiki
         br
         |       Email us: pcr@tori.st
-        
+
       // settings-dialog
       #settings_dialog(title="Set Screen Contrast")
         span.pcr_localize_dragSlider Drag the slider to adjust the screen's contrast.
         #contrast_slider
-        
+
       // OTA related dialogs
       #update_required_dialog(title="Device update")
         .pcr_localize_updateRequired Device update is required. It can't run without updating.
         .versionDetail
           span.pcr_localize_versionCurrent Current Version
-          |  : 
+          |  :
           span.labelVersionCurrent 1.0
         .versionDetail
           span.pcr_localize_versionLatest Latest Version
-          |  : 
+          |  :
           span.labelVersionLatest 1.0
-          
+
       #update_available_dialog(title="Device update")
         .pcr_localize_updateAvailable Device update is available!
         .versionDetail
           span.pcr_localize_versionCurrent Current Version
-          |  : 
+          |  :
           span.labelVersionCurrent 1.0
         .versionDetail
           span.pcr_localize_versionLatest Latest Version
-          |  : 
+          |  :
           span.labelVersionLatest 1.0
-          
+
       #update_starting_dialog(title="Updating...")
         .pcr_localize_updateStarting Starting device update. Please do not turn the power off.
-        
+
       #updating_dialog(title="Updating...")
         .pcr_localize_updating Device is updating. Please do not turn the power off.
-        
+
       #update_finished_dialog(title="Updated")
         .pcr_localize_updateFinished Device is updated successfully!
         div.labelVersionAfterUpdate
@@ -130,34 +129,34 @@ html
           fieldset
             label(for="name") Name your experiment
             input#name.required.text.ui-widget-content.ui-corner-all(type="text" name="name" maxlength="20")
-            
+
       // Saved
       #save_done_dialog(title="Saved")
         span.pcr_localize_saved Experiment saved!
-        
+
       // Confirm deletion
       #delete_dialog(title="Delete")
         span.pcr_localize_confirmDelete Delete Experiment?
-        
+
       // Deleted
       #delete_done_dialog(title="Deleted")
         span.pcr_localize_deleted Deleted!
-        
+
       // Starting popup
       #is_starting_dialog(title="Starting")
         span.pcr_localize_readySteadyGo Ready. Steady. Go!
-        
+
       // Resuming popup
       #is_resuming_dialog(title="Device is already running")
         span#resumingProfile
-        
+
       // Dialog to show OTA error
       #is_ota_mode_dialog(title="OTA Mode")
         div The device is started in firmware update mode.
         input#buttonOTAModeOpenUpdate(type="button" value="Open update page")
         input#buttonOTAModeCancelUpdate(type="button" value="Cancel update")
         input#buttonOTAModeCloseDialog(type="button" value="Close this dialog")
-        
+
       // Harware error
       #error_dialog(title="Error")
         div.pcr_localize_hardwareError Hardware Error
@@ -169,4 +168,4 @@ html
             span#labelErrorCode
       // Android app installation guide
       #android_app_install_dialog(title="Please install app")
-        div.pcr_localize_androidGuide You need to install NinjaPCR app. Please install the app on Play Store. 
+        div.pcr_localize_androidGuide You need to install NinjaPCR app. Please install the app on Play Store.
