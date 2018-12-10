@@ -186,6 +186,7 @@ function loadExperiment(experimentID) {
 	console.verbose("loadExperiment id=" + experimentID);
 	pcrStorage.loadExperiment(experimentID, function(experiment) {
 		// Now we've made all the modifications needed, display the Form page
+
 		sp2.showPanel(1);
 		// clear the experiment form
 		profileForm.clear();
