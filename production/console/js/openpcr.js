@@ -42,7 +42,7 @@ function init() {
 	});
 	prepareButtons();
 	sp2 = new Spry.Widget.SlidingPanels('example2');
-	
+
 	// hide Settings button by default
 	($("#Settings").hide());
 
@@ -50,7 +50,7 @@ function init() {
 	scanPortsAndDisplay();
 	// Get experiments from the local storage
 	listExperiments();
-	
+
 	// i18n
 	localize();
 }
@@ -66,7 +66,7 @@ function scanPortsAndDisplay (delay) {
 		var portMessage = (deviceFound)?
 				(getLocalizedMessage('deviceFound').replace('___PORT___',port)):getLocalizedMessage('deviceNotFound');
 		$("#portLabel").html(portMessage);
-		
+
 		if (deviceFound) {
 			$("#runningUnplugged").hide();
 			$("#runningPluggedIn").show();
@@ -74,7 +74,7 @@ function scanPortsAndDisplay (delay) {
 				window.clearInterval(window.checkPlugInterval);
 			}
 			window.pluggedIn = true;
-			
+
 			if($("#Unplugged").is(':visible')){
 				// if the "Unplugged" button is visible, switch it to "Start"
 				$("#Unplugged").hide();
@@ -307,7 +307,7 @@ function disableEnterKey(e) {
 	if (window.event)
 		key = window.event.keyCode; //IE
 	else
-		key = e.which; //firefox      
+		key = e.which; //firefox
 
 	return (key != 13);
 }
@@ -317,20 +317,20 @@ var experimentLogger = null;
 function startPCR() {
 	experimentLogger = new ExperimentLogger();
 	experimentLog = [];
-	
+
 	// check if the form is validated
 	if (false == ($("#pcrForm").validate().form())) {
 		return 0;
 	} // if the form is not valid, show the errors
 	// command_id will be a random ID, stored to the window for later use
 	window.command_id = Math.floor(Math.random() * 65534);
-	// command id can't be 0 
+	// command id can't be 0
 	// where is OpenPCR
 	var devicePort = communicator.port;
 	console.verbose("devicePort=" + devicePort);
-	
+
 	pcrProgram = profileForm.writeoutExperiment();
-	var encodedProgram = programToDeviceCommand (pcrProgram);	
+	var encodedProgram = programToDeviceCommand (pcrProgram);
 	// verify that there are no more than 16 top level steps
 	console.verbose(pcrProgram.steps.length + " : top level steps");
 	console.verbose(window.lessthan20steps + " : cycle level steps");
@@ -359,16 +359,16 @@ function startPCR() {
 
 	//debug
 	console.verbose(encodedProgram);
-	
+
 	// go to the Running dashboard
 	showRunningDashboard();
 	$('#is_starting_dialog').dialog('open');
-	
+
 	// write out the file to the OpenPCR device
 	communicator.sendStartCommand(encodedProgram);
 	experimentLogger.start();
 	running();
-	
+
 	// then close windows it after 1 second
 	setTimeout(function() {
 		$('#is_starting_dialog').dialog('close');
@@ -514,6 +514,22 @@ function stopPCR() {
 	});
 	return false;
 }
+/* Send "resume" command to the device */
+function resumePCR () {
+	console.log("TODO resumePCR");
+}
+/* Send "pause" command to the device */
+function pausePCR () {
+	console.log("TODO pausePCR");
+}
+/* Send "nxs" command to the device */
+function nextStepPCR () {
+	console.log("TODO nextStepPCR");
+}
+/* Send "nxc" command to the device */
+function nextCyclePCR () {
+	console.log("TODO nextCyclePCR");
+}
 
 
 function _deleteStep () {
@@ -522,7 +538,7 @@ function _deleteStep () {
 		$(this).remove();
 		//// if the length is now 0, hide the whole div
 	});
-	
+
 }
 
 function activateDeleteButton() {
@@ -534,7 +550,7 @@ function activateDeleteButton() {
 		});
 
 	});
-} 
+}
 /**************
  * Buttons     *
  ***************/
@@ -543,13 +559,13 @@ function prepareButtons() {
 	profileForm.initButtons ();
 	$('#newExperimentButton').on('click', newExperiment);
 	$('#listSubmitButton').on('click', listSubmit);
-	
+
 	// TODO move to ProfileForm class
 	$('#saveForm').on('click', function() {
 		$('#Start').click();
 	});
 	$('#appVersion').html(chromeUtil.getAppVersion());
-	
+
 	/*  "About" button on the OpenPCR Home page
 	 * Displays about info
 	 */
@@ -569,7 +585,7 @@ function prepareButtons() {
 		});
 		$('#about_dialog').dialog('open');
 	});
-	
+
 	$('#debugLink').on('click', Log.toggleDebugArea);
 
 	/*  "Contrast" button on the OpenPCR Home page
@@ -611,15 +627,15 @@ function prepareButtons() {
 		pcrStorage.clearAllData();
 	});
 	/*
-	 * Graph Scale Button 
+	 * Graph Scale Button
 	 */
-	$('#graph_plus').on('click', 
+	$('#graph_plus').on('click',
 			function(){graph.changeScale(-1);}
 	);
-	$('#graph_minus').on('click', 
+	$('#graph_minus').on('click',
 			function(){graph.changeScale(1);}
 	);
-	
+
 	/*  "More options" button on the OpenPCR Form
 	 * Display a bunch of options
 	 */
@@ -674,13 +690,13 @@ function deleteCurrentExperiment() {
 		}, 750);
 	});
 
-	// 
+	//
 }
 
 // JQUERY UI stuffs
 
 $(function() {
-	// About Dialog			
+	// About Dialog
 	/*
 		$('#about_dialog').dialog({
 			autoOpen: false,
@@ -691,12 +707,12 @@ $(function() {
 			buttons:
 				{
 				"OK": function() {
-					$(this).dialog("close"); 
+					$(this).dialog("close");
 					}
 				}
 		});
 	 */
-	// Settings Dialog			
+	// Settings Dialog
 	$('#settings_dialog').dialog( //TODO Control LCD
 					{
 						autoOpen : false,
@@ -772,7 +788,7 @@ $(function() {
 		});
 	});
 
-	// Save Dialog			
+	// Save Dialog
 	$('#save_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -808,7 +824,7 @@ $(function() {
 
 	});
 
-	// Delete Dialog			
+	// Delete Dialog
 	$('#delete_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -843,7 +859,7 @@ $(function() {
 
 	});
 
-	// Stop Dialog			
+	// Stop Dialog
 	$('#stop_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -860,12 +876,17 @@ $(function() {
 			}
 		}
 	});
-	
-	// Dialog Link
+
+	// Controller buttons
 	$('#stop_link').click(function() {
 		$('#stop_dialog').dialog('open');
 		return false;
 	});
+	$('#pause_link').click(pausePCR);
+	$('#resume_link').click(resumePCR);
+	$('#next_step_link').click(nextStepPCR);
+	$('#next_cycle_link').click(nextCyclePCR);
+
 
 	// Starting dialog
 	$('#is_starting_dialog').dialog({
@@ -888,7 +909,7 @@ $(function() {
 			}
 		}
 	});
-	
+
   // Error dialog
   $('#error_dialog').dialog({
     autoOpen : false,
@@ -903,11 +924,11 @@ $(function() {
     }
 
   });
-	
+
 
 	//hover states on the static widgetson the static widgets
 		$('#dialog_link, ul#icons li').hover(
-			function() { $(this).addClass('ui-state-hover'); }, 
+			function() { $(this).addClass('ui-state-hover'); },
 			function() { $(this).removeClass('ui-state-hover'); }
 		);
 
@@ -924,7 +945,7 @@ $('#save_dialog').on('keyup', function(e) {
 function createCSV () {
 	var TAB = encodeURIComponent("\t");
 	var RET = encodeURIComponent("\n");
-	content = 
+	content =
 	   "Command ID" + TAB //d
 	 + "Status" + TAB //s
 	 + "Lid Temp" + TAB //l
@@ -938,7 +959,7 @@ function createCSV () {
 	for (var i=0; i<experimentLog.length; i++) {
 		var line = experimentLog[i];
 		for (var j=0; j<params.length; j++) {
-			if (j!=0) 
+			if (j!=0)
 				content += TAB;
 			if (line[params[j]]!=null)
 				content += line[params[j]];
@@ -952,4 +973,3 @@ function createCSV () {
 }
 
 $(document).ready(init);
-
