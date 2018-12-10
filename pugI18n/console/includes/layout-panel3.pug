@@ -1,7 +1,6 @@
 #running_header(role="main")
   #runningHeader.Header
   span#timeRemaining.pcr_localize_timeRemaining Time remaining:
-  br
   #minutesRemaining
   #progressbar
   br
@@ -18,7 +17,7 @@
             span.pcr_localize_cycle Cycle
             br
             span#cycleNumber -
-            |  / 
+            |  /
             span#totalCycles -
         td(style="text-align:right;")
           span.pcr_localize_lid Lid
@@ -59,10 +58,10 @@
     div
       #graph_container(style="width:420px;height:240px;padding:6px 8px 12px 8px;")
       div(style="text-align:center;")
-        input#graph_plus.small_button(type="button" value=" + ")
-        input#graph_minus.small_button(type="button" value=" - ")
+        input#graph_plus.graph_zoom(type="button")
+        input#graph_minus.graph_zoom(type="button")
     #elapsed_time_section
-      span.pcr_localize_elapsedTime Elapsed time: 
+      span.pcr_localize_elapsedTime Elapsed time:
       span#elapsedTime 00:00:00
     #runningPluggedIn
       #cancelButton

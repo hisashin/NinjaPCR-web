@@ -14,22 +14,22 @@
           | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
         li
           span.pcr_localize_wifiSettings3
-            | Open 
+            | Open
             a(href="http://192.168.1.1" target="_blank") the WiFi settings page
             |  and setup. If the page doesn't show up, please retry after a few seconds.
           ol
             li
               strong "SSID"
-              |  : 
+              |  :
               span.pcr_localize_wifiSettings3_0
                 | Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.
             li
               strong "Password"
-              |  : 
+              |  :
               span.pcr_localize_wifiSettings3_1 Input the password of the network.
             li
               strong "Device name"
-              |  : 
+              |  :
               span.pcr_localize_wifiSettings3_2
                 | Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.
             li
@@ -39,14 +39,14 @@
           | Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.
         li.pcr_localize_wifiSettings5
           | Input the "Device name" that you have specified when you configured the device and press "connect" button.
-                      
+
   section
     p#ipInputContainer
-      span.pcr_localize_deviceName Device name: 
+      span.pcr_localize_deviceName Device name:
       input#HostText.connectionUI(type="text")
       input#ConnectButton.pcr_localize_connect.connectionUI(type="button" value="Connect")
     p#firmwareVersion(style="display:none")
-      span#firmwareVersionLabel Firmware Version 
+      span#firmwareVersionLabel Firmware Version
       span.labelVersionCurrent
 // Create a new blank experiment
 a#newExperimentButton(href="#")
@@ -61,7 +61,8 @@ a#listSubmitButton(href="#")
   span.home_title.pcr_localize_reRunExperiment Re-run an experiment
 #reRun(align="right")
 div
-  input#About.small_button.pcr_localize_about(type="button" value="About this app")
+  a#About
+    span.pcr_localize_about About this app
 div(style="display:none")
   a#Settings.small_button.pcr_localize_contrast(style="display:none") Adjust the screen contrast
 a#ClearData.small_button.pcr_localize_clearData(style="display:none") Clear all data(For Developer)

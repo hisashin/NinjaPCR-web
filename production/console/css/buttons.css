@@ -101,6 +101,7 @@ input.small_button, a.small_button {
 	font-weight:bold;
 	cursor: pointer;
 	text-decoration: none;
+	border-radius: 0;
 }
 
 
@@ -170,4 +171,21 @@ a.minusButton {
 	background-repeat:no-repeat;
 	padding-left:18px;
 	background-size:16px 16px;
+}
+
+.graph_zoom {
+	border-width: 0!important;
+	border: none!important;
+	background-color:none;
+	box-shadow: : none;
+	width: 24px;
+	height:24px;
+	background-size: 24px 24px;
+	padding: 0;
+}
+#graph_plus {
+	background-image:url("../images/graph_zoom_plus.png");
+}
+#graph_minus {
+	background-image:url("../images/graph_zoom_minus.png");
 }
