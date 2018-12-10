@@ -139,7 +139,8 @@ ExperimentLogger.prototype.log = function (status) {
 		// show the "Home" button
 		$("#homeButton").show();
 		// hide the cancel button
-		$("#stop_link").hide();
+		$(".player_button").hide();
+		
 		// hide timeRemaining
 		$("#timeRemaining").hide()
 		// finish the progress bar
