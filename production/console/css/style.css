@@ -294,8 +294,8 @@ meter {
 	/*-webkit-appearance: none;*/
 }
 
-::-webkit-meter-bar {
-	height: 12px;
+.meterTemp::-webkit-meter-bar {
+	height: 6px;
 	background: #fff;
 	border: 1px solid #888;
 	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
@@ -312,6 +312,19 @@ meter {
 #meterSample::-webkit-meter-optimum-value {
 	background: -webkit-linear-gradient(top, #ffbabb 0%, #ff585a 100%);
 }
+#timeProgress::-webkit-meter-bar {
+	height: 12px;
+	background: #fff;
+	border: 1px solid #888;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+#timeProgress {
+	width: 100%;
+	height: 12px;
+}
+#timeProgress::-webkit-meter-optimum-value {
+	background: -webkit-linear-gradient(top, #a4e3ff 0%, #01a4ea 100%);
+}
 
 #OpenDownloadPage {
 	text-decoration:underline;
@@ -319,12 +332,11 @@ meter {
 }
 #minutesRemaining {
 	text-align:center;
-	font-size:22px;
 }
 #elapsed_time_section {
-	font-size:14px;
-	text-align:right;
-	padding-right:55px;
+	font-size:18px;
+	text-align:left;
+	padding: 0 0.3em;
 }
 #browser_alert {
 	background-color: #ffd;

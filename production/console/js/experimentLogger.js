@@ -16,7 +16,7 @@ ExperimentLogger.prototype.displayElapsedSec = function (elapsedSec) {
 	document.getElementById('elapsedTime').innerHTML = clockTime(elapsedSec);
 };
 ExperimentLogger.prototype.log = function (status) {
-	if (!status) { 
+	if (!status) {
 		return;
 	}
 	console.log("Elapsed time(msec)=" + (new Date().getTime()-this.startTime.getTime()));
@@ -52,29 +52,29 @@ ExperimentLogger.prototype.log = function (status) {
 		else if (statusPeltier<0) {
 			color = COLOR_COOLING;
 			text = getLocalizedMessage('statusCooling');
-		} 
+		}
 		else {
 			color = COLOR_STOP;
 			text = getLocalizedMessage('statusStop');
 		}
 		$("#deviceStatusPeltier").html(text);
 		$("#deviceStatusPeltier").css("color",color);
-		
+
 	}
 	if (status["s"] == "running" || status["s"] == "lidwait") {
 		// preset name
 		var prog_name = status["n"];
-		$("#runningHeader").html(prog_name);
+		$("#runningExperimentTitle").html(prog_name);
 
 		if (status["s"] == "lidwait") {
 			// if the lid is heating say so
-			$("#progressbar").hide();
+			$("#timeProgress").hide();
 			$("#cycleNumOfNum").hide();
 			$("#timeRemaining").html("");
 			$("#minutesRemaining").html(getLocalizedMessage('lidHeating'));
 
 			// during lidwait, no protocol name is included, so include the protocol name from the previous page
-			$("#runningHeader").html(document.getElementById("ExperimentName").innerHTML);
+			$("#runningExperimentTitle").html(document.getElementById("ExperimentName").innerHTML);
 		}
 
 		if (status["s"] == "running") {
@@ -86,10 +86,8 @@ ExperimentLogger.prototype.log = function (status) {
 				percentComplete = 2;
 			}
 			// Progress bar
-			$("#progressbar").progressbar({
-				value : percentComplete
-			});
-			$("#progressbar").show();
+			$("#timeProgress").val(percentComplete);
+			$("#timeProgress").show();
 
 			// Time Remaining
 			var secondsRemaining = status["r"];
@@ -116,11 +114,11 @@ ExperimentLogger.prototype.log = function (status) {
 		// Current lid temp
 		var lid_temp = status["l"].toFixed(1);
 		$("#lidTemperature").html(lid_temp);
-		
+
 		// Current sample temp
 		var sample_temp = status["z"].toFixed(1);
 		$("#sampleTemperature").html(sample_temp);
-		
+
 		// TODO sample temp
 		graph.addTime(elapsedSec, lid_temp, block_temp, sample_temp);
 		$('#meterBlock').val(block_temp);
@@ -136,8 +134,8 @@ ExperimentLogger.prototype.log = function (status) {
 		// Current sample temp
 		var sample_temp = status["z"].toFixed(1);
 		$("#sampleTemperature").html(sample_temp);
-		
-		// if the status of OpenPCR comes back as "complete"		
+
+		// if the status of OpenPCR comes back as "complete"
 		// show the "Home" button
 		$("#homeButton").show();
 		// hide the cancel button
@@ -145,9 +143,8 @@ ExperimentLogger.prototype.log = function (status) {
 		// hide timeRemaining
 		$("#timeRemaining").hide()
 		// finish the progress bar
-		$("#progressbar").progressbar({
-			value : 100
-		});
+
+		$("#timeProgress").val(100);
 		// show the completed message
 		minutesRemaining = '<span style="color:#04B109;">'+getLocalizedMessage('done')+'</span>';
 		$("#minutesRemaining").html(minutesRemaining);

@@ -490,10 +490,8 @@ function onStopPCR () {
  */
 function stopPCR() {
 	// Clear the values in the Running page
-	$("#runningHeader").html("");
-	$("#progressbar").progressbar({
-		value : "0"
-	});
+	$("#runningExperimentTitle").html("");
+	$("#timeProgress").val(0);
 	$("#minutesRemaining").html("");
 
 	// Create the string to write out
