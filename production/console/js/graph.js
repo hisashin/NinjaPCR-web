@@ -1,15 +1,15 @@
 var TempGraph = function (container) {
 	this.scaleIndex = 6;
 	var options, start, i;
-	
+
 	this.container = container;
 	this.dataLid = [];
 	this.dataBlock = [];
 	this.dataSample = [];
-	
+
 	//Initialize Dummy Data
 	this.time = 0;
-	
+
 	defaultAxis = {min : 0, max : this.getScale()};
 	this.options = {
 		xaxis:defaultAxis,
@@ -26,7 +26,7 @@ var TempGraph = function (container) {
 	}
 
 	function move(e) {
-		var end = self.graph.getEventPosition(e), xaxis = self.graph.axes.x, 
+		var end = self.graph.getEventPosition(e), xaxis = self.graph.axes.x,
 		offset = start.x- end.x;
 
 		self.graph = self.drawGraph( {
@@ -51,16 +51,16 @@ TempGraph.SCALES =  [10, 20, 30, 60, 60*3, 60*8, 60*20, /*1h*/60*60, /*2h*/60*60
 
 TempGraph.prototype.drawGraph = function (opts) {
 	var o = Flotr._.extend(Flotr._.clone(this.options), opts || {});
-	o.legend = {position:'sw'}; //Set position of legend
+	o.legend = {position:'se'}; //Set position of legend
 	o.yaxis = {
 			min:0,
 			max:130
 		};
 	return Flotr.draw(
-			this.container, 
+			this.container,
 			[
-				{data:this.dataLid,label:getLocalizedMessage('lid')}, 
-				{data:this.dataBlock,label:getLocalizedMessage('block')}, 
+				{data:this.dataLid,label:getLocalizedMessage('lid')},
+				{data:this.dataBlock,label:getLocalizedMessage('block')},
 				{data:this.dataSample,label:getLocalizedMessage('sample')} ],
 			o);
 }
@@ -91,7 +91,7 @@ TempGraph.prototype.drawCurrentData = function () {
 	this.graph = this.drawGraph( {
 		xaxis : axis
 	});
-	
+
 }
 TempGraph.prototype.changeScale = function (delta) {
 	this.scaleIndex = Math.max( Math.min (this.scaleIndex+delta, TempGraph.SCALES.length-1), 0);
