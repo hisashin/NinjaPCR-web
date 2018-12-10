@@ -27,6 +27,10 @@ window.MESSAGE_EN = {
 	"cancel":{"message":"Cancel"},
 	"start":{"message":"Start"},
 	"stop":{"message":"Stop"},
+	"pause":{"message":"Pause"},
+	"resume":{"message":"Resume"},
+	"next_step":{"message":"Next Step"},
+	"next_cycle":{"message":"Next Cycle"},
 	"home":{"message":"Home"},
 	"timeRemaining":{"message":"Time remaining:"},
 	"elapsedTime":{"message":"Elapsed time:"},
@@ -120,6 +124,6 @@ window.MESSAGE_EN = {
   "connectionStatusConnecting":{"message":"Connecting..."},
   "connectionStatusConnected":{"message":"Connected"},
   "connect":{"message":"Connect"},
-  
+
 	"TODO":{"message":"TODO"}
 }

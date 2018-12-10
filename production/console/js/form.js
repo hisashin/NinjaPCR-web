@@ -599,6 +599,7 @@ class ProfileForm {
 		/* Init debug buttons */
 		if (location.href.indexOf("debug=true") > 0) {
 			$("#debugProfile").show();
+			$(".debug").show();
 			$("#debugProfile").on("click", function(){
 				scope.debugProfile();
 				sp2.showPanel(2);
