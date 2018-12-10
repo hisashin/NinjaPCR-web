@@ -65,9 +65,14 @@
       div(style="text-align:center;")
         input#graph_plus.graph_zoom(type="button")
         input#graph_minus.graph_zoom(type="button")
+
     #runningPluggedIn
-      #cancelButton
-        input#stop_link.stop.small_button.pcr_localize_stop(type="button" value="Stop")
+      input#stop_link.stop.player_button.pcr_localize_stop(type="button" value="Stop")
+      input#pause_link.pause.player_button.pcr_localize_pause.debug(type="button" value="Pause")
+      input#resume_link.resume.player_button.pcr_localize_resume.debug(type="button" value="Resume")
+      input#next_step_link.next_step.player_button.pcr_localize_next_step.debug(type="button" value="Next Step")
+      input#next_cycle_link.next_cycle.player_button.pcr_localize_next_cycle.debug(type="button" value="Next Cycle")
+
     #runningUnplugged.unplugged_message.pcr_localize_unplugged
       | Your NinjaPCR is unplugged from the computer.
       br

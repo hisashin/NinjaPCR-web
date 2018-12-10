@@ -391,7 +391,7 @@ function showRunningDashboard () {
 	$("#homeButton").hide();
 	$("#download").hide();
 	// show the "stop" button
-	$("#cancelButton").show();
+	$("#stop_link").show();
 }
 
 /*****************

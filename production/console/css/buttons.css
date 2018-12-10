@@ -64,15 +64,9 @@ input.edit {
 
 .cancel {
 	float: right;
-	//background: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+	/* background: -webkit-linear-gradient(top, #eeeeee, #cccccc); */
   background-color: #B8B8B8;
   border-color: #B8B8B8;
-}
-
-.stop {
-	align: right;
-	background: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-	border-color: #B8B8B8;
 }
 
 .moreoptions {
@@ -188,4 +182,30 @@ a.minusButton {
 }
 #graph_minus {
 	background-image:url("../images/graph_zoom_minus.png");
+}
+
+.player_button {
+	border-width: 0!important;
+	border: none!important;
+	padding-top:24px!important;
+	background-size:24px 24px;
+	background-position: top center;
+	background-repeat:no-repeat;
+	color: #444;
+	width:90px;
+}
+#stop_link {
+	background-image:url("../images/stop.png");
+}
+#pause_link {
+	background-image:url("../images/pause.png");
+}
+#resume_link {
+	background-image:url("../images/resume.png");
+}
+#next_step_link {
+	background-image:url("../images/next_step.png");
+}
+#next_cycle_link {
+	background-image:url("../images/next_cycle.png");
 }
