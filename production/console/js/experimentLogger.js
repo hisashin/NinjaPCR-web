@@ -61,7 +61,7 @@ ExperimentLogger.prototype.log = function (status) {
 		$("#deviceStatusPeltier").css("color",color);
 
 	}
-	if (status["s"] == "running" || status["s"] == "lidwait") {
+	if (status["s"] == "running" || status["s"] == "paused" || status["s"] == "lidwait") {
 		// preset name
 		var prog_name = status["n"];
 		$("#runningExperimentTitle").html(prog_name);
@@ -77,7 +77,7 @@ ExperimentLogger.prototype.log = function (status) {
 			$("#runningExperimentTitle").html(document.getElementById("ExperimentName").innerHTML);
 		}
 
-		if (status["s"] == "running") {
+		if (status["s"] == "running" || status["s"] == "paused") {
 			$("#timeRemaining").html(getLocalizedMessage('timeRemaining'));
 			// otherwise, if running set variable for percentComplete
 			// never display less than 2% for UI purposes
@@ -93,6 +93,14 @@ ExperimentLogger.prototype.log = function (status) {
 			var secondsRemaining = status["r"];
 			var timeRemaining = humanTime(secondsRemaining);
 			$("#minutesRemaining").html(timeRemaining);
+
+			if (status["s"] == "paused") {
+				$("#pause_link").hide();
+				$("#resume_link").show();
+			} else {
+				$("#pause_link").show();
+				$("#resume_link").hide();
+			}
 		}
 		// Current step name
 		var current_step = status["p"];
@@ -140,7 +148,7 @@ ExperimentLogger.prototype.log = function (status) {
 		$("#homeButton").show();
 		// hide the cancel button
 		$(".player_button").hide();
-		
+
 		// hide timeRemaining
 		$("#timeRemaining").hide()
 		// finish the progress bar

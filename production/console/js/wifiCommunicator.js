@@ -63,6 +63,18 @@ DeviceResponse.handleCallback = function (commandId, obj) {
 		console.verbose("CommandID " + commandId + " not found.");
 	}
 }
+DeviceResponse.pause = function () {
+  "DeviceResponse.pause";
+};
+DeviceResponse.resume = function () {
+  "DeviceResponse.resume";
+};
+DeviceResponse.nxs = function () {
+  "DeviceResponse.nxs";
+};
+DeviceResponse.nxc = function () {
+  "DeviceResponse.nxc";
+};
 
 
 /* Handle connection check response */
@@ -314,6 +326,11 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 
 	});
 
+};
+NetworkCommunicator.prototype.sendControlCommand = function (command) {
+  var URL = getDeviceHost() + "/" + command;
+  console.log("sendControlCommand " + URL)
+  // loadJSONP(URL)
 };
 $( window ).load(function() {
   setTimeout(function(){
