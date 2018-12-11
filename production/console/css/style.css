@@ -353,3 +353,6 @@ meter {
 .debug {
 	display:none;
 }
+#runningPluggedIn {
+	text-align:center;
+}

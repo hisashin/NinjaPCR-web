@@ -362,7 +362,7 @@ function startPCR() {
 
 	// go to the Running dashboard
 	showRunningDashboard();
-	$('#is_starting_dialog').dialog('open');
+	//$('#is_starting_dialog').dialog('open');
 
 	// write out the file to the OpenPCR device
 	communicator.sendStartCommand(encodedProgram);
@@ -370,12 +370,16 @@ function startPCR() {
 	running();
 
 	// then close windows it after 1 second
+	/*
 	setTimeout(function() {
 		$('#is_starting_dialog').dialog('close');
 	}, 5000);
 	setTimeout(function() {
 		$('#ex2_p3').show();
 	}, 100);
+	*/
+
+	$('#ex2_p3').show();
 	// also, reset the command_id_counter
 	window.command_id_counter = 0;
 }
@@ -483,9 +487,6 @@ function onStopPCR () {
 	window.clearInterval(window.updateRunningPage);
 	createCSV();
 	$("#homeButton").show();
-	// go back to the Form page
-	//sp2.showPanel(1);
-
 }
 
 /* StopPCR()
@@ -514,21 +515,21 @@ function stopPCR() {
 	});
 	return false;
 }
-/* Send "resume" command to the device */
-function resumePCR () {
-	console.log("TODO resumePCR");
-}
 /* Send "pause" command to the device */
 function pausePCR () {
-	console.log("TODO pausePCR");
+	communicator.sendControlCommand("pause");
+}
+/* Send "resume" command to the device */
+function resumePCR () {
+	communicator.sendControlCommand("resume");
 }
 /* Send "nxs" command to the device */
 function nextStepPCR () {
-	console.log("TODO nextStepPCR");
+	communicator.sendControlCommand("nxs");
 }
 /* Send "nxc" command to the device */
 function nextCyclePCR () {
-	console.log("TODO nextCyclePCR");
+	communicator.sendControlCommand("nxc");
 }
 
 
@@ -672,6 +673,7 @@ function prepareButtons() {
 				.replace("___LATEST_VERSION___", FIRMWARE_VERSION_LATEST)
 				.replace("___INSTALLED_VERSION___", version);
 		});
+	$('a[href="#"]').attr("href", "javascript:void(0);");
 }
 /* deleteCurrentExperiment()
  * Deletes the currently loaded experiment (whatever was last selected in the list)
