@@ -33,29 +33,29 @@ chromeUtil.getAppVersion = function () {
  * Input: seconds (integer)
  * Returns: time in a human friendly format, i.e. 2 hours, 10 minutes, 1 hour, 10 minutes, 1 hour, 1 minute, 60 minutes, 1 minute
  */
-function humanTime(secondsRemaining) {
-	var timeRemaining = "";
-	var minutesRemaining = Math.floor(secondsRemaining / 60);
-	var hoursRemaining = Math.floor(minutesRemaining / 60);
-	if (hoursRemaining > 0) {
-		timeRemaining += hoursRemaining + " " + getLocalizedMessage((hoursRemaining>1)?'hours':'hour');
-		timeRemaining += " ";
-		minutesRemaining -= (hoursRemaining) * 60;
+function humanTime(seconds) {
+	var time = "";
+	var minutes = Math.floor(seconds / 60);
+	var hours = Math.floor(minutes / 60);
+	if (hours > 0) {
+		time += hours + " " + getLocalizedMessage((hours>1)?'hours':'hour');
+		time += " ";
+		minutes -= (hours) * 60;
 	}
-	if (minutesRemaining > 1) {
-		timeRemaining += minutesRemaining + " " + getLocalizedMessage('minutes');
+	if (minutes > 1) {
+		time += minutes + " " + getLocalizedMessage('minutes');
 	}
-	else if (minutesRemaining == 1) {
-		timeRemaining += getLocalizedMessage('minute1');
+	else if (minutes == 1) {
+		time += getLocalizedMessage('minute1');
 	}
-	else if (secondsRemaining <= 60) {
+	else if (seconds <= 60) {
 		// should say "less than a minute" but font is too big
-		timeRemaining += getLocalizedMessage('minute1');
+		time += getLocalizedMessage('minute1');
 	}
-	else if (secondsRemaining == 0) {
-		timeRemaining = getLocalizedMessage('done');
+	else if (seconds == 0) {
+		time = getLocalizedMessage('done');
 	}
-	return timeRemaining;
+	return time;
 };
 
 function clockTime (totalSec) {
@@ -98,7 +98,7 @@ Storage.prototype.loadList = function (callback) {
 	} else {
 		this.experiments = [];
 	}
-	
+
 	if (this.experiments && this.experiments.length>0) {
 		console.verbose("Storage.loadList Experiment List Found.");
 		callback(this.experiments);
@@ -121,7 +121,7 @@ Storage.prototype.loadExperiment = function (experimentId, callback) {
 	var dataStr = localStorage.getItem(key);
 	console.verbose("Data str=" + dataStr);
 	var experiment = null;
-	
+
 	if (dataStr!=null) {
 		try {
 			experiment = JSON.parse(dataStr);
@@ -191,7 +191,7 @@ Storage.prototype.insertExperiment = function (name, experiment, callback) {
 	};
 	this.experiments.push(experimentData);
 	var self = this;
-	console.log("setting item. key=" + STORAGE_KEY_EXPERIMENT_LIST + 
+	console.log("setting item. key=" + STORAGE_KEY_EXPERIMENT_LIST +
 			", value=" + JSON.stringify(this.experiments, null, ''));
 	localStorage.setItem(STORAGE_KEY_EXPERIMENT_LIST, JSON.stringify(this.experiments, null, ''));
 	console.verbose('Experiment "'+name+'" saved');

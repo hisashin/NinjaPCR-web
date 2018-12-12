@@ -13,13 +13,13 @@ ExperimentLogger.prototype.start = function () {
 	this.experimentLog = [];
 };
 ExperimentLogger.prototype.displayElapsedSec = function (elapsedSec) {
-	document.getElementById('elapsedTime').innerHTML = clockTime(elapsedSec);
+	$("#elapsedTime").html(clockTime(elapsedSec));
 };
 ExperimentLogger.prototype.log = function (status) {
 	if (!status) {
 		return;
 	}
-	console.log("Elapsed time(msec)=" + (new Date().getTime()-this.startTime.getTime()));
+	//console.log("Elapsed  time(msec)=" + (new Date().getTime()-this.startTime.getTime()));
 	var elapsedSec = (new Date().getTime()-this.startTime.getTime())/1000;
 	this.displayElapsedSec(elapsedSec);
 	// make sure the status isn't blank
@@ -89,10 +89,12 @@ ExperimentLogger.prototype.log = function (status) {
 			$("#timeProgress").val(percentComplete);
 			$("#timeProgress").show();
 
+			// Time Epalsed
+			var elapsedSec = status["e"];
+			$("#elapsedTime").html(clockTime(elapsedSec));
 			// Time Remaining
 			var secondsRemaining = status["r"];
-			var timeRemaining = humanTime(secondsRemaining);
-			$("#minutesRemaining").html(timeRemaining);
+			$("#minutesRemaining").html(humanTime(secondsRemaining));
 
 			if (status["s"] == "paused") {
 				$("#pause_link").hide();

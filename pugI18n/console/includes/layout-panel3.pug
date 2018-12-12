@@ -9,7 +9,7 @@
         span#timeRemaining.pcr_localize_timeRemaining Time remaining:
         span#minutesRemaining --:--:--
         div
-          meter#timeProgress(max="100",min="0",value=65)
+          meter#timeProgress(max="100",min="0",value="0")
     table#statsTable.runningTable
       tr
         th(style="width:110px")
@@ -32,6 +32,8 @@
           | °C
         td
           meter#meterLid.meterTemp(min="0" max="120" value="85")
+        td
+          #deviceStatusLid.deviceStatus
       tr
         td(style="text-align:right;")
           span.pcr_localize_block Well
@@ -41,6 +43,8 @@
           | °C
         td
           meter#meterBlock.meterTemp(min="0" max="120" value="25")
+        td
+          #deviceStatusPeltier.deviceStatus
       tr
         td(style="text-align:right;")
           span.pcr_localize_sample Sample
@@ -50,18 +54,9 @@
           | °C
         td
           meter#meterSample.meterTemp(min="0" max="120" value="25")
-      tr
-        td(colspan="4")
-          .deviceLabel
-            span.pcr_localize_lid Lid
-            | :
-          #deviceStatusLid.deviceStatus
-          .deviceLabel
-            span.pcr_localize_well Well
-            | :
-          #deviceStatusPeltier.deviceStatus
+        td
     div
-      #graph_container(style="width:420px;height:240px;padding:6px 8px 12px 8px;")
+      #graph_container
       div(style="text-align:center;")
         input#graph_plus.graph_zoom(type="button")
         input#graph_minus.graph_zoom(type="button")
