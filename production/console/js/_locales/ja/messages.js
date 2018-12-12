@@ -37,6 +37,7 @@ window.MESSAGE_JA = {
 	"status":{"message":"ステータス"},
 	"currentTemp":{"message":"現在の温度"},
 	"cycle":{"message":"サイクル"},
+	"repeated":{"message":"回数"},
 	"lid":{"message":"蓋"},
 	"block":{"message":"ウェル"},
 	"sample":{"message":"試料"},

@@ -37,6 +37,7 @@ window.MESSAGE_EN = {
 	"status":{"message":"Status"},
 	"currentTemp":{"message":"Current Temperature"},
 	"cycle":{"message":"Cycle"},
+	"repeated":{"message":"Repeated"},
 	"lid":{"message":"Lid"},
 	"block":{"message":"Well"},
 	"sample":{"message":"Sample"},
