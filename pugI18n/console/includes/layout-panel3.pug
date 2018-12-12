@@ -19,11 +19,19 @@
       tr
         td(rowspan="3")
           #cycleNumOfNum
-            span.pcr_localize_cycle Cycle
-            br
-            span#cycleNumber -
-            |  /
-            span#totalCycles -
+            div
+              span.pcr_localize_cycle Cycle
+              |
+              span#cycleNumber -
+              | /
+              span#totalCycles -
+            div
+              span.pcr_localize_repeated Repeated
+              |
+              span#repeatNumber -
+              | /
+              span#totalRepeats -
+            div#stepName
         td(style="text-align:right;")
           span.pcr_localize_lid Lid
           | :

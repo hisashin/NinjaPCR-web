@@ -111,11 +111,18 @@ ExperimentLogger.prototype.log = function (status) {
 		// Current cycle # of #
 		$("#cycleNumOfNum").show();
 
-		var current_cycle = status["c"];
-		$("#cycleNumber").html(current_cycle);
-		// Total # of cycles
-		var total_cycles = status["u"];
-		$("#totalCycles").html(total_cycles);
+		// Cycles
+		if (status["i"]) {
+			$("#cycleNumber").html(status["i"]);
+			$("#totalCycles").html(status["a"]);
+		}
+		// Repeats
+		$("#repeatNumber").html(status["c"]);
+		$("#totalRepeats").html(status["u"]);
+		// Step name
+		if (status["p"]) {
+			$("#stepName").html(status["p"]);
+		}
 
 		// Current temp
 		var block_temp = status["b"].toFixed(1);
@@ -166,7 +173,7 @@ ExperimentLogger.prototype.log = function (status) {
 		var lid_temp = status["l"];
 		$("#lidTemperature").html(lid_temp);
 		// replace the "cycle # of total#" span with "PCR took..."
-		$("#cycleNumOfNum").html(getLocalizedMessage('tookTime').replace('___TIME___', humanTime(status["e"])));
+		// $("#cycleNumOfNum").html(getLocalizedMessage('tookTime').replace('___TIME___', humanTime(status["e"])));
 		// i.e. hide the "Holding for 10 sec", just show "Holding"
 		$("#stepRemaining").hide();
 		// Current step name
