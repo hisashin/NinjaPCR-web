@@ -88,9 +88,9 @@ image:active span {
 	border: 1px #959595 solid;
 	margin: 0px;
 	padding: 10px;
-	-webkit-border-radius: 9px;
+	/* -webkit-border-radius: 9px;
 	-moz-border-radius: 9px;
-	border-radius: 9px;
+	border-radius: 9px; */
 }
 
 .runningTable {
@@ -99,13 +99,15 @@ image:active span {
 }
 
 .runningTable td,.runningTable th {
-	vertical-align: top;
+	vertical-align: middle;
 	text-align: left;
 	padding: 4px !important;
 }
 
 #statsTable meter {
 	width: 160px;
+	height: 8px;
+	vertical-align: middle;
 }
 
 .runningHeaders {
@@ -286,7 +288,7 @@ div.deviceStatus {
 	text-align: left;
 	width: 80px;
 	display: block;
-	font-size: 90%;
+	font-size: 75%;
 }
 
 /* Temperature Meters */
@@ -355,4 +357,10 @@ meter {
 }
 #runningPluggedIn {
 	text-align:center;
+}
+#graph_container {
+	width:420px;
+	height:240px;
+	padding:6px 8px 12px 8px;
+	margin:auto;
 }

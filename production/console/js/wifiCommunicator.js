@@ -330,7 +330,7 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 NetworkCommunicator.prototype.sendControlCommand = function (command) {
   var URL = getDeviceHost() + "/" + command;
   console.log("sendControlCommand " + URL)
-  // loadJSONP(URL)
+  loadJSONP(URL)
 };
 $( window ).load(function() {
   setTimeout(function(){
