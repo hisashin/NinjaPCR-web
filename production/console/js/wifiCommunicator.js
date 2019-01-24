@@ -39,7 +39,6 @@ DeviceResponse.registerCallback = function (commandId, func, onError, element, n
 
 	if (!noTimeout) {
 		window.setTimeout(function() {
-			console.log("Request " + commandId + " timed out. Removing tag.");
 			if (!DeviceResponse.callbacks[commandId]) {
 				return;
 			}
@@ -154,7 +153,7 @@ function loadJSONP (URL, onError) {
 	scriptTag.src = URL;
 	document.body.appendChild(scriptTag);
 	scriptTag.addEventListener("error", function(){
-		console.log("error");
+		console.log("error (ignored)");
 	});
 	scriptTag.addEventListener("load", function() {
 		if (scriptTag.parentNode) {
@@ -172,7 +171,7 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callb
 		}
 		URL += param;
 	}
-	console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
+	// console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
 	var tag = loadJSONP(URL, function () {
 		console.log("sendRequestToDevice error");
 		if (onError) {

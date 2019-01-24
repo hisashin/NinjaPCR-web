@@ -19,9 +19,8 @@ ExperimentLogger.prototype.log = function (status) {
 	if (!status) {
 		return;
 	}
-	//console.log("Elapsed  time(msec)=" + (new Date().getTime()-this.startTime.getTime()));
-	var elapsedSec = (new Date().getTime()-this.startTime.getTime())/1000;
-	this.displayElapsedSec(elapsedSec);
+	var elapsedSecConsole = (new Date().getTime()-this.startTime.getTime())/1000;
+	this.displayElapsedSec(elapsedSecConsole);
 	// make sure the status isn't blank
 	// if command id in the running file doesn't match, check again 50 times and then quit if there is still no match
 	if (status["d"] != window.command_id) {
@@ -69,7 +68,6 @@ ExperimentLogger.prototype.log = function (status) {
 		if (status["s"] == "lidwait") {
 			// if the lid is heating say so
 			$("#timeProgress").hide();
-			$("#cycleNumOfNum").hide();
 			$("#timeRemaining").html("");
 			$("#minutesRemaining").html(getLocalizedMessage('lidHeating'));
 
@@ -91,11 +89,13 @@ ExperimentLogger.prototype.log = function (status) {
 
 			// Time Epalsed
 			var elapsedSec = status["e"];
-			$("#elapsedTime").html(clockTime(elapsedSec));
+			$("#elapsedTime").html(clockTime(elapsedSecConsole));
+
 			// Time Remaining
 			var secondsRemaining = status["r"];
 			$("#minutesRemaining").html(humanTime(secondsRemaining));
 
+			// Switch Pause/Resume buttons
 			if (status["s"] == "paused") {
 				$("#pause_link").hide();
 				$("#resume_link").show();
@@ -108,8 +108,7 @@ ExperimentLogger.prototype.log = function (status) {
 		var current_step = status["p"];
 		$("#currentStep").html(current_step);
 
-		// Current cycle # of #
-		$("#cycleNumOfNum").show();
+		// Current cycle, repeat and step
 
 		// Cycles
 		if (status["i"]) {
@@ -117,11 +116,22 @@ ExperimentLogger.prototype.log = function (status) {
 			$("#totalCycles").html(status["a"]);
 		}
 		// Repeats
-		$("#repeatNumber").html(status["c"]);
-		$("#totalRepeats").html(status["u"]);
+		if (status["u"] && status["u"] > 1) {
+			$("#repeatNumber").html(status["c"]);
+			$("#totalRepeats").html(status["u"]);
+			$("#sectionCycles").show();
+			$("#sectionRepeats").show();
+		} else {
+			$("#sectionCycles").hide();
+			$("#sectionRepeats").hide();
+		}
+
 		// Step name
 		if (status["p"]) {
-			$("#stepName").html(status["p"]);
+			$("#stepName").html(localizeStepName(status["p"]));
+			$("#stepName").show();
+		} else {
+			$("#stepName").hide();
 		}
 
 		// Current temp
@@ -136,8 +146,8 @@ ExperimentLogger.prototype.log = function (status) {
 		var sample_temp = status["z"].toFixed(1);
 		$("#sampleTemperature").html(sample_temp);
 
-		// TODO sample temp
-		graph.addTime(elapsedSec, lid_temp, block_temp, sample_temp);
+		// Sample temp
+		graph.addTime(elapsedSecConsole, lid_temp, block_temp, sample_temp);
 		$('#meterBlock').val(block_temp);
 		$('#meterLid').val(lid_temp);
 		$('#meterSample').val(sample_temp);
@@ -172,8 +182,6 @@ ExperimentLogger.prototype.log = function (status) {
 		// update the lid temp
 		var lid_temp = status["l"];
 		$("#lidTemperature").html(lid_temp);
-		// replace the "cycle # of total#" span with "PCR took..."
-		// $("#cycleNumOfNum").html(getLocalizedMessage('tookTime').replace('___TIME___', humanTime(status["e"])));
 		// i.e. hide the "Holding for 10 sec", just show "Holding"
 		$("#stepRemaining").hide();
 		// Current step name
