@@ -14,18 +14,18 @@
       tr
         th(style="width:110px")
           span.pcr_localize_status Status
-        th(colspan="3")
+        th(colspan="4")
           span.pcr_localize_currentTemp Current Temperature
       tr
         td(rowspan="3")
-          #cycleNumOfNum
-            div
+          #runnningStatus
+            div#sectionCycles
               span.pcr_localize_cycle Cycle
               |
               span#cycleNumber -
               | /
               span#totalCycles -
-            div
+            div#sectionRepeats
               span.pcr_localize_repeated Repeated
               |
               span#repeatNumber -
@@ -71,7 +71,7 @@
 
     #runningPluggedIn
       input#stop_link.stop.player_button.pcr_localize_stop(type="button" value="Stop")
-      span.debug
+      span.v1_1
         input#pause_link.pause.player_button.pcr_localize_pause(type="button" value="Pause")
         input#resume_link.resume.player_button.pcr_localize_resume(type="button" value="Resume")
         input#next_step_link.next_step.player_button.pcr_localize_next_step(type="button" value="Next Step")

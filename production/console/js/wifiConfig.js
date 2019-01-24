@@ -37,7 +37,7 @@ function startOTA () {
 				console.log("TODO /connect check connection failed");
 			});
 		}, 3000);
-	
+
 	}, function(){}, true);
 }
 // Called when version.js is loaded
@@ -52,7 +52,7 @@ function setNinjaPCRVersion (obj) {
 }
 $(document).ready(function(){
 	console.log("wifiConfig.init");
-	
+
 	$('#is_ota_mode_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -70,7 +70,7 @@ $(document).ready(function(){
 		$('#is_ota_mode_dialog').dialog('close');
 	});
 	$("#buttonStartOTA").click(startOTA);
-	
+
 	// Init OTA related dialogs
 	$('#update_required_dialog').dialog({
 		autoOpen : false,
@@ -88,7 +88,7 @@ $(document).ready(function(){
 			 	location.reload();
 			}
 		}
-	});	
+	});
 	$('#update_available_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -143,13 +143,14 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+
 	// Check version
 	loadJSONP("http://ninjapcr.tori.st/update/version.js?" + new Date().getTime(), function(){});
 });
 
 function checkFirmwareVersion (version) {
 	FIRMWARE_VERSION_CURRENT = version;
+  //FIRMWARE_VERSION_LATEST = "1.1";
 	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
 	if (location.href.indexOf("?update_firmware_anyway")>0) {
 		$(".labelVersionCurrent").html(FIRMWARE_VERSION_CURRENT);
@@ -163,7 +164,7 @@ function checkFirmwareVersion (version) {
 		message = getLocalizedMessage('firmwareUpdateAvailable')
 			.replace("___LATEST_VERSION___", FIRMWARE_VERSION_LATEST)
 				.replace("___INSTALLED_VERSION___", version);
-		
+
 	} else if (compareVersion(version, FIRMWARE_VERSION_LATEST)==VersionComparison.Smaller) {
 		console.verbose("Firmware update is available.");
 		$("#update_available_dialog").dialog("open");
@@ -175,4 +176,17 @@ function checkFirmwareVersion (version) {
 		message = getLocalizedMessage('firmwareUpToDate')
 			.replace("___INSTALLED_VERSION___", version);
 	}
+
+  /*
+    Version-specific styles: Resume/Pause/Next step/Next cycle buttons are
+    available only ver 1.1 or later
+  */
+  if (compareVersion(version, "1.1")==VersionComparison.Smaller) {
+    console.log("HIDE");
+    $(".v1_1").hide();
+  } else {
+
+      console.log("SHOW");
+
+  }
 }

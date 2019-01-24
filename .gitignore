@@ -3,3 +3,5 @@ package-lock.json
 *.html
 *.swp
 /.project
+*.psd
+.atomignore
