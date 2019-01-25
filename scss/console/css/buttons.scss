@@ -1,0 +1,210 @@
+/*
+Theme Name: OpenPCR
+Author: Tito Jankowski
+Modified by Mariko GODA for NinjaPCR
+*/
+
+/* Buttons on the OpenPCR Form  ------------------------------------------  */
+input[type="button"] {
+	margin: 4px 0px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	padding:4px 8px;
+}
+.options_button {
+	float: right;
+}
+
+input.home_button {
+	background-color:#00a8f0;
+	border-color: #00a8f0;
+	color: #fff;
+	background-image:url("../images/back.png");
+	background-repeat:no-repeat;
+	padding-left:22px!important;
+	background-position:4px center;
+	background-size:16px 16px;
+}
+
+input.edit {
+		background-color:#d8d8d8;
+		border-color: #d8d8d8;
+		color: #333;
+}
+
+.start {
+	background-color:#00a8f0;
+	border-color: #00a8f0;
+	color: #fff;
+}
+
+.homeRunning {
+	background-color: #00a8f0;
+	color: #fff;
+}
+
+.unplugged {
+	border-color: #00a8f0;
+	background-color:#00a8f0;
+	color:#fff;
+}
+
+.save {
+	border-color: #43a931;
+	background-color:#43a931;
+	color:#fff;
+}
+
+.saveEdits {
+	border-color: #43a931;
+  background-color:#43a931;
+  color:#fff;
+}
+
+.cancel {
+	float: right;
+	/* background: -webkit-linear-gradient(top, #eeeeee, #cccccc); */
+  background-color: #B8B8B8;
+  border-color: #B8B8B8;
+}
+
+.moreoptions {
+	float:right;
+}
+
+input.button {
+	border-radius: 0px!important;
+	width: 340px;
+	text-align: center;
+	font-weight:bold;
+	font-size: 18px;
+	outline: 0;
+	padding: 10px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	text-decoration: none;
+	margin:2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+input.small_button, a.small_button {
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+	margin:2px;
+	padding: 4px;
+	font-weight:bold;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 0;
+}
+
+
+a.button {
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+	width: 315px;
+	text-align: center;
+	font-size: 18px;
+	outline: 0;
+	padding: 12px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin-top: 10px;
+	text-decoration: none;
+}
+
+a.button span {
+	display: block;
+	line-height: 14px;
+	padding: 5px 0 5px 18px;
+}
+
+a.button:active {
+	background-color: #B3B3B3;
+	outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+	padding: 7px 0 3px 22px; /* push text down 1px */
+}
+
+a.small_button {
+	border-radius: 0px;
+	width: 80px;
+	text-align: center;
+	font-size: 12px;
+	outline: 0;
+	margin: 20px 4px;
+	/*border: #B8B8B8 solid 1px;*/
+	color: #000000;
+	cursor: pointer;
+	vertical-align: middle;
+	padding: 5px 10px;
+	text-decoration: none;
+	font-weight: normal;
+	background-color:#eee;
+}
+
+
+a.small_button:active span {
+	background-position: bottom left;
+	padding: 11px 9px; /* push text down 1px */
+}
+
+a.plusButton {
+	background-image:url("../images/plus.png");
+	background-repeat:no-repeat;
+	padding-left:18px;
+	background-size:16px 16px;
+}
+a.minusButton {
+	background-image:url("../images/minus.png");
+	background-repeat:no-repeat;
+	padding-left:18px;
+	background-size:16px 16px;
+}
+
+.graph_zoom {
+	border-width: 0!important;
+	border: none!important;
+	background-color:none;
+	box-shadow:none;
+	width: 24px;
+	height:24px;
+	background-size: 24px 24px;
+	padding: 0;
+}
+#graph_plus {
+	background-image:url("../images/graph_zoom_plus.png");
+}
+#graph_minus {
+	background-image:url("../images/graph_zoom_minus.png");
+}
+
+.player_button {
+	border-width: 0!important;
+	border: none!important;
+	padding-top:24px!important;
+	background-size:24px 24px;
+	background-position: top center;
+	background-repeat:no-repeat;
+	color: #444;
+	width:90px;
+}
+#stop_link {
+	background-image:url("../images/stop.png");
+}
+#pause_link {
+	background-image:url("../images/pause.png");
+}
+#resume_link {
+	background-image:url("../images/resume.png");
+}
+#next_step_link {
+	background-image:url("../images/next_step.png");
+}
+#next_cycle_link {
+	background-image:url("../images/next_cycle.png");
+}
