@@ -144,7 +144,7 @@ $(document).ready(function(){
 		}
 	});
 
-	// Check version
+	// Check version -> wouldn't it be possible to retrieve the hostname from somewhere and set it to the one to which the machine is actually connected?
 	loadJSONP("http://ninjapcr.tori.st/update/version.js?" + new Date().getTime(), function(){});
 });
 
