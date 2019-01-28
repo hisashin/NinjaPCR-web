@@ -88,9 +88,6 @@ image:active span {
 	border: 1px #959595 solid;
 	margin: 0px;
 	padding: 10px;
-	/* -webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	border-radius: 9px; */
 }
 
 .runningTable {
@@ -191,49 +188,46 @@ body {
 	width: 500px;
 	margin: 0 auto 10px;
 }
-
-.openpcr-form-div label {
-	display: block;
-	margin: 5px 0 0px -55px;
+.openpcr-form-div {
+	label {
+		display: block;
+		margin: 5px 0 0px -55px;
+	}
+	.textinput {
+		margin: 0;
+		-webkit-border-radius: 9px;
+		-moz-border-radius: 9px;
+		border-radius: 9px;
+		font-size: 18px;
+		font-family: helvetica, arial, sans-serif;
+		border: 0;
+		background: #F0F0F0;
+		width: 70px;
+		padding: 8px 9px 6px;
+		border: #B8B8B8 solid 1px;
+		text-align: center;
+	}
+	.textinput:focus {
+		border: #6EABEB solid 3px;
+		padding: 6px 7px 4px;
+		outline: 0;
+	}
+	input.invalid, textarea.invalid {
+		background-color: pink;
+	}
+	.reqdinput {
+		position: relative;
+	}
+	/* Positions the C and "sec" labels on the form */
+	span.units {
+		font-size: 12px;
+		font-weight: normal;
+		position: relative;
+		left: 25px;
+		top: -23px;
+	}
 }
 
-.openpcr-form-div .textinput {
-	margin: 0;
-	-webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	border-radius: 9px;
-	font-size: 18px;
-	font-family: helvetica, arial, sans-serif;
-	border: 0;
-	background: #F0F0F0;
-	width: 70px;
-	padding: 8px 9px 6px;
-	border: #B8B8B8 solid 1px;
-	text-align: center;
-}
-
-.openpcr-form-div .textinput:focus {
-	border: #6EABEB solid 3px;
-	padding: 6px 7px 4px;
-	outline: 0;
-}
-
-.openpcr-form-div input.invalid,.openpcr-form-div textarea.invalid {
-	background-color: pink;
-}
-
-.openpcr-form-div .reqdinput {
-	position: relative;
-}
-
-/* Positions the C and "sec" labels on the form */
-.openpcr-form-div span.units {
-	font-size: 12px;
-	font-weight: normal;
-	position: relative;
-	left: 25px;
-	top: -23px;
-}
 
 label.error {
 	font-size: 11px;
