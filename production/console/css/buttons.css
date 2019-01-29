@@ -3,6 +3,7 @@ Theme Name: OpenPCR
 Author: Tito Jankowski
 Modified by Mariko GODA for NinjaPCR
 */
+/*  Colors */
 /* Buttons on the OpenPCR Form  ------------------------------------------  */
 input[type="button"] {
   margin: 4px 0px;
@@ -32,35 +33,44 @@ input.edit {
 .start {
   background-color: #00a8f0;
   border-color: #00a8f0;
-  color: #fff; }
+  color: #ffffff; }
 
 .homeRunning {
+  border-color: #00a8f0;
   background-color: #00a8f0;
-  color: #fff; }
+  color: #ffffff; }
 
 .unplugged {
   border-color: #00a8f0;
   background-color: #00a8f0;
-  color: #fff; }
+  color: #ffffff; }
 
 .save {
   border-color: #43a931;
   background-color: #43a931;
-  color: #fff; }
+  color: #ffffff; }
 
 .saveEdits {
   border-color: #43a931;
   background-color: #43a931;
-  color: #fff; }
+  color: #ffffff; }
 
 .cancel {
   float: right;
-  /* background: -webkit-linear-gradient(top, #eeeeee, #cccccc); */
   background-color: #B8B8B8;
   border-color: #B8B8B8; }
 
 .moreoptions {
   float: right; }
+
+input.small_button, a.small_button {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  margin: 2px;
+  padding: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0; }
 
 input.button {
   border-radius: 0px !important;
@@ -77,18 +87,7 @@ input.button {
   margin: 2px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25); }
 
-input.small_button, a.small_button {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  margin: 2px;
-  padding: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 0; }
-
 a.button {
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
   border-radius: 9px;
   width: 315px;
   text-align: center;
@@ -115,6 +114,7 @@ a.button:active span {
   padding: 7px 0 3px 22px;
   /* push text down 1px */ }
 
+/* Common button style (small) */
 a.small_button {
   border-radius: 0px;
   width: 80px;
@@ -136,6 +136,7 @@ a.small_button:active span {
   padding: 11px 9px;
   /* push text down 1px */ }
 
+/* Add & Delete buttons */
 a.plusButton {
   background-image: url("../images/plus.png");
   background-repeat: no-repeat;
@@ -148,6 +149,7 @@ a.minusButton {
   padding-left: 18px;
   background-size: 16px 16px; }
 
+/* Graph Zoom */
 .graph_zoom {
   border-width: 0 !important;
   border: none !important;
@@ -164,6 +166,7 @@ a.minusButton {
 #graph_minus {
   background-image: url("../images/graph_zoom_minus.png"); }
 
+/* Player */
 .player_button {
   border-width: 0 !important;
   border: none !important;

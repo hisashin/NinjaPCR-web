@@ -30,18 +30,12 @@
   font-size: 1rem;
   margin: 1rem 0;
   text-indent: 0.2em; }
-
-.disconnected {
-  border-left: 10px solid gray; }
-
-.connecting {
-  border-left: 10px solid orange; }
-
-.connected {
-  border-left: 10px solid #2f2; }
-
-#otaLink {
-  color: blue; }
+  #DeviceConnectionStatus .disconnected {
+    border-left: 10px solid gray; }
+  #DeviceConnectionStatus .connecting {
+    border-left: 10px solid orange; }
+  #DeviceConnectionStatus .connected {
+    border-left: 10px solid #2f2; }
 
 .versionDetail {
   font-size: 0.8rem;
