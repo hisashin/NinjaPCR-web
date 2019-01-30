@@ -142,7 +142,6 @@ function listExperiments() {
 			for ( var i = 0; i < experiments.length; i++) {
 				var experiment = experiments[i];
 				if (experiment.id && experiment.name) {
-				  console.log("ID="+experiment.id)
 				  var selected = (experiment.id==lastExperiment)?" selected":"";
 					presetsHTML += '<option value="' + experiment.id +  '" ' + selected + '>' + experiment.name + "</option>";
 				}
@@ -973,20 +972,3 @@ function createCSV () {
 }
 
 $(document).ready(init);
-
-const GEN_PUG = (obj)=>{
-	let a = [];
-	for (key in obj) {
-		let k = key;
-		let v = obj[key].message.replace(/\"/g,"\\\"");
-		a.push("\"" + key + "\":\"" + v + "\"," )
-	}
-	console.log(a.join("\n"))
-};
-
-(()=>{
-	console.log("Log JA");
-	GEN_PUG(window.MESSAGE_JA)
-	console.log("Log EN");
-	GEN_PUG(window.MESSAGE_EN)
-})()
