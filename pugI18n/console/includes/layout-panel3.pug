@@ -3,37 +3,37 @@
   #runningStats
     #runningHeader
       #elapsed_time_section
-        span.pcr_localize_elapsedTime Elapsed time:
+        span #{$i18n.console.elapsedTime}
         span#elapsedTime --:--:--
         |
-        span#timeRemaining.pcr_localize_timeRemaining Time remaining:
+        span#timeRemaining #{$i18n.console.timeRemaining}
         span#minutesRemaining --:--:--
         div
           meter#timeProgress(max="100",min="0",value="0")
     table#statsTable.runningTable
       tr
         th(style="width:110px")
-          span.pcr_localize_status Status
+          span #{$i18n.console.status}
         th(colspan="4")
-          span.pcr_localize_currentTemp Current Temperature
+          span #{$i18n.console.currentTemp}
       tr
         td(rowspan="3")
           #runnningStatus
             div#sectionCycles
-              span.pcr_localize_cycle Cycle
+              span #{$i18n.console.cycle}
               |
               span#cycleNumber -
               | /
               span#totalCycles -
             div#sectionRepeats
-              span.pcr_localize_repeated Repeated
+              span #{$i18n.console.repeated}
               |
               span#repeatNumber -
               | /
               span#totalRepeats -
             div#stepName
         td(style="text-align:right;")
-          span.pcr_localize_lid Lid
+          span #{$i18n.console.lid}
           | :
         td
           span#lidTemperature
@@ -44,7 +44,7 @@
           #deviceStatusLid.deviceStatus
       tr
         td(style="text-align:right;")
-          span.pcr_localize_block Well
+          span #{$i18n.console.block}
           | :
         td
           span#blockTemperature
@@ -55,7 +55,7 @@
           #deviceStatusPeltier.deviceStatus
       tr
         td(style="text-align:right;")
-          span.pcr_localize_sample Sample
+          span #{$i18n.console.sample}
           | :
         td
           span#sampleTemperature
@@ -70,21 +70,18 @@
         input#graph_minus.graph_zoom(type="button")
 
     #runningPluggedIn
-      input#stop_link.stop.player_button.pcr_localize_stop(type="button" value="Stop")
+      input#stop_link.stop.player_button(type="button" value=$i18n.console.stop)
       span.v1_1
-        input#pause_link.pause.player_button.pcr_localize_pause(type="button" value="Pause")
-        input#resume_link.resume.player_button.pcr_localize_resume(type="button" value="Resume")
-        input#next_step_link.next_step.player_button.pcr_localize_next_step(type="button" value="Next Step")
-        input#next_cycle_link.next_cycle.player_button.pcr_localize_next_cycle(type="button" value="Next Cycle")
+        input#pause_link.pause.player_button(type="button" value=$i18n.console.pause)
+        input#resume_link.resume.player_button(type="button" value=$i18n.console.resume)
+        input#next_step_link.next_step.player_button(type="button" value=$i18n.console.next_step)
+        input#next_cycle_link.next_cycle.player_button(type="button" value=$i18n.console.next_cycle)
 
-    #runningUnplugged.unplugged_message.pcr_localize_unplugged
-      | Your NinjaPCR is unplugged from the computer.
-      br
-      |             Plug in your NinjaPCR to get updated information on your run.
+    #runningUnplugged.unplugged_message #{$i18n.console.unplugged}
   script(type="text/javascript" src="/console/js/lib/flotr2.min.js")
   script(type="text/javascript" src="/console/js/graph.js")
   #homeButton
-    input#Home.button.homeRunning.pcr_localize_home(type="button" value="Home")
+    input#Home.button.homeRunning(type="button" value=$i18n.console.home)
   div(style="clear:both;")
   div(style="margin-top:6px;")
-    a#download.small_button.pcr_localize_saveCsv(style="display:none;") Save CSV
+    a#download.small_button(style="display:none;") #{$i18n.console.saveCsv}

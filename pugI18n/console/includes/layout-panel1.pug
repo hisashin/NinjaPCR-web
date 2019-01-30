@@ -1,71 +1,59 @@
-#homeHeader.Header.pcr_localize_appTitle NinjaPCR WiFi
+#homeHeader.Header #{$i18n.console.appTitle}
 #device_conf
   h2#DeviceConnectionStatus.disconnected
-    span#DeviceConnectionStatusLabel.pcr_localize_connectionStatusDisconnected Device disconnected
-  a.pcr_localize_wifiSettingsButton(href="../assy/setup/index.html" target="_blank") Setup a new NinjaPCR device / Change network configuration
-  a#NewDevice.pcr_localize_wifiSettingsButton(href="#" style="display:none") Setup a new NinjaPCR device / Change network configuration
+    span#DeviceConnectionStatusLabel #{$i18n.console.connectionStatusDisconnected}
+  a(href="../assy/setup/index.html" target="_blank") #{$i18n.console.wifiSettingsButton}
+  a#NewDevice(href="#" style="display:none") #{$i18n.console.wifiSettingsButton}
   section#DeviceSettings(style="display:none")
     p
       ol
-        li.pcr_localize_wifiSettings0 Plug the power adapter into NinjaPCR and then into an outlet.
-        li.pcr_localize_wifiSettings1
-          | Press the "Mode" button and hold it, then press and release the "Reset" button while the "Mode" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.
-        li.pcr_localize_wifiSettings2
-          | Open the settings of your PC or smartphone and select "NinjaPC" shown in the AP list.
-        li
-          span.pcr_localize_wifiSettings3
-            | Open
-            a(href="http://192.168.1.1" target="_blank") the WiFi settings page
-            |  and setup. If the page doesn't show up, please retry after a few seconds.
+        li #{$i18n.console.wifiSettings0}
+        li #{$i18n.console.wifiSettings1}
+        li #{$i18n.console.wifiSettings2}
+        li #{$i18n.console.wifiSettings3}
           ol
             li
               strong "SSID"
               |  :
-              span.pcr_localize_wifiSettings3_0
-                | Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.
+              span #{$i18n.console.wifiSettings3_0}
             li
               strong "Password"
               |  :
-              span.pcr_localize_wifiSettings3_1 Input the password of the network.
+              span #{$i18n.console.wifiSettings3_1}
             li
               strong "Device name"
               |  :
-              span.pcr_localize_wifiSettings3_2
-                | Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name "ninjapcr" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.
+              span #{$i18n.console.wifiSettings3_2}
             li
-              span.pcr_localize_wifiSettings3_3
-                | After you set up the device, it will restart and connect to the specified access point.
-        li.pcr_localize_wifiSettings4
-          | Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.
-        li.pcr_localize_wifiSettings5
-          | Input the "Device name" that you have specified when you configured the device and press "connect" button.
-
+              span #{$i18n.console.wifiSettings3_3}
+        li #{$i18n.console.wifiSettings4}
+        li #{$i18n.console.wifiSettings5}
   section
     p#ipInputContainer
-      span.pcr_localize_deviceName Device name:
+      span #{$i18n.console.deviceName}
       input#HostText.connectionUI(type="text")
-      input#ConnectButton.pcr_localize_connect.connectionUI(type="button" value="Connect")
+      input#ConnectButton(type="button", value=$i18n.console.connect)
     p#firmwareVersion(style="display:none")
       span#firmwareVersionLabel Firmware Version
       span.labelVersionCurrent
 // Create a new blank experiment
 a#newExperimentButton(href="#")
   img(src="/console/images/new.png" style="vertical-align:middle;width:70px;height:70px")
-  span.home_title.pcr_localize_addNewExperiment Add a new experiment
+  span.home_title #{$i18n.console.addNewExperiment}
 br
 br
 br
 // Rerun an experiment
 a#listSubmitButton(href="#")
   img(src="/console/images/rerun.png" style="vertical-align:middle;width:70px;height:70px")
-  span.home_title.pcr_localize_reRunExperiment Re-run an experiment
+  span.home_title #{$i18n.console.reRunExperiment}
 #reRun(align="right")
 div
   a#About
-    span.pcr_localize_about About this app
+    span #{$i18n.console.about}
 div(style="display:none")
-  a#Settings.small_button.pcr_localize_contrast(style="display:none") Adjust the screen contrast
-a#ClearData.small_button.pcr_localize_clearData(style="display:none") Clear all data(For Developer)
+  a#Settings.small_button(style="display:none") #{$i18n.console.contrast}
+a#ClearData.small_button(style="display:none") #{$i18n.console.clearData}
 div
   textarea#debugText(cols="60" rows="10" style="display:none")
 // END PANEL 1

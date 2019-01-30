@@ -51,8 +51,6 @@ function init() {
 	// Get experiments from the local storage
 	listExperiments();
 
-	// i18n
-	localize();
 }
 
 function checkPlug () {
@@ -975,3 +973,20 @@ function createCSV () {
 }
 
 $(document).ready(init);
+
+const GEN_PUG = (obj)=>{
+	let a = [];
+	for (key in obj) {
+		let k = key;
+		let v = obj[key].message.replace(/\"/g,"\\\"");
+		a.push("\"" + key + "\":\"" + v + "\"," )
+	}
+	console.log(a.join("\n"))
+};
+
+(()=>{
+	console.log("Log JA");
+	GEN_PUG(window.MESSAGE_JA)
+	console.log("Log EN");
+	GEN_PUG(window.MESSAGE_EN)
+})()
