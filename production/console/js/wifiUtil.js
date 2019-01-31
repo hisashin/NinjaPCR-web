@@ -24,7 +24,7 @@ chromeUtil.alert = function (message) {
 	$('#alert_dialog_content')[0].innerHTML = message;
 	$('#alert_dialog').dialog('open');
 };
-var PCR_APP_VERSION = "1.0";
+var PCR_APP_VERSION = "1.1";
 chromeUtil.getAppVersion = function () {
 	return PCR_APP_VERSION;//chrome.runtime.getManifest().version;
 };
