@@ -89,39 +89,30 @@ html
         #contrast_slider
 
       // OTA related dialogs
-      #update_required_dialog(title="Device update")
-        | #{$i18n.console.updateRequired}
+      #update_required_dialog(title="Device update") #{$i18n.console.updateRequired}
         .versionDetail
-          span #{$i18n.console.versionCurrent}
-          |  :
+          span #{$i18n.console.versionCurrent} :
           span.labelVersionCurrent 1.0
         .versionDetail
-          span #{$i18n.console.versionLatest}
-          |  :
+          span #{$i18n.console.versionLatest} :
           span.labelVersionLatest 1.0
 
       #update_available_dialog(title="Device update")
         span #{$i18n.console.updateAvailable}
         .versionDetail
-          span #{$i18n.console.versionCurrent}
-          |  :
+          span #{$i18n.console.versionCurrent} :
           span.labelVersionCurrent 1.0
         .versionDetail
-          span #{$i18n.console.versionLatest}
-          |  :
+          span #{$i18n.console.versionLatest} :
           span.labelVersionLatest 1.0
 
-      #update_starting_dialog(title="Updating...")
-        | #{$i18n.console.updateStarting}
+      #update_starting_dialog(title="Updating...") #{$i18n.console.updateStarting}
 
-      #updating_dialog(title="Updating...")
-        | #{$i18n.console.updating}
+      #updating_dialog(title="Updating...") #{$i18n.console.updating}
 
-      #update_finished_dialog(title="Updated")
-        | #{$i18n.console.updateFinished}
+      #update_finished_dialog(title="Updated") #{$i18n.console.updateFinished}
         div.labelVersionAfterUpdate
-      #update_failed_dialog(title="Update failed")
-        | #{$i18n.console.updateFailed}
+      #update_failed_dialog(title="Update failed") #{$i18n.console.updateFailed}
         div.labelVersionAfterUpdate
       // Save dialog
       #save_dialog(title="Save")
@@ -163,8 +154,7 @@ html
         div#errorDesctiption
         div
           a#errorLink(href="http://ninjapcr.tori.st/index.html#")
-            span #{$i18n.console.hardwareErrorCode}
-            span :
+            span #{$i18n.console.hardwareErrorCode} :
             span#labelErrorCode
       // Android app installation guide
       #android_app_install_dialog(title="Please install app")
