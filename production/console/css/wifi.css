@@ -25,17 +25,17 @@
   #device_conf h3 {
     font-size: 1.2rem;
     line-height: 150%; }
+  #device_conf .disconnected {
+    border-left: 10px solid gray; }
+  #device_conf .connecting {
+    border-left: 10px solid orange; }
+  #device_conf .connected {
+    border-left: 10px solid #2f2; }
 
 #DeviceConnectionStatus {
   font-size: 1rem;
   margin: 1rem 0;
   text-indent: 0.2em; }
-  #DeviceConnectionStatus .disconnected {
-    border-left: 10px solid gray; }
-  #DeviceConnectionStatus .connecting {
-    border-left: 10px solid orange; }
-  #DeviceConnectionStatus .connected {
-    border-left: 10px solid #2f2; }
 
 .versionDetail {
   font-size: 0.8rem;
