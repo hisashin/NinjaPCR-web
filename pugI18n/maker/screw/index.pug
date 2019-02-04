@@ -1,5 +1,10 @@
 extends ../layout
 
+block append metas
+  - var dir = 'maker'
+  - var subdir = 'screw'
+  +meta(metas, $i18n[dir][subdir].items[0].title)
+
 block navbar
   +navbar('/maker/screw/')
 
@@ -7,9 +12,6 @@ block sidebar
   +sidebar('/maker/screw/')
 
 block main
-
-  - var dir = 'maker'
-  - var subdir = 'screw'
 
   +itemhead(dir, subdir)
 

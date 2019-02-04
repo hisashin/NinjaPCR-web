@@ -1,5 +1,8 @@
 extends layout
 
+block append metas
+  +meta(metas, $i18n.req.label)
+
 block main
 
     h4 #{$i18n.req.label}

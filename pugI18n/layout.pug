@@ -1,11 +1,29 @@
 include includes/mixins.pug
 
+- var metas = {}
+- metas.title = 'NinjaPCR'
+- metas.url = 'https://ninjapcr.tori.st'
+- metas.site_name = 'NinjaPCR'
+- metas.keywords = 'NinjaPCR,PCR,Thermal cycler,DNA'
+- metas.description = 'NinjaPCR is an opensource thermalcycler'
+- metas.image = 'https://ninjapcr.tori.st/images/render/520x577.png'
+- metas.author = 'Shingo Hisakwa,Mariko Hisakawa'
+block metas
 doctype html
 html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    title= title
+    title= metas.title
+    meta(name="keywords", content=metas.keywords)
+    meta(name="description", content=metas.description)
+    meta(name="author", content=metas.author)
+    meta(property="og:title", content=metas.title)
+    meta(property="og:type", content="website")
+    meta(property="og:url", content=metas.url)
+    meta(property="og:image", content=metas.image)
+    meta(property="og:site_name", content=metas.site_name)
+    meta(property="og:description", content=metas.description)
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/style.css')
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")

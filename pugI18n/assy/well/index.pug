@@ -1,9 +1,11 @@
 extends layout
 
-block main
-
+block append metas
   - var dir = 'assy'
   - var subdir = 'well'
+  +meta(metas, $i18n[dir][subdir].items[0].title)
+
+block main
 
   +itemhead(dir, subdir)
 

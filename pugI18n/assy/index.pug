@@ -1,9 +1,11 @@
 extends layout
 
-block main
-
+block append metas
   - var dir = 'assy'
   - var subdir = 'index'
+  +meta(metas, $i18n[dir][subdir].label)
+
+block main
 
   p
     h4 #{$i18n.assy.index.label}
