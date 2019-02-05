@@ -36,10 +36,9 @@ var DeviceResponse = {
 };
 DeviceResponse.registerCallback = function (commandId, func, onError, element, noTimeout) {
 	DeviceResponse.callbacks[commandId] = {func:func, element:element};
-	
+
 	if (!noTimeout) {
 		window.setTimeout(function() {
-			console.log("Request " + commandId + " timed out. Removing tag.");
 			if (!DeviceResponse.callbacks[commandId]) {
 				return;
 			}
@@ -62,7 +61,19 @@ DeviceResponse.handleCallback = function (commandId, obj) {
 	} else {
 		console.verbose("CommandID " + commandId + " not found.");
 	}
-} 
+}
+DeviceResponse.pause = function () {
+  "DeviceResponse.pause";
+};
+DeviceResponse.resume = function () {
+  "DeviceResponse.resume";
+};
+DeviceResponse.nxs = function () {
+  "DeviceResponse.nxs";
+};
+DeviceResponse.nxc = function () {
+  "DeviceResponse.nxc";
+};
 
 
 /* Handle connection check response */
@@ -88,7 +99,7 @@ DeviceResponse.onErrorOTAMode = function (obj, commandId) {
 	$('#is_ota_mode_dialog').dialog('open');
 }
 
-/** 
+/**
 	Core communicator
 	Basic WiFi communication with NinjaPCR device
 */
@@ -119,7 +130,7 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 	} catch (e) {
 		console.log(e);
 	}
-	
+
 };
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {
@@ -142,7 +153,7 @@ function loadJSONP (URL, onError) {
 	scriptTag.src = URL;
 	document.body.appendChild(scriptTag);
 	scriptTag.addEventListener("error", function(){
-		console.log("error");
+		console.log("error (ignored)");
 	});
 	scriptTag.addEventListener("load", function() {
 		if (scriptTag.parentNode) {
@@ -160,7 +171,7 @@ NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callb
 		}
 		URL += param;
 	}
-	console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
+	// console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
 	var tag = loadJSONP(URL, function () {
 		console.log("sendRequestToDevice error");
 		if (onError) {
@@ -204,9 +215,9 @@ NetworkCommunicator.prototype.doConnect = function () {
 				// An experiment is already running.
 				experimentLogger = new ExperimentLogger();
 				experimentLog = [];
-				
-  $("#runningHeader").html(obj.prof);
-  $("#ExperimentName").html(obj.prof);
+
+        $("#runningExperimentTitle").html(obj.prof);
+        $("#ExperimentName").html(obj.prof);
 				$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___', obj.prof));
 				$('#is_resuming_dialog').dialog({
 					autoOpen : false,
@@ -274,7 +285,7 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 			if (scope.statusTimeoutAlert) {
 				$('#disconnected_dialog').dialog('close');
 				scope.statusTimeoutAlert = false;
-				
+
 			}
 			callback(obj);
 		}, function () {
@@ -311,26 +322,31 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 			callback();
 		}, function () {
 		console.log("/command stop failed.");
-		
+
 	});
-	
+
+};
+NetworkCommunicator.prototype.sendControlCommand = function (command) {
+  var URL = getDeviceHost() + "/" + command;
+  console.log("sendControlCommand " + URL)
+  loadJSONP(URL)
 };
 $( window ).load(function() {
   setTimeout(function(){
-  
+
     try {
         window.localStorage.setItem("pcr_start", new Date());
         window.localStorage.removeItem("pcr_start");
     } catch(e) {
         alert("Local storage is not available.");
     }
-  
+
     if (window.navigator && navigator.userAgent && navigator.userAgent.indexOf("Android")>0) {
       if (window.Android) {
         console.log("Android App");
        } else {
         console.log("Android Browser");
-        
+
         $("#android_app_install_dialog").dialog({
           autoOpen : false,
           width : 400,
@@ -343,7 +359,7 @@ $( window ).load(function() {
             }
           }});
         $('#android_app_install_dialog').dialog('open');
-       
+
        }
     }
   },1000);

@@ -5,7 +5,81 @@
     },
     "console" : {
       "label" : "Console",
-      "shortlabel" : "Console"
+      "shortlabel" : "Console",
+      "appTitle":"NinjaPCR",
+      "addNewExperiment":"Add a new experiment",
+      "reRunExperiment":"Re-run an experiment",
+      "searching":"Searching for a device...",
+      "download":"Open Download Page",
+      "about":"About this App",
+      "contrast":"Adjust the screen contrast",
+      "clearData":"Clear all data(For Developer)",
+      "edit":"Edit",
+      "initialStep":"Initial Step",
+      "finalStep":"Final Step",
+      "moreOptions":"More Options",
+      "pleaseConnect":"Plug in NinjaPCR to Start",
+      "savePreset":"Save Preset",
+      "saveEdits":"Save Edits",
+      "cancel":"Cancel",
+      "start":"Start",
+      "stop":"Stop",
+      "pause":"Pause",
+      "resume":"Resume",
+      "next_step":"Next Step",
+      "next_cycle":"Next Cycle",
+      "home":"Home",
+      "timeRemaining":"Time remaining:",
+      "elapsedTime":"Elapsed time:",
+      "status":"Status",
+      "currentTemp":"Current Temperature",
+      "cycle":"Cycle",
+      "repeated":"Repeated",
+      "lid":"Lid",
+      "block":"Well",
+      "sample":"Sample",
+      "well":"Well",
+      "unplugged":"Your NinjaPCR is unplugged from the computer.<br />Plug in your NinjaPCR to get updated information on your run.",
+      "saveCsv":"Save CSV",
+      "stopPcr":"Are you sure you want to stop the experiment?",
+      "dragSlider":"Drag the slider to adjust the screen's contrast.",
+      "readySteadyGo":"Ready. Steady. Go!",
+      "saved":"Experiment saved!",
+      "confirmDelete":"Delete Experiment?",
+      "deleted":"Deleted!",
+      "error":"Error",
+      "done":"Done!",
+      "tookTime":"PCR took ___TIME___",
+      "close":"Close",
+      "downloadUrl":"https://github.com/hisashin/NinjaPCR/wiki",
+      "lessOptions":"Less options",
+      "updateRequired":"Device update is required. It can't run without updating. ",
+      "updateAvailable":"Device update is available!",
+      "versionCurrent":"Current Version",
+      "versionLatest":"Latest Version",
+      "updateStarting":"Starting device update. Please do not turn the power off.",
+      "updating":"Device is updating. Please do not turn the power off.",
+      "updateFinished":"Device is updated successfully!",
+      "updateFailed":"Device update was failed. Please try again.",
+      "stopRunning":"Device may have restarted.",
+      "disconnectedInExperiment":"Device is disconnected.",
+      "wifiSettingsButton":"Setup a new NinjaPCR device / Change network configuration",
+      "wifiSettings0":"Plug the power adapter into NinjaPCR and then into an outlet.",
+      "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.",
+      "wifiSettings2":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list.",
+      "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
+      "wifiSettings3_0":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
+      "wifiSettings3_1":"Input the password of the network.",
+      "wifiSettings3_2":"Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
+      "wifiSettings3_3":"After you set up the device, it will restart and connect to the specified access point.",
+      "wifiSettings4":"Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.",
+      "wifiSettings5":"Input the \"Device name\" that you have specified when you configured the device and press \"connect\" button.",
+      "hardwareError":"Hardware Error",
+      "hardwareErrorCode":"Error Code",
+
+      "androidGuide":"You need to install NinjaPCR app. Please install the app on Play Store.",
+      "deviceName":"Device name",
+      "connect":"Connect"
     },
     "general" : {
       "nextstep" : "Next step : "
@@ -52,20 +126,20 @@
               "title" : "High Current",
               "text1" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and any conductive materials."
             },
-            { 
+            {
               "title" : "Android needs App",
               "text1" : "Supported OS versions are 4.1 (Jelly Baen) and later. For Android User : Please install ",
               "text2" : "app",
               "text3" : " to use."
-            },           
+            },
             {
               "title" : "Opensource",
               "text1" : "This is totally opensourced hardware under GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from ",
               "text2" : "GitHub",
               "text3" : "."
             },
-            { 
-              "title" : "You have tools", 
+            {
+              "title" : "You have tools",
               "text1" : "2 phillips screwdrivers, straight driver, multi spanner and grease spatula are bundled inside plastic bag."
             },
             {
@@ -107,11 +181,11 @@
                   [ "7. Fan guard", "For bottom board", 1 ],
                   [ "8. Grease", "Use these ones first. If you need more, use spare grease in heatsink box.", 2 ]
                 ]
-              } 
+              }
             }
           ]
         },
-        "lid" : { 
+        "lid" : {
           "label" : "Lid Assembly",
           "items" : [
             {
@@ -162,17 +236,17 @@
             }
           ]
         },
-        "well" : { 
+        "well" : {
           "label" : "Well Assembly",
           "items" : [
             {
               "title" : "All Parts",
               "text1" : "Screw Bag 2, Well, Heatsink + Spare Grease and these woods are needed.",
               "table1" : {
-                "head" : [ "Name", "Detail", "Count" ], 
-                "body" : [ 
+                "head" : [ "Name", "Detail", "Count" ],
+                "body" : [
                   [ "1. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (red circle) will come to the top-right when face side is up.", 1 ],
-                  [ "2. Heatsink Holder", "2 notches are front (bottom in picture)", 1 ], 
+                  [ "2. Heatsink Holder", "2 notches are front (bottom in picture)", 1 ],
                   [ "3. Peltier Holder", "2 notches are front (bottom in picture)", 1 ]
                 ]
               },
@@ -236,7 +310,7 @@
             }
           ]
         },
-        "body" : { 
+        "body" : {
           "label" : "Body Assembly",
           "items" : [
             {
@@ -244,8 +318,8 @@
               "text1" : "Screw Bag 3, PCB, Fanguard, Rubber foot and these woods are needed.",
               "table1" : {
                 "head" : [ "Name", "Detail", "Count" ],
-                "body" : [ 
-                  [ "1. Bottom Board", "", 1 ], 
+                "body" : [
+                  [ "1. Bottom Board", "", 1 ],
                   [ "2. Back Board", "", 1 ],
                   [ "3. Left Board", "", 1 ],
                   [ "4. Right Board", "With hole for power supply.", 1 ],
@@ -296,7 +370,7 @@
             }
           ]
         },
-        "setup" : { 
+        "setup" : {
           "label" : "Initial Setup",
           "items" : [
             {
@@ -319,7 +393,7 @@
               "text8" : "Android",
               "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
             },
-            { 
+            {
               "title" : "Access the Wi-Fi settings page",
               "text1" : "Open ",
               "text2" : "Wi-Fi settings page (http://192.168.1.1)",
@@ -770,8 +844,8 @@
                     [ "img::/maker/images/item/nut/M3.png", "8. Nut", "M3", "", 18 ],
                     [ "img::/maker/images/item/nut/M3_nylon.png", "9. Nylon Nut", "M3", "", 2 ],
                     [ "img::/maker/images/item/nut/M4.png", "10. Nut", "M4", "", 4 ],
-                    [ "img::/maker/images/item/nut/M5.png", "11. Nut", "M5", "", 8 ], 
-                    [ "img::/maker/images/item/nut/M6.png", "12. Nut", "M6", "", 1 ], 
+                    [ "img::/maker/images/item/nut/M5.png", "11. Nut", "M5", "", 8 ],
+                    [ "img::/maker/images/item/nut/M6.png", "12. Nut", "M6", "", 1 ],
                     [ "img::/maker/images/item/spacer/M3_5mm.png", "13. Plastic Spacer", "M3 5mm", "", 4 ],
                     [ "img::/maker/images/item/spacer/M3_30mm.png", "14. Metal Spacer", "M3 30mm", "", 4 ],
                     [ "img::/maker/images/item/spacer/M3_90mm.png", "15. Plastic Spacer", "M3 30+60mm", "", 4 ]

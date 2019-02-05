@@ -15,13 +15,14 @@
 var FIRMWARE_VERSION_CURRENT = "0.0.0";
 var FIRMWARE_VERSION_LATEST = "1.0.5";
 var FIRMWARE_VERSION_REQUIRED = "1.0.5";
-var CURRENT_UI_VERSION = "1.0.1";
+var CURRENT_UI_VERSION = "1.1";
 var MIN_FINAL_HOLD_TEMP = 16;
-
 
 var COLOR_HEATING = "red";
 var COLOR_COOLING  = "blue";
 var COLOR_STOP = "black";
+
+var profileForm = new ProfileForm();
 
 /**************
  * Home screen*
@@ -41,7 +42,7 @@ function init() {
 	});
 	prepareButtons();
 	sp2 = new Spry.Widget.SlidingPanels('example2');
-	
+
 	// hide Settings button by default
 	($("#Settings").hide());
 
@@ -49,9 +50,7 @@ function init() {
 	scanPortsAndDisplay();
 	// Get experiments from the local storage
 	listExperiments();
-	
-	// i18n
-	localize();
+
 }
 
 function checkPlug () {
@@ -65,7 +64,7 @@ function scanPortsAndDisplay (delay) {
 		var portMessage = (deviceFound)?
 				(getLocalizedMessage('deviceFound').replace('___PORT___',port)):getLocalizedMessage('deviceNotFound');
 		$("#portLabel").html(portMessage);
-		
+
 		if (deviceFound) {
 			$("#runningUnplugged").hide();
 			$("#runningPluggedIn").show();
@@ -73,7 +72,7 @@ function scanPortsAndDisplay (delay) {
 				window.clearInterval(window.checkPlugInterval);
 			}
 			window.pluggedIn = true;
-			
+
 			if($("#Unplugged").is(':visible')){
 				// if the "Unplugged" button is visible, switch it to "Start"
 				$("#Unplugged").hide();
@@ -143,7 +142,6 @@ function listExperiments() {
 			for ( var i = 0; i < experiments.length; i++) {
 				var experiment = experiments[i];
 				if (experiment.id && experiment.name) {
-				  console.log("ID="+experiment.id)
 				  var selected = (experiment.id==lastExperiment)?" selected":"";
 					presetsHTML += '<option value="' + experiment.id +  '" ' + selected + '>' + experiment.name + "</option>";
 				}
@@ -168,7 +166,7 @@ function listExperiments() {
 function listSubmit() {
 	// what is selected in the drop down menu?
 	experimentID = $("#dropdown").val();
-	// save if possible
+	// Save if possible
 	try {
 	   localStorage.setItem("lastExperiment", experimentID);
 	} catch (e) {
@@ -185,13 +183,14 @@ function loadExperiment(experimentID) {
 	console.verbose("loadExperiment id=" + experimentID);
 	pcrStorage.loadExperiment(experimentID, function(experiment) {
 		// Now we've made all the modifications needed, display the Form page
+
 		sp2.showPanel(1);
 		// clear the experiment form
-		clearForm();
+		profileForm.clear();
 		// read in the file
 		experimentJSON = experiment;
 		// loads filen into the Form and moves onto Form page
-		experimentToHTML(experimentJSON);
+		profileForm.experimentToHTML(experimentJSON);
 		// update the buttons to make sure everything is ready to re-run an experiment
 		reRunButtons();
 	});
@@ -203,9 +202,9 @@ function loadExperiment(experimentID) {
  */
 function newExperiment() {
 	// clear the experiment form
-	clearForm();
+	profileForm.clear();
 	// set up the blank experiment
-	experimentToHTML(NEW_EXPERIMENT);
+	profileForm.experimentToHTML(NEW_EXPERIMENT);
 
 	// set interface to have the right buttons
 	newExperimentButtons();
@@ -295,7 +294,9 @@ function newExperimentButtons() {
 	$('#singleTemp').hide();
 	// make sure the "More options" button says so
 	$('#OptionsButton').html(getLocalizedMessage('moreOptions'));
-}/* disableEnterKey(e)
+}
+
+/* disableEnterKey(e)
  * The Enter/Return key doesn't do anything right now
  */
 function disableEnterKey(e) {
@@ -303,75 +304,30 @@ function disableEnterKey(e) {
 	if (window.event)
 		key = window.event.keyCode; //IE
 	else
-		key = e.which; //firefox      
+		key = e.which; //firefox
 
 	return (key != 13);
 }
 
-function programToDeviceCommand (pcrProgram) {
-	// now parse it out
-	// Start with the signature
-	var encodedProgram = "s=ACGTC";
-	// Command
-	encodedProgram += "&c=start";
-	// Command id 
-	encodedProgram += "&d=" + window.command_id;
-	// Lid Temp NO DECIMALS. Not handeled by UI currently, but just making sure it doesn't make it to OpenPCR
-	encodedProgram += "&l=" + Math.round(pcrProgram.lidtemp);
-	// Name
-	encodedProgram += "&n=" + pcrProgram.name
-	// get all the variables from the pre-cycle, cycle, and post-cycle steps
-	encodedProgram += "&p=";
-	window.lessthan20steps = 0;
-	for (i = 0; i < pcrProgram.steps.length; i++) {
-		if (pcrProgram.steps[i].type == "step")
-		// if it's a step, stepToString will return something like [300|95|Denaturing]
-		// then this loop needs to figure out when to add [1(  and )]
-		{
-			// if the previous element wasn't a step (i.e. null or cycle)
-			if (typeof pcrProgram.steps[i - 1] == 'undefined'
-					|| pcrProgram.steps[i - 1].type == "cycle") {
-				encodedProgram += "(1";
-			}
-
-			encodedProgram += stepToString(pcrProgram.steps[i]);
-
-			// if the next element isn't a step (i.e. null or cycle)
-			if (typeof pcrProgram.steps[i + 1] == 'undefined'
-					|| pcrProgram.steps[i + 1].type != "step") {
-				encodedProgram += ")";
-			}
-		}
-
-		else if (pcrProgram.steps[i].type == "cycle")
-		// if it's a cycle add the prefix for the number of steps, then each step
-		{
-			// for example, this should return (35[30,95,Denaturing][60,55,Annealing][60,72,Extension])
-			encodedProgram += stepToString(pcrProgram.steps[i]);
-			window.lessthan20steps = pcrProgram.steps[i].steps.length;
-		}
-	}
-	return encodedProgram;
-}
 
 var experimentLogger = null;
 function startPCR() {
 	experimentLogger = new ExperimentLogger();
 	experimentLog = [];
-	
+
 	// check if the form is validated
 	if (false == ($("#pcrForm").validate().form())) {
 		return 0;
 	} // if the form is not valid, show the errors
 	// command_id will be a random ID, stored to the window for later use
 	window.command_id = Math.floor(Math.random() * 65534);
-	// command id can't be 0 
+	// command id can't be 0
 	// where is OpenPCR
 	var devicePort = communicator.port;
 	console.verbose("devicePort=" + devicePort);
-	
-	pcrProgram = writeoutExperiment();
-	var encodedProgram = programToDeviceCommand (pcrProgram);	
+
+	pcrProgram = profileForm.writeoutExperiment();
+	var encodedProgram = programToDeviceCommand (pcrProgram);
 	// verify that there are no more than 16 top level steps
 	console.verbose(pcrProgram.steps.length + " : top level steps");
 	console.verbose(window.lessthan20steps + " : cycle level steps");
@@ -400,23 +356,27 @@ function startPCR() {
 
 	//debug
 	console.verbose(encodedProgram);
-	
+
 	// go to the Running dashboard
 	showRunningDashboard();
-	$('#is_starting_dialog').dialog('open');
-	
+	//$('#is_starting_dialog').dialog('open');
+
 	// write out the file to the OpenPCR device
 	communicator.sendStartCommand(encodedProgram);
 	experimentLogger.start();
 	running();
-	
+
 	// then close windows it after 1 second
+	/*
 	setTimeout(function() {
 		$('#is_starting_dialog').dialog('close');
 	}, 5000);
 	setTimeout(function() {
 		$('#ex2_p3').show();
 	}, 100);
+	*/
+
+	$('#ex2_p3').show();
 	// also, reset the command_id_counter
 	window.command_id_counter = 0;
 }
@@ -431,8 +391,13 @@ function showRunningDashboard () {
 	//hide the home button on the running page
 	$("#homeButton").hide();
 	$("#download").hide();
-	// show the "stop" button
-	$("#cancelButton").show();
+
+	// show the controller buttons
+	$("#stop_link").show();
+	$("#pause_link").show();
+	$("#resume_link").hide();
+	$("#next_step_link").show();
+	$("#next_cycle_link").show();
 }
 
 /*****************
@@ -519,9 +484,6 @@ function onStopPCR () {
 	window.clearInterval(window.updateRunningPage);
 	createCSV();
 	$("#homeButton").show();
-	// go back to the Form page
-	//sp2.showPanel(1);
-
 }
 
 /* StopPCR()
@@ -531,10 +493,8 @@ function onStopPCR () {
  */
 function stopPCR() {
 	// Clear the values in the Running page
-	$("#runningHeader").html("");
-	$("#progressbar").progressbar({
-		value : "0"
-	});
+	$("#runningExperimentTitle").html("");
+	$("#timeProgress").val(0);
 	$("#minutesRemaining").html("");
 
 	// Create the string to write out
@@ -552,6 +512,22 @@ function stopPCR() {
 	});
 	return false;
 }
+/* Send "pause" command to the device */
+function pausePCR () {
+	communicator.sendControlCommand("pause");
+}
+/* Send "resume" command to the device */
+function resumePCR () {
+	communicator.sendControlCommand("resume");
+}
+/* Send "nxs" command to the device */
+function nextStepPCR () {
+	communicator.sendControlCommand("nxs");
+}
+/* Send "nxc" command to the device */
+function nextCyclePCR () {
+	communicator.sendControlCommand("nxc");
+}
 
 
 function _deleteStep () {
@@ -560,7 +536,7 @@ function _deleteStep () {
 		$(this).remove();
 		//// if the length is now 0, hide the whole div
 	});
-	
+
 }
 
 function activateDeleteButton() {
@@ -572,21 +548,22 @@ function activateDeleteButton() {
 		});
 
 	});
-} 
+}
 /**************
  * Buttons     *
  ***************/
 function prepareButtons() {
 
+	profileForm.initButtons ();
 	$('#newExperimentButton').on('click', newExperiment);
 	$('#listSubmitButton').on('click', listSubmit);
-	$('#initialStep').on('click', addInitialStep);
-	$('#finalStep').on('click', addFinalStep);
+
+	// TODO move to ProfileForm class
 	$('#saveForm').on('click', function() {
 		$('#Start').click();
 	});
 	$('#appVersion').html(chromeUtil.getAppVersion());
-	
+
 	/*  "About" button on the OpenPCR Home page
 	 * Displays about info
 	 */
@@ -606,7 +583,7 @@ function prepareButtons() {
 		});
 		$('#about_dialog').dialog('open');
 	});
-	
+
 	$('#debugLink').on('click', Log.toggleDebugArea);
 
 	/*  "Contrast" button on the OpenPCR Home page
@@ -622,7 +599,7 @@ function prepareButtons() {
 	$('#Home').on('click', function() {
 		listExperiments();
 		sp2.showPanel(0);
-		setTimeout(clearForm, 500);
+		setTimeout(function(){ profileForm.clear(); }, 500);
 	});
 
 	/*  "Home" button on the OpenPCR Running page */
@@ -631,7 +608,7 @@ function prepareButtons() {
 		if (graph) graph.clear();
 		listExperiments();
 		sp2.showPanel(0);
-		setTimeout(clearForm, 500);
+		setTimeout(function(){ profileForm.clear(); }, 500);
 	});
 
 	/*  "Start" button on the OpenPCR Form page
@@ -641,81 +618,6 @@ function prepareButtons() {
 		console.log("#Start.click");
 		startPCR();
 	});
-
-	/*  "Save" button on the OpenPCR Form
-	 * Ask for a "name" and save the protocol to name.pcr in the user's Experiments folder
-	 */
-	$('#Save').on('click', function() {
-		// Save Dialog
-		// check if the form is validated
-		if (false == ($("#pcrForm").validate().form())) {
-			return 0; // if not, don't do anything
-		}
-		// otherwise, the form is valid. Open the "Save" dialog box
-		$('#save_dialog').dialog('open');
-	});
-
-	/*  "Save" on the OpenPCR Form in EDIT MODE
-	 * This will overwrite the old experiment with the edited settings
-	 */
-	$('#SaveEdits').on('click', function() {
-		// check if the form is validated
-		if (false == ($("#pcrForm").validate().form())) {
-			return 0; // if not, don't do anything
-		}
-		// Grab the Experiment name, could also do this by reading from the experiments list on the homepage
-		name = document.getElementById("ExperimentName").innerHTML;
-		// Save the file, overwriting the existing file
-		save(name, false, function(){loadExperiment(experimentID);});
-	});
-
-	/*  "Cancel" button on the OpenPCR Form in EDIT MODE
-	 * This will cancel any changes made to the form and re-load the experiment as it was last saved
-	 */
-	$('#Cancel').on('click', function() {
-		// what is selected in the drop down menu on the front page?
-		experimentID = $("#dropdown").val();
-    try {
-       localStorage.setItem("lastExperiment", experimentId);
-    } catch (e) {
-    }
-		// clear the form
-		clearForm();
-		// load the selected experiment
-		loadExperiment(experimentID);
-	});
-
-	/*  "Edit" button on the OpenPCR Form with a saved experiment
-	 */
-	$('#editButton').on('click', function() {
-		editButton();
-	});
-
-	/*  "Delete" button on the OpenPCR Form in EDIT MODE
-	 */
-	$('#deleteButton').on('click', function() {
-		$('#delete_dialog').dialog('open');
-	});
-
-	/*  "+ Add Step" button on the OpenPCR Form
-	 * Add a new blank step to the end of the presets
-	 */
-	$('#addStepButton').on('click', function() {
-		var location = $(this).parent().attr("id");
-		addStep(location);
-	});
-	/*  "- Delete Step" on the OpenPCR Form
-	 * Delete the step
-	 */
-	$('.deleteStepButton').on('click', function() {
-		console.verbose("deleteStepButton");
-		$(this).parent().slideUp('slow', function() {
-			// after animation is complete, remove parent step
-			$(this).remove();
-			//// if the length is now 0, hide the whole div
-		});
-
-	});
 	/**
 	 * Clear all data
 	 */
@@ -723,15 +625,15 @@ function prepareButtons() {
 		pcrStorage.clearAllData();
 	});
 	/*
-	 * Graph Scale Button 
+	 * Graph Scale Button
 	 */
-	$('#graph_plus').on('click', 
+	$('#graph_plus').on('click',
 			function(){graph.changeScale(-1);}
 	);
-	$('#graph_minus').on('click', 
+	$('#graph_minus').on('click',
 			function(){graph.changeScale(1);}
 	);
-	
+
 	/*  "More options" button on the OpenPCR Form
 	 * Display a bunch of options
 	 */
@@ -762,46 +664,13 @@ function prepareButtons() {
 						$('#OptionsButton')[0].value = buttonText;
 					});
 
-	// Presets page
-	/* editButton()
-	 * Function that is called when the "Edit" button is pressed on a "Saved Preset" page. Makes the "Save preset" and "Cancel" buttons
-	 * show up, "Add" and "Subtract" steps buttons, and makes all fields editable
-	 * Returns: nothing
-	 */
-	function editButton() {
-
-		// Show the Delete button
-		$('#deleteButton').show();
-		// Start with the Edit button hidden
-		$("#editButton").show();
-		// show the edit buttons
-		$(".edit").show();
-		// show the lid temp fields
-		$("#lidContainer").show();
-		// all fields editable
-		$("input").removeAttr("readonly");
-		// and 'More options' hidden
-		$('#OptionsButton').hide();
-		// hide the Save button
-		$('#Save').hide();
-		// show the Cancel button
-		$('#Cancel').show();
-		// show the SaveEdits button
-		$('#SaveEdits').show();
-		// Hide the Start/Unplugged button
-		startOrUnplugged("none");
-		// show the Single Temp mode button
-		$('#singleTemp').show();
-		// show the Add Step buttons
-		$("#preContainer").show();
-		$("#postContainer").show();
-	}
 	$("#firmwareVersion").dblclick(function(){
 			$("#update_available_dialog").dialog("open");
 			message = getLocalizedMessage('firmwareUpdateAvailable')
 				.replace("___LATEST_VERSION___", FIRMWARE_VERSION_LATEST)
 				.replace("___INSTALLED_VERSION___", version);
 		});
+	$('a[href="#"]').attr("href", "javascript:void(0);");
 }
 /* deleteCurrentExperiment()
  * Deletes the currently loaded experiment (whatever was last selected in the list)
@@ -820,13 +689,13 @@ function deleteCurrentExperiment() {
 		}, 750);
 	});
 
-	// 
+	//
 }
 
 // JQUERY UI stuffs
 
 $(function() {
-	// About Dialog			
+	// About Dialog
 	/*
 		$('#about_dialog').dialog({
 			autoOpen: false,
@@ -837,12 +706,12 @@ $(function() {
 			buttons:
 				{
 				"OK": function() {
-					$(this).dialog("close"); 
+					$(this).dialog("close");
 					}
 				}
 		});
 	 */
-	// Settings Dialog			
+	// Settings Dialog
 	$('#settings_dialog').dialog( //TODO Control LCD
 					{
 						autoOpen : false,
@@ -918,7 +787,7 @@ $(function() {
 		});
 	});
 
-	// Save Dialog			
+	// Save Dialog
 	$('#save_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -935,7 +804,7 @@ $(function() {
 				// grab the name from the form
 				name = $("#name").val();
 				// save the current experiment as the given name
-				save(name, true);
+				profileForm.save(name, true);
 				// update the experiment name in the UI
 				$("#ExperimentName").html(name);
 				// close the dialog window
@@ -954,7 +823,7 @@ $(function() {
 
 	});
 
-	// Delete Dialog			
+	// Delete Dialog
 	$('#delete_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -989,7 +858,7 @@ $(function() {
 
 	});
 
-	// Stop Dialog			
+	// Stop Dialog
 	$('#stop_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -1006,12 +875,17 @@ $(function() {
 			}
 		}
 	});
-	
-	// Dialog Link
+
+	// Controller buttons
 	$('#stop_link').click(function() {
 		$('#stop_dialog').dialog('open');
 		return false;
 	});
+	$('#pause_link').click(pausePCR);
+	$('#resume_link').click(resumePCR);
+	$('#next_step_link').click(nextStepPCR);
+	$('#next_cycle_link').click(nextCyclePCR);
+
 
 	// Starting dialog
 	$('#is_starting_dialog').dialog({
@@ -1034,7 +908,7 @@ $(function() {
 			}
 		}
 	});
-	
+
   // Error dialog
   $('#error_dialog').dialog({
     autoOpen : false,
@@ -1049,11 +923,11 @@ $(function() {
     }
 
   });
-	
+
 
 	//hover states on the static widgetson the static widgets
 		$('#dialog_link, ul#icons li').hover(
-			function() { $(this).addClass('ui-state-hover'); }, 
+			function() { $(this).addClass('ui-state-hover'); },
 			function() { $(this).removeClass('ui-state-hover'); }
 		);
 
@@ -1070,7 +944,7 @@ $('#save_dialog').on('keyup', function(e) {
 function createCSV () {
 	var TAB = encodeURIComponent("\t");
 	var RET = encodeURIComponent("\n");
-	content = 
+	content =
 	   "Command ID" + TAB //d
 	 + "Status" + TAB //s
 	 + "Lid Temp" + TAB //l
@@ -1084,7 +958,7 @@ function createCSV () {
 	for (var i=0; i<experimentLog.length; i++) {
 		var line = experimentLog[i];
 		for (var j=0; j<params.length; j++) {
-			if (j!=0) 
+			if (j!=0)
 				content += TAB;
 			if (line[params[j]]!=null)
 				content += line[params[j]];
@@ -1098,4 +972,3 @@ function createCSV () {
 }
 
 $(document).ready(init);
-

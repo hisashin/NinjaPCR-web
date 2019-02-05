@@ -1,0 +1,59 @@
+#device_conf {
+	font-size:75%;
+	padding:1.5rem;
+	background-color:#ffe;
+	margin:0.5rem;
+	a {
+		color: #00f;
+	}
+	ul {
+		list-style-type: disc;
+		margin-left:2em;
+	}
+	li {
+		dl {
+			padding:0.2em  1.0em;
+			dt {
+				font-weight: bold;
+			}
+			dd {
+				text-indent: 0.5em;
+			}
+		}
+	}
+	ol {
+		list-style-type: decimal;
+		margin:0.2em 1.0em;
+		ol {
+			list-style-type: lower-roman;
+		}
+		li {
+			padding:0.4em  0.4em;
+			line-height: 130%;
+
+		}
+	}
+	h3 {
+		font-size:1.2rem;
+		line-height:150%;
+	}
+	.disconnected {
+		border-left: 10px solid gray;
+	}
+	.connecting {
+		border-left: 10px solid orange;
+	}
+	.connected {
+		border-left: 10px solid #2f2;
+	}
+}
+#DeviceConnectionStatus {
+	font-size:1rem;
+	margin: 1rem 0;
+	text-indent:0.2em;
+}
+
+.versionDetail {
+	font-size:0.8rem;
+	margin-top:0.5rem;
+}

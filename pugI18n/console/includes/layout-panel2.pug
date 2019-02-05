@@ -4,32 +4,30 @@ form#pcrForm.cmxform(method="get" action="")
       a#deleteButton(href="#")
         img(src="/console/images/delete.png" height="30")
       span#ExperimentName
-      input#editButton.small_button.edit.pcr_localize_edit(type="button" value="Edit")
+      input#editButton.small_button.edit(type="button" value=$i18n.console.edit)
+      input#debugProfile(type="button" value="Debug Profile" style="display:none")
     #lidContainer(style="display:none;")
       #lidTemp
     #preContainer(style="display:none;")
       #preSteps
-      a#initialStep.edit(href="#")
-        img(src="/console/images/plus.png" height="30")
-        span.pcr_localize_initialStep Initial Step
-    #cycleContainer(style="display:none;")
-      #cycleSteps
-      a#addStepButton.edit(style="display:none;")
+      a#initialStep.edit.plusButton(href="#")
+        span #{$i18n.console.initialStep}
+    #cyclesContainer(style="display:none;")
+      #cycles
+      a#addCycleButton.edit.plusButton(style="display:none;")
         span
-          img(src="/console/images/plus.png" height="30")
-          span.pcr_localize_step Step
+          span #{$i18n.console.cycle}
     #postContainer(style="display:none;")
       #postSteps
-      a#finalStep.edit(href="#")
-        img(src="/console/images/plus.png" height="30")
-        span.pcr_localize_finalStep Final Step
+      a#finalStep.plusButton.edit(href="#")
+        span #{$i18n.console.finalStep}
     #holdContainer(style="display:none;")
       #holdSteps
-  input#OptionsButton.small_button.moreoptions.pcr_localize_moreOptions(type="button" value="More Options")
-  input#Start.start.button.pcr_localize_start(type="button" value="Start")
-  input#Unplugged.unplugged.button.pcr_localize_pleaseConnect(type="button" value="Plug in your Toy PCR to Start")
-  input#Save.save.button.pcr_localize_savePreset(type="button" value="Save Preset")
-  input#SaveEdits.saveEdits.button.pcr_localize_saveEdits(type="button" value="Save Edits")
-  input#Cancel.cancel.button.pcr_localize_cancel(type="button" value="Cancel")
+  input#OptionsButton.small_button.moreoptions(type="button" value=$i18n.console.moreOptions)
+  input#Start.start.button(type="button" value= $i18n.console.start)
+  input#Unplugged.unplugged.button(type="button" value=$i18n.console.pleaseConnect)
+  input#Save.save.button(type="button" value=$i18n.console.savePreset)
+  input#SaveEdits.saveEdits.button(type="button" value=$i18n.console.saveEdits)
+  input#Cancel.cancel.button(type="button" value=$i18n.console.cancel)
   .newline
-    input#Home.small_button.home_button.pcr_localize_home(type="button" value="Home")
+    input#Home.small_button.home_button(type="button" value=$i18n.console.home)
