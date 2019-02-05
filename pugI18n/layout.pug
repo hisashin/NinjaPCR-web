@@ -1,13 +1,13 @@
 include includes/mixins.pug
 
 - var metas = {}
-- metas.title = 'NinjaPCR'
-- metas.url = 'https://ninjapcr.tori.st'
-- metas.site_name = 'NinjaPCR'
-- metas.keywords = 'NinjaPCR,PCR,Thermal cycler,DNA'
-- metas.description = 'NinjaPCR is an opensource thermalcycler'
-- metas.image = 'https://ninjapcr.tori.st/images/render/520x577.png'
-- metas.author = 'Shingo Hisakwa,Mariko Hisakawa'
+- metas.title = $i18n.metas.title
+- metas.url = $i18n.metas.url
+- metas.site_name = $i18n.metas.siteName
+- metas.keywords = $i18n.metas.keywords
+- metas.description = $i18n.metas.description
+- metas.image = $i18n.metas.image
+- metas.author = $i18n.metas.author
 block metas
 doctype html
 html

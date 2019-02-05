@@ -3,7 +3,7 @@ extends layout
 block append metas
   - var dir = 'assy'
   - var subdir = 'unbox'
-  +meta(metas, $i18n[dir][subdir].items[0].title)
+  +meta(metas, $i18n[dir].label, $i18n[dir][subdir].items[0].title)
 
 block main
 

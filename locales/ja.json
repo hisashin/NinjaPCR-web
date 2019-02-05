@@ -1,4 +1,13 @@
 {
+	"metas" : {
+		"siteName" : "NinjaPCR",
+		"url" : "https://ninjapcr.tori.st",
+		"title" : "NinjaPCR",
+		"keywords" : "NinjaPCR,PCR,サーマルサイクラー,DNA増幅器",
+		"description" : "NinjaPCRはオープンソースのサーマルサイクラーです",
+		"image" : "https://ninjapcr.tori.st/images/render/520x577.png",
+		"author" : "株式会社鳥人間"
+	},
     "contact" : {
         "label" : "コンタクトフォーム",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"

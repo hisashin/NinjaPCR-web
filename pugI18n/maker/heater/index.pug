@@ -3,7 +3,7 @@ extends ../layout
 block append metas
   - var dir = 'maker'
   - var subdir = 'heater'
-  +meta(metas, $i18n[dir][subdir].items[0].title)
+  +meta(metas, $i18n[dir].label, $i18n[dir][subdir].items[0].title)
 
 block navbar
   +navbar('/maker/heater/')
