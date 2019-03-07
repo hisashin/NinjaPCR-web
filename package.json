@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
+    "gulp-exec": "^3.0.2",
     "gulp-i18n-pug": "^1.1.0",
     "gulp-install": "^1.1.0",
     "gulp-sass": "^4.0.2",
