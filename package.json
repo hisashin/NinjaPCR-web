@@ -1,10 +1,13 @@
 {
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.0",
     "gulp-pug": "^3.0.0",
     "typescript": "^3.0.1"
   },
   "dependencies": {
+    "@babel/core": "^7.3.4",
     "express": "^4.16.3",
     "gulp-exec": "^3.0.2",
     "gulp-i18n-pug": "^1.1.0",

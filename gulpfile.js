@@ -1,11 +1,12 @@
 var gulp = require('gulp');
 
 // Pug
-var pug = require('gulp-pug');
-var pugI18n = require('gulp-i18n-pug');
+const pug = require('gulp-pug');
+const pugI18n = require('gulp-i18n-pug');
 
 // TS
-var typescript = require('gulp-typescript');
+const typescript = require('gulp-typescript');
+//const babel = require('gulp-babel');
 // Sass
 const sass = require('gulp-sass');
 const exec = require('gulp-exec');
@@ -45,6 +46,7 @@ gulp.task('ts', () => {
          .pipe(gulp.dest('./production/'));
 });
 
+
 gulp.task('shell', () => {
   return gulp.src('.')
   .pipe(exec("./build_local_console.sh",(err, stdout, stderr) => {
@@ -56,3 +58,10 @@ gulp.task('shell', () => {
     }
   }));
 });
+/*
+gulp.task('babel', function() {
+  gulp.src('./production/console/js-ES6/*.js')
+    .pipe(babel())
+    .pipe(gulp.dest('./production/console/js'))
+});
+*/
