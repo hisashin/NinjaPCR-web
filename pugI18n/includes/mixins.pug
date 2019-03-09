@@ -1,3 +1,8 @@
+mixin meta(metas, dir, title)
+  - metas.title = (title ? title + ' | ': '') + (dir ? dir + ' | ' : '') + 'NinjaPCR'
+  - metas.keywords = (title ? title + ',': '') + (dir ? dir + ',': '') + metas.keywords
+  - metas.description = (title ? title + ',': '') + (dir ? dir + ',': '') + metas.description
+
 mixin youtube(id, start, target)
   - let href = 'https://youtu.be/' + id + (start > 0 ? "?t="+start+"s" : "")
   - let t = target ? target : "_blank"

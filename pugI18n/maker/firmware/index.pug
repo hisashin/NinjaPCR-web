@@ -1,5 +1,10 @@
 extends ../layout
 
+block append metas
+  - var dir = 'maker'
+  - var subdir = 'firmware'
+  +meta(metas, $i18n[dir].label, $i18n[dir][subdir].items[0].title)
+
 block navbar
   +navbar('/maker/firmware/')
 
@@ -7,9 +12,6 @@ block sidebar
   +sidebar('/maker/firmware/')
 
 block main
-
-  - var dir = 'maker'
-  - var subdir = 'firmware'
 
   +itemhead(dir, subdir)
 

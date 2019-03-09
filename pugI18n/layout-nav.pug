@@ -10,6 +10,7 @@ mixin navbar(dir)
       - var isReq = /\/req\//.test(dir)
       - var isAbout = /\/about\//.test(dir)
       - var isStore = /\/store\//.test(dir)
+      - var noCurrent = /\/nocurrent\//.test(dir)
       a.navbar-brand(href="/") NinjaPCR
       button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
         span.navbar-toggler-icon
@@ -17,27 +18,27 @@ mixin navbar(dir)
         ul.navbar-nav
           li.nav-item(class= isConsole ? "active" : "")
             a.nav-link(href="/"+$localeName+"/console/index.html") #{$i18n.console.shortlabel}
-            if isConsole
+            if isConsole && !noCurrent
               span.sr-only (current)
           li.nav-item(class= isAssy ? "active" : "")
             a.nav-link(href="/"+$localeName+"/assy/index.html") #{$i18n.assy.shortlabel}
-            if isAssy
+            if isAssy && !noCurrent
               span.sr-only (current)
           li.nav-item(class= isOp ? "active" : "")
             a.nav-link(href="/"+$localeName+"/op/index.html") #{$i18n.op.index.shortlabel}
-            if isOp
+            if isOp && !noCurrent
               span.sr-only (current)
           li.nav-item(class= isMaker ? "active" : "")
             a.nav-link(href="/"+$localeName+"/maker/index.html") #{$i18n.maker.shortlabel}
-            if isMaker
+            if isMaker && !noCurrent
               span.sr-only (current)
           li.nav-item(class= isReq ? "active" : "")
             a.nav-link(href="/"+$localeName+"/req/index.html") #{$i18n.req.shortlabel}
-            if isReq
+            if isReq && !noCurrent
               span.sr-only (current)
           li.nav-item(class= isAbout ? "active" : "")
             a.nav-link(href="/"+$localeName+"/about/index.html") #{$i18n.about.shortlabel}
-            if isAbout
+            if isAbout && !noCurrent
               span.sr-only (current)
 
         ul.navbar-nav.ml-auto.align-items-md-center.align-items-lg-center.align-items-xl-center     
