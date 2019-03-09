@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A09553122232207300874715 /* ninjapcr_body.png in Resources */ = {isa = PBXBuildFile; fileRef = A09553112232207300874715 /* ninjapcr_body.png */; };
+		A0E97F722230E08500C10075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E97F712230E08500C10075 /* AppDelegate.swift */; };
+		A0E97F742230E08500C10075 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E97F732230E08500C10075 /* ViewController.swift */; };
+		A0E97F772230E08500C10075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E97F752230E08500C10075 /* Main.storyboard */; };
+		A0E97F7A2230E08500C10075 /* NinjaPCR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0E97F782230E08500C10075 /* NinjaPCR.xcdatamodeld */; };
+		A0E97F7C2230E08700C10075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E97F7B2230E08700C10075 /* Assets.xcassets */; };
+		A0E97F7F2230E08700C10075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E97F7D2230E08700C10075 /* LaunchScreen.storyboard */; };
+		A0E97F8A2230E08700C10075 /* NinjaPCRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E97F892230E08700C10075 /* NinjaPCRTests.swift */; };
+		A0E97F952230E08700C10075 /* NinjaPCRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E97F942230E08700C10075 /* NinjaPCRUITests.swift */; };
+		A0E9814C2230F23A00C10075 /* NinjaPCR_console in Resources */ = {isa = PBXBuildFile; fileRef = A0E9814B2230F23A00C10075 /* NinjaPCR_console */; };
+		A0E9814F2231002100C10075 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A0E9814E2231002100C10075 /* index.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0E97F862230E08700C10075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E97F662230E08500C10075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0E97F6D2230E08500C10075;
+			remoteInfo = NinjaPCR;
+		};
+		A0E97F912230E08700C10075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E97F662230E08500C10075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0E97F6D2230E08500C10075;
+			remoteInfo = NinjaPCR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A09553112232207300874715 /* ninjapcr_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninjapcr_body.png; sourceTree = "<group>"; };
+		A0E97F6E2230E08500C10075 /* NinjaPCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaPCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E97F712230E08500C10075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0E97F732230E08500C10075 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0E97F762230E08500C10075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0E97F792230E08500C10075 /* NinjaPCR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NinjaPCR.xcdatamodel; sourceTree = "<group>"; };
+		A0E97F7B2230E08700C10075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0E97F7E2230E08700C10075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0E97F802230E08700C10075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E97F852230E08700C10075 /* NinjaPCRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaPCRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E97F892230E08700C10075 /* NinjaPCRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaPCRTests.swift; sourceTree = "<group>"; };
+		A0E97F8B2230E08700C10075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E97F902230E08700C10075 /* NinjaPCRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaPCRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E97F942230E08700C10075 /* NinjaPCRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaPCRUITests.swift; sourceTree = "<group>"; };
+		A0E97F962230E08700C10075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E981472230F21900C10075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E9814B2230F23A00C10075 /* NinjaPCR_console */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NinjaPCR_console; sourceTree = "<group>"; };
+		A0E9814E2231002100C10075 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0E97F6B2230E08500C10075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E97F822230E08700C10075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E97F8D2230E08700C10075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0E97F652230E08500C10075 = {
+			isa = PBXGroup;
+			children = (
+				A0E97F702230E08500C10075 /* NinjaPCR */,
+				A0E97F882230E08700C10075 /* NinjaPCRTests */,
+				A0E97F932230E08700C10075 /* NinjaPCRUITests */,
+				A0E97F6F2230E08500C10075 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0E97F6F2230E08500C10075 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0E97F6E2230E08500C10075 /* NinjaPCR.app */,
+				A0E97F852230E08700C10075 /* NinjaPCRTests.xctest */,
+				A0E97F902230E08700C10075 /* NinjaPCRUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0E97F702230E08500C10075 /* NinjaPCR */ = {
+			isa = PBXGroup;
+			children = (
+				A0E97FA22230E5A800C10075 /* Resources */,
+				A0E97F712230E08500C10075 /* AppDelegate.swift */,
+				A0E97F732230E08500C10075 /* ViewController.swift */,
+				A0E97F752230E08500C10075 /* Main.storyboard */,
+				A0E97F7B2230E08700C10075 /* Assets.xcassets */,
+				A0E97F7D2230E08700C10075 /* LaunchScreen.storyboard */,
+				A0E97F802230E08700C10075 /* Info.plist */,
+				A0E97F782230E08500C10075 /* NinjaPCR.xcdatamodeld */,
+			);
+			path = NinjaPCR;
+			sourceTree = "<group>";
+		};
+		A0E97F882230E08700C10075 /* NinjaPCRTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0E97F892230E08700C10075 /* NinjaPCRTests.swift */,
+				A0E97F8B2230E08700C10075 /* Info.plist */,
+			);
+			path = NinjaPCRTests;
+			sourceTree = "<group>";
+		};
+		A0E97F932230E08700C10075 /* NinjaPCRUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A0E97F942230E08700C10075 /* NinjaPCRUITests.swift */,
+				A0E97F962230E08700C10075 /* Info.plist */,
+			);
+			path = NinjaPCRUITests;
+			sourceTree = "<group>";
+		};
+		A0E97FA22230E5A800C10075 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A09553112232207300874715 /* ninjapcr_body.png */,
+				A0E981462230F21900C10075 /* data.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0E981462230F21900C10075 /* data.bundle */ = {
+			isa = PBXGroup;
+			children = (
+				A0E9814E2231002100C10075 /* index.html */,
+				A0E9814B2230F23A00C10075 /* NinjaPCR_console */,
+				A0E981472230F21900C10075 /* Info.plist */,
+			);
+			path = data.bundle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0E97F6D2230E08500C10075 /* NinjaPCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E97F992230E08700C10075 /* Build configuration list for PBXNativeTarget "NinjaPCR" */;
+			buildPhases = (
+				A0E97F6A2230E08500C10075 /* Sources */,
+				A0E97F6B2230E08500C10075 /* Frameworks */,
+				A0E97F6C2230E08500C10075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinjaPCR;
+			productName = NinjaPCR;
+			productReference = A0E97F6E2230E08500C10075 /* NinjaPCR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0E97F842230E08700C10075 /* NinjaPCRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E97F9C2230E08700C10075 /* Build configuration list for PBXNativeTarget "NinjaPCRTests" */;
+			buildPhases = (
+				A0E97F812230E08700C10075 /* Sources */,
+				A0E97F822230E08700C10075 /* Frameworks */,
+				A0E97F832230E08700C10075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0E97F872230E08700C10075 /* PBXTargetDependency */,
+			);
+			name = NinjaPCRTests;
+			productName = NinjaPCRTests;
+			productReference = A0E97F852230E08700C10075 /* NinjaPCRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0E97F8F2230E08700C10075 /* NinjaPCRUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E97F9F2230E08700C10075 /* Build configuration list for PBXNativeTarget "NinjaPCRUITests" */;
+			buildPhases = (
+				A0E97F8C2230E08700C10075 /* Sources */,
+				A0E97F8D2230E08700C10075 /* Frameworks */,
+				A0E97F8E2230E08700C10075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0E97F922230E08700C10075 /* PBXTargetDependency */,
+			);
+			name = NinjaPCRUITests;
+			productName = NinjaPCRUITests;
+			productReference = A0E97F902230E08700C10075 /* NinjaPCRUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0E97F662230E08500C10075 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Toriningen Inc.";
+				TargetAttributes = {
+					A0E97F6D2230E08500C10075 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A0E97F842230E08700C10075 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A0E97F6D2230E08500C10075;
+					};
+					A0E97F8F2230E08700C10075 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A0E97F6D2230E08500C10075;
+					};
+				};
+			};
+			buildConfigurationList = A0E97F692230E08500C10075 /* Build configuration list for PBXProject "NinjaPCR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0E97F652230E08500C10075;
+			productRefGroup = A0E97F6F2230E08500C10075 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0E97F6D2230E08500C10075 /* NinjaPCR */,
+				A0E97F842230E08700C10075 /* NinjaPCRTests */,
+				A0E97F8F2230E08700C10075 /* NinjaPCRUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0E97F6C2230E08500C10075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09553122232207300874715 /* ninjapcr_body.png in Resources */,
+				A0E9814F2231002100C10075 /* index.html in Resources */,
+				A0E97F7F2230E08700C10075 /* LaunchScreen.storyboard in Resources */,
+				A0E97F7C2230E08700C10075 /* Assets.xcassets in Resources */,
+				A0E97F772230E08500C10075 /* Main.storyboard in Resources */,
+				A0E9814C2230F23A00C10075 /* NinjaPCR_console in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E97F832230E08700C10075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E97F8E2230E08700C10075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0E97F6A2230E08500C10075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0E97F742230E08500C10075 /* ViewController.swift in Sources */,
+				A0E97F722230E08500C10075 /* AppDelegate.swift in Sources */,
+				A0E97F7A2230E08500C10075 /* NinjaPCR.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E97F812230E08700C10075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0E97F8A2230E08700C10075 /* NinjaPCRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E97F8C2230E08700C10075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0E97F952230E08700C10075 /* NinjaPCRUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0E97F872230E08700C10075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0E97F6D2230E08500C10075 /* NinjaPCR */;
+			targetProxy = A0E97F862230E08700C10075 /* PBXContainerItemProxy */;
+		};
+		A0E97F922230E08700C10075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0E97F6D2230E08500C10075 /* NinjaPCR */;
+			targetProxy = A0E97F912230E08700C10075 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A0E97F752230E08500C10075 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0E97F762230E08500C10075 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0E97F7D2230E08700C10075 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0E97F7E2230E08700C10075 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0E97F972230E08700C10075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0E97F982230E08700C10075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0E97F9A2230E08700C10075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQNHU5YQ9A;
+				INFOPLIST_FILE = NinjaPCR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = st.tori.ninjapcr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0E97F9B2230E08700C10075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQNHU5YQ9A;
+				INFOPLIST_FILE = NinjaPCR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = st.tori.ninjapcr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0E97F9D2230E08700C10075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQNHU5YQ9A;
+				INFOPLIST_FILE = NinjaPCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = st.tori.NinjaPCRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NinjaPCR.app/NinjaPCR";
+			};
+			name = Debug;
+		};
+		A0E97F9E2230E08700C10075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQNHU5YQ9A;
+				INFOPLIST_FILE = NinjaPCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = st.tori.NinjaPCRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NinjaPCR.app/NinjaPCR";
+			};
+			name = Release;
+		};
+		A0E97FA02230E08700C10075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQNHU5YQ9A;
+				INFOPLIST_FILE = NinjaPCRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = st.tori.NinjaPCRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NinjaPCR;
+			};
+			name = Debug;
+		};
+		A0E97FA12230E08700C10075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQNHU5YQ9A;
+				INFOPLIST_FILE = NinjaPCRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = st.tori.NinjaPCRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NinjaPCR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0E97F692230E08500C10075 /* Build configuration list for PBXProject "NinjaPCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E97F972230E08700C10075 /* Debug */,
+				A0E97F982230E08700C10075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0E97F992230E08700C10075 /* Build configuration list for PBXNativeTarget "NinjaPCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E97F9A2230E08700C10075 /* Debug */,
+				A0E97F9B2230E08700C10075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0E97F9C2230E08700C10075 /* Build configuration list for PBXNativeTarget "NinjaPCRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E97F9D2230E08700C10075 /* Debug */,
+				A0E97F9E2230E08700C10075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0E97F9F2230E08700C10075 /* Build configuration list for PBXNativeTarget "NinjaPCRUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E97FA02230E08700C10075 /* Debug */,
+				A0E97FA12230E08700C10075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A0E97F782230E08500C10075 /* NinjaPCR.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A0E97F792230E08500C10075 /* NinjaPCR.xcdatamodel */,
+			);
+			currentVersion = A0E97F792230E08500C10075 /* NinjaPCR.xcdatamodel */;
+			path = NinjaPCR.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A0E97F662230E08500C10075 /* Project object */;
+}
