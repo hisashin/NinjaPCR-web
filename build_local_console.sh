@@ -1,5 +1,5 @@
 echo "Building local console."
-
+./node_modules/.bin/babel production/console/js-ES6/form.js  > production/console/js/form.js production/console/js/form.js
 mkdir -p tmp/NinjaPCR
 mkdir tmp/NinjaPCR/en
 mkdir tmp/NinjaPCR/ja

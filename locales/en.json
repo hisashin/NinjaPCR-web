@@ -1,4 +1,13 @@
 {
+	"metas" : {
+		"siteName" : "NinjaPCR",
+		"url" : "https://ninjapcr.tori.st",
+		"title" : "NinjaPCR",
+		"keywords" : "NinjaPCR,PCR,Thermal cycler,DNA amplifier",
+		"description" : "NinjaPCR is an opensource thermalcycler",
+		"image" : "https://ninjapcr.tori.st/images/render/520x577.png",
+		"author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
+	},
     "contact" : {
         "label" : "Contact Form",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSf48pMz4yPdDtF7h_LtshZg0o0rRsG9BcfMrM-TcWgMvUU83Q/viewform?usp=sf_link"

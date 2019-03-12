@@ -1,11 +1,29 @@
 include includes/mixins.pug
 
+- var metas = {}
+- metas.title = $i18n.metas.title
+- metas.url = $i18n.metas.url
+- metas.site_name = $i18n.metas.siteName
+- metas.keywords = $i18n.metas.keywords
+- metas.description = $i18n.metas.description
+- metas.image = $i18n.metas.image
+- metas.author = $i18n.metas.author
+block metas
 doctype html
 html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    title= title
+    title= metas.title
+    meta(name="keywords", content=metas.keywords)
+    meta(name="description", content=metas.description)
+    meta(name="author", content=metas.author)
+    meta(property="og:title", content=metas.title)
+    meta(property="og:type", content="website")
+    meta(property="og:url", content=metas.url)
+    meta(property="og:image", content=metas.image)
+    meta(property="og:site_name", content=metas.site_name)
+    meta(property="og:description", content=metas.description)
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/style.css')
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
