@@ -24,7 +24,15 @@
             li #{$i18n.console.wifiSettings3_3}
         li #{$i18n.console.wifiSettings4}
         li #{$i18n.console.wifiSettings5}
+  section#connectionModeContainer
+    input#connectionModeServer(type="radio" name="connectionMode" checked="true" value="server")
+    label(for="connectionModeServer") Server Mode
+    input#connectionModeAP(type="radio" name="connectionMode" value="ap")
+    label(for="connectionModeAP") AP mode
   section
+    p#apContainer(style="display:none")
+      span AP mode
+      input#ConnectButtonAP(type="button", value=$i18n.console.connect)
     p#ipInputContainer
       span #{$i18n.console.deviceName}
       input#HostText.connectionUI(type="text")

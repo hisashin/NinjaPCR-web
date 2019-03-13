@@ -1,5 +1,6 @@
 var STORAGE_KEY_LAST_HOST_NAME = "ninjapcr_host";
 var DEFAULT_HOST = "ninjapcr";
+var IP_ADDR_AP_MODE = "192.168.1.1";
 ConnectionStatus =
 {
     DISCONNECTED: {
@@ -139,13 +140,26 @@ NetworkCommunicator.prototype.scan = function (callback) {
 	$("#HostText").val(this.loadHostName() || DEFAULT_HOST);
 	var scope = this;
 	$("#ConnectButton").click(function(e) {
-		console.log("Check IP: " + $("#HostText").val());
 		scope.setDeviceHost($("#HostText").val());
 		scope.connect();
 	});
+	$("#ConnectButtonAP").click(function(e) {
+    console.log("Connect (AP)");
+		hostIpAddress = IP_ADDR_AP_MODE;
+		scope.connect();
+  });
 	$("#NewDevice").click(function(){
 		$("#DeviceSettings").toggle();
 	});
+  $("#connectionModeContainer input").change(function(e) {
+    if ($("#connectionModeContainer input:checked").val() == "ap") {
+      $("#ipInputContainer").hide();
+      $("#apContainer").show();
+    } else {
+      $("#ipInputContainer").show();
+      $("#apContainer").hide();
+    }
+  });
 };
 function loadJSONP (URL, onError) {
 	var scriptTag = document.createElement("script");

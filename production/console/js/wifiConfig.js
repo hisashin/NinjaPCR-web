@@ -51,8 +51,6 @@ function setNinjaPCRVersion (obj) {
 	console.log("Latest UI version=" + obj.ui);
 }
 $(document).ready(function(){
-	console.log("wifiConfig.init");
-
 	$('#is_ota_mode_dialog').dialog({
 		autoOpen : false,
 		width : 300,

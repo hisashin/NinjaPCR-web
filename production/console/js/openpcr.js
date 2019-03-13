@@ -134,7 +134,6 @@ function listExperiments() {
 	 var lastExperiment = null;
     try {
        lastExperiment = localStorage.getItem("lastExperiment");
-       console.log("lastExperiment=" + lastExperiment);
     } catch (e) {
     }
 		presetsHTML = "<select id='dropdown'>";
