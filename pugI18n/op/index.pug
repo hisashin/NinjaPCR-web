@@ -8,7 +8,7 @@ block append metas
 block main
 
   +itemhead(dir, subdir)
-  
+
     +itemtitle(dir, subdir, 0)
 
     p
@@ -89,7 +89,7 @@ block main
               p #{$i18n[dir][subdir].items[1].text31}
               - var img = "/op/images/profile-delete-"+$localeName+".jpg"
               +screenshot-image(img, img, 300)
-    
+
     +itemtitle(dir, subdir, 2)
 
     p #{$i18n[dir][subdir].items[2].text1}
@@ -115,30 +115,61 @@ block main
 
     // Start experiment
     +itemtitle(dir, subdir, 3)
-    
-    p #{$i18n[dir][subdir].items[3].text1}
 
-    .row
-      - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
-      +screenshot-image(img, img)
+
+    .accordion#accordion2
+      .card
+        .card-header#headingConnectionServer
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseConnectionServer" aria-expanded="false" aria-controls="collpseProfileAdd") 通常モードでの接続
+        .collapse#collapseConnectionServer(aria-labelledby="headingProfileAdd" data-parent="#accordion2")
+          .card-body
+            p #{$i18n[dir][subdir].items[3].text1}
+            .row
+              - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
+              +screenshot-image(img, img)
+        .card-header#headingConnectionAP
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseConnectionAP" aria-expanded="false" aria-controls="collpseProfileAdd") APモードでの接続
+        .collapse#collapseConnectionAP(aria-labelledby="headingProfileAdd" data-parent="#accordion2")
+          .card-body
+            p "Mode" ボタンを押しながら電源を入れると、NinjaPCRはWi-Fi設定モード (アクセスポイントモード) で起動します。(
+              a.link(href="../assy/setup/index.html#item-assy-setup-1") アクセスポイントでの起動方法
+              | )
+            p Wi-Fi設定モード (APモード) でNinjaPCRを使用する場合は、インターネットに接続することができなくなります。事前にコンソールをローカルで開けるようにしておくことをおすすめします。
+              ul
+                li PCの場合 :
+                  a(href="../../download/NinjaPCR.zip") Zipファイル
+                  | をダウンロードし、ローカルに保存します。
+                li Androidの場合 : Google Playから
+                  a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") 専用アプリ
+                  | をインストールします。
+                li iOSの場合 : App Storeから
+                  a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") 専用アプリ
+                  | をインストールします。
+            p 端末のWiFi設定でSSID "NinjaPCR" を選択し、接続します。(
+              a.link(href="../assy/setup/index.html#item-assy-setup-2") 詳しい接続方法
+              | )
+            p コンソールを開き、「APモード」を選択してから「接続」ボタンを押します。
+
 
     p #{$i18n[dir][subdir].items[3].text2}
-    
+
     .row
       - var img = "/op/images/run1-"+$localeName+".jpg"
       +screenshot-image(img, img, 450)
     | #{$i18n[dir][subdir].items[3].text3}
-    
+
     .row
       - var img = "/op/images/progress-"+$localeName+".jpg"
       +screenshot-image(img, img, 450)
-    
+
     p #{$i18n[dir][subdir].items[3].text4}
       .row
         - var img = "/op/images/stop-"+$localeName+".jpg"
         +screenshot-image(img, img)
-    
-      
+
+
     +itemtitle(dir, subdir, 4)
 
     p
@@ -149,4 +180,3 @@ block main
           +process-image(img, img)
           tube-set3
       p #{$i18n[dir][subdir].items[4].text3}
-    
