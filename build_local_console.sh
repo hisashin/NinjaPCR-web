@@ -6,6 +6,12 @@ mkdir tmp/NinjaPCR/ja
 cp -r production/console tmp/NinjaPCR
 cp -r production/ja/console tmp/NinjaPCR/ja
 cp -r production/en/console tmp/NinjaPCR/en
+find tmp -name '*.psd' | xargs rm
+
+rm -rf android/app/src/main/assets/NinjaPCR_console
+cp -r tmp/NinjaPCR android/app/src/main/assets/NinjaPCR_console
+rm -rf ios/NinjaPCR_console
+cp -r tmp/NinjaPCR ios/NinjaPCR_console
 cd tmp
 zip -r ../NinjaPCR.zip NinjaPCR
 cd ..

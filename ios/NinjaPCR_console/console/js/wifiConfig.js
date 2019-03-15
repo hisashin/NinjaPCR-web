@@ -42,7 +42,6 @@ function startOTA () {
 }
 // Called when version.js is loaded
 function setNinjaPCRVersion (obj) {
-	console.log(obj);
 	FIRMWARE_VERSION_LATEST = obj.firmware.latest;
 	FIRMWARE_VERSION_REQUIRED = obj.firmware.required;
 	console.log("Latest firmware=" + FIRMWARE_VERSION_LATEST);
@@ -51,8 +50,6 @@ function setNinjaPCRVersion (obj) {
 	console.log("Latest UI version=" + obj.ui);
 }
 $(document).ready(function(){
-	console.log("wifiConfig.init");
-
 	$('#is_ota_mode_dialog').dialog({
 		autoOpen : false,
 		width : 300,
@@ -182,11 +179,8 @@ function checkFirmwareVersion (version) {
     available only ver 1.1 or later
   */
   if (compareVersion(version, "1.1")==VersionComparison.Smaller) {
-    console.log("HIDE");
     $(".v1_1").hide();
   } else {
-
-      console.log("SHOW");
 
   }
 }
