@@ -31,8 +31,10 @@
     label(for="connectionModeAP") AP mode
     a.help(href="../op/index.html#item-op-index-3") Help
   section
-    p#apContainer(style="display:none")
-      span AP mode
+    div#apContainer(style="display:none")
+      ol
+        li #{$i18n.console.connectApMode_0}
+        li #{$i18n.console.connectApMode_1}
       input#ConnectButtonAP(type="button", value=$i18n.console.connect)
     p#ipInputContainer
       span #{$i18n.console.deviceName}

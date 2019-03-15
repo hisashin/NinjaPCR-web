@@ -19,7 +19,6 @@ ConnectionStatus =
       buttonDisabled: true,
     }
 };
-
 function showDeviceConnectionStatus(stat) {
   $("#DeviceConnectionStatus").attr("class", stat.className);
   $("#DeviceConnectionStatusLabel").text(getLocalizedMessage(stat.label));
@@ -136,6 +135,7 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {
 	// callback(port)
+  showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 	DeviceResponse.onDeviceFound = callback;
 	$("#HostText").val(this.loadHostName() || DEFAULT_HOST);
 	var scope = this;
@@ -179,7 +179,6 @@ function loadJSONP (URL, onError) {
 
 NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callback, onError, noTimeout) {
 	var URL = getDeviceHost() + path + "?x=" + this.commandId;
-  console.log(URL);
 	if (param) {
 		if (param.charAt(0)!="&") {
 			URL += "&";
@@ -259,7 +258,13 @@ NetworkCommunicator.prototype.doConnect = function () {
 			}
 			scope.firmwareVersion = obj.version;
 			console.log("Firmware version=" + scope.firmwareVersion);
-			DeviceResponse.onDeviceFound(host, obj.running);
+      if (host) {
+			     DeviceResponse.onDeviceFound(host, obj.running);
+
+      } else {
+			     DeviceResponse.onDeviceFound(hostIpAddress, obj.running);
+      }
+			DeviceResponse.onDeviceFound(host | hostIpAddress, obj.running);
 		},
 		function () {
 			console.log("/connect failed");
@@ -269,7 +274,7 @@ NetworkCommunicator.prototype.doConnect = function () {
     showDeviceConnectionStatus(ConnectionStatus.CONNECTING);
 }
 
-NetworkCommunicator.prototype.scanOngoingExperiment = function () {
+NetworkCommunicator.prototype.scanOngoingExperiment = function (callback) {
 	console.log("TODO scanOngoingExperiment");
 	callback();
 };
@@ -343,7 +348,6 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 };
 NetworkCommunicator.prototype.sendControlCommand = function (command) {
   var URL = getDeviceHost() + "/" + command;
-  console.log("sendControlCommand " + URL)
   loadJSONP(URL)
 };
 $( window ).load(function() {

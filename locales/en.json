@@ -88,7 +88,9 @@
 
       "androidGuide":"You need to install NinjaPCR app. Please install the app on Play Store.",
       "deviceName":"Device name",
-      "connect":"Connect"
+      "connect":"Connect",
+			"connectApMode_0":"Start NinjaPCR in Wi-Fi setup mode.",
+			"connectApMode_1":"Select SSID:NinjaPCR."
     },
     "general" : {
       "nextstep" : "Next step : "
@@ -524,6 +526,30 @@
                 },
                 {
                   "title" : "Start an Expriment",
+									"server" : {
+										"title":"Normal mode (HTTP server mode)"
+									},
+									"ap" : {
+										"title":"Wi-Fi settings mode (Access point mode)",
+										"text1_0":"Power the NinjaPCR while holding the \"MODE\" button on the front panel. Then it starts in Wi-Fi setup mode.",
+										"text1_1":"Learn more about Wi-Fi setup mode",
+										"text2_0":"While using Wi-Fi mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
+										"text3_title":"PC",
+										"text3_0":"Download ",
+										"text3_1":"the Zip file",
+										"text3_2":" and expand it into your local disk.",
+										"text4_title":"Android",
+										"text4_0":"Download ",
+										"text4_1":"the app",
+										"text4_2":" from Google Play.",
+										"text4_title":"iOS",
+										"text4_0":"Download",
+										"text4_1":"the app",
+										"text4_2":"from App Store.",
+										"text5_0":"Select SSID:NinjaPCR.",
+										"text5_1":"Learn more",
+										"text6":"Open the console, select \"AP mode\" and press \"connect\" button."
+									},
                   "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
                   "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
                   "text3" : "When PCR is running, temperature of the well and the lid and estimated temperature.",

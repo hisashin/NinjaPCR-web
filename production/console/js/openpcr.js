@@ -60,10 +60,9 @@ function checkPlug () {
 function scanPortsAndDisplay (delay) {
 	communicator.scan(function(port, isRunning) {
 		// TODO Wifi & Chrome
-		var deviceFound = !!port;
-		var portMessage = (deviceFound)?
-				(getLocalizedMessage('deviceFound').replace('___PORT___',port)):getLocalizedMessage('deviceNotFound');
-		$("#portLabel").html(portMessage);
+		console.log("scanPortsAndDisplay.scan callback " + port + "," + isRunning);
+		var deviceFound = true;//!!port;
+		console.log("deviceFound=" + deviceFound)
 
 		if (deviceFound) {
 			$("#runningUnplugged").hide();
