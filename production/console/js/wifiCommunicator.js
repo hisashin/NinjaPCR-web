@@ -155,8 +155,14 @@ NetworkCommunicator.prototype.scan = function (callback) {
 	$("#NewDevice").click(function(){
 		$("#DeviceSettings").toggle();
 	});
+  /*
   if (location.href.indexOf("beta") > 0) {
     $("#connectionModeContainer").show();
+  }
+  */
+  if (location.href.indexOf("http://ninjapcr.tori.st") >= 0) {
+    $("#ConnectButtonAP").hide();
+    $("#RemoteAPModeAlert").show();
   }
   $("#connectionModeContainer input").change(function(e) {
     if ($("#connectionModeContainer input:checked").val() == "ap") {
