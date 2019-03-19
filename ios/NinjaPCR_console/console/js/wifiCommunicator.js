@@ -137,7 +137,11 @@ NetworkCommunicator.prototype.scan = function (callback) {
 	// callback(port)
   showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 	DeviceResponse.onDeviceFound = callback;
-	$("#HostText").val(this.loadHostName() || DEFAULT_HOST);
+  var hostName = this.loadHostName();
+  if (hostName == null || hostName.length > 0) {
+    hostName = DEFAULT_HOST;
+  }
+	$("#HostText").val(hostName);
 	var scope = this;
 	$("#ConnectButton").click(function(e) {
 		scope.setDeviceHost($("#HostText").val());

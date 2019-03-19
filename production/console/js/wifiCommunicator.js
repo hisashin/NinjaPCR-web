@@ -137,7 +137,11 @@ NetworkCommunicator.prototype.scan = function (callback) {
 	// callback(port)
   showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 	DeviceResponse.onDeviceFound = callback;
-	$("#HostText").val(this.loadHostName() || DEFAULT_HOST);
+  var hostName = this.loadHostName();
+  if (hostName == null || hostName.length > 0) {
+    hostName = DEFAULT_HOST;
+  }
+	$("#HostText").val(hostName);
 	var scope = this;
 	$("#ConnectButton").click(function(e) {
 		scope.setDeviceHost($("#HostText").val());
@@ -151,6 +155,9 @@ NetworkCommunicator.prototype.scan = function (callback) {
 	$("#NewDevice").click(function(){
 		$("#DeviceSettings").toggle();
 	});
+  if (location.href.indexOf("beta") > 0) {
+    $("#connectionModeContainer").show();
+  }
   $("#connectionModeContainer input").change(function(e) {
     if ($("#connectionModeContainer input:checked").val() == "ap") {
       $("#ipInputContainer").hide();

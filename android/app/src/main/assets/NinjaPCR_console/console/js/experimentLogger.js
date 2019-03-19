@@ -112,17 +112,18 @@ ExperimentLogger.prototype.log = function (status) {
 
 		// Cycles
 		if (status["i"]) {
+      $("#sectionCycles").show();
 			$("#cycleNumber").html(status["i"]);
 			$("#totalCycles").html(status["a"]);
-		}
+		} else {
+      $("#sectionCycles").hide();
+    }
 		// Repeats
 		if (status["u"] && status["u"] > 1) {
 			$("#repeatNumber").html(status["c"]);
 			$("#totalRepeats").html(status["u"]);
-			$("#sectionCycles").show();
 			$("#sectionRepeats").show();
 		} else {
-			$("#sectionCycles").hide();
 			$("#sectionRepeats").hide();
 		}
 
