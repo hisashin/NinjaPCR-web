@@ -26,9 +26,9 @@
         li #{$i18n.console.wifiSettings5}
   section#connectionModeContainer(style="display:none")
     input#connectionModeServer(type="radio" name="connectionMode" checked="true" value="server")
-    label(for="connectionModeServer") Server Mode
+    label(for="connectionModeServer") #{$i18n.console.normalMode}
     input#connectionModeAP(type="radio" name="connectionMode" value="ap")
-    label(for="connectionModeAP") Wi-Fi Config (AP) mode
+    label(for="connectionModeAP") #{$i18n.console.apMode}
     a.help(href="../op/index.html#item-op-index-3") Help
 
   section

@@ -17,6 +17,8 @@
       "shortlabel" : "Console",
       "appTitle":"NinjaPCR",
       "addNewExperiment":"Add a new experiment",
+			"normalMode":"Normal mode",
+			"apMode":"Access point (AP) mode",
       "remoteAPModeAlert":" It is recommended that you download the offline console beforehand.",
       "remoteAPModeLinkLabel":"Learn more",
       "remoteAPModeLinkAddress":"http://localhost:3000/en/op/index.html#item-op-index-3",
@@ -77,7 +79,7 @@
       "disconnectedInExperiment":"Device is disconnected.",
       "wifiSettingsButton":"Setup a new NinjaPCR device / Change network configuration",
       "wifiSettings0":"Plug the power adapter into NinjaPCR and then into an outlet.",
-      "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.",
+      "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds.",
       "wifiSettings2":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list.",
       "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
       "wifiSettings3_0":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
@@ -92,7 +94,7 @@
       "androidGuide":"You need to install NinjaPCR app. Please install the app on Play Store.",
       "deviceName":"Device name",
       "connect":"Connect",
-			"connectApMode_0":"Start NinjaPCR in Wi-Fi setup mode.",
+			"connectApMode_0":"Start NinjaPCR in access point (AP) mode.",
 			"connectApMode_1":"Select SSID:NinjaPCR."
     },
     "general" : {
@@ -392,8 +394,8 @@
               "text1" : "Plug the power adapter into NinjaPCR and then into an outlet."
             },
             {
-              "title" : "Start in network setup mode",
-              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in Wi-Fi Setup mode in a few seconds."
+              "title" : "Start in access point (AP) mode",
+              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds."
             },
             {
               "title" : "Change your Wi-Fi settings temporarily",
@@ -459,9 +461,9 @@
               "text2" : "Dropdown list on NinjaPCR's Wi-Fi settings page doesn't contain the SSID you want to use.",
               "text2_1" : "Access poitns of some types don't show up in the list. For example, an access point in stealth mode is hidden. Some smartphones in tethering mode don't listed up. In such cases, please input the SSID's name to the textbox below and choose nothing from the dropdown list.",
               "text3" : "Connection test fails",
-              "text3_1" : "Start NinjaPCR in network setup mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
+              "text3_1" : "Start NinjaPCR in access point (AP) mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
               "text3_2":"Your device and NinjaPCR should connect to the same network. Please review Wi-Fi settings of both.",
-              "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in Wi-Fi setup mode? You don't need to press \"Mode\" button.",
+              "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in access point (AP) mode? You don't need to press \"Mode\" button.",
               "text3_4" : "NinjaPCR uses a mechanism called \"mDNS\" to be accessible from other devices. mDNS is available by default in macOS and iOS. Though Windows and Linux have mDNS helper application in most cases, if your PC doesn't have it, please install a helper software.",
               "text11" : "Windows",
               "text12" : "Please nstall ",
@@ -533,10 +535,10 @@
 									"title":"Normal mode (HTTP server mode)"
 								},
 								"ap" : {
-									"title":"Wi-Fi settings mode (Access point mode)",
-									"text1_0":"Power the NinjaPCR while holding the \"MODE\" button on the front panel. Then it starts in Wi-Fi setup mode.",
-									"text1_1":"Learn more about Wi-Fi setup mode",
-									"text2_0":"While using Wi-Fi mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
+									"title":"Access point (AP) mode",
+									"text1_0":"Power the NinjaPCR while holding the \"MODE\" button on the front panel. Then it starts in access point (AP) mode.",
+									"text1_1":"Learn more about access point (AP) mode",
+									"text2_0":"While using access point (AP) mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
 									"text3_title":"PC",
 									"text3_0":"Download ",
 									"text3_1":"the Zip file",
@@ -551,7 +553,7 @@
 									"text5_2":"from App Store.",
 									"text6_0":"Select SSID:NinjaPCR.",
 									"text6_1":"Learn more",
-									"text7":"Open the console, select \"AP mode\" and press \"connect\" button."
+									"text7":"Open the console, select \"Access point (AP) mode\" and press \"connect\" button."
 								},
                 "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
                 "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
