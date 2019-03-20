@@ -39,11 +39,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     private func getRemoteConsoleURL () -> URL {
-        let urlStr = String(format: "http://ninjapcr.tori.st/%@/console/index.html", language)
+        let urlStr = String(format: "http://ninjapcr.tori.st/%@/console/index.html?app=ios", language)
         return URL(string: urlStr)!
     }
     private func getLocalFileURL () -> URL {
-        let urlStr = String(format: "%@/NinjaPCR_console/%@/console/index.html",
+        let urlStr = String(format: "%@/NinjaPCR_console/%@/console/index.html?app=ios&local=true",
                             Bundle.main.bundlePath, language)
         return URL(fileURLWithPath: urlStr)
     }
