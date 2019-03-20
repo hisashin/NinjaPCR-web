@@ -132,6 +132,12 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 	}
 
 };
+
+NetworkCommunicator.prototype.isLocal = function () {
+  return (
+    location.href.indexOf("http://ninjapcr.tori.st") < 0
+    || location.href.indexOf("local=true") > 0);
+};
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {
 	// callback(port)
@@ -156,15 +162,17 @@ NetworkCommunicator.prototype.scan = function (callback) {
 		$("#DeviceSettings").toggle();
 	});
 
-  if (location.href.indexOf("http://ninjapcr.tori.st") >= 0) {
-    // Online console
-    $("#connectionModeContainer").hide();
-  } else {
+  if (this.isLocal()) {
     // Local console
     $("#connectionModeContainer").show();
     $("#connectionModeAP").attr("checked",true);
     $("#ipInputContainer").hide();
     $("#apContainer").show();
+
+  } else {
+    // Online console
+    $("#connectionModeContainer").hide();
+
   }
   $("#connectionModeContainer input").change(function(e) {
     if ($("#connectionModeContainer input:checked").val() == "ap") {

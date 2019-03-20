@@ -39,11 +39,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     private func getRemoteConsoleURL () -> URL {
-        let urlStr = String(format: "http://ninjapcr.tori.st/%@/console/index.html?app=ios", language)
+        let urlStr = String(format: "http://ninjapcr.tori.st/%@/console/index.html", language)
         return URL(string: urlStr)!
     }
     private func getLocalFileURL () -> URL {
-        let urlStr = String(format: "%@/NinjaPCR_console/%@/console/index.html?app=ios&local=true",
+        let urlStr = String(format: "%@/NinjaPCR_console/%@/console/index.html",
                             Bundle.main.bundlePath, language)
         return URL(fileURLWithPath: urlStr)
     }
@@ -56,12 +56,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print(error)
-        loadLocalConsole()
     }
 
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print(error)
-        loadLocalConsole()
+        if let info = error._userInfo as? [String: Any] {
+            if let urlString = info["NSErrorFailingURLStringKey"] as? String {
+                print(urlString)
+                if urlString.contains("ninjapcr.tori.st") {
+                    print("Failed to load the remote console. Load local console...")
+                    loadLocalConsole()
+                    
+                }
+            }
+        }
     }
     func loadLocalConsole () {
         webView.load(URLRequest(url: getLocalFileURL()))
