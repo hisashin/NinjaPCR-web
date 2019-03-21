@@ -136,7 +136,8 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 NetworkCommunicator.prototype.isLocal = function () {
   return (
     location.href.indexOf("http://ninjapcr.tori.st") < 0
-    || location.href.indexOf("local=true") > 0);
+    || location.href.indexOf("local=true") > 0
+    || || location.href.indexOf("ap=true") > 0);
 };
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {
