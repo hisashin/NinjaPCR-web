@@ -101,28 +101,47 @@
       "nextstep" : "Next step : "
     },
     "index" : {
-      "carousel" : {
-        "slides" : [
-          {
-            "alt" : "Opensource",
-            "label" : "Open Source DNA Amplifer",
-            "text" : "We are totally open",
-            "link" : "open"
-          },
-          {
-            "alt" : "Wi-Fi",
-            "label" : "Wi-Fi Supported",
-            "text" : "Use with your smartphone",
-            "link" : "wifi"
-          },
-          {
-            "alt" : "Precise",
-            "label" : "Smart Sensor and Simulation",
-            "text" : "Precise at any temperature",
-            "link" : "accuracy"
-          }
-        ]
-      }
+        "carousel" : {
+            "slides" : [
+              {
+                "alt" : "Opensource",
+                "label" : "Open Source DNA Amplifer",
+                "text" : "We are totally open",
+                "link" : "open"
+              },
+              {
+                "alt" : "Wi-Fi",
+                "label" : "Wi-Fi Supported",
+                "text" : "Use with your smartphone",
+                "link" : "wifi"
+              },
+              {
+                "alt" : "Precise",
+                "label" : "Smart Sensor and Simulation",
+                "text" : "Precise at any temperature",
+                "link" : "accuracy"
+              }
+            ]
+        },
+        "features" : {
+            "wifi" : {
+                "title" : "WiFi",
+                "text1" : "Accessible from local network / Access point mode without a Wi-Fi router",
+                "text2" : "Console works on web browsers on smartphones, tablets and PCs.",
+                "text3" : "Powered by ESP8266"
+            },
+            "accuracy" : {
+                "title" : "Accuracy",
+                "text1" : "24bit AD converter",
+                "text2" : "Switching low & high modes",
+                "text3" : "Temperature simulation of sample in tubes"
+            },
+            "open" : {
+                "title" : "Open-source",
+                "text1" : "All source codes and scematics are available on GitHub",
+                "text2" : "Designed to be built easily"
+            }
+        }
     },
     "assy" : {
         "label" : "Assembly Manual",
