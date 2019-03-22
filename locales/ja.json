@@ -71,6 +71,7 @@
       "updateAvailable":"デバイスのアップデートがあります。",
       "versionCurrent":"現在のバージョン",
       "versionLatest":"最新バージョン",
+      "updateLog":"更新履歴",
       "updateStarting":"アップデートを開始します。電源を切らないでください。",
       "updating":"アップデート中です。電源を切らないでください。アップデートには数分かかる場合があります。",
       "updateFinished":"アップデートが完了しました!",

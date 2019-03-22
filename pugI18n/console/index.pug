@@ -97,6 +97,8 @@ html
         .versionDetail
           span #{$i18n.console.versionLatest} :
           span.labelVersionLatest 1.0
+        .updateLink
+          a#link(href="../update/index.html") #{$i18n.console.updateLog}
 
       #update_available_dialog(title="Device update")
         span #{$i18n.console.updateAvailable}
@@ -106,6 +108,8 @@ html
         .versionDetail
           span #{$i18n.console.versionLatest} :
           span.labelVersionLatest 1.0
+        .updateLink
+          a#link(href="../update/index.html") #{$i18n.console.updateLog}
 
       #update_starting_dialog(title="Updating...") #{$i18n.console.updateStarting}
 

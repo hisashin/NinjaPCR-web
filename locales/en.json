@@ -71,6 +71,7 @@
       "updateAvailable":"Device update is available!",
       "versionCurrent":"Current Version",
       "versionLatest":"Latest Version",
+      "updateLog":"What's new?",
       "updateStarting":"Starting device update. Please do not turn the power off.",
       "updating":"Device is updating. Please do not turn the power off.",
       "updateFinished":"Device is updated successfully!",
