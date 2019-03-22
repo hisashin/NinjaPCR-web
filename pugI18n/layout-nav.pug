@@ -8,6 +8,7 @@ mixin navbar(dir)
       - var isOp = /\/op\//.test(dir)
       - var isMaker = /\/maker\//.test(dir)
       - var isReq = /\/req\//.test(dir)
+      - var isUpdate = /\/update\//.test(dir)
       - var isAbout = /\/about\//.test(dir)
       - var isStore = /\/store\//.test(dir)
       - var noCurrent = /\/nocurrent\//.test(dir)
@@ -36,12 +37,16 @@ mixin navbar(dir)
             a.nav-link(href="/"+$localeName+"/req/index.html") #{$i18n.req.shortlabel}
             if isReq && !noCurrent
               span.sr-only (current)
+          li.nav-item(class= isUpdate ? "active" : "")
+            a.nav-link(href="/"+$localeName+"/update/index.html") #{$i18n.update.shortlabel}
+            if isUpdate && !noCurrent
+              span.sr-only (current)
           li.nav-item(class= isAbout ? "active" : "")
             a.nav-link(href="/"+$localeName+"/about/index.html") #{$i18n.about.shortlabel}
             if isAbout && !noCurrent
               span.sr-only (current)
 
-        ul.navbar-nav.ml-auto.align-items-md-center.align-items-lg-center.align-items-xl-center     
+        ul.navbar-nav.ml-auto.align-items-md-center.align-items-lg-center.align-items-xl-center
           li.nav-item.active
             a.nav-link(href="https://a360.co/2NqlSCs", target="_blank")
               | 3D
@@ -71,7 +76,8 @@ mixin sidebar(dir)
   - var isConsole = /\/console\//.test(dir)
   - var isOp = /\/op\//.test(dir)
   - var isMaker = /\/maker\//.test(dir)
-  - var isAbout = /\/req\//.test(dir)
+  - var isReq = /\/req\//.test(dir)
+  - var isUpdate = /\/update\//.test(dir)
   - var isAbout = /\/about\//.test(dir)
   - var isAssy = /\/assy\//.test(dir) && !isMaker
   .sidebar-sticky
@@ -175,6 +181,12 @@ mixin sidebar(dir)
           if isReq
             span.sr-only (current)
       li.nav-item
+        a.nav-link(href="/"+$localeName+"/update/index.html", class= isUpdate ? "active" : "")
+          span(data-feather="clock")
+          | #{$i18n.update.label}
+          if isUpdate
+            span.sr-only (current)
+      li.nav-item
         a.nav-link(href="/"+$localeName+"/about/index.html", class= isAbout ? "active" : "")
           span(data-feather="users")
           | #{$i18n.about.label}
@@ -184,7 +196,7 @@ mixin sidebar(dir)
 block append head
   link(rel='stylesheet', href='/css/navbar-top-fixed.css')
   link(rel='stylesheet', href='/css/dashboard.css')
- 
+
 block append content
   block navbar
 
@@ -195,4 +207,3 @@ block append content
 
       main.col-md-10.ml-sm-auto.col-lg-10.px-4(role="main")
         block main
-

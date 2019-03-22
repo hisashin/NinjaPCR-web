@@ -990,6 +990,10 @@
       "text26" : "Weight",
       "text27" : "TODO"
     },
+    "update" : {
+        "label" : "Updates",
+        "shortlabel" : "Updates"
+    },
     "about" : {
         "label" : "About Us",
         "shortlabel" : "AboutUs",

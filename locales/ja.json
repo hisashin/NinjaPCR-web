@@ -1022,6 +1022,10 @@
       "text26" : "重量",
       "text27" : "TODO"
     },
+    "update" : {
+        "label" : "更新履歴",
+        "shortlabel" : "更新履歴"
+    },
     "about" : {
         "label" : "チーム",
         "shortlabel" : "チーム",
