@@ -1,18 +1,18 @@
 extends layout
 
 block append metas
-  +meta(metas, $i18n.req.label)
+  +meta(metas, $i18n.update.label)
 
 block main
 
-    h4 What's New?
+    h4 #{$i18n.update.label}
 
     h5 Firmware 1.2
     dl
-      dt AP mode
-      dd Added access point (AP) mode.
+      dt Access point (AP) mode
+      dd You can run NinjaPCR as a Wi-Fi access point and use the full PCR functionalities without joining a local network. For more information, please read 
+        a.link("../op/index.html#item-op-index-3") the document about it.
       dt Bug fix
       dd
         ul
           li In certain situations the simulated sample temperature values were not updated.
-      // #{$i18n.req.text19}
