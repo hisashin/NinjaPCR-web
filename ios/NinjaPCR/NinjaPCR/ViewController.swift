@@ -56,12 +56,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print(error)
-        loadLocalConsole()
     }
 
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print(error)
-        loadLocalConsole()
+        if let info = error._userInfo as? [String: Any] {
+            if let urlString = info["NSErrorFailingURLStringKey"] as? String {
+                print(urlString)
+                if urlString.contains("ninjapcr.tori.st") {
+                    print("Failed to load the remote console. Load local console...")
+                    loadLocalConsole()
+                    
+                }
+            }
+        }
     }
     func loadLocalConsole () {
         webView.load(URLRequest(url: getLocalFileURL()))

@@ -8,7 +8,7 @@ block append metas
 block main
 
   +itemhead(dir, subdir)
-  
+
     +itemtitle(dir, subdir, 0)
 
     p
@@ -89,7 +89,7 @@ block main
               p #{$i18n[dir][subdir].items[1].text31}
               - var img = "/op/images/profile-delete-"+$localeName+".jpg"
               +screenshot-image(img, img, 300)
-    
+
     +itemtitle(dir, subdir, 2)
 
     p #{$i18n[dir][subdir].items[2].text1}
@@ -115,30 +115,66 @@ block main
 
     // Start experiment
     +itemtitle(dir, subdir, 3)
-    
-    p #{$i18n[dir][subdir].items[3].text1}
 
-    .row
-      - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
-      +screenshot-image(img, img)
+    .accordion#accordion2
+      .card
+        .card-header#headingConnectionServer
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseConnectionServer" aria-expanded="false" aria-controls="collpseProfileAdd") #{$i18n[dir][subdir].items[3].server.title}
+        .collapse#collapseConnectionServer(aria-labelledby="headingProfileAdd" data-parent="#accordion2")
+          .card-body
+            p #{$i18n[dir][subdir].items[3].text1}
+            .row
+              - var img = "/assy/images/setup-connection1-"+$localeName+".jpg"
+              +screenshot-image(img, img)
+        .card-header#headingConnectionAP
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseConnectionAP" aria-expanded="false" aria-controls="collpseProfileAdd") #{$i18n[dir][subdir].items[3].ap.title}
+        .collapse#collapseConnectionAP(aria-labelledby="headingProfileAdd" data-parent="#accordion2")
+          .card-body
+            p #{$i18n[dir][subdir].items[3].ap.text1_0}(
+              a.link(href="../assy/setup/index.html#item-assy-setup-1") #{$i18n[dir][subdir].items[3].ap.text1_1}
+              | )
+            p #{$i18n[dir][subdir].items[3].ap.text2_0}
+              ul
+                li #{$i18n[dir][subdir].items[3].ap.text3_title} :
+                  | #{$i18n[dir][subdir].items[3].ap.text3_0} :
+                  a(href="../../download/NinjaPCR.zip") #{$i18n[dir][subdir].items[3].ap.text3_1}
+                  | #{$i18n[dir][subdir].items[3].ap.text3_2}
+                li #{$i18n[dir][subdir].items[3].ap.text4_title} :
+                  | #{$i18n[dir][subdir].items[3].ap.text4_0}
+                  a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") #{$i18n[dir][subdir].items[3].ap.text4_1}
+                  | #{$i18n[dir][subdir].items[3].ap.text4_2}
+                li #{$i18n[dir][subdir].items[3].ap.text5_title} :
+                  | #{$i18n[dir][subdir].items[3].ap.text5_0}
+                  a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") #{$i18n[dir][subdir].items[3].ap.text5_1}
+                  | #{$i18n[dir][subdir].items[3].ap.text5_2}
+            p #{$i18n[dir][subdir].items[3].ap.text6_0} (
+              a.link(href="../assy/setup/index.html#item-assy-setup-2") #{$i18n[dir][subdir].items[3].ap.text6_1}
+              | )
+            p #{$i18n[dir][subdir].items[3].ap.text7}
+            .row
+              - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
+              +screenshot-image(img, img)
+
 
     p #{$i18n[dir][subdir].items[3].text2}
-    
+
     .row
       - var img = "/op/images/run1-"+$localeName+".jpg"
       +screenshot-image(img, img, 450)
     | #{$i18n[dir][subdir].items[3].text3}
-    
+
     .row
       - var img = "/op/images/progress-"+$localeName+".jpg"
       +screenshot-image(img, img, 450)
-    
+
     p #{$i18n[dir][subdir].items[3].text4}
       .row
         - var img = "/op/images/stop-"+$localeName+".jpg"
         +screenshot-image(img, img)
-    
-      
+
+
     +itemtitle(dir, subdir, 4)
 
     p
@@ -149,4 +185,3 @@ block main
           +process-image(img, img)
           tube-set3
       p #{$i18n[dir][subdir].items[4].text3}
-    

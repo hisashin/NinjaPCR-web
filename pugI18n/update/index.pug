@@ -1,0 +1,18 @@
+extends layout
+
+block append metas
+  +meta(metas, $i18n.req.label)
+
+block main
+
+    h4 What's New?
+
+    h5 Firmware 1.2
+    dl
+      dt AP mode
+      dd Added access point (AP) mode.
+      dt Bug fix
+      dd
+        ul
+          li In certain situations the simulated sample temperature values were not updated.
+      // #{$i18n.req.text19}

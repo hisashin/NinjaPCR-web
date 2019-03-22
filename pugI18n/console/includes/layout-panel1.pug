@@ -24,11 +24,31 @@
             li #{$i18n.console.wifiSettings3_3}
         li #{$i18n.console.wifiSettings4}
         li #{$i18n.console.wifiSettings5}
+  section#connectionModeContainer(style="display:none")
+    input#connectionModeServer(type="radio" name="connectionMode" checked="true" value="server")
+    label(for="connectionModeServer") #{$i18n.console.normalMode}
+    input#connectionModeAP(type="radio" name="connectionMode" value="ap")
+    label(for="connectionModeAP") #{$i18n.console.apMode}
+    a.help(href="../op/index.html#item-op-index-3") Help
+
   section
+    // Server mode
     p#ipInputContainer
       span #{$i18n.console.deviceName}
       input#HostText.connectionUI(type="text")
       input#ConnectButton(type="button", value=$i18n.console.connect)
+
+    // AP mode
+    div#apContainer(style="display:none")
+      ol
+        li #{$i18n.console.connectApMode_0}
+        li #{$i18n.console.connectApMode_1}
+        li#RemoteAPModeAlert(style="display:none") #{$i18n.console.remoteAPModeAlert} (
+          a(href=$i18n.console.remoteAPModeLinkAddress) #{$i18n.console.remoteAPModeLinkLabel}
+          | )
+      input#ConnectButtonAP(type="button", value=$i18n.console.connect)
+
+
     p#firmwareVersion(style="display:none")
       span#firmwareVersionLabel Firmware Version
       span.labelVersionCurrent

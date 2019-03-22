@@ -1,5 +1,6 @@
 var STORAGE_KEY_LAST_HOST_NAME = "ninjapcr_host";
 var DEFAULT_HOST = "ninjapcr";
+var IP_ADDR_AP_MODE = "192.168.1.1";
 ConnectionStatus =
 {
     DISCONNECTED: {
@@ -18,7 +19,6 @@ ConnectionStatus =
       buttonDisabled: true,
     }
 };
-
 function showDeviceConnectionStatus(stat) {
   $("#DeviceConnectionStatus").attr("class", stat.className);
   $("#DeviceConnectionStatusLabel").text(getLocalizedMessage(stat.label));
@@ -132,20 +132,57 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 	}
 
 };
+
+NetworkCommunicator.prototype.isLocal = function () {
+  return (
+    location.href.indexOf("http://ninjapcr.tori.st") < 0
+    || location.href.indexOf("local=true") > 0);
+};
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {
 	// callback(port)
+  showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 	DeviceResponse.onDeviceFound = callback;
-	$("#HostText").val(this.loadHostName() || DEFAULT_HOST);
+  var hostName = this.loadHostName();
+  if (hostName == null || hostName.length > 0) {
+    hostName = DEFAULT_HOST;
+  }
+	$("#HostText").val(hostName);
 	var scope = this;
 	$("#ConnectButton").click(function(e) {
-		console.log("Check IP: " + $("#HostText").val());
 		scope.setDeviceHost($("#HostText").val());
 		scope.connect();
 	});
+	$("#ConnectButtonAP").click(function(e) {
+    console.log("Connect (AP)");
+		hostIpAddress = IP_ADDR_AP_MODE;
+		scope.connect();
+  });
 	$("#NewDevice").click(function(){
 		$("#DeviceSettings").toggle();
 	});
+
+  if (this.isLocal()) {
+    // Local console
+    $("#connectionModeContainer").show();
+    $("#connectionModeAP").attr("checked",true);
+    $("#ipInputContainer").hide();
+    $("#apContainer").show();
+
+  } else {
+    // Online console
+    $("#connectionModeContainer").hide();
+
+  }
+  $("#connectionModeContainer input").change(function(e) {
+    if ($("#connectionModeContainer input:checked").val() == "ap") {
+      $("#ipInputContainer").hide();
+      $("#apContainer").show();
+    } else {
+      $("#ipInputContainer").show();
+      $("#apContainer").hide();
+    }
+  });
 };
 function loadJSONP (URL, onError) {
 	var scriptTag = document.createElement("script");
@@ -244,7 +281,13 @@ NetworkCommunicator.prototype.doConnect = function () {
 			}
 			scope.firmwareVersion = obj.version;
 			console.log("Firmware version=" + scope.firmwareVersion);
-			DeviceResponse.onDeviceFound(host, obj.running);
+      if (host) {
+			     DeviceResponse.onDeviceFound(host, obj.running);
+
+      } else {
+			     DeviceResponse.onDeviceFound(hostIpAddress, obj.running);
+      }
+			DeviceResponse.onDeviceFound(host | hostIpAddress, obj.running);
 		},
 		function () {
 			console.log("/connect failed");
@@ -254,7 +297,7 @@ NetworkCommunicator.prototype.doConnect = function () {
     showDeviceConnectionStatus(ConnectionStatus.CONNECTING);
 }
 
-NetworkCommunicator.prototype.scanOngoingExperiment = function () {
+NetworkCommunicator.prototype.scanOngoingExperiment = function (callback) {
 	console.log("TODO scanOngoingExperiment");
 	callback();
 };
@@ -328,7 +371,6 @@ NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
 };
 NetworkCommunicator.prototype.sendControlCommand = function (command) {
   var URL = getDeviceHost() + "/" + command;
-  console.log("sendControlCommand " + URL)
   loadJSONP(URL)
 };
 $( window ).load(function() {

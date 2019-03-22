@@ -19,7 +19,12 @@ block main
         - var img = "/assy/images/setup-plug-adapter-2.jpg"
         +process-image(img, img)
       | #{$i18n[dir][subdir].items[0].text1}
-    
+
+    p
+      | #{$i18n[dir][subdir].items[0].text2_1}
+      a#link(href="../../op/index.html#item-op-index-1") #{$i18n[dir][subdir].items[0].text2_2}
+      | #{$i18n[dir][subdir].items[0].text2_3}
+
     +itemtitle(dir, subdir, 1)
 
     p
@@ -63,7 +68,7 @@ block main
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseIOS" aria-expanded="false" aria-controls="collpseIOS") #{$i18n[dir][subdir].items[2].text6}
           .collapse#collapseIOS(aria-labelledby="headingIOS" data-parent="#accordion1")
-            .card-body          
+            .card-body
               | #{$i18n[dir][subdir].items[2].text7}
               .row
                 - var img = "/assy/images/setup-ap-list-ios1-"+$localeName+".jpg"
@@ -74,14 +79,14 @@ block main
             h5.mb-0
               button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseAndroid" aria-expanded="false" aria-controls="collpseAndroid") #{$i18n[dir][subdir].items[2].text8}
           .collapse#collapseAndroid(aria-labelledby="headingAndroid" data-parent="#accordion1")
-            .card-body          
+            .card-body
               | #{$i18n[dir][subdir].items[2].text9}
               .row
                 - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
                 +screenshot-image(img, img, 440)
                 - var img = "/assy/images/setup-ap-list-android2-"+$localeName+".jpg"
                 +screenshot-image(img, img, 440)
-      
+
     +itemtitle(dir, subdir, 3)
 
     p
@@ -98,19 +103,19 @@ block main
       ol
         li
           strong "#{$i18n[dir][subdir].items[4].text1}"
-          |  : 
+          |  :
           | #{$i18n[dir][subdir].items[4].text2}
         li
           strong "#{$i18n[dir][subdir].items[4].text3}"
-          |  : 
+          |  :
           | #{$i18n[dir][subdir].items[4].text4}
         li
           strong "#{$i18n[dir][subdir].items[4].text5}"
-          |  : 
+          |  :
           | #{$i18n[dir][subdir].items[4].text6}
         li
           | #{$i18n[dir][subdir].items[4].text7}
-    
+
     +itemtitle(dir, subdir, 5)
 
     p
@@ -140,7 +145,7 @@ block main
               | #{$i18n[dir][subdir].items[6].text7}
               a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi" target="_blank") #{$i18n[dir][subdir].items[6].text8}
               | #{$i18n[dir][subdir].items[6].text9}
-    
+
     +itemtitle(dir, subdir, 7)
 
     p
@@ -160,7 +165,7 @@ block main
         | #{$i18n[dir][subdir].items[8].text3}
 
     +itemtitle(dir, subdir, 9)
-    
+
     p
       .accordion#accordion3
         .card

@@ -1,12 +1,12 @@
 {
-	"metas" : {
-		"siteName" : "NinjaPCR",
-		"url" : "https://ninjapcr.tori.st",
-		"title" : "NinjaPCR",
-		"keywords" : "NinjaPCR,PCR,Thermal cycler,DNA amplifier",
-		"description" : "NinjaPCR is an opensource thermalcycler",
-		"image" : "https://ninjapcr.tori.st/images/render/520x577.png",
-		"author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
+    "metas" : {
+        "siteName" : "NinjaPCR",
+        "url" : "https://ninjapcr.tori.st",
+        "title" : "NinjaPCR",
+        "keywords" : "NinjaPCR,PCR,Thermal cycler,DNA amplifier",
+        "description" : "NinjaPCR is an opensource thermalcycler",
+        "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
+        "author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
 	},
     "contact" : {
         "label" : "Contact Form",
@@ -17,6 +17,11 @@
       "shortlabel" : "Console",
       "appTitle":"NinjaPCR",
       "addNewExperiment":"Add a new experiment",
+			"normalMode":"Normal mode",
+			"apMode":"Access point (AP) mode",
+      "remoteAPModeAlert":" It is recommended that you download the offline console beforehand.",
+      "remoteAPModeLinkLabel":"Learn more",
+      "remoteAPModeLinkAddress":"http://localhost:3000/en/op/index.html#item-op-index-3",
       "reRunExperiment":"Re-run an experiment",
       "searching":"Searching for a device...",
       "download":"Open Download Page",
@@ -74,7 +79,7 @@
       "disconnectedInExperiment":"Device is disconnected.",
       "wifiSettingsButton":"Setup a new NinjaPCR device / Change network configuration",
       "wifiSettings0":"Plug the power adapter into NinjaPCR and then into an outlet.",
-      "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in WiFi Setup mode in a few seconds.",
+      "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds.",
       "wifiSettings2":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list.",
       "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
       "wifiSettings3_0":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
@@ -88,34 +93,55 @@
 
       "androidGuide":"You need to install NinjaPCR app. Please install the app on Play Store.",
       "deviceName":"Device name",
-      "connect":"Connect"
+      "connect":"Connect",
+			"connectApMode_0":"Start NinjaPCR in access point (AP) mode.",
+			"connectApMode_1":"Select SSID:NinjaPCR."
     },
     "general" : {
       "nextstep" : "Next step : "
     },
     "index" : {
-      "carousel" : {
-        "slides" : [
-          {
-            "alt" : "Opensource",
-            "label" : "Open Source DNA Amplifer",
-            "text" : "We are totally open",
-            "link" : "open"
-          },
-          {
-            "alt" : "Wi-Fi",
-            "label" : "Wi-Fi Supported",
-            "text" : "Use with your smartphone",
-            "link" : "wifi"
-          },
-          {
-            "alt" : "Precise",
-            "label" : "Smart Sensor and Simulation",
-            "text" : "Precise at any temperature",
-            "link" : "accuracy"
-          }
-        ]
-      }
+        "carousel" : {
+            "slides" : [
+              {
+                "alt" : "Opensource",
+                "label" : "Open Source DNA Amplifer",
+                "text" : "We are totally open",
+                "link" : "open"
+              },
+              {
+                "alt" : "Wi-Fi",
+                "label" : "Wi-Fi Supported",
+                "text" : "Use with your smartphone",
+                "link" : "wifi"
+              },
+              {
+                "alt" : "Precise",
+                "label" : "Smart Sensor and Simulation",
+                "text" : "Precise at any temperature",
+                "link" : "accuracy"
+              }
+            ]
+        },
+        "features" : {
+            "wifi" : {
+                "title" : "WiFi",
+                "text1" : "Accessible from local network / Access point mode without a Wi-Fi router",
+                "text2" : "Console works on web browsers on smartphones, tablets and PCs.",
+                "text3" : "Powered by ESP8266"
+            },
+            "accuracy" : {
+                "title" : "Accuracy",
+                "text1" : "24bit AD converter",
+                "text2" : "Switching low & high modes",
+                "text3" : "Temperature simulation of sample in tubes"
+            },
+            "open" : {
+                "title" : "Open-source",
+                "text1" : "All source codes and scematics are available on GitHub",
+                "text2" : "Designed to be built easily"
+            }
+        }
     },
     "assy" : {
         "label" : "Assembly Manual",
@@ -383,12 +409,15 @@
           "label" : "Initial Setup",
           "items" : [
             {
-              "title" : "Connect power adapter",
-              "text1" : "Plug the power adapter into NinjaPCR and then into an outlet."
+                "title" : "Connect power adapter",
+                "text1" : "Plug the power adapter into NinjaPCR and then into an outlet.",
+                "text2_1":"If you are planning to use NinjaPCR with only \"access point (AP) mode\" without connecting a local Wi-Fi network, please skip this page and jump to \"",
+                "text2_2":"Manage experiment profiles",
+                "text2_3":"\"."
             },
             {
-              "title" : "Start in network setup mode",
-              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in Wi-Fi Setup mode in a few seconds."
+              "title" : "Start in access point (AP) mode",
+              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds."
             },
             {
               "title" : "Change your Wi-Fi settings temporarily",
@@ -454,9 +483,9 @@
               "text2" : "Dropdown list on NinjaPCR's Wi-Fi settings page doesn't contain the SSID you want to use.",
               "text2_1" : "Access poitns of some types don't show up in the list. For example, an access point in stealth mode is hidden. Some smartphones in tethering mode don't listed up. In such cases, please input the SSID's name to the textbox below and choose nothing from the dropdown list.",
               "text3" : "Connection test fails",
-              "text3_1" : "Start NinjaPCR in network setup mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
+              "text3_1" : "Start NinjaPCR in access point (AP) mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
               "text3_2":"Your device and NinjaPCR should connect to the same network. Please review Wi-Fi settings of both.",
-              "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in Wi-Fi setup mode? You don't need to press \"Mode\" button.",
+              "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in access point (AP) mode? You don't need to press \"Mode\" button.",
               "text3_4" : "NinjaPCR uses a mechanism called \"mDNS\" to be accessible from other devices. mDNS is available by default in macOS and iOS. Though Windows and Linux have mDNS helper application in most cases, if your PC doesn't have it, please install a helper software.",
               "text11" : "Windows",
               "text12" : "Please nstall ",
@@ -475,66 +504,90 @@
           "label" : "Operation Manual",
           "shortlabel" : "Op.Manual",
           "items" : [
+            {
+                "title" : "Initial setup",
+                "text1" : "Network configuration is needed when you use NinjaPCR for the first time. If you have not done yet, please refer to ",
+                "text2" : " document."
+              },
               {
-                  "title" : "Initial setup",
-                  "text1" : "Network configuration is needed when you use NinjaPCR for the first time. If you have not done yet, please refer to ",
-                  "text2" : " document."
-                },
-                {
-                  "title" : "Manage experiment profiles",
-                  "text1" : "You can create an experiment profile to run it just once or save it to use repeatedly.",
-                  "text2" : "Create",
-                  "text3" : "To create a new experiment profile, click \"+\" icon. Profile editor will open.",
-                  "text4" : "Edit",
-                  "text5" : "A profile consists of one or more cycles. A cycle has some steps and repeat counts.",
-                  "text6" : "Each step has duration and temperature. If you need to cool or heat samples very slowly, you can set ramp time (shortest transition time) to a step. If ramp time is empty, NinjaPCR tries to change temperature as fast as possible.",
-                  "text7" : "If your need a complex profile with cycles with multiple patterns, click \"More Options\" button to add cycles. Temperature of the lid is 110 Celsius by default but you can customize it by changing \"Heater Lid\" value. ",
-                  "text8" : "For example, the profile below is written as screenshot images below.",
-                  "text9" : "x1",
-                  "text10" : "Initial Denaturation",
-                  "text11" : "95℃",
-                  "text12" : "2 minutes",
-                  "text13" : "x35",
-                  "text14" : "Denaturation",
-                  "text15" : "95℃",
-                  "text16" : "30 seconds",
-                  "text17" : "Annealing",
-                  "text18" : "55℃",
-                  "text19" : "30 seconds",
-                  "text20" : "Extension",
-                  "text21" : "72℃",
-                  "text22" : "30 seconds",
-                  "text23" : "x1",
-                  "text24" : "Final extension",
-                  "text25" : "72℃",
-                  "text26" : "10 minutes",
-                  "text27" : "Save",
-                  "text28" : "To save your edit, click \"Save Preset\" button.",
-                  "text29" : "Profiles are saved in storage area of your web browser. They are deleted by erasing data by browser settings. You can't save of load profiles in modes which don't allow usage of storage functionalities.",
+                "title" : "Manage experiment profiles",
+                "text1" : "You can create an experiment profile to run it just once or save it to use repeatedly.",
+                "text2" : "Create",
+                "text3" : "To create a new experiment profile, click \"+\" icon. Profile editor will open.",
+                "text4" : "Edit",
+                "text5" : "A profile consists of one or more cycles. A cycle has some steps and repeat counts.",
+                "text6" : "Each step has duration and temperature. If you need to cool or heat samples very slowly, you can set ramp time (shortest transition time) to a step. If ramp time is empty, NinjaPCR tries to change temperature as fast as possible.",
+                "text7" : "If your need a complex profile with cycles with multiple patterns, click \"More Options\" button to add cycles. Temperature of the lid is 110 Celsius by default but you can customize it by changing \"Heater Lid\" value. ",
+                "text8" : "For example, the profile below is written as screenshot images below.",
+                "text9" : "x1",
+                "text10" : "Initial Denaturation",
+                "text11" : "95℃",
+                "text12" : "2 minutes",
+                "text13" : "x35",
+                "text14" : "Denaturation",
+                "text15" : "95℃",
+                "text16" : "30 seconds",
+                "text17" : "Annealing",
+                "text18" : "55℃",
+                "text19" : "30 seconds",
+                "text20" : "Extension",
+                "text21" : "72℃",
+                "text22" : "30 seconds",
+                "text23" : "x1",
+                "text24" : "Final extension",
+                "text25" : "72℃",
+                "text26" : "10 minutes",
+                "text27" : "Save",
+                "text28" : "To save your edit, click \"Save Preset\" button.",
+                "text29" : "Profiles are saved in storage area of your web browser. They are deleted by erasing data by browser settings. You can't save of load profiles in modes which don't allow usage of storage functionalities.",
 
-                  "text30" : "Delete",
-                  "text31" : "A profile can be deleted by the trash bin icon."
-                },
-                {
-                  "title" : "Set tubes",
-                  "text1" : "Open the lid.",
-                  "text2" : "Insert tubes to the well.",
-                  "text3" : "Close the lid.",
-                  "text4" : "Turn the knob clockwise to press tubes lightly with the lid."
-                },
-                {
-                  "title" : "Start an Expriment",
-                  "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
-                  "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
-                  "text3" : "When PCR is running, temperature of the well and the lid and estimated temperature.",
-                  "text4" : "You can abort the experiment, click \"Stop\" button."
-                },
-                {
-                  "title" : "After an Experiment",
-              "text1" : "When the profile is all done, \"Finished\" is displayed.",
-                  "text2" : "Open the lid and take out tubes. Please be careful not to touch the well or the lid. They are very hot after for several minutes!",
-                  "text3" : "Plug the power adapter out."
-                }
+                "text30" : "Delete",
+                "text31" : "A profile can be deleted by the trash bin icon."
+              },
+              {
+                "title" : "Set tubes",
+                "text1" : "Open the lid.",
+                "text2" : "Insert tubes to the well.",
+                "text3" : "Close the lid.",
+                "text4" : "Turn the knob clockwise to press tubes lightly with the lid."
+              },
+              {
+                "title" : "Start an Expriment",
+								"server" : {
+									"title":"Normal mode (HTTP server mode)"
+								},
+								"ap" : {
+									"title":"Access point (AP) mode",
+									"text1_0":"Power the NinjaPCR while holding the \"MODE\" button on the front panel. Then it starts in access point (AP) mode.",
+									"text1_1":"Learn more about access point (AP) mode",
+									"text2_0":"While using access point (AP) mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
+									"text3_title":"PC",
+									"text3_0":"Download ",
+									"text3_1":"the Zip file",
+									"text3_2":" and expand it into your local disk.",
+									"text4_title":"Android",
+									"text4_0":"Download ",
+									"text4_1":"the app",
+									"text4_2":" from Google Play.",
+									"text5_title":"iOS",
+									"text5_0":"Download",
+									"text5_1":"the app",
+									"text5_2":"from App Store.",
+									"text6_0":"Select SSID:NinjaPCR.",
+									"text6_1":"Learn more",
+									"text7":"Open the console, select \"Access point (AP) mode\" and press \"connect\" button."
+								},
+                "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
+                "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
+                "text3" : "When PCR is running, temperature of the well and the lid and estimated temperature.",
+                "text4" : "You can abort the experiment, click \"Stop\" button."
+              },
+              {
+                "title" : "After an Experiment",
+            		"text1" : "When the profile is all done, \"Finished\" is displayed.",
+                "text2" : "Open the lid and take out tubes. Please be careful not to touch the well or the lid. They are very hot after for several minutes!",
+                "text3" : "Plug the power adapter out."
+              }
           ]
         }
     },
@@ -936,6 +989,10 @@
       "text25" : "TODO",
       "text26" : "Weight",
       "text27" : "TODO"
+    },
+    "update" : {
+        "label" : "Updates",
+        "shortlabel" : "Updates"
     },
     "about" : {
         "label" : "About Us",

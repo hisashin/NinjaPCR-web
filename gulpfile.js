@@ -11,7 +11,7 @@ const typescript = require('gulp-typescript');
 const sass = require('gulp-sass');
 const exec = require('gulp-exec');
 
-gulp.task('default', ['pug', 'pugI18n', "shell"]);
+gulp.task('default', ['pug', 'pugI18n']);
 gulp.task('pug', () => {
   return gulp.src(['./pug/**/*.pug', './pug/**/*.jade', '!**/layout*', '!**/include/*', '!**/includes/*'])
   .pipe(pug({
