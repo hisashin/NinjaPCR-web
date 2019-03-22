@@ -1,12 +1,12 @@
 {
-	"metas" : {
-		"siteName" : "NinjaPCR",
-		"url" : "https://ninjapcr.tori.st",
-		"title" : "NinjaPCR",
-		"keywords" : "NinjaPCR,PCR,Thermal cycler,DNA amplifier",
-		"description" : "NinjaPCR is an opensource thermalcycler",
-		"image" : "https://ninjapcr.tori.st/images/render/520x577.png",
-		"author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
+    "metas" : {
+        "siteName" : "NinjaPCR",
+        "url" : "https://ninjapcr.tori.st",
+        "title" : "NinjaPCR",
+        "keywords" : "NinjaPCR,PCR,Thermal cycler,DNA amplifier",
+        "description" : "NinjaPCR is an opensource thermalcycler",
+        "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
+        "author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
 	},
     "contact" : {
         "label" : "Contact Form",
@@ -390,8 +390,11 @@
           "label" : "Initial Setup",
           "items" : [
             {
-              "title" : "Connect power adapter",
-              "text1" : "Plug the power adapter into NinjaPCR and then into an outlet."
+                "title" : "Connect power adapter",
+                "text1" : "Plug the power adapter into NinjaPCR and then into an outlet.",
+                "text2_1":"If you are planning to use NinjaPCR with only \"access point (AP) mode\" without connecting a local Wi-Fi network, please skip this page and jump to \"",
+                "text2_2":"Manage experiment profiles",
+                "text2_3":"\"."
             },
             {
               "title" : "Start in access point (AP) mode",

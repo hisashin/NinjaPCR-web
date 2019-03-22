@@ -1,13 +1,13 @@
 {
-	"metas" : {
-		"siteName" : "NinjaPCR",
-		"url" : "https://ninjapcr.tori.st",
-		"title" : "NinjaPCR",
-		"keywords" : "NinjaPCR,PCR,サーマルサイクラー,DNA増幅器",
-		"description" : "NinjaPCRはオープンソースのサーマルサイクラーです",
-		"image" : "https://ninjapcr.tori.st/images/render/520x577.png",
-		"author" : "株式会社鳥人間"
-	},
+    "metas" : {
+        "siteName" : "NinjaPCR",
+        "url" : "https://ninjapcr.tori.st",
+        "title" : "NinjaPCR",
+        "keywords" : "NinjaPCR,PCR,サーマルサイクラー,DNA増幅器",
+        "description" : "NinjaPCRはオープンソースのサーマルサイクラーです",
+        "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
+        "author" : "株式会社鳥人間"
+    },
     "contact" : {
         "label" : "コンタクトフォーム",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"
@@ -391,11 +391,14 @@
           "items" : [
             {
               "title" : "電源接続",
-              "text1" : "アダプタを接続します。"
+              "text1" : "アダプタを接続します。",
+              "text2_1":"NinjaPCRをネットワークに繋がず、アクセスポイント (AP) モードのみでPCR機能を使用する場合は、この先の「アクセスポイント (AP) モードでの起動」から「接続テスト」のプロセスは省略して「",
+              "text2_2":"実験プロファイルの管理",
+              "text2_3":"」まで進んでください。"
             },
             {
               "title" : "アクセスポイント (AP) モードでの起動",
-              "text1" : "\"Mode\" ボタンを押したまま \"Reset\" ボタンを押し、\"Mode\" ボタンを押し続けた状態で \"Reset\" ボタンを離します。数秒でNinjaPCRはアクセスポイント (AP) モードで起動します。"
+              "text1" : "\"Mode\" ボタンを押したまま \"Reset\" ボタンを押し、\"Mode\" ボタンをそのまま押し続けた状態で \"Reset\" ボタンを離します。数秒でNinjaPCRはアクセスポイント (AP) モードで起動します。"
             },
             {
               "title" : "一時的にWi-Fiの設定を変える",
