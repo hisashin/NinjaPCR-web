@@ -29,5 +29,6 @@ block main
   p
     .row
       - var img = "/maker/images/heater-spec.jpg"
+      +process-image(img, img)
 
   +nextstep('/maker/plate/index.html', $i18n.maker.plate.label)
