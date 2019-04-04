@@ -749,8 +749,8 @@
               "table" : {
                 "head" : [ "mm", "3D (Fusion360)", "Inkscape", "PDF", "CorelDRAW" ],
                 "body" : [
-                  [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr" ],
-                  [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr" ]
+                    [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ],
+                    [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ]
                 ]
               }
             },
