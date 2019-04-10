@@ -22,6 +22,8 @@ block main
       | #{$i18n[dir][subdir].items[0].text1}
       a.link(href="https://github.com/hisashin/NinjaPCR", target="_blank") #{$i18n[dir][subdir].items[0].text2}
       | #{$i18n[dir][subdir].items[0].text3}
+      a.link(href="https://docs.google.com/spreadsheets/d/1QYWESJrQ2N63OPvq1pnQvB-iVQkymN-hYeTYLx7xuOw/edit?usp=sharing", target="_blank") #{$i18n[dir][subdir].items[0].text4}
+      | #{$i18n[dir][subdir].items[0].text5}
 
     +itemtitle(dir, subdir, 1)
 
@@ -75,6 +77,11 @@ block main
         | #{$i18n[dir][subdir].items[2].text4}
         a.link(href="https://shop.tori.st/product/heater/", target="_blank") #{$i18n[dir][subdir].items[2].text5}
         | #{$i18n[dir][subdir].items[2].text6}
+        
+      p
+        .row
+          - var img = "/maker/images/heater-spec.jpg"
+          +process-image(img, img)
 
       h5 #{$i18n[dir][subdir].items[2].text7}
       p

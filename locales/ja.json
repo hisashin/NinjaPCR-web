@@ -601,7 +601,9 @@
               "title" : "フルスクラッチのすすめ",
               "text1" : "NinjaPCRは完全にオープンソースで、誰でも",
               "text2" : "GitHub",
-              "text3" : "上のすべてのデータにアクセスできます。レーザーカット、金属加工、電子基板の発注と実装といった、多種多様なスキルを一度に経験する教材としても理想的ですが、未経験者が助けなしにすべてを作り上げるのは相当な困難を伴います。NinjaPCRは通常販売している「キット版」(右)の他に、自作のための「メイカー版」(左)があり、ここでその製作手順を詳細にご説明します。より多くの方々がメイカー版NinjaPCRの製作を通じて自作スキルをも手に入れ、他の創造的な活動に応用してくれることを望みます。"
+              "text3" : "上のすべてのデータにアクセスできます。必要なパーツリスト(BOM)は",
+              "text4" : "こちら",
+              "text5" : "です。レーザーカット、金属加工、電子基板の発注と実装といった、多種多様なスキルを一度に経験する教材としても理想的ですが、未経験者が助けなしにすべてを作り上げるのは相当な困難を伴います。NinjaPCRは通常販売している「キット版」(右)の他に、自作のための「メイカー版」(左)があり、ここでその製作手順を詳細にご説明します。より多くの方々がメイカー版NinjaPCRの製作を通じて自作スキルをも手に入れ、他の創造的な活動に応用してくれることを望みます。"
             },
             {
               "title" : "キット版とメイカー版の違い",
@@ -747,8 +749,8 @@
               "table" : {
                 "head" : [ "mm", "3D (Fusion360)", "Inkscape", "PDF", "CorelDRAW" ],
                 "body" : [
-                  [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr" ],
-                  [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr" ]
+                  [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ],
+                  [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ]
                 ]
               }
             },

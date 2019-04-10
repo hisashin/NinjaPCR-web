@@ -26,4 +26,9 @@ block main
     p
       | #{$i18n[dir][subdir].items[0].text1}
 
+  p
+    .row
+      - var img = "/maker/images/heater-spec.jpg"
+      +process-image(img, img)
+
   +nextstep('/maker/plate/index.html', $i18n.maker.plate.label)
