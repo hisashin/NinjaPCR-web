@@ -16,3 +16,5 @@ android/app/release/*
 android/build/*
 android/app/src/main/assets/NinjaPCR_console/*
 # iOS app
+ios/NinjaPCR/NinjaPCR.xcodeproj/xcuserdata/maripo.xcuserdatad/
+ios/NinjaPCR/NinjaPCR/Resources/data.bundle/*
