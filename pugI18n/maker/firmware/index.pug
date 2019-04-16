@@ -21,10 +21,10 @@ block main
   //- Arduino IDEをインストール
   +itemtitle(dir, subdir, 1)
   p #{$i18n[dir][subdir].items[1].text1}
-    a(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
+    a.link(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
     | #{$i18n[dir][subdir].items[1].text2}
     br
-    a(href="https://www.arduino.cc/en/Main/Software") https://www.arduino.cc/en/Main/Software
+    a.link(href="https://www.arduino.cc/en/Main/Software") https://www.arduino.cc/en/Main/Software
 
   //- ArduinoのESP8266対応
   +itemtitle(dir, subdir, 2)
@@ -44,13 +44,13 @@ block main
     - var img = "/maker/images/firmware_arduino_board_manager3.png"
     +process-image(img, img)
   p #{$i18n[dir][subdir].items[2].text7}
-    a(href="https://github.com/esp8266/Arduino") #{$i18n[dir][subdir].items[2].text8}
+    a.link(href="https://github.com/esp8266/Arduino") #{$i18n[dir][subdir].items[2].text8}
     | #{$i18n[dir][subdir].items[2].text9}
 
   //- NinjaPCRのソースコードをダウンロード
   +itemtitle(dir, subdir, 3)
   p #{$i18n[dir][subdir].items[3].text1}
-    a(href="https://github.com/hisashin/NinjaPCR") #{$i18n[dir][subdir].items[3].text2}
+    a.link(href="https://github.com/hisashin/NinjaPCR") #{$i18n[dir][subdir].items[3].text2}
     | #{$i18n[dir][subdir].items[3].text3}
     | "git@github.com:hisashin/NinjaPCR.git"
     | #{$i18n[dir][subdir].items[3].text4}

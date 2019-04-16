@@ -970,40 +970,40 @@
                     "text2" : "You need to install ESP8266 add-ons such as libraries, configuration files and build tools with the Boards Manager.",
                     "text3" : "First, open \"Preferences\" from the Arduino's tool bar and add",
                     "text4" : "tothe \"Additional Board Manager URLs\" textbox.",
-                    "text5" : "Then,select \"Tools > Board: > Boards Manager...\" and select \"esp8266 by ESP8266 Community\".",
+                    "text5" : "Then, select \"Tools > Board: > Boards Manager...\" and select \"esp8266 by ESP8266 Community\".",
                     "text6" : "If you find multiple versions, please select Version 2.4.2 or upper.",
-                    "text7" : "You can also install ESP8266 add-ons manually from the GitHub repository. For detailed information, please refer to",
-                    "text8" : "the GitHub repo of ESP8266 project",
+                    "text7" : "You can also install ESP8266 add-ons manually from the GitHub repository. For detailed information, please refer to ",
+                    "text8" : " the GitHub repo of ESP8266 project",
                     "text9" : "."
                 },
                 {
                     "title" : "Download the source code of NinjaPCR",
-                    "text1" : "",
-                    "text2" : "GitHub上のNinjaPCRリポジトリ",
-                    "text3" : "からソースコードをダウンロードします。zipでダウンロードして解凍するか、gitを利用して",
-                    "text4" : "をcloneしてください。",
-                    "text5" : "",
-                    "text6" : "をArduino IDEで開きます。",
-                    "text7" : "ビルド設定を選びます。\"Board\" は \"Generic ESP8266 Module\" を選択します。",
-                    "text8" : "ESP8266にはEEPROM容量が2MBと4MBのものが流通していますので、2MBの場合は Flash Size を \"2M (1M SPIFFS)\" に、\"4M (3M SPIFFS)\" にします。",
-                    "text9" : "Arduino IDEの \"Verify\" ボタンを押し、正常にビルドできるかどうか確認してください。"
+                    "text1" : "Download NinjaPCR's source code from ",
+                    "text2" : "GitHub repository",
+                    "text3" : ". The easiest way is to download and extend the zip archive. If you are familiar with git or want to follow future updates, clone",
+                    "text4" : "with git.",
+                    "text5" : "After downloading, open",
+                    "text6" : "with Arduino IDE.",
+                    "text7" : "You need to select build settings for ESP8266. Open \"Board\" and choose \"Generic ESP8266 Module\".",
+                    "text8" : "Then, choose Flash size. Note that there are variations of ESP8266. Some chips have 4MB flash memories while others have only 2MB. Select \"2M (1M SPIFFS)\" for the 2M model and \"4M (3M SPIFFS)\" for the 4MB model.",
+                    "text9" : "After configuration, press the \"Verify\" button and make sure that the source code have no problems."
                 },
                 {
                     "title" : "Connect NinjaPCR to your PC",
-                    "text1" : "電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。",
-                    "text2" : "USBシリアル変換ケーブルでNinjaPCRとPCを接続します。右の6本のピンに挿します。",
-                    "text3" : "左の2本は未接続の状態にしておいてください。",
-                    "text4" : "左の2本のピンにジャンパピンを挿し込みます。",
-                    "text5" : "この2本のピンが接続された状態で電源投入またはリセットを行うことで、ESP8266は通常起動モードではなくファームウェア書き込みモードで起動します。",
-                    "text6" : "電源を接続し、書き込みモードで起動します。",
-                    "text7" : "なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは \"74880\" を選択します。",
-                    "text8" : "正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。"
+                    "text1" : "Connect the power cable to NinjaPCR's connector. At this time, please do not put the plug in the outlet.",
+                    "text2" : "Then, connect NinjaPCR to your PC with a USB serial cable. The serial pins should be attached to the right six pins on the board.",
+                    "text3" : "",
+                    "text4" : "Attach a jumper pin to the two pins with the label \"IO0\".",
+                    "text5" : "By turning on or resetting the board with these pins connected, you can boot the chip into the bootloader mode.",
+                    "text6" : "",
+                    "text7" : "If you are not sure that the chip is really in the bootloader mode, please open the serial monitor of Arduino IDE, set the baud rateto \"74880\".",
+                    "text8" : "When ESP8266 starts with the bootloader mode correctly, the monitor displays messages as shown below:"
                 },
                 {
                     "title" : "Burn!",
-                    "text1" : "Arduino IDEの \"Upload\" ボタンを押すと、ビルドしたバイナリがESP8266に書き込まれます。",
-                    "text2" : "一部の環境ではArduinoからの書き込みに失敗しますが、生成されたバイナリファイルをコマンドラインツールesptool.pyを使って書き込むと成功する場合があります。",
-                    "text3" : "OSや周辺ツール、書き込みに使用するツールなど環境に依存する要素が大きいので、もしうまくいかない場合は、できるだけ詳しく環境と状況を添えてお問い合わせください。"
+                    "text1" : "Click the \"Upload\" button of Arduino IDE to build and flash the program.",
+                    "text2" : "If you have troubles when building or flashing with Arduino IDE, please try esptool.py from command line.",
+                    "text3" : "Building and flashing depend on environments such as OS, toolchains and flashing tools. If you have troubles, please contact us with detailed situation."
                 }
             ]
         }
