@@ -77,8 +77,6 @@ block main
     .row
       - var img = "/maker/images/firmware_ninjapcr_verify.png"
       +process-image(img, img)
-      +process-image(img, img)
-    p Verifyを押してコードを確認します。
     h4 NinjaPCR本体をPCに接続
     p 電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。
     .row
@@ -88,19 +86,29 @@ block main
     .row
       - var img = "/maker/images/firmware_serial.jpg"
       +process-image(img, img)
-    p 左の2本のピンにジャンパピンを挿し込みます。この2本のピンが接続された状態で電源投入またはリセットを行うことで、通常起動モードではなくファームウェア書き込みモードで起動します。
+      - var img = "/maker/images/firmware_pins_usbserial.png"
+      +process-image(img, img)
+    p 左の2本のピンにジャンパピンを挿し込みます。この2本のピンが接続された状態で電源投入またはリセットを行うことで、ESP8266は通常起動モードではなくファームウェア書き込みモードで起動します。
     .row
       - var img = "/maker/images/firmware_serial_jumper1.jpg"
+      +process-image(img, img)
+      - var img = "/maker/images/firmware_pins_jumper.png"
       +process-image(img, img)
     .row
       - var img = "/maker/images/firmware_serial_jumper2.jpg"
       +process-image(img, img)
-    p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは "115200" を接続します。
+    p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは "74880" を選択します。
     p 正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。
+    .row
+      - var img = "/maker/images/firmware_serial_bootmode.png"
+      +process-image(img, img)
 
     h4 書き込み
     p 書き込みボタンを押します。
-    p 一部の環境でうまくいかない場合がありますので、コマンドラインからesptool.pyを使って書き込みます。
-    p 環境に依存する要素があるかもしれません。もしうまくいかない場合は、できるだけ詳しく環境と状況を添えてお問い合わせください。
+    .row
+      - var img = "/maker/images/firmware_ninjapcr_upload.png"
+      +process-image(img, img)
+    p 一部の環境ではArduinoからの書き込みに失敗しますが、生成されたバイナリファイルをコマンドラインツールesptool.pyを使って書き込むと成功する場合があります。
+    p OSや周辺ツール、書き込みに使用するツールなど環境に依存する要素が大きいので、もしうまくいかない場合は、できるだけ詳しく環境と状況を添えてお問い合わせください。
 
   +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)
