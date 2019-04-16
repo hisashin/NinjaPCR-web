@@ -7,10 +7,12 @@ package-lock.json
 .atomignore
 
 # Android app
+android/android.iml
 android/.gradle/*
 android/.idea/*
 android/app/google-services.json
 android/app/build/*
 android/app/release/*
 android/build/*
+android/app/src/main/assets/NinjaPCR_console/*
 # iOS app
