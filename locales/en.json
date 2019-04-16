@@ -966,15 +966,15 @@
                 },
                 {
                     "title" : "Install the ESP8266 add-ons",
-                    "text1" : "Arduino IDEはそのままではESP8266用のプログラムをビルドしたり書き込みを行ったりすることができません。",
-                    "text2" : "サードパーティ製のハードウェアをサポートするライブラリやボード設定やツールをインストールする \"Board Manager\" という仕組みを利用し、ESP8266に対応する必要があります。",
-                    "text3" : "まず、\"Preferences\" で \"Additional Board Manager URLs\" に",
-                    "text4" : "を追加します。",
-                    "text5" : "Arduinoのツールバーから \"Tools > Board: > Boards Manager...\" を選択し、\"esp8266 by ESP8266 Community\" をインストールします。",
-                    "text6" : "バージョンは2.4.2以上を選択してください。",
-                    "text7" : "Arduino IDE経由ではなくGitHubのリポジトリからcloneして手動でインストールするという方法もあります。詳しくは",
-                    "text8" : "ESP8266ライブラリのGitHubリポジトリ",
-                    "text9" : "を参照してください。"
+                    "text1" : "Arduino IDE doesn't support ESP8266 by default.",
+                    "text2" : "You need to install ESP8266 add-ons such as libraries, configuration files and build tools with the Boards Manager.",
+                    "text3" : "First, open \"Preferences\" from the Arduino's tool bar and add",
+                    "text4" : "tothe \"Additional Board Manager URLs\" textbox.",
+                    "text5" : "Then,select \"Tools > Board: > Boards Manager...\" and select \"esp8266 by ESP8266 Community\".",
+                    "text6" : "If you find multiple versions, please select Version 2.4.2 or upper.",
+                    "text7" : "You can also install ESP8266 add-ons manually from the GitHub repository. For detailed information, please refer to",
+                    "text8" : "the GitHub repo of ESP8266 project",
+                    "text9" : "."
                 },
                 {
                     "title" : "Download the source code of NinjaPCR",
