@@ -22,27 +22,15 @@ block main
       | #{$i18n[dir][subdir].items[0].text1}
   else
     +itemtitle(dir, subdir, 0)
-    ol
-      li Arduino IDEをインストール
-      li ソースをダウンロード
-      li 必要ならドライバをインストール
-      li 電源を接続
-      li USBシリアルを差し込む (配列は次のようになっています)
-      li ジャンパピンを差す
-      li 書き込む
-      li (macOS High Sierraなど) 一部環境で書き込めない場合はコマンドラインツールから
-      li トラブルシューティング
-    p
-      | #{$i18n[dir][subdir].items[0].text1}
-    p ここでは、NinjaPCRのプログラムをビルドし、基板上のESP8266に書き込む方法を説明します。USBシリアル変換ケーブルおよびジャンパピンが必要です。
-    h4 Arduino IDEをインストール
+    p #{$i18n[dir][subdir].items[0].text1}
+    +itemtitle(dir, subdir, 1)
     p
       a(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
       | にアクセスし、最新のArduino IDEをダウンロードしてインストールします。
       br
       a(href="https://www.arduino.cc/en/Main/Software") https://www.arduino.cc/en/Main/Software
 
-    h4 ArduinoのESP8266対応
+    +itemtitle(dir, subdir, 2)
     p Arduino IDEはそのままではESP8266用のプログラムをビルドしたり書き込みを行ったりすることができません。
     p サードパーティ製のハードウェアをサポートするライブラリやボード設定やツールをインストールする "Board Manager" という仕組を利用し、ESP8266に対応する必要があります。
     p まず、Preferencesで "Additional Board Manager URLs" に "http://arduino.esp8266.com/stable/package_esp8266com_index.json" を追加します。
@@ -59,7 +47,7 @@ block main
       a(href="https://github.com/esp8266/Arduino") ESP8266ライブラリのGitHubリポジトリ
       | を参照してください。
 
-    h4 NinjaPCRのソースコードをダウンロード
+    +itemtitle(dir, subdir, 3)
     p
       a(href="https://github.com/hisashin/NinjaPCR") GitHub上のNinjaPCRリポジトリ
       | からソースコードをダウンロードします。zipでダウンロードして解凍するか、gitを利用して "git@github.com:hisashin/NinjaPCR.git" をcloneしてください。
@@ -77,7 +65,7 @@ block main
     .row
       - var img = "/maker/images/firmware_ninjapcr_verify.png"
       +process-image(img, img)
-    h4 NinjaPCR本体をPCに接続
+    +itemtitle(dir, subdir, 4)
     p 電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。
     .row
       - var img = "/maker/images/firmware_power.jpg"
@@ -103,8 +91,8 @@ block main
       - var img = "/maker/images/firmware_serial_bootmode.png"
       +process-image(img, img)
 
-    h4 書き込み
-    p 書き込みボタンを押します。
+    //- 書き込み
+    +itemtitle(dir, subdir, 5)
     .row
       - var img = "/maker/images/firmware_ninjapcr_upload.png"
       +process-image(img, img)
