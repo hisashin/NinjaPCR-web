@@ -70,9 +70,13 @@ block main
     .row
       - var img = "/maker/images/firmware_ninjapcr_ino.png"
       +process-image(img, img)
-    p ビルド設定を選びます。"Board" は "Generic ESP8266 Module"、Flash Sizeは "4M (3M SPIFFS)" を選択します。
+    p ビルド設定を選びます。"Board" は "Generic ESP8266 Module" を選択します。ESP8266にはEEPROM容量が2MBと4MBのものが流通していますので、2MBの場合は Flash Size を "2M (1M SPIFFS)" に、"4M (3M SPIFFS)" にします。
     .row
       - var img = "/maker/images/firmware_board_select.png"
+    p Arduino IDEの "Verify" ボタンを押し、正常にビルドできるかどうか確認してください。
+    .row
+      - var img = "/maker/images/firmware_ninjapcr_verify.png"
+      +process-image(img, img)
       +process-image(img, img)
     p Verifyを押してコードを確認します。
     h4 NinjaPCR本体をPCに接続
