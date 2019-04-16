@@ -955,10 +955,56 @@
         "firmware" : {
           "label" : "Burn Firmware",
           "items" : [
-              {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By."
-              }
+                {
+                    "title" : "Burn Firmware",
+                    "text1" : "This page describes how to build NinjaPCR's firmware and write it to the ESP8266 chip on the board. A USB-serial cable and a jumper pin is required."
+                },
+                {
+                    "title" : "Install Arduino IDE",
+                    "text1" : "Access",
+                    "text2" : ", then download and install the latest Arduino IDE to your PC."
+                },
+                {
+                    "title" : "ArduinoのESP8266対応",
+                    "text1" : "Arduino IDEはそのままではESP8266用のプログラムをビルドしたり書き込みを行ったりすることができません。",
+                    "text2" : "サードパーティ製のハードウェアをサポートするライブラリやボード設定やツールをインストールする \"Board Manager\" という仕組みを利用し、ESP8266に対応する必要があります。",
+                    "text3" : "まず、\"Preferences\" で \"Additional Board Manager URLs\" に",
+                    "text4" : "を追加します。",
+                    "text5" : "Arduinoのツールバーから \"Tools > Board: > Boards Manager...\" を選択し、\"esp8266 by ESP8266 Community\" をインストールします。",
+                    "text6" : "バージョンは2.4.2以上を選択してください。",
+                    "text7" : "Arduino IDE経由ではなくGitHubのリポジトリからcloneして手動でインストールするという方法もあります。詳しくは",
+                    "text8" : "ESP8266ライブラリのGitHubリポジトリ",
+                    "text9" : "を参照してください。"
+                },
+                {
+                    "title" : "NinjaPCRのソースコードをダウンロード",
+                    "text1" : "",
+                    "text2" : "GitHub上のNinjaPCRリポジトリ",
+                    "text3" : "からソースコードをダウンロードします。zipでダウンロードして解凍するか、gitを利用して",
+                    "text4" : "をcloneしてください。",
+                    "text5" : "",
+                    "text6" : "をArduino IDEで開きます。",
+                    "text7" : "ビルド設定を選びます。\"Board\" は \"Generic ESP8266 Module\" を選択します。",
+                    "text8" : "ESP8266にはEEPROM容量が2MBと4MBのものが流通していますので、2MBの場合は Flash Size を \"2M (1M SPIFFS)\" に、\"4M (3M SPIFFS)\" にします。",
+                    "text9" : "Arduino IDEの \"Verify\" ボタンを押し、正常にビルドできるかどうか確認してください。"
+                },
+                {
+                    "title" : "NinjaPCR本体をPCに接続",
+                    "text1" : "電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。",
+                    "text2" : "USBシリアル変換ケーブルでNinjaPCRとPCを接続します。右の6本のピンに挿します。",
+                    "text3" : "左の2本は未接続の状態にしておいてください。",
+                    "text4" : "左の2本のピンにジャンパピンを挿し込みます。",
+                    "text5" : "この2本のピンが接続された状態で電源投入またはリセットを行うことで、ESP8266は通常起動モードではなくファームウェア書き込みモードで起動します。",
+                    "text6" : "電源を接続し、書き込みモードで起動します。",
+                    "text7" : "なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは \"74880\" を選択します。",
+                    "text8" : "正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。"
+                },
+                {
+                    "title" : "書き込み",
+                    "text1" : "Arduino IDEの \"Upload\" ボタンを押すと、ビルドしたバイナリがESP8266に書き込まれます。",
+                    "text2" : "一部の環境ではArduinoからの書き込みに失敗しますが、生成されたバイナリファイルをコマンドラインツールesptool.pyを使って書き込むと成功する場合があります。",
+                    "text3" : "OSや周辺ツール、書き込みに使用するツールなど環境に依存する要素が大きいので、もしうまくいかない場合は、できるだけ詳しく環境と状況を添えてお問い合わせください。"
+                }
             ]
         }
     },

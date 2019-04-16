@@ -15,88 +15,100 @@ block main
 
   +itemhead(dir, subdir)
 
-  if $localeName != 'ja'
-    +itemtitle(dir, subdir, 0)
+  +itemtitle(dir, subdir, 0)
+  p #{$i18n[dir][subdir].items[0].text1}
 
-    p
-      | #{$i18n[dir][subdir].items[0].text1}
-  else
-    +itemtitle(dir, subdir, 0)
-    p #{$i18n[dir][subdir].items[0].text1}
-    +itemtitle(dir, subdir, 1)
-    p
-      a(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
-      | にアクセスし、最新のArduino IDEをダウンロードしてインストールします。
-      br
-      a(href="https://www.arduino.cc/en/Main/Software") https://www.arduino.cc/en/Main/Software
+  //- Arduino IDEをインストール
+  +itemtitle(dir, subdir, 1)
+  p #{$i18n[dir][subdir].items[1].text1}
+    a(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
+    | #{$i18n[dir][subdir].items[1].text2}
+    br
+    a(href="https://www.arduino.cc/en/Main/Software") https://www.arduino.cc/en/Main/Software
 
-    +itemtitle(dir, subdir, 2)
-    p Arduino IDEはそのままではESP8266用のプログラムをビルドしたり書き込みを行ったりすることができません。
-    p サードパーティ製のハードウェアをサポートするライブラリやボード設定やツールをインストールする "Board Manager" という仕組を利用し、ESP8266に対応する必要があります。
-    p まず、Preferencesで "Additional Board Manager URLs" に "http://arduino.esp8266.com/stable/package_esp8266com_index.json" を追加します。
-    .row
-      - var img = "/maker/images/firmware_arduino_board_manager1.png"
-      +process-image(img, img)
-      - var img = "/maker/images/firmware_arduino_board_manager2.png"
-      +process-image(img, img)
-    p Arduinoのツールバーから "Tools > Board: > Boards Manager..." を選択します。"esp8266 by ESP8266 Community" をインストールします。バージョンは2.4.2以上を選択してください。
-    .row
-      - var img = "/maker/images/firmware_arduino_board_manager3.png"
-      +process-image(img, img)
-    p Arduino IDE経由ではなくGitHubのリポジトリからcloneして手動でインストールするという方法もあります。詳しくは
-      a(href="https://github.com/esp8266/Arduino") ESP8266ライブラリのGitHubリポジトリ
-      | を参照してください。
+  //- ArduinoのESP8266対応
+  +itemtitle(dir, subdir, 2)
+  p #{$i18n[dir][subdir].items[2].text1}
+  p #{$i18n[dir][subdir].items[2].text2}
+  p #{$i18n[dir][subdir].items[2].text3}
+    | "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    | #{$i18n[dir][subdir].items[2].text4}
+  .row
+    - var img = "/maker/images/firmware_arduino_board_manager1.png"
+    +process-image(img, img)
+    - var img = "/maker/images/firmware_arduino_board_manager2.png"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[2].text5}
+    | #{$i18n[dir][subdir].items[2].text6}
+  .row
+    - var img = "/maker/images/firmware_arduino_board_manager3.png"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[2].text7}
+    a(href="https://github.com/esp8266/Arduino") #{$i18n[dir][subdir].items[2].text8}
+    | #{$i18n[dir][subdir].items[2].text9}
 
-    +itemtitle(dir, subdir, 3)
-    p
-      a(href="https://github.com/hisashin/NinjaPCR") GitHub上のNinjaPCRリポジトリ
-      | からソースコードをダウンロードします。zipでダウンロードして解凍するか、gitを利用して "git@github.com:hisashin/NinjaPCR.git" をcloneしてください。
-    .row
-      - var img = "/maker/images/firmware_github.png"
-      +process-image(img, img)
-    p "arduino/NinjaPCR/NinjaPCR.ino" をArduino IDEで開きます。
-    .row
-      - var img = "/maker/images/firmware_ninjapcr_ino.png"
-      +process-image(img, img)
-    p ビルド設定を選びます。"Board" は "Generic ESP8266 Module" を選択します。ESP8266にはEEPROM容量が2MBと4MBのものが流通していますので、2MBの場合は Flash Size を "2M (1M SPIFFS)" に、"4M (3M SPIFFS)" にします。
-    .row
-      - var img = "/maker/images/firmware_board_select.png"
-    p Arduino IDEの "Verify" ボタンを押し、正常にビルドできるかどうか確認してください。
-    .row
-      - var img = "/maker/images/firmware_ninjapcr_verify.png"
-      +process-image(img, img)
-    +itemtitle(dir, subdir, 4)
-    p 電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。
-    .row
-      - var img = "/maker/images/firmware_power.jpg"
-      +process-image(img, img)
-    p USBシリアル変換ケーブルでNinjaPCRとPCを接続します。右の6本のピンに挿します。左の2本は未接続の状態にしておいてください。
-    .row
-      - var img = "/maker/images/firmware_serial.jpg"
-      +process-image(img, img)
-      - var img = "/maker/images/firmware_pins_usbserial.png"
-      +process-image(img, img)
-    p 左の2本のピンにジャンパピンを挿し込みます。この2本のピンが接続された状態で電源投入またはリセットを行うことで、ESP8266は通常起動モードではなくファームウェア書き込みモードで起動します。
-    .row
-      - var img = "/maker/images/firmware_serial_jumper1.jpg"
-      +process-image(img, img)
-      - var img = "/maker/images/firmware_pins_jumper.png"
-      +process-image(img, img)
-    .row
-      - var img = "/maker/images/firmware_serial_jumper2.jpg"
-      +process-image(img, img)
-    p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは "74880" を選択します。
-    p 正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。
-    .row
-      - var img = "/maker/images/firmware_serial_bootmode.png"
-      +process-image(img, img)
+  //- NinjaPCRのソースコードをダウンロード
+  +itemtitle(dir, subdir, 3)
+  p #{$i18n[dir][subdir].items[3].text1}
+    a(href="https://github.com/hisashin/NinjaPCR") #{$i18n[dir][subdir].items[3].text2}
+    | #{$i18n[dir][subdir].items[3].text3}
+    | "git@github.com:hisashin/NinjaPCR.git"
+    | #{$i18n[dir][subdir].items[3].text4}
+  .row
+    - var img = "/maker/images/firmware_github.png"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[3].text5}
+    | "arduino/NinjaPCR/NinjaPCR.ino"
+    #{$i18n[dir][subdir].items[3].text6}
+  .row
+    - var img = "/maker/images/firmware_ninjapcr_ino.png"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[3].text7}
+    | #{$i18n[dir][subdir].items[3].text8}
+  .row
+    - var img = "/maker/images/firmware_board_select.png"
+  p #{$i18n[dir][subdir].items[3].text9}
+  .row
+    - var img = "/maker/images/firmware_ninjapcr_verify.png"
+    +process-image(img, img)
 
-    //- 書き込み
-    +itemtitle(dir, subdir, 5)
-    .row
-      - var img = "/maker/images/firmware_ninjapcr_upload.png"
-      +process-image(img, img)
-    p 一部の環境ではArduinoからの書き込みに失敗しますが、生成されたバイナリファイルをコマンドラインツールesptool.pyを使って書き込むと成功する場合があります。
-    p OSや周辺ツール、書き込みに使用するツールなど環境に依存する要素が大きいので、もしうまくいかない場合は、できるだけ詳しく環境と状況を添えてお問い合わせください。
+  //- NinjaPCR本体をPCに接続
+  +itemtitle(dir, subdir, 4)
+  p #{$i18n[dir][subdir].items[4].text1}
+  .row
+    - var img = "/maker/images/firmware_power.jpg"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[4].text2}
+    | #{$i18n[dir][subdir].items[4].text3}
+  .row
+    - var img = "/maker/images/firmware_serial.jpg"
+    +process-image(img, img)
+    - var img = "/maker/images/firmware_pins_usbserial.png"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[4].text4}
+    | #{$i18n[dir][subdir].items[4].text5}
+  .row
+    - var img = "/maker/images/firmware_serial_jumper1.jpg"
+    +process-image(img, img)
+    - var img = "/maker/images/firmware_pins_jumper.png"
+    +process-image(img, img)
+  .row
+    - var img = "/maker/images/firmware_serial_jumper2.jpg"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[4].text6}
+    | #{$i18n[dir][subdir].items[4].text7}
+  p #{$i18n[dir][subdir].items[4].text8}
+  .row
+    - var img = "/maker/images/firmware_serial_bootmode.png"
+    +process-image(img, img)
+
+  //- 書き込み
+  +itemtitle(dir, subdir, 5)
+  p #{$i18n[dir][subdir].items[5].text1}
+  .row
+    - var img = "/maker/images/firmware_ninjapcr_upload.png"
+    +process-image(img, img)
+  p #{$i18n[dir][subdir].items[5].text2}
+  p #{$i18n[dir][subdir].items[5].text3}
 
   +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)
