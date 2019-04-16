@@ -34,28 +34,35 @@ block main
       li トラブルシューティング
     p
       | #{$i18n[dir][subdir].items[0].text1}
+    p ここでは、NinjaPCRのプログラムをビルドし、基板上のESP8266に書き込む方法を説明します。USBシリアル変換ケーブルおよびジャンパピンが必要です。
     h4 Arduino IDEをインストール
-    p 
+    p
       a(href="https://www.arduino.cc/en/Main/Software") Arduino.cc
-      | からArduino IDEをダウンロードし、インストールします。https://www.arduino.cc/en/Main/Software
-    
+      | にアクセスし、最新のArduino IDEをダウンロードしてインストールします。
+      br
+      a(href="https://www.arduino.cc/en/Main/Software") https://www.arduino.cc/en/Main/Software
+
     h4 ArduinoのESP8266対応
-    p Arduino IDEにはBoard Managerという仕組みがあり、サードパーティ製のハードウェアをサポートするライブラリやボード設定を簡単にインストールし、管理することができるようになっています。
-    p Preferencesで "Additional Board Manager URLs" に "http://arduino.esp8266.com/stable/package_esp8266com_index.json" を追加します。
+    p Arduino IDEはそのままではESP8266用のプログラムをビルドしたり書き込みを行ったりすることができません。
+    p サードパーティ製のハードウェアをサポートするライブラリやボード設定やツールをインストールする "Board Manager" という仕組を利用し、ESP8266に対応する必要があります。
+    p まず、Preferencesで "Additional Board Manager URLs" に "http://arduino.esp8266.com/stable/package_esp8266com_index.json" を追加します。
     .row
       - var img = "/maker/images/firmware_arduino_board_manager1.png"
       +process-image(img, img)
       - var img = "/maker/images/firmware_arduino_board_manager2.png"
       +process-image(img, img)
+    p Arduinoのツールバーから "Tools > Board: > Boards Manager..." を選択します。"esp8266 by ESP8266 Community" をインストールします。バージョンは2.4.2以上を選択してください。
+    .row
+      - var img = "/maker/images/firmware_arduino_board_manager3.png"
+      +process-image(img, img)
     p Arduino IDE経由ではなくGitHubのリポジトリからcloneして手動でインストールするという方法もあります。詳しくは
       a(href="https://github.com/esp8266/Arduino") ESP8266ライブラリのGitHubリポジトリ
       | を参照してください。
-    p Arduinoのツールバーから "Tools > Board > Boards Manager..." を選択します。"esp8266 platform" をインストールします。
-    
+
     h4 NinjaPCRのソースコードをダウンロード
-    p 
+    p
       a(href="https://github.com/hisashin/NinjaPCR") GitHub上のNinjaPCRリポジトリ
-      | からソースコードをダウンロードします。zipで落とすかコマンドラインで落とします。https://github.com/hisashin/NinjaPCR
+      | からソースコードをダウンロードします。zipでダウンロードして解凍するか、gitを利用して "git@github.com:hisashin/NinjaPCR.git" をcloneしてください。
     .row
       - var img = "/maker/images/firmware_github.png"
       +process-image(img, img)
@@ -67,7 +74,7 @@ block main
     .row
       - var img = "/maker/images/firmware_board_select.png"
       +process-image(img, img)
-    p Verifyを押してコードを確認します
+    p Verifyを押してコードを確認します。
     h4 NinjaPCR本体をPCに接続
     p 電源をケーブルをNinjaPCRに接続します。この時点で電源プラグは抜いたままにしておいてください。
     .row
@@ -86,7 +93,7 @@ block main
       +process-image(img, img)
     p 電源を接続し、書き込みモードで起動します。なお、書き込みモードで正常に起動しているか疑わしい場合、Arduino IDEのシリアルモニタから確認することができます。Baud rateは "115200" を接続します。
     p 正しくシリアル接続され、PCが認識し、書き込みモードで起動している場合は、次のように表示されます。
-        
+
     h4 書き込み
     p 書き込みボタンを押します。
     p 一部の環境でうまくいかない場合がありますので、コマンドラインからesptool.pyを使って書き込みます。
