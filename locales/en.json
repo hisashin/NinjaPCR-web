@@ -957,7 +957,7 @@
           "items" : [
                 {
                     "title" : "Burn Firmware",
-                    "text1" : "This page describes how to build NinjaPCR's firmware and write it to the ESP8266 chip on the board. A USB-serial cable and a jumper pin is required."
+                    "text1" : "This page describes how to build NinjaPCR's firmware and write it to the ESP8266 chip on the board. A USB-serial cable with 6 pins and a jumper pin is required."
                 },
                 {
                     "title" : "Install Arduino IDE",
