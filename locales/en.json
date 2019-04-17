@@ -1004,6 +1004,12 @@
                     "text1" : "Click the \"Upload\" button of Arduino IDE to build and flash the program.",
                     "text2" : "If you have troubles when building or flashing with Arduino IDE, please try esptool.py from command line.",
                     "text3" : "Building and flashing depend on environments such as OS, toolchains and flashing tools. If you have troubles, please contact us with detailed situation."
+                },
+                {
+                  "title" : "Debug",
+                  "text1" : "NinjaPCR is designed to be controllable only by Wi-Fi communication. However, a USB-serial cable is very useful to debug the program.",
+                  "text2" : "You can send debug messages from NinjaPCR to your PC by using serial related functions such as Serial.print() and Serial.println().",
+                  "text3" : "The easiest way is to use the serial monitor of Arduino IDE. Of course, you can use other serial communicator apps."
                 }
             ]
         }

@@ -114,4 +114,10 @@ block main
   p #{$i18n[dir][subdir].items[5].text2}
   p #{$i18n[dir][subdir].items[5].text3}
 
+  //- デバッグ
+  +itemtitle(dir, subdir, 6)
+  p #{$i18n[dir][subdir].items[6].text1}
+  p #{$i18n[dir][subdir].items[6].text2}
+  p #{$i18n[dir][subdir].items[6].text3}
+
   +nextstep('/assy/setup/index.html', $i18n.assy.setup.label)
