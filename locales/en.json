@@ -957,7 +957,7 @@
           "items" : [
                 {
                     "title" : "Burn Firmware",
-                    "text1" : "This page describes how to build NinjaPCR's firmware and write it to the ESP8266 chip on the board. A USB-serial cable with 6 pins and a jumper pin is required."
+                    "text1" : "This page describes how to build NinjaPCR's firmware and write it to the ESP8266 chip on the board. A USB-serial cable with 6 or 4 pins and a jumper pin is required."
                 },
                 {
                     "title" : "Install Arduino IDE",
@@ -991,7 +991,7 @@
                 {
                     "title" : "Connect NinjaPCR to your PC",
                     "text1" : "Connect the power cable to NinjaPCR's connector. At this time, please do not put the plug in the outlet.",
-                    "text2" : "Then, connect NinjaPCR to your PC with a USB serial cable. The serial pins should be attached to the right six pins on the board.",
+                    "text2" : "Then, connect NinjaPCR to your PC with a USB serial cable. If your cable has 6 pins, they should be attached to the right six pins on the board with the label \"SERIAL 6\". For 4-pin types, the board has \"SERIAL 4\" pins above them.",
                     "text3" : "",
                     "text4" : "Attach a jumper pin to the two pins with the label \"IO0\".",
                     "text5" : "By turning on or resetting the board with these pins connected, you can boot the chip into the bootloader mode.",
