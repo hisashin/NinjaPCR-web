@@ -17,6 +17,9 @@ block main
 
   +itemtitle(dir, subdir, 0)
   p #{$i18n[dir][subdir].items[0].text1}
+  .row
+    - var img = "/maker/images/firmware_goods.jpg"
+    +process-image(img, img)
 
   //- Arduino IDEをインストール
   +itemtitle(dir, subdir, 1)
