@@ -5,11 +5,21 @@ DeviceResponse.checkConnectionInterval = null;
 
 var host = "";
 var hostIpAddress = null;
+function isIPAddress (host) {
+	console.log(host)
+    let regexIP = new RegExp("^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");
+    return regexIP.test(host);
+};
 function getDeviceHost () {
   if (hostIpAddress) {
+		// for AP mode
     return "http://" + hostIpAddress;
   }
-	return "http://" + host + ".local";
+	if (isIPAddress(host)) {
+		return "http://" + host;
+	} else {
+		return "http://" + host + ".local";
+	}
 }
 function startOTA () {
 	console.log("startOTA");
