@@ -7,121 +7,121 @@
         "description" : "NinjaPCR is an opensource thermalcycler",
         "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
         "author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
-	},
+    },
     "contact" : {
         "label" : "Contact Form",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSf48pMz4yPdDtF7h_LtshZg0o0rRsG9BcfMrM-TcWgMvUU83Q/viewform?usp=sf_link"
     },
     "console" : {
-      "label" : "Console",
-      "shortlabel" : "Console",
-      "appTitle":"NinjaPCR",
-      "addNewExperiment":"Add a new experiment",
-			"normalMode":"Normal mode",
-			"apMode":"Access point (AP) mode",
-      "remoteAPModeAlert":" It is recommended that you download the offline console beforehand.",
-      "remoteAPModeLinkLabel":"Learn more",
-      "remoteAPModeLinkAddress":"http://localhost:3000/en/op/index.html#item-op-index-3",
-      "reRunExperiment":"Re-run an experiment",
-      "searching":"Searching for a device...",
-      "download":"Open Download Page",
-      "about":"About this App",
-      "contrast":"Adjust the screen contrast",
-      "clearData":"Clear all data(For Developer)",
-      "edit":"Edit",
-      "initialStep":"Initial Step",
-      "finalStep":"Final Step",
-      "moreOptions":"More Options",
-      "pleaseConnect":"Plug in NinjaPCR to Start",
-      "savePreset":"Save Preset",
-      "saveEdits":"Save Edits",
-      "cancel":"Cancel",
-      "start":"Start",
-      "stop":"Stop",
-      "pause":"Pause",
-      "resume":"Resume",
-      "next_step":"Next Step",
-      "next_cycle":"Next Cycle",
-      "home":"Home",
-      "timeRemaining":"Time remaining:",
-      "elapsedTime":"Elapsed time:",
-      "status":"Status",
-      "currentTemp":"Current Temperature",
-      "cycle":"Cycle",
-      "repeated":"Repeated",
-      "lid":"Lid",
-      "block":"Well",
-      "sample":"Sample",
-      "well":"Well",
-      "unplugged":"Your NinjaPCR is unplugged from the computer.<br />Plug in your NinjaPCR to get updated information on your run.",
-      "saveCsv":"Save CSV",
-      "stopPcr":"Are you sure you want to stop the experiment?",
-      "dragSlider":"Drag the slider to adjust the screen's contrast.",
-      "readySteadyGo":"Ready. Steady. Go!",
-      "saved":"Experiment saved!",
-      "confirmDelete":"Delete Experiment?",
-      "deleted":"Deleted!",
-      "error":"Error",
-      "done":"Done!",
-      "tookTime":"PCR took ___TIME___",
-      "close":"Close",
-      "downloadUrl":"https://github.com/hisashin/NinjaPCR/wiki",
-      "lessOptions":"Less options",
-      "updateRequired":"Device update is required. It can't run without updating. ",
-      "updateAvailable":"Device update is available!",
-      "versionCurrent":"Current Version",
-      "versionLatest":"Latest Version",
-      "updateLog":"What's new?",
-      "updateStarting":"Starting device update. Please do not turn the power off.",
-      "updating":"Device is updating. Please do not turn the power off.",
-      "updateFinished":"Device is updated successfully!",
-      "updateFailed":"Device update was failed. Please try again.",
-      "stopRunning":"Device may have restarted.",
-      "disconnectedInExperiment":"Device is disconnected.",
-      "wifiSettingsButton":"Setup a new NinjaPCR device / Change network configuration",
-      "wifiSettings0":"Plug the power adapter into NinjaPCR and then into an outlet.",
-      "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds.",
-      "wifiSettings2":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list.",
-      "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
-      "wifiSettings3_0":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
-      "wifiSettings3_1":"Input the password of the network.",
-      "wifiSettings3_2":"Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
-      "wifiSettings3_3":"After you set up the device, it will restart and connect to the specified access point.",
-      "wifiSettings4":"Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.",
-      "wifiSettings5":"Input the \"Device name\" that you have specified when you configured the device and press \"connect\" button.",
-      "hardwareError":"Hardware Error",
-      "hardwareErrorCode":"Error Code",
+        "label" : "Console",
+        "shortlabel" : "Console",
+        "appTitle":"NinjaPCR",
+        "addNewExperiment":"Add a new experiment",
+        "normalMode":"Normal mode",
+        "apMode":"Access point (AP) mode",
+        "remoteAPModeAlert":" It is recommended that you download the offline console beforehand.",
+        "remoteAPModeLinkLabel":"Learn more",
+        "remoteAPModeLinkAddress":"http://localhost:3000/en/op/index.html#item-op-index-3",
+        "reRunExperiment":"Re-run an experiment",
+        "searching":"Searching for a device...",
+        "download":"Open Download Page",
+        "about":"About this App",
+        "contrast":"Adjust the screen contrast",
+        "clearData":"Clear all data(For Developer)",
+        "edit":"Edit",
+        "initialStep":"Initial Step",
+        "finalStep":"Final Step",
+        "moreOptions":"More Options",
+        "pleaseConnect":"Plug in NinjaPCR to Start",
+        "savePreset":"Save Preset",
+        "saveEdits":"Save Edits",
+        "cancel":"Cancel",
+        "start":"Start",
+        "stop":"Stop",
+        "pause":"Pause",
+        "resume":"Resume",
+        "next_step":"Next Step",
+        "next_cycle":"Next Cycle",
+        "home":"Home",
+        "timeRemaining":"Time remaining:",
+        "elapsedTime":"Elapsed time:",
+        "status":"Status",
+        "currentTemp":"Current Temperature",
+        "cycle":"Cycle",
+        "repeated":"Repeated",
+        "lid":"Lid",
+        "block":"Well",
+        "sample":"Sample",
+        "well":"Well",
+        "unplugged":"Your NinjaPCR is unplugged from the computer.<br />Plug in your NinjaPCR to get updated information on your run.",
+        "saveCsv":"Save CSV",
+        "stopPcr":"Are you sure you want to stop the experiment?",
+        "dragSlider":"Drag the slider to adjust the screen's contrast.",
+        "readySteadyGo":"Ready. Steady. Go!",
+        "saved":"Experiment saved!",
+        "confirmDelete":"Delete Experiment?",
+        "deleted":"Deleted!",
+        "error":"Error",
+        "done":"Done!",
+        "tookTime":"PCR took ___TIME___",
+        "close":"Close",
+        "downloadUrl":"https://github.com/hisashin/NinjaPCR/wiki",
+        "lessOptions":"Less options",
+        "updateRequired":"Device update is required. It can't run without updating. ",
+        "updateAvailable":"Device update is available!",
+        "versionCurrent":"Current Version",
+        "versionLatest":"Latest Version",
+        "updateLog":"What's new?",
+        "updateStarting":"Starting device update. Please do not turn the power off.",
+        "updating":"Device is updating. Please do not turn the power off.",
+        "updateFinished":"Device is updated successfully!",
+        "updateFailed":"Device update was failed. Please try again.",
+        "stopRunning":"Device may have restarted.",
+        "disconnectedInExperiment":"Device is disconnected.",
+        "wifiSettingsButton":"Setup a new NinjaPCR device / Change network configuration",
+        "wifiSettings0":"Plug the power adapter into NinjaPCR and then into an outlet.",
+        "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds.",
+        "wifiSettings2":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list.",
+        "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
+        "wifiSettings3_0":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
+        "wifiSettings3_1":"Input the password of the network.",
+        "wifiSettings3_2":"Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
+        "wifiSettings3_3":"After you set up the device, it will restart and connect to the specified access point.",
+        "wifiSettings4":"Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.",
+        "wifiSettings5":"Input the \"Device name\" that you have specified when you configured the device and press \"connect\" button.",
+        "hardwareError":"Hardware Error",
+        "hardwareErrorCode":"Error Code",
 
-      "androidGuide":"You need to install NinjaPCR app. Please install the app on Play Store.",
-      "deviceName":"Device name",
-      "connect":"Connect",
-			"connectApMode_0":"Start NinjaPCR in access point (AP) mode.",
-			"connectApMode_1":"Select SSID:NinjaPCR."
+        "androidGuide":"You need to install NinjaPCR app. Please install the app on Play Store.",
+        "deviceName":"Device name",
+        "connect":"Connect",
+        "connectApMode_0":"Start NinjaPCR in access point (AP) mode.",
+        "connectApMode_1":"Select SSID:NinjaPCR."
     },
     "general" : {
-      "nextstep" : "Next step : "
+        "nextstep" : "Next step : "
     },
     "index" : {
         "carousel" : {
             "slides" : [
-              {
-                "alt" : "Opensource",
-                "label" : "Open Source DNA Amplifer",
-                "text" : "We are totally open",
-                "link" : "open"
-              },
-              {
-                "alt" : "Wi-Fi",
-                "label" : "Wi-Fi Supported",
-                "text" : "Use with your smartphone",
-                "link" : "wifi"
-              },
-              {
-                "alt" : "Precise",
-                "label" : "Smart Sensor and Simulation",
-                "text" : "Precise at any temperature",
-                "link" : "accuracy"
-              }
+                {
+                    "alt" : "Opensource",
+                    "label" : "Open Source DNA Amplifer",
+                    "text" : "We are totally open",
+                    "link" : "open"
+                },
+                {
+                    "alt" : "Wi-Fi",
+                    "label" : "Wi-Fi Supported",
+                    "text" : "Use with your smartphone",
+                    "link" : "wifi"
+                },
+                {
+                    "alt" : "Precise",
+                    "label" : "Smart Sensor and Simulation",
+                    "text" : "Precise at any temperature",
+                    "link" : "accuracy"
+                }
             ]
         },
         "features" : {
@@ -148,814 +148,814 @@
         "label" : "Assembly Manual",
         "shortlabel" : "Assy.Manual",
         "index" : {
-          "label" : "Importants",
-          "items" : [
-            {
-              "title" : "Keep Serial Number",
-              "text1" : "Serial Number is important to get support in the warranty period. It's labeled on warranty and circuit board as S/N:xxx-xxx-xxx but digital backup is recommended."
-            },
-            {
-              "title" : "High Temperature",
-              "text1" : "Some parts get heated up to 120 degree celcius (250 degree fahrenheit). Do not touch aluminium parts directly. Top of PCR tube is still host just after PCR process has ended."
-            },
-            {
-              "title" : "High Current",
-              "text1" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and any conductive materials."
-            },
-            {
-              "title" : "Android needs App",
-              "text1" : "Supported OS versions are 4.1 (Jelly Baen) and later. For Android User : Please install ",
-              "text2" : "app",
-              "text3" : " to use."
-            },
-            {
-              "title" : "Opensource",
-              "text1" : "This is totally opensourced hardware under GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from ",
-              "text2" : "GitHub",
-              "text3" : "."
-            },
-            {
-              "title" : "You have tools",
-              "text1" : "2 phillips screwdrivers, straight driver, multi spanner and grease spatula are bundled inside plastic bag."
-            },
-            {
-              "title" : "Hint",
-              "text1" : "Laser cut wood has face and tail. It will look good if you always choose face side (logo on front panel) to be shown even it's symmetric."
-            }
-          ]
+            "label" : "Importants",
+            "items" : [
+                {
+                    "title" : "Keep Serial Number",
+                    "text1" : "Serial Number is important to get support in the warranty period. It's labeled on warranty and circuit board as S/N:xxx-xxx-xxx but digital backup is recommended."
+                },
+                {
+                    "title" : "High Temperature",
+                    "text1" : "Some parts get heated up to 120 degree celcius (250 degree fahrenheit). Do not touch aluminium parts directly. Top of PCR tube is still host just after PCR process has ended."
+                },
+                {
+                    "title" : "High Current",
+                    "text1" : "Peltier in kit supports up to 10 Ampere. Do not touch circuit board while using. Keep it away from water and any conductive materials."
+                },
+                {
+                    "title" : "Android needs App",
+                    "text1" : "Supported OS versions are 4.1 (Jelly Baen) and later. For Android User : Please install ",
+                    "text2" : "app",
+                    "text3" : " to use."
+                },
+                {
+                    "title" : "Opensource",
+                    "text1" : "This is totally opensourced hardware under GNU General Public License v3.0. You can get everything (3D model, circuit diagram, sourcecode, laser cut data and so on) from ",
+                    "text2" : "GitHub",
+                    "text3" : "."
+                },
+                {
+                    "title" : "You have tools",
+                    "text1" : "2 phillips screwdrivers, straight driver, multi spanner and grease spatula are bundled inside plastic bag."
+                },
+                {
+                    "title" : "Hint",
+                    "text1" : "Laser cut wood has face and tail. It will look good if you always choose face side (logo on front panel) to be shown even it's symmetric."
+                }
+            ]
         },
         "unbox" : {
-          "label" : "Unboxing",
-          "text1" : "Before assembly, take a breath and confirm that you have everything needed. If you find anything missed or broken, ",
-          "text2" : "Contact us",
-          "text3" : " with seriall number in warranty period.",
-          "items" : [
-            {
-              "title" : "Overview",
-              "table" : {
-                "head" : [ "Kit Content", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Woods", "", 15 ],
-                  [ "2. PCB", "Check printed circuit board is not damaged", 1 ],
-                  [ "3. Heatsink + Spare Grease", "Heatsink and spare thermal conductive grease are packed in one box", 1 ],
-                  [ "4. Bag", "Check next table what's inside", 1 ],
-                  [ "5. Power Supply", "12V >135W AC-DC adapter", 1 ]
-                ]
-              }
-            },
-            {
-              "title" : "Bag",
-              "table" : {
-                "head" : [ "Bag Content", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Screw Bag 1", "Labeled as '1.Lid'", 1 ],
-                  [ "2. Screw Bag 2", "Labeled as '2.Well'", 1 ],
-                  [ "3. Screw Bag 3", "Labeled as '3.Body'", 1 ],
-                  [ "4. Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
-                  [ "5. Knob", "For lid", 1 ],
-                  [ "6. Rubber foot", "For bottom board", 4 ],
-                  [ "7. Fan guard", "For bottom board", 1 ],
-                  [ "8. Grease", "Use these ones first. If you need more, use spare grease in heatsink box.", 2 ]
-                ]
-              }
-            }
-          ]
+            "label" : "Unboxing",
+            "text1" : "Before assembly, take a breath and confirm that you have everything needed. If you find anything missed or broken, ",
+            "text2" : "Contact us",
+            "text3" : " with seriall number in warranty period.",
+            "items" : [
+                {
+                    "title" : "Overview",
+                    "table" : {
+                        "head" : [ "Kit Content", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Woods", "", 15 ],
+                            [ "2. PCB", "Check printed circuit board is not damaged", 1 ],
+                            [ "3. Heatsink + Spare Grease", "Heatsink and spare thermal conductive grease are packed in one box", 1 ],
+                            [ "4. Bag", "Check next table what's inside", 1 ],
+                            [ "5. Power Supply", "12V >135W AC-DC adapter", 1 ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Bag",
+                    "table" : {
+                        "head" : [ "Bag Content", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Screw Bag 1", "Labeled as '1.Lid'", 1 ],
+                            [ "2. Screw Bag 2", "Labeled as '2.Well'", 1 ],
+                            [ "3. Screw Bag 3", "Labeled as '3.Body'", 1 ],
+                            [ "4. Well", "Aluminium PCR tube holder. Thin wires of thermistor are especially FRAGILE. Handle with care.", 1 ],
+                            [ "5. Knob", "For lid", 1 ],
+                            [ "6. Rubber foot", "For bottom board", 4 ],
+                            [ "7. Fan guard", "For bottom board", 1 ],
+                            [ "8. Grease", "Use these ones first. If you need more, use spare grease in heatsink box.", 2 ]
+                        ]
+                    }
+                }
+            ]
         },
         "lid" : {
-          "label" : "Lid Assembly",
-          "items" : [
-            {
-              "title" : "All Parts",
-              "text1" : "Screw Bag 1, Knob and these woods are needed.",
-              "table1" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Heater lift", "Support heater to go up and down.", 1 ],
-                  [ "2. Lid Top", "", 1 ],
-                  [ "3. Lid Bottom", "", 1 ],
-                  [ "4. Lid Side", "", 2 ],
-                  [ "5. Lid Front", "2 small holes for latch", 1 ],
-                  [ "6. Lid Back", "2 small holes for hinge and 1 bigger hole for calbes of heater", 1 ]
-                ]
-              },
-              "table2" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Phillips driver", "For screws", 1 ],
-                  [ "2. Offset driver", "To fasten screws more tightly", 1 ],
-                  [ "3. Multi Spanner", "For nuts", 1 ],
-                  [ "4. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
-                  [ "5. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
-                  [ "6. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
-                  [ "7. Screw (M3 15mm)", "For heater", 4 ],
-                  [ "8. Nut (M3)", "", 8 ],
-                  [ "9. Screw (M3 10mm)", "For woods", 8 ],
-                  [ "10. Metal Spacer (M3 30mm)", "For woods", 4 ]
-                ]
-              }
-            },
-            {
-              "title" : "Floating Heater",
-              "text1" : "Peel off blue tape from aluminium plate. Screw 4 longer screws (M3 15mm) and nuts like this.",
-              "text2" : "Peel double-sided tape from heater. Glue heater to the midst of aluminium plate. Don't colide with screws nor nuts.",
-              "text3" : "Peel off double-sided tape on sponge and cover the heater.",
-              "text4" : "Screw heater lift wood with 4 nuts. Now heater unit is done."
-            },
-            {
-              "title" : "Lid Base",
-              "text1" : "Assemble box with remained 4 screws and 4 spacers.",
-              "text2" : "Place heater unit inside and thread all 4 wires of heater through the hole of lid back wood. Wires must be behind the spacer (blue arrow) not front (red arrow). Check that heater unit can move up and down somoothly without catching cables."
-            },
-            {
-              "title" : "Lid Cover",
-              "text1" : "Screw lid top wood with last 4 screws and put a knob. Now you have made lid."
-            }
-          ]
+            "label" : "Lid Assembly",
+            "items" : [
+                {
+                    "title" : "All Parts",
+                    "text1" : "Screw Bag 1, Knob and these woods are needed.",
+                    "table1" : {
+                        "head" : [ "Name", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Heater lift", "Support heater to go up and down.", 1 ],
+                            [ "2. Lid Top", "", 1 ],
+                            [ "3. Lid Bottom", "", 1 ],
+                            [ "4. Lid Side", "", 2 ],
+                            [ "5. Lid Front", "2 small holes for latch", 1 ],
+                            [ "6. Lid Back", "2 small holes for hinge and 1 bigger hole for calbes of heater", 1 ]
+                        ]
+                    },
+                    "table2" : {
+                        "head" : [ "Name", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Phillips driver", "For screws", 1 ],
+                            [ "2. Offset driver", "To fasten screws more tightly", 1 ],
+                            [ "3. Multi Spanner", "For nuts", 1 ],
+                            [ "4. Heater", "With 4 wires. Pink ones are thermistor inside.", 1 ],
+                            [ "5. Silicone sponge", "Cover one side of heater to avoid convection", 1 ],
+                            [ "6. Aluminium plate", "Plate with 4 holes on each corners", 1 ],
+                            [ "7. Screw (M3 15mm)", "For heater", 4 ],
+                            [ "8. Nut (M3)", "", 8 ],
+                            [ "9. Screw (M3 10mm)", "For woods", 8 ],
+                            [ "10. Metal Spacer (M3 30mm)", "For woods", 4 ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Floating Heater",
+                    "text1" : "Peel off blue tape from aluminium plate. Screw 4 longer screws (M3 15mm) and nuts like this.",
+                    "text2" : "Peel double-sided tape from heater. Glue heater to the midst of aluminium plate. Don't colide with screws nor nuts.",
+                    "text3" : "Peel off double-sided tape on sponge and cover the heater.",
+                    "text4" : "Screw heater lift wood with 4 nuts. Now heater unit is done."
+                },
+                {
+                    "title" : "Lid Base",
+                    "text1" : "Assemble box with remained 4 screws and 4 spacers.",
+                    "text2" : "Place heater unit inside and thread all 4 wires of heater through the hole of lid back wood. Wires must be behind the spacer (blue arrow) not front (red arrow). Check that heater unit can move up and down somoothly without catching cables."
+                },
+                {
+                    "title" : "Lid Cover",
+                    "text1" : "Screw lid top wood with last 4 screws and put a knob. Now you have made lid."
+                }
+            ]
         },
         "well" : {
-          "label" : "Well Assembly",
-          "items" : [
-            {
-              "title" : "All Parts",
-              "text1" : "Screw Bag 2, Well, Heatsink + Spare Grease and these woods are needed.",
-              "table1" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (red circle) will come to the top-right when face side is up.", 1 ],
-                  [ "2. Heatsink Holder", "2 notches are front (bottom in picture)", 1 ],
-                  [ "3. Peltier Holder", "2 notches are front (bottom in picture)", 1 ]
-                ]
-              },
-              "table2" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Spatula", "To smooth grease", 1 ],
-                  [ "2. Peltier", "High temperature durable silicon sealed peltier", 1 ],
-                  [ "3. Aluminium plate", "Square plate", 1 ],
-                  [ "4. Latch", "2 white plastic parts", 1 ],
-                  [ "5. Hinge", "1 black plastic part", 1 ],
-                  [ "6. Screw (M3 15mm)", "For peltier holder", 2 ],
-                  [ "7. Screw (M3 6mm)", "For well", 4 ],
-                  [ "8. Nut (M3)", "", 6 ],
-                  [ "9. Screw (M5 20mm)", "For heatsink", 4 ],
-                  [ "10. Nut (M5)", "", 8 ],
-                  [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ],
-                  [ "12. Silicone sponge", "To avoid airflow from body to lid", 1 ],
-                  [ "13. Wire Clip", "To hold cables", 1 ]
-                ]
-              }
-            },
-            {
-              "title" : "Woods",
-              "text1" : "Connect heatsink holder and top board with 4 thick screws (M5 20mm) and nuts firmly using offset driver and multi spanner. Both front sides (arrow) must be aligned."
-            },
-            {
-              "title" : "Well",
-              "text1" : "Screw remained 4 thin screws (M3 6mm) and nuts loosely first. Place side of nut (red rectangle) can be seen from each side. You can place well into holder easier at next step.",
-              "text2" : "Turn well upside down. Tune directions of nus to fit the notches of heatsink holder and screw tightly. Confirm thermistor of well (red circle) is sticking out to front (arrow)."
-            },
-            {
-              "title" : "Peltier",
-              "text1" : "Paste grease over backside of well. No need to squeeze it all. Use spatula to smooth evenly.",
-              "text2" : "Align 2 wires of peltier over notchs of heatsink holder (arrows) and put peltier on well like this. DO NOT mistake red and black! That will break peltier easily.",
-              "text3" : "Thread thermistor sensors through peltier holder and connect it to heatsink holder with 2 thin-long screws (M3 15mm) and nuts. It's a bit difficult because heads of screws are downside. Confirm that thermistor wires of well are OVER peltier holder (red circle) and peltier wires are running through holes made by holders (arrows)."
-            },
-            {
-              "title" : "Aluminium Plate",
-              "text1" : "Smooth grease over peltier evenly as you have done over well.",
-              "text2" : "Peel off blue tape from aluminium plate. Put it over peltier and press a little."
-            },
-            {
-              "title" : "Heatsink",
-              "text1" : "Hold white leg of heatsink in left hand. Rotate counterclockwise black cap and pull by right hand. Then it will be removed easily. Remove all 4 legs.",
-              "text2" : "Peel off cover sticker of heatsink and smooth grease. If there is no grease left, use spare.",
-              "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly. At this point, you may see small gap between heatsink and aluminium plate (arrow).",
-              "text4" : "Turn upside down and push well downward so that there is no gap between heatsink and aluminium plate (arrow)."
-            },
-            {
-              "title" : "Fill Space",
-              "text1" : "Fill the gap between well and top board with sponge using straight driver. No need to put it deeply because purpose of this sponge is not to warm well but avoid airflow from bottom body to lid. Just fill the gap."
-            },
-            {
-              "title" : "Mount Lid",
-              "text1" : "Mount lid and thread 4 wires throught hole (arrow). Screw hinge on backside of the lid with 4 tapping screws. There are pilot holes. Use phillips screwdriver first then screw it firmly with offset driver.",
-              "text2" : "Screw bottom latch in front of lid with 2 tapping screws tightly. There are pilot holes too.",
-              "text3" : "Top latch is adjustable and lid should be closed firmly. Screw it with 2 tapping screws loosely first.",
-              "text4" : "Screw tightly while holding lid to top board.",
-              "text5" : "It's not safe if 4 wires of heater not fastened because fan of heatsink will catch them easily. Peel off release paper from wire clip. Put it in front side of top board and fasten 4 wires by bending thin part of clip. Check that you can open/close lid smoothly and firmly. Now you have made upper body."
-            }
-          ]
+            "label" : "Well Assembly",
+            "items" : [
+                {
+                    "title" : "All Parts",
+                    "text1" : "Screw Bag 2, Well, Heatsink + Spare Grease and these woods are needed.",
+                    "table1" : {
+                        "head" : [ "Name", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Top Board", "Wider area is front side (bottom in picture). Asymmetric : hole for cable (red circle) will come to the top-right when face side is up.", 1 ],
+                            [ "2. Heatsink Holder", "2 notches are front (bottom in picture)", 1 ],
+                            [ "3. Peltier Holder", "2 notches are front (bottom in picture)", 1 ]
+                        ]
+                    },
+                    "table2" : {
+                        "head" : [ "Name", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Spatula", "To smooth grease", 1 ],
+                            [ "2. Peltier", "High temperature durable silicon sealed peltier", 1 ],
+                            [ "3. Aluminium plate", "Square plate", 1 ],
+                            [ "4. Latch", "2 white plastic parts", 1 ],
+                            [ "5. Hinge", "1 black plastic part", 1 ],
+                            [ "6. Screw (M3 15mm)", "For peltier holder", 2 ],
+                            [ "7. Screw (M3 6mm)", "For well", 4 ],
+                            [ "8. Nut (M3)", "", 6 ],
+                            [ "9. Screw (M5 20mm)", "For heatsink", 4 ],
+                            [ "10. Nut (M5)", "", 8 ],
+                            [ "11. Tapping Screw (M3 6mm)", "For latch and hinge", 8 ],
+                            [ "12. Silicone sponge", "To avoid airflow from body to lid", 1 ],
+                            [ "13. Wire Clip", "To hold cables", 1 ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Woods",
+                    "text1" : "Connect heatsink holder and top board with 4 thick screws (M5 20mm) and nuts firmly using offset driver and multi spanner. Both front sides (arrow) must be aligned."
+                },
+                {
+                    "title" : "Well",
+                    "text1" : "Screw remained 4 thin screws (M3 6mm) and nuts loosely first. Place side of nut (red rectangle) can be seen from each side. You can place well into holder easier at next step.",
+                    "text2" : "Turn well upside down. Tune directions of nus to fit the notches of heatsink holder and screw tightly. Confirm thermistor of well (red circle) is sticking out to front (arrow)."
+                },
+                {
+                    "title" : "Peltier",
+                    "text1" : "Paste grease over backside of well. No need to squeeze it all. Use spatula to smooth evenly.",
+                    "text2" : "Align 2 wires of peltier over notchs of heatsink holder (arrows) and put peltier on well like this. DO NOT mistake red and black! That will break peltier easily.",
+                    "text3" : "Thread thermistor sensors through peltier holder and connect it to heatsink holder with 2 thin-long screws (M3 15mm) and nuts. It's a bit difficult because heads of screws are downside. Confirm that thermistor wires of well are OVER peltier holder (red circle) and peltier wires are running through holes made by holders (arrows)."
+                },
+                {
+                    "title" : "Aluminium Plate",
+                    "text1" : "Smooth grease over peltier evenly as you have done over well.",
+                    "text2" : "Peel off blue tape from aluminium plate. Put it over peltier and press a little."
+                },
+                {
+                    "title" : "Heatsink",
+                    "text1" : "Hold white leg of heatsink in left hand. Rotate counterclockwise black cap and pull by right hand. Then it will be removed easily. Remove all 4 legs.",
+                    "text2" : "Peel off cover sticker of heatsink and smooth grease. If there is no grease left, use spare.",
+                    "text3" : "Screw heatsink with holders with remained 4 nuts (M5). Use multi spanner to screw tightly. At this point, you may see small gap between heatsink and aluminium plate (arrow).",
+                    "text4" : "Turn upside down and push well downward so that there is no gap between heatsink and aluminium plate (arrow)."
+                },
+                {
+                    "title" : "Fill Space",
+                    "text1" : "Fill the gap between well and top board with sponge using straight driver. No need to put it deeply because purpose of this sponge is not to warm well but avoid airflow from bottom body to lid. Just fill the gap."
+                },
+                {
+                    "title" : "Mount Lid",
+                    "text1" : "Mount lid and thread 4 wires throught hole (arrow). Screw hinge on backside of the lid with 4 tapping screws. There are pilot holes. Use phillips screwdriver first then screw it firmly with offset driver.",
+                    "text2" : "Screw bottom latch in front of lid with 2 tapping screws tightly. There are pilot holes too.",
+                    "text3" : "Top latch is adjustable and lid should be closed firmly. Screw it with 2 tapping screws loosely first.",
+                    "text4" : "Screw tightly while holding lid to top board.",
+                    "text5" : "It's not safe if 4 wires of heater not fastened because fan of heatsink will catch them easily. Peel off release paper from wire clip. Put it in front side of top board and fasten 4 wires by bending thin part of clip. Check that you can open/close lid smoothly and firmly. Now you have made upper body."
+                }
+            ]
         },
         "body" : {
-          "label" : "Body Assembly",
-          "items" : [
-            {
-              "title" : "All Parts",
-              "text1" : "Screw Bag 3, PCB, Fanguard, Rubber foot and these woods are needed.",
-              "table1" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Bottom Board", "", 1 ],
-                  [ "2. Back Board", "", 1 ],
-                  [ "3. Left Board", "", 1 ],
-                  [ "4. Right Board", "With hole for power supply.", 1 ],
-                  [ "5. Front Board", "PCB will be placed behind logo.", 1 ]
-                ]
-              },
-              "table2" : {
-                "head" : [ "Name", "Detail", "Count" ],
-                "body" : [
-                  [ "1. Straight driver", "To fasten wires on PCB", 1 ],
-                  [ "2. Screw (M4 10mm)", "For fan guard", 4 ],
-                  [ "3. Nut (M4)", "", 4 ],
-                  [ "4. Spacer (M3 60mm)", "Both female", 4 ],
-                  [ "5. Spacer (M3 30mm)", "Male-female", 4 ],
-                  [ "6. Screw (M3 15mm)", "Multipurposed", 12 ],
-                  [ "7. Nut (M3)", "", 4 ],
-                  [ "8. Spacer (M3 5mm)", "For PCB", 4 ]
-                ]
-              }
-            },
-            {
-              "title" : "Bottom Wood",
-              "text1" : "Screw fanguard on TAIL of bottom board with 4 thick screws (M4 10mm) and nuts. Then face will be upside and it looks better.",
-              "text2" : "Connect 60mm and 30mm spacers to make 4 90mm spacers.",
-              "text3" : "Screw 4 rubber foot to bottom board with 4 thin long screws (M3 15mm) and spacers.",
-              "text4" : "Put all side boards except front.",
-              "text5" : "Mount upper body and pull cables out to front. Don't screw upper body yet."
-            },
-            {
-              "title" : "Circuit Board",
-              "text1" : "Screw PCB on backside of front board with 4 thin long screws (M3 15mm), 4 spacers (M3 5mm) and nuts. Power connector should come to the right side of logo."
-            },
-            {
-              "title" : "Wiring",
-              "text1" : "Connect longest heatsink cable. It wont be locked if it's in wrong direction.",
-              "text2" : "Loose 6 screws of all 3 green terminal blocks by screwing counterclockwise using straight driver.",
-              "text3" : "Connect 2 power cables of heater (white). No matter which white cable to be right or left but DO NOT connect pink cables. It will break thermistor.",
-              "text4" : "Connect 2 thermistor calbes of heater (pink). No matter which is right or left.",
-              "text5" : "Connect RED cable of peltier to the hole with arrow. DO NOT connect to next hole wrongly. That will break peltier.",
-              "text6" : "Connect BLACK cable to the remained hole. DO NOT connect to next hole wrongly.",
-              "text7" : "Wires of well thermistor are short and fragile. We connect it to PCB on next paragraph."
-            },
-            {
-              "title" : "Well thermistor",
-              "text1" : "Last but most sensitive part of whole assembly process. Lift top/right/left boards a little and set front board.",
-              "text2" : "Lift up top board a little and connect well thermistor to the pinheads (circle).",
-              "text3" : "Bak top board softly and screw it with remained 4 screws (M3 15mm)."
-            }
-          ]
+            "label" : "Body Assembly",
+            "items" : [
+                {
+                    "title" : "All Parts",
+                    "text1" : "Screw Bag 3, PCB, Fanguard, Rubber foot and these woods are needed.",
+                    "table1" : {
+                        "head" : [ "Name", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Bottom Board", "", 1 ],
+                            [ "2. Back Board", "", 1 ],
+                            [ "3. Left Board", "", 1 ],
+                            [ "4. Right Board", "With hole for power supply.", 1 ],
+                            [ "5. Front Board", "PCB will be placed behind logo.", 1 ]
+                        ]
+                    },
+                    "table2" : {
+                        "head" : [ "Name", "Detail", "Count" ],
+                        "body" : [
+                            [ "1. Straight driver", "To fasten wires on PCB", 1 ],
+                            [ "2. Screw (M4 10mm)", "For fan guard", 4 ],
+                            [ "3. Nut (M4)", "", 4 ],
+                            [ "4. Spacer (M3 60mm)", "Both female", 4 ],
+                            [ "5. Spacer (M3 30mm)", "Male-female", 4 ],
+                            [ "6. Screw (M3 15mm)", "Multipurposed", 12 ],
+                            [ "7. Nut (M3)", "", 4 ],
+                            [ "8. Spacer (M3 5mm)", "For PCB", 4 ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Bottom Wood",
+                    "text1" : "Screw fanguard on TAIL of bottom board with 4 thick screws (M4 10mm) and nuts. Then face will be upside and it looks better.",
+                    "text2" : "Connect 60mm and 30mm spacers to make 4 90mm spacers.",
+                    "text3" : "Screw 4 rubber foot to bottom board with 4 thin long screws (M3 15mm) and spacers.",
+                    "text4" : "Put all side boards except front.",
+                    "text5" : "Mount upper body and pull cables out to front. Don't screw upper body yet."
+                },
+                {
+                    "title" : "Circuit Board",
+                    "text1" : "Screw PCB on backside of front board with 4 thin long screws (M3 15mm), 4 spacers (M3 5mm) and nuts. Power connector should come to the right side of logo."
+                },
+                {
+                    "title" : "Wiring",
+                    "text1" : "Connect longest heatsink cable. It wont be locked if it's in wrong direction.",
+                    "text2" : "Loose 6 screws of all 3 green terminal blocks by screwing counterclockwise using straight driver.",
+                    "text3" : "Connect 2 power cables of heater (white). No matter which white cable to be right or left but DO NOT connect pink cables. It will break thermistor.",
+                    "text4" : "Connect 2 thermistor calbes of heater (pink). No matter which is right or left.",
+                    "text5" : "Connect RED cable of peltier to the hole with arrow. DO NOT connect to next hole wrongly. That will break peltier.",
+                    "text6" : "Connect BLACK cable to the remained hole. DO NOT connect to next hole wrongly.",
+                    "text7" : "Wires of well thermistor are short and fragile. We connect it to PCB on next paragraph."
+                },
+                {
+                    "title" : "Well thermistor",
+                    "text1" : "Last but most sensitive part of whole assembly process. Lift top/right/left boards a little and set front board.",
+                    "text2" : "Lift up top board a little and connect well thermistor to the pinheads (circle).",
+                    "text3" : "Bak top board softly and screw it with remained 4 screws (M3 15mm)."
+                }
+            ]
         },
         "setup" : {
-          "label" : "Initial Setup",
-          "items" : [
-            {
-                "title" : "Connect power adapter",
-                "text1" : "Plug the power adapter into NinjaPCR and then into an outlet.",
-                "text2_1":"If you are planning to use NinjaPCR with only \"access point (AP) mode\" without connecting a local Wi-Fi network, please skip this page and jump to \"",
-                "text2_2":"Manage experiment profiles",
-                "text2_3":"\"."
-            },
-            {
-              "title" : "Start in access point (AP) mode",
-              "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds."
-            },
-            {
-              "title" : "Change your Wi-Fi settings temporarily",
-              "text1" : "Open the settings of your PC or smartphone and select \"NinjaPCR\" shown in the AP list. Its conenction password is \"ninjapcr\".",
-              "text2" : "macOS",
-              "text3" : "Click the Wi-Fi icon in the menu bar and select \"NinjaPCR\" from the list.",
-              "text4" : "Windows",
-              "text5" : "Click the Wi-Fi icon in the menu bar and select \"NinjaPCR\" from the list.",
-              "text6" : "iOS",
-              "text7" : "From your Home screen open \"Settings\" and go to \"Wi-Fi\" screen. Choose \"NinjaPCR\" from the list.",
-              "text8" : "Android",
-              "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
-            },
-            {
-              "title" : "Access the Wi-Fi settings page",
-              "text1" : "Open ",
-              "text2" : "Wi-Fi settings page (http://192.168.1.1)",
-              "text3" : " and setup. If the page doesn't show up, please retry after a few seconds."
-            },
-            {
-              "title" : "Input Wi-Fi Settings",
-              "text1" : "SSID",
-              "text2" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
-              "text3" : "Password",
-              "text4" : "Input the password of the network.",
-              "text5" : "Device name",
-              "text6" : "Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
-              "text7" : "After you set up the device, it will restart and connect to the specified access point."
-            },
-            {
-              "title" : "Restore Wi-Fi settings",
-              "text1" : "Connect your PC of smartphone to the Wi-Fi access point that your NinjaPCR is connected to as you have done in ",
-              "text2" : "."
-            },
-            {
-              "title" : "Open the console",
-              "text1" : "After finishing Wi-Fi setup, NinjaPCR will restart in normal operation mode and become accessible from the console. Please test the connection.",
-              "text2" : "Windows / macOS / Linux / iOS",
-              "text3" : "Open ",
-              "text4" : "the console",
-              "text5" : " in your web browser.",
-              "text6" : "Android",
-              "text7" : "Download ",
-              "text8" : "the dedicated NinjaPCR app",
-              "text9" : "from Google Play Store and open it."
-            },
-            {
-              "title" : "Input the device name",
-              "text1" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
-            },
-            {
-              "title" : "Connection test",
-              "text1" : "Connection has succeeded if you see the \"Connected\" message. Then NinjaPCR is ready! If you see the \"Disconnected\" message again, it means that something went wrong. NinjaPCR needs some seconds to become accessible so trying again a little later may resolve the problem. If the problem still persists, please refer to ",
-              "text2" : "Troubleshooting > Connection test fails",
-              "text3" : "."
-            },
-            {
-              "title" : "Troubleshooting",
-              "text1" : "\"NinjaPCR\" does not appear on the AP list",
-              "text1_1" : "Your device can't catch the signal if it's far away from NinjaPCR. Please try again near NinjaPCR.",
-              "text1_2" : "Some devices take time to find  new access points. If many APs are listed up, NinjaPCR is listed out of the screen. Please scroll it.",
-              "text1_3" : "It is possible that \"Mode\" and \"Reset\" buttons had not been released properly. Please reboot NinjaPCR again by pressing and releasing buttons slowly.",
-              "text2" : "Dropdown list on NinjaPCR's Wi-Fi settings page doesn't contain the SSID you want to use.",
-              "text2_1" : "Access poitns of some types don't show up in the list. For example, an access point in stealth mode is hidden. Some smartphones in tethering mode don't listed up. In such cases, please input the SSID's name to the textbox below and choose nothing from the dropdown list.",
-              "text3" : "Connection test fails",
-              "text3_1" : "Start NinjaPCR in access point (AP) mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
-              "text3_2":"Your device and NinjaPCR should connect to the same network. Please review Wi-Fi settings of both.",
-              "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in access point (AP) mode? You don't need to press \"Mode\" button.",
-              "text3_4" : "NinjaPCR uses a mechanism called \"mDNS\" to be accessible from other devices. mDNS is available by default in macOS and iOS. Though Windows and Linux have mDNS helper application in most cases, if your PC doesn't have it, please install a helper software.",
-              "text11" : "Windows",
-              "text12" : "Please nstall ",
-              "text13" : "Bonjour Print Services",
-              "text14" : ". It is one of the easiest way to install mDNS support.",
-              "text15" : "Linux",
-              "text16" : "Please install ",
-              "text17" : "avahi",
-              "text18" : ". Avahi is a very popular software and most distributions support it with their own package systems."
-            }
-          ]
+            "label" : "Initial Setup",
+            "items" : [
+                {
+                    "title" : "Connect power adapter",
+                    "text1" : "Plug the power adapter into NinjaPCR and then into an outlet.",
+                    "text2_1":"If you are planning to use NinjaPCR with only \"access point (AP) mode\" without connecting a local Wi-Fi network, please skip this page and jump to \"",
+                    "text2_2":"Manage experiment profiles",
+                    "text2_3":"\"."
+                },
+                {
+                    "title" : "Start in access point (AP) mode",
+                    "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds."
+                },
+                {
+                    "title" : "Change your Wi-Fi settings temporarily",
+                    "text1" : "Open the settings of your PC or smartphone and select \"NinjaPCR\" shown in the AP list. Its conenction password is \"ninjapcr\".",
+                    "text2" : "macOS",
+                    "text3" : "Click the Wi-Fi icon in the menu bar and select \"NinjaPCR\" from the list.",
+                    "text4" : "Windows",
+                    "text5" : "Click the Wi-Fi icon in the menu bar and select \"NinjaPCR\" from the list.",
+                    "text6" : "iOS",
+                    "text7" : "From your Home screen open \"Settings\" and go to \"Wi-Fi\" screen. Choose \"NinjaPCR\" from the list.",
+                    "text8" : "Android",
+                    "text9" : "Open \"Settings\" and move to \"Wireless & networks\" screen. Select \"NinjaPCR\" in the AP list."
+                },
+                {
+                    "title" : "Access the Wi-Fi settings page",
+                    "text1" : "Open ",
+                    "text2" : "Wi-Fi settings page (http://192.168.1.1)",
+                    "text3" : " and setup. If the page doesn't show up, please retry after a few seconds."
+                },
+                {
+                    "title" : "Input Wi-Fi Settings",
+                    "text1" : "SSID",
+                    "text2" : "Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
+                    "text3" : "Password",
+                    "text4" : "Input the password of the network.",
+                    "text5" : "Device name",
+                    "text6" : "Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
+                    "text7" : "After you set up the device, it will restart and connect to the specified access point."
+                },
+                {
+                    "title" : "Restore Wi-Fi settings",
+                    "text1" : "Connect your PC of smartphone to the Wi-Fi access point that your NinjaPCR is connected to as you have done in ",
+                    "text2" : "."
+                },
+                {
+                    "title" : "Open the console",
+                    "text1" : "After finishing Wi-Fi setup, NinjaPCR will restart in normal operation mode and become accessible from the console. Please test the connection.",
+                    "text2" : "Windows / macOS / Linux / iOS",
+                    "text3" : "Open ",
+                    "text4" : "the console",
+                    "text5" : " in your web browser.",
+                    "text6" : "Android",
+                    "text7" : "Download ",
+                    "text8" : "the dedicated NinjaPCR app",
+                    "text9" : "from Google Play Store and open it."
+                },
+                {
+                    "title" : "Input the device name",
+                    "text1" : "Input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button."
+                },
+                {
+                    "title" : "Connection test",
+                    "text1" : "Connection has succeeded if you see the \"Connected\" message. Then NinjaPCR is ready! If you see the \"Disconnected\" message again, it means that something went wrong. NinjaPCR needs some seconds to become accessible so trying again a little later may resolve the problem. If the problem still persists, please refer to ",
+                    "text2" : "Troubleshooting > Connection test fails",
+                    "text3" : "."
+                },
+                {
+                    "title" : "Troubleshooting",
+                    "text1" : "\"NinjaPCR\" does not appear on the AP list",
+                    "text1_1" : "Your device can't catch the signal if it's far away from NinjaPCR. Please try again near NinjaPCR.",
+                    "text1_2" : "Some devices take time to find  new access points. If many APs are listed up, NinjaPCR is listed out of the screen. Please scroll it.",
+                    "text1_3" : "It is possible that \"Mode\" and \"Reset\" buttons had not been released properly. Please reboot NinjaPCR again by pressing and releasing buttons slowly.",
+                    "text2" : "Dropdown list on NinjaPCR's Wi-Fi settings page doesn't contain the SSID you want to use.",
+                    "text2_1" : "Access poitns of some types don't show up in the list. For example, an access point in stealth mode is hidden. Some smartphones in tethering mode don't listed up. In such cases, please input the SSID's name to the textbox below and choose nothing from the dropdown list.",
+                    "text3" : "Connection test fails",
+                    "text3_1" : "Start NinjaPCR in access point (AP) mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
+                    "text3_2":"Your device and NinjaPCR should connect to the same network. Please review Wi-Fi settings of both.",
+                    "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in access point (AP) mode? You don't need to press \"Mode\" button.",
+                    "text3_4" : "NinjaPCR uses a mechanism called \"mDNS\" to be accessible from other devices. mDNS is available by default in macOS and iOS. Though Windows and Linux have mDNS helper application in most cases, if your PC doesn't have it, please install a helper software.",
+                    "text11" : "Windows",
+                    "text12" : "Please nstall ",
+                    "text13" : "Bonjour Print Services",
+                    "text14" : ". It is one of the easiest way to install mDNS support.",
+                    "text15" : "Linux",
+                    "text16" : "Please install ",
+                    "text17" : "avahi",
+                    "text18" : ". Avahi is a very popular software and most distributions support it with their own package systems."
+                }
+            ]
         }
     },
     "op" : {
         "index" : {
-          "label" : "Operation Manual",
-          "shortlabel" : "Op.Manual",
-          "items" : [
-            {
-                "title" : "Initial setup",
-                "text1" : "Network configuration is needed when you use NinjaPCR for the first time. If you have not done yet, please refer to ",
-                "text2" : " document."
-              },
-              {
-                "title" : "Manage experiment profiles",
-                "text1" : "You can create an experiment profile to run it just once or save it to use repeatedly.",
-                "text2" : "Create",
-                "text3" : "To create a new experiment profile, click \"+\" icon. Profile editor will open.",
-                "text4" : "Edit",
-                "text5" : "A profile consists of one or more cycles. A cycle has some steps and repeat counts.",
-                "text6" : "Each step has duration and temperature. If you need to cool or heat samples very slowly, you can set ramp time (shortest transition time) to a step. If ramp time is empty, NinjaPCR tries to change temperature as fast as possible.",
-                "text7" : "If your need a complex profile with cycles with multiple patterns, click \"More Options\" button to add cycles. Temperature of the lid is 110 Celsius by default but you can customize it by changing \"Heater Lid\" value. ",
-                "text8" : "For example, the profile below is written as screenshot images below.",
-                "text9" : "x1",
-                "text10" : "Initial Denaturation",
-                "text11" : "95℃",
-                "text12" : "2 minutes",
-                "text13" : "x35",
-                "text14" : "Denaturation",
-                "text15" : "95℃",
-                "text16" : "30 seconds",
-                "text17" : "Annealing",
-                "text18" : "55℃",
-                "text19" : "30 seconds",
-                "text20" : "Extension",
-                "text21" : "72℃",
-                "text22" : "30 seconds",
-                "text23" : "x1",
-                "text24" : "Final extension",
-                "text25" : "72℃",
-                "text26" : "10 minutes",
-                "text27" : "Save",
-                "text28" : "To save your edit, click \"Save Preset\" button.",
-                "text29" : "Profiles are saved in storage area of your web browser. They are deleted by erasing data by browser settings. You can't save of load profiles in modes which don't allow usage of storage functionalities.",
+            "label" : "Operation Manual",
+            "shortlabel" : "Op.Manual",
+            "items" : [
+                {
+                    "title" : "Initial setup",
+                    "text1" : "Network configuration is needed when you use NinjaPCR for the first time. If you have not done yet, please refer to ",
+                    "text2" : " document."
+                },
+                {
+                    "title" : "Manage experiment profiles",
+                    "text1" : "You can create an experiment profile to run it just once or save it to use repeatedly.",
+                    "text2" : "Create",
+                    "text3" : "To create a new experiment profile, click \"+\" icon. Profile editor will open.",
+                    "text4" : "Edit",
+                    "text5" : "A profile consists of one or more cycles. A cycle has some steps and repeat counts.",
+                    "text6" : "Each step has duration and temperature. If you need to cool or heat samples very slowly, you can set ramp time (shortest transition time) to a step. If ramp time is empty, NinjaPCR tries to change temperature as fast as possible.",
+                    "text7" : "If your need a complex profile with cycles with multiple patterns, click \"More Options\" button to add cycles. Temperature of the lid is 110 Celsius by default but you can customize it by changing \"Heater Lid\" value. ",
+                    "text8" : "For example, the profile below is written as screenshot images below.",
+                    "text9" : "x1",
+                    "text10" : "Initial Denaturation",
+                    "text11" : "95℃",
+                    "text12" : "2 minutes",
+                    "text13" : "x35",
+                    "text14" : "Denaturation",
+                    "text15" : "95℃",
+                    "text16" : "30 seconds",
+                    "text17" : "Annealing",
+                    "text18" : "55℃",
+                    "text19" : "30 seconds",
+                    "text20" : "Extension",
+                    "text21" : "72℃",
+                    "text22" : "30 seconds",
+                    "text23" : "x1",
+                    "text24" : "Final extension",
+                    "text25" : "72℃",
+                    "text26" : "10 minutes",
+                    "text27" : "Save",
+                    "text28" : "To save your edit, click \"Save Preset\" button.",
+                    "text29" : "Profiles are saved in storage area of your web browser. They are deleted by erasing data by browser settings. You can't save of load profiles in modes which don't allow usage of storage functionalities.",
 
-                "text30" : "Delete",
-                "text31" : "A profile can be deleted by the trash bin icon."
-              },
-              {
-                "title" : "Set tubes",
-                "text1" : "Open the lid.",
-                "text2" : "Insert tubes to the well.",
-                "text3" : "Close the lid.",
-                "text4" : "Turn the knob clockwise to press tubes lightly with the lid."
-              },
-              {
-                "title" : "Start an Expriment",
-								"server" : {
-									"title":"Normal mode (HTTP server mode)"
-								},
-								"ap" : {
-									"title":"Access point (AP) mode",
-									"text1_0":"Power the NinjaPCR while holding the \"MODE\" button on the front panel. Then it starts in access point (AP) mode.",
-									"text1_1":"Learn more about access point (AP) mode",
-									"text2_0":"While using access point (AP) mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
-									"text3_title":"PC",
-									"text3_0":"Download ",
-									"text3_1":"the Zip file",
-									"text3_2":" and expand it into your local disk.",
-									"text3_3":"Then, open the file \"en/console/index.html\".",
-									"text4_title":"Android",
-									"text4_0":"Download ",
-									"text4_1":"the app",
-									"text4_2":" from Google Play.",
-									"text5_title":"iOS",
-									"text5_0":"Download",
-									"text5_1":"the app",
-									"text5_2":"from App Store.",
-									"text6_0":"Select SSID:NinjaPCR.",
-									"text6_1":"Learn more",
-									"text7":"Open the console, select \"Access point (AP) mode\" and press \"connect\" button."
-								},
-                "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
-                "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
-                "text3" : "When PCR is running, temperature of the well and the lid and estimated temperature.",
-                "text4" : "You can abort the experiment, click \"Stop\" button."
-              },
-              {
-                "title" : "After an Experiment",
-            		"text1" : "When the profile is all done, \"Finished\" is displayed.",
-                "text2" : "Open the lid and take out tubes. Please be careful not to touch the well or the lid. They are very hot after for several minutes!",
-                "text3" : "Plug the power adapter out."
-              }
-          ]
+                    "text30" : "Delete",
+                    "text31" : "A profile can be deleted by the trash bin icon."
+                },
+                {
+                    "title" : "Set tubes",
+                    "text1" : "Open the lid.",
+                    "text2" : "Insert tubes to the well.",
+                    "text3" : "Close the lid.",
+                    "text4" : "Turn the knob clockwise to press tubes lightly with the lid."
+                },
+                {
+                    "title" : "Start an Expriment",
+                    "server" : {
+                        "title":"Normal mode (HTTP server mode)"
+                    },
+                    "ap" : {
+                        "title":"Access point (AP) mode",
+                        "text1_0":"Power the NinjaPCR while holding the \"MODE\" button on the front panel. Then it starts in access point (AP) mode.",
+                        "text1_1":"Learn more about access point (AP) mode",
+                        "text2_0":"While using access point (AP) mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
+                        "text3_title":"PC",
+                        "text3_0":"Download ",
+                        "text3_1":"the Zip file",
+                        "text3_2":" and expand it into your local disk.",
+                        "text3_3":"Then, open the file \"en/console/index.html\" in the extracted folder.",
+                        "text4_title":"Android",
+                        "text4_0":"Download ",
+                        "text4_1":"the app",
+                        "text4_2":" from Google Play.",
+                        "text5_title":"iOS",
+                        "text5_0":"Download",
+                        "text5_1":"the app",
+                        "text5_2":"from App Store.",
+                        "text6_0":"Select SSID:NinjaPCR.",
+                        "text6_1":"Learn more",
+                        "text7":"Open the console, select \"Access point (AP) mode\" and press \"connect\" button."
+                    },
+                    "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
+                    "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
+                    "text3" : "When PCR is running, temperature of the well and the lid and estimated temperature.",
+                    "text4" : "You can abort the experiment, click \"Stop\" button."
+                },
+                {
+                    "title" : "After an Experiment",
+                    "text1" : "When the profile is all done, \"Finished\" is displayed.",
+                    "text2" : "Open the lid and take out tubes. Please be careful not to touch the well or the lid. They are very hot after for several minutes!",
+                    "text3" : "Plug the power adapter out."
+                }
+            ]
         }
     },
     "maker" : {
         "label" : "For Maker",
         "shortlabel" : "ForMaker",
         "index" : {
-          "label" : "Introduction",
-          "items" : [
-            {
-              "title" : "Making NinjaPCR from scratch",
-              "text1" : "NinjaPCR is totally opensourced on ",
-              "text2" : "GitHub",
-              "text3" : ". Bill of materials(BOM) is ",
-              "text4" : "here",
-              "text5" : ". Making NinjaPCR from scratch is best way to experience multiple DIY skills like lasercutting, metal, electric circuits and so on at once. But it's really hard for beginners to accomplish by themselves without any help. That is why this section exists! We designed \"Maker model\" (left) besides \"Kit model\" (right, on sale). By sharing detailed instructions how to make Maker model from scratch, we hope that people get DIY skills much easier and apply their knowledges to another creative projects in future."
-            },
-            {
-              "title" : "Differences between Kit model and Maker model",
-              "text1" : "Latch and Hinge",
-              "text2" : "Kit model uses parts only on market in Japan. In Maker model, they are replaced with laser cut wood and no need to import.",
-              "text3" : "ATX Power Supply",
-              "text4" : "Adapter of Kit model is powerful due to run peltier (12V150W). You can find it on ",
-              "text5" : "AliExpress",
-              "text6" : " but it will cost a lot including shipping fee. In Maker model, you can add ATX connector to PCB and choose another ",
-              "text7" : "laser cut data",
-              "text8" : " with hole for connector so that you can plug ATX power supply that can be scavenged easily from broken PC. In that case, no need to solder 2 adapter connetors (DIN4 and JACK) on PCB.",
-              "text9" : "Extensibility",
-              "text10" : "You can solder additional pinheads just above ATX connector to write program using ",
-              "text11" : "USB-Serial adapter (3.3V)",
-              "text12" : " and ",
-              "text13" : "ArduinoIDE",
-              "text14" : ". By sticking jumpoer pin to IO0, firmware can be replaced.",
-              "text15" : "Thickness of wood board",
-              "text16" : "Kit model uses 5.5mm MDF (Medium-density fibreboard). Choose from 5.0mm and 5.5mm in Maker model."
-            },
-            {
-              "title" : "Advantages",
-              "text1" : "Cheap (maybe or not)",
-              "text2" : "If you want to save money by making from scratch, we don't recommend. For example, ",
-              "text3" : "well (tube holder)",
-              "text4" : " is USD100 on our shop but you will spend at least 20 hours or USD300 for outsourcing. ",
-              "text5" : "High thermal density lid heater",
-              "text6" : " is USD80 and we will share how to search on online market and a link trying to make it at USD0.5. But that might be easy to be broken by heat and we have never tried before. Keep in mind that you have to take all responsibilities even if you make a fire by sparks due to such fault. It is almost impossible to make safe heater with high thermal density in small amount because mold is needed. As a conclusion, we cannot assure that Maker model is cheaper than Kit model",
-              "text7" : "Skills",
-              "text8" : "Relax, you don't need to make everything. Even if you make only wood parts by touching laser cutter in ",
-              "text9" : "hackerspaces",
-              "text10" : " or ",
-              "text11" : "FabLab",
-              "text12" : " around you for the first time, you will notice that you got super power and great connections throughout your life. You can complement on our shop and we will help you if you ask questions through ",
-              "text13" : "contact form",
-              "text14" : "."
-            },
-            {
-              "title" : "Disadvantages",
-              "text1" : "No Warranty",
-              "text2" : "Kit model has some warranty but nothing with Maker model. You have to understand that you are responsible for everything that happens.",
-              "text3" : "Endurance",
-              "text4" : "You might feel everything doesn't work as you want first. When we cannot point out the root cause online, you may have to repeat or test with patience. Don't scared to make faults."
-            }
-          ]
+            "label" : "Introduction",
+            "items" : [
+                {
+                    "title" : "Making NinjaPCR from scratch",
+                    "text1" : "NinjaPCR is totally opensourced on ",
+                    "text2" : "GitHub",
+                    "text3" : ". Bill of materials(BOM) is ",
+                    "text4" : "here",
+                    "text5" : ". Making NinjaPCR from scratch is best way to experience multiple DIY skills like lasercutting, metal, electric circuits and so on at once. But it's really hard for beginners to accomplish by themselves without any help. That is why this section exists! We designed \"Maker model\" (left) besides \"Kit model\" (right, on sale). By sharing detailed instructions how to make Maker model from scratch, we hope that people get DIY skills much easier and apply their knowledges to another creative projects in future."
+                },
+                {
+                    "title" : "Differences between Kit model and Maker model",
+                    "text1" : "Latch and Hinge",
+                    "text2" : "Kit model uses parts only on market in Japan. In Maker model, they are replaced with laser cut wood and no need to import.",
+                    "text3" : "ATX Power Supply",
+                    "text4" : "Adapter of Kit model is powerful due to run peltier (12V150W). You can find it on ",
+                    "text5" : "AliExpress",
+                    "text6" : " but it will cost a lot including shipping fee. In Maker model, you can add ATX connector to PCB and choose another ",
+                    "text7" : "laser cut data",
+                    "text8" : " with hole for connector so that you can plug ATX power supply that can be scavenged easily from broken PC. In that case, no need to solder 2 adapter connetors (DIN4 and JACK) on PCB.",
+                    "text9" : "Extensibility",
+                    "text10" : "You can solder additional pinheads just above ATX connector to write program using ",
+                    "text11" : "USB-Serial adapter (3.3V)",
+                    "text12" : " and ",
+                    "text13" : "ArduinoIDE",
+                    "text14" : ". By sticking jumpoer pin to IO0, firmware can be replaced.",
+                    "text15" : "Thickness of wood board",
+                    "text16" : "Kit model uses 5.5mm MDF (Medium-density fibreboard). Choose from 5.0mm and 5.5mm in Maker model."
+                },
+                {
+                    "title" : "Advantages",
+                    "text1" : "Cheap (maybe or not)",
+                    "text2" : "If you want to save money by making from scratch, we don't recommend. For example, ",
+                    "text3" : "well (tube holder)",
+                    "text4" : " is USD100 on our shop but you will spend at least 20 hours or USD300 for outsourcing. ",
+                    "text5" : "High thermal density lid heater",
+                    "text6" : " is USD80 and we will share how to search on online market and a link trying to make it at USD0.5. But that might be easy to be broken by heat and we have never tried before. Keep in mind that you have to take all responsibilities even if you make a fire by sparks due to such fault. It is almost impossible to make safe heater with high thermal density in small amount because mold is needed. As a conclusion, we cannot assure that Maker model is cheaper than Kit model",
+                    "text7" : "Skills",
+                    "text8" : "Relax, you don't need to make everything. Even if you make only wood parts by touching laser cutter in ",
+                    "text9" : "hackerspaces",
+                    "text10" : " or ",
+                    "text11" : "FabLab",
+                    "text12" : " around you for the first time, you will notice that you got super power and great connections throughout your life. You can complement on our shop and we will help you if you ask questions through ",
+                    "text13" : "contact form",
+                    "text14" : "."
+                },
+                {
+                    "title" : "Disadvantages",
+                    "text1" : "No Warranty",
+                    "text2" : "Kit model has some warranty but nothing with Maker model. You have to understand that you are responsible for everything that happens.",
+                    "text3" : "Endurance",
+                    "text4" : "You might feel everything doesn't work as you want first. When we cannot point out the root cause online, you may have to repeat or test with patience. Don't scared to make faults."
+                }
+            ]
         },
         "list" : {
-          "label" : "Components",
-          "buy" : "Shop",
-          "items" : [
-            {
-              "title" : "Components",
-              "text1" : "NinjaPCR are consisted from these components. Some components need proper tools like laser cutter. Even if you don't have, you can buy them on ",
-              "text2" : "shop",
-              "text3" : "."
-            },
-            {
-              "title" : "Wood Parts",
-              "difficulty" : "Easy",
-              "skill" : [
-                "Laser Cutter"
-              ],
-              "text1" : "Cut MDF (Medium-density fibreboard) with thickness 5.0mm or 5.5mm using laser cutter."
-            },
-            {
-              "title" : "Printed Circuit Board (PCB)",
-              "difficulty" : "Hard",
-              "skill" : [
-                "Order PCB",
-                "Order Electric Parts",
-                "Soldering",
-                "Solder Stencil",
-                "Reflow"
-              ],
-              "text1" : "First, we will order green \"Printed Circuit Board (PCB)\" and \"Stencil\" to factory by uploading proper files online. Then we will order electric parts on another online stores. Surface Mount Devices (SMD) will be \"reflowed\" (soldered using stencil and solder paste). Other parts will be soldered by soldering rod. \"Reflow\" is a common technique to solder small parts at once and people share how to do that using cheap tools like hot plate or oven."
-            },
-            {
-              "title" : "Well",
-              "difficulty" : "Hard",
-              "skill" : [
-                "3D CAD",
-                "CNC machine"
-              ],
-              "text1" : "Aluminium PCR tube holder. Like PCB, there is web service that you can order metal parts by uploading 3D model but that would be pricy (maybe more than USD300/piece for small amount). To make by youself, buy A6063 aluminium plate first. Then operate 3D CAD software to export CAM (Computer-aided manufacturing) file for CNC. Finally, run CAM file on CNC machine to mill part you need."
-            },
-            {
-              "title" : "Lid Heater",
-              "difficulty" : "You should BUY",
-              "text1" : "Lid heater works as dew condensation prevention. Without heating top of tube at high temperature (around 110 degree celcius), solution vapors and liquefy into drops atop of tube. ",
-              "text2" : "Cheap heaters",
-              "text3" : " don't have enough thermal density and it cannot or takes too long time to reach high temperature. We introduce how to make it using PCB but it is not recommended."
-            },
-            {
-              "title" : "Aluminium Plates",
-              "difficulty" : "Easy",
-              "text1" : "40x52mm and 40x40mm aluminium plates. Thickness can be varied from 1.5 to 2.0mm. Any kind of aluminium works well. You can cut such thin aluminium with box cutter easily."
-            },
-            {
-              "title" : "PC Parts",
-              "difficulty" : "Easy",
-              "heatsink" : "Heatsink",
-              "peltier" : "Peltier",
-              "text1" : "Common LGA115x heatsink, grease and ATX power supply can be used. Maximum operating temperature of common peltier is around 80 degree celcius though PCR process requires up to 100 degree celcius. We recommend Hebei TEC1-12710HTS Peltier Module with maximum operating temperature of 225 degree celcius."
-            },
-            {
-              "title" : "Screws",
-              "difficulty" : "Easy",
-              "text1" : "Just get the screws, nuts and spacers in list."
-            },
-            {
-              "title" : "Miscellaneous",
-              "difficulty" : "Easy",
-              "text1" : "All items in list are common or easy to find."
-            }
-          ]
+            "label" : "Components",
+            "buy" : "Shop",
+            "items" : [
+                {
+                    "title" : "Components",
+                    "text1" : "NinjaPCR are consisted from these components. Some components need proper tools like laser cutter. Even if you don't have, you can buy them on ",
+                    "text2" : "shop",
+                    "text3" : "."
+                },
+                {
+                    "title" : "Wood Parts",
+                    "difficulty" : "Easy",
+                    "skill" : [
+                        "Laser Cutter"
+                    ],
+                    "text1" : "Cut MDF (Medium-density fibreboard) with thickness 5.0mm or 5.5mm using laser cutter."
+                },
+                {
+                    "title" : "Printed Circuit Board (PCB)",
+                    "difficulty" : "Hard",
+                    "skill" : [
+                        "Order PCB",
+                        "Order Electric Parts",
+                        "Soldering",
+                        "Solder Stencil",
+                        "Reflow"
+                    ],
+                    "text1" : "First, we will order green \"Printed Circuit Board (PCB)\" and \"Stencil\" to factory by uploading proper files online. Then we will order electric parts on another online stores. Surface Mount Devices (SMD) will be \"reflowed\" (soldered using stencil and solder paste). Other parts will be soldered by soldering rod. \"Reflow\" is a common technique to solder small parts at once and people share how to do that using cheap tools like hot plate or oven."
+                },
+                {
+                    "title" : "Well",
+                    "difficulty" : "Hard",
+                    "skill" : [
+                        "3D CAD",
+                        "CNC machine"
+                    ],
+                    "text1" : "Aluminium PCR tube holder. Like PCB, there is web service that you can order metal parts by uploading 3D model but that would be pricy (maybe more than USD300/piece for small amount). To make by youself, buy A6063 aluminium plate first. Then operate 3D CAD software to export CAM (Computer-aided manufacturing) file for CNC. Finally, run CAM file on CNC machine to mill part you need."
+                },
+                {
+                    "title" : "Lid Heater",
+                    "difficulty" : "You should BUY",
+                    "text1" : "Lid heater works as dew condensation prevention. Without heating top of tube at high temperature (around 110 degree celcius), solution vapors and liquefy into drops atop of tube. ",
+                    "text2" : "Cheap heaters",
+                    "text3" : " don't have enough thermal density and it cannot or takes too long time to reach high temperature. We introduce how to make it using PCB but it is not recommended."
+                },
+                {
+                    "title" : "Aluminium Plates",
+                    "difficulty" : "Easy",
+                    "text1" : "40x52mm and 40x40mm aluminium plates. Thickness can be varied from 1.5 to 2.0mm. Any kind of aluminium works well. You can cut such thin aluminium with box cutter easily."
+                },
+                {
+                    "title" : "PC Parts",
+                    "difficulty" : "Easy",
+                    "heatsink" : "Heatsink",
+                    "peltier" : "Peltier",
+                    "text1" : "Common LGA115x heatsink, grease and ATX power supply can be used. Maximum operating temperature of common peltier is around 80 degree celcius though PCR process requires up to 100 degree celcius. We recommend Hebei TEC1-12710HTS Peltier Module with maximum operating temperature of 225 degree celcius."
+                },
+                {
+                    "title" : "Screws",
+                    "difficulty" : "Easy",
+                    "text1" : "Just get the screws, nuts and spacers in list."
+                },
+                {
+                    "title" : "Miscellaneous",
+                    "difficulty" : "Easy",
+                    "text1" : "All items in list are common or easy to find."
+                }
+            ]
         },
         "wood" : {
-          "label" : "Wood Parts",
-          "items" : [
-            {
-              "title" : "Working area of laser cutter",
-              "text1" : "Visit nearest DIY place with laser cutter like ",
-              "text2" : "hackerspaces",
-              "text3" : " and ",
-              "text4" : "FabLab",
-              "text5" : " and check required data format and working area (maximum size of wood you can place inside). If it is wider than 367x450mm, you can cut all parts at once. Otherwise, repeat several times with smaller boards."
-            },
-            {
-              "title" : "Thickness of wood plate",
-              "text1" : "Check Medium Density Fibreboard (MDF) at your nearest DIY stores. Choose 5.0mm or 5.5mm for thickness and buy required amount of boards. They might cut your board into proper size."
-            },
-            {
-              "title" : "Prepare Data",
-              "text1" : "You can find data for ",
-              "text2" : "Inkspace",
-              "text3" : ", ",
-              "text4" : "PDF",
-              "text5" : ", ",
-              "text6" : "CorelDRAW",
-              "text7" : " ",
-              "text8" : "here",
-              "text9" : ". No data for Adobe illustrator but you can import PDF.",
-              "table" : {
-                "head" : [ "mm", "3D (Fusion360)", "Inkscape", "PDF", "CorelDRAW" ],
-                "body" : [
-                    [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ],
-                    [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ]
-                ]
-              }
-            },
-            {
-              "title" : "Time to Cut",
-              "text1" : "Bring MDF and data to your laser cutter. Congratulations, you made wood parts by yourself."
-            }
-          ]
+            "label" : "Wood Parts",
+            "items" : [
+                {
+                    "title" : "Working area of laser cutter",
+                    "text1" : "Visit nearest DIY place with laser cutter like ",
+                    "text2" : "hackerspaces",
+                    "text3" : " and ",
+                    "text4" : "FabLab",
+                    "text5" : " and check required data format and working area (maximum size of wood you can place inside). If it is wider than 367x450mm, you can cut all parts at once. Otherwise, repeat several times with smaller boards."
+                },
+                {
+                    "title" : "Thickness of wood plate",
+                    "text1" : "Check Medium Density Fibreboard (MDF) at your nearest DIY stores. Choose 5.0mm or 5.5mm for thickness and buy required amount of boards. They might cut your board into proper size."
+                },
+                {
+                    "title" : "Prepare Data",
+                    "text1" : "You can find data for ",
+                    "text2" : "Inkspace",
+                    "text3" : ", ",
+                    "text4" : "PDF",
+                    "text5" : ", ",
+                    "text6" : "CorelDRAW",
+                    "text7" : " ",
+                    "text8" : "here",
+                    "text9" : ". No data for Adobe illustrator but you can import PDF.",
+                    "table" : {
+                        "head" : [ "mm", "3D (Fusion360)", "Inkscape", "PDF", "CorelDRAW" ],
+                        "body" : [
+                            [ "5.0", "web@https://a360.co/2uyWu4V", "t5.0mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.svg", "t5.0mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.0mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ],
+                            [ "5.5", "web@https://a360.co/2NomYP8", "t5.5mm-LGA115x-maker.svg@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.svg", "t5.5mm-LGA115x-maker.pdf@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/t5.5mm-LGA115x-maker.pdf", "NinjaPCR.cdr@https://github.com/hisashin/NinjaPCR/blob/master/cad/2d/NinjaPCR.cdr" ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Time to Cut",
+                    "text1" : "Bring MDF and data to your laser cutter. Congratulations, you made wood parts by yourself."
+                }
+            ]
         },
         "pcb" : {
-          "label" : "PCB",
-          "items" : [
-              {
-                "title" : "Order PCB and Stencil",
-                "text1" : "NinjaPCB is the name of PCB for NinjaPCR. Let's order its latest version 2.2 online at ",
-                "text2" : "Seeed Fusion PCB",
-                "text3" : ". All required files are located ",
-                "text4" : "here",
-                "text5" : ". Follow ",
-                "text6" : "7 steps",
-                "text7" : " and never forget to change \"Copper Weight\" from default 1oz to 2oz. You can order stencil at the same time that is required to solder small parts with hand.",
-                "table" : {
-                  "head" : [ "Name", "File name" ],
-                  "body" : [
-                    [ "Circuit", "NinjaPCB_ver2.2.sch" ],
-                    [ "Layout", "NinjaPCB_ver2.2.brd" ],
-                    [ "Gerber Data", "NinjaPCB_ver2.2.pcb-choose-2oz-as-copper-weight.zip" ],
-                    [ "Stencil Data", "NinjaPCB_ver2.2.stencil.zip" ]
-                  ]
+            "label" : "PCB",
+            "items" : [
+                {
+                    "title" : "Order PCB and Stencil",
+                    "text1" : "NinjaPCB is the name of PCB for NinjaPCR. Let's order its latest version 2.2 online at ",
+                    "text2" : "Seeed Fusion PCB",
+                    "text3" : ". All required files are located ",
+                    "text4" : "here",
+                    "text5" : ". Follow ",
+                    "text6" : "7 steps",
+                    "text7" : " and never forget to change \"Copper Weight\" from default 1oz to 2oz. You can order stencil at the same time that is required to solder small parts with hand.",
+                    "table" : {
+                        "head" : [ "Name", "File name" ],
+                        "body" : [
+                            [ "Circuit", "NinjaPCB_ver2.2.sch" ],
+                            [ "Layout", "NinjaPCB_ver2.2.brd" ],
+                            [ "Gerber Data", "NinjaPCB_ver2.2.pcb-choose-2oz-as-copper-weight.zip" ],
+                            [ "Stencil Data", "NinjaPCB_ver2.2.stencil.zip" ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Order Electric Parts",
+                    "text1" : "Here is the list to solder. If you use ATX power supply instead of adapter, no need to solder JACK nor DIN4 but ATX. You can choose WiFi module from cheaper ",
+                    "text2" : "ESP-12F",
+                    "text3" : " (FCC, CE) or ",
+                    "text4" : "ESP-WROOM-02",
+                    "text5" : " (FCC, CE, SRRC, TELEC, IC, KCC). Check which license is needed in your country. It is hard to find Heatsink and Relay outside Tokyo so we will sell it on shop. NinjaPCB is designed and tested with ",
+                    "text6" : "Seeed OPL(Open Parts Library)",
+                    "text7" : ". Keep in mind that some alternatives in this list are not yet tested.",
+                    "table" : {
+                        "head" : [ "Name", "ID", "OPL ID", "Datasheet", "pieces" ],
+                        "body" : [
+                            [ "IC1", "SN74LVC1G66DBVR@https://www.digikey.com/product-detail/en/texas-instruments/SN74LVC1G66DBVR/296-13253-1-ND/484545", "", "Datasheet@http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf", "1" ],
+                            [ "IC2", "NAU7802SGI@https://www.digikey.com/product-detail/en/nuvoton-technology-corporation-of-america/NAU7802SGI/NAU7802SGI-ND/2769782", "", "Datasheet@http://www.nuvoton.com/resource-files/NAU7802%20Data%20Sheet%20V1.7.pdf", "1" ],
+                            [ "RD1,RD2,RH,RL1,RL2", "ERA-3AEB153V@https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-3AEB153V/P15KDBCT-ND/1466080", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "5" ],
+                            [ "RT", "ERA-3AEB4991V@https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-3AEB4991V/P4.99KDBCT-ND/3075985", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "1" ],
+
+                            [ "Q1", "IRLB3813PBF@https://www.digikey.com/products/en?keywords=IRLB3813PbF", "", "Datasheet@https://www.infineon.com/dgdl/irlb3813pbf.pdf?fileId=5546d462533600a4015356603cfe258b", "1" ],
+                            [ "ATX", "1-1775099-3(Cut Boardlock)@https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1775099-3/A127799-ND/5272985", "", "Datasheet@http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1775099&DocType=Customer+Drawing&DocLang=English", "1" ],
+                            [ "FAN", "22-04-1031@https://www.digikey.com/products/en?keywords=Molex%2022-04-1031", "", "Datasheet@https://www.molex.com/pdm_docs/sd/022041031_sd.pdf", "1" ],
+
+                            [ "HEATER_POWER,HEATER_TEMP,PELTIER", "Aliexpress@https://www.aliexpress.com/item/Green-50-Pieces-3-5mm-Pitch-300V-10A-Vertical-PCB-Mount-Type-Terminal-Block-Wire-Connector/32556780122.html?spm=a2g0s.9042311.0.0.27424c4d1nXp6N", "320110028", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3470070P1.pdf", "3" ],
+                            [ "REG", "ZLDO1117G33TA(Untested)@https://www.digikey.com/product-detail/en/diodes-incorporated/ZLDO1117G33TA/ZLDO1117G33DICT-ND/2095612", "310030097", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/1310190P1.pdf", "1" ],
+                            [ "Q2,Q3", "DMN3404L-7(Untested)@https://www.digikey.com/product-detail/en/diodes-incorporated/DMN3404L-7/DMN3404LDICT-ND/2052805", "305030015", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0440200P1.pdf", "2" ],
+                            [ "Q4,Q5,Q6", "2SC3325-Y@https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/2SC3325-YLF/2SC3325-YLFCT-ND/4304096", "305010018", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0400000P1.pdf", "3" ],
+                            [ "R1,R2,R3,R4,R5,R6,R7,R8,R10,R11,R12,R15,R16,R18,R20", "RC0603JR-0710KL@https://www.digikey.com/products/en?keywords=RC0603JR-0710KL", "301010293", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/301010293.pdf", "15" ],
+                            [ "R13,R17,R19,R22", "RC0603JR-071KL@https://www.digikey.com/products/en?keywords=RC0603JR-071KL", "301010291", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/301010291.pdf", "4" ],
+                            [ "C1,C5", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "2" ],
+                            [ "C2,C4", "TAJB226K016RNJ@https://www.digikey.com/product-detail/en/avx-corporation/TAJB226K016RNJ/478-1682-1-ND/564714", "302020013", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/302020013.pdf", "2" ],
+                            [ "C3", "EEV-FK1E102Q(Untested)@https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEV-FK1E102Q/PCE3462CT-ND/396321", "302030098", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/302030098.pdf", "1" ],
+                            [ "D1,D2", "SM4007PL-TP(Untested)@https://www.digikey.com/product-detail/en/micro-commercial-co/SM4007PL-TP/SM4007PL-TPMSCT-ND/1793409", "304010013", "", "2" ],
+
+                            [ "colspan=5:Solder these 2 only if you use ESP-12F." ],
+                            [ "ESP1", "ESP-12F@https://www.aliexpress.com/wholesale?SearchText=ESP-12F", "", "Datasheet@https://www.elecrow.com/download/ESP-12F.pdf", "1" ],
+                            [ "CP1", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
+
+                            [ "colspan=4:Solder these 2 only if you use ESP-WROOM-02." ],
+                            [ "ESP2", "ESP-WROOM-02@https://www.digikey.com/product-detail/en/espressif-systems/ESP-WROOM-02/1904-1009-1-ND/8544304", "", "Datasheet@https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf", "1" ],
+                            [ "CP2", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
+
+                            [ "colspan=5:These 2 will be solder on our webshop." ],
+                            [ "Heatsink", "11PB015-01025(+M3 6mm screw)@https://www.chip1stop.com/JPN/en/view/dispDetail/DispDetail?partId=GLEC-0000001", "", "Datasheet@https://www.chip1stop.com/pdf/product/GLEC/11PB015.PDF", "1" ],
+                            [ "RELAY", "EP2-3L3SAb@http://akizukidenshi.com/catalog/g/gP-12137/?customer=z", "", "Datasheet@http://akizukidenshi.com/download/ds/nec/EP1_EP2_datasheet.pdf", "1" ],
+
+                            [ "colspan=5:No need to solder if you use ATX power supply" ],
+                            [ "JACK", "EJ508A(Untested)@https://www.digikey.com/product-detail/en/mpd-memory-protection-devices/EJ508A/EJ508A-ND/2439547", "320120003", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf", "1" ],
+                            [ "DIN4", "Aliexpress@https://www.aliexpress.com/item/2pcs-DIN-4-Pin-Female-Jack-Adapter-PCB-Panel-Mount-Solder-Chassis-Connector-Nickel-Plated-S/32830340662.html?spm=a2g0s.9042311.0.0.27424c4deMrOTg", "", "", "1" ],
+
+                            [ "colspan=5:No need to solder." ],
+                            [ "R21,R14,R9", "", "", "", "0" ]
+                        ]
+                    }
+                },
+                {
+                    "title" : "Print Solder Paste",
+                    "text1" : "Please Stand By."
+                },
+                {
+                    "title" : "Mount SMD Parts",
+                    "text1" : "Please Stand By."
+                },
+                {
+                    "title" : "Reflow",
+                    "text1" : "Please Stand By."
+                },
+                {
+                    "title" : "Solder DIP Parts",
+                    "text1" : "Please Stand By."
                 }
-              },
-              {
-                "title" : "Order Electric Parts",
-                "text1" : "Here is the list to solder. If you use ATX power supply instead of adapter, no need to solder JACK nor DIN4 but ATX. You can choose WiFi module from cheaper ",
-                "text2" : "ESP-12F",
-                "text3" : " (FCC, CE) or ",
-                "text4" : "ESP-WROOM-02",
-                "text5" : " (FCC, CE, SRRC, TELEC, IC, KCC). Check which license is needed in your country. It is hard to find Heatsink and Relay outside Tokyo so we will sell it on shop. NinjaPCB is designed and tested with ",
-                "text6" : "Seeed OPL(Open Parts Library)",
-                "text7" : ". Keep in mind that some alternatives in this list are not yet tested.",
-                "table" : {
-                  "head" : [ "Name", "ID", "OPL ID", "Datasheet", "pieces" ],
-                  "body" : [
-                    [ "IC1", "SN74LVC1G66DBVR@https://www.digikey.com/product-detail/en/texas-instruments/SN74LVC1G66DBVR/296-13253-1-ND/484545", "", "Datasheet@http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf", "1" ],
-                    [ "IC2", "NAU7802SGI@https://www.digikey.com/product-detail/en/nuvoton-technology-corporation-of-america/NAU7802SGI/NAU7802SGI-ND/2769782", "", "Datasheet@http://www.nuvoton.com/resource-files/NAU7802%20Data%20Sheet%20V1.7.pdf", "1" ],
-                    [ "RD1,RD2,RH,RL1,RL2", "ERA-3AEB153V@https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-3AEB153V/P15KDBCT-ND/1466080", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "5" ],
-                    [ "RT", "ERA-3AEB4991V@https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-3AEB4991V/P4.99KDBCT-ND/3075985", "", "Datasheet@https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf", "1" ],
-
-                    [ "Q1", "IRLB3813PBF@https://www.digikey.com/products/en?keywords=IRLB3813PbF", "", "Datasheet@https://www.infineon.com/dgdl/irlb3813pbf.pdf?fileId=5546d462533600a4015356603cfe258b", "1" ],
-                    [ "ATX", "1-1775099-3(Cut Boardlock)@https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1-1775099-3/A127799-ND/5272985", "", "Datasheet@http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1775099&DocType=Customer+Drawing&DocLang=English", "1" ],
-                    [ "FAN", "22-04-1031@https://www.digikey.com/products/en?keywords=Molex%2022-04-1031", "", "Datasheet@https://www.molex.com/pdm_docs/sd/022041031_sd.pdf", "1" ],
-
-                    [ "HEATER_POWER,HEATER_TEMP,PELTIER", "Aliexpress@https://www.aliexpress.com/item/Green-50-Pieces-3-5mm-Pitch-300V-10A-Vertical-PCB-Mount-Type-Terminal-Block-Wire-Connector/32556780122.html?spm=a2g0s.9042311.0.0.27424c4d1nXp6N", "320110028", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3470070P1.pdf", "3" ],
-                    [ "REG", "ZLDO1117G33TA(Untested)@https://www.digikey.com/product-detail/en/diodes-incorporated/ZLDO1117G33TA/ZLDO1117G33DICT-ND/2095612", "310030097", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/1310190P1.pdf", "1" ],
-                    [ "Q2,Q3", "DMN3404L-7(Untested)@https://www.digikey.com/product-detail/en/diodes-incorporated/DMN3404L-7/DMN3404LDICT-ND/2052805", "305030015", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0440200P1.pdf", "2" ],
-                    [ "Q4,Q5,Q6", "2SC3325-Y@https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/2SC3325-YLF/2SC3325-YLFCT-ND/4304096", "305010018", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0400000P1.pdf", "3" ],
-                    [ "R1,R2,R3,R4,R5,R6,R7,R8,R10,R11,R12,R15,R16,R18,R20", "RC0603JR-0710KL@https://www.digikey.com/products/en?keywords=RC0603JR-0710KL", "301010293", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/301010293.pdf", "15" ],
-                    [ "R13,R17,R19,R22", "RC0603JR-071KL@https://www.digikey.com/products/en?keywords=RC0603JR-071KL", "301010291", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/301010291.pdf", "4" ],
-                    [ "C1,C5", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "2" ],
-                    [ "C2,C4", "TAJB226K016RNJ@https://www.digikey.com/product-detail/en/avx-corporation/TAJB226K016RNJ/478-1682-1-ND/564714", "302020013", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/302020013.pdf", "2" ],
-                    [ "C3", "EEV-FK1E102Q(Untested)@https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEV-FK1E102Q/PCE3462CT-ND/396321", "302030098", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/302030098.pdf", "1" ],
-                    [ "D1,D2", "SM4007PL-TP(Untested)@https://www.digikey.com/product-detail/en/micro-commercial-co/SM4007PL-TP/SM4007PL-TPMSCT-ND/1793409", "304010013", "", "2" ],
-
-                    [ "colspan=5:Solder these 2 only if you use ESP-12F." ],
-                    [ "ESP1", "ESP-12F@https://www.aliexpress.com/wholesale?SearchText=ESP-12F", "", "Datasheet@https://www.elecrow.com/download/ESP-12F.pdf", "1" ],
-                    [ "CP1", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
-
-                    [ "colspan=4:Solder these 2 only if you use ESP-WROOM-02." ],
-                    [ "ESP2", "ESP-WROOM-02@https://www.digikey.com/product-detail/en/espressif-systems/ESP-WROOM-02/1904-1009-1-ND/8544304", "", "Datasheet@https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf", "1" ],
-                    [ "CP2", "CC0603KRX7R9BB104@https://www.digikey.com/products/en?keywords=CC0603KRX7R9BB104", "302010138", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/0100020P1.pdf", "1" ],
-
-                    [ "colspan=5:These 2 will be solder on our webshop." ],
-                    [ "Heatsink", "11PB015-01025(+M3 6mm screw)@https://www.chip1stop.com/JPN/en/view/dispDetail/DispDetail?partId=GLEC-0000001", "", "Datasheet@https://www.chip1stop.com/pdf/product/GLEC/11PB015.PDF", "1" ],
-                    [ "RELAY", "EP2-3L3SAb@http://akizukidenshi.com/catalog/g/gP-12137/?customer=z", "", "Datasheet@http://akizukidenshi.com/download/ds/nec/EP1_EP2_datasheet.pdf", "1" ],
-
-                    [ "colspan=5:No need to solder if you use ATX power supply" ],
-                    [ "JACK", "EJ508A(Untested)@https://www.digikey.com/product-detail/en/mpd-memory-protection-devices/EJ508A/EJ508A-ND/2439547", "320120003", "Datasheet@https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf", "1" ],
-                    [ "DIN4", "Aliexpress@https://www.aliexpress.com/item/2pcs-DIN-4-Pin-Female-Jack-Adapter-PCB-Panel-Mount-Solder-Chassis-Connector-Nickel-Plated-S/32830340662.html?spm=a2g0s.9042311.0.0.27424c4deMrOTg", "", "", "1" ],
-
-                    [ "colspan=5:No need to solder." ],
-                    [ "R21,R14,R9", "", "", "", "0" ]
-                  ]
-                }
-              },
-              {
-                "title" : "Print Solder Paste",
-                "text1" : "Please Stand By."
-              },
-              {
-                "title" : "Mount SMD Parts",
-                "text1" : "Please Stand By."
-              },
-              {
-                "title" : "Reflow",
-                "text1" : "Please Stand By."
-              },
-              {
-                "title" : "Solder DIP Parts",
-                "text1" : "Please Stand By."
-              }
             ]
         },
         "well" : {
-          "label" : "Well",
-          "items" : [
-              {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By."
-              }
+            "label" : "Well",
+            "items" : [
+                {
+                    "title" : "Preparing",
+                    "text1" : "Please Stand By."
+                }
             ]
         },
         "heater" : {
-          "label" : "Lid Heater",
-          "items" : [
-              {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By."
-              }
+            "label" : "Lid Heater",
+            "items" : [
+                {
+                    "title" : "Preparing",
+                    "text1" : "Please Stand By."
+                }
             ]
         },
         "plate" : {
-          "label" : "Aluminium Plates",
-          "items" : [
-              {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By."
-              }
+            "label" : "Aluminium Plates",
+            "items" : [
+                {
+                    "title" : "Preparing",
+                    "text1" : "Please Stand By."
+                }
             ]
         },
         "pc" : {
-          "label" : "PC Parts",
-          "items" : [
-              {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By."
-              }
+            "label" : "PC Parts",
+            "items" : [
+                {
+                    "title" : "Preparing",
+                    "text1" : "Please Stand By."
+                }
             ]
         },
         "screw" : {
-          "label" : "Screws",
-          "items" : [
-              {
-                "title" : "Shopping List",
-                "text1" : "Get all screws, nuts and spacer in this list. Any combination is available to make 90mm spacer as No.15.",
-                "table" : {
-                  "head" : [ "Image", "Name", "mm", "inch", "pieces" ],
-                  "body" : [
-                    [ "img::/maker/images/item/screw/M3_6mm.png", "1. Screw", "M3 6mm", "", 4 ],
-                    [ "img::/maker/images/item/screw/M3_6mm_tapping.png", "2. Tapping Screw", "M3 6mm", "", 8 ],
-                    [ "img::/maker/images/item/screw/M3_10mm.png", "3. Screw", "M3 10mm", "", 8 ],
-                    [ "img::/maker/images/item/screw/M3_15mm.png", "4. Screw", "M3 15mm", "", 18 ],
-                    [ "img::/maker/images/item/screw/M3_30mm.png", "5. Screw", "M3 30mm", "", 2 ],
-                    [ "img::/maker/images/item/screw/M4_10mm.png", "6. Screw", "M4 10mm", "", 4 ],
-                    [ "img::/maker/images/item/screw/M5_20mm.png", "7. Screw", "M5 20mm", "", 4 ],
-                    [ "img::/maker/images/item/nut/M3.png", "8. Nut", "M3", "", 18 ],
-                    [ "img::/maker/images/item/nut/M3_nylon.png", "9. Nylon Nut", "M3", "", 2 ],
-                    [ "img::/maker/images/item/nut/M4.png", "10. Nut", "M4", "", 4 ],
-                    [ "img::/maker/images/item/nut/M5.png", "11. Nut", "M5", "", 8 ],
-                    [ "img::/maker/images/item/nut/M6.png", "12. Nut", "M6", "", 1 ],
-                    [ "img::/maker/images/item/spacer/M3_5mm.png", "13. Plastic Spacer", "M3 5mm", "", 4 ],
-                    [ "img::/maker/images/item/spacer/M3_30mm.png", "14. Metal Spacer", "M3 30mm", "", 4 ],
-                    [ "img::/maker/images/item/spacer/M3_90mm.png", "15. Plastic Spacer", "M3 30+60mm", "", 4 ]
-                  ]
+            "label" : "Screws",
+            "items" : [
+                {
+                    "title" : "Shopping List",
+                    "text1" : "Get all screws, nuts and spacer in this list. Any combination is available to make 90mm spacer as No.15.",
+                    "table" : {
+                        "head" : [ "Image", "Name", "mm", "inch", "pieces" ],
+                        "body" : [
+                            [ "img::/maker/images/item/screw/M3_6mm.png", "1. Screw", "M3 6mm", "", 4 ],
+                            [ "img::/maker/images/item/screw/M3_6mm_tapping.png", "2. Tapping Screw", "M3 6mm", "", 8 ],
+                            [ "img::/maker/images/item/screw/M3_10mm.png", "3. Screw", "M3 10mm", "", 8 ],
+                            [ "img::/maker/images/item/screw/M3_15mm.png", "4. Screw", "M3 15mm", "", 18 ],
+                            [ "img::/maker/images/item/screw/M3_30mm.png", "5. Screw", "M3 30mm", "", 2 ],
+                            [ "img::/maker/images/item/screw/M4_10mm.png", "6. Screw", "M4 10mm", "", 4 ],
+                            [ "img::/maker/images/item/screw/M5_20mm.png", "7. Screw", "M5 20mm", "", 4 ],
+                            [ "img::/maker/images/item/nut/M3.png", "8. Nut", "M3", "", 18 ],
+                            [ "img::/maker/images/item/nut/M3_nylon.png", "9. Nylon Nut", "M3", "", 2 ],
+                            [ "img::/maker/images/item/nut/M4.png", "10. Nut", "M4", "", 4 ],
+                            [ "img::/maker/images/item/nut/M5.png", "11. Nut", "M5", "", 8 ],
+                            [ "img::/maker/images/item/nut/M6.png", "12. Nut", "M6", "", 1 ],
+                            [ "img::/maker/images/item/spacer/M3_5mm.png", "13. Plastic Spacer", "M3 5mm", "", 4 ],
+                            [ "img::/maker/images/item/spacer/M3_30mm.png", "14. Metal Spacer", "M3 30mm", "", 4 ],
+                            [ "img::/maker/images/item/spacer/M3_90mm.png", "15. Plastic Spacer", "M3 30+60mm", "", 4 ]
+                        ]
+                    }
                 }
-              }
             ]
         },
         "misc" : {
-          "label" : "Miscellaneous",
-          "items" : [
-              {
-                "title" : "Shopping List",
-                "text1" : "Buy from AliExpress or 3D print.",
-                "table" : {
-                  "head" : [ "Name", "Detail/Alternative", "Where to buy" ],
-                  "body" : [
-                    [ "1. Silicone sponge", "Check maximum temperature is more than 110 degree celcius. Use box cutter to make 40x35mm (heater cover) and 5x160mm (surround well).", "AliExpress(Untested)@https://www.aliexpress.com/item/Silicone-rubber-sheet-Thickness-1-2-3-4-mm-thickness-500-500mm-width-thin-board-red/32770199918.html?spm=2114.search0104.3.22.45a94444TK6SO2&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=60a2b0c5-abac-4a6d-aced-03f19851b700-3&algo_pvid=60a2b0c5-abac-4a6d-aced-03f19851b700&transAbTest=ae803_2&priceBeautifyAB=0" ],
-                    [ "2. Knob", "M6 20mm", "AliExpress(Untested)@https://www.aliexpress.com/item/M6-Thread-30mm-Head-Dia-M6x30-16-50mm-Thread-Length-Star-Clamping-Knobs-20mm-Head-Length/32814014383.html?spm=2114.search0104.3.42.391a6a87lsls4o&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=b420d8bf-0f5b-4973-a6cd-8bee3b2ea498-6&algo_pvid=b420d8bf-0f5b-4973-a6cd-8bee3b2ea498&transAbTest=ae803_2&priceBeautifyAB=0" ],
-                    [ "3. Fan guard", "80mm. You can 3D print.", "AliExpress(Untested)@https://www.aliexpress.com/item/2-x-Metal-Wire-Finger-Guard-Protection-Grid-80-mm-90-mm-PC-Fan-Cooler/32850924605.html?spm=2114.search0104.3.22.2d001744ols7mw&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=0e3010f6-a7d8-410e-a4ae-e2f675bbc2ca-3&algo_pvid=0e3010f6-a7d8-410e-a4ae-e2f675bbc2ca&transAbTest=ae803_2&priceBeautifyAB=0" ],
-                    [ "4. Rubber foot", "M3. You can 3D print or just use longer screws and nuts to get height.", "AliExpress(Untested)@https://www.aliexpress.com/item/Rubber-Feet-Bumpers-Bushings-Rubber-Pads-Conical-20x16x20mm-Black-Pack-50/32707290793.html?spm=2114.search0104.3.85.546d14c4HqzbIy&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=73963135-9564-484e-94c1-7a841b6f15e9-12&algo_pvid=73963135-9564-484e-94c1-7a841b6f15e9&transAbTest=ae803_2&priceBeautifyAB=0" ],
-                    [ "5. Wire clip", "Just glue it.", "-" ],
-                    [ "6. Phillips driver", "Common Tool", "-" ],
-                    [ "7. Straight driver", "Common Tool", "-" ],
-                    [ "8. Offset driver", "Common Tool", "-" ],
-                    [ "9. Multi Spanner", "Common Pliers", "-" ],
-                    [ "10. Spatula", "Just a lastic card", "-" ]
-                  ]
+            "label" : "Miscellaneous",
+            "items" : [
+                {
+                    "title" : "Shopping List",
+                    "text1" : "Buy from AliExpress or 3D print.",
+                    "table" : {
+                        "head" : [ "Name", "Detail/Alternative", "Where to buy" ],
+                        "body" : [
+                            [ "1. Silicone sponge", "Check maximum temperature is more than 110 degree celcius. Use box cutter to make 40x35mm (heater cover) and 5x160mm (surround well).", "AliExpress(Untested)@https://www.aliexpress.com/item/Silicone-rubber-sheet-Thickness-1-2-3-4-mm-thickness-500-500mm-width-thin-board-red/32770199918.html?spm=2114.search0104.3.22.45a94444TK6SO2&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=60a2b0c5-abac-4a6d-aced-03f19851b700-3&algo_pvid=60a2b0c5-abac-4a6d-aced-03f19851b700&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                            [ "2. Knob", "M6 20mm", "AliExpress(Untested)@https://www.aliexpress.com/item/M6-Thread-30mm-Head-Dia-M6x30-16-50mm-Thread-Length-Star-Clamping-Knobs-20mm-Head-Length/32814014383.html?spm=2114.search0104.3.42.391a6a87lsls4o&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=b420d8bf-0f5b-4973-a6cd-8bee3b2ea498-6&algo_pvid=b420d8bf-0f5b-4973-a6cd-8bee3b2ea498&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                            [ "3. Fan guard", "80mm. You can 3D print.", "AliExpress(Untested)@https://www.aliexpress.com/item/2-x-Metal-Wire-Finger-Guard-Protection-Grid-80-mm-90-mm-PC-Fan-Cooler/32850924605.html?spm=2114.search0104.3.22.2d001744ols7mw&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=0e3010f6-a7d8-410e-a4ae-e2f675bbc2ca-3&algo_pvid=0e3010f6-a7d8-410e-a4ae-e2f675bbc2ca&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                            [ "4. Rubber foot", "M3. You can 3D print or just use longer screws and nuts to get height.", "AliExpress(Untested)@https://www.aliexpress.com/item/Rubber-Feet-Bumpers-Bushings-Rubber-Pads-Conical-20x16x20mm-Black-Pack-50/32707290793.html?spm=2114.search0104.3.85.546d14c4HqzbIy&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10151_10065_10344_10068_10342_10343_10340_10341_10696_10084_5724015_10083_10618_5724315_10307_5724215_5724115_10059_5013715_100031_5725015_10103_5724915_10624_10623_10622_10621_10620_5013815,searchweb201603_56,ppcSwitch_5&algo_expid=73963135-9564-484e-94c1-7a841b6f15e9-12&algo_pvid=73963135-9564-484e-94c1-7a841b6f15e9&transAbTest=ae803_2&priceBeautifyAB=0" ],
+                            [ "5. Wire clip", "Just glue it.", "-" ],
+                            [ "6. Phillips driver", "Common Tool", "-" ],
+                            [ "7. Straight driver", "Common Tool", "-" ],
+                            [ "8. Offset driver", "Common Tool", "-" ],
+                            [ "9. Multi Spanner", "Common Pliers", "-" ],
+                            [ "10. Spatula", "Just a lastic card", "-" ]
+                        ]
+                    }
                 }
-              }
             ]
         },
         "assy" : {
-          "label" : "Assembly",
-          "items" : [
-              {
-              	"title" : "Preparing",
-              	"text1" : "Please Stand By."
-              }
+            "label" : "Assembly",
+            "items" : [
+                {
+                    "title" : "Preparing",
+                    "text1" : "Please Stand By."
+                }
             ]
         },
         "firmware" : {
-          "label" : "Burn Firmware",
-          "items" : [
+            "label" : "Burn Firmware",
+            "items" : [
                 {
                     "title" : "Burn Firmware",
                     "text1" : "This page describes how to build NinjaPCR's firmware and write it to the ESP8266 chip on the board. A USB-serial cable with 6 or 4 pins and a jumper pin is required."
@@ -1007,44 +1007,44 @@
                     "text3" : "Building and flashing depend on environments such as OS, toolchains and flashing tools. If you have troubles, please contact us with detailed situation."
                 },
                 {
-                  "title" : "Debug",
-                  "text1" : "NinjaPCR is designed to be controllable only by Wi-Fi communication. However, a USB-serial cable is very useful to debug the program.",
-                  "text2" : "You can send debug messages from NinjaPCR to your PC by using serial related functions such as Serial.print() and Serial.println().",
-                  "text3" : "The easiest way is to use the serial monitor of Arduino IDE. Of course, you can use other serial communicator apps."
+                    "title" : "Debug",
+                    "text1" : "NinjaPCR is designed to be controllable only by Wi-Fi communication. However, a USB-serial cable is very useful to debug the program.",
+                    "text2" : "You can send debug messages from NinjaPCR to your PC by using serial related functions such as Serial.print() and Serial.println().",
+                    "text3" : "The easiest way is to use the serial monitor of Arduino IDE. Of course, you can use other serial communicator apps."
                 }
             ]
         }
     },
     "req" : {
-      "label" : "Requirements",
-      "shortlabel" : "Requirements",
-      "text1" : "Wi-Fi",
-      "text2" : "Frequency Band",
-      "text3" : "2.4GHz (Not available for 5GHz)",
-      "text4" : "Security",
-      "text5" : "WEP / WPA / WPA2",
-      "text6" : "Wireless Standards",
-      "text7" : "802.11 b/g/n",
-      "text8" : "Wi-Fi support devices (PC, smartphone, tablet etc)",
-      "text9" : "OS",
-      "text10" : "Windows・macOS・Linux・iOS・Android (4.1 or more)",
-      "text11" : "Web Browser",
-      "text12" : "Safari・Google Chrome・Firefox (Android users need ",
-      "text13" : "this app",
-      "text14" : " to use).",
-      "text15" : "Hardware spec",
-      "text16" : "Well",
-      "text17" : "4x4",
-      "text18" : "Temperature transition speed",
-      "text19" : "TODO",
-      "text20" : "Power consumption",
-      "text21" : "TODO",
-      "text22" : "Power type",
-      "text23" : "TODO",
-      "text24" : "Dimension",
-      "text25" : "TODO",
-      "text26" : "Weight",
-      "text27" : "TODO"
+        "label" : "Requirements",
+        "shortlabel" : "Requirements",
+        "text1" : "Wi-Fi",
+        "text2" : "Frequency Band",
+        "text3" : "2.4GHz (Not available for 5GHz)",
+        "text4" : "Security",
+        "text5" : "WEP / WPA / WPA2",
+        "text6" : "Wireless Standards",
+        "text7" : "802.11 b/g/n",
+        "text8" : "Wi-Fi support devices (PC, smartphone, tablet etc)",
+        "text9" : "OS",
+        "text10" : "Windows・macOS・Linux・iOS・Android (4.1 or more)",
+        "text11" : "Web Browser",
+        "text12" : "Safari・Google Chrome・Firefox (Android users need ",
+        "text13" : "this app",
+        "text14" : " to use).",
+        "text15" : "Hardware spec",
+        "text16" : "Well",
+        "text17" : "4x4",
+        "text18" : "Temperature transition speed",
+        "text19" : "TODO",
+        "text20" : "Power consumption",
+        "text21" : "TODO",
+        "text22" : "Power type",
+        "text23" : "TODO",
+        "text24" : "Dimension",
+        "text25" : "TODO",
+        "text26" : "Weight",
+        "text27" : "TODO"
     },
     "update" : {
         "label" : "Updates",
@@ -1071,9 +1071,9 @@
         }
     },
     "store" : {
-      "label" : "Store"
+        "label" : "Store"
     },
     "github" : {
-      "label" : "GitHub"
+        "label" : "GitHub"
     }
 }
