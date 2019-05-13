@@ -42,7 +42,9 @@ block content
           h2 #{$i18n.index.features.open.title}
           ul
             li #{$i18n.index.features.open.text1}
-            li #{$i18n.index.features.open.text2}
+            li #{$i18n.index.features.open.text2} (
+              a.link(href="/maker/index.html") #{$i18n.index.features.open.text3}
+              | )
         .col-md-5.order-md-1.img-container
           img.featurette-image.img-fluid.mx-aut(src="/images/top_open.jpg" alt="Wi-Fi" style="border:1px solid #ddd;max-width:280px;")
 
