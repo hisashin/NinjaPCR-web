@@ -555,6 +555,19 @@
                 },
                 {
                     "title" : "Start an Expriment",
+                    "modes" : {
+                        "text1" : "NinjaPCR supports two network modes. Please choose suitable one according to your network environment.",
+                        "text2" : "Normal mode (HTTP server mode)",
+                        "text3" : "NinjaPCR joins your local Wi-Fi network and runs as a HTTP server.",
+                        "text4" : "This mode may not work properly if network connections are limited. If you have any trouble with the HTTP server mode, please try the AP mode.",
+                        "text5" : "Access point (AP) mode",
+                        "text6" : "NinjaPCR runs as a Wi-Fi access point. Your PC, smartphone or tablet communicates with the device by joining the device.",
+                        "text7" : "Although there's a downsides that you can't access external networks while using NinjaPCR, this mode is very useful if you have limited or no connection.",
+                        "text8" : "Usage of mDNS is limited",
+                        "text9" : "Adding new devices is not allowed",
+                        "text10" : "Server operation is not allowed",
+                        "text11" : "Wi-Fi router is not available"
+                    },
                     "server" : {
                         "title":"Normal mode (HTTP server mode)"
                     },
