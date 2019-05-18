@@ -1,4 +1,63 @@
 extends layout
+mixin start_in_ap_mode()
+  p
+    | #{$i18n[dir][subdir].items[2].content[0].text1}
+    .row
+      - var img = "/assy/images/setup-boot1.jpg"
+      +process-image(img, img)
+      - var img = "/assy/images/setup-boot2.jpg"
+      +process-image(img, img)
+      - var img = "/assy/images/setup-boot3.jpg"
+      +process-image(img, img)
+      - var img = "/assy/images/setup-boot4.jpg"
+      +process-image(img, img)
+      - var img = "/assy/images/setup-boot5.jpg"
+      +process-image(img, img)
+
+mixin connect_ssid_ninjapcr(suffix)
+  p
+    | #{$i18n[dir][subdir].items[2].content[1].text1}
+
+    .accordion#accordion1
+      .card
+        .card-header#headingMac
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseMac" + suffix aria-expanded="false" aria-controls="collpseMac") #{$i18n[dir][subdir].items[2].content[1].text2}
+        .collapse(id="collapseMac" + suffix aria-labelledby="headingMac" data-parent="#accordion1")
+          .card-body
+            | #{$i18n[dir][subdir].items[2].content[1].text3}
+            - var img = "/assy/images/setup-ap-list-mac-"+$localeName+".jpg"
+            +screenshot-image(img, img)
+        .card-header#headingWin
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseWin" + suffix aria-expanded="false" aria-controls="collpseWin") #{$i18n[dir][subdir].items[2].content[1].text4}
+        .collapse(id="collapseWin" + suffix aria-labelledby="headingWin" data-parent="#accordion1")
+          .card-body
+            | #{$i18n[dir][subdir].items[2].content[1].text5}
+            - var img = "/assy/images/setup-ap-list-win-"+$localeName+".jpg"
+            +screenshot-image(img, img)
+        .card-header#headingIOS
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseIOS" + suffix aria-expanded="false" aria-controls="collpseIOS") #{$i18n[dir][subdir].items[2].content[1].text6}
+        .collapse(id="collapseIOS" + suffix aria-labelledby="headingIOS" data-parent="#accordion1")
+          .card-body
+            | #{$i18n[dir][subdir].items[2].content[1].text7}
+            .row
+              - var img = "/assy/images/setup-ap-list-ios1-"+$localeName+".jpg"
+              +screenshot-image(img, img)
+              - var img = "/assy/images/setup-ap-list-ios2-"+$localeName+".jpg"
+              +screenshot-image(img, img)
+        .card-header#headingAndroid
+          h5.mb-0
+            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseAndroid" + suffix aria-expanded="false" aria-controls="collpseAndroid") #{$i18n[dir][subdir].items[2].content[1].text8}
+        .collapse(id="collapseAndroid" + suffix aria-labelledby="headingAndroid" data-parent="#accordion1")
+          .card-body
+            | #{$i18n[dir][subdir].items[2].content[1].text9}
+            .row
+              - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
+              +screenshot-image(img, img, 440)
+              - var img = "/assy/images/setup-ap-list-android2-"+$localeName+".jpg"
+              +screenshot-image(img, img, 440)
 
 block append metas
   - var dir = 'assy'
@@ -41,69 +100,23 @@ block main
           li #{$i18n[dir][subdir].items[1].text10}
           li #{$i18n[dir][subdir].items[1].text11}
     img(src="/images/diagram_online_offline.png" style="max-width:100%")
+    p #{$i18n[dir][subdir].items[1].text12}
+    ul
+      // HTTP Server Mode
+      li
+        a.link(href="#item-assy-setup-2") #{$i18n[dir][subdir].items[1].text2}
+      // AP mode
+      li
+        a.link(href="#item-assy-setup-3") #{$i18n[dir][subdir].items[1].text5}
 
     // HTTP server mode
     +itemtitle(dir, subdir, 2)
     // [0] Start in access point (AP) mode
     h5 #{$i18n[dir][subdir].items[2].content[0].title}
-    p
-      | #{$i18n[dir][subdir].items[2].content[0].text1}
-      .row
-        - var img = "/assy/images/setup-boot1.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/setup-boot2.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/setup-boot3.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/setup-boot4.jpg"
-        +process-image(img, img)
-        - var img = "/assy/images/setup-boot5.jpg"
-        +process-image(img, img)
+    +start_in_ap_mode()
     // [1] Change your Wi-Fi settings temporarily
     h5 #{$i18n[dir][subdir].items[2].content[1].title}
-    p
-      | #{$i18n[dir][subdir].items[2].content[1].text1}
-
-      .accordion#accordion1
-        .card
-          .card-header#headingMac
-            h5.mb-0
-              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseMac" aria-expanded="false" aria-controls="collpseMac") #{$i18n[dir][subdir].items[2].content[1].text2}
-          .collapse#collapseMac(aria-labelledby="headingMac" data-parent="#accordion1")
-            .card-body
-              | #{$i18n[dir][subdir].items[2].content[1].text3}
-              - var img = "/assy/images/setup-ap-list-mac-"+$localeName+".jpg"
-              +screenshot-image(img, img)
-          .card-header#headingWin
-            h5.mb-0
-              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseWin" aria-expanded="false" aria-controls="collpseWin") #{$i18n[dir][subdir].items[2].content[1].text4}
-          .collapse#collapseWin(aria-labelledby="headingWin" data-parent="#accordion1")
-            .card-body
-              | #{$i18n[dir][subdir].items[2].content[1].text5}
-              - var img = "/assy/images/setup-ap-list-win-"+$localeName+".jpg"
-              +screenshot-image(img, img)
-          .card-header#headingIOS
-            h5.mb-0
-              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseIOS" aria-expanded="false" aria-controls="collpseIOS") #{$i18n[dir][subdir].items[2].content[1].text6}
-          .collapse#collapseIOS(aria-labelledby="headingIOS" data-parent="#accordion1")
-            .card-body
-              | #{$i18n[dir][subdir].items[2].content[1].text7}
-              .row
-                - var img = "/assy/images/setup-ap-list-ios1-"+$localeName+".jpg"
-                +screenshot-image(img, img)
-                - var img = "/assy/images/setup-ap-list-ios2-"+$localeName+".jpg"
-                +screenshot-image(img, img)
-          .card-header#headingAndroid
-            h5.mb-0
-              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseAndroid" aria-expanded="false" aria-controls="collpseAndroid") #{$i18n[dir][subdir].items[2].content[1].text8}
-          .collapse#collapseAndroid(aria-labelledby="headingAndroid" data-parent="#accordion1")
-            .card-body
-              | #{$i18n[dir][subdir].items[2].content[1].text9}
-              .row
-                - var img = "/assy/images/setup-ap-list-android1-"+$localeName+".jpg"
-                +screenshot-image(img, img, 440)
-                - var img = "/assy/images/setup-ap-list-android2-"+$localeName+".jpg"
-                +screenshot-image(img, img, 440)
+    +connect_ssid_ninjapcr("Server")
     // [2] Access the Wi-Fi settings page
     h5 #{$i18n[dir][subdir].items[2].content[2].title}
     p
@@ -173,12 +186,41 @@ block main
       .row
         - var img = "/assy/images/setup-connection2-"+$localeName+".jpg"
         +screenshot-image(img, img)
-        | #{$i18n[dir][subdir].items[2].content[7].text1}
-        a.link(href='#headingTsEST') #{$i18n[dir][subdir].items[2].content[7].text2}
-        | #{$i18n[dir][subdir].items[2].content[7].text3}
+    p #{$i18n[dir][subdir].items[2].content[7].text1}
+      a.link(href='#headingTsTESTS') #{$i18n[dir][subdir].items[2].content[7].text2}
+      | #{$i18n[dir][subdir].items[2].content[7].text3}
 
     // AP mode
     +itemtitle(dir, subdir, 3)
+    h5 #{$i18n[dir][subdir].items[3].content[0].title}
+    +start_in_ap_mode()
+    h5 #{$i18n[dir][subdir].items[3].content[1].title}
+    +connect_ssid_ninjapcr("AP")
+    h5 #{$i18n[dir][subdir].items[3].content[2].title}
+    p #{$i18n[dir][subdir].items[3].content[2].text2_0}
+      ul
+        li #{$i18n[dir][subdir].items[3].content[2].text3_title} :
+          | #{$i18n[dir][subdir].items[3].content[2].text3_0} :
+          a(href="../../download/NinjaPCR.zip") #{$i18n[dir][subdir].items[3].content[2].text3_1}
+          | #{$i18n[dir][subdir].items[3].content[2].text3_2}
+          | #{$i18n[dir][subdir].items[3].content[2].text3_3}
+        li #{$i18n[dir][subdir].items[3].content[2].text4_title} :
+          | #{$i18n[dir][subdir].items[3].content[2].text4_0}
+          a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") #{$i18n[dir][subdir].items[3].content[2].text4_1}
+          | #{$i18n[dir][subdir].items[3].content[2].text4_2}
+        li #{$i18n[dir][subdir].items[3].content[2].text5_title} :
+          | #{$i18n[dir][subdir].items[3].content[2].text5_0}
+          a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") #{$i18n[dir][subdir].items[3].content[2].text5_1}
+          | #{$i18n[dir][subdir].items[3].content[2].text5_2}
+    h5 #{$i18n[dir][subdir].items[3].content[3].title}
+    p #{$i18n[dir][subdir].items[3].content[3].text1}
+    .row
+      - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
+      +screenshot-image(img, img)
+    p #{$i18n[dir][subdir].items[3].content[3].text2}
+      a.link(href='#headingTsTESTA') #{$i18n[dir][subdir].items[3].content[3].text3}
+      | #{$i18n[dir][subdir].items[3].content[3].text4}
+
     // Troubleshooting
     +itemtitle(dir, subdir, 4)
     p
@@ -200,10 +242,11 @@ block main
             .card-body
               ul
                 li #{$i18n[dir][subdir].items[4].text2_1}
-          .card-header#headingTsEST
+          // Connection test fails (HTTP server mode)
+          .card-header#headingTsTESTS
             h5.mb-0
-              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsEST" aria-expanded="false" aria-controls="collpseTsEST") #{$i18n[dir][subdir].items[4].text3}
-          .collapse#collapseTsEST(aria-labelledby="headingTsEST" data-parent="#accordion3")
+              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsTESTS" aria-expanded="false" aria-controls="collpseTsTESTS") #{$i18n[dir][subdir].items[4].text3}
+          .collapse#collapseTsTESTS(aria-labelledby="headingTsTESTS" data-parent="#accordion3")
             .card-body
               ul
                 li #{$i18n[dir][subdir].items[4].text3_1}
@@ -215,21 +258,33 @@ block main
                 li #{$i18n[dir][subdir].items[4].text3_4}
                   .accordion#accordion4
                     .card
-                      .card-header#headingTsESTWin
+                      .card-header#headingTsTESTSWin
                         h5.mb-0
-                          button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsESTWin" aria-expanded="false" aria-controls="collpseTsESTWin") #{$i18n[dir][subdir].items[4].text11}
-                      .collapse#collapseTsESTWin(aria-labelledby="headingTsESTWin" data-parent="#accordion4")
+                          button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsTESTSWin" aria-expanded="false" aria-controls="collpseTsTESTSWin") #{$i18n[dir][subdir].items[4].text11}
+                      .collapse#collapseTsTESTSWin(aria-labelledby="headingTsTESTSWin" data-parent="#accordion4")
                         .card-body
                           | #{$i18n[dir][subdir].items[4].text12}
                           a.link(href="https://support.apple.com/kb/DL999") #{$i18n[dir][subdir].items[4].text13}
                           | #{$i18n[dir][subdir].items[4].text14}
-                      .card-header#headingTsESTLinux
+                      .card-header#headingTsTESTSLinux
                         h5.mb-0
-                          button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsESTLinux" aria-expanded="false" aria-controls="collpseTsESTLinux") #{$i18n[dir][subdir].items[4].text15}
-                      .collapse#collapseTsESTLinux(aria-labelledby="headingTsESTLinux" data-parent="#accordion4")
+                          button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsTESTSLinux" aria-expanded="false" aria-controls="collpseTsTESTSLinux") #{$i18n[dir][subdir].items[4].text15}
+                      .collapse#collapseTsTESTSLinux(aria-labelledby="headingTsTESTSLinux" data-parent="#accordion4")
                         .card-body
                           | #{$i18n[dir][subdir].items[4].text16}
                           a.link(href="http://avahi.org/") #{$i18n[dir][subdir].items[4].text17}
                           | #{$i18n[dir][subdir].items[4].text18}
+          .card-header#headingTsTESTA
+            h5.mb-0
+              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsTESTA" aria-expanded="false" aria-controls="collpseTsTESTA") #{$i18n[dir][subdir].items[4].text4}
+          .collapse#collapseTsTESTA(aria-labelledby="headingTsTESTA" data-parent="#accordion3")
+            .card-body
+              p #{$i18n[dir][subdir].items[4].text4_1}
+              ul
+                li #{$i18n[dir][subdir].items[4].text4_2}
+                li #{$i18n[dir][subdir].items[4].text4_3}
+                li #{$i18n[dir][subdir].items[4].text4_4}
+                li #{$i18n[dir][subdir].items[4].text4_5}
+                li #{$i18n[dir][subdir].items[4].text4_6}
 
     +nextstep('/op/index.html', $i18n.op.index.label)

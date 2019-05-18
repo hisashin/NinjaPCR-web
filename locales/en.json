@@ -429,7 +429,8 @@
                     "text8" : "Usage of mDNS is limited",
                     "text9" : "Adding new devices is not allowed",
                     "text10" : "Server operation is not allowed",
-                    "text11" : "Wi-Fi router is not available"
+                    "text11" : "Wi-Fi router is not available",
+                    "text12" : "Please follow the detailed guide for the mode of your choice."
                 },
                 {
                   "title" : "Network setup and connection test (HTTP server mode)",
@@ -490,13 +491,45 @@
                       {
                           "title" : "Connection test",
                           "text1" : "Connection has succeeded if you see the \"Connected\" message. Then NinjaPCR is ready! If you see the \"Disconnected\" message again, it means that something went wrong. NinjaPCR needs some seconds to become accessible so trying again a little later may resolve the problem. If the problem still persists, please refer to ",
-                          "text2" : "Troubleshooting > Connection test fails",
+                          "text2" : "Troubleshooting > Connection test fails (HTTP server mode)",
                           "text3" : "."
                       }
                   ]
                 },
                 {
-                  "title" : "Network setup and connection test (Access point mode)"
+                  "title" : "Network setup and connection test (Access point mode)",
+                  "content" : [
+                      {
+                          "title" : "Start in access point (AP) mode"
+                      },
+                      {
+                          "title" : "Change your Wi-Fi settings temporarily"
+                      },
+                      {
+                          "title" : "Open the console",
+                          "text2_0":"While using access point (AP) mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
+                          "text3_title":"PC",
+                          "text3_0":"Download ",
+                          "text3_1":"the Zip file",
+                          "text3_2":" and expand it into your local disk.",
+                          "text3_3":"Then, open the file \"en/console/index.html\" in the folder with a web browser.",
+                          "text4_title":"Android",
+                          "text4_0":"Download ",
+                          "text4_1":"the app",
+                          "text4_2":" from Google Play and start it.",
+                          "text5_title":"iOS",
+                          "text5_0":"Download",
+                          "text5_1":"the app",
+                          "text5_2":"from App Store and start it."
+                      },
+                      {
+                          "title" : "Connection test",
+                          "text1":"Open the console, select \"Access point (AP) mode\" and press the \"connect\" button.",
+                          "text2" : "Connection has succeeded if you see the \"Connected\" message. Then NinjaPCR is ready! If you see the \"Disconnected\" message again, it means that something went wrong. NinjaPCR needs some seconds to become accessible so trying again a little later may resolve the problem. If the problem still persists, please refer to ",
+                          "text3" : "Troubleshooting > Connection test fails (Access point mode)",
+                          "text4" : "."
+                      }
+                  ]
                 },
                 {
                   "title" : "Troubleshooting",
@@ -506,7 +539,7 @@
                     "text1_3" : "It is possible that \"Mode\" and \"Reset\" buttons had not been released properly. Please reboot NinjaPCR again by pressing and releasing buttons slowly.",
                     "text2" : "Dropdown list on NinjaPCR's Wi-Fi settings page doesn't contain the SSID you want to use.",
                     "text2_1" : "Access poitns of some types don't show up in the list. For example, an access point in stealth mode is hidden. Some smartphones in tethering mode don't listed up. In such cases, please input the SSID's name to the textbox below and choose nothing from the dropdown list.",
-                    "text3" : "Connection test fails",
+                    "text3" : "Connection test fails (HTTP server mode)",
                     "text3_1" : "Start NinjaPCR in access point (AP) mode again and you'll find a message at the bottom of the Wi-Fi settings page. It indicates what happened when NinjaPCR started last time. If it reads \"Connection error\", it means that NinjaPCR failed to join the network due to wrong settings. If it \"Connected\", it means that NinjaPCR succeessfully join the network and the problem was caused by client side(your PC, smartphone or tablet).",
                     "text3_2":"Your device and NinjaPCR should connect to the same network. Please review Wi-Fi settings of both.",
                     "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in access point (AP) mode? You don't need to press \"Mode\" button.",
@@ -518,10 +551,17 @@
                     "text15" : "Linux",
                     "text16" : "Please install ",
                     "text17" : "avahi",
-                    "text18" : ". Avahi is a very popular software and most distributions support it with their own package systems."
+                    "text18" : ". Avahi is a very popular software and most distributions support it with their own package systems.",
+                    "text4" : "Connection test fails (Access point mode)",
+                    "text4_1" : "To confirm that NinjaPCR is running in the AP mode and your device is connected, please check the following:",
+                    "text4_2" : "Can your device find the Wi-Fi access point with SSID \"ninjapcr\"?",
+                    "text4_3" : "Is your device connected to the access point \"ninjapcr\"?",
+                    "text4_4" : "Please open http://192.168.1.1 with a web browser. Does the network configuration screen of NinjaPCR show up?",
+                    "text4_5" : "Then please open http://192.168.1.1/connect with the browser. If you receive a message \"{connected:true,version:...\", NinjaPCR and the console are ready.",
+                    "text4_6" : "On the console, is a radio button \"AP mode\" selected?"
                 },
                 {
-                    "title" : "Start in access point (AP) mode",
+                    "title" : "Start in the access point (AP) mode",
                     "text1" : "Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in access point (AP) mode in a few seconds."
                 },
                 {
