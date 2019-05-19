@@ -545,7 +545,7 @@
                     "text3_3" : "Did you correctly started NinjaPCR in normal operation, not in access point (AP) mode? You don't need to press \"Mode\" button.",
                     "text3_4" : "NinjaPCR uses a mechanism called \"mDNS\" to be accessible from other devices. mDNS is available by default in macOS and iOS. Though Windows and Linux have mDNS helper application in most cases, if your PC doesn't have it, please install a helper software.",
                     "text11" : "Windows",
-                    "text12" : "Please nstall ",
+                    "text12" : "Please install ",
                     "text13" : "Bonjour Print Services",
                     "text14" : ". It is one of the easiest way to install mDNS support.",
                     "text15" : "Linux",
