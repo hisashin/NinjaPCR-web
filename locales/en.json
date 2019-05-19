@@ -434,6 +434,12 @@
                 },
                 {
                   "title" : "Network setup and connection test (HTTP server mode)",
+                  "alert1" : "This section describes how to setup the HTTP server mode. ",
+                  "alert2" : "If you prefer the access point (AP) mode, please read \"",
+                  "alert3" : "Network setup and connection test (Access point mode)",
+                  "alert4" : "\" and proceed to \"",
+                  "alert5" : "Operation guide",
+                  "alert6" : "\". ",
                   "content" : [
                       {
                           "title" : "Start in access point (AP) mode",
@@ -498,6 +504,12 @@
                 },
                 {
                   "title" : "Network setup and connection test (Access point mode)",
+                  "alert1" : "This section describes how to setup the access point mode. ",
+                  "alert2" : "If you prefer the HTTP server mode, please read \"",
+                  "alert3" : "Network setup and connection test (HTTP server mode)",
+                  "alert4" : "\" and proceed to \"",
+                  "alert5" : "Operation guide",
+                  "alert6" : "\". ",
                   "content" : [
                       {
                           "title" : "Start in access point (AP) mode"
