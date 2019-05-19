@@ -99,7 +99,7 @@ block main
           li #{$i18n[dir][subdir].items[1].text9}
           li #{$i18n[dir][subdir].items[1].text10}
           li #{$i18n[dir][subdir].items[1].text11}
-    img(src="/images/diagram_online_offline.png" style="max-width:100%")
+    img(src="/assy/images/diagram_server_ap.png" style="max-width:100%")
     p #{$i18n[dir][subdir].items[1].text12}
     ul
       // HTTP Server Mode
@@ -192,6 +192,12 @@ block main
 
     // AP mode
     +itemtitle(dir, subdir, 3)
+    div.alert.alert-info こちらはアクセスポイント (AP) モードの設定方法です。
+      | HTTPサーバモードをお使いの場合は「
+      a.link(href="#item-assy-setup-2") ネットワーク設定と接続テスト (HTTPサーバモードの場合)
+      | 」に従って設定を済ませてから「
+      a.link(href="../../5op/index.html") 操作ガイド
+      | 」にお進みください。
     h5 #{$i18n[dir][subdir].items[3].content[0].title}
     +start_in_ap_mode()
     h5 #{$i18n[dir][subdir].items[3].content[1].title}
