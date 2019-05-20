@@ -211,17 +211,20 @@ block main
     h5#ap-console #{$i18n[dir][subdir].items[3].content[2].title}
     p #{$i18n[dir][subdir].items[3].content[2].text2_0}
       ul
+        // PC
         li #{$i18n[dir][subdir].items[3].content[2].text3_title} :
-          | #{$i18n[dir][subdir].items[3].content[2].text3_0} :
-          a(href="../../download/NinjaPCR.zip") #{$i18n[dir][subdir].items[3].content[2].text3_1}
+          |  #{$i18n[dir][subdir].items[3].content[2].text3_0}
+          a.link(href="../../download/NinjaPCR.zip") #{$i18n[dir][subdir].items[3].content[2].text3_1}
           | #{$i18n[dir][subdir].items[3].content[2].text3_2}
           | #{$i18n[dir][subdir].items[3].content[2].text3_3}
+        // Android
         li #{$i18n[dir][subdir].items[3].content[2].text4_title} :
-          | #{$i18n[dir][subdir].items[3].content[2].text4_0}
+          |  #{$i18n[dir][subdir].items[3].content[2].text4_0}
           a.link(href="https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi") #{$i18n[dir][subdir].items[3].content[2].text4_1}
           | #{$i18n[dir][subdir].items[3].content[2].text4_2}
+        // iOS
         li #{$i18n[dir][subdir].items[3].content[2].text5_title} :
-          | #{$i18n[dir][subdir].items[3].content[2].text5_0}
+          |  #{$i18n[dir][subdir].items[3].content[2].text5_0}
           a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") #{$i18n[dir][subdir].items[3].content[2].text5_1}
           | #{$i18n[dir][subdir].items[3].content[2].text5_2}
     h5#ap-wifi-connect #{$i18n[dir][subdir].items[3].content[3].title}

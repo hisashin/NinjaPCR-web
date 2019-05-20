@@ -412,20 +412,20 @@
             "items" : [
                 {
                     "title" : "Connect power adapter",
-                    "text1" : "Plug the power adapter into NinjaPCR and then into an outlet.",
+                    "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. ",
                     "text2_1":"If you are planning to use NinjaPCR with only \"access point (AP) mode\" without connecting a local Wi-Fi network, please skip this page and jump to \"",
                     "text2_2":"Manage experiment profiles",
                     "text2_3":"\"."
                 },
                 {
                     "title" : "Choose the connection mode",
-                    "text1" : "NinjaPCR supports two network modes. Please choose suitable one according to your network environment.",
+                    "text1" : "NinjaPCR supports two network modes. Please choose the suitable one according to your network environment.",
                     "text2" : "Normal mode (HTTP server mode)",
                     "text3" : "NinjaPCR joins your local Wi-Fi network and runs as a HTTP server.",
                     "text4" : "This mode may not work properly if network connections are limited. If you have any trouble with the HTTP server mode, please try the AP mode.",
                     "text5" : "Access point (AP) mode",
-                    "text6" : "NinjaPCR runs as a Wi-Fi access point. Your PC, smartphone or tablet communicates with the device by joining the device.",
-                    "text7" : "Although there's a downsides that you can't access external networks while using NinjaPCR, this mode is very useful if you have limited or no connection.",
+                    "text6" : "NinjaPCR runs as a Wi-Fi access point. Your PC, smartphone or tablet communicates with the device by joining the local network. ",
+                    "text7" : "Although there's a disadvantage that you can't access external networks while using NinjaPCR, this mode is very useful if you have limited or no connection : ",
                     "text8" : "Usage of mDNS is limited",
                     "text9" : "Adding new devices is not allowed",
                     "text10" : "Server operation is not allowed",
@@ -434,7 +434,7 @@
                 },
                 {
                   "title" : "Network setup and connection test (HTTP server mode)",
-                  "alert1" : "This section describes how to setup the HTTP server mode. ",
+                  "alert1" : "This section describes how to set up the HTTP server mode. ",
                   "alert2" : "If you prefer the access point (AP) mode, please read \"",
                   "alert3" : "Network setup and connection test (Access point mode)",
                   "alert4" : "\" and proceed to \"",
@@ -488,7 +488,7 @@
                           "text6" : "Android",
                           "text7" : "Download ",
                           "text8" : "the dedicated NinjaPCR app",
-                          "text9" : "from Google Play Store and open it."
+                          "text9" : " from Google Play Store and open it."
                       },
                       {
                           "title" : "Input the device name",
@@ -504,7 +504,7 @@
                 },
                 {
                   "title" : "Network setup and connection test (Access point mode)",
-                  "alert1" : "This section describes how to setup the access point mode. ",
+                  "alert1" : "This section describes how to set up the access point mode. ",
                   "alert2" : "If you prefer the HTTP server mode, please read \"",
                   "alert3" : "Network setup and connection test (HTTP server mode)",
                   "alert4" : "\" and proceed to \"",
@@ -519,7 +519,7 @@
                       },
                       {
                           "title" : "Open the console",
-                          "text2_0":"While using access point (AP) mode, your device cannot access sites other than NinjaPCR. It is recommended that you download the offline console beforehand.",
+                          "text2_0":"While using the access point (AP) mode, your device cannot access external sites. It is recommended that you download the offline console beforehand.",
                           "text3_title":"PC",
                           "text3_0":"Download ",
                           "text3_1":"the Zip file",
@@ -530,9 +530,9 @@
                           "text4_1":"the app",
                           "text4_2":" from Google Play and start it.",
                           "text5_title":"iOS",
-                          "text5_0":"Download",
+                          "text5_0":"Download ",
                           "text5_1":"the app",
-                          "text5_2":"from App Store and start it."
+                          "text5_2":" from App Store and start it."
                       },
                       {
                           "title" : "Connection test",
@@ -566,8 +566,8 @@
                     "text3_12" : ". Avahi is a very popular software and most distributions support it with their own package systems.",
                     "text4" : "Connection test fails (Access point mode)",
                     "text4_1" : "To confirm that NinjaPCR is running in the AP mode and your device is connected, please check the following:",
-                    "text4_2" : "Can your device find the Wi-Fi access point with SSID \"ninjapcr\"?",
-                    "text4_3" : "Is your device connected to the access point \"ninjapcr\"?",
+                    "text4_2" : "Can your device find the Wi-Fi access point with SSID \"NinjaPCR\"?",
+                    "text4_3" : "Is your device connected to the access point \"NinjaPCR\"?",
                     "text4_4" : "Please open http://192.168.1.1 with a web browser. Does the network configuration screen of NinjaPCR show up?",
                     "text4_5" : "Then please open http://192.168.1.1/connect with the browser. If you receive a message \"{connected:true,version:...\", NinjaPCR and the console are ready.",
                     "text4_6" : "On the console, is a radio button \"AP mode\" selected?"
