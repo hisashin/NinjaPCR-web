@@ -123,12 +123,14 @@ block main
     // [1] Change your Wi-Fi settings temporarily
     h5 #{$i18n[dir][subdir].items[2].content[1].title}
     +connect_ssid_ninjapcr("Server")
+
     // [2] Access the Wi-Fi settings page
     h5 #{$i18n[dir][subdir].items[2].content[2].title}
-    p
-      .row
+    .row
+      .col
         - var img = "/assy/images/setup-wifi-conf.jpg"
         +screenshot-image(img, img, 439)
+    p
       | #{$i18n[dir][subdir].items[2].content[2].text1}
       a.link(href="http://192.168.1.1" target="_blank") #{$i18n[dir][subdir].items[2].content[2].text2}
       | #{$i18n[dir][subdir].items[2].content[2].text3}
@@ -154,8 +156,6 @@ block main
     h5 #{$i18n[dir][subdir].items[2].content[4].title}
     p
       | #{$i18n[dir][subdir].items[2].content[4].text1}
-      +itemlink(dir, subdir, 2)
-      | #{$i18n[dir][subdir].items[2].content[4].text2}
 
     // [5] Open the console
     h5 #{$i18n[dir][subdir].items[2].content[5].title}
@@ -208,6 +208,7 @@ block main
     +start_in_ap_mode()
     h5#ap-wifi-join #{$i18n[dir][subdir].items[3].content[1].title}
     +connect_ssid_ninjapcr("AP")
+    // Open the console
     h5#ap-console #{$i18n[dir][subdir].items[3].content[2].title}
     p #{$i18n[dir][subdir].items[3].content[2].text2_0}
       ul
@@ -227,11 +228,13 @@ block main
           |  #{$i18n[dir][subdir].items[3].content[2].text5_0}
           a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") #{$i18n[dir][subdir].items[3].content[2].text5_1}
           | #{$i18n[dir][subdir].items[3].content[2].text5_2}
+    // Connection test
     h5#ap-wifi-connect #{$i18n[dir][subdir].items[3].content[3].title}
     p #{$i18n[dir][subdir].items[3].content[3].text1}
     .row
-      - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
-      +screenshot-image(img, img)
+      .col
+        - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
+        +screenshot-image(img, img)
     p #{$i18n[dir][subdir].items[3].content[3].text2}
       a.link(href='#headingTsTESTA') #{$i18n[dir][subdir].items[3].content[3].text3}
       | #{$i18n[dir][subdir].items[3].content[3].text4}

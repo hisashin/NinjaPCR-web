@@ -152,25 +152,29 @@ block main
               a.link(href="../assy/setup/index.html#ap-console") #{$i18n[dir][subdir].items[3].ap.text8}
               | )
             .row
-              - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
-              +screenshot-image(img, img)
+              .col
+                - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
+                +screenshot-image(img, img)
 
 
     p #{$i18n[dir][subdir].items[3].text2}
 
     .row
-      - var img = "/op/images/run1-"+$localeName+".jpg"
-      +screenshot-image(img, img, 450)
+      .col
+        - var img = "/op/images/run1-"+$localeName+".jpg"
+        +screenshot-image(img, img, 450)
     | #{$i18n[dir][subdir].items[3].text3}
 
     .row
-      - var img = "/op/images/progress-"+$localeName+".jpg"
-      +screenshot-image(img, img, 450)
+      .col
+        - var img = "/op/images/progress-"+$localeName+".jpg"
+        +screenshot-image(img, img, 450)
 
     p #{$i18n[dir][subdir].items[3].text4}
       .row
-        - var img = "/op/images/stop-"+$localeName+".jpg"
-        +screenshot-image(img, img)
+        .col
+          - var img = "/op/images/stop-"+$localeName+".jpg"
+          +screenshot-image(img, img)
 
 
     +itemtitle(dir, subdir, 4)
