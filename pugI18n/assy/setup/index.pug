@@ -204,11 +204,11 @@ block main
       | #{$i18n[dir][subdir].items[3].alert4}
       a.link(href="../../5op/index.html") #{$i18n[dir][subdir].items[3].alert5}
       | #{$i18n[dir][subdir].items[3].alert6}
-    h5 #{$i18n[dir][subdir].items[3].content[0].title}
+    h5#ap-boot #{$i18n[dir][subdir].items[3].content[0].title}
     +start_in_ap_mode()
-    h5 #{$i18n[dir][subdir].items[3].content[1].title}
+    h5#ap-wifi-join #{$i18n[dir][subdir].items[3].content[1].title}
     +connect_ssid_ninjapcr("AP")
-    h5 #{$i18n[dir][subdir].items[3].content[2].title}
+    h5#ap-console #{$i18n[dir][subdir].items[3].content[2].title}
     p #{$i18n[dir][subdir].items[3].content[2].text2_0}
       ul
         li #{$i18n[dir][subdir].items[3].content[2].text3_title} :
@@ -224,7 +224,7 @@ block main
           | #{$i18n[dir][subdir].items[3].content[2].text5_0}
           a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") #{$i18n[dir][subdir].items[3].content[2].text5_1}
           | #{$i18n[dir][subdir].items[3].content[2].text5_2}
-    h5 #{$i18n[dir][subdir].items[3].content[3].title}
+    h5#ap-wifi-connect #{$i18n[dir][subdir].items[3].content[3].title}
     p #{$i18n[dir][subdir].items[3].content[3].text1}
     .row
       - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"

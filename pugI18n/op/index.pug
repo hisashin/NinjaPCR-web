@@ -135,14 +135,22 @@ block main
             button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseConnectionAP" aria-expanded="false" aria-controls="collpseProfileAdd") #{$i18n[dir][subdir].items[3].ap.title}
         .collapse#collapseConnectionAP(aria-labelledby="headingProfileAdd" data-parent="#accordion2")
           .card-body
-            p #{$i18n[dir][subdir].items[3].ap.text1_0}(
-              a.link(href="../assy/setup/index.html#item-assy-setup-1") #{$i18n[dir][subdir].items[3].ap.text1_1}
+            p #{$i18n[dir][subdir].items[3].ap.text1_0}
+              br
+              | (
+              a.link(href="../assy/setup/index.html#ap-boot") #{$i18n[dir][subdir].items[3].ap.text1_1}
               | )
 
-            p #{$i18n[dir][subdir].items[3].ap.text6_0} (
-              a.link(href="../assy/setup/index.html#item-assy-setup-2") #{$i18n[dir][subdir].items[3].ap.text6_1}
+            p #{$i18n[dir][subdir].items[3].ap.text6_0}
+              br
+              | (
+              a.link(href="../assy/setup/index.html#ap-wifi-join") #{$i18n[dir][subdir].items[3].ap.text6_1}
               | )
             p #{$i18n[dir][subdir].items[3].ap.text7}
+              br
+              | (
+              a.link(href="../assy/setup/index.html#ap-console") #{$i18n[dir][subdir].items[3].ap.text8}
+              | )
             .row
               - var img = "/op/images/setup-connection-ap-"+$localeName+".jpg"
               +screenshot-image(img, img)
