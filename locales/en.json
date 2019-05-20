@@ -629,6 +629,7 @@
                 },
                 {
                     "title" : "Start an Expriment",
+                    "text0" : "Boot NinjaPCR and connect the console to it. The process differs depending on the network mode.",
                     "server" : {
                         "title":"Normal mode (HTTP server mode)"
                     },
