@@ -644,13 +644,13 @@
                     "text1" : "Plug the power adapter into NinjaPCR and then into an outlet. Then open the console screen and input the \"Device name\" that you have specified when you configured the device and press \"Connect\" button.",
                     "text2" : "Open the profile screen. You can create a new profile by clicking \"+\" icon or load an existing profile by choosing from the dropdown and click the \"Re-run\" button.",
                     "text3" : "When PCR is running, the console shows temperature of the well and the lid and estimated temperature.",
-                    "text4" : "To abort the experiment, click the \"Stop\" button."
+                    "text4" : "To abort the experiment, click the \"Stop\" button. "
                 },
                 {
                     "title" : "After an Experiment",
                     "text1" : "When the profile is all done, \"Finished\" is displayed.",
                     "text2" : "Open the lid and take out tubes. Please be careful not to touch the well or the lid. They are very hot after for several minutes!",
-                    "text3" : "Plug the power adapter out."
+                    "text3" : "Plug the power adapter out. "
                 }
             ]
         }

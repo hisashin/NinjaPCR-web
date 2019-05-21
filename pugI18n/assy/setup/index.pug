@@ -117,6 +117,7 @@ block main
       | #{$i18n[dir][subdir].items[2].alert4}
       a.link(href="../../5op/index.html") #{$i18n[dir][subdir].items[2].alert5}
       | #{$i18n[dir][subdir].items[2].alert6}
+      
     // [0] Start in access point (AP) mode
     h5 #{$i18n[dir][subdir].items[2].content[0].title}
     +start_in_ap_mode()
@@ -134,6 +135,7 @@ block main
       | #{$i18n[dir][subdir].items[2].content[2].text1}
       a.link(href="http://192.168.1.1" target="_blank") #{$i18n[dir][subdir].items[2].content[2].text2}
       | #{$i18n[dir][subdir].items[2].content[2].text3}
+
     // [3] Input Wi-Fi Settings
     h5 #{$i18n[dir][subdir].items[2].content[3].title}
     p
@@ -152,6 +154,7 @@ block main
           | #{$i18n[dir][subdir].items[2].content[3].text6}
         li
           | #{$i18n[dir][subdir].items[2].content[3].text7}
+
     // [4] Restore Wi-Fi settings
     h5 #{$i18n[dir][subdir].items[2].content[4].title}
     p
@@ -204,10 +207,13 @@ block main
       | #{$i18n[dir][subdir].items[3].alert4}
       a.link(href="../../5op/index.html") #{$i18n[dir][subdir].items[3].alert5}
       | #{$i18n[dir][subdir].items[3].alert6}
+
     h5#ap-boot #{$i18n[dir][subdir].items[3].content[0].title}
     +start_in_ap_mode()
+
     h5#ap-wifi-join #{$i18n[dir][subdir].items[3].content[1].title}
     +connect_ssid_ninjapcr("AP")
+
     // Open the console
     h5#ap-console #{$i18n[dir][subdir].items[3].content[2].title}
     p #{$i18n[dir][subdir].items[3].content[2].text2_0}
@@ -228,6 +234,7 @@ block main
           |  #{$i18n[dir][subdir].items[3].content[2].text5_0}
           a.link(href="https://itunes.apple.com/us/app/ninjapcr-console/id1455595109?ls=1&mt=8") #{$i18n[dir][subdir].items[3].content[2].text5_1}
           | #{$i18n[dir][subdir].items[3].content[2].text5_2}
+
     // Connection test
     h5#ap-wifi-connect #{$i18n[dir][subdir].items[3].content[3].title}
     p #{$i18n[dir][subdir].items[3].content[3].text1}
