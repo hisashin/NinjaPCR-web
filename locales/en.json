@@ -82,12 +82,12 @@
         "wifiSettings0":"Plug the power adapter into NinjaPCR and then into an outlet.",
         "wifiSettings1":"Press the \"Mode\" button and hold it, then press and release the \"Reset\" button while the \"Mode\" button is pressed. NinjaPCR will start in the access point (AP) mode in a few seconds.",
         "wifiSettings2":"Open the settings of your PC or smartphone and select \"NinjaPC\" shown in the AP list.",
-        "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the WiFi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
+        "wifiSettings3":"Open <a href=\"http://192.168.1.1\" target=\"_blank\">the Wi-Fi settings page</a> and setup. If the page doesn't show up, please retry after a few seconds.",
         "wifiSettings3_0":"Choose the SSID (network name) you want to use from the dropdown menu. If you can't find it in the list, input the SSID to the textbox below.",
         "wifiSettings3_1":"Input the password of the network.",
         "wifiSettings3_2":"Device name: You can name your NinjaPCR with alphanumeric letters. The number of letters should be between 4 to 8. The default name \"ninjapcr\" is good enough if you use only one device, but it's recommended to use different names if you (and nearby users)  have multiple NinjaPCR devices.",
         "wifiSettings3_3":"After you set up the device, it will restart and connect to the specified access point.",
-        "wifiSettings4":"Connect your PC of smartphone to the WiFi access point that your NinjaPCR is connected to.",
+        "wifiSettings4":"Connect your PC of smartphone to the Wi-Fi access point that your NinjaPCR is connected to.",
         "wifiSettings5":"Input the \"Device name\" that you have specified when you configured the device and press the \"Connect\" button.",
         "hardwareError":"Hardware Error",
         "hardwareErrorCode":"Error Code",
@@ -126,7 +126,7 @@
         },
         "features" : {
             "wifi" : {
-                "title" : "WiFi",
+                "title" : "Wi-Fi",
                 "text1" : "Accessible from local network / Access point mode without a Wi-Fi router",
                 "text2" : "Console works on web browsers on smartphones, tablets and PCs.",
                 "text3" : "Powered by ESP8266"
@@ -848,7 +848,7 @@
                 },
                 {
                     "title" : "Order Electric Parts",
-                    "text1" : "Here is the list to solder. If you use ATX power supply instead of adapter, no need to solder JACK nor DIN4 but ATX. You can choose WiFi module from cheaper ",
+                    "text1" : "Here is the list to solder. If you use ATX power supply instead of adapter, no need to solder JACK nor DIN4 but ATX. You can choose Wi-Fi module from cheaper ",
                     "text2" : "ESP-12F",
                     "text3" : " (FCC, CE) or ",
                     "text4" : "ESP-WROOM-02",
