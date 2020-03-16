@@ -8,6 +8,9 @@
         "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
         "author" : "株式会社鳥人間"
     },
+    "special" : {
+    	"realtime" : "COVID-19等の検出に使用できるリアルタイムPCRを開発しています"
+    },
     "contact" : {
         "label" : "コンタクトフォーム",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"

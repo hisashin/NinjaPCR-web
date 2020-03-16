@@ -3,10 +3,7 @@ extends layout
 mixin realtime()
   .alert.alert-danger
     a(href="https://github.com/hisashin/NinjaPCR/wiki/NinjaPCR's-fight-with-COVID-19" _blank)
-      if $localeName == 'ja'
-        | COVID-19等の検出に使用できるリアルタイムPCRを開発しています
-      else
-        | Fight with COVID-19 by making Real-Time PCR
+      | #{$i18n.special.realtime}
 
 mixin navbar(dir)
   header

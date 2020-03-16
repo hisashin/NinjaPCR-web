@@ -8,6 +8,9 @@
         "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
         "author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
     },
+    "special" : {
+    	"realtime" : "Fight with COVID-19 by making Real-Time PCR"
+    },
     "contact" : {
         "label" : "Contact Form",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSf48pMz4yPdDtF7h_LtshZg0o0rRsG9BcfMrM-TcWgMvUU83Q/viewform?usp=sf_link"
