@@ -11,7 +11,6 @@ const typescript = require('gulp-typescript');
 const sass = require('gulp-sass');
 const exec = require('gulp-exec');
 
-gulp.task('default', ['pug', 'pugI18n']);
 gulp.task('pug', () => {
   return gulp.src(['./pug/**/*.pug', './pug/**/*.jade', '!**/layout*', '!**/include/*', '!**/includes/*'])
   .pipe(pug({
@@ -32,6 +31,7 @@ gulp.task('pugI18n', () => {
   .pipe(pugI18n(options))
   .pipe(gulp.dest(options.i18n.dest));
 });
+gulp.task('default', gulp.series('pug', 'pugI18n'));
 
 gulp.task('sass', () => {
   return gulp.src('./scss/**/*.scss')
