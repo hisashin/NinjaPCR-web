@@ -138,7 +138,7 @@
                 "title" : "Accuracy",
                 "text1" : "24bit AD converter",
                 "text2" : "Switching low & high modes to keep precision in all range",
-                "text3" : "Temperature simulation of sample in tubes"
+                "text3" : "Thermal simulation inside tubes without using thermistor values on holder nor heater"
             },
             "open" : {
                 "title" : "Open-source",
