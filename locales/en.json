@@ -137,7 +137,7 @@
             "accuracy" : {
                 "title" : "Accuracy",
                 "text1" : "24bit AD converter",
-                "text2" : "Switching low & high modes",
+                "text2" : "Switching low & high modes to keep precision in all range",
                 "text3" : "Temperature simulation of sample in tubes"
             },
             "open" : {
