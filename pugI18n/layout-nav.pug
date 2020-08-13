@@ -1,5 +1,10 @@
 extends layout
 
+mixin realtime()
+  .alert.alert-danger
+    a(href="https://github.com/hisashin/NinjaPCR/wiki/NinjaPCR's-fight-with-COVID-19" _blank)
+      | #{$i18n.special.realtime}
+
 mixin navbar(dir)
   header
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
@@ -199,11 +204,12 @@ block append head
 
 block append content
   block navbar
-
+  
   .container-fluid
     .row
       nav.col-md-2.d-none.d-md-block.bg-light.sidebar#sidebar
         block sidebar
 
       main.col-md-10.ml-sm-auto.col-lg-10.px-4(role="main")
+        +realtime
         block main

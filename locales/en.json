@@ -8,6 +8,9 @@
         "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
         "author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
     },
+    "special" : {
+    	"realtime" : "Fight with COVID-19 by making Real-Time PCR"
+    },
     "contact" : {
         "label" : "Contact Form",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSf48pMz4yPdDtF7h_LtshZg0o0rRsG9BcfMrM-TcWgMvUU83Q/viewform?usp=sf_link"
@@ -134,14 +137,14 @@
             "accuracy" : {
                 "title" : "Accuracy",
                 "text1" : "24bit AD converter",
-                "text2" : "Switching low & high modes",
-                "text3" : "Temperature simulation of sample in tubes"
+                "text2" : "Switching low & high modes to keep precision in all range",
+                "text3" : "Thermal simulation inside tubes without using thermistor values on holder nor heater"
             },
             "open" : {
                 "title" : "Open-source",
                 "text1" : "All source codes and scematics are available on GitHub",
                 "text2" : "Designed to be built easily",
-                "text3" : "Assembly guide"
+                "text3" : "Support full scratch"
             }
         }
     },
@@ -1133,7 +1136,7 @@
         }
     },
     "store" : {
-        "label" : "Store"
+        "label" : "Price:$499"
     },
     "github" : {
         "label" : "GitHub"

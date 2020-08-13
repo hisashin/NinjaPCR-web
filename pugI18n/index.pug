@@ -8,9 +8,15 @@ block append head
 block content
   +navbar('/nocurrent/console/assy/op/maker/req/about/store/')
 
-  main(role="main")
-    include includes/carousel.pug
+  main(role="main" style="padding:0")
+    +realtime
 
+    div(style="max-width:100%;margin:0")
+      img(src="/images/carousel/slide0.jpg" style="max-width:100%;margin:0;padding:0")
+    
+    div.col-md-12.order-md-2(style="text-align:center;padding:2em 2em 0 2em;margin:auto")
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/CTHiPsfS8_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      
     div(style="max-width:800px;padding:2em;margin:auto;")
 
       .row.featurette#wifi
@@ -25,8 +31,6 @@ block content
         .col-md-5.order-md-1.img-container
           img.featurette-image.img-fluid.mx-aut(src="/images/top_wifi.jpg" alt="Wi-Fi" style="border:1px solid #ddd;max-width:280px;")
 
-      hr.featurette-divider
-
       .row.featurette#accuracy
         .col-md-7.order-md-2
           h2 #{$i18n.index.features.accuracy.title}
@@ -34,10 +38,20 @@ block content
             li #{$i18n.index.features.accuracy.text1}
             li #{$i18n.index.features.accuracy.text2}
             li #{$i18n.index.features.accuracy.text3}
+              br
+              .container-fluid
+                .row
+                  .col-sm
+                    a(href="/images/graph_NinjaPCR.png" target="_blank")
+                      img(src="/images/graph_NinjaPCR.png" style="max-width:100%")
+                  .col-sm
+                    a(href="/images/graph_pPCR.png" target="_blank")
+                      img(src="/images/graph_pPCR.png" style="max-width:100%")
+                  .col-sm
+                    a(href="/images/graph_mPCR.png" target="_blank")
+                      img(src="/images/graph_mPCR.png" style="max-width:100%")
         .col-md-5.order-md-1.img-container
           img.featurette-image.img-fluid.mx-aut(src="/images/top_accuracy.jpg" alt="Accuracy" style="border:1px solid #ddd;max-width:280px;")
-
-      hr.featurette-divider
 
       .row.featurette#open
         .col-md-7.order-md-2

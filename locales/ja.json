@@ -8,6 +8,9 @@
         "image" : "https://ninjapcr.tori.st/images/render/520x577.png",
         "author" : "株式会社鳥人間"
     },
+    "special" : {
+    	"realtime" : "COVID-19等の検出に使用できるリアルタイムPCRを開発しています"
+    },
     "contact" : {
         "label" : "コンタクトフォーム",
         "url" : "https://docs.google.com/forms/d/e/1FAIpQLSd1kt-924LR3ok9-o1jbuZSMr0d7Sbo92SJtkam85dVuzjB_g/viewform?usp=sf_link"
@@ -134,14 +137,14 @@
             "accuracy" : {
                 "title" : "高精度",
                 "text1" : "24ビットADコンバータ使用",
-                "text2" : "高温域/低温域のスイッチング",
-                "text3" : "チューブ内試料の温度をシミュレーション"
+                "text2" : "高温域/低温域のスイッチングによる全温度帯での精度維持",
+                "text3" : "ホルダやヒーターの温度をそのまま使わず、チューブ内温度を正確に熱シミュレーション"
             },
             "open" : {
                 "title" : "オープンソース",
                 "text1" : "ソースコードと設計図はすべてGitHubで入手可能",
                 "text2" : "簡単に製造できる設計",
-                "text3" : "組立ガイドはこちら"
+                "text3" : "フルスクラッチ対応"
             }
         }
     },
@@ -1166,7 +1169,7 @@
         }
     },
     "store" : {
-        "label" : "購入はこちら"
+        "label" : "$499で販売中"
     },
     "github" : {
         "label" : "GitHub"
