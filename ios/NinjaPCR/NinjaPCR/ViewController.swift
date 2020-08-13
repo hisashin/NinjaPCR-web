@@ -39,7 +39,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     private func getRemoteConsoleURL () -> URL {
-        let urlStr = String(format: "http://ninjapcr.tori.st/%@/console/index.html", language)
+        let date = Date().timeIntervalSince1970
+        let refreshParam = NSString(format: "%d", date)
+        let urlStr = String(format: "http://ninjapcr.tori.st/%@/console/index.html?t=%@", language, refreshParam)
+        print(urlStr)
         return URL(string: urlStr)!
     }
     private func getLocalFileURL () -> URL {
