@@ -134,6 +134,7 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 };
 
 NetworkCommunicator.prototype.isLocal = function () {
+    console.log("location.href=" + location.href)
   return (
     location.href.indexOf("http://ninjapcr.tori.st") < 0
     || location.href.indexOf("local=true") > 0
