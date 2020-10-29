@@ -6,9 +6,8 @@ DeviceResponse.checkConnectionInterval = null;
 var host = "";
 var hostIpAddress = null;
 function isIPAddress (host) {
-	console.log(host)
-    let regexIP = new RegExp("^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");
-    return regexIP.test(host);
+  let regexIP = new RegExp("^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");
+  return regexIP.test(host);
 };
 function getDeviceHost () {
   if (hostIpAddress) {
