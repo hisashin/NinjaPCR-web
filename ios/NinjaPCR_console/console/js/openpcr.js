@@ -240,7 +240,6 @@ function startOrUnplugged(display) {
  * puts Form buttons in the state they should be immediately following loading an experiment
  */
 function reRunButtons() {
-	console.log("reRunButtons");
 	// Hide the Delete button
 	$('#deleteButton').show();
 	// Start with the edit button shown

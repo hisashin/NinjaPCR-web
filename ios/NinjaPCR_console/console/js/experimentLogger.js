@@ -8,7 +8,6 @@
  */
 var ExperimentLogger = function(){};
 ExperimentLogger.prototype.start = function () {
-	console.log("ExperimentLogger.start")
 	this.startTime = new Date();
 	this.experimentLog = [];
 };

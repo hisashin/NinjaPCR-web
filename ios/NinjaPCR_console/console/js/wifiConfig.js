@@ -156,11 +156,13 @@ $(document).ready(function(){
 
 function checkFirmwareVersion (version) {
 	FIRMWARE_VERSION_CURRENT = version;
-  //FIRMWARE_VERSION_LATEST = "1.1";
+	if ($("#connectionModeContainer input:checked").val() == "ap") {
+		return;
+	}
 	console.verbose("Firmware version=" + version + ", Latest version=" + FIRMWARE_VERSION_LATEST);
 	$(".labelVersionCurrent").html(FIRMWARE_VERSION_CURRENT);
 	$(".labelVersionLatest").html(FIRMWARE_VERSION_LATEST);
-	if (location.href.indexOf("?update_firmware_anyway")>0) {
+	if (location.href.indexOf("?update_firmware_anyway") > 0) {
 		$("#firmwareVersion").show();
 	}
 	var message;

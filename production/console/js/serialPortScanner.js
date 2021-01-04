@@ -86,7 +86,6 @@ SerialPortScanner.prototype._read = function (data) {
 	var callback = this.readCallback;
 	var port = this.ports[this.currentPortIndex];
 	var self = this;
-	console.log("data=" + data);
 
 	if (data) {
 		var message = String.fromCharCode.apply(null, new Uint8Array(data));
@@ -97,7 +96,6 @@ SerialPortScanner.prototype._read = function (data) {
 		//self._read(connectionId, callback);
 	} else {
 		// Finish reading and check message
-		console.log("Message=" + self.readMessage);
 		if (self.readMessage.match(MESSAGE_FROM_DEVICE)) {
 			var version = RegExp.$1;
 			console.info("Device found. Firmware version " + version);

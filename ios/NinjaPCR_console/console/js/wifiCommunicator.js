@@ -90,7 +90,6 @@ DeviceResponse.status = function (obj, commandId) {
 };
 
 DeviceResponse.onConf = function (obj, commandId) {
-	console.log("onConf commandId=" + commandId);
 	DeviceResponse.handleCallback(commandId, obj);
 }
 DeviceResponse.onErrorOTAMode = function (obj, commandId) {
