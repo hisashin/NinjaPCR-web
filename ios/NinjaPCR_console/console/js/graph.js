@@ -66,7 +66,6 @@ TempGraph.prototype.drawGraph = function (opts) {
 }
 
 TempGraph.prototype.addTime = function (elapsedSec, tempLid, tempBlock, tempSample) {
-	//console.log("Elapsed:" + elapsedSec);
 	this.dataLid.push([elapsedSec, tempLid]);
 	this.dataBlock.push([elapsedSec, tempBlock]);
 	this.dataSample.push([elapsedSec, tempSample]);

@@ -14,6 +14,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.Date;
 import java.util.Locale;
 
 
@@ -84,7 +85,8 @@ public class MainActivity extends AppCompatActivity implements MDNSResolver.MDNS
     }
 
     private void loadRemoteUI() {
-        mWebView.loadUrl(REMOTE_CONSOLE_URL.replace("___LANG___", getLang()));
+        String timeStr = String.valueOf(new Date().getTime());
+        mWebView.loadUrl(REMOTE_CONSOLE_URL.replace("___LANG___", getLang()) + "?t=" + timeStr);
     }
     private void loadLocalUI() {
         mWebView.loadUrl(LOCAL_CONSOLE_URL.replace("___LANG___", getLang()));

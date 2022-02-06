@@ -112,7 +112,6 @@ var ProfileForm = function () {
       });
       var cycles = [];
       $("#cycles .cycle").each(function () {
-        console.log("Cycle section found.");
         var textInputs = $(this).find(".textinput");
 
         if (textInputs.size() > 0) {

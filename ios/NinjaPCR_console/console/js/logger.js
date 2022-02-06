@@ -7,7 +7,7 @@ Log.Level =
 		WARNING: 4,
 		ERROR: 5
 };
-Log.FILTER_LEVEL = Log.Level.VERBOSE;
+Log.FILTER_LEVEL = Log.Level.WARNING;
 
 Log._getDate = function () {
 
@@ -41,6 +41,7 @@ Log.showInDebugArea = function (tag, msg) {
 }
 
 console.log_orig = console.log;
+/*
 console.log = function(msg) {
 	console.log_orig(msg);
 	Log.showInDebugArea("L", msg);
@@ -51,24 +52,32 @@ console.verbose = function(msg) {
 	Log.showInDebugArea("V", msg);
 	
 };
+
+*/
 console.info_orig = console.info;
+/*
 console.info = function(msg) {
 	console.info_orig(msg);
 	Log.showInDebugArea("I", msg);
 	
 };
+*/
 console.warn_orig = console.warn;
+/*
 console.warn = function(msg) {
 	Log.showInDebugArea("W", msg);
 	console.warn_orig(msg);
 	
 };
+*/
 console.error_orig = console.error;
+/*
 console.error = function(msg) {
 	Log.showInDebugArea("E", msg);
 	console.error_orig(msg);
 	
 };
+*/
 Log.toggleDebugArea = function () {
 
 var debugArea = document.getElementById("debugText");

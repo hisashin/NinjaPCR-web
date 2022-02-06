@@ -90,7 +90,6 @@ DeviceResponse.status = function (obj, commandId) {
 };
 
 DeviceResponse.onConf = function (obj, commandId) {
-	console.log("onConf commandId=" + commandId);
 	DeviceResponse.handleCallback(commandId, obj);
 }
 DeviceResponse.onErrorOTAMode = function (obj, commandId) {
@@ -109,7 +108,7 @@ var NetworkCommunicator = function () {
 	this.connected = false;
 	this.commandId = 0;
 	this.statusTimeoutCount = 0;
-	this.statusTimeoutAlert = false;
+	this.isShowingDisconnectedAlert = false;
 	this.requestingStatus = false;
 };
 NetworkCommunicator.prototype.loadHostName = function () {
@@ -325,9 +324,9 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 			scope.requestingStatus = false;
 			scope.connected = true;
 			scope.statusTimeoutCount = 0;
-			if (scope.statusTimeoutAlert) {
+			if (scope.isShowingDisconnectedAlert) {
 				$('#disconnected_dialog').dialog('close');
-				scope.statusTimeoutAlert = false;
+				scope.isShowingDisconnectedAlert = false;
 
 			}
 			callback(obj);
@@ -335,11 +334,11 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 		  // OnError (Timeout)
 			scope.connected = false;
       showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
-			if (scope.statusTimeoutAlert || prevStatus=="complete") {
+			if (scope.isShowingDisconnectedAlert || prevStatus=="complete") {
 				return;
 			}
 			scope.statusTimeoutCount++;
-			scope.statusTimeoutAlert = true;
+			scope.isShowingDisconnectedAlert = true;
 			$("#disconnected_dialog").dialog({
 				autoOpen : false,
 				width : 400,
@@ -349,7 +348,7 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 				buttons : {
 					"OK" : function() {
 						$(this).dialog("close");
-						scope.statusTimeoutAlert = false;
+						scope.isShowingDisconnectedAlert = false;
 						scope.statusTimeoutCount = 0;
 						scope.requestingStatus = false;
 					}
