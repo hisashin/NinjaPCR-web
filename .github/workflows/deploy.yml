@@ -46,7 +46,7 @@ jobs:
     - name: Copy files to the test website with the AWS CLI
       run: |
         aws s3 sync production/ s3://pcr-ninja/production/
-        aws cloudfront create-invalidation --distribution-id ${{ env.CF_DISTRIBUTION_ID }} --paths /update/* /secure/*
+        aws cloudfront create-invalidation --distribution-id ${{ env.CF_DISTRIBUTION_ID }} --paths "/update/*" "/secure/*"
 
     - name: Slack Notification on Success
       if: ${{ success() }}
