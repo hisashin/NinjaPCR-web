@@ -9,7 +9,8 @@
         "author" : "Toriningen Inc.(Shingo Hisakawa, Mariko Hisakawa)"
     },
     "special" : {
-    	"realtime" : "Fight with COVID-19 by making Real-Time PCR"
+    	"realtime" : "Fight with COVID-19 by making Real-Time PCR",
+    	"digital" : "Fundraising world's first digital PCR, essential to 74% of global death"
     },
     "contact" : {
         "label" : "Contact Form",

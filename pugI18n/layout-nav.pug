@@ -5,6 +5,15 @@ mixin realtime()
     a(href="https://qninja.hisa.dev" _blank)
       | #{$i18n.special.realtime}
 
+mixin digital()
+  .alert.alert-success
+    if $localeName == 'ja'
+      a(href="https://hisa.dev/dninja_funding/" _blank)
+        | #{$i18n.special.digital}
+    else
+      a(href="https://experiment.com/projects/developing-dninja-an-open-source-digital-pcr/" _blank)
+        | #{$i18n.special.digital}
+
 mixin navbar(dir)
   header
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
