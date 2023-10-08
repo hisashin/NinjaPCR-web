@@ -9,8 +9,8 @@
         "author" : "株式会社鳥人間"
     },
     "special" : {
-    	"realtime" : "原材料費$220のリアルタイムPCR「qNinja」を開発しています",
-    	"digital" : "世界の死因の74%に有効なデジタルPCR「dNinja」のクラウドファンディングを実施しています"
+    	"realtime" : "原材料費$220のリアルタイムPCR「qNinja」と$45のリアルタイムLAMP「qNinjaLite」を開発しています",
+    	"digital" : "世界初のオープンソースなデジタルPCR「dNinja」を開発しています"
     },
     "contact" : {
         "label" : "コンタクトフォーム",
