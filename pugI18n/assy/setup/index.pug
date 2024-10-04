@@ -310,5 +310,14 @@ block main
                 li #{$i18n[dir][subdir].items[4].text4_3}
                 li #{$i18n[dir][subdir].items[4].text4_4}
                 li #{$i18n[dir][subdir].items[4].text4_6}
+                          | #{$i18n[dir][subdir].items[4].text3_12}
+          .card-header#headingTsTESTB
+            h5.mb-0
+              button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTsTESTB" aria-expanded="false" aria-controls="collpseTsTESTB") #{$i18n[dir][subdir].items[4].text6}
+          .collapse#collapseTsTESTA(aria-labelledby="headingTsTESTB" data-parent="#accordion6")
+            .card-body
+              p #{$i18n[dir][subdir].items[4].text6}
+              ul
+                li #{$i18n[dir][subdir].items[4].text6_1}
 
     +nextstep('/op/index.html', $i18n.op.index.label)
