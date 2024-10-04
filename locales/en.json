@@ -572,7 +572,10 @@
                     "text4_3" : "Is your device connected to the access point \"NinjaPCR\"?",
                     "text4_4" : "Please open http://192.168.1.1 with a web browser. Does the network configuration screen of NinjaPCR show up?",
                     "text4_5" : "Then please open http://192.168.1.1/connect with the browser. If you receive a message \"{connected:true,version:...\", NinjaPCR and the console are ready.",
-                    "text4_6" : "On the console, is a radio button \"AP mode\" selected?"
+                    "text4_6" : "On the console, is a radio button \"AP mode\" selected?",
+                    "text6" : "The browser keeps reloading when the console is opened",
+                    "text6_1" : "If HSTS (HTTP Strict Transport Security) is enabled in the browser settings, attempting to open a URL starting with http:// will be automatically redirected to https://. Please adjust the settings to allow HTTP connections."
+
                 }
             ]
         }
