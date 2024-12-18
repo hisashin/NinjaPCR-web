@@ -178,7 +178,7 @@ function listSubmit() {
  * loads the experiment with the given experimentID
  */
 function loadExperiment(experimentID) {
-	console.verbose("loadExperiment id=" + experimentID);
+	console.log("loadExperiment id=" + experimentID);
 	pcrStorage.loadExperiment(experimentID, function(experiment) {
 		// Now we've made all the modifications needed, display the Form page
 
@@ -321,17 +321,17 @@ function startPCR() {
 	// command id can't be 0
 	// where is OpenPCR
 	var devicePort = communicator.port;
-	console.verbose("devicePort=" + devicePort);
+	console.log("devicePort=" + devicePort);
 
 	pcrProgram = profileForm.writeoutExperiment();
 	var encodedProgram = programToDeviceCommand (pcrProgram);
 	// verify that there are no more than 16 top level steps
-	console.verbose(pcrProgram.steps.length + " : top level steps");
-	console.verbose(window.lessthan20steps + " : cycle level steps");
+	console.log(pcrProgram.steps.length + " : top level steps");
+	console.log(window.lessthan20steps + " : cycle level steps");
 	var totalSteps = window.lessthan20steps + pcrProgram.steps.length;
 
 	// check that the entire protocol isn't >252 bytes
-	console.verbose("encodedProgram=" + encodedProgram);
+	console.log("encodedProgram=" + encodedProgram);
 	if (encodedProgram.length > 512) {
 		chromeUtil.alert(getLocalizedMessage('lengthLimit').replace('___LENGTH___', encodedProgram.length));
 		return 0;
@@ -339,20 +339,20 @@ function startPCR() {
 
 	// verify the cycle step has no more than 16 steps
 	else if (window.lessthan20steps > 16) {
-		console.verbose(encodedProgram);
+		console.log(encodedProgram);
 		chromeUtil.alert(getLocalizedMessage('stepLimit').replace('___STEPS___',window.lessthan20steps));
 		return 0;
 	}
 
 	// and check that the total overall is less than 25
 	else if (totalSteps > 25) {
-		console.verbose(encodedProgram);
+		console.log(encodedProgram);
 		chromeUtil.alert(getLocalizedMessage('totalStepLimit').replace('___STEPS___',totalSteps));
 		return 0;
 	}
 
 	//debug
-	console.verbose(encodedProgram);
+	console.log(encodedProgram);
 
 	// go to the Running dashboard
 	showRunningDashboard();
@@ -502,7 +502,7 @@ function stopPCR() {
 	// increment the window.command id and send the new command to the device
 	window.command_id++;
 	stopCommand += '&d=' + window.command_id;
-	console.verbose(stopCommand);
+	console.log(stopCommand);
 	// Send out the STOP command
 	communicator.sendStopCommand(stopCommand, function() {
 		onStopPCR();
@@ -729,7 +729,7 @@ $(function() {
 										+ '&d=' + command_id;
 
 								// trace it
-								console.verbose("string: " + contrast_string);
+								console.log("string: " + contrast_string);
 
 								// Write out the  command to CONTROL.TXT
 								// name of the output file
@@ -755,7 +755,7 @@ $(function() {
 								contrast_string = 's=ACGTC&c=cfg&o=' + contrast
 										+ '&d=' + command_id;
 								// trace it
-								console.verbose("string: " + contrast_string);
+								console.log("string: " + contrast_string);
 								// Write out the  command to CONTROL.TXT
 								// name of the output file
 								if (window.path != null) {
