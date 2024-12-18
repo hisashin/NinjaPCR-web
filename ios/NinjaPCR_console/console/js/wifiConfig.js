@@ -196,3 +196,4 @@ function checkFirmwareVersion(version) {
 
 	}
 }
+console.log(location.href)

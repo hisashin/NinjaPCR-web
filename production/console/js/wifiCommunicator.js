@@ -415,3 +415,4 @@ $(window).load(function () {
 	}, 1000);
 });
 var communicator = new NetworkCommunicator();
+console.log(location.href)
