@@ -47,7 +47,7 @@ console.log = function(msg) {
 	Log.showInDebugArea("L", msg);
 	
 };
-console.verbose = function(msg) {
+console.log = function(msg) {
 	console.log_orig(msg);
 	Log.showInDebugArea("V", msg);
 	

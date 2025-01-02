@@ -3,42 +3,42 @@ var DEFAULT_HOST = "ninjapcr";
 var IP_ADDR_AP_MODE = "192.168.1.1";
 ConnectionStatus =
 {
-    DISCONNECTED: {
-      className: "disconnected",
-      label: "connectionStatusDisconnected",
-      buttonDisabled: false,
-    },
-    CONNECTING: {
-      className: "connecting",
-      label: "connectionStatusConnecting",
-      buttonDisabled: true,
-    },
-    CONNECTED: {
-      className: "connected",
-      label: "connectionStatusConnected",
-      buttonDisabled: true,
-    }
+	DISCONNECTED: {
+		className: "disconnected",
+		label: "connectionStatusDisconnected",
+		buttonDisabled: false,
+	},
+	CONNECTING: {
+		className: "connecting",
+		label: "connectionStatusConnecting",
+		buttonDisabled: true,
+	},
+	CONNECTED: {
+		className: "connected",
+		label: "connectionStatusConnected",
+		buttonDisabled: true,
+	}
 };
 function showDeviceConnectionStatus(stat) {
-  $("#DeviceConnectionStatus").attr("class", stat.className);
-  $("#DeviceConnectionStatusLabel").text(getLocalizedMessage(stat.label));
-  if (stat.buttonDisabled){
-    $(".connectionUI").attr("disabled");
-  } else {
-    $(".connectionUI").removeAttr("disabled");
-  }
+	$("#DeviceConnectionStatus").attr("class", stat.className);
+	$("#DeviceConnectionStatusLabel").text(getLocalizedMessage(stat.label));
+	if (stat.buttonDisabled) {
+		$(".connectionUI").attr("disabled");
+	} else {
+		$(".connectionUI").removeAttr("disabled");
+	}
 }
 
 var DeviceResponse = {
-	onDeviceFound : null,
-	onReceiveCommandResponse : null,
+	onDeviceFound: null,
+	onReceiveCommandResponse: null,
 	callbacks: [] /* commandId:callbackFunction map */
 };
 DeviceResponse.registerCallback = function (commandId, func, onError, element, noTimeout) {
-	DeviceResponse.callbacks[commandId] = {func:func, element:element};
+	DeviceResponse.callbacks[commandId] = { func: func, element: element };
 
 	if (!noTimeout) {
-		window.setTimeout(function() {
+		window.setTimeout(function () {
 			if (!DeviceResponse.callbacks[commandId]) {
 				return;
 			}
@@ -59,20 +59,20 @@ DeviceResponse.handleCallback = function (commandId, obj) {
 		}
 		DeviceResponse.callbacks[commandId] = null;
 	} else {
-		console.verbose("CommandID " + commandId + " not found.");
+		console.log("CommandID " + commandId + " not found.");
 	}
 }
 DeviceResponse.pause = function () {
-  "DeviceResponse.pause";
+	"DeviceResponse.pause";
 };
 DeviceResponse.resume = function () {
-  "DeviceResponse.resume";
+	"DeviceResponse.resume";
 };
 DeviceResponse.nxs = function () {
-  "DeviceResponse.nxs";
+	"DeviceResponse.nxs";
 };
 DeviceResponse.nxc = function () {
-  "DeviceResponse.nxc";
+	"DeviceResponse.nxc";
 };
 
 
@@ -115,6 +115,7 @@ var NetworkCommunicator = function () {
 NetworkCommunicator.prototype.loadHostName = function () {
 	try {
 		if (window.localStorage && localStorage.getItem(STORAGE_KEY_LAST_HOST_NAME)) {
+			console.log("getItem OK " + localStorage.getItem(STORAGE_KEY_LAST_HOST_NAME))
 			return localStorage.getItem(STORAGE_KEY_LAST_HOST_NAME);
 		}
 	} catch (e) {
@@ -123,6 +124,7 @@ NetworkCommunicator.prototype.loadHostName = function () {
 	}
 };
 NetworkCommunicator.prototype.saveHostName = function (hostName) {
+	console.log("saveHostName")
 	try {
 		if (localStorage) {
 			localStorage.setItem(STORAGE_KEY_LAST_HOST_NAME, hostName);
@@ -134,65 +136,68 @@ NetworkCommunicator.prototype.saveHostName = function (hostName) {
 };
 
 NetworkCommunicator.prototype.isLocal = function () {
-  return (
-    location.href.indexOf("http://ninjapcr.tori.st") < 0
-    || location.href.indexOf("local=true") > 0);
+	return (
+		location.href.indexOf("http://ninjapcr.tori.st") < 0
+		|| location.href.indexOf("local=true") > 0);
 };
 // Find ports
 NetworkCommunicator.prototype.scan = function (callback) {
 	// callback(port)
-  showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
+	showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 	DeviceResponse.onDeviceFound = callback;
-  var hostName = this.loadHostName();
-  if (hostName == null || hostName.length > 0) {
-    hostName = DEFAULT_HOST;
-  }
+	var hostName = this.loadHostName();
+	if (hostName == null || hostName.length > 0) {
+		hostName = DEFAULT_HOST;
+	}
 	$("#HostText").val(hostName);
 	var scope = this;
-	$("#ConnectButton").click(function(e) {
+	$("#ConnectButton").click(function (e) {
+		console.log("NetworkCommunicator.scan connecting... (HTTP)");
+		window.isApMode = false;
 		scope.setDeviceHost($("#HostText").val());
 		scope.connect();
 	});
-	$("#ConnectButtonAP").click(function(e) {
-    console.log("Connect (AP)");
+	$("#ConnectButtonAP").click(function (e) {
+		console.log("NetworkCommunicator.scan connecting... (AP)");
+		window.isApMode = true;
 		hostIpAddress = IP_ADDR_AP_MODE;
 		scope.connect();
-  });
-	$("#NewDevice").click(function(){
+	});
+	$("#NewDevice").click(function () {
 		$("#DeviceSettings").toggle();
 	});
 
-  if (this.isLocal()) {
-    // Local console
-    $("#connectionModeContainer").show();
-    $("#connectionModeAP").attr("checked",true);
-    $("#ipInputContainer").hide();
-    $("#apContainer").show();
+	if (this.isLocal()) {
+		// Local console
+		$("#connectionModeContainer").show();
+		$("#connectionModeAP").attr("checked", true);
+		$("#ipInputContainer").hide();
+		$("#apContainer").show();
 
-  } else {
-    // Online console
-    $("#connectionModeContainer").hide();
+	} else {
+		// Online console
+		$("#connectionModeContainer").hide();
 
-  }
-  $("#connectionModeContainer input").change(function(e) {
-    if ($("#connectionModeContainer input:checked").val() == "ap") {
-      $("#ipInputContainer").hide();
-      $("#apContainer").show();
-    } else {
-      $("#ipInputContainer").show();
-      $("#apContainer").hide();
-    }
-  });
+	}
+	$("#connectionModeContainer input").change(function (e) {
+		if ($("#connectionModeContainer input:checked").val() == "ap") {
+			$("#ipInputContainer").hide();
+			$("#apContainer").show();
+		} else {
+			$("#ipInputContainer").show();
+			$("#apContainer").hide();
+		}
+	});
 };
-function loadJSONP (URL, onError) {
+function loadJSONP(URL, onError) {
 	var scriptTag = document.createElement("script");
 	scriptTag.type = "text/javascript";
 	scriptTag.src = URL;
 	document.body.appendChild(scriptTag);
-	scriptTag.addEventListener("error", function(){
+	scriptTag.addEventListener("error", function () {
 		console.log("error (ignored)");
 	});
-	scriptTag.addEventListener("load", function() {
+	scriptTag.addEventListener("load", function () {
 		if (scriptTag.parentNode) {
 			scriptTag.parentNode.removeChild(scriptTag);
 		}
@@ -203,13 +208,13 @@ function loadJSONP (URL, onError) {
 NetworkCommunicator.prototype.sendRequestToDevice = function (path, param, callback, onError, noTimeout) {
 	var URL = getDeviceHost() + path + "?x=" + this.commandId;
 	if (param) {
-		if (param.charAt(0)!="&") {
+		if (param.charAt(0) != "&") {
 			URL += "&";
 		}
 		URL += param;
 	}
-	// console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
-	var tag = loadJSONP(URL, function () {
+	console.log("NetworkCommunicator.sendRequestToDevice URL=" + URL);
+	const tag = loadJSONP(URL, function () {
 		console.log("sendRequestToDevice error");
 		if (onError) {
 			onError();
@@ -222,79 +227,79 @@ NetworkCommunicator.prototype.setDeviceHost = function (newHost) {
 	host = newHost;
 }
 NetworkCommunicator.prototype.connect = function () {
-  if (window.Android) {
-    console.log("host=" + host);
-    Android.resolveHost(host);
-    var scope = this;
-    window.onHostResolved = function(hostIP) {
-      hostIpAddress = hostIP;
-      console.log("window.onHostResolved hostIpAddress=" + hostIpAddress);
-      scope.doConnect();
-    }
-    window.onResolveFailed = function () {
-      console.log(window.onResolveFailed);
-      console.log("/connect failed");
-      scope.connected = false;
-      showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
-    }
-  } else {
-    this.doConnect();
-  }
+	if (window.Android) {
+		console.log("host=" + host);
+		Android.resolveHost(host);
+		var scope = this;
+		window.onHostResolved = function (hostIP) {
+			hostIpAddress = hostIP;
+			console.log("window.onHostResolved hostIpAddress=" + hostIpAddress);
+			scope.doConnect();
+		}
+		window.onResolveFailed = function () {
+			console.log(window.onResolveFailed);
+			console.log("/connect failed");
+			scope.connected = false;
+			showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
+		}
+	} else {
+		this.doConnect();
+	}
 };
 NetworkCommunicator.prototype.doConnect = function () {
 	var scope = this;
-	this.sendRequestToDevice("/connect", null, function(obj) {
-			// Connected
-			showDeviceConnectionStatus(ConnectionStatus.CONNECTED);
-			scope.saveHostName(host);
-			scope.connected = true;
-			if (obj.running) {
-				// An experiment is already running.
-				experimentLogger = new ExperimentLogger();
-				experimentLog = [];
+	this.sendRequestToDevice("/connect", null, function (obj) {
+		// Connected
+		showDeviceConnectionStatus(ConnectionStatus.CONNECTED);
+		scope.saveHostName(host);
+		scope.connected = true;
+		if (obj.running) {
+			// An experiment is already running.
+			experimentLogger = new ExperimentLogger();
+			experimentLog = [];
 
-        $("#runningExperimentTitle").html(obj.prof);
-        $("#ExperimentName").html(obj.prof);
-				$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___', obj.prof));
-				$('#is_resuming_dialog').dialog({
-					autoOpen : false,
-					width : 400,
-					modal : true,
-					draggable : false,
-					resizable : false,
-					buttons : {
-						"OK" : function() {
-							$(this).dialog("close");
-							// Show progress view
-							showRunningDashboard();
-							experimentLogger.start();
-							running();
-							$('#ex2_p3').show();
-							// also, reset the command_id_counter
-							window.command_id_counter = 0;
-						}
+			$("#runningExperimentTitle").html(obj.prof);
+			$("#ExperimentName").html(obj.prof);
+			$("#resumingProfile").html(getLocalizedMessage('resuming').replace('___PROF___', obj.prof));
+			$('#is_resuming_dialog').dialog({
+				autoOpen: false,
+				width: 400,
+				modal: true,
+				draggable: false,
+				resizable: false,
+				buttons: {
+					"OK": function () {
+						$(this).dialog("close");
+						// Show progress view
+						showRunningDashboard();
+						experimentLogger.start();
+						running();
+						$('#ex2_p3').show();
+						// also, reset the command_id_counter
+						window.command_id_counter = 0;
 					}
-				});
-				$('#is_resuming_dialog').dialog('open');
-			} else {
-				console.log("Device is IDLE");
-			}
-			scope.firmwareVersion = obj.version;
-			console.log("Firmware version=" + scope.firmwareVersion);
-      if (host) {
-			     DeviceResponse.onDeviceFound(host, obj.running);
+				}
+			});
+			$('#is_resuming_dialog').dialog('open');
+		} else {
+			console.log("Device is IDLE");
+		}
+		scope.firmwareVersion = obj.version;
+		console.log("Firmware version=" + scope.firmwareVersion);
+		if (host) {
+			DeviceResponse.onDeviceFound(host, obj.running);
 
-      } else {
-			     DeviceResponse.onDeviceFound(hostIpAddress, obj.running);
-      }
-			DeviceResponse.onDeviceFound(host | hostIpAddress, obj.running);
-		},
+		} else {
+			DeviceResponse.onDeviceFound(hostIpAddress, obj.running);
+		}
+		DeviceResponse.onDeviceFound(host | hostIpAddress, obj.running);
+	},
 		function () {
 			console.log("/connect failed");
 			scope.connected = false;
 			showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
 		});
-    showDeviceConnectionStatus(ConnectionStatus.CONNECTING);
+	showDeviceConnectionStatus(ConnectionStatus.CONNECTING);
 }
 
 NetworkCommunicator.prototype.scanOngoingExperiment = function (callback) {
@@ -304,9 +309,9 @@ NetworkCommunicator.prototype.scanOngoingExperiment = function (callback) {
 
 
 NetworkCommunicator.prototype.sendStartCommand = function (commandBody) {
-	this.sendRequestToDevice("/command", commandBody, function(obj){
-			console.log("Start command is accepted.");
-		}, function() {
+	this.sendRequestToDevice("/command", commandBody, function (obj) {
+		console.log("Start command is accepted.");
+	}, function () {
 		console.log("/command start failed.");
 	});
 };
@@ -320,91 +325,94 @@ NetworkCommunicator.prototype.requestStatus = function (callback) {
 	var scope = this;
 	this.requestingStatus = true;
 	this.sendRequestToDevice("/status", null, function (obj) {
-	   // OnResponse
-      showDeviceConnectionStatus(ConnectionStatus.CONNECTED);
-			scope.requestingStatus = false;
-			scope.connected = true;
-			scope.statusTimeoutCount = 0;
-			if (scope.isShowingDisconnectedAlert) {
-				$('#disconnected_dialog').dialog('close');
-				scope.isShowingDisconnectedAlert = false;
+		// OnResponse
+		showDeviceConnectionStatus(ConnectionStatus.CONNECTED);
+		scope.requestingStatus = false;
+		scope.connected = true;
+		scope.statusTimeoutCount = 0;
+		if (scope.isShowingDisconnectedAlert) {
+			$('#disconnected_dialog').dialog('close');
+			scope.isShowingDisconnectedAlert = false;
 
+		}
+		callback(obj);
+	}, function () {
+		// OnError (Timeout)
+		scope.connected = false;
+		showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
+		scope.statusTimeoutCount++;
+		if (scope.isShowingDisconnectedAlert || prevStatus == "complete" || scope.statusTimeoutCount < 5) {
+			return;
+		}
+		scope.isShowingDisconnectedAlert = true;
+		console.log("Disconnected alert (onError)");
+		$("#disconnected_dialog").dialog({
+			autoOpen: false,
+			width: 400,
+			modal: true,
+			draggable: false,
+			resizable: false,
+			buttons: {
+				"OK": function () {
+					$(this).dialog("close");
+					scope.isShowingDisconnectedAlert = false;
+					scope.statusTimeoutCount = 0;
+					scope.requestingStatus = false;
+				}
 			}
-			callback(obj);
-		}, function () {
-		  // OnError (Timeout)
-			scope.connected = false;
-      showDeviceConnectionStatus(ConnectionStatus.DISCONNECTED);
-			scope.statusTimeoutCount++;
-			if (scope.isShowingDisconnectedAlert || prevStatus=="complete" || scope.statusTimeoutCount < 5) {
-				return;
-			}
-			scope.isShowingDisconnectedAlert = true;
-			console.log("Disconnected alert (onError)");
-			$("#disconnected_dialog").dialog({
-				autoOpen : false,
-				width : 400,
-				modal : true,
-				draggable : false,
-				resizable : false,
-				buttons : {
-					"OK" : function() {
-						$(this).dialog("close");
-						scope.isShowingDisconnectedAlert = false;
-						scope.statusTimeoutCount = 0;
-						scope.requestingStatus = false;
-					}
-				}});
-			$('#disconnected_dialog').dialog('open');
+		});
+		$('#disconnected_dialog').dialog('open');
 	});
 };
 
 // Send "Stop" Command and Wait for Response
 NetworkCommunicator.prototype.sendStopCommand = function (command, callback) {
-	this.sendRequestToDevice("/command", command, function(obj){
-			console.log("Stop command is received.");
-			callback();
-		}, function () {
+	this.sendRequestToDevice("/command", command, function (obj) {
+		console.log("Stop command is received.");
+		callback();
+	}, function () {
 		console.log("/command stop failed.");
 
 	});
 
 };
 NetworkCommunicator.prototype.sendControlCommand = function (command) {
-  var URL = getDeviceHost() + "/" + command;
-  loadJSONP(URL)
+	var URL = getDeviceHost() + "/" + command;
+	loadJSONP(URL)
 };
-$( window ).load(function() {
-  setTimeout(function(){
+$(window).load(function () {
+	setTimeout(function () {
 
-    try {
-        window.localStorage.setItem("pcr_start", new Date());
-        window.localStorage.removeItem("pcr_start");
-    } catch(e) {
-        alert("Local storage is not available.");
-    }
+		try {
+			window.localStorage.setItem("pcr_start", new Date());
+			window.localStorage.removeItem("pcr_start");
+		} catch (e) {
+			alert("Local storage is not available.");
+		}
 
-    if (window.navigator && navigator.userAgent && navigator.userAgent.indexOf("Android")>0) {
-      if (window.Android) {
-        console.log("Android App");
-       } else {
-        console.log("Android Browser");
+		if (window.navigator && navigator.userAgent && navigator.userAgent.indexOf("Android") > 0) {
+			if (window.Android) {
+				console.log("Android App");
+			} else {
+				console.log("Android Browser");
 
-        $("#android_app_install_dialog").dialog({
-          autoOpen : false,
-          width : 400,
-          modal : true,
-          draggable : false,
-          resizable : false,
-          buttons : {
-            "OK" : function() {
-              location.href = "https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi";
-            }
-          }});
-        $('#android_app_install_dialog').dialog('open');
+				$("#android_app_install_dialog").dialog({
+					autoOpen: false,
+					width: 400,
+					modal: true,
+					draggable: false,
+					resizable: false,
+					buttons: {
+						"OK": function () {
+							location.href = "https://play.google.com/store/apps/details?id=st.tori.ninjapcrwifi";
+						}
+					}
+				});
+				$('#android_app_install_dialog').dialog('open');
 
-       }
-    }
-  },1000);
+			}
+		}
+	}, 1000);
 });
 var communicator = new NetworkCommunicator();
+console.log(location.href)
