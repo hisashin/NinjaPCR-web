@@ -214,7 +214,7 @@ class ProfileForm {
 
 
   save(name, isNew, callback) {
-    console.verbose("save " + name + ", isNew=" + isNew); // grab the current experiment and update window.experiment
+    console.log("save " + name + ", isNew=" + isNew); // grab the current experiment and update window.experiment
 
     var pcrProgram = this.writeoutExperiment();
     console.log("pcrProgram=" + pcrProgram); // update the name of the experiment
@@ -223,7 +223,7 @@ class ProfileForm {
 
     if (isNew) {
       pcrStorage.insertExperiment(name, pcrProgram, function (result) {
-        console.verbose("result=" + result);
+        console.log("result=" + result);
 
         if (callback) {
           callback();
@@ -237,7 +237,7 @@ class ProfileForm {
       });
     } else {
       pcrStorage.updateCurrentExperiment(name, pcrProgram, function (result) {
-        console.verbose("result=" + result);
+        console.log("result=" + result);
 
         if (callback) {
           callback();
@@ -570,7 +570,7 @@ class ProfileForm {
      */
 
     $('.deleteStepButton').on('click', function () {
-      console.verbose("deleteStepButton");
+      console.log("deleteStepButton");
       $(this).parent().slideUp('slow', function () {
         // after animation is complete, remove parent step
         $(this).remove(); //// if the length is now 0, hide the whole div
@@ -587,7 +587,7 @@ class ProfileForm {
      */
 
     $('.deleteStepButton').on('click', function () {
-      console.verbose("deleteStepButton");
+      console.log("deleteStepButton");
       $(this).parent().slideUp('slow', function () {
         // after animation is complete, remove parent step
         $(this).remove(); //// if the length is now 0, hide the whole div

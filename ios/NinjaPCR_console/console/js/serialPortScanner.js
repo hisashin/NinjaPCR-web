@@ -116,4 +116,3 @@ SerialPortScanner.prototype._read = function (data) {
 		}
 	}
 };
-console.log("_read 2");

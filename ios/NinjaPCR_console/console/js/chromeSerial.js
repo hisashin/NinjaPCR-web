@@ -149,7 +149,7 @@ Serial.prototype.requestStatus = function (callback) {
 	var self = this;
 	var connectionId = self.connectionId;
 	var data = getFullCommand("", STATUS_REQ);
-	console.verbose("Request status... connectionId=" + connectionId);
+	console.log("Request status... connectionId=" + connectionId);
 	chrome.serial.send(connectionId, data, function (sendInfo) {
 		if (sendInfo.error) {
 			console.log("sendInfo=" + sendInfo.error);
